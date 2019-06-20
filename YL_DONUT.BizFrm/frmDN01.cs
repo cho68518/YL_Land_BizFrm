@@ -101,6 +101,21 @@ namespace YL_DONUT.BizFrm
             //);
             //this.efwGridControl1.Click += efwGridControl1_Click;
             rbP_SHOW_TYPE.EditValue = "T";
+
+            chkI.Checked = true;
+            chkO.Checked = true;
+            chkP.Checked = true;
+            chkD.Checked = true;
+            chkF.Checked = true;
+            chkE.Checked = true;
+            chkC.Checked = true;
+            chkZ.Checked = false;
+            chkX.Checked = false;
+            chkT.Checked = false;
+            chkA.Checked = true;
+            chkB.Checked = true;
+
+
             setCmb();
         }
 
@@ -109,19 +124,6 @@ namespace YL_DONUT.BizFrm
             try
             {
                 Dictionary<string, string> myRecord;
-
-                string strQueruy = @"  SELECT
-                              T1.DCODE, T1.DNAME
-                              FROM
-                              (  SELECT ''  DCODE, N'전체'  DNAME
-	                             UNION ALL
-	                             SELECT CODE    DCODE
-                                       ,CODE_NM DNAME
-                                 FROM dbo.ETCCODE
-	                             WHERE GRP_CODE = 'DELIVERYTYPE' " + @") T1 ";
-
-                CodeAgent.SetLegacyCode(cmbO_TYPE, strQueruy);
-                cmbO_TYPE.EditValue = "";
 
 
                 string strQueruy1 = @"  SELECT
@@ -195,14 +197,11 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add("i_u_nickname", MySqlDbType.VarChar, 50);
                         cmd.Parameters[5].Value = txtU_NICKNAME.EditValue;
 
-                        cmd.Parameters.Add("i_o_type", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[6].Value = cmbO_TYPE.EditValue;
-
                         cmd.Parameters.Add("i_s_company_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[7].Value = txtS_COMPANY_NAME.EditValue;
+                        cmd.Parameters[6].Value = txtS_COMPANY_NAME.EditValue;
 
                         cmd.Parameters.Add("i_order_mall_type", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[8].Value = cmbMALL_TYPE.EditValue;
+                        cmd.Parameters[7].Value = cmbMALL_TYPE.EditValue;
 
                         //Console.WriteLine(" i_sdate           ---> [" + cmd.Parameters[0].Value + "]" );
                         //Console.WriteLine(" i_edate           ---> [" + cmd.Parameters[1].Value + "]");
@@ -213,6 +212,43 @@ namespace YL_DONUT.BizFrm
                         //Console.WriteLine(" i_o_type          ---> [" + cmd.Parameters[6].Value + "]");
                         //Console.WriteLine(" i_s_company_name  ---> [" + cmd.Parameters[7].Value + "]");
                         //Console.WriteLine(" i_order_mall_type ---> [" + cmd.Parameters[8].Value + "]");
+
+
+                        cmd.Parameters.Add("i_o_type1", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[8].Value = chkI.EditValue;
+
+                        cmd.Parameters.Add("i_o_type2", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[9].Value = chkO.EditValue;
+
+                        cmd.Parameters.Add("i_o_type3", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[10].Value = chkP.EditValue;
+
+                        cmd.Parameters.Add("i_o_type4", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[11].Value = chkD.EditValue;
+
+                        cmd.Parameters.Add("i_o_type5", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[12].Value = chkF.EditValue;
+
+                        cmd.Parameters.Add("i_o_type6", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[13].Value = chkE.EditValue;
+
+                        cmd.Parameters.Add("i_o_type7", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[14].Value = chkC.EditValue;
+
+                        cmd.Parameters.Add("i_o_type8", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[15].Value = chkZ.EditValue;
+
+                        cmd.Parameters.Add("i_o_type9", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[16].Value = chkX.EditValue;
+
+                        cmd.Parameters.Add("i_o_type10", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[17].Value = chkT.EditValue;
+
+                        cmd.Parameters.Add("i_o_type11", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[18].Value = chkA.EditValue;
+
+                        cmd.Parameters.Add("i_o_type12", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[19].Value = chkB.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -239,132 +275,40 @@ namespace YL_DONUT.BizFrm
 
         private void BtnCardOpen_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string sP_SHOW_TYPE = string.Empty;
-
-                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-
-                {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_DN_DN01_SELECT_02", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
-
-                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
-
-                        cmd.Parameters.Add("i_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[2].Value = txtP_NAME.EditValue;
-
-                        if (rbP_SHOW_TYPE.EditValue.ToString() != "Y" && rbP_SHOW_TYPE.EditValue.ToString() != "N")
-                            sP_SHOW_TYPE = null;
-                        else
-                            sP_SHOW_TYPE = rbP_SHOW_TYPE.EditValue.ToString();
-
-                        // efwRadioGroup1.Properties.Items[efwRadioGroup1.SelectedIndex].Value.ToString()
-                        cmd.Parameters.Add("i_is_order", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[3].Value = sP_SHOW_TYPE;
-
-                        cmd.Parameters.Add("i_o_receive_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[4].Value = txtO_RECEIVE_NAME.EditValue;
-
-                        cmd.Parameters.Add("i_u_nickname", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[5].Value = txtU_NICKNAME.EditValue;
-
-                        cmd.Parameters.Add("i_o_type", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[6].Value = cmbO_TYPE.EditValue;
-
-                        cmd.Parameters.Add("i_s_company_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[7].Value = txtS_COMPANY_NAME.EditValue;
-
-                        cmd.Parameters.Add("i_order_mall_type", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[8].Value = cmbMALL_TYPE.EditValue;
-
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable ds = new DataTable();
-                            sda.Fill(ds);
-                            efwGridControl1.DataBind(ds);
-                            this.efwGridControl1.MyGridView.BestFitColumns();
-
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
+            // ('I','O','P','D','E')
+            chkI.Checked = true;
+            chkO.Checked = true;
+            chkP.Checked = true;
+            chkD.Checked = true;
+            chkE.Checked = true;
+            chkF.Checked = false;
+            chkC.Checked = false;
+            chkZ.Checked = false;
+            chkX.Checked = false;
+            chkT.Checked = false;
+            chkA.Checked = false;
+            chkB.Checked = false;
+            Search();
         }
 
-        private void BtnOpen_Click(object sender, EventArgs e)
+        private void EfwSimpleButton1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string sP_SHOW_TYPE = string.Empty;
-
-                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-
-                {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_DN_DN01_SELECT_03", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
-
-                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
-
-                        cmd.Parameters.Add("i_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[2].Value = txtP_NAME.EditValue;
-
-                        if (rbP_SHOW_TYPE.EditValue.ToString() != "Y" && rbP_SHOW_TYPE.EditValue.ToString() != "N")
-                            sP_SHOW_TYPE = null;
-                        else
-                            sP_SHOW_TYPE = rbP_SHOW_TYPE.EditValue.ToString();
-
-                        // efwRadioGroup1.Properties.Items[efwRadioGroup1.SelectedIndex].Value.ToString()
-                        cmd.Parameters.Add("i_is_order", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[3].Value = sP_SHOW_TYPE;
-
-                        cmd.Parameters.Add("i_o_receive_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[4].Value = txtO_RECEIVE_NAME.EditValue;
-
-                        cmd.Parameters.Add("i_u_nickname", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[5].Value = txtU_NICKNAME.EditValue;
-
-                        cmd.Parameters.Add("i_o_type", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[6].Value = cmbO_TYPE.EditValue;
-
-                        cmd.Parameters.Add("i_s_company_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[7].Value = txtS_COMPANY_NAME.EditValue;
-
-                        cmd.Parameters.Add("i_order_mall_type", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[8].Value = cmbMALL_TYPE.EditValue;
-
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable ds = new DataTable();
-                            sda.Fill(ds);
-                            efwGridControl1.DataBind(ds);
-                            this.efwGridControl1.MyGridView.BestFitColumns();
-
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
+            chkI.Checked = true;
+            chkO.Checked = true;
+            chkP.Checked = true;
+            chkD.Checked = true;
+            chkF.Checked = true;
+            chkE.Checked = true;
+            chkC.Checked = true;
+            chkZ.Checked = false;
+            chkX.Checked = false;
+            chkT.Checked = false;
+            chkA.Checked = true;
+            chkB.Checked = true;
+            Search();
         }
 
+   
         private void TxtP_NAME_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -388,5 +332,7 @@ namespace YL_DONUT.BizFrm
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
+
+
     }
 }

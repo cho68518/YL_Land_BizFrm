@@ -84,6 +84,9 @@
     <Reference Include="Easy.Framework.SrvCore.V.3.1">
       <HintPath>..\..\Easy.Framework.Release\Easy.Framework.SrvCore.V.3.1.dll</HintPath>
     </Reference>
+    <Reference Include="Easy.Framework.Translator">
+      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.Translator.dll</HintPath>
+    </Reference>
     <Reference Include="Easy.Framework.Util.V.3.1">
       <HintPath>..\..\Easy.Framework.Release\Easy.Framework.Util.V.3.1.dll</HintPath>
     </Reference>
