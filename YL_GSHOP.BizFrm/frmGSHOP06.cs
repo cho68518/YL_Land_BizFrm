@@ -14,7 +14,7 @@ namespace YL_GSHOP.BizFrm
 {
     public partial class frmGSHOP06 : FrmBase
     {
-        frmMemberInfo popup;
+        frmMemberInfo popup;  
 
         public frmGSHOP06()
         {
