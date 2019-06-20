@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1D8686E-D66A-4172-8E0A-E9148D6296F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YL_GSHOP.BizFrm</RootNamespace>
+    <AssemblyName>YL_GSHOP.BizFrm</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Easy.Framework.Common.V.3.1">
+      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.Common.V.3.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Easy.Framework.ExceptionCom.V.3.1">
+      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.ExceptionCom.V.3.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Easy.Framework.Report.V.2.1">
+      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.Report.V.2.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Easy.Framework.SrvCommon.V.3.1">
+      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.SrvCommon.V.3.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Easy.Framework.SrvCore.V.3.1">
+      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.SrvCore.V.3.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Easy.Framework.Util.V.3.1">
+      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.Util.V.3.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Easy.Framework.WinForm.Control.V.3.1">
+      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.WinForm.Control.V.3.1.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Easy.Framework.Release\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConstantLib.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\frmMemberInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmMemberInfo.designer.cs">
+      <DependentUpon>frmMemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGSHOP01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP01.Designer.cs">
+      <DependentUpon>frmGSHOP01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGSHOP02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP02.Designer.cs">
+      <DependentUpon>frmGSHOP02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGSHOP03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP03.Designer.cs">
+      <DependentUpon>frmGSHOP03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGSHOP04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP04.Designer.cs">
+      <DependentUpon>frmGSHOP04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGSHOP05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP05.Designer.cs">
+      <DependentUpon>frmGSHOP05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGSHOP06.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP06.Designer.cs">
+      <DependentUpon>frmGSHOP06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTest01.Designer.cs">
+      <DependentUpon>frmTest01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySQLConn.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GSHOP03_RPT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GSHOP03_RPT.Designer.cs">
+      <DependentUpon>GSHOP03_RPT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dlg\frmMemberInfo.resx">
+      <DependentUpon>frmMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP04.resx">
+      <DependentUpon>frmGSHOP04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP05.resx">
+      <DependentUpon>frmGSHOP05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP06.resx">
+      <DependentUpon>frmGSHOP06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP01.resx">
+      <DependentUpon>frmGSHOP01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP02.resx">
+      <DependentUpon>frmGSHOP02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP03.resx">
+      <DependentUpon>frmGSHOP03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest01.resx">
+      <DependentUpon>frmTest01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GSHOP03_RPT.resx">
+      <DependentUpon>GSHOP03_RPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\ConstantLib.datasource" />
+    <None Include="Properties\DataSources\DataSet1.datasource" />
+    <None Include="Properties\DataSources\DataSet1.DataTable1DataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.DataTable1Row.datasource" />
+    <None Include="Properties\DataSources\DataSet1.DataTable1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.DataTable1RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\frmGSHOP01.datasource" />
+    <None Include="Properties\DataSources\frmGSHOP02.datasource" />
+    <None Include="Properties\DataSources\frmGSHOP03.datasource" />
+    <None Include="Properties\DataSources\frmGSHOP04.datasource" />
+    <None Include="Properties\DataSources\frmGSHOP05.datasource" />
+    <None Include="Properties\DataSources\frmMain.datasource" />
+    <None Include="Properties\DataSources\frmTest01.datasource" />
+    <None Include="Properties\DataSources\MySQLConn.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\YL_GSHOP.BizFrm.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\YL_GSHOP.BizFrm.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
