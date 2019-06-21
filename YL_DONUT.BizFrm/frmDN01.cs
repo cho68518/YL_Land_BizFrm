@@ -138,6 +138,18 @@ namespace YL_DONUT.BizFrm
                 CodeAgent.SetLegacyCode(cmbMALL_TYPE, strQueruy1);
                 cmbMALL_TYPE.EditValue = "";
 
+
+                string strQueruy2 = @"  SELECT
+                              T1.DCODE, T1.DNAME
+                              FROM
+                              (  SELECT CODE  DCODE, CODE_NM DNAME
+                                 FROM dbo.ETCCODE
+	                             WHERE GRP_CODE = 'ORDER_SEARCH' " + @") T1 ";
+
+                CodeAgent.SetLegacyCode(cmbORDER_SEARCH, strQueruy2);
+                cmbORDER_SEARCH.EditValue = "1";
+
+
             }
             catch (Exception ex)
             {
@@ -179,8 +191,11 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[1].Value = dtE_DATE.EditValue3;
 
-                        cmd.Parameters.Add("i_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[2].Value = txtP_NAME.EditValue;
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = cmbORDER_SEARCH.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtI_SEARCH.EditValue;
 
                         if (rbP_SHOW_TYPE.EditValue.ToString() != "Y" && rbP_SHOW_TYPE.EditValue.ToString() != "N")
                             sP_SHOW_TYPE = null;
@@ -189,66 +204,54 @@ namespace YL_DONUT.BizFrm
 
                         // efwRadioGroup1.Properties.Items[efwRadioGroup1.SelectedIndex].Value.ToString()
                         cmd.Parameters.Add("i_is_order", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[3].Value = sP_SHOW_TYPE;
-
-                        cmd.Parameters.Add("i_o_receive_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[4].Value = txtO_RECEIVE_NAME.EditValue;
-
-                        cmd.Parameters.Add("i_u_nickname", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[5].Value = txtU_NICKNAME.EditValue;
-
-                        cmd.Parameters.Add("i_s_company_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[6].Value = txtS_COMPANY_NAME.EditValue;
+                        cmd.Parameters[4].Value = sP_SHOW_TYPE;
 
                         cmd.Parameters.Add("i_order_mall_type", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[7].Value = cmbMALL_TYPE.EditValue;
+                        cmd.Parameters[5].Value = cmbMALL_TYPE.EditValue;
 
-                        //Console.WriteLine(" i_sdate           ---> [" + cmd.Parameters[0].Value + "]" );
-                        //Console.WriteLine(" i_edate           ---> [" + cmd.Parameters[1].Value + "]");
-                        //Console.WriteLine(" i_name            ---> [" + cmd.Parameters[2].Value + "]");
-                        //Console.WriteLine(" i_is_order        ---> [" + cmd.Parameters[3].Value + "]");
-                        //Console.WriteLine(" i_o_receive_name  ---> [" + cmd.Parameters[4].Value + "]");
-                        //Console.WriteLine(" i_u_nickname      ---> [" + cmd.Parameters[5].Value + "]");
-                        //Console.WriteLine(" i_o_type          ---> [" + cmd.Parameters[6].Value + "]");
-                        //Console.WriteLine(" i_s_company_name  ---> [" + cmd.Parameters[7].Value + "]");
-                        //Console.WriteLine(" i_order_mall_type ---> [" + cmd.Parameters[8].Value + "]");
+                        Console.WriteLine(" i_sdate           ---> [" + cmd.Parameters[0].Value + "]" );
+                        Console.WriteLine(" i_edate           ---> [" + cmd.Parameters[1].Value + "]");
+                        Console.WriteLine(" i_type            ---> [" + cmd.Parameters[2].Value + "]");
+                        Console.WriteLine(" i_search          ---> [" + cmd.Parameters[3].Value + "]");
+                        Console.WriteLine(" i_is_order        ---> [" + cmd.Parameters[4].Value + "]");
+                        Console.WriteLine(" i_order_mall_type ---> [" + cmd.Parameters[5].Value + "]");
 
 
                         cmd.Parameters.Add("i_o_type1", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[8].Value = chkI.EditValue;
+                        cmd.Parameters[6].Value = chkI.EditValue;
 
                         cmd.Parameters.Add("i_o_type2", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[9].Value = chkO.EditValue;
+                        cmd.Parameters[7].Value = chkO.EditValue;
 
                         cmd.Parameters.Add("i_o_type3", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[10].Value = chkP.EditValue;
+                        cmd.Parameters[8].Value = chkP.EditValue;
 
                         cmd.Parameters.Add("i_o_type4", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[11].Value = chkD.EditValue;
+                        cmd.Parameters[9].Value = chkD.EditValue;
 
                         cmd.Parameters.Add("i_o_type5", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[12].Value = chkF.EditValue;
+                        cmd.Parameters[10].Value = chkF.EditValue;
 
                         cmd.Parameters.Add("i_o_type6", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[13].Value = chkE.EditValue;
+                        cmd.Parameters[11].Value = chkE.EditValue;
 
                         cmd.Parameters.Add("i_o_type7", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[14].Value = chkC.EditValue;
+                        cmd.Parameters[12].Value = chkC.EditValue;
 
                         cmd.Parameters.Add("i_o_type8", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[15].Value = chkZ.EditValue;
+                        cmd.Parameters[13].Value = chkZ.EditValue;
 
                         cmd.Parameters.Add("i_o_type9", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[16].Value = chkX.EditValue;
+                        cmd.Parameters[14].Value = chkX.EditValue;
 
                         cmd.Parameters.Add("i_o_type10", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[17].Value = chkT.EditValue;
+                        cmd.Parameters[15].Value = chkT.EditValue;
 
                         cmd.Parameters.Add("i_o_type11", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[18].Value = chkA.EditValue;
+                        cmd.Parameters[16].Value = chkA.EditValue;
 
                         cmd.Parameters.Add("i_o_type12", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[19].Value = chkB.EditValue;
+                        cmd.Parameters[17].Value = chkB.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -333,6 +336,9 @@ namespace YL_DONUT.BizFrm
                 Search();
         }
 
-
+        private void CmbORDER_SEARCH_EditValueChanged(object sender, EventArgs e)
+        {
+            txtI_SEARCH.EditValue = "";
+        }
     }
 }
