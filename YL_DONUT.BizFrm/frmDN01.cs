@@ -98,7 +98,7 @@ namespace YL_DONUT.BizFrm
 
             //this.efwGridControl1.BindControlSet(
             //new ColumnControlSet("id", txtID)
-            //);
+            //  
             //this.efwGridControl1.Click += efwGridControl1_Click;
             rbP_SHOW_TYPE.EditValue = "T";
 
