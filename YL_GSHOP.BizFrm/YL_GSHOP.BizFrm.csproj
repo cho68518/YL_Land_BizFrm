@@ -135,6 +135,12 @@
     <Compile Include="Dlg\frmMemberInfo.designer.cs">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dlg\frmZipNoInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmZipNoInfo.designer.cs">
+      <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGSHOP01.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </Compile>
     <EmbeddedResource Include="Dlg\frmMemberInfo.resx">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
+      <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP04.resx">
       <DependentUpon>frmGSHOP04.cs</DependentUpon>
