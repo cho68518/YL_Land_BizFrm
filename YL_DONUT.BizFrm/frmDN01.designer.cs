@@ -229,6 +229,7 @@
             this.efwSimpleButton2.StyleController = this.layoutControl2;
             this.efwSimpleButton2.TabIndex = 55;
             this.efwSimpleButton2.Text = "순 매출현황";
+            this.efwSimpleButton2.Click += new System.EventHandler(this.EfwSimpleButton2_Click);
             // 
             // efwSimpleButton1
             // 

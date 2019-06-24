@@ -133,7 +133,7 @@ namespace YL_DONUT.BizFrm
 	                             UNION ALL
 	                             SELECT CODE  DCODE, CODE_NM DNAME
                                  FROM dbo.ETCCODE
-	                             WHERE GRP_CODE = 'MALL_TYPE' " + @") T1 ";
+	                             WHERE GRP_CODE = 'MALL_TYPE' and Use_YN = 'Y' " + @") T1 ";
 
                 CodeAgent.SetLegacyCode(cmbMALL_TYPE, strQueruy1);
                 cmbMALL_TYPE.EditValue = "";
@@ -311,7 +311,24 @@ namespace YL_DONUT.BizFrm
             Search();
         }
 
-   
+
+        private void EfwSimpleButton2_Click(object sender, EventArgs e)
+        {   // o_type IN ('I','O','P','D','E') and
+            chkI.Checked = true;
+            chkO.Checked = true;
+            chkP.Checked = true;
+            chkD.Checked = true;
+            chkF.Checked = false;
+            chkE.Checked = true;
+            chkC.Checked = false;
+            chkZ.Checked = false;
+            chkX.Checked = false;
+            chkT.Checked = false;
+            chkA.Checked = false;
+            chkB.Checked = false;
+            Search();
+        }
+
         private void TxtP_NAME_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -340,5 +357,6 @@ namespace YL_DONUT.BizFrm
         {
             txtI_SEARCH.EditValue = "";
         }
+
     }
 }

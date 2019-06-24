@@ -113,8 +113,8 @@ namespace YL_GSHOP.BizFrm
             try
             {
                 string sCOMFIRM = string.Empty;
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
-                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domamall.USP_GSHOP_GSHOP02_SELECT_01", con))
