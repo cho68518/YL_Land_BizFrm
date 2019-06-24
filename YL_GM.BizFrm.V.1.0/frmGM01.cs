@@ -1,4 +1,5 @@
 ﻿using Easy.Framework.Common;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,7 @@ namespace YL_GM.BizFrm
         public override void FrmLoadEvent()
         {
             base.FrmLoadEvent();
-            DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
+            //DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
 
             this.IsMenuVw = true;
             this.IsSearch = true;
@@ -51,67 +52,199 @@ namespace YL_GM.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
-            //if (UserInfo.instance().ORG_CD != null && UserInfo.instance().ORG_CD.ToString() != "")
-            //{
-            //    txtCOMPANYCD.EditValue = UserInfo.instance().ORG_CD;
-            //}
-            //else
-            //{
-            //    txtCOMPANYCD.EditValue = "YL01";
-            //}
-
-            //if (UserInfo.instance().ORG_NM != null && UserInfo.instance().ORG_NM.ToString() != "")
-            //{
-            //    txtCOMPANYNAME.EditValue = UserInfo.instance().ORG_NM;
-            //}
-            //else
-            //{
-            //    txtCOMPANYNAME.EditValue = "(주)와이엘랜드";
-            //}
-
-            ////그리드 컬럼에 체크박스 레포지토리아이템 추가
-            //GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_doramd");
-            //GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_biz");
-
-            //gridView1.OptionsView.ShowFooter = true;
-            //gridView1.Columns["reg_date"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
-            //gridView1.Columns["reg_date"].SummaryItem.FieldName = "reg_date";
-            ////gridView1.Columns["MCNT"].SummaryItem.DisplayFormat = "총인원: {0:n2}";
-            //gridView1.Columns["reg_date"].SummaryItem.DisplayFormat = "총인원: {0:0}";
-
-            ////그리드로 클릭시 컨트롤 데이터 바인딩
-            //this.efwGridControl1.BindControlSet(
-            //            new ColumnControlSet("u_name", txtU_NAME)
-            //          , new ColumnControlSet("user_id", txtUSER_ID)
-            //          , new ColumnControlSet("u_id", txtU_ID)
-            //          , new ColumnControlSet("u_nickname", txtU_NICKNAME)
-            //          , new ColumnControlSet("u_gender", txtU_GENDER)
-            //          , new ColumnControlSet("u_birthday", txtBIRTH)
-            //          , new ColumnControlSet("u_email", txtU_EMAIL)
-            //          , new ColumnControlSet("u_cell_num", txtU_CELL_NUM)
-            //          , new ColumnControlSet("reg_date", txtREG_DATE)
-            //          , new ColumnControlSet("login_date", txtLOGIN_DATE)
-            //          , new ColumnControlSet("u_zip", txtU_ZIP)
-            //          , new ColumnControlSet("u_addr", txtU_ADDR)
-            //          , new ColumnControlSet("u_addr_detail", txtU_ADDR_DETAIL)
-            //          , new ColumnControlSet("u_chef_level_cd", cmbU_CHEF_LEVEL)
-            //          , new ColumnControlSet("is_al_friend_yn", chkIS_AL_FRIEND)
-            //          , new ColumnControlSet("is_stock_friend_yn", chkIS_STOCK_FRIEND)
-            //          , new ColumnControlSet("idx", txtIDX)
-            //          , new ColumnControlSet("is_doramd", chkIS_DORAMD)
-            //          , new ColumnControlSet("is_biz", chkIS_BIZ)
-            //          , new ColumnControlSet("DM_Money", txtD)
-            //          , new ColumnControlSet("TD_Money", txtTD)
-            //          , new ColumnControlSet("AD_Money", txtAD)
-            //          , new ColumnControlSet("GD_Money", txtGD)
-            //          , new ColumnControlSet("CD_Money", txtCD)
-            //          , new ColumnControlSet("VIP_Money", txtCOUPON)
-            //          );
-
-            //this.efwGridControl1.Click += efwGridControl1_Click;
+    
         }
 
         #endregion
+
+        public override void Search()
+        {
+            Open1();
+            Open2();
+        }
+
+        private void Open1()
+        {
+            try
+            {
+                Dictionary<string, int> myRecord;
+                string sP_SHOW_TYPE = string.Empty;
+                decimal n1 = 0; decimal n2 = 0;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.Member_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("DB_MEMBER.USP_GM_GM01_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = DateTime.Now.ToString("yyyyMMdd");
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = DateTime.Now.ToString("yyyyMMdd");
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(dt);
+
+                            if (dt.Rows.Count > 0)
+                            {
+                                DataRow[] rows = dt.Select();
+
+                                //-----------------------------------------------------------------------------------
+                                //회원 정보현황
+                                //-----------------------------------------------------------------------------------
+                                //1.총회원수
+                                //현재회원수
+                                lbl1.Text = String.Format("{0:#,##0}", rows[0]["lifeportalTotal"]);
+                                lbl8.Text = String.Format("{0:#,##0}", rows[0]["lifeportalDay"]);
+                                lbl15.Text = String.Format("{0:#,##0}", rows[0]["lifeportalDayBef"]);
+                                lbl22.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["lifeportalDay"]) - Convert.ToInt32(rows[0]["lifeportalDayBef"]));
+
+                                lbl29.Text = String.Format("{0:#,##0}", rows[0]["lifeportalMonth"]);
+                                lbl36.Text = String.Format("{0:#,##0}", rows[0]["lifeportalMonthBef"]);
+                                lbl43.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["lifeportalMonth"]) - Convert.ToInt32(rows[0]["lifeportalMonthBef"]));
+                                n1 = Convert.ToDecimal(rows[0]["lifeportalMonth"]);
+                                n2 = Convert.ToDecimal(rows[0]["lifeportalMonthBef"]);
+                                lbl50.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
+                            }
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+
+        private void Open2()
+        {
+            try
+            {
+                Dictionary<string, int> myRecord;
+                string sP_SHOW_TYPE = string.Empty;
+                int n1 = 0; int n2 = 0; int n3 = 0; int n4 = 0;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("telecom.USP_GM_GM01_SELECT_01", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = DateTime.Now.ToString("yyyyMMdd");
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = DateTime.Now.ToString("yyyyMMdd");
+
+                        //Console.WriteLine(" i_sdate           ---> [" + cmd.Parameters[0].Value + "]");
+                        //Console.WriteLine(" i_edate           ---> [" + cmd.Parameters[1].Value + "]");
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(dt);
+
+                            if (dt.Rows.Count > 0)
+                            {
+                                DataRow[] rows = dt.Select();
+
+                                //-----------------------------------------------------------------------------------
+                                //텔레콤 정보현황
+                                //-----------------------------------------------------------------------------------
+                                //당일신청
+                                lblTel9.Text = String.Format("{0:#,##0}", rows[0]["teld9"]);
+                                lblTel10.Text = String.Format("{0:#,##0}", rows[0]["teld10"]);
+                                lblTel11.Text = String.Format("{0:#,##0}", rows[0]["teld11"]);
+                                lblTel12.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["teld9"]) + Convert.ToInt32(rows[0]["teld10"]) + Convert.ToInt32(rows[0]["teld11"]));
+                                lblTel13.Text = String.Format("{0:#,##0}", rows[0]["teld13"]);
+                                lblTel15.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["teld13"]) + 0);
+
+                                //당일개통
+                                lblTel17.Text = String.Format("{0:#,##0}", rows[0]["teld17"]);
+                                lblTel18.Text = String.Format("{0:#,##0}", rows[0]["teld18"]);
+                                lblTel19.Text = String.Format("{0:#,##0}", rows[0]["teld19"]);
+                                lblTel20.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["teld17"]) + Convert.ToInt32(rows[0]["teld18"]) + Convert.ToInt32(rows[0]["teld19"]));
+                                lblTel21.Text = String.Format("{0:#,##0}", rows[0]["teld21"]);
+                                lblTel23.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["teld21"]) + 0);
+
+                                //당일해지
+                                lblTel25.Text = String.Format("{0:#,##0}", rows[0]["teld25"]);
+                                lblTel26.Text = String.Format("{0:#,##0}", rows[0]["teld26"]);
+                                lblTel27.Text = String.Format("{0:#,##0}", rows[0]["teld27"]);
+                                lblTel28.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["teld25"]) + Convert.ToInt32(rows[0]["teld26"]) + Convert.ToInt32(rows[0]["teld27"]));
+                                lblTel29.Text = String.Format("{0:#,##0}", rows[0]["teld29"]);
+                                lblTel31.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["teld29"]) + 0);
+
+                                //월누적개통
+                                lblTel41.Text = String.Format("{0:#,##0}", rows[0]["teld41"]);
+                                lblTel42.Text = String.Format("{0:#,##0}", rows[0]["teld42"]);
+                                lblTel43.Text = String.Format("{0:#,##0}", rows[0]["teld43"]);
+                                lblTel44.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["teld41"]) + Convert.ToInt32(rows[0]["teld42"]) + Convert.ToInt32(rows[0]["teld43"]));
+                                lblTel45.Text = String.Format("{0:#,##0}", rows[0]["teld45"]);
+                                lblTel47.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["teld45"]) + 0);
+
+                                //월누적해지
+                                lblTel49.Text = String.Format("{0:#,##0}", rows[0]["teld49"]);
+                                lblTel50.Text = String.Format("{0:#,##0}", rows[0]["teld50"]);
+                                lblTel51.Text = String.Format("{0:#,##0}", rows[0]["teld51"]);
+                                lblTel52.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["teld49"]) + Convert.ToInt32(rows[0]["teld50"]) + Convert.ToInt32(rows[0]["teld51"]));
+                                lblTel53.Text = String.Format("{0:#,##0}", rows[0]["teld53"]);
+                                lblTel55.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["teld53"]) + 0);
+
+                                //일증감수
+                                n1 = Convert.ToInt32(rows[0]["teld17"]) - Convert.ToInt32(rows[0]["teld25"]);
+                                n2 = Convert.ToInt32(rows[0]["teld18"]) - Convert.ToInt32(rows[0]["teld26"]);
+                                n3 = Convert.ToInt32(rows[0]["teld19"]) - Convert.ToInt32(rows[0]["teld27"]);
+                                n4 = Convert.ToInt32(rows[0]["teld21"]) - Convert.ToInt32(rows[0]["teld29"]);
+                                lblTel33.Text = String.Format("{0:#,##0}", n1);
+                                lblTel34.Text = String.Format("{0:#,##0}", n2);
+                                lblTel35.Text = String.Format("{0:#,##0}", n3);
+                                lblTel36.Text = String.Format("{0:#,##0}", n1 + n2 + n3);
+                                lblTel37.Text = String.Format("{0:#,##0}", n4);
+                                lblTel39.Text = String.Format("{0:#,##0}", n4 + 0);
+
+                                //월증감수
+                                n1 = Convert.ToInt32(rows[0]["teld41"]) - Convert.ToInt32(rows[0]["teld49"]);
+                                n2 = Convert.ToInt32(rows[0]["teld42"]) - Convert.ToInt32(rows[0]["teld50"]);
+                                n3 = Convert.ToInt32(rows[0]["teld43"]) - Convert.ToInt32(rows[0]["teld51"]);
+                                n4 = Convert.ToInt32(rows[0]["teld45"]) - Convert.ToInt32(rows[0]["teld53"]);
+                                lblTel57.Text = String.Format("{0:#,##0}", n1);
+                                lblTel58.Text = String.Format("{0:#,##0}", n2);
+                                lblTel59.Text = String.Format("{0:#,##0}", n3);
+                                lblTel60.Text = String.Format("{0:#,##0}", n1 + n2 + n3);
+                                lblTel61.Text = String.Format("{0:#,##0}", n4);
+                                lblTel63.Text = String.Format("{0:#,##0}", n4 + 0);
+
+                                //총 합계
+                                lblTel8.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel4.Text.Replace(",", "")) + Convert.ToInt32(lblTel7.Text.Replace(",", "")));
+                                lblTel16.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel12.Text.Replace(",", "")) + Convert.ToInt32(lblTel15.Text.Replace(",", "")));
+                                lblTel24.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel20.Text.Replace(",", "")) + Convert.ToInt32(lblTel23.Text.Replace(",", "")));
+                                lblTel32.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel28.Text.Replace(",", "")) + Convert.ToInt32(lblTel31.Text.Replace(",", "")));
+                                lblTel40.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel36.Text.Replace(",", "")) + Convert.ToInt32(lblTel39.Text.Replace(",", "")));
+                                lblTel48.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel44.Text.Replace(",", "")) + Convert.ToInt32(lblTel47.Text.Replace(",", "")));
+                                lblTel56.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel52.Text.Replace(",", "")) + Convert.ToInt32(lblTel55.Text.Replace(",", "")));
+                                lblTel64.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel60.Text.Replace(",", "")) + Convert.ToInt32(lblTel63.Text.Replace(",", "")));
+                            }
+                        }
+                    }
+
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+
+
 
 
 
