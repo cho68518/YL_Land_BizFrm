@@ -1,6 +1,7 @@
 ﻿using Easy.Framework.Common;
 using Easy.Framework.SrvCommon;
 using Easy.Framework.WinForm.Control;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,7 +69,7 @@ namespace YL_GSHOP.BizFrm.Dlg
             gridView1.IndicatorWidth = 24;
 
             setCmb();
-            cmbQ1.EditValue = "0";
+            cmbSearch_Type.EditValue = "0";
 
         }
 
@@ -95,27 +96,45 @@ namespace YL_GSHOP.BizFrm.Dlg
 
         private void Open1()
         {
-            //try
-            //{
-            //    Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
-            //    DataSet ds = ServiceAgent.ExecuteDataSet(true, "CONIS_IBS", "USP_MM_MM05_SELECT_03"
-            //                                            , this.COMPANYCD
-            //                                            , this.cmbQ1.EditValue
-            //                                            , this.txtSearch.Text
-            //                                            , this.MTYPE);
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_GSHOP_GSHOP06_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-            //    efwGridControl1.DataBind(ds);
-            //    this.efwGridControl1.MyGridView.BestFitColumns();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            //}
-            //finally
-            //{
-            //    Cursor.Current = Cursors.Default;
-            //}
+                        cmd.Parameters.Add("i_Search_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = cmbSearch_Type.EditValue;
+
+                        cmd.Parameters.Add("i_search_Name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtSearch_Name.EditValue;
+
+                        cmd.Parameters.Add("i_member_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[2].Value = cmbMember_Type.EditValue;
+
+                        Console.WriteLine(" i_Search_type           ---> [" + cmd.Parameters[0].Value + "]");
+                        Console.WriteLine(" i_search_Name           ---> [" + cmd.Parameters[1].Value + "]");
+                        Console.WriteLine(" i_member_type            ---> [" + cmd.Parameters[2].Value + "]");
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                            this.efwGridControl1.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
         }
 
         #endregion

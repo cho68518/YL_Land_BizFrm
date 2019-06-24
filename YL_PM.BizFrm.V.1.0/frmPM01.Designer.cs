@@ -110,9 +110,6 @@
             this.efwGroupControl3 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNAMEQ = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.cmbBIZCDQ = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwGroupControl5 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
             this.txtPURCHASECODE = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -122,6 +119,9 @@
             this.거래처코드 = new DevExpress.XtraLayout.LayoutControlItem();
             this.회사코드 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNAMEQ = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.cmbBIZCDQ = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.btnOpen = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -245,8 +245,6 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNAMEQ.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbBIZCDQ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).BeginInit();
             this.efwGroupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).BeginInit();
@@ -258,6 +256,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.거래처코드)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.회사코드)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNAMEQ.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbBIZCDQ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -1214,10 +1214,10 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.efwGroupControl5);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.txtNAMEQ);
             this.splitContainer1.Panel1.Controls.Add(this.cmbBIZCDQ);
-            this.splitContainer1.Panel1.Controls.Add(this.efwGroupControl5);
             this.splitContainer1.Panel1.Controls.Add(this.btnOpen);
             // 
             // splitContainer1.Panel2
@@ -1236,53 +1236,13 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "거래처";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 14);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "사업장";
-            // 
-            // txtNAMEQ
-            // 
-            this.txtNAMEQ.EditValue2 = null;
-            this.txtNAMEQ.EraserGroup = "CLR1";
-            this.txtNAMEQ.Location = new System.Drawing.Point(310, 12);
-            this.txtNAMEQ.Name = "txtNAMEQ";
-            this.txtNAMEQ.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtNAMEQ.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtNAMEQ.RequireMessage = null;
-            this.txtNAMEQ.Size = new System.Drawing.Size(133, 20);
-            this.txtNAMEQ.TabIndex = 6;
-            this.txtNAMEQ.EditValueChanged += new System.EventHandler(this.TxtNAMEQ_EditValueChanged);
-            // 
-            // cmbBIZCDQ
-            // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbBIZCDQ.ChildHierarchyInfo = childHierarchy3;
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbBIZCDQ.HierarchyInfo = hierarchy3;
-            this.cmbBIZCDQ.IsMultiLang = false;
-            this.cmbBIZCDQ.Location = new System.Drawing.Point(65, 13);
-            this.cmbBIZCDQ.Name = "cmbBIZCDQ";
-            this.cmbBIZCDQ.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbBIZCDQ.RequireMessage = "개설일자를 선택하세요";
-            this.cmbBIZCDQ.Size = new System.Drawing.Size(159, 20);
-            this.cmbBIZCDQ.TabIndex = 5;
-            // 
             // efwGroupControl5
             // 
             this.efwGroupControl5.Controls.Add(this.layoutControl5);
             this.efwGroupControl5.IsMultiLang = false;
-            this.efwGroupControl5.Location = new System.Drawing.Point(558, 12);
+            this.efwGroupControl5.Location = new System.Drawing.Point(558, 10);
             this.efwGroupControl5.Name = "efwGroupControl5";
-            this.efwGroupControl5.Size = new System.Drawing.Size(54, 20);
+            this.efwGroupControl5.Size = new System.Drawing.Size(86, 30);
             this.efwGroupControl5.TabIndex = 11;
             this.efwGroupControl5.Text = "숨긴항목";
             this.efwGroupControl5.Visible = false;
@@ -1296,7 +1256,7 @@
             this.layoutControl5.Location = new System.Drawing.Point(2, 21);
             this.layoutControl5.Name = "layoutControl5";
             this.layoutControl5.Root = this.layoutControlGroup5;
-            this.layoutControl5.Size = new System.Drawing.Size(50, 0);
+            this.layoutControl5.Size = new System.Drawing.Size(82, 7);
             this.layoutControl5.TabIndex = 0;
             this.layoutControl5.Text = "layoutControl7";
             // 
@@ -1379,6 +1339,46 @@
             this.layoutControlItem25.Size = new System.Drawing.Size(107, 24);
             this.layoutControlItem25.Text = "회사명";
             this.layoutControlItem25.TextSize = new System.Drawing.Size(50, 14);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 14);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "사업장";
+            // 
+            // txtNAMEQ
+            // 
+            this.txtNAMEQ.EditValue2 = null;
+            this.txtNAMEQ.EraserGroup = "CLR1";
+            this.txtNAMEQ.Location = new System.Drawing.Point(310, 12);
+            this.txtNAMEQ.Name = "txtNAMEQ";
+            this.txtNAMEQ.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtNAMEQ.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtNAMEQ.RequireMessage = null;
+            this.txtNAMEQ.Size = new System.Drawing.Size(133, 20);
+            this.txtNAMEQ.TabIndex = 6;
+            this.txtNAMEQ.EditValueChanged += new System.EventHandler(this.TxtNAMEQ_EditValueChanged);
+            // 
+            // cmbBIZCDQ
+            // 
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbBIZCDQ.ChildHierarchyInfo = childHierarchy3;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbBIZCDQ.HierarchyInfo = hierarchy3;
+            this.cmbBIZCDQ.IsMultiLang = false;
+            this.cmbBIZCDQ.Location = new System.Drawing.Point(65, 13);
+            this.cmbBIZCDQ.Name = "cmbBIZCDQ";
+            this.cmbBIZCDQ.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbBIZCDQ.RequireMessage = "개설일자를 선택하세요";
+            this.cmbBIZCDQ.Size = new System.Drawing.Size(159, 20);
+            this.cmbBIZCDQ.TabIndex = 5;
             // 
             // btnOpen
             // 
@@ -1822,8 +1822,6 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtNAMEQ.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbBIZCDQ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).EndInit();
             this.efwGroupControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).EndInit();
@@ -1835,6 +1833,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.거래처코드)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.회사코드)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNAMEQ.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbBIZCDQ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();

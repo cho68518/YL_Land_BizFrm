@@ -17,7 +17,7 @@ namespace YL_PM.BizFrm
 {
     public partial class frmPM03 :FrmBase
     {
-        MySQLConn sconn = new MySQLConn(ConstantLib.BasicConn_Dev);
+        MySQLConn sconn = new MySQLConn(ConstantLib.BasicConn_Real);
         bool _isNewMode;
         DataSet _dsDeptInfo = null;
         DataSet _dsDeptInfo2 = null;
@@ -56,7 +56,7 @@ namespace YL_PM.BizFrm
             else
                 txtCOMPANYCD.EditValue = "YL01";
 
-            setCmb();
+            SetCmb();
 
             if (UserInfo.instance().BIZCD != null && UserInfo.instance().BIZCD.ToString() != "")
                 cmbBIZCD.EditValue = UserInfo.instance().BIZCD;
@@ -108,7 +108,7 @@ namespace YL_PM.BizFrm
             Open1();
         }
 
-        private void setCmb()
+        private void SetCmb()
         {
             try
             {
@@ -144,7 +144,7 @@ namespace YL_PM.BizFrm
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM03_SELECT_01", con))
                     {
@@ -194,7 +194,7 @@ namespace YL_PM.BizFrm
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM03_SELECT_01", con))
                     {
@@ -244,7 +244,7 @@ namespace YL_PM.BizFrm
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM03_SELECT_01", con))
                     {
@@ -312,7 +312,7 @@ namespace YL_PM.BizFrm
             {
                 try
                 {
-                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
                         using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM03_SAVE_01", con))
                         {
@@ -419,7 +419,7 @@ namespace YL_PM.BizFrm
 
             try
             {
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM03_DELETE_01", con))
                     {

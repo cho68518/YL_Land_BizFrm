@@ -79,6 +79,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Easy.Framework.Release\Easy.Framework.WinForm.Control.V.3.1.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\Easy.Framework.Release\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -92,6 +95,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConstantLib.cs" />
+    <Compile Include="Dlg\frmBankInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmBankInfo.designer.cs">
+      <DependentUpon>frmBankInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\frmZipNoInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmZipNoInfo.designer.cs">
+      <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,8 +117,32 @@
     <Compile Include="frmPM01.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="frmPM01.Designer.cs">
+    <Compile Include="frmPM01.designer.cs">
       <DependentUpon>frmPM01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPM02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmPM02.Designer.cs">
+      <DependentUpon>frmPM02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPM03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmPM03.Designer.cs">
+      <DependentUpon>frmPM03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPM04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmPM04.Designer.cs">
+      <DependentUpon>frmPM04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPM05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmPM05.designer.cs">
+      <DependentUpon>frmPM05.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTest01.cs">
       <SubType>UserControl</SubType>
@@ -110,10 +150,32 @@
     <Compile Include="frmTest01.Designer.cs">
       <DependentUpon>frmTest01.cs</DependentUpon>
     </Compile>
+    <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dlg\frmBankInfo.resx">
+      <DependentUpon>frmBankInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
+      <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPM01.resx">
+      <DependentUpon>frmPM01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPM02.resx">
+      <DependentUpon>frmPM02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPM03.resx">
+      <DependentUpon>frmPM03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPM04.resx">
+      <DependentUpon>frmPM04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPM05.resx">
+      <DependentUpon>frmPM05.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

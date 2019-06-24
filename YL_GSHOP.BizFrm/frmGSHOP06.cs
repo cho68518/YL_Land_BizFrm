@@ -1,4 +1,5 @@
 ﻿using Easy.Framework.Common;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -103,8 +104,41 @@ namespace YL_GSHOP.BizFrm
             popup = null;
         }
 
+        private void EfwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_GSHOP_GSHOP06_SELECT_01", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = cmbQ1.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[1].Value = txtSearch.EditValue;
 
 
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                            this.efwGridControl1.MyGridView.BestFitColumns();
 
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
     }
 }

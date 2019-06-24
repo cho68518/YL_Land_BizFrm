@@ -1257,6 +1257,7 @@
             this.efwSimpleButton1.TabIndex = 7;
             this.efwSimpleButton1.Text = "조회";
             this.efwSimpleButton1.ToolTip = "조회";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
             // 
             // cmbQ1
             // 

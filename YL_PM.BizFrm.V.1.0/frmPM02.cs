@@ -16,8 +16,7 @@ namespace YL_PM.BizFrm
 {
     public partial class frmPM02 : FrmBase
     {
-        private bool _isNewMode;
-
+        bool _isNewMode;
         public frmPM02()
         {
             InitializeComponent();
