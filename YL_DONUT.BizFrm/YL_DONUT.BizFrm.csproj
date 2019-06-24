@@ -168,6 +168,12 @@
     <Compile Include="frmDN05.Designer.cs">
       <DependentUpon>frmDN05.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDN06.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN06.Designer.cs">
+      <DependentUpon>frmDN06.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN05.resx">
       <DependentUpon>frmDN05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN06.resx">
+      <DependentUpon>frmDN06.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
