@@ -103,6 +103,7 @@ namespace YL_GSHOP.BizFrm
         }
 
 
+
         private void SetLegacyCode_Mysql(RepositoryItemLookUpEdit cdControl, string codeGroup)
         {
             DataTable retDT = CodeAgent.GetLegacyCodeCollection(codeGroup);
@@ -126,7 +127,7 @@ namespace YL_GSHOP.BizFrm
         {
             try
             {
-                Dictionary<string, string> myRecord;
+              //  Dictionary<string, string> myRecord;
 
                 string strQueruy = @"  SELECT
                               T1.DCODE, T1.DNAME

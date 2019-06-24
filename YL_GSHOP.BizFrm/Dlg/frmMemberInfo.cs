@@ -47,6 +47,68 @@ namespace YL_GSHOP.BizFrm.Dlg
             get;
             set;
         }
+        
+        public string U_NICKNAME
+        {
+            get;
+            set;
+        }
+
+        public string BIRTH
+        {
+            get;
+            set;
+        }
+        public string U_GENDER
+        {
+            get;
+            set;
+        }
+        public string U_CELL_NUM
+        {
+            get;
+            set;
+        }
+        public string U_EMAIL
+        {
+            get;
+            set;
+        }
+        public string LOGIN_DATE
+        {
+            get;
+            set;
+        }
+        public string REG_DATE
+        {
+            get;
+            set;
+        }
+        public string U_ZIP
+        {
+            get;
+            set;
+        }
+        public string U_ADDR
+        {
+            get;
+            set;
+        }
+        public string U_ADDR_DETAIL
+        {
+            get;
+            set;
+        }
+        public string U_CHEF_LEVEL
+        {
+            get;
+            set;
+        }
+        public string IS_STOCK_FRIEND
+        {
+            get;
+            set;
+        }    
 
         #endregion
 
@@ -116,9 +178,9 @@ namespace YL_GSHOP.BizFrm.Dlg
                         cmd.Parameters.Add("i_member_type", MySqlDbType.VarChar, 10);
                         cmd.Parameters[2].Value = cmbMember_Type.EditValue;
 
-                        Console.WriteLine(" i_Search_type           ---> [" + cmd.Parameters[0].Value + "]");
-                        Console.WriteLine(" i_search_Name           ---> [" + cmd.Parameters[1].Value + "]");
-                        Console.WriteLine(" i_member_type            ---> [" + cmd.Parameters[2].Value + "]");
+                        //Console.WriteLine(" i_Search_type           ---> [" + cmd.Parameters[0].Value + "]");
+                        //Console.WriteLine(" i_search_Name           ---> [" + cmd.Parameters[1].Value + "]");
+                        //Console.WriteLine(" i_member_type           ---> [" + cmd.Parameters[2].Value + "]");
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -141,7 +203,8 @@ namespace YL_GSHOP.BizFrm.Dlg
 
         #region 이벤트
 
-        private void EfwGridControl1_DoubleClick(object sender, EventArgs e)
+
+        private void EfwGridControl1_DoubleClick_1(object sender, EventArgs e)
         {
             DataRow row = gridView1.GetDataRow(gridView1.GetSelectedRows()[0]);
 
@@ -149,11 +212,27 @@ namespace YL_GSHOP.BizFrm.Dlg
             //this.ParentBtn.EditValue2 = row["user_id"].ToString();
 
             this.USER_ID = row["user_id"].ToString();
-            this.U_NAME  = row["u_name"].ToString();
+            this.U_NAME = row["u_name"].ToString();
+
+            this.U_NICKNAME = row["u_name"].ToString();
+            this.USER_ID = row["user_id"].ToString();
+            this.BIRTH = row["u_birthday"].ToString();
+            this.U_GENDER = row["u_gender"].ToString();
+            this.U_CELL_NUM = row["u_cell_num"].ToString();
+            this.U_EMAIL = row["u_email"].ToString();
+            this.LOGIN_DATE = row["login_date"].ToString();
+            this.REG_DATE = row["reg_date"].ToString();
+            this.U_ZIP = row["u_zip"].ToString();
+            this.U_ADDR = row["u_addr"].ToString();
+            this.U_ADDR_DETAIL = row["u_addr_detail"].ToString();
+            this.U_CHEF_LEVEL = row["u_chef_level"].ToString();
+            this.IS_STOCK_FRIEND = row["is_stock_friend"].ToString();
+
 
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Close();
         }
+
 
         private void BtnSearch1_Click(object sender, EventArgs e)
         {
@@ -178,8 +257,8 @@ namespace YL_GSHOP.BizFrm.Dlg
                 e.Info.DisplayText = e.RowHandle.ToString();
         }
 
-        #endregion
 
+        #endregion
 
     }
 }

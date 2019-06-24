@@ -84,7 +84,7 @@ namespace YL_GSHOP.BizFrm
         {
             try
             {
-                Dictionary<string, string> myRecord;
+               // Dictionary<string, string> myRecord;
 
                 string strQueruy = @"  SELECT
                               T1.DCODE, T1.DNAME
