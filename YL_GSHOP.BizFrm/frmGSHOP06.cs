@@ -150,6 +150,7 @@ namespace YL_GSHOP.BizFrm
                 this.txtU_ADDR.EditValue = popup.U_ADDR;
                 this.txtU_ADDR_DETAIL.EditValue = popup.U_ADDR_DETAIL;
                 this.txtU_CHEF_LEVEL.EditValue = popup.U_CHEF_LEVEL;
+
                 this.chkIS_STOCK_FRIEND.EditValue = popup.IS_STOCK_FRIEND;
 
 
