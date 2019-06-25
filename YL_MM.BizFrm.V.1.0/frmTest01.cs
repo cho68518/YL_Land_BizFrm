@@ -391,5 +391,9 @@ namespace YL_MM.BizFrm
             }
         }
 
+        private void EfwSimpleButton12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
