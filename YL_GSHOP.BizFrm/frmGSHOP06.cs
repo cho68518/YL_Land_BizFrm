@@ -254,5 +254,82 @@ namespace YL_GSHOP.BizFrm
                 }
             }
         }
+
+        private void EfwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_GSHOP_GSHOP06_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_Search_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = cmbSearch_Type.EditValue;
+
+                        cmd.Parameters.Add("i_search_Name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtSearch_Name.EditValue;
+
+                        //Console.WriteLine(" i_Search_type           ---> [" + cmd.Parameters[0].Value + "]");
+                        //Console.WriteLine(" i_search_Name           ---> [" + cmd.Parameters[1].Value + "]");
+                        //Console.WriteLine(" i_member_type           ---> [" + cmd.Parameters[2].Value + "]");
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl3.DataBind(ds);
+                            this.efwGridControl3.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void EfwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_GSHOP_GSHOP06_SELECT_04", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = cmbQ1.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[1].Value = txtSearch.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                            this.efwGridControl1.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
     }
 }

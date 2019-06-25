@@ -76,7 +76,8 @@ namespace YL_GSHOP.BizFrm
             //new ColumnControlSet("id", txtID)
             //);
             //this.efwGridControl1.Click += efwGridControl1_Click;
-            rbCOMFIRM.EditValue = "T";
+            rbCOMFIRM.EditValue = "N";
+            
             setCmb();
         }
 
@@ -161,7 +162,7 @@ namespace YL_GSHOP.BizFrm
                 try
                 {
                     cmbO_TYPE.Focus();
-                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
 
                         for (int i = 0; i < gridView1.DataRowCount; i++)
