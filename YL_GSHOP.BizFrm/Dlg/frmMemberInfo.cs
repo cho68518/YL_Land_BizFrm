@@ -29,13 +29,23 @@ namespace YL_GSHOP.BizFrm.Dlg
             get;
             set;
         }
+        public string IDX
+        {
+            get;
+            set;
+        }
+
 
         public string USER_ID
         {
             get;
             set;
         }
-
+        public string U_ID
+        {
+            get;
+            set;
+        }
         public string U_NAME
         {
             get;
@@ -213,9 +223,10 @@ namespace YL_GSHOP.BizFrm.Dlg
 
             this.USER_ID = row["user_id"].ToString();
             this.U_NAME = row["u_name"].ToString();
+            this.IDX = row["idx"].ToString();
 
             this.U_NICKNAME = row["u_name"].ToString();
-            this.USER_ID = row["user_id"].ToString();
+            this.U_ID = row["u_id"].ToString();
             this.BIRTH = row["u_birthday"].ToString();
             this.U_GENDER = row["u_gender"].ToString();
             this.U_CELL_NUM = row["u_cell_num"].ToString();

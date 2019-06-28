@@ -204,6 +204,7 @@ namespace YL_GSHOP.BizFrm
 
         private void BtnMemberSch1_Click(object sender, EventArgs e)
         {
+            txtIDX1.Text = "";
             popup = new frmMemberInfo
             {
                 COMPANYCD = "YL01",
@@ -212,6 +213,7 @@ namespace YL_GSHOP.BizFrm
             popup.FormClosed += popup_FormClosed2;
             PopUpBizAgent.Show(this, popup);
         }
+
 
         private void popup_FormClosed2(object sender, FormClosedEventArgs e)
         {
@@ -407,6 +409,10 @@ namespace YL_GSHOP.BizFrm
         {
             try
             {
+                if (string.IsNullOrEmpty(this.txtIDX1.Text))
+                {
+                    return;
+                }
                 string sCOMFIRM = string.Empty;
                 //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
@@ -704,5 +710,76 @@ namespace YL_GSHOP.BizFrm
             }
         }
 
+        private void EfwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(this.txtU_NAME1.Text))
+                {
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(this.cbDORAMD_TYPE.Text))
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 프리/로컬 MD 구분을 선택하세요!");
+                    return;
+                }
+
+                if (cbDORAMD_TYPE.EditValue.ToString() == "1")
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 지역구는 로컬MD만 지정 가능합니다");
+                    return;
+                }
+
+                if (cmbSAREA1.EditValue == null)
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 시/도/구군을 선택하세요 ");
+                    return;
+                }
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_GSHOP_GSHOP06_DELETE_04", con))
+                    {
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                        cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtAREAIDX.EditValue);
+                        cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                        cmd.Parameters.Add(new MySqlParameter("i_md_idx", MySqlDbType.Int32));
+                        cmd.Parameters["i_md_idx"].Value = Convert.ToInt32(txtIDX1.EditValue);
+                        cmd.Parameters["i_md_idx"].Direction = ParameterDirection.Input;
+
+                        cmd.Parameters.Add(new MySqlParameter("i_sido", MySqlDbType.VarChar));
+                        cmd.Parameters["i_sido"].Value = cmbTAREA1.EditValue;
+                        cmd.Parameters["i_sido"].Direction = ParameterDirection.Input;
+
+                        cmd.Parameters.Add(new MySqlParameter("i_gugun", MySqlDbType.VarChar));
+                        cmd.Parameters["i_gugun"].Value = cmbSAREA1.EditValue;
+                        cmd.Parameters["i_gugun"].Direction = ParameterDirection.Input;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_return", MySqlDbType.VarChar));
+                        cmd.Parameters["o_return"].Direction = ParameterDirection.Output;
+                        cmd.ExecuteNonQuery();
+
+                        if (cmd.Parameters["o_Return"].Value.ToString() != "")
+                        {
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                EfwSimpleButton1_Click(null, null);
+            }
+            Open3();
+        }
     }
 }
