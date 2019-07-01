@@ -196,7 +196,7 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Padding = new System.Windows.Forms.Padding(5);
             this.xtraTabPage1.Size = new System.Drawing.Size(1110, 583);
-            this.xtraTabPage1.Text = "머니 적립내역";
+            this.xtraTabPage1.Text = "적립내역";
             // 
             // efwGridControl1
             // 
@@ -369,7 +369,7 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Padding = new System.Windows.Forms.Padding(5);
             this.xtraTabPage2.Size = new System.Drawing.Size(1110, 583);
-            this.xtraTabPage2.Text = "머니 사용 내역";
+            this.xtraTabPage2.Text = "사용 내역";
             // 
             // efwGridControl2
             // 

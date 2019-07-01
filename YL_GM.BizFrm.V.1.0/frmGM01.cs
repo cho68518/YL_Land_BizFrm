@@ -9,11 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YL_GM.BizFrm.Dlg;
 
 namespace YL_GM.BizFrm
 {
     public partial class frmGM01 : FrmBase
     {
+        frmGM01_Pop01 popup;
+
         #region Fields
 
         //bool _is_dupchk = false;
@@ -52,22 +55,34 @@ namespace YL_GM.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
-    
+            if (UserInfo.instance().UserId == "169.254.169.113" || UserInfo.instance().UserId == "0000000024")
+            {
+                panel5.Visible = true;
+            }
+            else
+            {
+                panel5.Visible = false;
+            }
+           
         }
 
         #endregion
 
         public override void Search()
         {
+            lblDate.Text = DateTime.Now.ToString() + " 현재";
+
             Open1();
             Open2();
+            Open3();
+
+            TotAdd();
         }
 
         private void Open1()
         {
             try
             {
-                Dictionary<string, int> myRecord;
                 string sP_SHOW_TYPE = string.Empty;
                 decimal n1 = 0; decimal n2 = 0;
 
@@ -95,19 +110,65 @@ namespace YL_GM.BizFrm
                                 //-----------------------------------------------------------------------------------
                                 //회원 정보현황
                                 //-----------------------------------------------------------------------------------
-                                //1.총회원수
-                                //현재회원수
-                                lbl1.Text = String.Format("{0:#,##0}", rows[0]["lifeportalTotal"]);
-                                lbl8.Text = String.Format("{0:#,##0}", rows[0]["lifeportalDay"]);
-                                lbl15.Text = String.Format("{0:#,##0}", rows[0]["lifeportalDayBef"]);
-                                lbl22.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["lifeportalDay"]) - Convert.ToInt32(rows[0]["lifeportalDayBef"]));
+                                ////1.총회원수
+                                ////현재회원수
+                                //lbl1.Text = String.Format("{0:#,##0}", rows[0]["lifeportalTotal"]);
+                                ////금일인원
+                                //lbl8.Text = String.Format("{0:#,##0}", rows[0]["lifeportalDay"]);
+                                ////전일인원
+                                //lbl15.Text = String.Format("{0:#,##0}", rows[0]["lifeportalDayBef"]);
+                                ////일증감수
+                                //lbl22.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["lifeportalDay"]) - Convert.ToInt32(rows[0]["lifeportalDayBef"]));
+                                ////당월인원
+                                //lbl29.Text = String.Format("{0:#,##0}", rows[0]["lifeportalMonth"]);
+                                ////전월인원
+                                //lbl36.Text = String.Format("{0:#,##0}", rows[0]["lifeportalMonthBef"]);
+                                ////월증감수
+                                //lbl43.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["lifeportalMonth"]) - Convert.ToInt32(rows[0]["lifeportalMonthBef"]));
+                                ////전월대비증감율
+                                //n1 = Convert.ToDecimal(rows[0]["lifeportalMonth"]);
+                                //n2 = Convert.ToDecimal(rows[0]["lifeportalMonthBef"]);
+                                //lbl50.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
 
-                                lbl29.Text = String.Format("{0:#,##0}", rows[0]["lifeportalMonth"]);
-                                lbl36.Text = String.Format("{0:#,##0}", rows[0]["lifeportalMonthBef"]);
-                                lbl43.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["lifeportalMonth"]) - Convert.ToInt32(rows[0]["lifeportalMonthBef"]));
-                                n1 = Convert.ToDecimal(rows[0]["lifeportalMonth"]);
-                                n2 = Convert.ToDecimal(rows[0]["lifeportalMonthBef"]);
-                                lbl50.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
+                                //2.포털가입 회원수
+                                //현재회원수
+                                lbl2.Text = String.Format("{0:#,##0}", rows[0]["portalTotal"]);
+                                //금일인원
+                                lbl9.Text = String.Format("{0:#,##0}", rows[0]["portalDay"]);
+                                //전일인원
+                                lbl16.Text = String.Format("{0:#,##0}", rows[0]["portalDayBef"]);
+                                //일증감수
+                                lbl23.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["portalDay"]) - Convert.ToInt32(rows[0]["portalDayBef"]));
+                                //당월인원
+                                lbl30.Text = String.Format("{0:#,##0}", rows[0]["portalMonth"]);
+                                //전월인원
+                                lbl37.Text = String.Format("{0:#,##0}", rows[0]["portalMonthBef"]);
+                                //월증감수
+                                lbl44.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["portalMonth"]) - Convert.ToInt32(rows[0]["portalMonthBef"]));
+                                //전월대비증감율
+                                n1 = Convert.ToDecimal(rows[0]["portalMonth"]);
+                                n2 = Convert.ToDecimal(rows[0]["portalMonthBef"]);
+                                lbl51.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
+
+                                //3.라이프가입 회원수
+                                //현재회원수
+                                //lbl3.Text = String.Format("{0:#,##0}", rows[0]["lifeTotal"]);
+                                //금일인원
+                                //lbl10.Text = String.Format("{0:#,##0}", rows[0]["lifeDay"]);
+                                //전일인원
+                                //lbl17.Text = String.Format("{0:#,##0}", rows[0]["lifeDayBef"]);
+                                //일증감수
+                                //lbl24.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["lifeDay"]) - Convert.ToInt32(rows[0]["lifeDayBef"]));
+                                //당월인원
+                                //lbl31.Text = String.Format("{0:#,##0}", rows[0]["lifeMonth"]);
+                                //전월인원
+                                //lbl38.Text = String.Format("{0:#,##0}", rows[0]["lifeMonthBef"]);
+                                //월증감수
+                                //lbl45.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["lifeMonth"]) - Convert.ToInt32(rows[0]["lifeMonthBef"]));
+                                //전월대비증감율
+                                //n1 = Convert.ToDecimal(rows[0]["lifeMonth"]);
+                                //n2 = Convert.ToDecimal(rows[0]["lifeMonthBef"]);
+                                //lbl52.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
                             }
                         }
                     }
@@ -120,12 +181,216 @@ namespace YL_GM.BizFrm
             }
         }
 
-
         private void Open2()
         {
             try
             {
-                Dictionary<string, int> myRecord;
+                string sP_SHOW_TYPE = string.Empty;
+                decimal n1 = 0; decimal n2 = 0;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_GM_GM01_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = DateTime.Now.ToString("yyyyMMdd");
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = DateTime.Now.ToString("yyyyMMdd");
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(dt);
+
+                            if (dt.Rows.Count > 0)
+                            {
+                                DataRow[] rows = dt.Select();
+
+                                //-----------------------------------------------------------------------------------
+                                //회원 정보현황
+                                //-----------------------------------------------------------------------------------
+                                //1.셰프이사
+                                //현재회원수
+                                lbl4.Text = String.Format("{0:#,##0}", rows[0]["ChefTotal"]);
+                                //금일인원
+                                lbl11.Text = String.Format("{0:#,##0}", rows[0]["ChefDay"]);
+                                //전일인원
+                                lbl18.Text = String.Format("{0:#,##0}", rows[0]["ChefDayBef"]);
+                                //일증감수
+                                lbl25.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["ChefDay"]) - Convert.ToInt32(rows[0]["ChefDayBef"]));
+                                //당월인원
+                                lbl32.Text = String.Format("{0:#,##0}", rows[0]["ChefMonth"]);
+                                //전월인원
+                                lbl39.Text = String.Format("{0:#,##0}", rows[0]["ChefMonthBef"]);
+                                //월증감수
+                                lbl46.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["ChefMonth"]) - Convert.ToInt32(rows[0]["ChefMonthBef"]));
+                                //전월대비증감율
+                                n1 = Convert.ToDecimal(rows[0]["ChefMonth"]);
+                                n2 = Convert.ToDecimal(rows[0]["ChefMonthBef"]);
+                                if (n2 > 0)
+                                    lbl53.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
+                                else
+                                    lbl53.Text = "0";
+
+                                //2.도마셰프(PS운영자)
+                                //현재회원수
+                                lbl5.Text = String.Format("{0:#,##0}", rows[0]["PsTotal"]);
+                                //금일인원
+                                lbl12.Text = String.Format("{0:#,##0}", rows[0]["PsDay"]);
+                                //전일인원
+                                lbl19.Text = String.Format("{0:#,##0}", rows[0]["PsDayBef"]);
+                                //일증감수
+                                lbl26.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["PsDay"]) - Convert.ToInt32(rows[0]["PsDayBef"]));
+                                //당월인원
+                                lbl33.Text = String.Format("{0:#,##0}", rows[0]["PsMonth"]);
+                                //전월인원
+                                lbl40.Text = String.Format("{0:#,##0}", rows[0]["PsMonthBef"]);
+                                //월증감수
+                                lbl47.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["PsMonth"]) - Convert.ToInt32(rows[0]["PsMonthBef"]));
+                                //전월대비증감율
+                                n1 = Convert.ToDecimal(rows[0]["PsMonth"]);
+                                n2 = Convert.ToDecimal(rows[0]["PsMonthBef"]);
+                                if (n2 > 0)
+                                    lbl54.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
+                                else
+                                    lbl54.Text = "0";
+
+                                //3.VIP
+                                //현재회원수
+                                lbl6.Text = String.Format("{0:#,##0}", rows[0]["VipTotal"]);
+                                //금일인원
+                                lbl13.Text = String.Format("{0:#,##0}", rows[0]["VipDay"]);
+                                //전일인원
+                                lbl20.Text = String.Format("{0:#,##0}", rows[0]["VipDayBef"]);
+                                //일증감수
+                                lbl27.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["VipDay"]) - Convert.ToInt32(rows[0]["VipDayBef"]));
+                                //당월인원
+                                lbl34.Text = String.Format("{0:#,##0}", rows[0]["VipMonth"]);
+                                //전월인원
+                                lbl41.Text = String.Format("{0:#,##0}", rows[0]["VipMonthBef"]);
+                                //월증감수
+                                lbl48.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["VipMonth"]) - Convert.ToInt32(rows[0]["VipMonthBef"]));
+                                //전월대비증감율
+                                n1 = Convert.ToDecimal(rows[0]["VipMonth"]);
+                                n2 = Convert.ToDecimal(rows[0]["VipMonthBef"]);
+                                if (n2 > 0)
+                                    lbl55.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
+                                else
+                                    lbl55.Text = "0";
+
+                                //4.도마
+                                //현재회원수
+                                lbl7.Text = String.Format("{0:#,##0}", rows[0]["DomaTotal"]);
+                                //금일인원
+                                lbl14.Text = String.Format("{0:#,##0}", rows[0]["DomaDay"]);
+                                //전일인원
+                                lbl21.Text = String.Format("{0:#,##0}", rows[0]["DomaDayBef"]);
+                                //일증감수
+                                lbl28.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["DomaDay"]) - Convert.ToInt32(rows[0]["DomaDayBef"]));
+                                //당월인원
+                                lbl35.Text = String.Format("{0:#,##0}", rows[0]["DomaMonth"]);
+                                //전월인원
+                                lbl42.Text = String.Format("{0:#,##0}", rows[0]["DomaMonthBef"]);
+                                //월증감수
+                                lbl49.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["DomaMonth"]) - Convert.ToInt32(rows[0]["DomaMonthBef"]));
+                                //전월대비증감율
+                                n1 = Convert.ToDecimal(rows[0]["DomaMonth"]);
+                                n2 = Convert.ToDecimal(rows[0]["DomaMonthBef"]);
+                                if (n2 > 0)
+                                    lbl56.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
+                                else
+                                    lbl56.Text = "0";
+
+                                //라이프가입회원수 계산
+                                //현재회원수
+                                lbl3.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["ChefTotal"]) + Convert.ToInt32(rows[0]["PsTotal"]) + Convert.ToInt32(rows[0]["VipTotal"]) + Convert.ToInt32(rows[0]["DomaTotal"]));
+                                //금일인원
+                                lbl10.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["ChefDay"]) + Convert.ToInt32(rows[0]["PsDay"]) + Convert.ToInt32(rows[0]["VipDay"]) + Convert.ToInt32(rows[0]["DomaDay"]));
+                                //전일인원
+                                lbl17.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["ChefDayBef"]) + Convert.ToInt32(rows[0]["PsDayBef"]) + Convert.ToInt32(rows[0]["VipDayBef"]) + Convert.ToInt32(rows[0]["DomaDayBef"]));
+                                //일증감수
+                                n1 = Convert.ToInt32(lbl10.Text.Replace(",",""));
+                                n2 = Convert.ToInt32(lbl17.Text.Replace(",", ""));
+                                lbl24.Text = String.Format("{0:#,##0}", n1 - n2);
+                                //당월인원
+                                lbl31.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["ChefMonth"]) + Convert.ToInt32(rows[0]["PsMonth"]) + Convert.ToInt32(rows[0]["VipMonth"]) + Convert.ToInt32(rows[0]["DomaMonth"]));
+                                //전월인원
+                                lbl38.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["ChefMonthBef"]) + Convert.ToInt32(rows[0]["PsMonthBef"]) + Convert.ToInt32(rows[0]["VipMonthBef"]) + Convert.ToInt32(rows[0]["DomaMonthBef"]));
+                                //월증감수
+                                n1 = Convert.ToInt32(lbl31.Text.Replace(",", ""));
+                                n2 = Convert.ToInt32(lbl38.Text.Replace(",", ""));
+                                lbl45.Text = String.Format("{0:#,##0}", n1 - n2);
+                                //전월대비증감율
+                                if (n2 > 0)
+                                    lbl52.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
+                                else
+                                    lbl52.Text = "0";
+
+                                //5.도라MD
+                                //현재회원수
+                                lbl57.Text = String.Format("{0:#,##0}", rows[0]["MdTotal"]);
+                                //금일인원
+                                lbl59.Text = String.Format("{0:#,##0}", rows[0]["MdDay"]);
+                                //전일인원
+                                lbl61.Text = String.Format("{0:#,##0}", rows[0]["MdDayBef"]);
+                                //일증감수
+                                lbl63.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["MdDay"]) - Convert.ToInt32(rows[0]["MdDayBef"]));
+                                //당월인원
+                                lbl65.Text = String.Format("{0:#,##0}", rows[0]["MdMonth"]);
+                                //전월인원
+                                lbl67.Text = String.Format("{0:#,##0}", rows[0]["MdMonthBef"]);
+                                //월증감수
+                                lbl69.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["MdMonth"]) - Convert.ToInt32(rows[0]["MdMonthBef"]));
+                                //전월대비증감율
+                                n1 = Convert.ToDecimal(rows[0]["MdMonth"]);
+                                n2 = Convert.ToDecimal(rows[0]["MdMonthBef"]);
+                                if (n2 > 0)
+                                    lbl71.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
+                                else
+                                    lbl71.Text = "0";
+
+                                //6.G멀티샵
+                                //현재회원수
+                                lbl58.Text = String.Format("{0:#,##0}", rows[0]["BizTotal"]);
+                                //금일인원
+                                lbl60.Text = String.Format("{0:#,##0}", rows[0]["BizDay"]);
+                                //전일인원
+                                lbl62.Text = String.Format("{0:#,##0}", rows[0]["BizDayBef"]);
+                                //일증감수
+                                lbl64.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["BizDay"]) - Convert.ToInt32(rows[0]["BizDayBef"]));
+                                //당월인원
+                                lbl66.Text = String.Format("{0:#,##0}", rows[0]["BizMonth"]);
+                                //전월인원
+                                lbl68.Text = String.Format("{0:#,##0}", rows[0]["BizMonthBef"]);
+                                //월증감수
+                                lbl70.Text = String.Format("{0:#,##0}", Convert.ToInt32(rows[0]["BizMonth"]) - Convert.ToInt32(rows[0]["BizMonthBef"]));
+                                //전월대비증감율
+                                n1 = Convert.ToDecimal(rows[0]["BizMonth"]);
+                                n2 = Convert.ToDecimal(rows[0]["BizMonthBef"]);
+                                if (n2 > 0)
+                                    lbl72.Text = String.Format("{0:#,##0.00}", ((n1 - n2) / n2) * 100) + "%";
+                                else
+                                    lbl72.Text = "0";
+
+                            }
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void Open3()
+        {
+            try
+            {
                 string sP_SHOW_TYPE = string.Empty;
                 int n1 = 0; int n2 = 0; int n3 = 0; int n4 = 0;
 
@@ -243,10 +508,149 @@ namespace YL_GM.BizFrm
             }
         }
 
+        int nLG_CNT1 = 0;
+        int nLG_CNT2 = 0;
+        int nLG_CNT3 = 0;
+        int nKT_CNT1 = 0;
+        int nKT_CNT2 = 0;
 
+        private void TotAddGet()
+        {
+            //텔레콤 충누적데이타 Select
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("telecom.USP_GM_GM01_SELECT_04", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
 
+                        cmd.Parameters.Add("i_idx", MySqlDbType.Int32, 15);
+                        cmd.Parameters[0].Value = 1;
 
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(dt);
 
+                            if (dt.Rows.Count > 0)
+                            {
+                                nLG_CNT1 = Convert.ToInt32(dt.Rows[0]["lg_cnt1"]);
+                                nLG_CNT2 = Convert.ToInt32(dt.Rows[0]["lg_cnt2"]);
+                                nLG_CNT3 = Convert.ToInt32(dt.Rows[0]["lg_cnt3"]);
 
+                                nKT_CNT1 = Convert.ToInt32(dt.Rows[0]["kt_cnt1"]);
+                                nKT_CNT2 = Convert.ToInt32(dt.Rows[0]["kt_cnt2"]);
+                            }
+                            else
+                            {
+                                nLG_CNT1 = 0;
+                                nLG_CNT2 = 0;
+                                nLG_CNT3 = 0;
+
+                                nKT_CNT1 = 0;
+                                nKT_CNT2 = 0;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void TotAdd()
+        {
+            int ncnt1 = 0;
+            int ncnt2 = 0;
+            int ncnt3 = 0;
+            int ncnt4 = 0;
+            int ncnt5 = 0;
+
+            //총누적
+            TotAddGet();
+
+            ncnt1 = nLG_CNT1 + Convert.ToInt32(lblTel33.Text);
+            ncnt2 = nLG_CNT2 + Convert.ToInt32(lblTel34.Text);
+            ncnt3 = nLG_CNT3 + Convert.ToInt32(lblTel35.Text);
+            ncnt4 = nKT_CNT1 + Convert.ToInt32(lblTel37.Text);
+            ncnt5 = nKT_CNT2 + Convert.ToInt32(lblTel38.Text);
+
+            lblTel1.Text = String.Format("{0:#,##0}", ncnt1);
+            lblTel2.Text = String.Format("{0:#,##0}", ncnt2);
+            lblTel3.Text = String.Format("{0:#,##0}", ncnt3);
+            lblTel4.Text = String.Format("{0:#,##0}", ncnt1 + ncnt2 + ncnt3);
+
+            lblTel5.Text = String.Format("{0:#,##0}", ncnt4);
+            lblTel6.Text = String.Format("{0:#,##0}", ncnt5);
+            lblTel7.Text = String.Format("{0:#,##0}", ncnt4 + ncnt5);
+            lblTel8.Text = String.Format("{0:#,##0}", ncnt1 + ncnt2 + ncnt3 + ncnt4 + ncnt5);
+            //계산된 누적 저장.
+            //배치로 작성해야함(1일 한번)
+            //TotSave(ncnt1, ncnt2, ncnt3, ncnt4, ncnt5);
+
+        }
+
+        private void TotSave(int ncnt1, int ncnt2, int ncnt3, int ncnt4, int ncnt5)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM01_SAVE_02", con))
+                    {
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_lg_cnt1", MySqlDbType.Int32, 15);
+                        cmd.Parameters[0].Value = ncnt1;
+
+                        cmd.Parameters.Add("i_lg_cnt2", MySqlDbType.Int32, 15);
+                        cmd.Parameters[1].Value = ncnt2;
+
+                        cmd.Parameters.Add("i_lg_cnt3", MySqlDbType.Int32, 15);
+                        cmd.Parameters[2].Value = ncnt3;
+
+                        cmd.Parameters.Add("i_kt_cnt1", MySqlDbType.Int32, 15);
+                        cmd.Parameters[3].Value = ncnt4;
+
+                        cmd.Parameters.Add("i_kt_cnt2", MySqlDbType.Int32, 15);
+                        cmd.Parameters[4].Value = ncnt5;
+
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            popup = new frmGM01_Pop01();
+            //popup.Owner = this;
+            popup.pCOMPANYCD = "";
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            //if (popup.DialogResult == DialogResult.OK)
+            //{
+            //    this.txtX.EditValue = popup.nX;
+            //    this.txtY.EditValue = popup.nY;
+            //}
+
+            //OpenTag(gfloorInfo.FLR, "LDT");
+            popup = null;
+        }
     }
 }

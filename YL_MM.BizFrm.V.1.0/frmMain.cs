@@ -51,7 +51,6 @@ namespace YL_MM.BizFrm
 
         private void EfwSimpleButton4_Click(object sender, EventArgs e)
         {
-            //회원코드
             FrmBaseLoad(new frmMM05());
         }
 
@@ -59,6 +58,11 @@ namespace YL_MM.BizFrm
         {
             FrmBaseLoad(new frmTest02());
 
+        }
+
+        private void EfwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmMM06());
         }
     }
 }

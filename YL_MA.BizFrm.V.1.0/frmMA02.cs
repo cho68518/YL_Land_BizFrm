@@ -232,6 +232,25 @@ namespace YL_MA.BizFrm
             }
         }
 
+        private void Open4()
+        {
+            try
+            {
+                //base.Search();
+                DataSet ds = ServiceAgent.ExecuteDataSet(true, "CONIS_IBS", "USP_MA_MA02_SELECT_04"
+                    , this.txtCOMPANYCD.EditValue
+                    , this.cmbBIZCDQ.EditValue
+                    );
+
+                efwGridControl2.DataBind(ds);
+                this.efwGridControl2.MyGridView.BestFitColumns();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
         private void Open2(string pBIZCD, string pDEPTCODE)
         {
             try
@@ -261,9 +280,9 @@ namespace YL_MA.BizFrm
             Open1();
 
             if (cmbBIZCDQ.EditValue.ToString() == "")
-            {
                 Open3();
-            }
+            else
+                Open4();
         }
 
         private void GridView1_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
@@ -361,6 +380,11 @@ namespace YL_MA.BizFrm
             //{
             //    Open3();
             //}
+            txtCOIDNO.EditValue = null;
+            txtNAME.EditValue = null;
+            txtDEPTNAME.EditValue = null;
+            txtDUTYNAME.EditValue = null;
+
             BtnOpen1_Click(null, null);
         }
 
