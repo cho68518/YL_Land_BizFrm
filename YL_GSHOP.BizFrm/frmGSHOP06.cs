@@ -11,6 +11,7 @@ namespace YL_GSHOP.BizFrm
     public partial class frmGSHOP06 : FrmBase
     {
         frmMemberInfo popup;
+        frmMDMemberInfo MDpopup;
 
         public EventHandler efwGridControl1_Click { get; private set; }
 
@@ -105,6 +106,23 @@ namespace YL_GSHOP.BizFrm
         private void efwGridControl3_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl3.GetSelectedRow(0);
+
+            txtU_NAME1.EditValue = null;
+            txtU_NICKNAME1.EditValue = null;
+            txtUSER_ID1.EditValue = null;
+            txtBIRTH1.EditValue = null;
+            txtU_GENDER1.EditValue = null;
+            txtU_CELL_NUM1.EditValue = null;
+            txtU_EMAIL1.EditValue = null;
+            txtLOGIN_DATE1.EditValue = null;
+            txtREG_DATE1.EditValue = null;
+            txtU_ZIP1.EditValue = null;
+            txtU_ADDR1.EditValue = null;
+            txtU_ADDR_DETAIL1.EditValue = null;
+            cbDORAMD_TYPE.EditValue = null;
+            txtIDX1.EditValue = null;
+            txtREMARK.EditValue = null;
+
             Open2();
         }
         private void efwGridControl2_Click(object sender, EventArgs e)
@@ -164,17 +182,6 @@ namespace YL_GSHOP.BizFrm
 
         }
 
-        private void BtnMemberSch_Click(object sender, EventArgs e)
-        {
-            popup = new frmMemberInfo
-            {
-                COMPANYCD = "YL01",
-                COMPANYNAME = "(주)와이엘랜드",
-            };
-            popup.FormClosed += popup_FormClosed1;
-            PopUpBizAgent.Show(this, popup);
-        }
-
         private void popup_FormClosed1(object sender, FormClosedEventArgs e)
         {
             popup.FormClosed -= popup_FormClosed1;
@@ -202,40 +209,27 @@ namespace YL_GSHOP.BizFrm
             popup = null;
         }
 
-        private void BtnMemberSch1_Click(object sender, EventArgs e)
+        private void MDpopup_FormClosed2(object sender, FormClosedEventArgs e)
         {
-            txtIDX1.Text = "";
-            popup = new frmMemberInfo
+            MDpopup.FormClosed -= MDpopup_FormClosed2;
+            if (MDpopup.DialogResult == DialogResult.OK)
             {
-                COMPANYCD = "YL01",
-                COMPANYNAME = "(주)와이엘랜드",
-            };
-            popup.FormClosed += popup_FormClosed2;
-            PopUpBizAgent.Show(this, popup);
-        }
+                this.txtU_NAME1.Text = MDpopup.U_NAME;
 
-
-        private void popup_FormClosed2(object sender, FormClosedEventArgs e)
-        {
-            popup.FormClosed -= popup_FormClosed2;
-            if (popup.DialogResult == DialogResult.OK)
-            {
-                this.txtU_NAME1.Text = popup.U_NAME;
-
-                this.txtU_NICKNAME1.EditValue = popup.U_NICKNAME;
-                this.txtUSER_ID1.EditValue = popup.USER_ID;
-                this.txtBIRTH1.EditValue = popup.BIRTH;
-                this.txtU_GENDER1.EditValue = popup.U_GENDER;
-                this.txtU_CELL_NUM1.EditValue = popup.U_CELL_NUM;
-                this.txtU_EMAIL1.EditValue = popup.U_EMAIL;
-                this.txtLOGIN_DATE1.EditValue = popup.LOGIN_DATE;
-                this.txtREG_DATE1.EditValue = popup.REG_DATE;
-                this.txtU_ZIP1.EditValue = popup.U_ZIP;
-                this.txtU_ADDR1.EditValue = popup.U_ADDR;
-                this.txtU_ADDR_DETAIL1.EditValue = popup.U_ADDR_DETAIL;
-                this.txtMD_U_ID.EditValue = popup.U_ID;
+                this.txtU_NICKNAME1.EditValue = MDpopup.U_NICKNAME;
+                this.txtUSER_ID1.EditValue = MDpopup.USER_ID;
+                this.txtBIRTH1.EditValue = MDpopup.BIRTH;
+                this.txtU_GENDER1.EditValue = MDpopup.U_GENDER;
+                this.txtU_CELL_NUM1.EditValue = MDpopup.U_CELL_NUM;
+                this.txtU_EMAIL1.EditValue = MDpopup.U_EMAIL;
+                this.txtLOGIN_DATE1.EditValue = MDpopup.LOGIN_DATE;
+                this.txtREG_DATE1.EditValue = MDpopup.REG_DATE;
+                this.txtU_ZIP1.EditValue = MDpopup.U_ZIP;
+                this.txtU_ADDR1.EditValue = MDpopup.U_ADDR;
+                this.txtU_ADDR_DETAIL1.EditValue = MDpopup.U_ADDR_DETAIL;
+                this.txtMD_U_ID.EditValue = MDpopup.U_ID;
             }
-            popup = null;
+            MDpopup = null;
         }
 
 
@@ -244,6 +238,7 @@ namespace YL_GSHOP.BizFrm
         {
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
                 string sCOMFIRM = string.Empty;
                 //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
@@ -274,8 +269,33 @@ namespace YL_GSHOP.BizFrm
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
             }
         }
+
+        private void BtnMemberSch_Click(object sender, EventArgs e)
+        {
+            popup = new frmMemberInfo
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+            };
+            popup.FormClosed += popup_FormClosed1;
+            PopUpBizAgent.Show(this, popup);
+        }
+
+        private void BtnMemberSch1_Click(object sender, EventArgs e)
+        {
+            txtIDX1.Text = "";
+            MDpopup = new frmMDMemberInfo
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+            };
+            MDpopup.FormClosed += MDpopup_FormClosed2;
+            PopUpBizAgent.Show(this, MDpopup);
+        }
+
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
@@ -376,6 +396,7 @@ namespace YL_GSHOP.BizFrm
         {
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
                 string sCOMFIRM = string.Empty;
                 //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
@@ -399,8 +420,10 @@ namespace YL_GSHOP.BizFrm
                     }
                 }
             }
+            
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
@@ -509,7 +532,7 @@ namespace YL_GSHOP.BizFrm
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int16, 2));
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.VarChar));
                             cmd.Parameters["i_idx"].Value = txtIDX1.EditValue;
                             cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
 
@@ -521,19 +544,25 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters["i_md_u_id"].Value = txtMD_U_ID.EditValue;
                             cmd.Parameters["i_md_u_id"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_doramd_type", MySqlDbType.Int16, 2));
-                            cmd.Parameters["i_doramd_type"].Value = Convert.ToInt16(cbDORAMD_TYPE.EditValue);
+                            cmd.Parameters.Add(new MySqlParameter("i_doramd_type", MySqlDbType.Int32, 2));
+                            cmd.Parameters["i_doramd_type"].Value = Convert.ToInt32(cbDORAMD_TYPE.EditValue);
                             cmd.Parameters["i_doramd_type"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
                             cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
                             cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("o_idx", MySqlDbType.UInt64,50));
+                            cmd.Parameters.Add(new MySqlParameter("o_idx", MySqlDbType.Int32, 10));
                             cmd.Parameters["o_idx"].Direction = ParameterDirection.Output;
-                            
-                            cmd.ExecuteNonQuery();
 
+                            //Console.WriteLine(" i_idx           ---> [" + txtIDX1.EditValue + "]");
+                            //Console.WriteLine(" i_gr_u_id       ---> [" + txtGR_U_ID.EditValue + "]");
+                            //Console.WriteLine(" i_md_u_id       ---> [" + txtMD_U_ID.EditValue + "]");
+                            //Console.WriteLine(" i_doramd_type   ---> [" + Convert.ToInt16(cbDORAMD_TYPE.EditValue) + "]");
+                            //Console.WriteLine(" i_remark        ---> [" + txtREMARK.EditValue + "]");
+                            //Console.WriteLine(" o_idx           ---> [" + ParameterDirection.Output + "]");
+
+                            cmd.ExecuteNonQuery();
 
                             txtIDX1.Text = (cmd.Parameters["o_idx"].Value.ToString());
 
@@ -669,7 +698,7 @@ namespace YL_GSHOP.BizFrm
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int16, 2));
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int16, 8));
                             cmd.Parameters["i_idx"].Value = txtIDX1.EditValue;
                             cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
 
@@ -780,6 +809,78 @@ namespace YL_GSHOP.BizFrm
                 EfwSimpleButton1_Click(null, null);
             }
             Open3();
+        }
+
+        private void EfwSimpleButton7_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtGR_U_ID.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 그룹MD를 선택하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txtU_NAME1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 회원을 선택하세요!");
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "MD 정보를 삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domamall.USP_GSHOP_GSHOP06_DELETE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.VarChar));
+                            cmd.Parameters["i_idx"].Value = txtIDX1.EditValue;
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gr_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_gr_u_id"].Value = txtGR_U_ID.EditValue;
+                            cmd.Parameters["i_gr_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_md_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_md_u_id"].Value = txtMD_U_ID.EditValue;
+                            cmd.Parameters["i_md_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                finally
+                {
+                    EfwSimpleButton1_Click(null, null);
+                }
+                MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+
+                txtU_NAME1.EditValue = null;
+                txtU_NICKNAME1.EditValue = null;
+                txtUSER_ID1.EditValue = null;
+                txtBIRTH1.EditValue = null;
+                txtU_GENDER1.EditValue = null;
+                txtU_CELL_NUM1.EditValue = null;
+                txtU_EMAIL1.EditValue = null;
+                txtLOGIN_DATE1.EditValue = null;
+                txtREG_DATE1.EditValue = null;
+                txtU_ZIP1.EditValue = null;
+                txtU_ADDR1.EditValue = null;
+                txtU_ADDR_DETAIL1.EditValue = null;
+                cbDORAMD_TYPE.EditValue = null;
+                txtIDX1.EditValue = null;
+                txtREMARK.EditValue = null;
+                Eraser.Clear(this, "CLR2");
+                Open2();
+            }
         }
     }
 }

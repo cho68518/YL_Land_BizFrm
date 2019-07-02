@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace YL_GSHOP.BizFrm.Dlg
 {
-    public partial class frmMemberInfo : FrmPopUpBase
+    public partial class frmMDMemberInfo : FrmPopUpBase
     {
         #region Propertys
 
@@ -57,7 +57,7 @@ namespace YL_GSHOP.BizFrm.Dlg
             get;
             set;
         }
-        
+
         public string U_NICKNAME
         {
             get;
@@ -118,7 +118,7 @@ namespace YL_GSHOP.BizFrm.Dlg
         {
             get;
             set;
-        }    
+        }
 
         #endregion
 
@@ -126,44 +126,41 @@ namespace YL_GSHOP.BizFrm.Dlg
 
 
         #endregion
-
-        public frmMemberInfo()
+        public frmMDMemberInfo()
         {
             InitializeComponent();
-
         }
 
-        private void FrmMemberInfo_Load(object sender, EventArgs e)
+        private void FrmMDMemberInfo_Load(object sender, EventArgs e)
         {
-            this.Text = " 회원정보 (" + COMPANYNAME + ")";
+            this.Text = " MD 회원정보 (" + COMPANYNAME + ")";
 
             //txtCOMPANYNAME.Text = COMPANYNAME;
             gridView1.IndicatorWidth = 24;
 
-            setCmb();
+            SetCmb();
             cmbSearch_Type.EditValue = "0";
-
         }
 
-        #region 조회
-
-        private void setCmb()
+        private void SetCmb()
         {
-            //try
-            //{
-            //    //사업장콤보
-            //    string strQueruy = @"SELECT
-            //                            CODE    DCODE
-            //                           ,CODE_NM DNAME
-            //                         FROM ETCCODE
-            //                         WHERE SYS_CODE = '03' AND GRP_CODE='MEMBERQ_GBN1' AND CODE <> 'X'" +
-            //                           " ORDER BY RANKORDER ASC";
-            //    CodeAgent.SetLegacyCode(cmbQ1, strQueruy);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            //}
+            try
+            {
+
+                //대분류
+                string strQueruy3 = @"SELECT
+                                        CODE    DCODE
+                                       ,CODE_NM DNAME
+                                     FROM ETCCODE
+                                    WHERE GRP_CODE = 'MEMBERQ_GBN3' and CODE in ('2','3')
+                                    ORDER BY GRP_CODE ASC";
+                CodeAgent.SetLegacyCode(cmbMember_Type, strQueruy3);
+
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
         }
 
         private void Open1()
@@ -208,12 +205,6 @@ namespace YL_GSHOP.BizFrm.Dlg
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
-
-        #endregion
-
-        #region 이벤트
-
-
         private void EfwGridControl1_DoubleClick_1(object sender, EventArgs e)
         {
             DataRow row = gridView1.GetDataRow(gridView1.GetSelectedRows()[0]);
@@ -243,8 +234,6 @@ namespace YL_GSHOP.BizFrm.Dlg
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Close();
         }
-
-
         private void BtnSearch1_Click(object sender, EventArgs e)
         {
             Open1();
@@ -268,8 +257,9 @@ namespace YL_GSHOP.BizFrm.Dlg
                 e.Info.DisplayText = e.RowHandle.ToString();
         }
 
-
-        #endregion
-
+        public static implicit operator frmMDMemberInfo(frmMemberInfo v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

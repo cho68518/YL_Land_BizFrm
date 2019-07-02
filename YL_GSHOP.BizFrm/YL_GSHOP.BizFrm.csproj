@@ -129,6 +129,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dlg\frmMDMemberInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmMDMemberInfo.Designer.cs">
+      <DependentUpon>frmMDMemberInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dlg\frmMemberInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGSHOP07.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP07.Designer.cs">
+      <DependentUpon>frmGSHOP07.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGSHOP01.cs">
       <SubType>UserControl</SubType>
@@ -204,11 +216,17 @@
     <Compile Include="GSHOP03_RPT.Designer.cs">
       <DependentUpon>GSHOP03_RPT.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dlg\frmMDMemberInfo.resx">
+      <DependentUpon>frmMDMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmMemberInfo.resx">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP07.resx">
+      <DependentUpon>frmGSHOP07.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP04.resx">
       <DependentUpon>frmGSHOP04.cs</DependentUpon>

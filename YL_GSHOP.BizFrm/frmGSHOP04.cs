@@ -32,10 +32,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YL_GSHOP.BizFrm.Dlg;
+
 namespace YL_GSHOP.BizFrm
 {
     public partial class frmGSHOP04 : FrmBase
     {
+        frmMemberInfo popup;
         public frmGSHOP04()
         {
             InitializeComponent();
@@ -75,7 +78,7 @@ namespace YL_GSHOP.BizFrm
                       new ColumnControlSet("gshop_id", txtGSHOP_ID)
                     , new ColumnControlSet("ceo_name", txtCEO_NAME)
                     , new ColumnControlSet("gshop_name", txtGSHOP_NAME)
-                    , new ColumnControlSet("recomm_nm", txtRECOMM_NM)
+                    , new ColumnControlSet("u_nicknam", txtU_NICKNAME)
                     , new ColumnControlSet("register_no", txtREGISTER_NO)
                     , new ColumnControlSet("email", txtEMAIL)
                     , new ColumnControlSet("tel_no", txtTEL_NO)
@@ -84,8 +87,10 @@ namespace YL_GSHOP.BizFrm
                     //, new ColumnControlSet("jibun_addr", txtADDRESS2)
                     , new ColumnControlSet("sido_code", cmbTAREA1)
                     , new ColumnControlSet("gugun_code", cmbSAREA1)
-
-                      );
+                    , new ColumnControlSet("recomm_nicknm", txtRECOMM_NM)
+                    , new ColumnControlSet("recomm_u_id", txtRECOMM_U_ID)
+                    , new ColumnControlSet("hp_no", txtHP_NO)
+                   ); ;
 
             this.efwGridControl1.Click += efwGridControl1_Click;
 
@@ -238,9 +243,9 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters["i_gshop_name"].Value = txtGSHOP_NAME.EditValue;
                             cmd.Parameters["i_gshop_name"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_recomm_nm", MySqlDbType.VarChar));
-                            cmd.Parameters["i_recomm_nm"].Value = txtRECOMM_NM.EditValue;
-                            cmd.Parameters["i_recomm_nm"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_u_nickname", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_nickname"].Value = txtU_NICKNAME.EditValue;
+                            cmd.Parameters["i_u_nickname"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_register_no", MySqlDbType.VarChar));
                             cmd.Parameters["i_register_no"].Value = txtREGISTER_NO.EditValue;
@@ -278,6 +283,14 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters["i_gugun"].Value = cmbSAREA1.EditValue;
                             cmd.Parameters["i_gugun"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_recomm_nm", MySqlDbType.VarChar));
+                            cmd.Parameters["i_recomm_nm"].Value = txtRECOMM_NM.EditValue;
+                            cmd.Parameters["i_recomm_nm"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_recomm_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_recomm_u_id"].Value = txtRECOMM_U_ID.EditValue;
+                            cmd.Parameters["i_recomm_u_id"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -307,6 +320,29 @@ namespace YL_GSHOP.BizFrm
                 Search();
         }
 
+        private void BtnMemberSch_Click(object sender, EventArgs e)
+        {
+            popup = new frmMemberInfo
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+            };
+            popup.FormClosed += popup_FormClosed1;
+            PopUpBizAgent.Show(this, popup);
+        }
+
+        private void popup_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed1;
+            if (popup.DialogResult == DialogResult.OK)
+            {
+                this.txtRECOMM_NM.EditValue = popup.U_NICKNAME;
+                this.txtRECOMM_U_ID.EditValue = popup.U_ID;
+
+
+            }
+            popup = null;
+        }
 
     }
 }
