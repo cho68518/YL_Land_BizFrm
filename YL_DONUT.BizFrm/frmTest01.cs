@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
 using DevExpress.ClipboardSource.SpreadsheetML;
+using DevExpress.XtraNavBar;
 
 namespace YL_DONUT.BizFrm
 {
@@ -159,6 +160,58 @@ namespace YL_DONUT.BizFrm
             report.ShowPreview();
         }
 
-        
+        private void BtnSet_Click(object sender, EventArgs e)
+        {
+            navBarControl1.Dock = DockStyle.Right;
+            navBarControl1.PaintStyleName = "SkinExplorerBarView";
+            navBarControl1.SmallImages = imageList1;
+            NavBarItem separator = navBarControl1.Items.Add(true);
+
+            //-----------------------------------------------------------------------------------
+            NavBarGroup groupLocal = new NavBarGroup("Local");
+            NavBarItem itemInbox = new NavBarItem("Inbox");
+            itemInbox.SmallImageIndex = 0;
+            NavBarItem itemOutbox = new NavBarItem("Outbox");
+            itemOutbox.SmallImageIndex = 0;
+            NavBarItem itemSentItems = new NavBarItem("Sent Items");
+            itemSentItems.SmallImageIndex = 0;
+            itemSentItems.Enabled = false;
+            //-----------------------------------------------------------------------------------
+            NavBarGroup groupLocal2 = new NavBarGroup("Local2");
+            NavBarItem itemInbox2 = new NavBarItem("Inbox2");
+            itemInbox2.SmallImageIndex = 0;
+            NavBarItem itemOutbox2 = new NavBarItem("Outbox2");
+            itemOutbox2.SmallImageIndex = 0;
+            NavBarItem itemSentItems2 = new NavBarItem("Sent Items2");
+            itemSentItems2.SmallImageIndex = 0;
+            itemSentItems2.Enabled = false;
+            //-----------------------------------------------------------------------------------
+
+            navBarControl1.BeginUpdate();
+            navBarControl1.Groups.Add(groupLocal);
+            groupLocal.ItemLinks.Add(itemInbox);
+            groupLocal.ItemLinks.Add(separator);
+            groupLocal.ItemLinks.Add(itemOutbox);
+            groupLocal.ItemLinks.Add(separator);
+            groupLocal.ItemLinks.Add(itemSentItems);
+            groupLocal.Expanded = true;
+
+            navBarControl1.Groups.Add(groupLocal2);
+            groupLocal2.ItemLinks.Add(itemInbox2);
+            groupLocal2.ItemLinks.Add(separator);
+            groupLocal2.ItemLinks.Add(itemOutbox2);
+            groupLocal2.ItemLinks.Add(separator);
+            groupLocal2.ItemLinks.Add(itemSentItems2);
+            groupLocal2.Expanded = true;
+
+            navBarControl1.EndUpdate();
+            // Specify the event handler which will be invoked when any link is clicked. 
+            navBarControl1.LinkClicked += new NavBarLinkEventHandler(navBar_LinkClicked);
+        }
+
+        private void navBar_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            MessageBox.Show(string.Format("The {0} link has been clicked", e.Link.Caption));
+        }
     }
 }

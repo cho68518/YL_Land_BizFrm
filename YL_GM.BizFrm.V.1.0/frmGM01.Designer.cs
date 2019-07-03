@@ -117,7 +117,6 @@
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.panel4 = new System.Windows.Forms.Panel();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblTel64 = new Easy.Framework.WinForm.Control.efwLabel();
             this.lblTel56 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -203,6 +202,7 @@
             this.efwLabel79 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel80 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel81 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.btnUpdate = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
@@ -210,8 +210,8 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -234,6 +234,7 @@
             // 
             // efwGroupControl1
             // 
+            this.efwGroupControl1.AllowTouchScroll = true;
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
             this.efwGroupControl1.Controls.Add(this.lblDate);
             this.efwGroupControl1.Controls.Add(this.lbl72);
@@ -1764,6 +1765,8 @@
             // 
             // efwGroupControl2
             // 
+            this.efwGroupControl2.AllowTouchScroll = true;
+            this.efwGroupControl2.AlwaysScrollActiveControlIntoView = false;
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
             this.efwGroupControl2.Controls.Add(this.panel6);
             this.efwGroupControl2.Controls.Add(this.panel5);
@@ -1775,16 +1778,6 @@
             this.efwGroupControl2.Size = new System.Drawing.Size(1400, 376);
             this.efwGroupControl2.TabIndex = 1;
             this.efwGroupControl2.Text = "텔레콤정보 현황";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btnUpdate);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(12, 43);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1376, 31);
-            this.panel5.TabIndex = 138;
-            this.panel5.Visible = false;
             // 
             // panel6
             // 
@@ -3374,10 +3367,20 @@
             this.efwLabel81.TabIndex = 138;
             this.efwLabel81.Text = "회사구분";
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnUpdate);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(12, 43);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1376, 31);
+            this.panel5.TabIndex = 138;
+            this.panel5.Visible = false;
+            // 
             // btnUpdate
             // 
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
             this.btnUpdate.IsMultiLang = false;
             this.btnUpdate.Location = new System.Drawing.Point(1222, 3);
             this.btnUpdate.Name = "btnUpdate";
@@ -3409,8 +3412,8 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
