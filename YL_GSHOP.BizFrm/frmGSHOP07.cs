@@ -65,9 +65,13 @@ namespace YL_GSHOP.BizFrm
 
             gridView1.OptionsView.ShowFooter = true;
 
-            //gridView1.Columns["o_purchase_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            //gridView1.Columns["o_purchase_cost"].SummaryItem.FieldName = "o_purchase_cost";
-            //gridView1.Columns["o_purchase_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            gridView1.Columns["shop_count"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["shop_count"].SummaryItem.FieldName = "shop_count";
+            gridView1.Columns["shop_count"].SummaryItem.DisplayFormat = "합계:   {0}";
+
+            gridView1.Columns["story_count"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["story_count"].SummaryItem.FieldName = "story_count";
+            gridView1.Columns["story_count"].SummaryItem.DisplayFormat = "{0}";
 
             //this.efwGridControl1.BindControlSet(
             //new ColumnControlSet("id", txtID)
