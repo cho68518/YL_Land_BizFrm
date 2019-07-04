@@ -180,6 +180,10 @@ namespace YL_GSHOP.BizFrm
 
                                 cmd.Parameters.Add("i_is_fix", MySqlDbType.VarChar, 1);
                                 cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "is_fix");
+
+                                cmd.Parameters.Add("i_remark", MySqlDbType.VarChar, 255);
+                                cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "remark");
+
                                 cmd.ExecuteNonQuery();
                                 con.Close();
                             }
