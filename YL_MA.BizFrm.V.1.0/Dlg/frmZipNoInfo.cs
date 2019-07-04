@@ -81,7 +81,7 @@ namespace YL_MA.BizFrm.Dlg
                 //textBox2.Text = apiurl + "\r\n";
                 WebClient wc = new WebClient();
                 XmlReader read = new XmlTextReader(wc.OpenRead(apiurl));
-
+                
                 DataSet ds = new DataSet();
                 ds.ReadXml(read);
 

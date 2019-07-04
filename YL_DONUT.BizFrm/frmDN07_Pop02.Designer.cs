@@ -50,6 +50,7 @@
             this.Controls.Add(this.picImg);
             this.Name = "frmDN07_Pop02";
             this.Padding = new System.Windows.Forms.Padding(5);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmDN07_Pop02";
             this.Load += new System.EventHandler(this.FrmDN07_Pop02_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picImg.Properties)).EndInit();

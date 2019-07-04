@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTest01));
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.accordionControl = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,7 +50,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwTextEdit1 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList();
+            this.txtAddr = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwMemoEdit1 = new Easy.Framework.WinForm.Control.efwMemoEdit();
+            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).BeginInit();
@@ -56,6 +65,11 @@
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddr.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwMemoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // accordionControl
@@ -77,6 +91,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.efwSimpleButton3);
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.efwGridControl1);
+            this.panel2.Controls.Add(this.efwSimpleButton2);
+            this.panel2.Controls.Add(this.efwMemoEdit1);
+            this.panel2.Controls.Add(this.txtAddr);
             this.panel2.Controls.Add(this.navBarControl2);
             this.panel2.Controls.Add(this.navBarControl1);
             this.panel2.Controls.Add(this.btnSet);
@@ -239,6 +259,98 @@
             this.imageList1.Images.SetKeyName(6, "ClearFormatting_16x16.png");
             this.imageList1.Images.SetKeyName(7, "AddFile_16x16.png");
             // 
+            // txtAddr
+            // 
+            this.txtAddr.EditValue = "불정로 6";
+            this.txtAddr.EditValue2 = null;
+            this.txtAddr.Location = new System.Drawing.Point(47, 242);
+            this.txtAddr.Name = "txtAddr";
+            this.txtAddr.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtAddr.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAddr.RequireMessage = null;
+            this.txtAddr.Size = new System.Drawing.Size(142, 20);
+            this.txtAddr.TabIndex = 7;
+            // 
+            // efwMemoEdit1
+            // 
+            this.efwMemoEdit1.Location = new System.Drawing.Point(47, 268);
+            this.efwMemoEdit1.Name = "efwMemoEdit1";
+            this.efwMemoEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.efwMemoEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.efwMemoEdit1.Size = new System.Drawing.Size(250, 115);
+            this.efwMemoEdit1.TabIndex = 8;
+            // 
+            // efwSimpleButton2
+            // 
+            this.efwSimpleButton2.IsMultiLang = false;
+            this.efwSimpleButton2.Location = new System.Drawing.Point(209, 245);
+            this.efwSimpleButton2.Name = "efwSimpleButton2";
+            this.efwSimpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.efwSimpleButton2.TabIndex = 9;
+            this.efwSimpleButton2.Text = "efwSimpleButton2";
+            this.efwSimpleButton2.Click += new System.EventHandler(this.EfwSimpleButton2_Click);
+            // 
+            // efwGridControl1
+            // 
+            this.efwGridControl1.BindSet = null;
+            this.efwGridControl1.DBName = "";
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
+            this.efwGridControl1.IsAddExcelBtn = true;
+            this.efwGridControl1.isAddPrintBtn = true;
+            this.efwGridControl1.IsMultiLang = false;
+            this.efwGridControl1.Location = new System.Drawing.Point(47, 389);
+            this.efwGridControl1.MainView = this.gridView1;
+            this.efwGridControl1.Name = "efwGridControl1";
+            this.efwGridControl1.NowRowHandle = 0;
+            this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
+            this.efwGridControl1.PrevRowHandle = -2147483648;
+            this.efwGridControl1.Size = new System.Drawing.Size(400, 200);
+            this.efwGridControl1.TabIndex = 10;
+            this.efwGridControl1.TableName = "";
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
+            this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.efwGridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(475, 389);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 11;
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(290, 245);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(75, 23);
+            this.efwSimpleButton3.TabIndex = 12;
+            this.efwSimpleButton3.Text = "efwSimpleButton3";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.EfwSimpleButton3_Click);
+            // 
             // frmTest01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -257,6 +369,11 @@
             this.navBarGroupControlContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddr.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwMemoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,5 +399,12 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem4;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem1;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
+        private Easy.Framework.WinForm.Control.efwMemoEdit efwMemoEdit1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtAddr;
+        private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
     }
 }

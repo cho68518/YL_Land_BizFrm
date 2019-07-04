@@ -13,6 +13,12 @@ using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
 using DevExpress.ClipboardSource.SpreadsheetML;
 using DevExpress.XtraNavBar;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Xml;
+using YL_COMM.BizFrm;
 
 namespace YL_DONUT.BizFrm
 {
@@ -213,5 +219,105 @@ namespace YL_DONUT.BizFrm
         {
             MessageBox.Show(string.Format("The {0} link has been clicked", e.Link.Caption));
         }
+
+        private void EfwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            string query = txtAddr.EditValue.ToString(); // 검색할 주소
+            string url = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=" + query; // 결과가 JSON 포맷
+            // string url = "https://openapi.naver.com/v3/map/geocode.xml?query=" + query;  // 결과가 XML 포맷
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+            //request.Headers.Add("X-Naver-Client-Id", "6zafgdatx9"); // 클라이언트 아이디
+            //request.Headers.Add("X-Naver-Client-Secret", "L66RXbCynYQqXd0GyMbGPJIZmRBBGKrrsDR5MjkV");       // 클라이언트 시크릿
+
+            request.Headers.Add("X-NCP-APIGW-API-KEY-ID", "f8oxrloutm"); // 클라이언트 아이디
+            request.Headers.Add("X-NCP-APIGW-API-KEY", "OU1DJDLlOiQXemqkYGb3pIMP5ZUXC5NFqSz3uWDO");       // 클라이언트 시크릿
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            string status = response.StatusCode.ToString();
+
+            if (status == "OK")
+            {
+                Stream stream = response.GetResponseStream();
+                StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+                string text = reader.ReadToEnd();
+                //Console.WriteLine(text);
+                efwMemoEdit1.EditValue = text;
+
+                DataSet dataSet = JsonConvert.DeserializeObject<DataSet>(text);
+
+                DataTable dataTable = dataSet.Tables["Table1"];
+
+                Console.WriteLine("Count : " + dataTable.Rows.Count);
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    Console.WriteLine(row["roadAddress"] + " - " + row["jibunAddress"]);
+                }
+
+                //efwGridControl1.DataBind(ds);
+                //dataGridView1.DataSource = ds;
+            }
+            else
+            {
+                Console.WriteLine("Error 발생=" + status);
+            }
+        }
+
+        private void EfwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            string query = txtAddr.EditValue.ToString(); // 검색할 주소
+            string url = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=" + query; // 결과가 JSON 포맷
+            // string url = "https://openapi.naver.com/v3/map/geocode.xml?query=" + query;  // 결과가 XML 포맷
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+            request.Headers.Add("X-NCP-APIGW-API-KEY-ID", "f8oxrloutm"); // 클라이언트 아이디
+            request.Headers.Add("X-NCP-APIGW-API-KEY", "OU1DJDLlOiQXemqkYGb3pIMP5ZUXC5NFqSz3uWDO");       // 클라이언트 시크릿
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            string status = response.StatusCode.ToString();
+
+            if (status == "OK")
+            {
+                Stream stream = response.GetResponseStream();
+                StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+                string text = reader.ReadToEnd();
+
+                //Console.WriteLine(text);
+
+                //RootObject addr = JsonConvert.DeserializeObject<RootObject>(text);
+                //Console.WriteLine(addr.addresses..roadAddress);
+
+                var addr = JsonConvert.DeserializeObject<clsAddress.RootObject>(text);
+
+                Console.WriteLine(addr.addresses);
+                
+                List<clsAddress.Address> allRecords = addr.addresses;
+
+                for (int i = 0; i < allRecords.Count; i++)
+                {
+                    Console.WriteLine(allRecords[i].jibunAddress);
+                    Console.WriteLine(allRecords[i].roadAddress);
+                    Console.WriteLine(allRecords[i].x);
+                    Console.WriteLine(allRecords[i].y);
+                }
+
+                
+                //efwGridControl1.DataBind(ds);
+                //dataGridView1.DataSource = ds;
+            }
+            else
+            {
+                Console.WriteLine("Error 발생=" + status);
+            }
+        }
+
+        
+
+
+
+
     }
 }

@@ -400,6 +400,7 @@
             this.txtPR_NAME.Name = "txtPR_NAME";
             this.txtPR_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPR_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPR_NAME.Properties.ReadOnly = true;
             this.txtPR_NAME.RequireMessage = null;
             this.txtPR_NAME.Size = new System.Drawing.Size(306, 20);
             this.txtPR_NAME.StyleController = this.layoutControl2;
@@ -413,6 +414,7 @@
             this.txtPR_CELL_NUM.Name = "txtPR_CELL_NUM";
             this.txtPR_CELL_NUM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPR_CELL_NUM.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPR_CELL_NUM.Properties.ReadOnly = true;
             this.txtPR_CELL_NUM.RequireMessage = null;
             this.txtPR_CELL_NUM.Size = new System.Drawing.Size(386, 20);
             this.txtPR_CELL_NUM.StyleController = this.layoutControl2;
@@ -503,6 +505,7 @@
             this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
+            this.layoutControlItem12.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // chkIS_USE
             // 
@@ -841,6 +844,7 @@
             this.MinimizeBox = false;
             this.Name = "frmDN07_Pop01";
             this.Padding = new System.Windows.Forms.Padding(5);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmDN07_Pop01";
             this.Load += new System.EventHandler(this.FrmDN07_Pop01_Load);
             this.panel1.ResumeLayout(false);
