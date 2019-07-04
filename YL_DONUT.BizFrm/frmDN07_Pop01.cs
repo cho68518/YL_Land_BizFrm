@@ -1,4 +1,5 @@
 ﻿using Easy.Framework.Common;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +44,9 @@ namespace YL_DONUT.BizFrm
             efwLabel1.Text = pLATITUDE;
             efwLabel2.Text = pLONGITUDE;
 
+            txt1.EditValue = pLATITUDE;
+            txt2.EditValue = pLONGITUDE;
+
             lblStory_Name.Text = pSTORY_NAME;
             lblReg_Date.Text = " (작성일: " + pREG_DATE + " (" + pWK_HAN + "))";
 
@@ -61,15 +65,33 @@ namespace YL_DONUT.BizFrm
             txtCHEF_LEVEL.EditValue = pCHEF_LEVEL;
             chkIS_USE.EditValue = pIS_USE;
             txtCONTENTS.EditValue = pCONTENTS;
-            txtPR_NAME.EditValue = pPR_NAME;
-            txtPR_CELL_NUM.EditValue = pPR_CELL_NUM;
+            //txtPR_NAME.EditValue = pPR_NAME;
+            //txtPR_CELL_NUM.EditValue = pPR_CELL_NUM;
             txtPR_JIBUN_ADDR.EditValue = pPR_JIBUN_ADDR;
             txtPR_ROAD_ADDR.EditValue = pPR_ROAD_ADDR;
+
+            txtPR_NAME.EditValue = null;
+            txtPR_CELL_NUM.EditValue = null;
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "SELECT pr_name, pr_cell_num FROM domalife.story_location WHERE story_id = " + pSTORY_ID;
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                for (int i = 0; i < dr.Length; i++)
+                {
+                    txtPR_NAME.EditValue = dr[i]["pr_name"].ToString();
+                    txtPR_CELL_NUM.EditValue = dr[i]["pr_cell_num"].ToString();
+                }
+            }
         }
 
         private void setMap()
         {
-            this.webBrowser1.Navigate("http://dotoc3.eyeoyou.com/maps/maptest03.html?p1=" + pLATITUDE + "&p2=" + pLONGITUDE);
+            this.webBrowser1.Navigate("http://dotoc3.eyeoyou.com/maps/maptest06.asp?p1=" + pLATITUDE + "&p2=" + pLONGITUDE);
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -191,5 +213,42 @@ namespace YL_DONUT.BizFrm
             popup = null;
         }
 
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            //정보변경
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domalife.USP_DN_DN07_SAVE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add("i_story_id", MySqlDbType.Int64, 20);
+                            cmd.Parameters[0].Value = pSTORY_ID;
+
+                            cmd.Parameters.Add("i_pr_name", MySqlDbType.VarChar, 100);
+                            cmd.Parameters[1].Value = this.txtPR_NAME.EditValue;
+
+                            cmd.Parameters.Add("i_pr_cell_num", MySqlDbType.VarChar, 45);
+                            cmd.Parameters[2].Value = this.txtPR_CELL_NUM.EditValue;
+
+                            cmd.ExecuteNonQuery();
+
+                            MessageAgent.MessageShow(MessageType.Informational, "처리되었습니다!");
+                            con.Close();
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
     }
 }
