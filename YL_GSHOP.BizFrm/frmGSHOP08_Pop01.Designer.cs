@@ -1,6 +1,6 @@
-﻿namespace YL_DONUT.BizFrm
+﻿namespace YL_GSHOP.BizFrm
 {
-    partial class frmDN07_Pop01
+    partial class frmGSHOP08_Pop01
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN07_Pop01));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSHOP08_Pop01));
             this.panel1 = new System.Windows.Forms.Panel();
             this.efwGroupControl3 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.txt2 = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -144,7 +144,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 7);
             this.panel1.Size = new System.Drawing.Size(1209, 65);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // efwGroupControl3
             // 
@@ -320,7 +320,7 @@
             this.efwGroupControl1.Location = new System.Drawing.Point(5, 70);
             this.efwGroupControl1.Name = "efwGroupControl1";
             this.efwGroupControl1.Size = new System.Drawing.Size(517, 630);
-            this.efwGroupControl1.TabIndex = 1;
+            this.efwGroupControl1.TabIndex = 2;
             this.efwGroupControl1.Text = "기본정보";
             // 
             // layoutControl1
@@ -400,6 +400,7 @@
             this.txtPR_NAME.Name = "txtPR_NAME";
             this.txtPR_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPR_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPR_NAME.Properties.ReadOnly = true;
             this.txtPR_NAME.RequireMessage = null;
             this.txtPR_NAME.Size = new System.Drawing.Size(306, 20);
             this.txtPR_NAME.StyleController = this.layoutControl2;
@@ -413,6 +414,7 @@
             this.txtPR_CELL_NUM.Name = "txtPR_CELL_NUM";
             this.txtPR_CELL_NUM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPR_CELL_NUM.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPR_CELL_NUM.Properties.ReadOnly = true;
             this.txtPR_CELL_NUM.RequireMessage = null;
             this.txtPR_CELL_NUM.Size = new System.Drawing.Size(386, 20);
             this.txtPR_CELL_NUM.StyleController = this.layoutControl2;
@@ -503,6 +505,7 @@
             this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
+            this.layoutControlItem12.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // chkIS_USE
             // 
@@ -703,7 +706,7 @@
             this.splitterControl1.Location = new System.Drawing.Point(522, 70);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(5, 630);
-            this.splitterControl1.TabIndex = 2;
+            this.splitterControl1.TabIndex = 3;
             this.splitterControl1.TabStop = false;
             // 
             // efwGroupControl2
@@ -716,7 +719,7 @@
             this.efwGroupControl2.Location = new System.Drawing.Point(527, 70);
             this.efwGroupControl2.Name = "efwGroupControl2";
             this.efwGroupControl2.Size = new System.Drawing.Size(687, 630);
-            this.efwGroupControl2.TabIndex = 3;
+            this.efwGroupControl2.TabIndex = 4;
             this.efwGroupControl2.Text = "위치정보";
             // 
             // panel_R2
@@ -828,21 +831,19 @@
             this.webBrowser1.Size = new System.Drawing.Size(683, 473);
             this.webBrowser1.TabIndex = 2;
             // 
-            // frmDN07_Pop01
+            // frmGSHOP08_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1219, 705);
             this.Controls.Add(this.efwGroupControl2);
             this.Controls.Add(this.splitterControl1);
             this.Controls.Add(this.efwGroupControl1);
             this.Controls.Add(this.panel1);
-            this.MinimizeBox = false;
-            this.Name = "frmDN07_Pop01";
+            this.Name = "frmGSHOP08_Pop01";
             this.Padding = new System.Windows.Forms.Padding(5);
-            this.Text = "frmDN07_Pop01";
-            this.Load += new System.EventHandler(this.FrmDN07_Pop01_Load);
+            this.Text = "frmGSHOP08_Pop01";
+            this.Load += new System.EventHandler(this.FrmGSHOP08_Pop01_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).EndInit();
             this.efwGroupControl3.ResumeLayout(false);
@@ -900,60 +901,60 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl1;
-        private DevExpress.XtraEditors.SplitterControl splitterControl1;
-        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
-        private System.Windows.Forms.Panel panel_R1;
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl3;
+        private Easy.Framework.WinForm.Control.efwTextEdit txt2;
+        private Easy.Framework.WinForm.Control.efwTextEdit txt1;
+        private Easy.Framework.WinForm.Control.efwLabel lblpic5;
+        private Easy.Framework.WinForm.Control.efwLabel lblpic4;
+        private Easy.Framework.WinForm.Control.efwLabel lblpic3;
+        private Easy.Framework.WinForm.Control.efwLabel lblpic2;
+        private Easy.Framework.WinForm.Control.efwLabel lblpic1;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnCancel;
         private Easy.Framework.WinForm.Control.efwLabel lblReg_Date;
         private Easy.Framework.WinForm.Control.efwLabel lblStory_Name;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
+        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl1;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtLOGIN_ID;
-        private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtNICKNAME;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtNAME;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtCHEF_LEVEL;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private Easy.Framework.WinForm.Control.efwCheckEdit chkIS_USE;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl4;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnSave;
         private Easy.Framework.WinForm.Control.efwMemoEdit txtPR_JIBUN_ADDR;
         private Easy.Framework.WinForm.Control.efwTextEdit txtPR_NAME;
         private Easy.Framework.WinForm.Control.efwTextEdit txtPR_CELL_NUM;
+        private Easy.Framework.WinForm.Control.efwMemoEdit txtPR_ROAD_ADDR;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-        private Easy.Framework.WinForm.Control.efwMemoEdit txtPR_ROAD_ADDR;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chkIS_USE;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtLOGIN_ID;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtNICKNAME;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtNAME;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtCHEF_LEVEL;
         private Easy.Framework.WinForm.Control.efwMemoEdit txtCONTENTS;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnCancel;
+        private DevExpress.XtraEditors.SplitterControl splitterControl1;
+        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
         private System.Windows.Forms.Panel panel_R2;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Easy.Framework.WinForm.Control.efwPictureEdit picImg5;
         private Easy.Framework.WinForm.Control.efwPictureEdit picImg4;
         private Easy.Framework.WinForm.Control.efwPictureEdit picImg3;
         private Easy.Framework.WinForm.Control.efwPictureEdit picImg2;
         private Easy.Framework.WinForm.Control.efwPictureEdit picImg1;
-        private Easy.Framework.WinForm.Control.efwLabel lblpic5;
-        private Easy.Framework.WinForm.Control.efwLabel lblpic4;
-        private Easy.Framework.WinForm.Control.efwLabel lblpic3;
-        private Easy.Framework.WinForm.Control.efwLabel lblpic2;
-        private Easy.Framework.WinForm.Control.efwLabel lblpic1;
-        private Easy.Framework.WinForm.Control.efwTextEdit txt2;
-        private Easy.Framework.WinForm.Control.efwTextEdit txt1;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnSave;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private System.Windows.Forms.Panel panel_R1;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
