@@ -109,7 +109,7 @@ namespace YL_MM.BizFrm
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_gr_md");
-            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_doramd");
+            //GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_doramd");
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_biz");
 
             gridView1.OptionsView.ShowFooter = true;
@@ -170,6 +170,7 @@ namespace YL_MM.BizFrm
                       , new ColumnControlSet("is_biz"            , chkIS_BIZ)
                       , new ColumnControlSet("chef_u_nickname"   , txtCHEF_U_NICKNAME)
                       , new ColumnControlSet("vip_reco_nickname" , txtVIP_RECO_NICKNAME)
+                      , new ColumnControlSet("doramd_type"       , cmbDORAMD_TYPE)
                       );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -545,7 +546,10 @@ namespace YL_MM.BizFrm
                 this.txtVIP_RECO_NICKNAME.EditValue2 = null;
                 this.txtVIP_RECO_NICKNAME.Text = null;
             }
-           
+
+            if (dr != null && dr["doramd_type"].ToString() != "")
+                this.cmbDORAMD_TYPE.EditValue = dr["doramd_type"].ToString();
+
         }
 
         private void GridView1_CustomDrawFooterCell(object sender, FooterCellCustomDrawEventArgs e)
