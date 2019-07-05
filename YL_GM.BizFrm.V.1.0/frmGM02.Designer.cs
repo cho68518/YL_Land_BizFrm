@@ -90,7 +90,7 @@
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(3, 35);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(794, 415);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1197, 467);
             this.efwGroupControl1.TabIndex = 20;
             this.efwGroupControl1.Text = "MD별 G멀티샵 등록현황";
             // 
@@ -102,7 +102,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(2, 23);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(790, 390);
+            this.layoutControl2.Size = new System.Drawing.Size(1193, 442);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -137,7 +137,7 @@
             this.repositoryItemMemoExEdit1,
             this.repositoryItemMemoEdit1,
             this.repositoryItemCheckEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(776, 355);
+            this.efwGridControl1.Size = new System.Drawing.Size(1179, 407);
             this.efwGridControl1.TabIndex = 38;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -344,12 +344,12 @@
             // 
             this.gridColumn17.Caption = "합계";
             this.gridColumn17.FieldName = "total";
-            this.gridColumn17.MaxWidth = 60;
-            this.gridColumn17.MinWidth = 60;
+            this.gridColumn17.MaxWidth = 80;
+            this.gridColumn17.MinWidth = 80;
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 16;
-            this.gridColumn17.Width = 60;
+            this.gridColumn17.Width = 80;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -409,7 +409,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(790, 390);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1193, 442);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem29
@@ -430,9 +430,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(288, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(369, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(492, 24);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(814, 24);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -440,7 +440,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(165, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(123, 24);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(204, 24);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
@@ -448,7 +448,7 @@
             this.layoutControlItem4.Control = this.efwGridControl1;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(780, 359);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1183, 411);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -458,7 +458,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.efwGroupControl1);
             this.Name = "frmGM02";
-            this.Size = new System.Drawing.Size(800, 450);
+            this.Size = new System.Drawing.Size(1203, 502);
             this.Controls.SetChildIndex(this.efwGroupControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
