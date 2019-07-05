@@ -333,6 +333,7 @@ namespace YL_MM.BizFrm
                                                                 , this.txtU_NICKNAME.EditValue
                                                                 , this.txtU_EMAIL.EditValue
                                                                 , this.txtU_NAME.Text
+                                                                , this.cmbDORAMD_TYPE.EditValue
                                                                 );
 
                         if (ds.Tables.Count > 0)
