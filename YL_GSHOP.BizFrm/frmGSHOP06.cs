@@ -100,6 +100,7 @@ namespace YL_GSHOP.BizFrm
 
 
             BtnNew_Click(null, null);
+            Open4();
         }
 
  
@@ -236,6 +237,11 @@ namespace YL_GSHOP.BizFrm
         //#endregion
         private void EfwSimpleButton1_Click(object sender, EventArgs e)
         {
+            Open4();
+        }
+
+        private void Open4()
+        {
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
@@ -272,7 +278,6 @@ namespace YL_GSHOP.BizFrm
                 Cursor.Current = Cursors.Default;
             }
         }
-
         private void BtnMemberSch_Click(object sender, EventArgs e)
         {
             popup = new frmMemberInfo
@@ -467,6 +472,13 @@ namespace YL_GSHOP.BizFrm
 
         private void CmbTAREA1_EditValueChanged(object sender, EventArgs e)
         {
+
+            //if (string.IsNullOrEmpty(this.cmbTAREA1.Text))
+            //{
+            //    return;
+            //}
+
+
             string sCSIDO = cmbTAREA1.EditValue.ToString();
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
@@ -497,7 +509,9 @@ namespace YL_GSHOP.BizFrm
         }
         private void EfwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
+            Open4();
             Open1();
+            
         }
 
         private void EfwSimpleButton5_Click(object sender, EventArgs e)
@@ -601,7 +615,10 @@ namespace YL_GSHOP.BizFrm
             cbDORAMD_TYPE.EditValue = null; 
             txtIDX1.EditValue = null;
             txtREMARK.EditValue = null;
-        }
+            //cmbTAREA1.EditValue = null;
+
+
+         }
 
         private void EfwSimpleButton2_Click_1(object sender, EventArgs e)
         {

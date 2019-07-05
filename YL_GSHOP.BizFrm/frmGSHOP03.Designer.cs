@@ -46,6 +46,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -107,7 +108,6 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -297,6 +297,14 @@
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
             // 
+            // gridColumn24
+            // 
+            this.gridColumn24.Caption = "상호";
+            this.gridColumn24.FieldName = "gshop_name";
+            this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.Visible = true;
+            this.gridColumn24.VisibleIndex = 3;
+            // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "대표자명";
@@ -343,7 +351,7 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "GROUP MD";
+            this.gridColumn13.Caption = "담당 MD";
             this.gridColumn13.FieldName = "o_chef_id";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
@@ -990,14 +998,6 @@
             this.emptySpaceItem7.Size = new System.Drawing.Size(32, 24);
             this.emptySpaceItem7.Text = "emptySpaceItem4";
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // gridColumn24
-            // 
-            this.gridColumn24.Caption = "상호";
-            this.gridColumn24.FieldName = "gshop_name";
-            this.gridColumn24.Name = "gridColumn24";
-            this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 3;
             // 
             // frmGSHOP03
             // 
