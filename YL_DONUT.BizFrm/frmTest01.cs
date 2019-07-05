@@ -53,9 +53,6 @@ namespace YL_DONUT.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
-            InitAccordionControl();
-
-
         }
 
 
@@ -64,49 +61,6 @@ namespace YL_DONUT.BizFrm
      
 
 
-        private void InitAccordionControl()
-        {
-            accordionControl.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
-            //accordionControl.OptionsHamburgerMenu.DisplayMode = DevExpress.XtraBars.Navigation.AccordionControlDisplayMode.Overlay;
-
-            //Depth 0
-            AccordionControlElement dataElement1 = GetElement("dataElement", ElementStyle.Group, "자료");
-            this.accordionControl.Elements.Add(dataElement1);
-
-            //Depth 1
-            AccordionControlElement generalElement = GetElement("generalElement", ElementStyle.Group, "일반");
-
-            dataElement1.Elements.Add(generalElement);
-
-            // Depth2
-            AccordionControlElement bookElement = GetElement("bookElement", ElementStyle.Item, "도서");
-
-            generalElement.Elements.Add(bookElement);
-
-            // Depth2
-            AccordionControlElement encyclopediaElement = GetElement("encyclopediaElement", ElementStyle.Item, "도서");
-
-            generalElement.Elements.Add(encyclopediaElement);
-
-            //Depth 1
-            AccordionControlElement warElement = GetElement("warElement", ElementStyle.Group, "전쟁");
-
-            dataElement1.Elements.Add(warElement);
-
-            // Depth2 
-            AccordionControlElement warHistoryElement = GetElement("warHistoryElement", ElementStyle.Item, "전쟁사");
-
-            warElement.Elements.Add(warHistoryElement);
-
-            // Depth2
-            AccordionControlElement weaponElement = GetElement("weaponElement", ElementStyle.Item, "무기");
-
-            warElement.Elements.Add(weaponElement);
-
-            //Depth 0
-            AccordionControlElement dataElement2 = GetElement("dataElement2", ElementStyle.Group, "자료2");
-            this.accordionControl.Elements.Add(dataElement2);
-        }
 
         #region 엘리먼트 구하기 - GetElement(name, style, text, expanded)
 
@@ -304,9 +258,8 @@ namespace YL_DONUT.BizFrm
                     Console.WriteLine(allRecords[i].y);
                 }
 
-                
-                //efwGridControl1.DataBind(ds);
-                //dataGridView1.DataSource = ds;
+                DataTable dt2 = clsDataConvert.ListToDataTable(allRecords);
+                dataGridView1.DataSource = dt2;
             }
             else
             {
@@ -314,10 +267,53 @@ namespace YL_DONUT.BizFrm
             }
         }
 
-        
+        private void EfwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            string query = txtAddr.EditValue.ToString(); // 검색할 주소
+            string url = "https://naveropenapi.apigw.ntruss.com/map-place/v1/search?query=" + query + "&coordinate=127.1054328,37.3595963"; // 결과가 JSON 포맷
 
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 
+            request.Headers.Add("X-NCP-APIGW-API-KEY-ID", "hgzn99ko5d"); // 클라이언트 아이디
+            request.Headers.Add("X-NCP-APIGW-API-KEY", "vV7ylEQC12bj1xGTzl3IjD762oRx3GowfW0qImJd");       // 클라이언트 시크릿
 
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            string status = response.StatusCode.ToString();
 
+            if (status == "OK")
+            {
+                Stream stream = response.GetResponseStream();
+                StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+                string text = reader.ReadToEnd();
+
+                //Console.WriteLine(text);
+
+                //RootObject addr = JsonConvert.DeserializeObject<RootObject>(text);
+                //Console.WriteLine(addr.addresses..roadAddress);
+
+                var addr = JsonConvert.DeserializeObject<clsAddrSearch.RootObject>(text);
+
+                List<clsAddrSearch.Place> allRecords = addr.places;
+
+                for (int i = 0; i < allRecords.Count; i++)
+                {
+                    Console.WriteLine(allRecords[i].name);
+                    Console.WriteLine(allRecords[i].road_address);
+                    Console.WriteLine(allRecords[i].jibun_address);
+                    Console.WriteLine(allRecords[i].phone_number);
+                    Console.WriteLine(allRecords[i].x);
+                    Console.WriteLine(allRecords[i].y);
+                    Console.WriteLine(allRecords[i].distance);
+                    Console.WriteLine(allRecords[i].sessionId);
+                }
+
+                DataTable dt2 = clsDataConvert.ListToDataTable(allRecords);
+                dataGridView1.DataSource = dt2;
+            }
+            else
+            {
+                Console.WriteLine("Error 발생=" + status);
+            }
+        }
     }
 }

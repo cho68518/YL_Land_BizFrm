@@ -27,5 +27,11 @@ namespace YL_GSHOP.BizFrm
 
             picImg.LoadAsync(pURL);
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            Close();
+        }
     }
 }
