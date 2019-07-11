@@ -23,6 +23,7 @@ namespace YL_GSHOP.BizFrm
         public string pSTORY_NAME { get; set; }
         public string pREG_DATE { get; set; }
         public string pPR_NAME { get; set; }
+        public string pPR_NAVER_NAME { get; set; }
         public string pPR_CELL_NUM { get; set; }
         public string pPR_JIBUN_ADDR { get; set; }
         public string pPR_ROAD_ADDR { get; set; }
@@ -55,6 +56,11 @@ namespace YL_GSHOP.BizFrm
             setInfo();
             setMap();
             SetPic();
+
+            if (pPR_NAME != pPR_NAVER_NAME)
+            {
+                AutoSave();
+            }
         }
 
         private void setInfo()
@@ -65,28 +71,28 @@ namespace YL_GSHOP.BizFrm
             txtCHEF_LEVEL.EditValue = pCHEF_LEVEL;
             chkIS_USE.EditValue = pIS_USE;
             txtCONTENTS.EditValue = pCONTENTS;
-            //txtPR_NAME.EditValue = pPR_NAME;
-            //txtPR_CELL_NUM.EditValue = pPR_CELL_NUM;
+            txtPR_NAME.EditValue = pPR_NAME;
+            txtPR_CELL_NUM.EditValue = pPR_CELL_NUM;
             txtPR_JIBUN_ADDR.EditValue = pPR_JIBUN_ADDR;
             txtPR_ROAD_ADDR.EditValue = pPR_ROAD_ADDR;
 
-            txtPR_NAME.EditValue = null;
-            txtPR_CELL_NUM.EditValue = null;
+            //txtPR_NAME.EditValue = null;
+            //txtPR_CELL_NUM.EditValue = null;
 
-            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
-            {
-                con.Query = "SELECT pr_name, pr_cell_num FROM domalife.story_location WHERE story_id = " + pSTORY_ID;
-                DataSet ds = con.selectQueryDataSet();
-                //DataTable retDT = ds.Tables[0];
-                DataRow[] dr = ds.Tables[0].Select();
-                CodeData[] codeArray = new CodeData[dr.Length];
+            //using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            //{
+            //    con.Query = "SELECT pr_name, pr_cell_num FROM domalife.story_location WHERE story_id = " + pSTORY_ID;
+            //    DataSet ds = con.selectQueryDataSet();
+            //    //DataTable retDT = ds.Tables[0];
+            //    DataRow[] dr = ds.Tables[0].Select();
+            //    CodeData[] codeArray = new CodeData[dr.Length];
 
-                for (int i = 0; i < dr.Length; i++)
-                {
-                    txtPR_NAME.EditValue = dr[i]["pr_name"].ToString();
-                    txtPR_CELL_NUM.EditValue = dr[i]["pr_cell_num"].ToString();
-                }
-            }
+            //    for (int i = 0; i < dr.Length; i++)
+            //    {
+            //        txtPR_NAME.EditValue = dr[i]["pr_name"].ToString();
+            //        txtPR_CELL_NUM.EditValue = dr[i]["pr_cell_num"].ToString();
+            //    }
+            //}
         }
 
         private void setMap()
@@ -250,5 +256,39 @@ namespace YL_GSHOP.BizFrm
                 }
             }
         }
+
+        private void AutoSave()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_DN_DN07_SAVE_01", con))
+                    {
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_story_id", MySqlDbType.Int64, 20);
+                        cmd.Parameters[0].Value = pSTORY_ID;
+
+                        cmd.Parameters.Add("i_pr_name", MySqlDbType.VarChar, 100);
+                        cmd.Parameters[1].Value = this.txtPR_NAME.EditValue;
+
+                        cmd.Parameters.Add("i_pr_cell_num", MySqlDbType.VarChar, 45);
+                        cmd.Parameters[2].Value = this.txtPR_CELL_NUM.EditValue;
+
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                return;
+            }
+        }
+
     }
 }

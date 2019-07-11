@@ -202,6 +202,18 @@
     <Compile Include="frmDN08.Designer.cs">
       <DependentUpon>frmDN08.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDN09.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN09.Designer.cs">
+      <DependentUpon>frmDN09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDN10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN10.Designer.cs">
+      <DependentUpon>frmDN10.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +270,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN08.resx">
       <DependentUpon>frmDN08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN09.resx">
+      <DependentUpon>frmDN09.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN10.resx">
+      <DependentUpon>frmDN10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

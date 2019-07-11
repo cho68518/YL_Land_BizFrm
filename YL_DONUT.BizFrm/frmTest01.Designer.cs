@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTest01));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkButton1 = new DevExpress.XtraEditors.CheckButton();
+            this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.txtAddr2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -42,24 +47,21 @@
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwTextEdit1 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.txtAddr2 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
+            this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddr2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwMemoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddr.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
-            this.efwGroupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddr2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.checkButton1);
             this.panel2.Controls.Add(this.efwGroupControl1);
             this.panel2.Controls.Add(this.efwSimpleButton3);
             this.panel2.Controls.Add(this.dataGridView1);
@@ -76,6 +78,60 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1155, 638);
             this.panel2.TabIndex = 3;
+            // 
+            // checkButton1
+            // 
+            this.checkButton1.Location = new System.Drawing.Point(379, 98);
+            this.checkButton1.Name = "checkButton1";
+            this.checkButton1.Size = new System.Drawing.Size(75, 23);
+            this.checkButton1.TabIndex = 14;
+            this.checkButton1.Text = "test";
+            this.checkButton1.CheckedChanged += new System.EventHandler(this.CheckButton1_CheckedChanged);
+            // 
+            // efwGroupControl1
+            // 
+            this.efwGroupControl1.Controls.Add(this.dataGridView2);
+            this.efwGroupControl1.Controls.Add(this.efwSimpleButton4);
+            this.efwGroupControl1.Controls.Add(this.txtAddr2);
+            this.efwGroupControl1.IsMultiLang = false;
+            this.efwGroupControl1.Location = new System.Drawing.Point(496, 269);
+            this.efwGroupControl1.Name = "efwGroupControl1";
+            this.efwGroupControl1.Size = new System.Drawing.Size(428, 204);
+            this.efwGroupControl1.TabIndex = 13;
+            this.efwGroupControl1.Text = "주소검색";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(5, 60);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(418, 144);
+            this.dataGridView2.TabIndex = 15;
+            // 
+            // efwSimpleButton4
+            // 
+            this.efwSimpleButton4.IsMultiLang = false;
+            this.efwSimpleButton4.Location = new System.Drawing.Point(245, 31);
+            this.efwSimpleButton4.Name = "efwSimpleButton4";
+            this.efwSimpleButton4.Size = new System.Drawing.Size(75, 23);
+            this.efwSimpleButton4.TabIndex = 14;
+            this.efwSimpleButton4.Text = "검색";
+            this.efwSimpleButton4.Click += new System.EventHandler(this.EfwSimpleButton4_Click);
+            // 
+            // txtAddr2
+            // 
+            this.txtAddr2.EditValue = "불정로 6";
+            this.txtAddr2.EditValue2 = null;
+            this.txtAddr2.Location = new System.Drawing.Point(5, 32);
+            this.txtAddr2.Name = "txtAddr2";
+            this.txtAddr2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtAddr2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAddr2.RequireMessage = null;
+            this.txtAddr2.Size = new System.Drawing.Size(234, 20);
+            this.txtAddr2.TabIndex = 13;
             // 
             // efwSimpleButton3
             // 
@@ -189,51 +245,6 @@
             this.imageList1.Images.SetKeyName(6, "ClearFormatting_16x16.png");
             this.imageList1.Images.SetKeyName(7, "AddFile_16x16.png");
             // 
-            // efwGroupControl1
-            // 
-            this.efwGroupControl1.Controls.Add(this.dataGridView2);
-            this.efwGroupControl1.Controls.Add(this.efwSimpleButton4);
-            this.efwGroupControl1.Controls.Add(this.txtAddr2);
-            this.efwGroupControl1.IsMultiLang = false;
-            this.efwGroupControl1.Location = new System.Drawing.Point(496, 269);
-            this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(428, 204);
-            this.efwGroupControl1.TabIndex = 13;
-            this.efwGroupControl1.Text = "주소검색";
-            // 
-            // efwSimpleButton4
-            // 
-            this.efwSimpleButton4.IsMultiLang = false;
-            this.efwSimpleButton4.Location = new System.Drawing.Point(245, 31);
-            this.efwSimpleButton4.Name = "efwSimpleButton4";
-            this.efwSimpleButton4.Size = new System.Drawing.Size(75, 23);
-            this.efwSimpleButton4.TabIndex = 14;
-            this.efwSimpleButton4.Text = "검색";
-            this.efwSimpleButton4.Click += new System.EventHandler(this.EfwSimpleButton4_Click);
-            // 
-            // txtAddr2
-            // 
-            this.txtAddr2.EditValue = "불정로 6";
-            this.txtAddr2.EditValue2 = null;
-            this.txtAddr2.Location = new System.Drawing.Point(5, 32);
-            this.txtAddr2.Name = "txtAddr2";
-            this.txtAddr2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtAddr2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAddr2.RequireMessage = null;
-            this.txtAddr2.Size = new System.Drawing.Size(234, 20);
-            this.txtAddr2.TabIndex = 13;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 60);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(418, 144);
-            this.dataGridView2.TabIndex = 15;
-            // 
             // frmTest01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -244,15 +255,15 @@
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
+            this.efwGroupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddr2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwMemoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddr.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
-            this.efwGroupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddr2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,5 +285,6 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton4;
         private Easy.Framework.WinForm.Control.efwTextEdit txtAddr2;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private DevExpress.XtraEditors.CheckButton checkButton1;
     }
 }

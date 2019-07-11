@@ -86,6 +86,7 @@
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
@@ -193,10 +194,9 @@
             this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem42 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.efwTextEdit2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
@@ -308,9 +308,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -733,6 +733,14 @@
             this.gridColumn40.Name = "gridColumn40";
             this.gridColumn40.Visible = true;
             this.gridColumn40.VisibleIndex = 23;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.Caption = "도라MD구분";
+            this.gridColumn43.FieldName = "doramd_type_nm";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 24;
             // 
             // gridColumn41
             // 
@@ -1256,7 +1264,7 @@
             hierarchy4.SpName = null;
             this.cmbDORAMD_TYPE.HierarchyInfo = hierarchy4;
             this.cmbDORAMD_TYPE.IsMultiLang = false;
-            this.cmbDORAMD_TYPE.Location = new System.Drawing.Point(470, 202);
+            this.cmbDORAMD_TYPE.Location = new System.Drawing.Point(470, 205);
             this.cmbDORAMD_TYPE.MasterCode = "E03.DR_MD_TYPE";
             this.cmbDORAMD_TYPE.Name = "cmbDORAMD_TYPE";
             this.cmbDORAMD_TYPE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1269,7 +1277,7 @@
             // 
             this.panel3.Controls.Add(this.efwLabel1);
             this.panel3.Controls.Add(this.btnSave);
-            this.panel3.Location = new System.Drawing.Point(12, 1);
+            this.panel3.Location = new System.Drawing.Point(12, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(935, 30);
             this.panel3.TabIndex = 26;
@@ -1304,7 +1312,7 @@
             // chkIS_GR_MD
             // 
             this.chkIS_GR_MD.EraserGroup = "CLR1";
-            this.chkIS_GR_MD.Location = new System.Drawing.Point(571, 179);
+            this.chkIS_GR_MD.Location = new System.Drawing.Point(571, 182);
             this.chkIS_GR_MD.Name = "chkIS_GR_MD";
             this.chkIS_GR_MD.Properties.Caption = "그룹MD";
             this.chkIS_GR_MD.Properties.ValueChecked = "Y";
@@ -1317,7 +1325,7 @@
             // 
             this.txtD.EditValue2 = null;
             this.txtD.IsNumericKeyOnly = true;
-            this.txtD.Location = new System.Drawing.Point(866, 35);
+            this.txtD.Location = new System.Drawing.Point(866, 38);
             this.txtD.Name = "txtD";
             this.txtD.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtD.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1335,7 +1343,7 @@
             // 
             this.txtCOUPON.EditValue2 = null;
             this.txtCOUPON.IsNumericKeyOnly = true;
-            this.txtCOUPON.Location = new System.Drawing.Point(866, 155);
+            this.txtCOUPON.Location = new System.Drawing.Point(866, 158);
             this.txtCOUPON.Name = "txtCOUPON";
             this.txtCOUPON.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtCOUPON.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1354,7 +1362,7 @@
             // 
             this.txtCD.EditValue2 = null;
             this.txtCD.IsNumericKeyOnly = true;
-            this.txtCD.Location = new System.Drawing.Point(866, 131);
+            this.txtCD.Location = new System.Drawing.Point(866, 134);
             this.txtCD.Name = "txtCD";
             this.txtCD.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtCD.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1373,7 +1381,7 @@
             // 
             this.txtGD.EditValue2 = null;
             this.txtGD.IsNumericKeyOnly = true;
-            this.txtGD.Location = new System.Drawing.Point(866, 107);
+            this.txtGD.Location = new System.Drawing.Point(866, 110);
             this.txtGD.Name = "txtGD";
             this.txtGD.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtGD.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1392,7 +1400,7 @@
             // 
             this.txtAD.EditValue2 = null;
             this.txtAD.IsNumericKeyOnly = true;
-            this.txtAD.Location = new System.Drawing.Point(866, 83);
+            this.txtAD.Location = new System.Drawing.Point(866, 86);
             this.txtAD.Name = "txtAD";
             this.txtAD.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtAD.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1411,7 +1419,7 @@
             // 
             this.txtTD.EditValue2 = null;
             this.txtTD.IsNumericKeyOnly = true;
-            this.txtTD.Location = new System.Drawing.Point(866, 59);
+            this.txtTD.Location = new System.Drawing.Point(866, 62);
             this.txtTD.Name = "txtTD";
             this.txtTD.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtTD.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1429,7 +1437,7 @@
             // chkIS_BIZ
             // 
             this.chkIS_BIZ.EraserGroup = "CLR1";
-            this.chkIS_BIZ.Location = new System.Drawing.Point(697, 179);
+            this.chkIS_BIZ.Location = new System.Drawing.Point(697, 182);
             this.chkIS_BIZ.Name = "chkIS_BIZ";
             this.chkIS_BIZ.Properties.Caption = "미용실(G샵)";
             this.chkIS_BIZ.Properties.ValueChecked = "Y";
@@ -1441,7 +1449,7 @@
             // chkIS_DORAMD
             // 
             this.chkIS_DORAMD.EraserGroup = "CLR1";
-            this.chkIS_DORAMD.Location = new System.Drawing.Point(634, 179);
+            this.chkIS_DORAMD.Location = new System.Drawing.Point(634, 182);
             this.chkIS_DORAMD.Name = "chkIS_DORAMD";
             this.chkIS_DORAMD.Properties.Caption = "도라MD";
             this.chkIS_DORAMD.Properties.ValueChecked = "Y";
@@ -1455,7 +1463,7 @@
             this.txtU_ID.EditValue2 = null;
             this.txtU_ID.Enabled = false;
             this.txtU_ID.EraserGroup = "CLR1";
-            this.txtU_ID.Location = new System.Drawing.Point(550, 35);
+            this.txtU_ID.Location = new System.Drawing.Point(550, 38);
             this.txtU_ID.Name = "txtU_ID";
             this.txtU_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1470,7 +1478,7 @@
             this.txtU_ZIP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtU_ZIP.EditValue2 = null;
             this.txtU_ZIP.EraserGroup = "CLR1";
-            this.txtU_ZIP.Location = new System.Drawing.Point(87, 155);
+            this.txtU_ZIP.Location = new System.Drawing.Point(87, 158);
             this.txtU_ZIP.Name = "txtU_ZIP";
             this.txtU_ZIP.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_ZIP.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1489,7 +1497,7 @@
             this.txtIDX.Enabled = false;
             this.txtIDX.EraserGroup = "CLR1";
             this.txtIDX.IsRequire = true;
-            this.txtIDX.Location = new System.Drawing.Point(470, 35);
+            this.txtIDX.Location = new System.Drawing.Point(470, 38);
             this.txtIDX.Name = "txtIDX";
             this.txtIDX.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.txtIDX.Properties.Appearance.Options.UseBackColor = true;
@@ -1505,7 +1513,7 @@
             // chkIS_STOCK_FRIEND
             // 
             this.chkIS_STOCK_FRIEND.EraserGroup = "CLR1";
-            this.chkIS_STOCK_FRIEND.Location = new System.Drawing.Point(525, 179);
+            this.chkIS_STOCK_FRIEND.Location = new System.Drawing.Point(525, 182);
             this.chkIS_STOCK_FRIEND.Name = "chkIS_STOCK_FRIEND";
             this.chkIS_STOCK_FRIEND.Properties.Caption = "주주";
             this.chkIS_STOCK_FRIEND.Properties.ValueChecked = "Y";
@@ -1517,7 +1525,7 @@
             // chkIS_AL_FRIEND
             // 
             this.chkIS_AL_FRIEND.EraserGroup = "CLR1";
-            this.chkIS_AL_FRIEND.Location = new System.Drawing.Point(469, 179);
+            this.chkIS_AL_FRIEND.Location = new System.Drawing.Point(469, 182);
             this.chkIS_AL_FRIEND.Name = "chkIS_AL_FRIEND";
             this.chkIS_AL_FRIEND.Properties.Caption = "알뜰폰";
             this.chkIS_AL_FRIEND.Properties.ValueChecked = "Y";
@@ -1537,14 +1545,13 @@
             hierarchy5.SpName = null;
             this.cmbU_CHEF_LEVEL.HierarchyInfo = hierarchy5;
             this.cmbU_CHEF_LEVEL.IsMultiLang = false;
-            this.cmbU_CHEF_LEVEL.Location = new System.Drawing.Point(87, 179);
+            this.cmbU_CHEF_LEVEL.Location = new System.Drawing.Point(87, 182);
             this.cmbU_CHEF_LEVEL.MasterCode = "E03.MEMBERQ_GBN3";
             this.cmbU_CHEF_LEVEL.Name = "cmbU_CHEF_LEVEL";
             this.cmbU_CHEF_LEVEL.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cmbU_CHEF_LEVEL.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.cmbU_CHEF_LEVEL.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbU_CHEF_LEVEL.Properties.ReadOnly = true;
             this.cmbU_CHEF_LEVEL.Size = new System.Drawing.Size(294, 20);
             this.cmbU_CHEF_LEVEL.StyleController = this.layoutControl1;
             this.cmbU_CHEF_LEVEL.TabIndex = 9;
@@ -1552,7 +1559,7 @@
             // txtU_ADDR_DETAIL
             // 
             this.txtU_ADDR_DETAIL.EditValue2 = null;
-            this.txtU_ADDR_DETAIL.Location = new System.Drawing.Point(385, 155);
+            this.txtU_ADDR_DETAIL.Location = new System.Drawing.Point(385, 158);
             this.txtU_ADDR_DETAIL.Name = "txtU_ADDR_DETAIL";
             this.txtU_ADDR_DETAIL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_ADDR_DETAIL.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1567,7 +1574,7 @@
             // txtU_ADDR
             // 
             this.txtU_ADDR.EditValue2 = null;
-            this.txtU_ADDR.Location = new System.Drawing.Point(172, 155);
+            this.txtU_ADDR.Location = new System.Drawing.Point(172, 158);
             this.txtU_ADDR.Name = "txtU_ADDR";
             this.txtU_ADDR.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_ADDR.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1584,7 +1591,7 @@
             this.txtUSER_ID.ByteLength = 50;
             this.txtUSER_ID.EditValue2 = null;
             this.txtUSER_ID.EraserGroup = "CLR1";
-            this.txtUSER_ID.Location = new System.Drawing.Point(87, 59);
+            this.txtUSER_ID.Location = new System.Drawing.Point(87, 62);
             this.txtUSER_ID.Name = "txtUSER_ID";
             this.txtUSER_ID.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUSER_ID.Properties.Appearance.Options.UseBackColor = true;
@@ -1603,7 +1610,7 @@
             this.txtU_NICKNAME.ByteLength = 50;
             this.txtU_NICKNAME.EditValue2 = null;
             this.txtU_NICKNAME.EraserGroup = "CLR1";
-            this.txtU_NICKNAME.Location = new System.Drawing.Point(470, 59);
+            this.txtU_NICKNAME.Location = new System.Drawing.Point(470, 62);
             this.txtU_NICKNAME.Name = "txtU_NICKNAME";
             this.txtU_NICKNAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1617,7 +1624,7 @@
             this.txtU_NAME.ByteLength = 50;
             this.txtU_NAME.EditValue2 = null;
             this.txtU_NAME.EraserGroup = "CLR1";
-            this.txtU_NAME.Location = new System.Drawing.Point(87, 35);
+            this.txtU_NAME.Location = new System.Drawing.Point(87, 38);
             this.txtU_NAME.Name = "txtU_NAME";
             this.txtU_NAME.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtU_NAME.Properties.Appearance.Options.UseBackColor = true;
@@ -1632,7 +1639,7 @@
             // 
             this.txtU_GENDER.EditValue2 = null;
             this.txtU_GENDER.EraserGroup = "CLR1";
-            this.txtU_GENDER.Location = new System.Drawing.Point(87, 83);
+            this.txtU_GENDER.Location = new System.Drawing.Point(87, 86);
             this.txtU_GENDER.Name = "txtU_GENDER";
             this.txtU_GENDER.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtU_GENDER.Properties.Appearance.Options.UseBackColor = true;
@@ -1650,7 +1657,7 @@
             // 
             this.txtBIRTH.EditValue2 = null;
             this.txtBIRTH.EraserGroup = "CLR1";
-            this.txtBIRTH.Location = new System.Drawing.Point(470, 83);
+            this.txtBIRTH.Location = new System.Drawing.Point(470, 86);
             this.txtBIRTH.Name = "txtBIRTH";
             this.txtBIRTH.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBIRTH.Properties.Appearance.Options.UseBackColor = true;
@@ -1668,7 +1675,7 @@
             // 
             this.txtU_EMAIL.EditValue2 = null;
             this.txtU_EMAIL.EraserGroup = "CLR1";
-            this.txtU_EMAIL.Location = new System.Drawing.Point(87, 107);
+            this.txtU_EMAIL.Location = new System.Drawing.Point(87, 110);
             this.txtU_EMAIL.Name = "txtU_EMAIL";
             this.txtU_EMAIL.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtU_EMAIL.Properties.Appearance.Options.UseBackColor = true;
@@ -1684,7 +1691,7 @@
             this.txtU_CELL_NUM.ByteLength = 45;
             this.txtU_CELL_NUM.EditValue2 = null;
             this.txtU_CELL_NUM.EraserGroup = "CLR1";
-            this.txtU_CELL_NUM.Location = new System.Drawing.Point(470, 107);
+            this.txtU_CELL_NUM.Location = new System.Drawing.Point(470, 110);
             this.txtU_CELL_NUM.Name = "txtU_CELL_NUM";
             this.txtU_CELL_NUM.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtU_CELL_NUM.Properties.Appearance.Options.UseBackColor = true;
@@ -1702,7 +1709,7 @@
             // 
             this.txtREG_DATE.EditValue2 = null;
             this.txtREG_DATE.EraserGroup = "CLR1";
-            this.txtREG_DATE.Location = new System.Drawing.Point(87, 131);
+            this.txtREG_DATE.Location = new System.Drawing.Point(87, 134);
             this.txtREG_DATE.Name = "txtREG_DATE";
             this.txtREG_DATE.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtREG_DATE.Properties.Appearance.Options.UseBackColor = true;
@@ -1720,7 +1727,7 @@
             // 
             this.txtLOGIN_DATE.EditValue2 = null;
             this.txtLOGIN_DATE.EraserGroup = "CLR1";
-            this.txtLOGIN_DATE.Location = new System.Drawing.Point(470, 131);
+            this.txtLOGIN_DATE.Location = new System.Drawing.Point(470, 134);
             this.txtLOGIN_DATE.Name = "txtLOGIN_DATE";
             this.txtLOGIN_DATE.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtLOGIN_DATE.Properties.Appearance.Options.UseBackColor = true;
@@ -1738,7 +1745,7 @@
             // 
             this.txtCHEF_U_NICKNAME.EditValue2 = null;
             this.txtCHEF_U_NICKNAME.EraserGroup = "CLR1";
-            this.txtCHEF_U_NICKNAME.Location = new System.Drawing.Point(87, 203);
+            this.txtCHEF_U_NICKNAME.Location = new System.Drawing.Point(87, 206);
             this.txtCHEF_U_NICKNAME.Name = "txtCHEF_U_NICKNAME";
             this.txtCHEF_U_NICKNAME.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCHEF_U_NICKNAME.Properties.Appearance.Options.UseBackColor = true;
@@ -1756,7 +1763,7 @@
             // 
             this.txtVIP_RECO_NICKNAME.EditValue2 = null;
             this.txtVIP_RECO_NICKNAME.EraserGroup = "CLR1";
-            this.txtVIP_RECO_NICKNAME.Location = new System.Drawing.Point(87, 227);
+            this.txtVIP_RECO_NICKNAME.Location = new System.Drawing.Point(87, 230);
             this.txtVIP_RECO_NICKNAME.Name = "txtVIP_RECO_NICKNAME";
             this.txtVIP_RECO_NICKNAME.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtVIP_RECO_NICKNAME.Properties.Appearance.Options.UseBackColor = true;
@@ -1938,7 +1945,7 @@
             this.layoutControlItem28.Location = new System.Drawing.Point(0, 178);
             this.layoutControlItem28.Name = "layoutControlItem28";
             this.layoutControlItem28.Size = new System.Drawing.Size(373, 24);
-            this.layoutControlItem28.Text = "등급";
+            this.layoutControlItem28.Text = "회원등급";
             this.layoutControlItem28.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem28.TextSize = new System.Drawing.Size(70, 20);
             this.layoutControlItem28.TextToControlDistance = 5;
@@ -2207,6 +2214,14 @@
             this.layoutControlItem27.TextSize = new System.Drawing.Size(70, 20);
             this.layoutControlItem27.TextToControlDistance = 5;
             // 
+            // emptySpaceItem12
+            // 
+            this.emptySpaceItem12.AllowHotTrack = false;
+            this.emptySpaceItem12.Location = new System.Drawing.Point(622, 201);
+            this.emptySpaceItem12.Name = "emptySpaceItem12";
+            this.emptySpaceItem12.Size = new System.Drawing.Size(147, 49);
+            this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // efwTextEdit2
             // 
             this.efwTextEdit2.EditValue2 = null;
@@ -2229,22 +2244,6 @@
             this.layoutControlItem33.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem33.TextSize = new System.Drawing.Size(70, 20);
             this.layoutControlItem33.TextToControlDistance = 5;
-            // 
-            // emptySpaceItem12
-            // 
-            this.emptySpaceItem12.AllowHotTrack = false;
-            this.emptySpaceItem12.Location = new System.Drawing.Point(622, 201);
-            this.emptySpaceItem12.Name = "emptySpaceItem12";
-            this.emptySpaceItem12.Size = new System.Drawing.Size(147, 49);
-            this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // gridColumn43
-            // 
-            this.gridColumn43.Caption = "도라MD구분";
-            this.gridColumn43.FieldName = "doramd_type_nm";
-            this.gridColumn43.Name = "gridColumn43";
-            this.gridColumn43.Visible = true;
-            this.gridColumn43.VisibleIndex = 24;
             // 
             // frmMM05
             // 
@@ -2370,9 +2369,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
             this.ResumeLayout(false);
 
         }

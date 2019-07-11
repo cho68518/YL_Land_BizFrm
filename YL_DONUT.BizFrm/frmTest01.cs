@@ -315,5 +315,22 @@ namespace YL_DONUT.BizFrm
                 Console.WriteLine("Error 발생=" + status);
             }
         }
+
+        private void CheckButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckButton btn = sender as CheckButton;
+            if (btn.Checked)
+            {
+                btn.Appearance.BackColor = Color.LightGreen;
+                btn.Appearance.BackColor2 = Color.DarkGreen;
+            }
+            else
+            {
+                //btn.Appearance.BackColor = Color.LightBlue;
+                //btn.Appearance.BackColor2 = Color.DarkBlue;
+                btn.Appearance.BackColor = Color.Transparent;
+                btn.Appearance.BackColor2 = Color.Transparent;
+            }
+        }
     }
 }

@@ -180,9 +180,9 @@ namespace YL_DONUT.BizFrm
 
             //MessageBox.Show(string.Format("{0}: {1}", wstory_id, wcategory_no));
 
-            if (wcategory_no != "240")
+            if (wcategory_no != "240" && wcategory_no != "205")
             {
-                MessageAgent.MessageShow(MessageType.Error, "상세보기는 PR상담스토리만 보실 수 있습니다!");
+                MessageAgent.MessageShow(MessageType.Error, "상세보기는 PR상담스토리 또는 PR후기스토리만 보실 수 있습니다!");
                 return;
             }
             else
@@ -198,6 +198,7 @@ namespace YL_DONUT.BizFrm
                 popup.pSTORY_NAME = gridView1.GetFocusedRowCellValue("story_name").ToString();
                 popup.pREG_DATE = gridView1.GetFocusedRowCellValue("reg_date").ToString();
                 popup.pPR_NAME = gridView1.GetFocusedRowCellValue("pr_name").ToString();
+                popup.pPR_NAVER_NAME = gridView1.GetFocusedRowCellValue("pr_naver_name").ToString();
                 popup.pPR_CELL_NUM = gridView1.GetFocusedRowCellValue("pr_cell_num").ToString();
                 popup.pPR_JIBUN_ADDR = gridView1.GetFocusedRowCellValue("pr_jibun_addr").ToString();
                 popup.pPR_ROAD_ADDR = gridView1.GetFocusedRowCellValue("pr_road_addr").ToString();

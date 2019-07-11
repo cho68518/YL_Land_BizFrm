@@ -1,27 +1,5 @@
-﻿#region "frmDN01 설명"
-//===================================================================================================
-//■Program Name  : frmDN01
-//■Description   : 주문현황(도넛라이프)
-//■Author        : 송호철
-//■Date          : 2019.05.30
-//■etc           : 
-//====================================================================================================
-//<history>
-//====================================================================================================
-//[NO][Date]      Author   Description
-//====================================================================================================
-//[1] [2019.05.30][송호철] Base
-//[2] [2019.05.30][송호철] 
-//----------------------------------------------------------------------------------------------------
-//
-//====================================================================================================
-//</history>
-#endregion
-
-using DevExpress.XtraTreeList;
+﻿using DevExpress.XtraEditors;
 using Easy.Framework.Common;
-using Easy.Framework.SrvCommon;
-using Easy.Framework.WinForm.Control;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -33,19 +11,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace YL_DONUT.BizFrm
 {
-    public partial class frmDN01 : FrmBase
+    public partial class frmDN10 : FrmBase
     {
-        public frmDN01()
+        public frmDN10()
         {
             InitializeComponent();
 
             //단축코드 설정 
-            this.QCode = " frmDN01";
+            this.QCode = " frmDN10";
             //폼명설정
-            this.FrmName = "주문 현황";
+            this.FrmName = "PS수수료 정산현황/마감";
         }
 
         #region FrmLoadEvent()
@@ -64,8 +41,7 @@ namespace YL_DONUT.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
-            dtS_DATE.EditValue = DateTime.Now;
-            dtE_DATE.EditValue = DateTime.Now;
+            dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
@@ -97,28 +73,48 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["o_purchase_cost"].SummaryItem.FieldName = "o_purchase_cost";
             gridView1.Columns["o_purchase_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
+            gridView1.Columns["chef_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["chef_amt"].SummaryItem.FieldName = "chef_amt";
+            gridView1.Columns["chef_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["t_cnt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["t_cnt"].SummaryItem.FieldName = "t_cnt";
+            gridView1.Columns["t_cnt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["o_donut_d_cost"].Visible = false;
+            gridView1.Columns["o_donut_m_cost"].Visible = false;
+            gridView1.Columns["o_donut_c_cost"].Visible = false;
+            gridView1.Columns["o_delivery_cost"].Visible = false;
+            gridView1.Columns["o_pay_type"].Visible = false;
+            gridView1.Columns["is_order"].Visible = false;
+            gridView1.Columns["s_company_name"].Visible = false;
+            gridView1.Columns["o_delivery_comp_name"].Visible = false;
+            gridView1.Columns["o_delivery_num"].Visible = false;
+            gridView1.Columns["o_delivery_start_date"].Visible = false;
+            gridView1.Columns["o_delivery_end_date"].Visible = false;
+
             //this.efwGridControl1.BindControlSet(
             //new ColumnControlSet("id", txtID)
             //  
             //this.efwGridControl1.Click += efwGridControl1_Click;
             rbP_SHOW_TYPE.EditValue = "T";
 
-            chkI.Checked = true;
-            chkO.Checked = true;
-            chkP.Checked = true;
             chkD.Checked = true;
             chkF.Checked = true;
             chkE.Checked = true;
-            chkC.Checked = true;
-            chkZ.Checked = false;
-            chkX.Checked = false;
-            chkT.Checked = false;
-            chkA.Checked = true;
-            chkB.Checked = true;
 
+            dtS_DATE.Properties.Mask.EditMask = "yyyy-MM";
+            dtS_DATE.Properties.DisplayFormat.FormatString = "yyyy-MM";
+            dtS_DATE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            dtS_DATE.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            dtS_DATE.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
 
             setCmb();
         }
+
+        #endregion
+
+        #region 콤보박스
 
         private void setCmb()
         {
@@ -139,7 +135,6 @@ namespace YL_DONUT.BizFrm
                 CodeAgent.SetLegacyCode(cmbMALL_TYPE, strQueruy1);
                 cmbMALL_TYPE.EditValue = "";
 
-
                 string strQueruy2 = @"  SELECT
                               T1.DCODE, T1.DNAME
                               FROM
@@ -149,28 +144,16 @@ namespace YL_DONUT.BizFrm
 
                 CodeAgent.SetLegacyCode(cmbORDER_SEARCH, strQueruy2);
                 cmbORDER_SEARCH.EditValue = "1";
-
-
             }
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
-
-
-        }
-
-        #region 신규
-
-        public override void NewMode()
-        {
-            base.NewMode();
-
-            Eraser.Clear(this, "CLR1");
         }
 
         #endregion
 
+        #region 조회
 
         public override void Search()
         {
@@ -178,19 +161,22 @@ namespace YL_DONUT.BizFrm
             {
                 string sP_SHOW_TYPE = string.Empty;
 
-                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
-                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                chkD.Checked = true;
+                chkF.Checked = false;
+                chkE.Checked = true;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_DN_DN01_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_DN_DN10_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
 
-                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 6);
+                        cmd.Parameters[1].Value = "";
 
                         cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 50);
                         cmd.Parameters[2].Value = cmbORDER_SEARCH.EditValue;
@@ -210,22 +196,14 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add("i_order_mall_type", MySqlDbType.VarChar, 10);
                         cmd.Parameters[5].Value = cmbMALL_TYPE.EditValue;
 
-                        Console.WriteLine(" i_sdate           ---> [" + cmd.Parameters[0].Value + "]" );
-                        Console.WriteLine(" i_edate           ---> [" + cmd.Parameters[1].Value + "]");
-                        Console.WriteLine(" i_type            ---> [" + cmd.Parameters[2].Value + "]");
-                        Console.WriteLine(" i_search          ---> [" + cmd.Parameters[3].Value + "]");
-                        Console.WriteLine(" i_is_order        ---> [" + cmd.Parameters[4].Value + "]");
-                        Console.WriteLine(" i_order_mall_type ---> [" + cmd.Parameters[5].Value + "]");
-
-
                         cmd.Parameters.Add("i_o_type1", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[6].Value = chkI.EditValue;
+                        cmd.Parameters[6].Value = "N";
 
                         cmd.Parameters.Add("i_o_type2", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[7].Value = chkO.EditValue;
+                        cmd.Parameters[7].Value = "N";
 
                         cmd.Parameters.Add("i_o_type3", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[8].Value = chkP.EditValue;
+                        cmd.Parameters[8].Value = "N";
 
                         cmd.Parameters.Add("i_o_type4", MySqlDbType.VarChar, 10);
                         cmd.Parameters[9].Value = chkD.EditValue;
@@ -237,22 +215,22 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters[11].Value = chkE.EditValue;
 
                         cmd.Parameters.Add("i_o_type7", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[12].Value = chkC.EditValue;
+                        cmd.Parameters[12].Value = "N";
 
                         cmd.Parameters.Add("i_o_type8", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[13].Value = chkZ.EditValue;
+                        cmd.Parameters[13].Value = "N";
 
                         cmd.Parameters.Add("i_o_type9", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[14].Value = chkX.EditValue;
+                        cmd.Parameters[14].Value = "N";
 
                         cmd.Parameters.Add("i_o_type10", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[15].Value = chkT.EditValue;
+                        cmd.Parameters[15].Value = "N";
 
                         cmd.Parameters.Add("i_o_type11", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[16].Value = chkA.EditValue;
+                        cmd.Parameters[16].Value = "N";
 
                         cmd.Parameters.Add("i_o_type12", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[17].Value = chkB.EditValue;
+                        cmd.Parameters[17].Value = "N";
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -260,7 +238,6 @@ namespace YL_DONUT.BizFrm
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
                             this.efwGridControl1.MyGridView.BestFitColumns();
-
                         }
                     }
                 }
@@ -270,94 +247,55 @@ namespace YL_DONUT.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+
+
         #endregion
 
-        private void efwGridControl1_Click(object sender, EventArgs e)
+        private void GridView1_CustomDrawFooterCell(object sender, DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e)
         {
-            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+            //e.Appearance.BackColor = Color.White;
+            e.Appearance.ForeColor = Color.Red;
         }
 
-        private void BtnCardOpen_Click(object sender, EventArgs e)
+        private void BtnDetail_CheckedChanged(object sender, EventArgs e)
         {
-            // ('I','O','P','D','E')
-            chkI.Checked = true;
-            chkO.Checked = true;
-            chkP.Checked = true;
-            chkD.Checked = true;
-            chkE.Checked = true;
-            chkF.Checked = false;
-            chkC.Checked = false;
-            chkZ.Checked = false;
-            chkX.Checked = false;
-            chkT.Checked = false;
-            chkA.Checked = false;
-            chkB.Checked = false;
-            Search();
+            CheckButton btn = sender as CheckButton;
+            if (btn.Checked)
+            {
+                btn.Appearance.BackColor = Color.LightGreen;
+                btn.Appearance.BackColor2 = Color.DarkGreen;
+
+                gridView1.Columns["o_donut_d_cost"].Visible = true;
+                gridView1.Columns["o_donut_m_cost"].Visible = true;
+                gridView1.Columns["o_donut_c_cost"].Visible = true;
+                gridView1.Columns["o_delivery_cost"].Visible = true;
+                gridView1.Columns["o_pay_type"].Visible = true;
+                gridView1.Columns["is_order"].Visible = true;
+                gridView1.Columns["s_company_name"].Visible = true;
+                gridView1.Columns["o_delivery_num"].Visible = true;
+                gridView1.Columns["o_delivery_start_date"].Visible = true;
+                gridView1.Columns["o_delivery_end_date"].Visible = true;
+                gridView1.Columns["o_delivery_comp_name"].Visible = true;
+            }
+            else
+            {
+                //btn.Appearance.BackColor = Color.LightBlue;
+                //btn.Appearance.BackColor2 = Color.DarkBlue;
+                btn.Appearance.BackColor = Color.Transparent;
+                btn.Appearance.BackColor2 = Color.Transparent;
+
+                gridView1.Columns["o_donut_d_cost"].Visible = false;
+                gridView1.Columns["o_donut_m_cost"].Visible = false;
+                gridView1.Columns["o_donut_c_cost"].Visible = false;
+                gridView1.Columns["o_delivery_cost"].Visible = false;
+                gridView1.Columns["o_pay_type"].Visible = false;
+                gridView1.Columns["is_order"].Visible = false;
+                gridView1.Columns["s_company_name"].Visible = false;
+                gridView1.Columns["o_delivery_num"].Visible = false;
+                gridView1.Columns["o_delivery_start_date"].Visible = false;
+                gridView1.Columns["o_delivery_end_date"].Visible = false;
+                gridView1.Columns["o_delivery_comp_name"].Visible = false;
+            }
         }
-
-        private void EfwSimpleButton1_Click(object sender, EventArgs e)
-        {
-            chkI.Checked = true;
-            chkO.Checked = true;
-            chkP.Checked = true;
-            chkD.Checked = true;
-            chkF.Checked = true;
-            chkE.Checked = true;
-            chkC.Checked = true;
-            chkZ.Checked = false;
-            chkX.Checked = false;
-            chkT.Checked = false;
-            chkA.Checked = true;
-            chkB.Checked = true;
-            Search();
-        }
-
-
-        private void EfwSimpleButton2_Click(object sender, EventArgs e)
-        {   // o_type IN ('I','O','P','D','E') and
-            chkI.Checked = true;
-            chkO.Checked = true;
-            chkP.Checked = true;
-            chkD.Checked = true;
-            chkF.Checked = false;
-            chkE.Checked = true;
-            chkC.Checked = false;
-            chkZ.Checked = false;
-            chkX.Checked = false;
-            chkT.Checked = false;
-            chkA.Checked = false;
-            chkB.Checked = false;
-            Search();
-        }
-
-        private void TxtP_NAME_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Search();
-        }
-
-        private void TxtS_COMPANY_NAME_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Search();
-        }
-
-        private void TxtO_RECEIVE_NAME_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Search();
-        }
-
-        private void TxtU_NICKNAME_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Search();
-        }
-
-        private void CmbORDER_SEARCH_EditValueChanged(object sender, EventArgs e)
-        {
-            txtI_SEARCH.EditValue = "";
-        }
-
     }
 }

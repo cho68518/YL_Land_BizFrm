@@ -332,7 +332,8 @@ namespace YL_MM.BizFrm
                                                                 , this.txtU_ID.EditValue
                                                                 , this.txtU_NICKNAME.EditValue
                                                                 , this.txtU_EMAIL.EditValue
-                                                                , this.txtU_NAME.Text
+                                                                , this.txtU_NAME.EditValue
+                                                                , this.cmbU_CHEF_LEVEL.EditValue
                                                                 , this.cmbDORAMD_TYPE.EditValue
                                                                 );
 

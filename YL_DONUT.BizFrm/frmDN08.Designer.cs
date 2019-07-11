@@ -43,6 +43,10 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelTop = new System.Windows.Forms.Panel();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.dt1T = new Easy.Framework.WinForm.Control.efwDateEdit();
+            this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.dt1F = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.cmbWriteYn = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.chkCmb_Story = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -57,6 +61,7 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,14 +72,13 @@
             this.btnDispYes = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.dt1T = new Easy.Framework.WinForm.Control.efwDateEdit();
-            this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.dt1F = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbWriteYn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkCmb_Story.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
@@ -87,10 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDispYes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -126,6 +126,56 @@
             this.efwGroupControl1.TabIndex = 9;
             this.efwGroupControl1.Text = "efwGroupControl1";
             // 
+            // efwLabel2
+            // 
+            this.efwLabel2.EraserGroup = null;
+            this.efwLabel2.IsMultiLang = false;
+            this.efwLabel2.Location = new System.Drawing.Point(708, 17);
+            this.efwLabel2.Name = "efwLabel2";
+            this.efwLabel2.Size = new System.Drawing.Size(9, 14);
+            this.efwLabel2.TabIndex = 32;
+            this.efwLabel2.Text = "~";
+            // 
+            // dt1T
+            // 
+            this.dt1T.EditValue = null;
+            this.dt1T.EraserGroup = "CLR1";
+            this.dt1T.Location = new System.Drawing.Point(724, 15);
+            this.dt1T.Name = "dt1T";
+            this.dt1T.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.dt1T.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.dt1T.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dt1T.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dt1T.Size = new System.Drawing.Size(102, 20);
+            this.dt1T.TabIndex = 31;
+            // 
+            // efwLabel4
+            // 
+            this.efwLabel4.EraserGroup = null;
+            this.efwLabel4.IsMultiLang = false;
+            this.efwLabel4.Location = new System.Drawing.Point(536, 18);
+            this.efwLabel4.Name = "efwLabel4";
+            this.efwLabel4.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel4.TabIndex = 30;
+            this.efwLabel4.Text = "등록기간";
+            // 
+            // dt1F
+            // 
+            this.dt1F.EditValue = null;
+            this.dt1F.EraserGroup = "CLR1";
+            this.dt1F.Location = new System.Drawing.Point(598, 15);
+            this.dt1F.Name = "dt1F";
+            this.dt1F.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.dt1F.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.dt1F.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dt1F.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dt1F.Size = new System.Drawing.Size(102, 20);
+            this.dt1F.TabIndex = 29;
+            // 
             // cmbWriteYn
             // 
             childHierarchy1.CodeCtrl = null;
@@ -141,7 +191,7 @@
             this.cmbWriteYn.Name = "cmbWriteYn";
             this.cmbWriteYn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbWriteYn.Size = new System.Drawing.Size(120, 20);
+            this.cmbWriteYn.Size = new System.Drawing.Size(102, 20);
             this.cmbWriteYn.TabIndex = 28;
             // 
             // chkCmb_Story
@@ -332,6 +382,14 @@
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
             // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "등록일시";
+            this.gridColumn6.FieldName = "reg_date2";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 4;
+            // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "만기일";
@@ -405,64 +463,6 @@
             // 
             this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "등록일시";
-            this.gridColumn6.FieldName = "reg_date2";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 4;
-            // 
-            // efwLabel2
-            // 
-            this.efwLabel2.EraserGroup = null;
-            this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(708, 17);
-            this.efwLabel2.Name = "efwLabel2";
-            this.efwLabel2.Size = new System.Drawing.Size(9, 14);
-            this.efwLabel2.TabIndex = 32;
-            this.efwLabel2.Text = "~";
-            // 
-            // dt1T
-            // 
-            this.dt1T.EditValue = null;
-            this.dt1T.EraserGroup = "CLR1";
-            this.dt1T.Location = new System.Drawing.Point(724, 15);
-            this.dt1T.Name = "dt1T";
-            this.dt1T.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.dt1T.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.dt1T.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dt1T.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dt1T.Size = new System.Drawing.Size(102, 20);
-            this.dt1T.TabIndex = 31;
-            // 
-            // efwLabel4
-            // 
-            this.efwLabel4.EraserGroup = null;
-            this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(536, 18);
-            this.efwLabel4.Name = "efwLabel4";
-            this.efwLabel4.Size = new System.Drawing.Size(40, 14);
-            this.efwLabel4.TabIndex = 30;
-            this.efwLabel4.Text = "등록기간";
-            // 
-            // dt1F
-            // 
-            this.dt1F.EditValue = null;
-            this.dt1F.EraserGroup = "CLR1";
-            this.dt1F.Location = new System.Drawing.Point(598, 15);
-            this.dt1F.Name = "dt1F";
-            this.dt1F.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.dt1F.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.dt1F.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dt1F.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dt1F.Size = new System.Drawing.Size(102, 20);
-            this.dt1F.TabIndex = 29;
-            // 
             // frmDN08
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -477,6 +477,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbWriteYn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkCmb_Story.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
@@ -489,10 +493,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDispYes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
