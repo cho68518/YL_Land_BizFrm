@@ -52,6 +52,7 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -75,7 +76,7 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
-            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -228,6 +229,7 @@
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn19,
+            this.gridColumn20,
             this.gridColumn16,
             this.gridColumn10,
             this.gridColumn11,
@@ -343,7 +345,15 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 11;
+            this.gridColumn9.VisibleIndex = 12;
+            // 
+            // gridColumn19
+            // 
+            this.gridColumn19.Caption = "지불구분";
+            this.gridColumn19.FieldName = "o_pay_type";
+            this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.Visible = true;
+            this.gridColumn19.VisibleIndex = 10;
             // 
             // gridColumn16
             // 
@@ -353,7 +363,7 @@
             this.gridColumn16.FieldName = "o_deposit_confirm_date";
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 10;
+            this.gridColumn16.VisibleIndex = 11;
             // 
             // gridColumn10
             // 
@@ -364,7 +374,7 @@
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 12;
+            this.gridColumn10.VisibleIndex = 13;
             // 
             // gridColumn11
             // 
@@ -373,7 +383,7 @@
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 13;
+            this.gridColumn11.VisibleIndex = 14;
             // 
             // gridColumn12
             // 
@@ -382,7 +392,7 @@
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 14;
+            this.gridColumn12.VisibleIndex = 15;
             // 
             // gridColumn13
             // 
@@ -391,7 +401,7 @@
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 15;
+            this.gridColumn13.VisibleIndex = 16;
             // 
             // gridColumn14
             // 
@@ -400,7 +410,7 @@
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 16;
+            this.gridColumn14.VisibleIndex = 17;
             // 
             // gridColumn18
             // 
@@ -409,7 +419,7 @@
             this.gridColumn18.MinWidth = 150;
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 17;
+            this.gridColumn18.VisibleIndex = 18;
             this.gridColumn18.Width = 150;
             // 
             // repositoryItemLookUpEdit1
@@ -580,13 +590,13 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // gridColumn19
+            // gridColumn20
             // 
-            this.gridColumn19.Caption = "지불구분";
-            this.gridColumn19.FieldName = "o_pay_type";
-            this.gridColumn19.Name = "gridColumn19";
-            this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 9;
+            this.gridColumn20.Caption = "등록일";
+            this.gridColumn20.FieldName = "o_date";
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.Visible = true;
+            this.gridColumn20.VisibleIndex = 9;
             // 
             // frmGSHOP02
             // 
@@ -671,5 +681,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
     }
 }

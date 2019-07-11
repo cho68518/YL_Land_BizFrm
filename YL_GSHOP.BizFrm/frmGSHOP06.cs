@@ -646,7 +646,7 @@ namespace YL_GSHOP.BizFrm
                     MessageAgent.MessageShow(MessageType.Warning, " 시/도/구군을 선택하세요 ");
                     return;
                 }
-                if (txtIDX1.EditValue == null)
+                if (string.IsNullOrEmpty(this.txtIDX1.Text))
                 {
                     Save4();
                 }
@@ -710,41 +710,48 @@ namespace YL_GSHOP.BizFrm
             {
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
-                        using (MySqlCommand cmd = new MySqlCommand("domamall.USP_GSHOP_GSHOP06_SAVE_02", con))
-                        {
-                            con.Open();
-                            cmd.CommandType = CommandType.StoredProcedure;
+                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_GSHOP_GSHOP06_SAVE_02", con))
+                    {
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int16, 8));
-                            cmd.Parameters["i_idx"].Value = txtIDX1.EditValue;
-                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+                        cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.VarChar));
+                        cmd.Parameters["i_idx"].Value = txtIDX1.EditValue;
+                        cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_gr_u_id", MySqlDbType.VarChar));
-                            cmd.Parameters["i_gr_u_id"].Value = txtGR_U_ID.EditValue;
-                            cmd.Parameters["i_gr_u_id"].Direction = ParameterDirection.Input;
+                        cmd.Parameters.Add(new MySqlParameter("i_gr_u_id", MySqlDbType.VarChar));
+                        cmd.Parameters["i_gr_u_id"].Value = txtGR_U_ID.EditValue;
+                        cmd.Parameters["i_gr_u_id"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_md_u_id", MySqlDbType.VarChar));
-                            cmd.Parameters["i_md_u_id"].Value = txtMD_U_ID.EditValue;
-                            cmd.Parameters["i_md_u_id"].Direction = ParameterDirection.Input;
+                        cmd.Parameters.Add(new MySqlParameter("i_md_u_id", MySqlDbType.VarChar));
+                        cmd.Parameters["i_md_u_id"].Value = txtMD_U_ID.EditValue;
+                        cmd.Parameters["i_md_u_id"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_doramd_type", MySqlDbType.Int16, 2));
-                            cmd.Parameters["i_doramd_type"].Value = Convert.ToInt16(cbDORAMD_TYPE.EditValue);
-                            cmd.Parameters["i_doramd_type"].Direction = ParameterDirection.Input;
+                        cmd.Parameters.Add(new MySqlParameter("i_doramd_type", MySqlDbType.Int32, 2));
+                        cmd.Parameters["i_doramd_type"].Value = Convert.ToInt32(cbDORAMD_TYPE.EditValue);
+                        cmd.Parameters["i_doramd_type"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
-                            cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
-                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+                        cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                        cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
+                        cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("o_idx", MySqlDbType.UInt64, 50));
-                            cmd.Parameters["o_idx"].Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add(new MySqlParameter("o_idx", MySqlDbType.Int32, 10));
+                        cmd.Parameters["o_idx"].Direction = ParameterDirection.Output;
 
-                            cmd.ExecuteNonQuery();
+                        //Console.WriteLine(" i_idx           ---> [" + txtIDX1.EditValue + "]");
+                        //Console.WriteLine(" i_gr_u_id       ---> [" + txtGR_U_ID.EditValue + "]");
+                        //Console.WriteLine(" i_md_u_id       ---> [" + txtMD_U_ID.EditValue + "]");
+                        //Console.WriteLine(" i_doramd_type   ---> [" + Convert.ToInt16(cbDORAMD_TYPE.EditValue) + "]");
+                        //Console.WriteLine(" i_remark        ---> [" + txtREMARK.EditValue + "]");
+                        //Console.WriteLine(" o_idx           ---> [" + ParameterDirection.Output + "]");
 
+                        cmd.ExecuteNonQuery();
 
-                            txtIDX1.Text = (cmd.Parameters["o_idx"].Value.ToString());
+                        txtIDX1.Text = (cmd.Parameters["o_idx"].Value.ToString());
+
 
                     }
-                    }
+                }
             }
              catch (Exception ex)
             {
