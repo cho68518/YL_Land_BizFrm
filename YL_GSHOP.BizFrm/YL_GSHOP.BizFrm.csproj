@@ -153,6 +153,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGSHOP02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP02.designer.cs">
+      <DependentUpon>frmGSHOP02.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGSHOP07.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,12 +170,6 @@
     </Compile>
     <Compile Include="frmGSHOP01.Designer.cs">
       <DependentUpon>frmGSHOP01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGSHOP02.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frmGSHOP02.Designer.cs">
-      <DependentUpon>frmGSHOP02.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGSHOP03.cs">
       <SubType>UserControl</SubType>
@@ -243,6 +243,9 @@
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP02.resx">
+      <DependentUpon>frmGSHOP02.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP07.resx">
       <DependentUpon>frmGSHOP07.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,9 +260,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP01.resx">
       <DependentUpon>frmGSHOP01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGSHOP02.resx">
-      <DependentUpon>frmGSHOP02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP03.resx">
       <DependentUpon>frmGSHOP03.cs</DependentUpon>
