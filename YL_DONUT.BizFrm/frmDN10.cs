@@ -44,6 +44,7 @@ namespace YL_DONUT.BizFrm
             dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_write");
 
             gridView1.OptionsView.ShowFooter = true;
 
@@ -110,6 +111,8 @@ namespace YL_DONUT.BizFrm
             dtS_DATE.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
 
             setCmb();
+
+            cmbORDER_SEARCH.EditValue = "1";
         }
 
         #endregion
@@ -135,15 +138,15 @@ namespace YL_DONUT.BizFrm
                 CodeAgent.SetLegacyCode(cmbMALL_TYPE, strQueruy1);
                 cmbMALL_TYPE.EditValue = "";
 
-                string strQueruy2 = @"  SELECT
-                              T1.DCODE, T1.DNAME
-                              FROM
-                              (  SELECT CODE  DCODE, CODE_NM DNAME
-                                 FROM dbo.ETCCODE
-	                             WHERE GRP_CODE = 'ORDER_SEARCH' " + @") T1 ";
+                //string strQueruy2 = @"  SELECT
+                //              T1.DCODE, T1.DNAME
+                //              FROM
+                //              (  SELECT CODE  DCODE, CODE_NM DNAME
+                //                 FROM dbo.ETCCODE
+	               //              WHERE GRP_CODE = 'ORDER_SEARCH' " + @") T1 ";
 
-                CodeAgent.SetLegacyCode(cmbORDER_SEARCH, strQueruy2);
-                cmbORDER_SEARCH.EditValue = "1";
+                //CodeAgent.SetLegacyCode(cmbORDER_SEARCH, strQueruy2);
+                //cmbORDER_SEARCH.EditValue = "1";
             }
             catch (Exception ex)
             {
@@ -159,6 +162,8 @@ namespace YL_DONUT.BizFrm
         {
             try
             {
+                this.Cursor = Cursors.WaitCursor;
+
                 string sP_SHOW_TYPE = string.Empty;
 
                 chkD.Checked = true;
@@ -241,10 +246,16 @@ namespace YL_DONUT.BizFrm
                         }
                     }
                 }
+
+                this.Cursor = Cursors.Default;
             }
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
             }
         }
 
@@ -296,6 +307,12 @@ namespace YL_DONUT.BizFrm
                 gridView1.Columns["o_delivery_end_date"].Visible = false;
                 gridView1.Columns["o_delivery_comp_name"].Visible = false;
             }
+        }
+
+        private void TxtI_SEARCH_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
         }
     }
 }
