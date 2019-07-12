@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5747A80A-CBFC-42C3-B170-73495553A80D}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_DONUT.BizFrm</RootNamespace>
     <AssemblyName>YL_DONUT.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -129,6 +129,12 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="frmDN11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN11.Designer.cs">
+      <DependentUpon>frmDN11.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDN01.cs">
       <SubType>UserControl</SubType>
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN10.resx">
       <DependentUpon>frmDN10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN11.resx">
+      <DependentUpon>frmDN11.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
