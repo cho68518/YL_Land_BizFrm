@@ -53,8 +53,10 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -76,7 +78,6 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
-            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -232,6 +233,7 @@
             this.gridColumn20,
             this.gridColumn16,
             this.gridColumn10,
+            this.gridColumn21,
             this.gridColumn11,
             this.gridColumn12,
             this.gridColumn13,
@@ -291,6 +293,7 @@
             this.gridColumn17.Caption = "상호";
             this.gridColumn17.FieldName = "gshop_name";
             this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.OptionsColumn.AllowEdit = false;
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 3;
             // 
@@ -352,8 +355,18 @@
             this.gridColumn19.Caption = "지불구분";
             this.gridColumn19.FieldName = "o_pay_type";
             this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.OptionsColumn.AllowEdit = false;
             this.gridColumn19.Visible = true;
             this.gridColumn19.VisibleIndex = 10;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.Caption = "등록일";
+            this.gridColumn20.FieldName = "o_date";
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.OptionsColumn.AllowEdit = false;
+            this.gridColumn20.Visible = true;
+            this.gridColumn20.VisibleIndex = 9;
             // 
             // gridColumn16
             // 
@@ -362,6 +375,7 @@
             this.gridColumn16.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn16.FieldName = "o_deposit_confirm_date";
             this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.OptionsColumn.AllowEdit = false;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 11;
             // 
@@ -376,6 +390,17 @@
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 13;
             // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "확정일";
+            this.gridColumn21.DisplayFormat.FormatString = "yyyy/M/d HH:mm:ss";
+            this.gridColumn21.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn21.FieldName = "o_confirm_date";
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.OptionsColumn.AllowEdit = false;
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 14;
+            // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "은행구분";
@@ -383,7 +408,7 @@
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 14;
+            this.gridColumn11.VisibleIndex = 15;
             // 
             // gridColumn12
             // 
@@ -392,7 +417,7 @@
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 15;
+            this.gridColumn12.VisibleIndex = 16;
             // 
             // gridColumn13
             // 
@@ -401,7 +426,7 @@
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 16;
+            this.gridColumn13.VisibleIndex = 17;
             // 
             // gridColumn14
             // 
@@ -410,7 +435,7 @@
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 17;
+            this.gridColumn14.VisibleIndex = 18;
             // 
             // gridColumn18
             // 
@@ -419,7 +444,7 @@
             this.gridColumn18.MinWidth = 150;
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 18;
+            this.gridColumn18.VisibleIndex = 19;
             this.gridColumn18.Width = 150;
             // 
             // repositoryItemLookUpEdit1
@@ -590,14 +615,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // gridColumn20
-            // 
-            this.gridColumn20.Caption = "등록일";
-            this.gridColumn20.FieldName = "o_date";
-            this.gridColumn20.Name = "gridColumn20";
-            this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 9;
-            // 
             // frmGSHOP02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -682,5 +699,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
     }
 }
