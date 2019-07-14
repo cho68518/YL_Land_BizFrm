@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTest01));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
             this.checkButton1 = new DevExpress.XtraEditors.CheckButton();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -48,6 +49,7 @@
             this.efwTextEdit1 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -61,6 +63,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.toggleSwitch1);
             this.panel2.Controls.Add(this.checkButton1);
             this.panel2.Controls.Add(this.efwGroupControl1);
             this.panel2.Controls.Add(this.efwSimpleButton3);
@@ -78,6 +81,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1155, 638);
             this.panel2.TabIndex = 3;
+            // 
+            // toggleSwitch1
+            // 
+            this.toggleSwitch1.Location = new System.Drawing.Point(549, 134);
+            this.toggleSwitch1.Name = "toggleSwitch1";
+            this.toggleSwitch1.Properties.OffText = "미 마감";
+            this.toggleSwitch1.Properties.OnText = "마감";
+            this.toggleSwitch1.Size = new System.Drawing.Size(144, 25);
+            this.toggleSwitch1.TabIndex = 15;
             // 
             // checkButton1
             // 
@@ -255,6 +267,7 @@
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -286,5 +299,6 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtAddr2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private DevExpress.XtraEditors.CheckButton checkButton1;
+        private DevExpress.XtraEditors.ToggleSwitch toggleSwitch1;
     }
 }
