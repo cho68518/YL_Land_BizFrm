@@ -18,6 +18,7 @@
 //</history>
 #endregion
 
+using DevExpress.XtraCharts;
 using DevExpress.XtraTreeList;
 using Easy.Framework.Common;
 using Easy.Framework.SrvCommon;
@@ -152,11 +153,79 @@ namespace YL_GM.BizFrm
                         }
                     }
                 }
+
+                ChartCreat1();
             }
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
+        }
+
+        public void ChartCreat1()
+        {
+            //차트 클리어
+            for (int i = 0; i < chartControl1.Series.Count; i++)
+                this.chartControl1.Series[i].Points.Clear();
+
+            SeriesPoint sPont = null;
+
+            //시리즈 포인트
+            for (int i = 0; i < 12; i++)
+            {
+                if (i == 0)
+                {
+                    sPont = new SeriesPoint("1", Convert.ToInt16(gridView1.Columns["month1"].SummaryItem.SummaryValue));
+                }
+                else if (i == 1)
+                {
+                    sPont = new SeriesPoint("2", Convert.ToInt16(gridView1.Columns["month2"].SummaryItem.SummaryValue));
+                }
+                else if (i == 2)
+                {
+                    sPont = new SeriesPoint("3", Convert.ToInt16(gridView1.Columns["month3"].SummaryItem.SummaryValue));
+                }
+                else if (i == 3)
+                {
+                    sPont = new SeriesPoint("4", Convert.ToInt16(gridView1.Columns["month4"].SummaryItem.SummaryValue));
+                }
+                else if (i == 4)
+                {
+                    sPont = new SeriesPoint("5", Convert.ToInt16(gridView1.Columns["month5"].SummaryItem.SummaryValue));
+                }
+                else if (i == 5)
+                {
+                    sPont = new SeriesPoint("6", Convert.ToInt16(gridView1.Columns["month6"].SummaryItem.SummaryValue));
+                }
+                else if (i == 6)
+                {
+                    sPont = new SeriesPoint("7", Convert.ToInt16(gridView1.Columns["month7"].SummaryItem.SummaryValue));
+                }
+                else if (i == 7)
+                {
+                    sPont = new SeriesPoint("8", Convert.ToInt16(gridView1.Columns["month8"].SummaryItem.SummaryValue));
+                }
+                else if (i == 8)
+                {
+                    sPont = new SeriesPoint("9", Convert.ToInt16(gridView1.Columns["month9"].SummaryItem.SummaryValue));
+                }
+                else if (i == 9)
+                {
+                    sPont = new SeriesPoint("10", Convert.ToInt16(gridView1.Columns["month10"].SummaryItem.SummaryValue));
+                }
+                else if (i == 10)
+                {
+                    sPont = new SeriesPoint("11", Convert.ToInt16(gridView1.Columns["month11"].SummaryItem.SummaryValue));
+                }
+                else if (i == 11)
+                {
+                    sPont = new SeriesPoint("12", Convert.ToInt16(gridView1.Columns["month12"].SummaryItem.SummaryValue));
+                }
+                this.chartControl1.Series["Series 1"].Points.Add(sPont);
+            }
+
+
+
         }
 
     }
