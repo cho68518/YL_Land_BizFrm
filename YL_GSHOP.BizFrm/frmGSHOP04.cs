@@ -344,5 +344,13 @@ namespace YL_GSHOP.BizFrm
             popup = null;
         }
 
+        private void BtnPOST_NO_Click(object sender, EventArgs e)
+        {
+            frmZipNoInfo FrmInfo = new frmZipNoInfo() { ParentBtn = btnPOST_NO, ParentAddr1 = txtADDRESS1, ParentAddr2 = txtADDRESS2 };
+            FrmInfo.COMPANYCD = "YL01";
+            FrmInfo.COMPANYNAME = "(주)와이엘랜드";
+            FrmInfo.ShowDialog();
+            txtADDRESS2.Focus();
+        }
     }
 }

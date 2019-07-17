@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace YL_PM.BizFrm.Dlg
+namespace YL_GSHOP.BizFrm.Dlg
 {
     public partial class frmZipNoInfo : DevExpress.XtraEditors.XtraForm
     {
