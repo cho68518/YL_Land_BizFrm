@@ -126,6 +126,7 @@
             this.item4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtPOSTNO = new Easy.Framework.WinForm.Control.efwButtonEdit();
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -311,7 +312,8 @@
             this.gridColumn18,
             this.gridColumn19,
             this.gridColumn20,
-            this.gridColumn22});
+            this.gridColumn22,
+            this.gridColumn23});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -1319,6 +1321,14 @@
             this.layoutControlItem34.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem34.TextToControlDistance = 5;
             // 
+            // gridColumn23
+            // 
+            this.gridColumn23.Caption = "주문번호";
+            this.gridColumn23.FieldName = "o_code";
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 15;
+            // 
             // frmGSHOP04
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1498,5 +1508,6 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtRECOMM_U_ID;
         private DevExpress.XtraLayout.LayoutControlItem item4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
     }
 }
