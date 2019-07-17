@@ -17,6 +17,7 @@ namespace YL_MM.BizFrm
 {
     public partial class frmMM07 : FrmBase
     {
+        frmMM07_Pop01 popup;
         public frmMM07()
         {
             InitializeComponent();
@@ -39,12 +40,11 @@ namespace YL_MM.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
-
-            //GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_use");
-
-            dt1F.EditValue = DateTime.Now.ToString("yyyy-MM") + "-01";
-            dt1T.EditValue = DateTime.Now;
+            //dt1F.EditValue = DateTime.Now.ToString("yyyy-MM") + "-01";
+            //dt1T.EditValue = DateTime.Now;
             cmbQ1.EditValue = "1";
+            cmbQ2.EditValue = "0";
+            rbLevel.EditValue = "1";
 
         }
         public override void Search()
@@ -53,28 +53,31 @@ namespace YL_MM.BizFrm
             {
                 Cursor.Current = Cursors.WaitCursor;
 
-                string sP_SHOW_TYPE = string.Empty;
+                string sLevel = string.Empty;
 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_MM_MM07_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_MM_MM07_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = this.dt1F.EditValue3;
-
-                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[1].Value = this.dt1T.EditValue3;
-
                         cmd.Parameters.Add("i_qtype", MySqlDbType.VarChar, 2);
-                        cmd.Parameters[2].Value = this.cmbQ1.EditValue;
+                        cmd.Parameters[0].Value = this.cmbQ1.EditValue;
 
-                        cmd.Parameters.Add("i_qtext", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[3].Value = this.txtSearch.EditValue;
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = this.txtSearch.EditValue;
 
-                        //cmd.Parameters.Add("i_qstory", MySqlDbType.VarChar, 1000);
-                        //cmd.Parameters[4].Value = this.chkCmb_Story.EditValue;
+                        cmd.Parameters.Add("i_qtype1", MySqlDbType.VarChar, 2);
+                        cmd.Parameters[2].Value = this.cmbQ2.EditValue;
+
+                        if (rbLevel.EditValue.ToString() == "T" )
+                            sLevel = null;
+                        else
+                            sLevel = rbLevel.EditValue.ToString();
+
+                        cmd.Parameters.Add("i_level", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[3].Value = sLevel;
+
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -95,6 +98,39 @@ namespace YL_MM.BizFrm
             {
                 Cursor.Current = Cursors.Default;
             }
+        }
+
+        private void TxtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
+        }
+
+        private void BtnDispYes_Click(object sender, EventArgs e)
+        {
+
+            popup = new frmMM07_Pop01();
+
+            popup.pIDX = gridView1.GetFocusedRowCellValue("idx").ToString();
+
+            popup.pSEND_ID = gridView1.GetFocusedRowCellValue("send_id").ToString();
+            popup.pU_NAME = gridView1.GetFocusedRowCellValue("u_name").ToString();
+            popup.pU_NICKNAME = gridView1.GetFocusedRowCellValue("u_nickname").ToString();
+
+            popup.pRECV_ID = gridView1.GetFocusedRowCellValue("recv_id").ToString();
+            popup.pRECV_U_NAME = gridView1.GetFocusedRowCellValue("recv_u_name").ToString();
+            popup.pRECV_U_NICKNAME = gridView1.GetFocusedRowCellValue("recv_u_nickname").ToString();
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            popup = null;
         }
     }
 }
