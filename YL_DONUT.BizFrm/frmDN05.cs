@@ -52,7 +52,6 @@ namespace YL_DONUT.BizFrm
 
             dt1F.EditValue = DateTime.Now.ToString("yyyy-MM") + "-01";
             dt1T.EditValue = DateTime.Now;
-
         }
 
         #endregion

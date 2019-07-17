@@ -129,7 +129,7 @@
             // 
             this.efwLabel2.EraserGroup = null;
             this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(222, 16);
+            this.efwLabel2.Location = new System.Drawing.Point(238, 17);
             this.efwLabel2.Name = "efwLabel2";
             this.efwLabel2.Size = new System.Drawing.Size(9, 14);
             this.efwLabel2.TabIndex = 12;
@@ -139,7 +139,7 @@
             // 
             this.dt1T.EditValue = null;
             this.dt1T.EraserGroup = "CLR1";
-            this.dt1T.Location = new System.Drawing.Point(238, 14);
+            this.dt1T.Location = new System.Drawing.Point(254, 15);
             this.dt1T.Name = "dt1T";
             this.dt1T.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.dt1T.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -154,7 +154,7 @@
             // 
             this.efwLabel7.EraserGroup = null;
             this.efwLabel7.IsMultiLang = false;
-            this.efwLabel7.Location = new System.Drawing.Point(50, 17);
+            this.efwLabel7.Location = new System.Drawing.Point(66, 18);
             this.efwLabel7.Name = "efwLabel7";
             this.efwLabel7.Size = new System.Drawing.Size(40, 14);
             this.efwLabel7.TabIndex = 10;
@@ -164,7 +164,7 @@
             // 
             this.dt1F.EditValue = null;
             this.dt1F.EraserGroup = "CLR1";
-            this.dt1F.Location = new System.Drawing.Point(112, 14);
+            this.dt1F.Location = new System.Drawing.Point(128, 15);
             this.dt1F.Name = "dt1F";
             this.dt1F.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.dt1F.Properties.AppearanceFocused.Options.UseBackColor = true;
