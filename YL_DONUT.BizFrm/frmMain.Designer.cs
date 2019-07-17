@@ -42,6 +42,7 @@
             this.btnDN03 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnDN02 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.btnDN12 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwPnlBody)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
@@ -68,6 +69,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.btnDN12);
             this.efwPanelControl1.Controls.Add(this.btnDN11);
             this.efwPanelControl1.Controls.Add(this.btnDN10);
             this.efwPanelControl1.Controls.Add(this.btnDN09);
@@ -207,6 +209,17 @@
             this.efwSimpleButton2.Text = "frmTest";
             this.efwSimpleButton2.Click += new System.EventHandler(this.EfwSimpleButton2_Click);
             // 
+            // btnDN12
+            // 
+            this.btnDN12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDN12.IsMultiLang = false;
+            this.btnDN12.Location = new System.Drawing.Point(2, 387);
+            this.btnDN12.Name = "btnDN12";
+            this.btnDN12.Size = new System.Drawing.Size(119, 35);
+            this.btnDN12.TabIndex = 14;
+            this.btnDN12.Text = "frmDN12(적립)";
+            this.btnDN12.Click += new System.EventHandler(this.BtnDN12_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -240,5 +253,6 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton btnDN09;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnDN10;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnDN11;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnDN12;
     }
 }
