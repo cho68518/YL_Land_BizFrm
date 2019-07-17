@@ -45,6 +45,18 @@ namespace YL_MM.BizFrm.Dlg
         {
             get;
             set;
+
+        }
+        public string U_NICKNAME
+        {
+            get;
+            set;
+        }
+
+        public string U_ID
+        {
+            get;
+            set;
         }
 
         public efwButtonEdit ParentBtn
@@ -141,6 +153,8 @@ namespace YL_MM.BizFrm.Dlg
 
             this.USER_ID = row["user_id"].ToString();
             this.U_NAME  = row["u_name"].ToString();
+            this.U_NICKNAME = row["u_nickname"].ToString();
+            this.U_ID = row["u_id"].ToString();
 
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Close();
