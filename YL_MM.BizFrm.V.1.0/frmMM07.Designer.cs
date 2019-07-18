@@ -49,6 +49,7 @@
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,10 +62,12 @@
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDispYes = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -85,12 +88,12 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
@@ -117,12 +120,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -191,6 +194,7 @@
             this.gridColumn18,
             this.gridColumn19,
             this.gridColumn9,
+            this.gridColumn20,
             this.gridColumn8,
             this.gridColumn2,
             this.gridColumn3,
@@ -203,9 +207,11 @@
             this.gridColumn13,
             this.gridColumn14,
             this.gridColumn15,
+            this.gridColumn22,
+            this.gridColumn23,
             this.gridColumn16,
-            this.gridColumn20,
-            this.gridColumn10});
+            this.gridColumn10,
+            this.gridColumn21});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "     (건수: {0:d}"),
@@ -225,32 +231,46 @@
             this.gridColumn17.Caption = "u_id";
             this.gridColumn17.FieldName = "res_u_id";
             this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn18
             // 
             this.gridColumn18.Caption = "rec_u_id";
             this.gridColumn18.FieldName = "res_gen_u_id_co";
             this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn19
             // 
             this.gridColumn19.Caption = "vip_u_id";
             this.gridColumn19.FieldName = "res_vip_u_id_co";
             this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "chef_u_id";
             this.gridColumn9.FieldName = "res_chef_u_id_co";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.Caption = "doma_u_id";
+            this.gridColumn20.FieldName = "res_doma_u_id_co";
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.OptionsColumn.AllowEdit = false;
+            this.gridColumn20.Width = 120;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "등급";
             this.gridColumn8.FieldName = "res_u_chef_level";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 0;
+            this.gridColumn8.Width = 60;
             // 
             // gridColumn2
             // 
@@ -290,7 +310,7 @@
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 100;
+            this.gridColumn5.Width = 90;
             // 
             // gridColumn6
             // 
@@ -300,7 +320,7 @@
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 120;
+            this.gridColumn6.Width = 100;
             // 
             // gridColumn7
             // 
@@ -310,70 +330,87 @@
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 120;
+            this.gridColumn7.Width = 100;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "VIP 추천인 ID";
             this.gridColumn11.FieldName = "res_vip_u_id";
             this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 7;
-            this.gridColumn11.Width = 120;
+            this.gridColumn11.Width = 100;
             // 
             // gridColumn12
             // 
             this.gridColumn12.Caption = "VIP 추천인이름";
             this.gridColumn12.FieldName = "res_vip_u_name";
             this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 8;
-            this.gridColumn12.Width = 120;
+            this.gridColumn12.Width = 100;
             // 
             // gridColumn13
             // 
             this.gridColumn13.Caption = "VIP 추천인닉네임";
             this.gridColumn13.FieldName = "res_vip_u_nickname";
             this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 9;
-            this.gridColumn13.Width = 120;
+            this.gridColumn13.Width = 100;
             // 
             // gridColumn14
             // 
             this.gridColumn14.Caption = "셰프 추천인ID";
             this.gridColumn14.FieldName = "res_chef_u_id";
             this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 10;
-            this.gridColumn14.Width = 120;
+            this.gridColumn14.Width = 100;
             // 
             // gridColumn15
             // 
             this.gridColumn15.Caption = "셰프 추천인성명";
             this.gridColumn15.FieldName = "res_chef_u_name";
             this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.OptionsColumn.AllowEdit = false;
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 11;
-            this.gridColumn15.Width = 120;
+            this.gridColumn15.Width = 100;
+            // 
+            // gridColumn22
+            // 
+            this.gridColumn22.Caption = "도마셰프 ID";
+            this.gridColumn22.FieldName = "res_doma_u_id";
+            this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.OptionsColumn.AllowEdit = false;
+            this.gridColumn22.Visible = true;
+            this.gridColumn22.VisibleIndex = 12;
+            this.gridColumn22.Width = 100;
+            // 
+            // gridColumn23
+            // 
+            this.gridColumn23.Caption = "도마셰프 이름";
+            this.gridColumn23.FieldName = "res_doma_u_name";
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.OptionsColumn.AllowEdit = false;
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 13;
+            this.gridColumn23.Width = 100;
             // 
             // gridColumn16
             // 
-            this.gridColumn16.Caption = "셰프 추천인닉네임";
-            this.gridColumn16.FieldName = "res_chef_u_nickname";
+            this.gridColumn16.Caption = "도마셰프 닉네임";
+            this.gridColumn16.FieldName = "res_doma_u_nickname";
             this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.OptionsColumn.AllowEdit = false;
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 12;
-            this.gridColumn16.Width = 120;
-            // 
-            // gridColumn20
-            // 
-            this.gridColumn20.Caption = "담당셰프 닉네임";
-            this.gridColumn20.FieldName = "take_u_nickname";
-            this.gridColumn20.Name = "gridColumn20";
-            this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 13;
-            this.gridColumn20.Width = 120;
+            this.gridColumn16.VisibleIndex = 14;
+            this.gridColumn16.Width = 100;
             // 
             // gridColumn10
             // 
@@ -381,6 +418,8 @@
             this.gridColumn10.ColumnEdit = this.btnDispYes;
             this.gridColumn10.FieldName = "res_recv_update";
             this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 15;
             this.gridColumn10.Width = 60;
             // 
             // btnDispYes
@@ -392,6 +431,14 @@
             this.btnDispYes.Name = "btnDispYes";
             this.btnDispYes.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDispYes.Click += new System.EventHandler(this.BtnDispYes_Click);
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "등급";
+            this.gridColumn21.FieldName = "u_chef_level_cd";
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 16;
             // 
             // repositoryItemLookUpEdit2
             // 
@@ -559,7 +606,7 @@
             // 
             this.rbLevel.EraserGroup = "CLR1";
             this.rbLevel.IsMultiLang = false;
-            this.rbLevel.Location = new System.Drawing.Point(343, 7);
+            this.rbLevel.Location = new System.Drawing.Point(323, 7);
             this.rbLevel.Name = "rbLevel";
             this.rbLevel.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbLevel.Properties.Appearance.Options.UseBackColor = true;
@@ -567,13 +614,13 @@
             this.rbLevel.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.rbLevel.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rbLevel.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "일반"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "VIP"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("3", "도마셰프", false),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("T", "전체", false)});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "일반"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "VIP"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "도마셰프"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("T", "전체")});
             this.rbLevel.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
             this.rbLevel.RequireMessage = null;
-            this.rbLevel.Size = new System.Drawing.Size(273, 28);
+            this.rbLevel.Size = new System.Drawing.Size(293, 28);
             this.rbLevel.StyleController = this.layoutControl2;
             this.rbLevel.TabIndex = 6;
             // 
@@ -612,9 +659,9 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(281, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(332, 32);
-            this.layoutControlItem3.Text = "확정유무";
+            this.layoutControlItem3.Text = "등급";
             this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(50, 20);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(30, 20);
             this.layoutControlItem3.TextToControlDistance = 5;
             // 
             // layoutControlItem2
@@ -640,16 +687,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.cmbQ2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(623, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(129, 32);
-            this.layoutControlItem4.Text = "일자";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(20, 14);
-            this.layoutControlItem4.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
@@ -660,6 +697,27 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(10, 32);
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(613, 0);
+            this.emptySpaceItem4.MaxSize = new System.Drawing.Size(10, 32);
+            this.emptySpaceItem4.MinSize = new System.Drawing.Size(10, 32);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 32);
+            this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.cmbQ2;
+            this.layoutControlItem4.Location = new System.Drawing.Point(623, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(129, 32);
+            this.layoutControlItem4.Text = "일자";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(20, 14);
+            this.layoutControlItem4.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem6
             // 
@@ -690,17 +748,6 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             this.layoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // emptySpaceItem4
-            // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(613, 0);
-            this.emptySpaceItem4.MaxSize = new System.Drawing.Size(10, 32);
-            this.emptySpaceItem4.MinSize = new System.Drawing.Size(10, 32);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 32);
-            this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmMM07
             // 
@@ -736,12 +783,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -798,5 +845,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
     }
 }

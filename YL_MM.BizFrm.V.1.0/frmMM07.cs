@@ -44,7 +44,7 @@ namespace YL_MM.BizFrm
             //dt1T.EditValue = DateTime.Now;
             cmbQ1.EditValue = "1";
             cmbQ2.EditValue = "0";
-            rbLevel.EditValue = "1";
+            rbLevel.EditValue = "T";
 
         }
         public override void Search()
@@ -68,6 +68,14 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
                             cmd.Parameters[1].Value = this.txtSearch.EditValue;
 
+                            if (rbLevel.EditValue.ToString() == "T")
+                                sLevel = null;
+                            else
+                                sLevel = rbLevel.EditValue.ToString();
+
+                            cmd.Parameters.Add("i_level", MySqlDbType.VarChar, 10);
+                            cmd.Parameters[2].Value = sLevel;
+
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                         }
@@ -82,16 +90,13 @@ namespace YL_MM.BizFrm
                         cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
                         cmd.Parameters[1].Value = this.txtSearch.EditValue;
 
-                        cmd.Parameters.Add("i_qtype1", MySqlDbType.VarChar, 2);
-                        cmd.Parameters[2].Value = this.cmbQ2.EditValue;
-
                         if (rbLevel.EditValue.ToString() == "T" )
                             sLevel = null;
                         else
                             sLevel = rbLevel.EditValue.ToString();
 
                         cmd.Parameters.Add("i_level", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[3].Value = sLevel;
+                        cmd.Parameters[2].Value = sLevel;
 
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
@@ -127,15 +132,44 @@ namespace YL_MM.BizFrm
 
             popup = new frmMM07_Pop01();
 
-            popup.pIDX = gridView1.GetFocusedRowCellValue("idx").ToString();
+            popup.pIDX = gridView1.GetFocusedRowCellValue("res_u_id").ToString();
+            popup.pLEVEL = gridView1.GetFocusedRowCellValue("u_chef_level_cd").ToString();
 
-            popup.pSEND_ID = gridView1.GetFocusedRowCellValue("send_id").ToString();
-            popup.pU_NAME = gridView1.GetFocusedRowCellValue("u_name").ToString();
-            popup.pU_NICKNAME = gridView1.GetFocusedRowCellValue("u_nickname").ToString();
+            popup.pSEND_ID = gridView1.GetFocusedRowCellValue("res_login_id").ToString();
+            popup.pU_NAME = gridView1.GetFocusedRowCellValue("res_u_name").ToString();
+            popup.pU_NICKNAME = gridView1.GetFocusedRowCellValue("res_u_nickname").ToString();
 
-            popup.pRECV_ID = gridView1.GetFocusedRowCellValue("recv_id").ToString();
-            popup.pRECV_U_NAME = gridView1.GetFocusedRowCellValue("recv_u_name").ToString();
-            popup.pRECV_U_NICKNAME = gridView1.GetFocusedRowCellValue("recv_u_nickname").ToString();
+
+            string sLevel = string.Empty;
+            sLevel = gridView1.GetFocusedRowCellValue("u_chef_level_cd").ToString();
+
+            if (Convert.ToInt16(sLevel.ToString()) >= 3 )
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 변경할수 없는 등급의 추천인 입니다!");
+                return;
+            }
+            if (sLevel.ToString() == "0")
+            {
+                popup.pRECV_ID = gridView1.GetFocusedRowCellValue("res_gen_u_id").ToString();
+                popup.pRECV_U_NAME = gridView1.GetFocusedRowCellValue("res_gen_u_name").ToString();
+                popup.pRECV_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_gen_u_nickname").ToString();
+            }
+            if (sLevel.ToString() == "1")
+            {
+                popup.pRECV_ID = gridView1.GetFocusedRowCellValue("res_vip_u_id").ToString();
+                popup.pRECV_U_NAME = gridView1.GetFocusedRowCellValue("res_vip_u_name").ToString();
+                popup.pRECV_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_vip_u_nickname").ToString();
+            }
+            if (sLevel.ToString() == "2")
+            {
+                popup.pRECV_ID = gridView1.GetFocusedRowCellValue("res_chef_u_id").ToString();
+                popup.pRECV_U_NAME = gridView1.GetFocusedRowCellValue("res_chef_u_name").ToString();
+                popup.pRECV_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_chef_u_nickname").ToString();
+            }
+
+            popup.pDOMA_ID = gridView1.GetFocusedRowCellValue("res_doma_u_id").ToString();
+            popup.pDOMA_U_NAME = gridView1.GetFocusedRowCellValue("res_doma_u_name").ToString();
+            popup.pDOMA_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_doma_u_nickname").ToString();
 
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();
