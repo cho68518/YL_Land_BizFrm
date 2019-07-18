@@ -57,7 +57,22 @@ namespace YL_MM.BizFrm
 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_MM_MM07_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_MM_MM07_SELECT_01", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            cmd.Parameters.Add("i_qtype", MySqlDbType.VarChar, 2);
+                            cmd.Parameters[0].Value = this.cmbQ1.EditValue;
+
+                            cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                            cmd.Parameters[1].Value = this.txtSearch.EditValue;
+
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                        }
+                    }
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_MM_MM07_SELECT_02", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -83,6 +98,7 @@ namespace YL_MM.BizFrm
                         {
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
+
                             efwGridControl1.DataBind(ds);
                             //this.efwGridControl1.MyGridView.BestFitColumns();
                         }
