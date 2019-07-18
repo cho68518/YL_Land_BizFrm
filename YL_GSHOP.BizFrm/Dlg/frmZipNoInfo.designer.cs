@@ -1,4 +1,4 @@
-﻿namespace YL_PM.BizFrm.Dlg
+﻿namespace YL_GSHOP.BizFrm.Dlg
 {
     partial class frmZipNoInfo
     {

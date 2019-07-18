@@ -63,6 +63,7 @@
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -126,7 +127,6 @@
             this.item4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtPOSTNO = new Easy.Framework.WinForm.Control.efwButtonEdit();
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -487,6 +487,14 @@
             this.gridColumn22.Caption = "추천인ID";
             this.gridColumn22.FieldName = "recomm_u_id";
             this.gridColumn22.Name = "gridColumn22";
+            // 
+            // gridColumn23
+            // 
+            this.gridColumn23.Caption = "주문번호";
+            this.gridColumn23.FieldName = "o_code";
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 15;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -885,6 +893,7 @@
             this.btnPOST_NO.StyleController = this.layoutControl4;
             this.btnPOST_NO.TabIndex = 0;
             this.btnPOST_NO.TabStop = false;
+            this.btnPOST_NO.Click += new System.EventHandler(this.BtnPOST_NO_Click);
             // 
             // txtADDRESS1
             // 
@@ -1320,14 +1329,6 @@
             this.layoutControlItem34.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem34.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem34.TextToControlDistance = 5;
-            // 
-            // gridColumn23
-            // 
-            this.gridColumn23.Caption = "주문번호";
-            this.gridColumn23.FieldName = "o_code";
-            this.gridColumn23.Name = "gridColumn23";
-            this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 15;
             // 
             // frmGSHOP04
             // 
