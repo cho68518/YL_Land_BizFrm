@@ -338,6 +338,7 @@
     </Compile>
     <None Include="Resources\PS운영자_PS수수료_정산내역_D머니적립_sample.xls" />
     <None Include="Resources\PS운영자_추천지원금_정산내역_D머니적립_sample.xls" />
+    <None Include="Resources\도넛_차액반환_TD머니적립_sample.xls" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

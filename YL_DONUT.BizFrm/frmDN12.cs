@@ -298,6 +298,14 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void BtnHistoryQ_Click(object sender, EventArgs e)
+        {
+            DataSet dsres = openHistory("01", dtS_DATE.EditValue3.Substring(0, 6));
+
+            efwGridControl3.DataBind(dsres);
+            this.efwGridControl3.MyGridView.BestFitColumns();
+        }
+
         #endregion
 
 
@@ -323,7 +331,7 @@ namespace YL_DONUT.BizFrm
 
                         this.efwGridControl2.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
                         this.efwGridControl2.MyGridView.BestFitColumns();
-                        lblCnt2.Text = string.Format("{0:#,###}", gridView1.DataRowCount.ToString());
+                        lblCnt2.Text = string.Format("{0:#,###}", gridView2.DataRowCount.ToString());
                     }
                 }
                 catch (Exception ex)
@@ -502,12 +510,233 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void BtnHistoryQ2_Click(object sender, EventArgs e)
+        {
+            DataSet dsres = openHistory("02", dtS_DATE2.EditValue3.Substring(0, 6));
+
+            efwGridControl4.DataBind(dsres);
+            this.efwGridControl4.MyGridView.BestFitColumns();
+        }
+
         #endregion
 
 
 
+        //------------------------------------------------------------------------------------------------------------------
+
+        #region 여유텔레콤 도넛차액 환불(적립)
+
+        private void BtnGetExcel3_Click(object sender, EventArgs e)
+        {
+            //엑셀데이타 가져오기
+            openFileDialog1.DefaultExt = "xls";
+            openFileDialog1.FileName = "도넛_차액반환_TD머니적립.xls";
+            openFileDialog1.Filter = "Excel97 - 2003 통합문서|*.xls";
+            openFileDialog1.Title = "엑셀데이터 가져오기";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    if (openFileDialog1.FileName != string.Empty)
+                    {
+                        string fileName = openFileDialog1.FileName;
+
+                        this.efwGridControl5.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        this.efwGridControl5.MyGridView.BestFitColumns();
+                        lblCnt3.Text = string.Format("{0:#,###}", gridView5.DataRowCount.ToString());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("엑셀 파일 드라이버가 잘못되었거나 엑셀파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void BtnSave3_Click(object sender, EventArgs e)
+        {
+            //여유텔레콤 도넛차액 환불(적립)
+            if (gridView5.DataRowCount <= 0)
+            {
+                MessageAgent.MessageShow(MessageType.Error, "처리할 내역이 없습니다.");
+                return;
+            }
+
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                DialogResult drt = MessageAgent.MessageShow(MessageType.Confirm, "적립처리를 하시겠습니까?");
+
+                if (drt == DialogResult.OK)
+                {
+                    try
+                    {
+                        string strIN_DAY  = DateTime.Now.ToString("yyyyMMdd");
+                        string smsg       = string.Empty;
+                        string sfrom_id   = string.Empty;
+                        string sto_id     = string.Empty;
+                        string sname      = string.Empty;
+                        string snickname  = string.Empty;
+                        int namt          = 0;
+                        string smemo      = string.Empty;
+                        string sdate      = string.Empty;
+                        string sfrom_type = string.Empty;
+                        string sto_type   = string.Empty;
+                        string swork_type = string.Empty;
+                        string subject    = string.Empty;
+
+                        TransactionPack tPack = new TransactionPack();
+                        TransactionPack tPack2 = new TransactionPack();
+
+                        for (int i = 0; i < gridView5.DataRowCount; i++)
+                        {
+                            // @fromID         (sender_id)   AdminYL, AdminTelecom, AdminYL, AdminLife, AdminDoma  ( = 차감)                                                                               
+                            // @toID	       (receiver_id)                                                       ( = 적립)                             
+                            // @fromType	   (from_type)                                                                                      
+                            // @toType	       (to_type)                                                                                        
+                            // @reqAmount	   (donut_count2)                                                                                   
+                            // @feeType	       (send_code)   Fee가 있는 경우 1 ( TRUE ), 없는경우 0 ( FALSE )                                         
+                            // @EventSystemID  (send_type)   EventSystemID : Telecom,DoToc,DonutToc,Shop,Show(장터),Blog,AD(광고),Movie,Charge(충전)
+                            // @EventID	       (contents_id2)                                                                                   
+                            // @EventComment   (contents_type2)                                                                                 
+                            // @EventEtc	   (mileage_message)                                                                                
+                            // @result
+
+                            swork_type = "03";
+                            subject    = "[관리] 도넛 차액 환불";
+                            sfrom_type = "TD";
+                            sto_type   = "TD";
+                            sfrom_id   = "AdminDoma";
+                            sto_id     = gridView5.GetRowCellValue(i, gridView5.Columns[1]).ToString();
+                            sname      = gridView5.GetRowCellValue(i, gridView5.Columns[2]).ToString();
+                            snickname  = gridView5.GetRowCellValue(i, gridView5.Columns[3]).ToString();
+                            namt       = Convert.ToInt32(gridView5.GetRowCellValue(i, gridView5.Columns[4]).ToString());
+                            smemo      = gridView5.GetRowCellValue(i, gridView5.Columns[5]).ToString();
+                            sdate      = gridView5.GetRowCellValue(i, gridView5.Columns[6]).ToString();
+
+                            smsg = smemo + "(TD머니) : " + string.Format("{0:#,###}", namt) + "원";
+
+                            //Console.WriteLine(sto_id);
+                            //Console.WriteLine(sname);
+                            //Console.WriteLine(snickname);
+                            //Console.WriteLine(smemo);
+                            //Console.WriteLine(smsg);
+                            //Console.WriteLine("------------------------------------");
 
 
+                            tPack.Add("YEOYOU_MONEY.dbo.MONEY_ADD_PROC"
+                                    , sfrom_id
+                                    , sto_id
+                                    , sfrom_type
+                                    , sto_type
+                                    , namt
+                                    , 0
+                                    , "AdminCharge"
+                                    , "AdminCharge"
+                                    , subject
+                                    , smsg
+                                    , 0
+                                );
+
+                            tPack2.Add("YEOYOU_MONEY.dbo.USP_DN_DN12_SAVE_10"
+                                    , UserInfo.instance().UserId
+                                    , swork_type
+                                    , DateTime.Now.ToString("yyyyMMdd")
+                                    , DateTime.Now.ToString("yyyyMM")
+                                    , sto_id
+                                    , sname
+                                    , snickname
+                                    , namt
+                                    , sfrom_type
+                                    , sto_type
+                                    , subject
+                                    , smemo
+                                    , sdate
+                                );
+                        }
+                        ServiceAgent.ExecuteNoneQuery("CONIS_IBS", tPack);
+                        ServiceAgent.ExecuteNoneQuery("CONIS_IBS", tPack2);
+
+                        BtnHistoryQ3_Click(null, null);
+
+                        MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
+                        Cursor = Cursors.Default;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageAgent.MessageShow(MessageType.Error, ex.Message);
+                        Cursor = Cursors.Default;
+                        return;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor = Cursors.Default;
+            }
+        }
+
+        private void BtnExcelSample3_Click(object sender, EventArgs e)
+        {
+            //엑셀양식 가져오기
+            byte[] _SampleFile = YL_DONUT.BizFrm.Properties.Resources.도넛_차액반환_TD머니적립_sample;
+            string _SaveFileName = "도넛_차액반환_TD머니적립.xls";
+
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+                //리소스에 있는 엑셀파일 다운로드 
+                string saveFileFullPath = Path.GetTempPath() + _SaveFileName;
+                FileInfo fInfo = new FileInfo(saveFileFullPath);
+                if (fInfo.Exists)
+                {
+                    //엑셀 뛰우기
+                    System.Diagnostics.Process.Start(saveFileFullPath);
+                }
+                else
+                {
+                    FileStream stream = new FileStream(saveFileFullPath, FileMode.OpenOrCreate);
+                    stream.Write(_SampleFile, 0, _SampleFile.Length);
+                    stream.Close();
+
+                    //엑셀 뛰우기
+                    System.Diagnostics.Process.Start(saveFileFullPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex is System.IO.IOException)
+                    MessageAgent.MessageShow(MessageType.Warning, "샘플파일이 이미 열려 있습니다.");
+                else
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
+        private void BtnHistoryQ3_Click(object sender, EventArgs e)
+        {
+            DataSet dsres = openHistory("03", dtS_DATE3.EditValue3.Substring(0, 6));
+
+            efwGridControl6.DataBind(dsres);
+            this.efwGridControl6.MyGridView.BestFitColumns();
+        }
+
+        #endregion
+
+
+        #region 이벤트
 
         private void EfwSimpleButton1_Click(object sender, EventArgs e)
         {
@@ -534,22 +763,7 @@ namespace YL_DONUT.BizFrm
             //}
         }
 
-        private void BtnHistoryQ_Click(object sender, EventArgs e)
-        {
-            DataSet dsres = openHistory("01", dtS_DATE.EditValue3.Substring(0, 6));
-
-            efwGridControl3.DataBind(dsres);
-            this.efwGridControl3.MyGridView.BestFitColumns();
-        }
-
-        private void BtnHistoryQ2_Click(object sender, EventArgs e)
-        {
-            DataSet dsres = openHistory("02", dtS_DATE2.EditValue3.Substring(0, 6));
-
-            efwGridControl4.DataBind(dsres);
-            this.efwGridControl4.MyGridView.BestFitColumns();
-        }
-
+       
         private DataSet openHistory(string pType, string pYyMm)
         {
             DataSet ds = null;
@@ -575,9 +789,13 @@ namespace YL_DONUT.BizFrm
             {
                 BtnHistoryQ_Click(null, null);
             }
-            else
+            else if(efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
             {
                 BtnHistoryQ2_Click(null, null);
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                BtnHistoryQ3_Click(null, null);
             }
         }
 
@@ -585,5 +803,9 @@ namespace YL_DONUT.BizFrm
         {
             autoOpen();
         }
+
+        #endregion
+
+       
     }
 }
