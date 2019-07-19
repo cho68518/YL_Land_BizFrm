@@ -64,8 +64,15 @@ namespace YL_DONUT.BizFrm
             dtS_DATE2.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
             dtS_DATE2.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
 
+            dtS_DATE3.Properties.Mask.EditMask = "yyyy-MM";
+            dtS_DATE3.Properties.DisplayFormat.FormatString = "yyyy-MM";
+            dtS_DATE3.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            dtS_DATE3.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            dtS_DATE3.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
+
             dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
             dtS_DATE2.EditValue = DateTime.Now.ToString("yyyy-MM");
+            dtS_DATE3.EditValue = DateTime.Now.ToString("yyyy-MM");
             autoOpen();
         }
 
