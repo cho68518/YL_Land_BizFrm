@@ -38,6 +38,8 @@ namespace YL_GM.BizFrm
 {
     public partial class frmGM02 : FrmBase
     {
+        frmGM02_03_Pop01 popup;
+
         public frmGM02()
         {
             InitializeComponent();
@@ -226,6 +228,31 @@ namespace YL_GM.BizFrm
 
 
 
+        }
+        private void EfwGridControl1_DoubleClick(object sender, EventArgs e)
+        {
+
+            popup = new frmGM02_03_Pop01();
+
+
+            DataRow row = gridView1.GetDataRow(gridView1.GetSelectedRows()[0]);
+
+            popup.pU_ID = gridView1.GetFocusedRowCellValue("u_id").ToString();
+            popup.pYEAR = dtS_DATE.EditValue3.Substring(0, 4);
+            popup.pQTYPE = "GM02";
+
+            popup.pQ1 = gridView1.GetFocusedRowCellValue("u_name").ToString();
+            popup.pQ2 = gridView1.GetFocusedRowCellValue("u_nickname").ToString();
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            popup = null;
         }
 
     }

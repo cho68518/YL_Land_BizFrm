@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5B7850A0-A628-4D0B-BC3F-FBCDB66DF433}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_GM.BizFrm</RootNamespace>
     <AssemblyName>YL_GM.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -99,6 +99,12 @@
     <Compile Include="Dlg\frmGM01_Pop01.Designer.cs">
       <DependentUpon>frmGM01_Pop01.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGM02_03_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGM02_03_Pop01.Designer.cs">
+      <DependentUpon>frmGM02_03_Pop01.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGM03.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM02.resx">
       <DependentUpon>frmGM02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM02_03_Pop01.resx">
+      <DependentUpon>frmGM02_03_Pop01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM03.resx">
       <DependentUpon>frmGM03.cs</DependentUpon>
