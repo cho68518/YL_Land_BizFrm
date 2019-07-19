@@ -62,7 +62,7 @@ namespace YL_MM.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
-                            cmd.Parameters.Add("i_qtype", MySqlDbType.VarChar, 2);
+                            cmd.Parameters.Add("i_qtype", MySqlDbType.VarChar, 20);
                             cmd.Parameters[0].Value = this.cmbQ1.EditValue;
 
                             cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
@@ -73,7 +73,7 @@ namespace YL_MM.BizFrm
                             else
                                 sLevel = rbLevel.EditValue.ToString();
 
-                            cmd.Parameters.Add("i_level", MySqlDbType.VarChar, 10);
+                            cmd.Parameters.Add("i_level", MySqlDbType.VarChar, 20);
                             cmd.Parameters[2].Value = sLevel;
 
                             DataTable ds = new DataTable();
@@ -84,7 +84,7 @@ namespace YL_MM.BizFrm
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("i_qtype", MySqlDbType.VarChar, 2);
+                        cmd.Parameters.Add("i_qtype", MySqlDbType.VarChar, 20);
                         cmd.Parameters[0].Value = this.cmbQ1.EditValue;
 
                         cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
