@@ -437,8 +437,6 @@
             this.gridColumn21.Caption = "등급";
             this.gridColumn21.FieldName = "u_chef_level_cd";
             this.gridColumn21.Name = "gridColumn21";
-            this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 16;
             // 
             // repositoryItemLookUpEdit2
             // 

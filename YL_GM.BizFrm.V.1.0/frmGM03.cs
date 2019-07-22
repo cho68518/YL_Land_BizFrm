@@ -37,6 +37,7 @@ namespace YL_GM.BizFrm
 {
     public partial class frmGM03 : FrmBase
     {
+        frmGM02_03_Pop01 popup;
         public frmGM03()
         {
             InitializeComponent();
@@ -156,6 +157,32 @@ namespace YL_GM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+        private void EfwGridControl1_DoubleClick(object sender, EventArgs e)
+        {
 
+            popup = new frmGM02_03_Pop01();
+
+
+            DataRow row = gridView1.GetDataRow(gridView1.GetSelectedRows()[0]);
+
+
+            popup.pYEAR = dtS_DATE.EditValue3.Substring(0, 4);
+            popup.pQTYPE = "GM03";
+            popup.pSIDO = gridView1.GetFocusedRowCellValue("sido_co").ToString();
+            popup.pGUGUN = gridView1.GetFocusedRowCellValue("gugun_co").ToString();
+
+            popup.pQ1 = gridView1.GetFocusedRowCellValue("sido").ToString();
+            popup.pQ2 = gridView1.GetFocusedRowCellValue("gugun").ToString();
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            popup = null;
+        }
     }
 }
