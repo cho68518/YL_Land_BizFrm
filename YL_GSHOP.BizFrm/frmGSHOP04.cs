@@ -71,7 +71,7 @@ namespace YL_GSHOP.BizFrm
             
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
-
+            cmbQ1.EditValue = "0";
             gridView1.OptionsView.ShowFooter = true;
 
             this.efwGridControl1.BindControlSet(
@@ -82,7 +82,6 @@ namespace YL_GSHOP.BizFrm
                     , new ColumnControlSet("register_no", txtREGISTER_NO)
                     , new ColumnControlSet("email", txtEMAIL)
                     , new ColumnControlSet("tel_no", txtTEL_NO)
-                    , new ColumnControlSet("post_no", btnPOST_NO)
                     , new ColumnControlSet("road_addr", txtADDRESS1)
                     //, new ColumnControlSet("jibun_addr", txtADDRESS2)
                     , new ColumnControlSet("sido_code", cmbTAREA1)
@@ -90,6 +89,11 @@ namespace YL_GSHOP.BizFrm
                     , new ColumnControlSet("recomm_nicknm", txtRECOMM_NM)
                     , new ColumnControlSet("recomm_u_id", txtRECOMM_U_ID)
                     , new ColumnControlSet("hp_no", txtHP_NO)
+                    , new ColumnControlSet("post_no", btnPOST_NO)
+                    , new ColumnControlSet("md_u_id", txtMD_U_ID)
+                    , new ColumnControlSet("u_id", txtU_ID)
+                    , new ColumnControlSet("md_nicknm", txtMD_NICKNAME)
+
                    ); ;
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -159,6 +163,12 @@ namespace YL_GSHOP.BizFrm
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+            btnPOST_NO.EditValue = "";
+            if (dr != null && dr["post_no"].ToString() != "")
+            {
+                this.btnPOST_NO.EditValue2 = dr["post_no"].ToString();
+                this.btnPOST_NO.Text = dr["post_no"].ToString();
+            }
         }
         public override void NewMode()
         {
@@ -186,12 +196,15 @@ namespace YL_GSHOP.BizFrm
 
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[1].Value = dtE_DATE.EditValue3;
-                        
-                        cmd.Parameters.Add("i_road_addr", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[2].Value = txtROAD_ADDR.EditValue;
 
-                        cmd.Parameters.Add("i_rec_u_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[3].Value = txtREC_U_NAME.EditValue;
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[2].Value = cmbQ1.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtSearch.EditValue;
+
+                        cmd.Parameters.Add("i_road_addr", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[4].Value = txtROAD_ADDR.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -291,6 +304,18 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters["i_recomm_u_id"].Value = txtRECOMM_U_ID.EditValue;
                             cmd.Parameters["i_recomm_u_id"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_md_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_md_u_id"].Value = txtMD_U_ID.EditValue;
+                            cmd.Parameters["i_md_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_road_addr2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_road_addr2"].Value = txtADDRESS2.EditValue;
+                            cmd.Parameters["i_road_addr2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_id"].Value = txtU_ID.EditValue;
+                            cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -338,8 +363,6 @@ namespace YL_GSHOP.BizFrm
             {
                 this.txtRECOMM_NM.EditValue = popup.U_NICKNAME;
                 this.txtRECOMM_U_ID.EditValue = popup.U_ID;
-
-
             }
             popup = null;
         }
@@ -352,5 +375,29 @@ namespace YL_GSHOP.BizFrm
             FrmInfo.ShowDialog();
             txtADDRESS2.Focus();
         }
+
+        private void EfwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            popup = new frmMemberInfo
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+                MEMBER_TYPE = "MD",
+            };
+            popup.FormClosed += popup_FormClosed2;
+            PopUpBizAgent.Show(this, popup);
+        }
+
+        private void popup_FormClosed2(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed2;
+            if (popup.DialogResult == DialogResult.OK)
+            {
+                this.txtMD_NICKNAME.EditValue = popup.U_NICKNAME;
+                this.txtMD_U_ID.EditValue = popup.U_ID;
+            }
+            popup = null;
+        }
+
     }
 }

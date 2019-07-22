@@ -118,7 +118,12 @@ namespace YL_GSHOP.BizFrm.Dlg
         {
             get;
             set;
-        }    
+        }
+        public string MEMBER_TYPE
+        {
+            get;
+            set;
+        }
 
         #endregion
 
@@ -142,6 +147,11 @@ namespace YL_GSHOP.BizFrm.Dlg
 
             setCmb();
             cmbSearch_Type.EditValue = "0";
+
+            if (MEMBER_TYPE == "MD")
+                cmbMember_Type.EditValue = "3";
+            
+            
 
         }
 

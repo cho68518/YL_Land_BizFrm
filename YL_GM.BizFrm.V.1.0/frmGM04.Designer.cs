@@ -1,6 +1,6 @@
 ﻿namespace YL_GM.BizFrm
 {
-    partial class Form1
+    partial class frmGM04
     {
         /// <summary>
         /// Required designer variable.
