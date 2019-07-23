@@ -135,7 +135,6 @@
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.item4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.item5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -143,6 +142,12 @@
             this.item7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtPOSTNO = new Easy.Framework.WinForm.Control.efwButtonEdit();
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -215,7 +220,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
@@ -223,6 +227,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.item7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPOSTNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -798,6 +806,8 @@
             // 
             // layoutControl4
             // 
+            this.layoutControl4.Controls.Add(this.efwSimpleButton3);
+            this.layoutControl4.Controls.Add(this.efwSimpleButton2);
             this.layoutControl4.Controls.Add(this.efwSimpleButton1);
             this.layoutControl4.Controls.Add(this.btnMemberSch);
             this.layoutControl4.Controls.Add(this.btnSave);
@@ -833,9 +843,9 @@
             this.efwSimpleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
             this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(552, 178);
+            this.efwSimpleButton1.Location = new System.Drawing.Point(580, 178);
             this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(125, 22);
+            this.efwSimpleButton1.Size = new System.Drawing.Size(108, 22);
             this.efwSimpleButton1.StyleController = this.layoutControl4;
             this.efwSimpleButton1.TabIndex = 50;
             this.efwSimpleButton1.Text = "회원검색";
@@ -847,9 +857,9 @@
             this.btnMemberSch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMemberSch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMemberSch.ImageOptions.Image")));
             this.btnMemberSch.IsMultiLang = false;
-            this.btnMemberSch.Location = new System.Drawing.Point(552, 152);
+            this.btnMemberSch.Location = new System.Drawing.Point(580, 152);
             this.btnMemberSch.Name = "btnMemberSch";
-            this.btnMemberSch.Size = new System.Drawing.Size(125, 22);
+            this.btnMemberSch.Size = new System.Drawing.Size(108, 22);
             this.btnMemberSch.StyleController = this.layoutControl4;
             this.btnMemberSch.TabIndex = 49;
             this.btnMemberSch.Text = "회원검색";
@@ -912,7 +922,6 @@
             this.txtGSHOP_NAME.Properties.Appearance.Options.UseBackColor = true;
             this.txtGSHOP_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtGSHOP_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtGSHOP_NAME.Properties.ReadOnly = true;
             this.txtGSHOP_NAME.RequireMessage = null;
             this.txtGSHOP_NAME.Size = new System.Drawing.Size(216, 20);
             this.txtGSHOP_NAME.StyleController = this.layoutControl4;
@@ -1093,6 +1102,7 @@
             this.txtRECOMM_NM.Name = "txtRECOMM_NM";
             this.txtRECOMM_NM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtRECOMM_NM.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRECOMM_NM.Properties.ReadOnly = true;
             this.txtRECOMM_NM.RequireMessage = null;
             this.txtRECOMM_NM.Size = new System.Drawing.Size(136, 20);
             this.txtRECOMM_NM.StyleController = this.layoutControl4;
@@ -1121,6 +1131,7 @@
             this.txtMD_NICKNAME.Name = "txtMD_NICKNAME";
             this.txtMD_NICKNAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtMD_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtMD_NICKNAME.Properties.ReadOnly = true;
             this.txtMD_NICKNAME.RequireMessage = null;
             this.txtMD_NICKNAME.Size = new System.Drawing.Size(136, 20);
             this.txtMD_NICKNAME.StyleController = this.layoutControl4;
@@ -1181,12 +1192,15 @@
             this.layoutControlItem35,
             this.layoutControlItem5,
             this.layoutControlItem8,
-            this.emptySpaceItem11,
             this.item4,
             this.item5,
             this.layoutControlItem13,
             this.item6,
-            this.item7});
+            this.item7,
+            this.layoutControlItem2,
+            this.layoutControlItem19,
+            this.emptySpaceItem10,
+            this.emptySpaceItem11});
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 2, 2);
             this.layoutControlGroup3.Size = new System.Drawing.Size(1061, 410);
@@ -1426,7 +1440,7 @@
             this.layoutControlItem5.Location = new System.Drawing.Point(305, 148);
             this.layoutControlItem5.Name = "item3";
             this.layoutControlItem5.Size = new System.Drawing.Size(235, 26);
-            this.layoutControlItem5.Text = "추천인/G멀티샵";
+            this.layoutControlItem5.Text = "G멀티샵";
             this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(90, 20);
             this.layoutControlItem5.TextToControlDistance = 5;
@@ -1434,21 +1448,11 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnMemberSch;
-            this.layoutControlItem8.Location = new System.Drawing.Point(540, 148);
+            this.layoutControlItem8.Location = new System.Drawing.Point(568, 148);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(129, 26);
+            this.layoutControlItem8.Size = new System.Drawing.Size(112, 26);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
-            // 
-            // emptySpaceItem11
-            // 
-            this.emptySpaceItem11.AllowHotTrack = false;
-            this.emptySpaceItem11.CustomizationFormText = "emptySpaceItem10";
-            this.emptySpaceItem11.Location = new System.Drawing.Point(669, 148);
-            this.emptySpaceItem11.Name = "emptySpaceItem11";
-            this.emptySpaceItem11.Size = new System.Drawing.Size(123, 52);
-            this.emptySpaceItem11.Text = "emptySpaceItem10";
-            this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
             // item4
             // 
@@ -1478,9 +1482,9 @@
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.efwSimpleButton1;
-            this.layoutControlItem13.Location = new System.Drawing.Point(540, 174);
+            this.layoutControlItem13.Location = new System.Drawing.Point(568, 174);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(129, 26);
+            this.layoutControlItem13.Size = new System.Drawing.Size(112, 26);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
@@ -1540,6 +1544,66 @@
             this.layoutControlItem34.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem34.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem34.TextToControlDistance = 5;
+            // 
+            // efwSimpleButton2
+            // 
+            this.efwSimpleButton2.ButtonType = Easy.Framework.Util.BtnType.Search;
+            this.efwSimpleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
+            this.efwSimpleButton2.IsMultiLang = false;
+            this.efwSimpleButton2.Location = new System.Drawing.Point(552, 152);
+            this.efwSimpleButton2.Name = "efwSimpleButton2";
+            this.efwSimpleButton2.Size = new System.Drawing.Size(24, 22);
+            this.efwSimpleButton2.StyleController = this.layoutControl4;
+            this.efwSimpleButton2.TabIndex = 51;
+            this.efwSimpleButton2.Click += new System.EventHandler(this.EfwSimpleButton2_Click);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.efwSimpleButton2;
+            this.layoutControlItem2.Location = new System.Drawing.Point(540, 148);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(28, 26);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.ButtonType = Easy.Framework.Util.BtnType.Search;
+            this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(552, 178);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(24, 22);
+            this.efwSimpleButton3.StyleController = this.layoutControl4;
+            this.efwSimpleButton3.TabIndex = 52;
+            this.efwSimpleButton3.Click += new System.EventHandler(this.EfwSimpleButton3_Click);
+            // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.Control = this.efwSimpleButton3;
+            this.layoutControlItem19.Location = new System.Drawing.Point(540, 174);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(28, 26);
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem19.TextVisible = false;
+            // 
+            // emptySpaceItem10
+            // 
+            this.emptySpaceItem10.AllowHotTrack = false;
+            this.emptySpaceItem10.Location = new System.Drawing.Point(680, 148);
+            this.emptySpaceItem10.Name = "emptySpaceItem10";
+            this.emptySpaceItem10.Size = new System.Drawing.Size(112, 26);
+            this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem11
+            // 
+            this.emptySpaceItem11.AllowHotTrack = false;
+            this.emptySpaceItem11.Location = new System.Drawing.Point(680, 174);
+            this.emptySpaceItem11.Name = "emptySpaceItem11";
+            this.emptySpaceItem11.Size = new System.Drawing.Size(112, 26);
+            this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmGSHOP04
             // 
@@ -1625,7 +1689,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
@@ -1633,6 +1696,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.item7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPOSTNO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1723,7 +1790,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnMemberSch;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
         private Easy.Framework.WinForm.Control.efwTextEdit txtRECOMM_U_ID;
         private DevExpress.XtraLayout.LayoutControlItem item4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
@@ -1744,5 +1810,11 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtU_ID;
         private DevExpress.XtraLayout.LayoutControlItem item7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
     }
 }
