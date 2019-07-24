@@ -111,6 +111,7 @@ namespace YL_MM.BizFrm
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_gr_md");
             //GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_doramd");
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_biz");
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_support_team");
 
             gridView1.OptionsView.ShowFooter = true;
             gridView1.Columns["reg_date"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
@@ -171,6 +172,7 @@ namespace YL_MM.BizFrm
                       , new ColumnControlSet("chef_u_nickname"   , txtCHEF_U_NICKNAME)
                       , new ColumnControlSet("vip_reco_nickname" , txtVIP_RECO_NICKNAME)
                       , new ColumnControlSet("doramd_type"       , cmbDORAMD_TYPE)
+                      , new ColumnControlSet("is_support_team"   , chkIS_SUPPORT_TEAM)
                       );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -335,6 +337,7 @@ namespace YL_MM.BizFrm
                                                                 , this.txtU_NAME.EditValue
                                                                 , this.cmbU_CHEF_LEVEL.EditValue
                                                                 , this.cmbDORAMD_TYPE.EditValue
+                                                                , this.chkIS_SUPPORT_TEAM.EditValue
                                                                 );
 
                         if (ds.Tables.Count > 0)
