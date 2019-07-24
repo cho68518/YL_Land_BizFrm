@@ -1,4 +1,5 @@
-﻿using Easy.Framework.Common;
+﻿using DevExpress.XtraCharts;
+using Easy.Framework.Common;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -77,6 +78,8 @@ namespace YL_GM.BizFrm
             Open3();
 
             TotAdd();
+
+            View1();
         }
 
         private void Open1()
@@ -652,5 +655,50 @@ namespace YL_GM.BizFrm
             //OpenTag(gfloorInfo.FLR, "LDT");
             popup = null;
         }
+
+        private void View1()
+        {
+            for (int i = 0; i < chartControl2.Series.Count; i++)
+                this.chartControl2.Series[i].Points.Clear();
+
+            DataTable dt = GetData2(); new DataTable();
+
+            //Label값을 데이터의 값 그대로 나오도록 설정
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                //SeriesPoint sPont = new SeriesPoint(dt.Rows[i]["NAME"].ToString(), Convert.ToInt16(dt.Rows[i]["Quantity"]));
+                SeriesPoint sPont = new SeriesPoint(dt.Rows[i]["NAME"].ToString(), dt.Rows[i]["Quantity"].ToString());
+                this.chartControl2.Series["Series 1"].Points.Add(sPont);
+            }
+        }
+
+        private DataTable GetData2()
+        {
+            DataTable dt = new DataTable();
+
+            //DataColumn colName = new DataColumn("NAME", typeof(string));
+            //DataColumn colYear = new DataColumn("YEAR", typeof(string));
+            //DataColumn colQuantity = new DataColumn("Quantity", typeof(int));
+            DataColumn colName = new DataColumn("NAME", typeof(string));
+            //DataColumn colQuantity = new DataColumn("Quantity", typeof(int));
+            DataColumn colQuantity = new DataColumn("Quantity", typeof(string));
+
+            dt.Columns.Add(colName);
+            dt.Columns.Add(colQuantity);
+
+            //dt.Rows.Add("셰프이사", "1,000");
+            //dt.Rows.Add("도마셰프", "2,000");
+            //dt.Rows.Add("VIP", "3,000");
+            //dt.Rows.Add("도마", "4,000");
+
+            dt.Rows.Add("셰프이사", lbl4.Text);
+            dt.Rows.Add("도마셰프", lbl5.Text);
+            dt.Rows.Add("VIP", lbl6.Text);
+            dt.Rows.Add("도마", lbl7.Text);
+
+            return dt;
+        }
+
     }
 }
