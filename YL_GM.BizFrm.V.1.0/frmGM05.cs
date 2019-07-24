@@ -39,6 +39,7 @@ namespace YL_GM.BizFrm
 {
     public partial class frmGM05: FrmBase
     {
+        frmGM05_Pop01 popup;
         public frmGM05()
         {
             InitializeComponent();
@@ -222,6 +223,24 @@ namespace YL_GM.BizFrm
             }
 
         }
+        private void BtnDispYes_Click(object sender, EventArgs e)
+        {
 
+            popup = new frmGM05_Pop01();
+
+            popup.pYEAR = dtS_DATE.EditValue3.Substring(0, 4);
+            popup.pCOM_NM = gridView1.GetFocusedRowCellValue("s_company_name").ToString();
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            popup = null;
+        }
     }
 }
