@@ -118,7 +118,12 @@ namespace YL_GSHOP.BizFrm.Dlg
         {
             get;
             set;
-        }    
+        }
+        public string MEMBER_TYPE
+        {
+            get;
+            set;
+        }
 
         #endregion
 
@@ -142,6 +147,10 @@ namespace YL_GSHOP.BizFrm.Dlg
 
             setCmb();
             cmbSearch_Type.EditValue = "0";
+
+            txtQ_TYPE.EditValue = MEMBER_TYPE;
+            
+            
 
         }
 
@@ -187,6 +196,9 @@ namespace YL_GSHOP.BizFrm.Dlg
 
                         cmd.Parameters.Add("i_member_type", MySqlDbType.VarChar, 10);
                         cmd.Parameters[2].Value = cmbMember_Type.EditValue;
+                        // MD일경우 분리
+                        cmd.Parameters.Add("i_Q_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[3].Value = txtQ_TYPE.EditValue;
 
                         //Console.WriteLine(" i_Search_type           ---> [" + cmd.Parameters[0].Value + "]");
                         //Console.WriteLine(" i_search_Name           ---> [" + cmd.Parameters[1].Value + "]");
