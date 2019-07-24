@@ -92,5 +92,10 @@ namespace YL_DONUT.BizFrm
         {
             FrmBaseLoad(new frmDN12());
         }
+
+        private void BtnDN13_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmDN13());
+        }
     }
 }
