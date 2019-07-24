@@ -99,6 +99,18 @@
     <Compile Include="Dlg\frmGM01_Pop01.Designer.cs">
       <DependentUpon>frmGM01_Pop01.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGM05_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGM05_Pop01.Designer.cs">
+      <DependentUpon>frmGM05_Pop01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM04_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGM04_Pop01.Designer.cs">
+      <DependentUpon>frmGM04_Pop01.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGM05.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,8 +189,14 @@
     <EmbeddedResource Include="frmGM04.resx">
       <DependentUpon>frmGM04.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGM04_Pop01.resx">
+      <DependentUpon>frmGM04_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGM05.resx">
       <DependentUpon>frmGM05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM05_Pop01.resx">
+      <DependentUpon>frmGM05_Pop01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
