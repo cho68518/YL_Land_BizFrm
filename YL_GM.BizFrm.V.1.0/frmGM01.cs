@@ -80,6 +80,7 @@ namespace YL_GM.BizFrm
             TotAdd();
 
             View1();
+            View2();
         }
 
         private void Open1()
@@ -696,6 +697,50 @@ namespace YL_GM.BizFrm
             dt.Rows.Add("도마셰프", lbl5.Text);
             dt.Rows.Add("VIP", lbl6.Text);
             dt.Rows.Add("도마", lbl7.Text);
+
+            return dt;
+        }
+
+        private void View2()
+        {
+            for (int i = 0; i < chartControl1.Series.Count; i++)
+                this.chartControl1.Series[i].Points.Clear();
+
+            DataTable dt = GetData3(); new DataTable();
+
+            //Label값을 데이터의 값 그대로 나오도록 설정
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                //SeriesPoint sPont = new SeriesPoint(dt.Rows[i]["NAME"].ToString(), Convert.ToInt16(dt.Rows[i]["Quantity"]));
+                SeriesPoint sPont = new SeriesPoint(dt.Rows[i]["NAME"].ToString(), dt.Rows[i]["Quantity"].ToString());
+                this.chartControl1.Series["Series 1"].Points.Add(sPont);
+            }
+        }
+
+        private DataTable GetData3()
+        {
+            DataTable dt = new DataTable();
+
+            //DataColumn colName = new DataColumn("NAME", typeof(string));
+            //DataColumn colYear = new DataColumn("YEAR", typeof(string));
+            //DataColumn colQuantity = new DataColumn("Quantity", typeof(int));
+            DataColumn colName = new DataColumn("NAME", typeof(string));
+            //DataColumn colQuantity = new DataColumn("Quantity", typeof(int));
+            DataColumn colQuantity = new DataColumn("Quantity", typeof(string));
+
+            dt.Columns.Add(colName);
+            dt.Columns.Add(colQuantity);
+
+            //dt.Rows.Add("셰프이사", "1,000");
+            //dt.Rows.Add("도마셰프", "2,000");
+            //dt.Rows.Add("VIP", "3,000");
+            //dt.Rows.Add("도마", "4,000");
+
+            dt.Rows.Add("LG(일반)", lblTel1.Text);
+            dt.Rows.Add("LG(우체국)", lblTel2.Text);
+            dt.Rows.Add("LG(선불)", lblTel3.Text);
+            dt.Rows.Add("KT(일반)", lblTel5.Text);
 
             return dt;
         }

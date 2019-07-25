@@ -177,7 +177,7 @@ namespace YL_GSHOP.BizFrm
 
             //MessageBox.Show(string.Format("{0}: {1}", wstory_id, wcategory_no));
 
-            if (wcategory_no != "240" && wcategory_no != "205")
+            if (wcategory_no != "240" && wcategory_no != "205" && wcategory_no != "243")
             {
                 MessageAgent.MessageShow(MessageType.Error, "상세보기는 PR상담스토리 또는 PR후기스토리만 보실 수 있습니다!");
                 return;
