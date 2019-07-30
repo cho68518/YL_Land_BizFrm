@@ -45,7 +45,7 @@ namespace YL_GSHOP.BizFrm
 
         private void EfwSimpleButton2_Click(object sender, EventArgs e)
         {
-            FrmBaseLoad(new frmTest01());
+            FrmBaseLoad(new frmTest02());
         }
 
         private void BtnGSHOP06_Click(object sender, EventArgs e)

@@ -32,6 +32,7 @@
             this.btnTM01 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.btnTM02 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwPnlBody)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.btnTM02);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton2);
             this.efwPanelControl1.Controls.Add(this.btnTM01);
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -75,6 +77,17 @@
             this.efwSimpleButton2.Size = new System.Drawing.Size(119, 31);
             this.efwSimpleButton2.TabIndex = 3;
             this.efwSimpleButton2.Text = "frmTest";
+            // 
+            // btnTM02
+            // 
+            this.btnTM02.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTM02.IsMultiLang = false;
+            this.btnTM02.Location = new System.Drawing.Point(2, 37);
+            this.btnTM02.Name = "btnTM02";
+            this.btnTM02.Size = new System.Drawing.Size(119, 35);
+            this.btnTM02.TabIndex = 4;
+            this.btnTM02.Text = "frmTM02";
+            this.btnTM02.Click += new System.EventHandler(this.BtnTM02_Click);
             // 
             // frmMain
             // 
@@ -99,5 +112,6 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton btnTM01;
         private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl1;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnTM02;
     }
 }

@@ -55,6 +55,8 @@ namespace YL_TELECOM.BizFrm
             //cmbWriteYn.EditValue = "%";
             //setCmb();
             //chkCmb_Story.CheckAll();
+
+            cmbQ1.EditValue = "1";
         }
 
 

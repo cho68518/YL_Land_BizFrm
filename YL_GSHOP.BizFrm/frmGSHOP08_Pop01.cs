@@ -290,5 +290,36 @@ namespace YL_GSHOP.BizFrm
             }
         }
 
+        private void Btnchg_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "노출상태를 변경 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domalife.USP_GSHOP08_SAVE_10", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add("i_story_id", MySqlDbType.Int64, 20);
+                            cmd.Parameters[0].Value = pSTORY_ID;
+
+                            cmd.Parameters.Add("i_is_use", MySqlDbType.VarChar, 2);
+                            cmd.Parameters[1].Value = chkIS_USE.EditValue;
+
+                            cmd.ExecuteNonQuery();
+                            MessageAgent.MessageShow(MessageType.Informational, "처리되었습니다!");
+                            con.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
     }
 }

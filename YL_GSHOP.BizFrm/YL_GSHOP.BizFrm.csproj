@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E1D8686E-D66A-4172-8E0A-E9148D6296F2}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_GSHOP.BizFrm</RootNamespace>
     <AssemblyName>YL_GSHOP.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -225,6 +225,12 @@
     <Compile Include="frmTest01.Designer.cs">
       <DependentUpon>frmTest01.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTest02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTest02.Designer.cs">
+      <DependentUpon>frmTest02.cs</DependentUpon>
+    </Compile>
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest01.resx">
       <DependentUpon>frmTest01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest02.resx">
+      <DependentUpon>frmTest02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
