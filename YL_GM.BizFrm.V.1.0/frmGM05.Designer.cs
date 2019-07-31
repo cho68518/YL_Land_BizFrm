@@ -196,6 +196,8 @@
             // 
             this.gridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
             this.gridView1.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gridView1.AppearancePrint.FooterPanel.ForeColor = System.Drawing.Color.Red;
+            this.gridView1.AppearancePrint.FooterPanel.Options.UseForeColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn16,
             this.gridColumn6,

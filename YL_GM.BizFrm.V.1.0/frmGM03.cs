@@ -55,7 +55,7 @@ namespace YL_GM.BizFrm
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = false;
-            this.IsSave = true;
+            this.IsSave = false;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = false;
@@ -332,10 +332,9 @@ namespace YL_GM.BizFrm
 
         }
 
-        private void GridView1_CustomDrawFooterCell(object sender, DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e)
+        private void RbYearType_Click(object sender, EventArgs e)
         {
-            e.Appearance.ForeColor = Color.Red;
+            Search();
         }
-
     }
 }

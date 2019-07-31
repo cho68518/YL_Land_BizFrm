@@ -146,7 +146,7 @@
             this.efwGroupControl1.Name = "efwGroupControl1";
             this.efwGroupControl1.Size = new System.Drawing.Size(1212, 350);
             this.efwGroupControl1.TabIndex = 24;
-            this.efwGroupControl1.Text = "년도별 등록현황";
+            this.efwGroupControl1.Text = "년도별 현황";
             // 
             // layoutControl2
             // 
@@ -205,6 +205,8 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
+            this.gridView1.Appearance.FooterPanel.Options.UseForeColor = true;
             this.gridView1.AppearancePrint.FilterPanel.ForeColor = System.Drawing.Color.Red;
             this.gridView1.AppearancePrint.FilterPanel.Options.UseForeColor = true;
             this.gridView1.AppearancePrint.FooterPanel.ForeColor = System.Drawing.Color.Red;
@@ -519,7 +521,7 @@
             this.efwGroupControl4.Padding = new System.Windows.Forms.Padding(10);
             this.efwGroupControl4.Size = new System.Drawing.Size(1212, 326);
             this.efwGroupControl4.TabIndex = 26;
-            this.efwGroupControl4.Text = "현재 전체현황";
+            this.efwGroupControl4.Text = "현재 현황";
             // 
             // efwPanelControl2
             // 
@@ -554,6 +556,7 @@
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Location = new System.Drawing.Point(2, 2);
             this.chartControl1.Name = "chartControl1";
+            this.chartControl1.PaletteBaseColorNumber = 2;
             series1.Name = "Series 1";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
@@ -623,6 +626,7 @@
             this.rbYearType.RequireMessage = null;
             this.rbYearType.Size = new System.Drawing.Size(147, 30);
             this.rbYearType.TabIndex = 109;
+            this.rbYearType.Click += new System.EventHandler(this.RbYearType_Click);
             // 
             // efwLabel81
             // 
