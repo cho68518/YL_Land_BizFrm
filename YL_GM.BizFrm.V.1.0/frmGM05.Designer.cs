@@ -108,9 +108,9 @@
             // 
             this.panel2.Controls.Add(this.chartControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(2, 607);
+            this.panel2.Location = new System.Drawing.Point(2, 546);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(790, 86);
+            this.panel2.Size = new System.Drawing.Size(790, 147);
             this.panel2.TabIndex = 42;
             // 
             // chartControl1
@@ -140,13 +140,13 @@
             series1.Name = "Series 1";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl1.Size = new System.Drawing.Size(900, 86);
+            this.chartControl1.Size = new System.Drawing.Size(900, 147);
             this.chartControl1.TabIndex = 70;
             // 
             // splitterControl2
             // 
             this.splitterControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl2.Location = new System.Drawing.Point(2, 602);
+            this.splitterControl2.Location = new System.Drawing.Point(2, 541);
             this.splitterControl2.Name = "splitterControl2";
             this.splitterControl2.Size = new System.Drawing.Size(790, 5);
             this.splitterControl2.TabIndex = 41;
@@ -172,7 +172,7 @@
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.Location = new System.Drawing.Point(2, 62);
+            this.efwGridControl1.Location = new System.Drawing.Point(2, 71);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
@@ -180,7 +180,7 @@
             this.efwGridControl1.PrevRowHandle = -2147483648;
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDetail});
-            this.efwGridControl1.Size = new System.Drawing.Size(790, 540);
+            this.efwGridControl1.Size = new System.Drawing.Size(790, 470);
             this.efwGridControl1.TabIndex = 40;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -194,6 +194,8 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
+            this.gridView1.Appearance.FooterPanel.Options.UseForeColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn16,
             this.gridColumn6,
@@ -216,12 +218,14 @@
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "total", null, "합계 : {0} )")});
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.OptionsView.ShowFooter = true;
             // 
             // gridColumn16
             // 
             this.gridColumn16.Caption = "상품 업체";
             this.gridColumn16.FieldName = "s_company_name";
             this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.OptionsColumn.AllowEdit = false;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 0;
             this.gridColumn16.Width = 130;
@@ -233,6 +237,7 @@
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "month1";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 1;
             this.gridColumn6.Width = 90;
@@ -244,6 +249,7 @@
             this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn3.FieldName = "month2";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
             this.gridColumn3.Width = 90;
@@ -255,6 +261,7 @@
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "month3";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 90;
@@ -266,6 +273,7 @@
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn5.FieldName = "month4";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 90;
@@ -277,6 +285,7 @@
             this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn7.FieldName = "month5";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 5;
             this.gridColumn7.Width = 90;
@@ -288,6 +297,7 @@
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn8.FieldName = "month6";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 6;
             this.gridColumn8.Width = 90;
@@ -299,6 +309,7 @@
             this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn9.FieldName = "month7";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 7;
             this.gridColumn9.Width = 90;
@@ -310,6 +321,7 @@
             this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn10.FieldName = "month8";
             this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 8;
             this.gridColumn10.Width = 90;
@@ -321,6 +333,7 @@
             this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn11.FieldName = "month9";
             this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 9;
             this.gridColumn11.Width = 90;
@@ -332,6 +345,7 @@
             this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn12.FieldName = "month10";
             this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 10;
             this.gridColumn12.Width = 90;
@@ -343,6 +357,7 @@
             this.gridColumn13.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn13.FieldName = "month11";
             this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 11;
             this.gridColumn13.Width = 90;
@@ -354,6 +369,7 @@
             this.gridColumn14.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn14.FieldName = "month12";
             this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 12;
             this.gridColumn14.Width = 90;
@@ -365,6 +381,7 @@
             this.gridColumn15.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn15.FieldName = "tot";
             this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.OptionsColumn.AllowEdit = false;
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 13;
             this.gridColumn15.Width = 100;
@@ -394,7 +411,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(2, 23);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(790, 39);
+            this.panelTop.Size = new System.Drawing.Size(790, 48);
             this.panelTop.TabIndex = 0;
             // 
             // layoutControl2
@@ -469,9 +486,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(369, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(216, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(814, 32);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(967, 32);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -479,7 +496,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(165, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(204, 32);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(51, 32);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmGM05
