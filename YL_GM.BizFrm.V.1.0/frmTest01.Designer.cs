@@ -28,20 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.DoughnutSeriesLabel doughnutSeriesLabel1 = new DevExpress.XtraCharts.DoughnutSeriesLabel();
             DevExpress.XtraCharts.DoughnutSeriesView doughnutSeriesView1 = new DevExpress.XtraCharts.DoughnutSeriesView();
             DevExpress.XtraCharts.DoughnutSeriesLabel doughnutSeriesLabel2 = new DevExpress.XtraCharts.DoughnutSeriesLabel();
             DevExpress.XtraCharts.DoughnutSeriesView doughnutSeriesView2 = new DevExpress.XtraCharts.DoughnutSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             this.SuspendLayout();
             // 
             // efwSimpleButton1
@@ -56,6 +63,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.chartControl1);
             this.panel2.Location = new System.Drawing.Point(51, 139);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(504, 410);
@@ -68,17 +76,31 @@
             this.chartControl2.Name = "chartControl2";
             doughnutSeriesLabel1.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.Inside;
             doughnutSeriesLabel1.TextPattern = "{A}:{V} ({VP:P2})";
-            series1.Label = doughnutSeriesLabel1;
-            series1.Name = "Series 1";
-            series1.View = doughnutSeriesView1;
+            series2.Label = doughnutSeriesLabel1;
+            series2.Name = "Series 1";
+            series2.View = doughnutSeriesView1;
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
+        series2};
             doughnutSeriesLabel2.TextPattern = "{VP:G4}";
             this.chartControl2.SeriesTemplate.Label = doughnutSeriesLabel2;
             this.chartControl2.SeriesTemplate.LegendTextPattern = "{A}";
             this.chartControl2.SeriesTemplate.View = doughnutSeriesView2;
             this.chartControl2.Size = new System.Drawing.Size(502, 410);
             this.chartControl2.TabIndex = 5;
+            // 
+            // chartControl1
+            // 
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram1;
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Location = new System.Drawing.Point(21, 68);
+            this.chartControl1.Name = "chartControl1";
+            series1.Name = "Series 1";
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl1.Size = new System.Drawing.Size(439, 301);
+            this.chartControl1.TabIndex = 0;
             // 
             // frmTest01
             // 
@@ -92,12 +114,16 @@
             this.Controls.SetChildIndex(this.efwSimpleButton1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.chartControl2, 0);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,5 +133,6 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraCharts.ChartControl chartControl2;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
     }
 }

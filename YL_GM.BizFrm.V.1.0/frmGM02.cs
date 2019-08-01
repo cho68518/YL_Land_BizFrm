@@ -67,6 +67,7 @@ namespace YL_GM.BizFrm
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
             gridView1.OptionsView.ShowFooter = true;
+            gridView2.OptionsView.ShowFooter = true;
 
             gridView1.Columns["month1"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["month1"].SummaryItem.FieldName = "month1";
@@ -125,6 +126,15 @@ namespace YL_GM.BizFrm
             gridView2.Columns["total"].SummaryItem.FieldName = "total";
             gridView2.Columns["total"].SummaryItem.DisplayFormat = "{0}";
             rbYrarType.EditValue = "1";
+
+
+            Series series1 = new Series("series1", ViewType.Line);
+            ((LineSeriesView)series1.View).LineStyle.Thickness = 1;
+
+                    //((LineSeriesView)series1.View).MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            //((LineSeriesView)series1.View).LineMarkerOptions.Kind = MarkerKind.Triangle;
+            //((LineSeriesView)series1.View).LineStyle.DashStyle = DashStyle.Dash;
+
         }
 
 
@@ -215,20 +225,15 @@ namespace YL_GM.BizFrm
             for (int i = 0; i < chartControl2.Series.Count; i++)
                 this.chartControl2.Series[i].Points.Clear();
 
+
             SeriesPoint sPont = null;
 
             //시리즈 포인트
             for (int i = 0; i < gridView1.DataRowCount; i++)
             {
-
-               sPont = new SeriesPoint(gridView2.GetRowCellValue(i, "u_nickname"), Convert.ToInt16(gridView2.GetRowCellValue(i, "total")));
-
-  
-                this.chartControl2.Series["Series 1"].Points.Add(sPont);
+                sPont = new SeriesPoint(gridView2.GetRowCellValue(i, "u_nickname"), Convert.ToInt16(gridView2.GetRowCellValue(i, "total")));
+                                this.chartControl2.Series["Series 1"].Points.Add(sPont);
             }
-
-
-
         }
         private void EfwGridControl1_DoubleClick(object sender, EventArgs e)
         {
