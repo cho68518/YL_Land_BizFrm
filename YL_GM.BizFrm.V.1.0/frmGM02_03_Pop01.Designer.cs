@@ -214,7 +214,7 @@
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(0, 0);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(1150, 335);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1150, 392);
             this.efwGroupControl1.TabIndex = 23;
             this.efwGroupControl1.Text = "G멀티샵 현황";
             // 
@@ -234,7 +234,7 @@
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1270, 68, 650, 400);
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(1146, 310);
+            this.layoutControl2.Size = new System.Drawing.Size(1146, 367);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -350,7 +350,7 @@
             this.repositoryItemMemoExEdit1,
             this.repositoryItemMemoEdit1,
             this.repositoryItemCheckEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1132, 275);
+            this.efwGridControl1.Size = new System.Drawing.Size(1132, 332);
             this.efwGridControl1.TabIndex = 38;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -667,7 +667,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1146, 310);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1146, 367);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem29
@@ -795,14 +795,14 @@
             this.layoutControlItem4.Control = this.efwGridControl1;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1136, 279);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1136, 336);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(0, 335);
+            this.splitterControl1.Location = new System.Drawing.Point(0, 392);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1150, 5);
             this.splitterControl1.TabIndex = 24;
@@ -814,9 +814,9 @@
             this.efwGroupControl5.Controls.Add(this.layoutControl4);
             this.efwGroupControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl5.IsMultiLang = false;
-            this.efwGroupControl5.Location = new System.Drawing.Point(0, 340);
+            this.efwGroupControl5.Location = new System.Drawing.Point(0, 397);
             this.efwGroupControl5.Name = "efwGroupControl5";
-            this.efwGroupControl5.Size = new System.Drawing.Size(1150, 305);
+            this.efwGroupControl5.Size = new System.Drawing.Size(1150, 248);
             this.efwGroupControl5.TabIndex = 25;
             this.efwGroupControl5.Text = "회원 정보";
             // 
@@ -841,7 +841,7 @@
             this.layoutControl4.Location = new System.Drawing.Point(2, 23);
             this.layoutControl4.Name = "layoutControl4";
             this.layoutControl4.Root = this.layoutControlGroup3;
-            this.layoutControl4.Size = new System.Drawing.Size(1146, 280);
+            this.layoutControl4.Size = new System.Drawing.Size(1146, 223);
             this.layoutControl4.TabIndex = 3;
             this.layoutControl4.Text = "layoutControl4";
             // 
@@ -1375,7 +1375,7 @@
             this.Controls.Add(this.splitterControl1);
             this.Controls.Add(this.efwGroupControl1);
             this.Name = "frmGM02_03_Pop01";
-            this.Text = "Form1";
+            this.Text = "상세 현황";
             this.Load += new System.EventHandler(this.FrmGM02_03_Pop01_Load);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);

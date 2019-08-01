@@ -152,12 +152,16 @@ namespace YL_GM.BizFrm
                         }
                     }
                 }
+
+
                 ChartCreat1();
             }
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
+
+
         }
 
         public void ChartCreat1()
@@ -242,5 +246,7 @@ namespace YL_GM.BizFrm
 
             popup = null;
         }
+
+
     }
 }

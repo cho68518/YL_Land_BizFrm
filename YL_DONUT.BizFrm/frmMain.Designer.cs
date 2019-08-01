@@ -31,6 +31,7 @@
             this.btnDN01 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwPnlBody = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.btnDN13 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnDN12 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnDN11 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnDN10 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -43,7 +44,7 @@
             this.btnDN03 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnDN02 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnDN13 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwPnlBody)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
@@ -70,6 +71,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton1);
             this.efwPanelControl1.Controls.Add(this.btnDN13);
             this.efwPanelControl1.Controls.Add(this.btnDN12);
             this.efwPanelControl1.Controls.Add(this.btnDN11);
@@ -89,6 +91,17 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(123, 822);
             this.efwPanelControl1.TabIndex = 10;
+            // 
+            // btnDN13
+            // 
+            this.btnDN13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDN13.IsMultiLang = false;
+            this.btnDN13.Location = new System.Drawing.Point(2, 422);
+            this.btnDN13.Name = "btnDN13";
+            this.btnDN13.Size = new System.Drawing.Size(119, 35);
+            this.btnDN13.TabIndex = 15;
+            this.btnDN13.Text = "frmDN13";
+            this.btnDN13.Click += new System.EventHandler(this.BtnDN13_Click);
             // 
             // btnDN12
             // 
@@ -222,16 +235,16 @@
             this.efwSimpleButton2.Text = "frmTest";
             this.efwSimpleButton2.Click += new System.EventHandler(this.EfwSimpleButton2_Click);
             // 
-            // btnDN13
+            // efwSimpleButton1
             // 
-            this.btnDN13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDN13.IsMultiLang = false;
-            this.btnDN13.Location = new System.Drawing.Point(2, 422);
-            this.btnDN13.Name = "btnDN13";
-            this.btnDN13.Size = new System.Drawing.Size(119, 35);
-            this.btnDN13.TabIndex = 15;
-            this.btnDN13.Text = "frmDN13";
-            this.btnDN13.Click += new System.EventHandler(this.BtnDN13_Click);
+            this.efwSimpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(2, 457);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton1.TabIndex = 16;
+            this.efwSimpleButton1.Text = "frmDN14";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
             // 
             // frmMain
             // 
@@ -268,5 +281,6 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton btnDN11;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnDN12;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnDN13;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
     }
 }

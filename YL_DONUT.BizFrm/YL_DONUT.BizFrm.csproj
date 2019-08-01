@@ -131,6 +131,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="frmDN14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN14.Designer.cs">
+      <DependentUpon>frmDN14.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDN11.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN13.resx">
       <DependentUpon>frmDN13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN14.resx">
+      <DependentUpon>frmDN14.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

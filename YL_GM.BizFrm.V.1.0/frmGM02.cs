@@ -56,7 +56,7 @@ namespace YL_GM.BizFrm
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = false;
-            this.IsSave = true;
+            this.IsSave = false;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = false;
@@ -121,6 +121,10 @@ namespace YL_GM.BizFrm
             gridView1.Columns["total"].SummaryItem.FieldName = "total";
             gridView1.Columns["total"].SummaryItem.DisplayFormat = "{0}";
 
+            gridView2.Columns["total"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView2.Columns["total"].SummaryItem.FieldName = "total";
+            gridView2.Columns["total"].SummaryItem.DisplayFormat = "{0}";
+            rbYrarType.EditValue = "1";
         }
 
 
@@ -155,6 +159,46 @@ namespace YL_GM.BizFrm
                         }
                     }
                 }
+                Open1();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+
+        public void Open1()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_GM_GM02_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_year", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 4);
+
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[1].Value = rbYrarType.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
 
                 ChartCreat1();
             }
@@ -164,66 +208,23 @@ namespace YL_GM.BizFrm
             }
         }
 
+
         public void ChartCreat1()
         {
             //차트 클리어
-            for (int i = 0; i < chartControl1.Series.Count; i++)
-                this.chartControl1.Series[i].Points.Clear();
+            for (int i = 0; i < chartControl2.Series.Count; i++)
+                this.chartControl2.Series[i].Points.Clear();
 
             SeriesPoint sPont = null;
 
             //시리즈 포인트
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < gridView1.DataRowCount; i++)
             {
-                if (i == 0)
-                {
-                    sPont = new SeriesPoint("1", Convert.ToInt16(gridView1.Columns["month1"].SummaryItem.SummaryValue));
-                }
-                else if (i == 1)
-                {
-                    sPont = new SeriesPoint("2", Convert.ToInt16(gridView1.Columns["month2"].SummaryItem.SummaryValue));
-                }
-                else if (i == 2)
-                {
-                    sPont = new SeriesPoint("3", Convert.ToInt16(gridView1.Columns["month3"].SummaryItem.SummaryValue));
-                }
-                else if (i == 3)
-                {
-                    sPont = new SeriesPoint("4", Convert.ToInt16(gridView1.Columns["month4"].SummaryItem.SummaryValue));
-                }
-                else if (i == 4)
-                {
-                    sPont = new SeriesPoint("5", Convert.ToInt16(gridView1.Columns["month5"].SummaryItem.SummaryValue));
-                }
-                else if (i == 5)
-                {
-                    sPont = new SeriesPoint("6", Convert.ToInt16(gridView1.Columns["month6"].SummaryItem.SummaryValue));
-                }
-                else if (i == 6)
-                {
-                    sPont = new SeriesPoint("7", Convert.ToInt16(gridView1.Columns["month7"].SummaryItem.SummaryValue));
-                }
-                else if (i == 7)
-                {
-                    sPont = new SeriesPoint("8", Convert.ToInt16(gridView1.Columns["month8"].SummaryItem.SummaryValue));
-                }
-                else if (i == 8)
-                {
-                    sPont = new SeriesPoint("9", Convert.ToInt16(gridView1.Columns["month9"].SummaryItem.SummaryValue));
-                }
-                else if (i == 9)
-                {
-                    sPont = new SeriesPoint("10", Convert.ToInt16(gridView1.Columns["month10"].SummaryItem.SummaryValue));
-                }
-                else if (i == 10)
-                {
-                    sPont = new SeriesPoint("11", Convert.ToInt16(gridView1.Columns["month11"].SummaryItem.SummaryValue));
-                }
-                else if (i == 11)
-                {
-                    sPont = new SeriesPoint("12", Convert.ToInt16(gridView1.Columns["month12"].SummaryItem.SummaryValue));
-                }
-                this.chartControl1.Series["Series 1"].Points.Add(sPont);
+
+               sPont = new SeriesPoint(gridView2.GetRowCellValue(i, "u_nickname"), Convert.ToInt16(gridView2.GetRowCellValue(i, "total")));
+
+  
+                this.chartControl2.Series["Series 1"].Points.Add(sPont);
             }
 
 
@@ -255,5 +256,9 @@ namespace YL_GM.BizFrm
             popup = null;
         }
 
+        private void RbYrarType_Click(object sender, EventArgs e)
+        {
+            Search();
+        }
     }
 }

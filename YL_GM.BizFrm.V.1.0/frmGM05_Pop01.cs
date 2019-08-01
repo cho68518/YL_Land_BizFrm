@@ -36,9 +36,9 @@ namespace YL_GM.BizFrm
             gridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
             gridView1.Columns["p_num"].SummaryItem.DisplayFormat = "{0}";
 
-            gridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
-            gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            gridView1.Columns["o_inputamt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["o_inputamt"].SummaryItem.FieldName = "o_inputamt";
+            gridView1.Columns["o_inputamt"].SummaryItem.DisplayFormat = "{0:c}";
 
             gridView1.Columns["o_delivery_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["o_delivery_cost"].SummaryItem.FieldName = "o_delivery_cost";
@@ -48,6 +48,13 @@ namespace YL_GM.BizFrm
             gridView1.Columns["o_total"].SummaryItem.FieldName = "o_total";
             gridView1.Columns["o_total"].SummaryItem.DisplayFormat = "{0:c}";
 
+            gridView1.Columns["pp_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["pp_amt"].SummaryItem.FieldName = "pp_amt";
+            gridView1.Columns["pp_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["margin"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["margin"].SummaryItem.FieldName = "margin";
+            gridView1.Columns["margin"].SummaryItem.DisplayFormat = "{0:c}";
 
             Open1();
         }
@@ -81,13 +88,30 @@ namespace YL_GM.BizFrm
                         }
                     }
                 }
+                double nInputAmt = 0;
+                double nSaleAmt = 0;
+                double nMargin = 0;
+                double nRate = 0;
+                
+                nInputAmt = Convert.ToInt32(gridView1.Columns["o_inputamt"].SummaryItem.SummaryValue);
+                nSaleAmt = Convert.ToInt32(gridView1.Columns["pp_amt"].SummaryItem.SummaryValue);
+                nMargin = nSaleAmt - nInputAmt;
+                nRate = ((nSaleAmt - nInputAmt) / nSaleAmt) * 100;
+                nRate = Math.Round(nRate, 2);
+
+                txtInputAmt.EditValue = Convert.ToInt32(gridView1.Columns["o_inputamt"].SummaryItem.SummaryValue);
+                txtSaleAmt.EditValue = Convert.ToInt32(gridView1.Columns["pp_amt"].SummaryItem.SummaryValue);
+                txtMargin.EditValue = nMargin;
+                txtRate.EditValue = nRate;
+
             }
+
+
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
-
 
     }
 }

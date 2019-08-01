@@ -210,12 +210,12 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add("i_order_mall_type", MySqlDbType.VarChar, 10);
                         cmd.Parameters[5].Value = cmbMALL_TYPE.EditValue;
 
-                        Console.WriteLine(" i_sdate           ---> [" + cmd.Parameters[0].Value + "]" );
-                        Console.WriteLine(" i_edate           ---> [" + cmd.Parameters[1].Value + "]");
-                        Console.WriteLine(" i_type            ---> [" + cmd.Parameters[2].Value + "]");
-                        Console.WriteLine(" i_search          ---> [" + cmd.Parameters[3].Value + "]");
-                        Console.WriteLine(" i_is_order        ---> [" + cmd.Parameters[4].Value + "]");
-                        Console.WriteLine(" i_order_mall_type ---> [" + cmd.Parameters[5].Value + "]");
+                        //Console.WriteLine(" i_sdate           ---> [" + cmd.Parameters[0].Value + "]" );
+                        //Console.WriteLine(" i_edate           ---> [" + cmd.Parameters[1].Value + "]");
+                        //Console.WriteLine(" i_type            ---> [" + cmd.Parameters[2].Value + "]");
+                        //Console.WriteLine(" i_search          ---> [" + cmd.Parameters[3].Value + "]");
+                        //Console.WriteLine(" i_is_order        ---> [" + cmd.Parameters[4].Value + "]");
+                        //Console.WriteLine(" i_order_mall_type ---> [" + cmd.Parameters[5].Value + "]");
 
 
                         cmd.Parameters.Add("i_o_type1", MySqlDbType.VarChar, 10);
