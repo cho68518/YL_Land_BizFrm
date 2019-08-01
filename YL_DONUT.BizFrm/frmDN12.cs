@@ -70,9 +70,16 @@ namespace YL_DONUT.BizFrm
             dtS_DATE3.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
             dtS_DATE3.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
 
+            dtS_DATE4.Properties.Mask.EditMask = "yyyy-MM";
+            dtS_DATE4.Properties.DisplayFormat.FormatString = "yyyy-MM";
+            dtS_DATE4.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            dtS_DATE4.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            dtS_DATE4.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
+
             dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
             dtS_DATE2.EditValue = DateTime.Now.ToString("yyyy-MM");
             dtS_DATE3.EditValue = DateTime.Now.ToString("yyyy-MM");
+            dtS_DATE4.EditValue = DateTime.Now.ToString("yyyy-MM");
             autoOpen();
         }
 
@@ -123,6 +130,12 @@ namespace YL_DONUT.BizFrm
                     if (openFileDialog1.FileName != string.Empty)
                     {
                         string fileName = openFileDialog1.FileName;
+
+                        if (fileName.IndexOf("PS운영자_추천지원금_정산내역_D머니적립.xls") < 0)
+                        {
+                            MessageAgent.MessageShow(MessageType.Error, "엑셀파일명에 문제가 있습니다. 파일명을 확인하세요.");
+                            return;
+                        }
 
                         this.efwGridControl1.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
                         this.efwGridControl1.MyGridView.BestFitColumns();
@@ -335,6 +348,12 @@ namespace YL_DONUT.BizFrm
                     if (openFileDialog1.FileName != string.Empty)
                     {
                         string fileName = openFileDialog1.FileName;
+
+                        if (fileName.IndexOf("PS운영자_PS수수료_정산내역_D머니적립.xls") < 0)
+                        {
+                            MessageAgent.MessageShow(MessageType.Error, "엑셀파일명에 문제가 있습니다. 파일명을 확인하세요.");
+                            return;
+                        }
 
                         this.efwGridControl2.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
                         this.efwGridControl2.MyGridView.BestFitColumns();
@@ -550,6 +569,12 @@ namespace YL_DONUT.BizFrm
                     if (openFileDialog1.FileName != string.Empty)
                     {
                         string fileName = openFileDialog1.FileName;
+
+                        if (fileName.IndexOf("도넛_차액반환_TD머니적립.xls") < 0)
+                        {
+                            MessageAgent.MessageShow(MessageType.Error, "엑셀파일명에 문제가 있습니다. 파일명을 확인하세요.");
+                            return;
+                        }
 
                         this.efwGridControl5.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
                         this.efwGridControl5.MyGridView.BestFitColumns();
@@ -804,6 +829,10 @@ namespace YL_DONUT.BizFrm
             {
                 BtnHistoryQ3_Click(null, null);
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                BtnHistoryQ4_Click(null, null);
+            }
         }
 
         private void EfwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
@@ -858,7 +887,7 @@ namespace YL_DONUT.BizFrm
         {
             //엑셀데이타 가져오기
             openFileDialog1.DefaultExt = "xls";
-            openFileDialog1.FileName = "도넛_차액반환_TD머니적립.xls";
+            openFileDialog1.FileName = "YSMS및개인간거래 AD머니적립.xls";
             openFileDialog1.Filter = "Excel97 - 2003 통합문서|*.xls";
             openFileDialog1.Title = "엑셀데이터 가져오기";
 
@@ -871,6 +900,12 @@ namespace YL_DONUT.BizFrm
                     if (openFileDialog1.FileName != string.Empty)
                     {
                         string fileName = openFileDialog1.FileName;
+
+                        if (fileName.IndexOf("YSMS및개인간거래 AD머니적립.xls") < 0)
+                        {
+                            MessageAgent.MessageShow(MessageType.Error, "엑셀파일명에 문제가 있습니다. 파일명을 확인하세요.");
+                            return;
+                        }
 
                         this.efwGridControl8.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
                         this.efwGridControl8.MyGridView.BestFitColumns();
@@ -938,7 +973,7 @@ namespace YL_DONUT.BizFrm
                             // @EventEtc	   (mileage_message)                                                                                
                             // @result
 
-                            swork_type = "03";
+                            swork_type = "04";
                             subject = "[관리] YSMS거래 AD머니 적립";
                             sfrom_type = "AD";
                             sto_type = "AD";
@@ -990,10 +1025,10 @@ namespace YL_DONUT.BizFrm
                                     , sdate
                                 );
                         }
-                        //ServiceAgent.ExecuteNoneQuery("CONIS_IBS", tPack);
-                        //ServiceAgent.ExecuteNoneQuery("CONIS_IBS", tPack2);
+                        ServiceAgent.ExecuteNoneQuery("CONIS_IBS", tPack);
+                        ServiceAgent.ExecuteNoneQuery("CONIS_IBS", tPack2);
 
-                        BtnHistoryQ3_Click(null, null);
+                        BtnHistoryQ4_Click(null, null);
 
                         MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
                         Cursor = Cursors.Default;
@@ -1011,6 +1046,14 @@ namespace YL_DONUT.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 Cursor = Cursors.Default;
             }
+        }
+
+        private void BtnHistoryQ4_Click(object sender, EventArgs e)
+        {
+            DataSet dsres = openHistory("04", dtS_DATE4.EditValue3.Substring(0, 6));
+
+            efwGridControl7.DataBind(dsres);
+            this.efwGridControl7.MyGridView.BestFitColumns();
         }
     }
 }

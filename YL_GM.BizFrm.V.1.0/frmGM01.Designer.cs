@@ -1584,7 +1584,7 @@
             // efwLabel12
             // 
             this.efwLabel12.Appearance.BackColor = System.Drawing.Color.Linen;
-            this.efwLabel12.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.efwLabel12.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.efwLabel12.Appearance.Options.UseBackColor = true;
             this.efwLabel12.Appearance.Options.UseFont = true;
             this.efwLabel12.Appearance.Options.UseTextOptions = true;
@@ -1598,6 +1598,7 @@
             this.efwLabel12.Size = new System.Drawing.Size(146, 28);
             this.efwLabel12.TabIndex = 13;
             this.efwLabel12.Text = "라이프가입 회원수";
+            this.efwLabel12.Click += new System.EventHandler(this.EfwLabel12_Click);
             // 
             // efwLabel9
             // 

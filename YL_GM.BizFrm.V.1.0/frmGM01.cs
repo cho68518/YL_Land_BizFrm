@@ -47,6 +47,9 @@ namespace YL_GM.BizFrm
             base.FrmLoadEvent();
             //DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
 
+            Font myFont = new Font(efwLabel12.Font, FontStyle.Underline);
+            efwLabel12.Font = myFont;
+
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = true;
@@ -745,5 +748,10 @@ namespace YL_GM.BizFrm
             return dt;
         }
 
+
+        private void EfwLabel12_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("dddddddddddddddd");
+        }
     }
 }
