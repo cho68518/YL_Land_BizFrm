@@ -83,6 +83,16 @@ namespace YL_DONUT.BizFrm.Properties {
         /// <summary>
         ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static byte[] YSMS및개인간거래_AD머니적립_sample {
+            get {
+                object obj = ResourceManager.GetObject("YSMS및개인간거래_AD머니적립_sample", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static byte[] 도넛_차액반환_TD머니적립_sample {
             get {
                 object obj = ResourceManager.GetObject("도넛_차액반환_TD머니적립_sample", resourceCulture);
