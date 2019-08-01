@@ -124,6 +124,9 @@
   <data name="PS운영자_추천지원금_정산내역_D머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PS운영자_추천지원금_정산내역_D머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="YSMS및개인간거래_AD머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YSMS및개인간거래 AD머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="도넛_차액반환_TD머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\도넛_차액반환_TD머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
