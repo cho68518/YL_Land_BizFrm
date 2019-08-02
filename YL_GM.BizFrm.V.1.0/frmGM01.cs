@@ -751,11 +751,19 @@ namespace YL_GM.BizFrm
         }
 
 
-        private void EfwLabel12_Click(object sender, EventArgs e)
+        //private void EfwLabel12_Click(object sender, EventArgs e)
+        //{
+        //    MessageBox.Show("dddddddddddddddd");
+        //}
+        private void EfwSimpleButton6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("dddddddddddddddd");
-        }
+            popup1 = new frmGM01_Pop02();
+            popup1.pMember_NM = "라이프 가입 회원수";
+            popup1.pQ3 = "%";
 
+            popup1.FormClosed += popup_FormClosed1;
+            popup1.ShowDialog();
+        }
         private void BtnOpen_Click(object sender, EventArgs e)
         {
             popup1 = new frmGM01_Pop02();
@@ -826,5 +834,7 @@ namespace YL_GM.BizFrm
             popup2.FormClosed -= popup_FormClosed2;
             popup2 = null;
         }
+
+
     }
 }
