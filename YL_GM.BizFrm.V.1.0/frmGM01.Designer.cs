@@ -42,11 +42,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnMember3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnMember2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnMember1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnMember = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             this.lblDate = new Easy.Framework.WinForm.Control.efwLabel();
             this.lbl72 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -221,8 +216,6 @@
             this.efwLabel81 = new Easy.Framework.WinForm.Control.efwLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnUpdate = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnLG = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnKT = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
@@ -268,11 +261,6 @@
             // 
             this.efwGroupControl1.AllowTouchScroll = true;
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
-            this.efwGroupControl1.Controls.Add(this.efwSimpleButton1);
-            this.efwGroupControl1.Controls.Add(this.btnMember3);
-            this.efwGroupControl1.Controls.Add(this.btnMember2);
-            this.efwGroupControl1.Controls.Add(this.btnMember1);
-            this.efwGroupControl1.Controls.Add(this.btnMember);
             this.efwGroupControl1.Controls.Add(this.chartControl2);
             this.efwGroupControl1.Controls.Add(this.lblDate);
             this.efwGroupControl1.Controls.Add(this.lbl72);
@@ -364,66 +352,6 @@
             this.efwGroupControl1.Size = new System.Drawing.Size(1652, 406);
             this.efwGroupControl1.TabIndex = 0;
             this.efwGroupControl1.Text = "회원정보 현황";
-            // 
-            // efwSimpleButton1
-            // 
-            this.efwSimpleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
-            this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(15, 149);
-            this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(28, 28);
-            this.efwSimpleButton1.TabIndex = 97;
-            this.efwSimpleButton1.ToolTip = "총누적수 조정";
-            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
-            // 
-            // btnMember3
-            // 
-            this.btnMember3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMember3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMember3.ImageOptions.Image")));
-            this.btnMember3.IsMultiLang = false;
-            this.btnMember3.Location = new System.Drawing.Point(15, 265);
-            this.btnMember3.Name = "btnMember3";
-            this.btnMember3.Size = new System.Drawing.Size(28, 28);
-            this.btnMember3.TabIndex = 96;
-            this.btnMember3.ToolTip = "총누적수 조정";
-            this.btnMember3.Click += new System.EventHandler(this.BtnMember3_Click);
-            // 
-            // btnMember2
-            // 
-            this.btnMember2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMember2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMember2.ImageOptions.Image")));
-            this.btnMember2.IsMultiLang = false;
-            this.btnMember2.Location = new System.Drawing.Point(15, 236);
-            this.btnMember2.Name = "btnMember2";
-            this.btnMember2.Size = new System.Drawing.Size(28, 28);
-            this.btnMember2.TabIndex = 95;
-            this.btnMember2.ToolTip = "총누적수 조정";
-            this.btnMember2.Click += new System.EventHandler(this.BtnMember2_Click);
-            // 
-            // btnMember1
-            // 
-            this.btnMember1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMember1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMember1.ImageOptions.Image")));
-            this.btnMember1.IsMultiLang = false;
-            this.btnMember1.Location = new System.Drawing.Point(15, 207);
-            this.btnMember1.Name = "btnMember1";
-            this.btnMember1.Size = new System.Drawing.Size(28, 28);
-            this.btnMember1.TabIndex = 94;
-            this.btnMember1.ToolTip = "총누적수 조정";
-            this.btnMember1.Click += new System.EventHandler(this.BtnMember1_Click);
-            // 
-            // btnMember
-            // 
-            this.btnMember.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMember.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMember.ImageOptions.Image")));
-            this.btnMember.IsMultiLang = false;
-            this.btnMember.Location = new System.Drawing.Point(15, 178);
-            this.btnMember.Name = "btnMember";
-            this.btnMember.Size = new System.Drawing.Size(28, 28);
-            this.btnMember.TabIndex = 1;
-            this.btnMember.ToolTip = "총누적수 조정";
-            this.btnMember.Click += new System.EventHandler(this.BtnMember_Click);
             // 
             // chartControl2
             // 
@@ -1603,7 +1531,7 @@
             this.efwLabel16.Name = "efwLabel16";
             this.efwLabel16.Size = new System.Drawing.Size(146, 28);
             this.efwLabel16.TabIndex = 17;
-            this.efwLabel16.Text = "    도마";
+            this.efwLabel16.Text = "도마";
             // 
             // efwLabel15
             // 
@@ -1619,7 +1547,7 @@
             this.efwLabel15.Name = "efwLabel15";
             this.efwLabel15.Size = new System.Drawing.Size(146, 28);
             this.efwLabel15.TabIndex = 16;
-            this.efwLabel15.Text = "    VIP";
+            this.efwLabel15.Text = "VIP";
             // 
             // efwLabel14
             // 
@@ -1635,7 +1563,7 @@
             this.efwLabel14.Name = "efwLabel14";
             this.efwLabel14.Size = new System.Drawing.Size(146, 28);
             this.efwLabel14.TabIndex = 15;
-            this.efwLabel14.Text = "    도마셰프";
+            this.efwLabel14.Text = "도마셰프";
             // 
             // efwLabel13
             // 
@@ -1651,12 +1579,12 @@
             this.efwLabel13.Name = "efwLabel13";
             this.efwLabel13.Size = new System.Drawing.Size(146, 28);
             this.efwLabel13.TabIndex = 14;
-            this.efwLabel13.Text = "    셰프이사";
+            this.efwLabel13.Text = "셰프이사";
             // 
             // efwLabel12
             // 
             this.efwLabel12.Appearance.BackColor = System.Drawing.Color.Linen;
-            this.efwLabel12.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.efwLabel12.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.efwLabel12.Appearance.Options.UseBackColor = true;
             this.efwLabel12.Appearance.Options.UseFont = true;
             this.efwLabel12.Appearance.Options.UseTextOptions = true;
@@ -1669,7 +1597,7 @@
             this.efwLabel12.Name = "efwLabel12";
             this.efwLabel12.Size = new System.Drawing.Size(146, 28);
             this.efwLabel12.TabIndex = 13;
-            this.efwLabel12.Text = "      라이프가입 회원수";
+            this.efwLabel12.Text = "라이프가입 회원수";
             this.efwLabel12.Click += new System.EventHandler(this.EfwLabel12_Click);
             // 
             // efwLabel9
@@ -1688,7 +1616,7 @@
             this.efwLabel9.Name = "efwLabel9";
             this.efwLabel9.Size = new System.Drawing.Size(146, 28);
             this.efwLabel9.TabIndex = 12;
-            this.efwLabel9.Text = "      포털가입 회원수";
+            this.efwLabel9.Text = "포털가입 회원수";
             // 
             // efwLabel7
             // 
@@ -1908,8 +1836,6 @@
             // panel6
             // 
             this.panel6.AutoScroll = true;
-            this.panel6.Controls.Add(this.btnKT);
-            this.panel6.Controls.Add(this.btnLG);
             this.panel6.Controls.Add(this.chartControl1);
             this.panel6.Controls.Add(this.lblTel64);
             this.panel6.Controls.Add(this.lblTel56);
@@ -3546,30 +3472,6 @@
             this.btnUpdate.ToolTip = "총누적수 조정";
             this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // btnLG
-            // 
-            this.btnLG.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLG.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image1")));
-            this.btnLG.IsMultiLang = false;
-            this.btnLG.Location = new System.Drawing.Point(4, 130);
-            this.btnLG.Name = "btnLG";
-            this.btnLG.Size = new System.Drawing.Size(28, 28);
-            this.btnLG.TabIndex = 98;
-            this.btnLG.ToolTip = "총누적수 조정";
-            this.btnLG.Click += new System.EventHandler(this.BtnLG_Click);
-            // 
-            // btnKT
-            // 
-            this.btnKT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
-            this.btnKT.IsMultiLang = false;
-            this.btnKT.Location = new System.Drawing.Point(4, 217);
-            this.btnKT.Name = "btnKT";
-            this.btnKT.Size = new System.Drawing.Size(28, 28);
-            this.btnKT.TabIndex = 223;
-            this.btnKT.ToolTip = "총누적수 조정";
-            this.btnKT.Click += new System.EventHandler(this.BtnKT_Click);
-            // 
             // frmGM01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -3789,12 +3691,5 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton btnUpdate;
         private DevExpress.XtraCharts.ChartControl chartControl2;
         private DevExpress.XtraCharts.ChartControl chartControl1;
-        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnMember3;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnMember2;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnMember1;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnMember;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnLG;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnKT;
     }
 }
