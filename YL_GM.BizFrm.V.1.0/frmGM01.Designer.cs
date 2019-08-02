@@ -42,6 +42,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwSimpleButton6 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.btnOpen = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             this.lblDate = new Easy.Framework.WinForm.Control.efwLabel();
             this.lbl72 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -129,6 +134,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.lblTel64 = new Easy.Framework.WinForm.Control.efwLabel();
             this.lblTel56 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -216,13 +223,6 @@
             this.efwLabel81 = new Easy.Framework.WinForm.Control.efwLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnUpdate = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnOpen = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton6 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
@@ -364,6 +364,56 @@
             this.efwGroupControl1.Size = new System.Drawing.Size(1652, 406);
             this.efwGroupControl1.TabIndex = 0;
             this.efwGroupControl1.Text = "회원정보 현황";
+            // 
+            // efwSimpleButton6
+            // 
+            this.efwSimpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton6.ImageOptions.Image")));
+            this.efwSimpleButton6.IsMultiLang = false;
+            this.efwSimpleButton6.Location = new System.Drawing.Point(17, 151);
+            this.efwSimpleButton6.Name = "efwSimpleButton6";
+            this.efwSimpleButton6.Size = new System.Drawing.Size(26, 24);
+            this.efwSimpleButton6.TabIndex = 98;
+            this.efwSimpleButton6.Click += new System.EventHandler(this.EfwSimpleButton6_Click);
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(17, 267);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(26, 24);
+            this.efwSimpleButton3.TabIndex = 97;
+            this.efwSimpleButton3.Click += new System.EventHandler(this.EfwSimpleButton3_Click);
+            // 
+            // efwSimpleButton2
+            // 
+            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
+            this.efwSimpleButton2.IsMultiLang = false;
+            this.efwSimpleButton2.Location = new System.Drawing.Point(17, 238);
+            this.efwSimpleButton2.Name = "efwSimpleButton2";
+            this.efwSimpleButton2.Size = new System.Drawing.Size(26, 24);
+            this.efwSimpleButton2.TabIndex = 96;
+            this.efwSimpleButton2.Click += new System.EventHandler(this.EfwSimpleButton2_Click);
+            // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(17, 209);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(26, 24);
+            this.efwSimpleButton1.TabIndex = 95;
+            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.ImageOptions.Image")));
+            this.btnOpen.IsMultiLang = false;
+            this.btnOpen.Location = new System.Drawing.Point(17, 180);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(26, 24);
+            this.btnOpen.TabIndex = 94;
+            this.btnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
             // 
             // chartControl2
             // 
@@ -1610,7 +1660,6 @@
             this.efwLabel12.Size = new System.Drawing.Size(146, 28);
             this.efwLabel12.TabIndex = 13;
             this.efwLabel12.Text = "      라이프가입 회원수";
-            this.efwLabel12.Click += new System.EventHandler(this.EfwLabel12_Click);
             // 
             // efwLabel9
             // 
@@ -1941,6 +1990,26 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1628, 388);
             this.panel6.TabIndex = 139;
+            // 
+            // efwSimpleButton5
+            // 
+            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
+            this.efwSimpleButton5.IsMultiLang = false;
+            this.efwSimpleButton5.Location = new System.Drawing.Point(5, 220);
+            this.efwSimpleButton5.Name = "efwSimpleButton5";
+            this.efwSimpleButton5.Size = new System.Drawing.Size(26, 24);
+            this.efwSimpleButton5.TabIndex = 223;
+            this.efwSimpleButton5.Click += new System.EventHandler(this.EfwSimpleButton5_Click);
+            // 
+            // efwSimpleButton4
+            // 
+            this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
+            this.efwSimpleButton4.IsMultiLang = false;
+            this.efwSimpleButton4.Location = new System.Drawing.Point(5, 133);
+            this.efwSimpleButton4.Name = "efwSimpleButton4";
+            this.efwSimpleButton4.Size = new System.Drawing.Size(26, 24);
+            this.efwSimpleButton4.TabIndex = 98;
+            this.efwSimpleButton4.Click += new System.EventHandler(this.EfwSimpleButton4_Click);
             // 
             // chartControl1
             // 
@@ -3485,75 +3554,6 @@
             this.btnUpdate.Text = "총누적수 조정";
             this.btnUpdate.ToolTip = "총누적수 조정";
             this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.ImageOptions.Image")));
-            this.btnOpen.IsMultiLang = false;
-            this.btnOpen.Location = new System.Drawing.Point(17, 180);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(26, 24);
-            this.btnOpen.TabIndex = 94;
-            this.btnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
-            // 
-            // efwSimpleButton1
-            // 
-            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
-            this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(17, 209);
-            this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(26, 24);
-            this.efwSimpleButton1.TabIndex = 95;
-            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
-            // 
-            // efwSimpleButton2
-            // 
-            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
-            this.efwSimpleButton2.IsMultiLang = false;
-            this.efwSimpleButton2.Location = new System.Drawing.Point(17, 238);
-            this.efwSimpleButton2.Name = "efwSimpleButton2";
-            this.efwSimpleButton2.Size = new System.Drawing.Size(26, 24);
-            this.efwSimpleButton2.TabIndex = 96;
-            this.efwSimpleButton2.Click += new System.EventHandler(this.EfwSimpleButton2_Click);
-            // 
-            // efwSimpleButton3
-            // 
-            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
-            this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(17, 267);
-            this.efwSimpleButton3.Name = "efwSimpleButton3";
-            this.efwSimpleButton3.Size = new System.Drawing.Size(26, 24);
-            this.efwSimpleButton3.TabIndex = 97;
-            this.efwSimpleButton3.Click += new System.EventHandler(this.EfwSimpleButton3_Click);
-            // 
-            // efwSimpleButton4
-            // 
-            this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
-            this.efwSimpleButton4.IsMultiLang = false;
-            this.efwSimpleButton4.Location = new System.Drawing.Point(5, 134);
-            this.efwSimpleButton4.Name = "efwSimpleButton4";
-            this.efwSimpleButton4.Size = new System.Drawing.Size(26, 24);
-            this.efwSimpleButton4.TabIndex = 98;
-            this.efwSimpleButton4.Click += new System.EventHandler(this.EfwSimpleButton4_Click);
-            // 
-            // efwSimpleButton5
-            // 
-            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
-            this.efwSimpleButton5.IsMultiLang = false;
-            this.efwSimpleButton5.Location = new System.Drawing.Point(5, 221);
-            this.efwSimpleButton5.Name = "efwSimpleButton5";
-            this.efwSimpleButton5.Size = new System.Drawing.Size(26, 24);
-            this.efwSimpleButton5.TabIndex = 223;
-            this.efwSimpleButton5.Click += new System.EventHandler(this.EfwSimpleButton5_Click);
-            // 
-            // efwSimpleButton6
-            // 
-            this.efwSimpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton6.ImageOptions.Image")));
-            this.efwSimpleButton6.IsMultiLang = false;
-            this.efwSimpleButton6.Location = new System.Drawing.Point(17, 151);
-            this.efwSimpleButton6.Name = "efwSimpleButton6";
-            this.efwSimpleButton6.Size = new System.Drawing.Size(26, 24);
-            this.efwSimpleButton6.TabIndex = 98;
             // 
             // frmGM01
             // 

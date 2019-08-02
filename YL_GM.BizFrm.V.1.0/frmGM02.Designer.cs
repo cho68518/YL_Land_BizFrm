@@ -159,7 +159,7 @@
             this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl2.Location = new System.Drawing.Point(234, 23);
             this.chartControl2.Name = "chartControl2";
-            this.chartControl2.PaletteName = "Red";
+            this.chartControl2.PaletteName = "Mixed";
             series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series1.Name = "Series 1";
             sideBySideBarSeriesView1.ColorEach = true;
