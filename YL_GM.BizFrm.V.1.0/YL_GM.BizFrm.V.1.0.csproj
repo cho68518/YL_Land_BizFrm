@@ -93,6 +93,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstantLib.cs" />
+    <Compile Include="Dlg\frmGM01_Pop03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmGM01_Pop03.Designer.cs">
+      <DependentUpon>frmGM01_Pop03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\frmGM01_Pop02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmGM01_Pop02.Designer.cs">
+      <DependentUpon>frmGM01_Pop02.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dlg\frmGM01_Pop01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +173,11 @@
     </Compile>
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +190,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Dlg\frmGM01_Pop01.resx">
       <DependentUpon>frmGM01_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\frmGM01_Pop02.resx">
+      <DependentUpon>frmGM01_Pop02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\frmGM01_Pop03.resx">
+      <DependentUpon>frmGM01_Pop03.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM01.resx">
       <DependentUpon>frmGM01.cs</DependentUpon>
@@ -205,6 +228,10 @@
       <DependentUpon>frmTest01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

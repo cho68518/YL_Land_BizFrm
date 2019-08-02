@@ -17,6 +17,8 @@ namespace YL_GM.BizFrm
     public partial class frmGM01 : FrmBase
     {
         frmGM01_Pop01 popup;
+        frmGM01_Pop02 popup1;
+        frmGM01_Pop03 popup2;
 
         #region Fields
 
@@ -46,6 +48,21 @@ namespace YL_GM.BizFrm
         {
             base.FrmLoadEvent();
             //DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
+
+            //Font myFont12 = new Font(efwLabel12.Font, FontStyle.Underline);
+            //efwLabel12.Font = myFont12;
+
+            //Font myFont13 = new Font(efwLabel13.Font, FontStyle.Underline);
+            //efwLabel13.Font = myFont13;
+
+            //Font myFont14 = new Font(efwLabel14.Font, FontStyle.Underline);
+            //efwLabel14.Font = myFont14;
+
+            //Font myFont15 = new Font(efwLabel15.Font, FontStyle.Underline);
+            //efwLabel15.Font = myFont15;
+
+            //Font myFont16 = new Font(efwLabel16.Font, FontStyle.Underline);
+            //efwLabel16.Font = myFont16;
 
             this.IsMenuVw = true;
             this.IsSearch = true;
@@ -645,8 +662,7 @@ namespace YL_GM.BizFrm
 
         private void popup_FormClosed(object sender, FormClosedEventArgs e)
         {
-            popup.FormClosed -= popup_FormClosed;
-
+            popup1.FormClosed -= popup_FormClosed;
             //if (popup.DialogResult == DialogResult.OK)
             //{
             //    this.txtX.EditValue = popup.nX;
@@ -655,6 +671,7 @@ namespace YL_GM.BizFrm
 
             //OpenTag(gfloorInfo.FLR, "LDT");
             popup = null;
+            
         }
 
         private void View1()
@@ -743,6 +760,98 @@ namespace YL_GM.BizFrm
             dt.Rows.Add("KT(일반)", lblTel5.Text);
 
             return dt;
+        }
+
+
+        private void popup_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            popup1.FormClosed -= popup_FormClosed1;
+            popup1 = null;
+        }
+
+        private void EfwLabel12_Click(object sender, EventArgs e)
+        {
+            popup1 = new frmGM01_Pop02();
+            popup1.pMember_NM = "라이프 가입 회원수";
+            popup1.pQ3 = "%";
+
+            popup1.FormClosed += popup_FormClosed1;
+            popup1.ShowDialog();
+        }
+
+        private void EfwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            popup1 = new frmGM01_Pop02();
+            popup1.pMember_NM = "라이프 가입 회원수";
+            popup1.pQ3 = "%";
+
+            popup1.FormClosed += popup_FormClosed1;
+            popup1.ShowDialog();
+        }
+
+        private void BtnMember_Click(object sender, EventArgs e)
+        {
+            popup1 = new frmGM01_Pop02();
+            popup1.pMember_NM = "셰프(이사)";
+            popup1.pQ3 = "3";
+
+            popup1.FormClosed += popup_FormClosed1;
+            popup1.ShowDialog();
+        }
+
+        private void BtnMember1_Click(object sender, EventArgs e)
+        {
+            popup1 = new frmGM01_Pop02();
+            popup1.pMember_NM = "도마셰프";
+            popup1.pQ3 = "2";
+
+            popup1.FormClosed += popup_FormClosed1;
+            popup1.ShowDialog();
+        }
+
+        private void BtnMember2_Click(object sender, EventArgs e)
+        {
+            popup1 = new frmGM01_Pop02();
+            popup1.pMember_NM = "VIP";
+            popup1.pQ3 = "1";
+
+            popup1.FormClosed += popup_FormClosed1;
+            popup1.ShowDialog();
+        }
+
+        private void BtnMember3_Click(object sender, EventArgs e)
+        {
+            popup1 = new frmGM01_Pop02();
+            popup1.pMember_NM = "도마";
+            popup1.pQ3 = "0";
+
+            popup1.FormClosed += popup_FormClosed1;
+            popup1.ShowDialog();
+        }
+
+        private void BtnLG_Click(object sender, EventArgs e)
+        {
+            popup2 = new frmGM01_Pop03();
+            popup2.pMember_NM = "LG U+";
+            popup2.pQ3 = "lg";
+
+            popup2.FormClosed += popup_FormClosed2;
+            popup2.ShowDialog();
+        }
+        private void popup_FormClosed2(object sender, FormClosedEventArgs e)
+        {
+            popup2.FormClosed -= popup_FormClosed2;
+            popup2 = null;
+        }
+
+        private void BtnKT_Click(object sender, EventArgs e)
+        {
+            popup2 = new frmGM01_Pop03();
+            popup2.pMember_NM = "KT";
+            popup2.pQ3 = "kt";
+
+            popup2.FormClosed += popup_FormClosed2;
+            popup2.ShowDialog();
         }
 
     }
