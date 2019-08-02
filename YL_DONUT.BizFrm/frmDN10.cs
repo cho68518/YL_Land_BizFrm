@@ -47,6 +47,7 @@ namespace YL_DONUT.BizFrm
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_write");
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_psoper_order");
 
             gridView1.OptionsView.ShowFooter = true;
 
@@ -84,9 +85,9 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["t_cnt"].SummaryItem.FieldName = "t_cnt";
             gridView1.Columns["t_cnt"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["o_donut_d_cost"].Visible = false;
+            //gridView1.Columns["o_donut_d_cost"].Visible = false;
             gridView1.Columns["o_donut_m_cost"].Visible = false;
-            gridView1.Columns["o_donut_c_cost"].Visible = false;
+            //gridView1.Columns["o_donut_c_cost"].Visible = false;
             gridView1.Columns["o_delivery_cost"].Visible = false;
             gridView1.Columns["o_pay_type"].Visible = false;
             gridView1.Columns["is_order"].Visible = false;
@@ -287,9 +288,9 @@ namespace YL_DONUT.BizFrm
                 btn.Appearance.BackColor = Color.LightGreen;
                 btn.Appearance.BackColor2 = Color.DarkGreen;
 
-                gridView1.Columns["o_donut_d_cost"].Visible = true;
+                //gridView1.Columns["o_donut_d_cost"].Visible = true;
                 gridView1.Columns["o_donut_m_cost"].Visible = true;
-                gridView1.Columns["o_donut_c_cost"].Visible = true;
+                //gridView1.Columns["o_donut_c_cost"].Visible = true;
                 gridView1.Columns["o_delivery_cost"].Visible = true;
                 gridView1.Columns["o_pay_type"].Visible = true;
                 gridView1.Columns["is_order"].Visible = true;
@@ -306,9 +307,9 @@ namespace YL_DONUT.BizFrm
                 btn.Appearance.BackColor = Color.Transparent;
                 btn.Appearance.BackColor2 = Color.Transparent;
 
-                gridView1.Columns["o_donut_d_cost"].Visible = false;
+                //gridView1.Columns["o_donut_d_cost"].Visible = false;
                 gridView1.Columns["o_donut_m_cost"].Visible = false;
-                gridView1.Columns["o_donut_c_cost"].Visible = false;
+                //gridView1.Columns["o_donut_c_cost"].Visible = false;
                 gridView1.Columns["o_delivery_cost"].Visible = false;
                 gridView1.Columns["o_pay_type"].Visible = false;
                 gridView1.Columns["is_order"].Visible = false;

@@ -56,7 +56,7 @@ namespace YL_TELECOM.BizFrm
             //setCmb();
             //chkCmb_Story.CheckAll();
 
-            cmbQ1.EditValue = "1";
+            cmbQ1.EditValue = "0";
         }
 
 
@@ -130,7 +130,7 @@ namespace YL_TELECOM.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다. 다시 조회 하세요.");
                 Cursor.Current = Cursors.Default;
-            }
+            }                                                                                                
         }
 
         private void TxtSearch_KeyDown(object sender, KeyEventArgs e)
