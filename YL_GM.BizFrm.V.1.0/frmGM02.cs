@@ -131,12 +131,10 @@ namespace YL_GM.BizFrm
             Series series1 = new Series("series1", ViewType.Line);
             ((LineSeriesView)series1.View).LineStyle.Thickness = 1;
 
-                    //((LineSeriesView)series1.View).MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            //((LineSeriesView)series1.View).MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
             //((LineSeriesView)series1.View).LineMarkerOptions.Kind = MarkerKind.Triangle;
             //((LineSeriesView)series1.View).LineStyle.DashStyle = DashStyle.Dash;
-
         }
-
 
         public override void Search()
         {
@@ -146,7 +144,6 @@ namespace YL_GM.BizFrm
 
                 // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domamall.USP_GM_GM02_SELECT_01", con))
                     {
