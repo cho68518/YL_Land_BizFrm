@@ -68,7 +68,6 @@
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.rbYearType = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwLabel81 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -109,6 +108,7 @@
             this.efwArea15 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea14 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea6 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -129,13 +129,13 @@
             this.efwGroupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).BeginInit();
             this.efwPanelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
+            this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbYearType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
-            this.efwPanelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rbYearType.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -533,26 +533,6 @@
             this.efwPanelControl2.Name = "efwPanelControl2";
             this.efwPanelControl2.Size = new System.Drawing.Size(752, 281);
             this.efwPanelControl2.TabIndex = 111;
-            // 
-            // chartControl1
-            // 
-            xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram1;
-            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.Location = new System.Drawing.Point(2, 2);
-            this.chartControl1.Name = "chartControl1";
-            this.chartControl1.PaletteName = "Mixed";
-            series1.Name = "Series 1";
-            sideBySideBarSeriesView1.ColorEach = true;
-            series1.View = sideBySideBarSeriesView1;
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
-            this.chartControl1.Size = new System.Drawing.Size(748, 277);
-            this.chartControl1.TabIndex = 0;
             // 
             // efwPanelControl1
             // 
@@ -1273,6 +1253,31 @@
             this.efwArea6.TabIndex = 66;
             this.efwArea6.Text = "0";
             // 
+            // chartControl1
+            // 
+            this.chartControl1.AutoLayout = false;
+            this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.GridLines.MinorVisible = true;
+            xyDiagram1.AxisY.NumericScaleOptions.AutoGrid = false;
+            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram1;
+            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl1.Location = new System.Drawing.Point(2, 2);
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.PaletteName = "Mixed";
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Series 1";
+            sideBySideBarSeriesView1.ColorEach = true;
+            series1.View = sideBySideBarSeriesView1;
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl1.Size = new System.Drawing.Size(748, 277);
+            this.chartControl1.TabIndex = 73;
+            // 
             // frmGM03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1305,13 +1310,13 @@
             this.efwGroupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).EndInit();
             this.efwPanelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
+            this.efwPanelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rbYearType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
-            this.efwPanelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rbYearType.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

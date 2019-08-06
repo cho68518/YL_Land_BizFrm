@@ -64,6 +64,7 @@ namespace YL_DONUT.BizFrm
 
             this.efwGridControl1.BindControlSet(
                       new ColumnControlSet("idx", txtIDX)
+                    , new ColumnControlSet("option_id", txtOPTION_ID)
                     , new ColumnControlSet("product_name", txtPROD_NM)
                     , new ColumnControlSet("customer_price", txtCUSTOMER_PRICE)
                     , new ColumnControlSet("lowest_price", txtLOWEST_PRICE)
@@ -79,6 +80,7 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("td_donut", txtTD_DONUT)
                     , new ColumnControlSet("ad_donut", txtAD_DONUT)
                     , new ColumnControlSet("reco_donut", txtRECO_DONUT)
+                    , new ColumnControlSet("remark", txtREMARK)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -87,6 +89,7 @@ namespace YL_DONUT.BizFrm
 
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
+            Open1();
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
         }
 
@@ -113,6 +116,40 @@ namespace YL_DONUT.BizFrm
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
                            // this.efwGridControl1.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            Open1();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        public void Open1()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_DN_DN14_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_option_id", MySqlDbType.Int32, 10);
+                        cmd.Parameters[0].Value = txtOPTION_ID.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            // this.efwGridControl1.MyGridView.BestFitColumns();
 
                         }
                     }
@@ -209,6 +246,14 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_reco_donut", MySqlDbType.Int32));
                             cmd.Parameters["i_reco_donut"].Value = Convert.ToInt32(txtRECO_DONUT.EditValue);
                             cmd.Parameters["i_reco_donut"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_option_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_option_id"].Value = Convert.ToInt32(txtOPTION_ID.EditValue);
+                            cmd.Parameters["i_option_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
