@@ -262,10 +262,59 @@ namespace YL_MM.BizFrm
 
         #endregion
 
+
+
+        public void Open1()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                string sLevel = string.Empty;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_MM_MM05_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar);
+                        cmd.Parameters[0].Value = txtU_ID.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+
+
         #region 저장
+
+
+
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+
+
+
             if (UserInfo.instance().UserId != "0000000024" && UserInfo.instance().UserId != "0000000012" && UserInfo.instance().UserId != "169.254.169.113" && UserInfo.instance().UserId != "0000000027")
             {
                 MessageAgent.MessageShow(MessageType.Error, "처리권한이 없습니다!");
@@ -280,13 +329,35 @@ namespace YL_MM.BizFrm
                 return;
             }
 
+
+
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
+
+
                 if (ValidationAgentEx.IsRequireCheck(this.layoutControl1.Controls, "R1"))
                 {
                     try
                     {
+                        //히스토리 내용 생성
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domalife.USP_MM_MM05_SAVE_03", con))
+                            {
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                                cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtIDX.EditValue);
+                                cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
+
                         Cursor.Current = Cursors.WaitCursor;
+
+
 
                         //int retVal = ServiceAgent.ExecuteNoneQuery(UserInfo.instance().UserId, "CONIS_IBS", "USP_MM_MM05_SAVE_01"
                         //                                         , UserInfo.instance().UserId
@@ -351,6 +422,7 @@ namespace YL_MM.BizFrm
                                 MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
                                 IsAutoSearch = false;
                                 Search();
+                                Open1();
                                 //NewMode();
                             }
                         }
@@ -362,9 +434,11 @@ namespace YL_MM.BizFrm
                         MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                         Cursor.Current = Cursors.Default;
                     }
+                    
                 }
             }
         }
+
 
         #endregion
 
@@ -528,6 +602,7 @@ namespace YL_MM.BizFrm
             {
                 this.txtU_ZIP.EditValue2 = dr["u_zip"].ToString();
                 this.txtU_ZIP.Text = dr["u_zip"].ToString();
+                this.txtU_ADDR.Text = dr["u_addr"].ToString() + dr["u_addr_detail"].ToString();
             }
 
             if (dr != null && dr["chef_u_nickname"].ToString() != "")
@@ -555,6 +630,10 @@ namespace YL_MM.BizFrm
             if (dr != null && dr["doramd_type"].ToString() != "")
                 this.cmbDORAMD_TYPE.EditValue = dr["doramd_type"].ToString();
 
+             
+            
+
+            Open1();
         }
 
         private void GridView1_CustomDrawFooterCell(object sender, FooterCellCustomDrawEventArgs e)

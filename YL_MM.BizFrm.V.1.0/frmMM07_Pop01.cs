@@ -1,4 +1,5 @@
 ﻿using Easy.Framework.Common;
+using Easy.Framework.WinForm.Control;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -51,6 +52,40 @@ namespace YL_MM.BizFrm
             txtDOMA_U_NAME.EditValue = pDOMA_U_NAME;
             txtDOMA_U_NICKNAME.EditValue = pDOMA_U_NICKNAME;
             //txtRECV_U_ID.EditValue = "1";
+
+
+
+            gridView1.OptionsView.ShowFooter = true;
+
+            //그리드로 클릭시 컨트롤 데이터 바인딩
+            this.efwGridControl1.BindControlSet(
+                      new ColumnControlSet("remark", txtREMARK)
+                      );
+
+            this.efwGridControl1.Click += efwGridControl1_Click;
+
+
+            gridView2.OptionsView.ShowFooter = true;
+            this.efwGridControl2.BindControlSet(
+                                  new ColumnControlSet("remark", txtREMARK1)
+                                  );
+
+            this.efwGridControl2.Click += efwGridControl2_Click;
+
+            Open2();
+            Open1();
+        }
+
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+
+        }
+
+        private void efwGridControl2_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl2.GetSelectedRow(0);
+
         }
 
         private void BtnMemberSch_Click(object sender, EventArgs e)
@@ -79,6 +114,92 @@ namespace YL_MM.BizFrm
             }
             popup = null;
         }
+
+
+        public void Open1()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                string sLevel = string.Empty;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_MM_MM07_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_recv_id", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtIDX.EditValue;
+
+                        cmd.Parameters.Add("i_level", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtLEVEL.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+
+                            efwGridControl1.DataBind(ds);
+                            //this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        public void Open2()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                string sLevel = string.Empty;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_MM_MM07_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_recv_id", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtIDX.EditValue;
+
+                        cmd.Parameters.Add("i_level", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = "3";
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+
+                            efwGridControl2.DataBind(ds);
+                            //this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
 
         private void EfwSimpleButton1_Click(object sender, EventArgs e)
         {
@@ -109,6 +230,10 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_doma_id", MySqlDbType.VarChar));
                             cmd.Parameters["i_doma_id"].Value = txtDOMA_U_ID.EditValue;
                             cmd.Parameters["i_doma_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark1"].Value = txtREMARK1.EditValue;
+                            cmd.Parameters["i_remark1"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_return", MySqlDbType.VarChar));
                             cmd.Parameters["o_return"].Direction = ParameterDirection.Output;
@@ -195,6 +320,11 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_doma_id", MySqlDbType.VarChar));
                             cmd.Parameters["i_doma_id"].Value = txtDOMA_U_ID.EditValue;
                             cmd.Parameters["i_doma_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
 
                             cmd.Parameters.Add(new MySqlParameter("o_return", MySqlDbType.VarChar));
                             cmd.Parameters["o_return"].Direction = ParameterDirection.Output;
