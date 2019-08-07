@@ -99,7 +99,7 @@ namespace YL_DONUT.BizFrm
             //lblAM.Text = "0";
             lblID.Text = "0";
 
-            cmbSel.EditValue = 2;
+            cmbSel.EditValue = 1;
 
             dt1F.EditValue = DateTime.Now.ToString("yyyy-MM") + "-01";
             dt1T.EditValue = DateTime.Now;
@@ -123,6 +123,9 @@ namespace YL_DONUT.BizFrm
 
                 //회원체크
                 Member_Chk(this.txtQ.EditValue.ToString());
+
+                if (lblID.Text.Trim() == "")
+                    return;
 
                 //DataSet ds = ServiceAgent.ExecuteDataSet(true, "CONIS_IBS", "USP_DN02_SELECT_01", cmbSel.EditValue, txtQ.EditValue);
                 DataSet ds = ServiceAgent.ExecuteDataSet(true, "CONIS_IBS", "USP_DN02_SELECT_01", lblID.Text);

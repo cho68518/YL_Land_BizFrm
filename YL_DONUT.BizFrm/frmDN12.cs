@@ -1055,5 +1055,25 @@ namespace YL_DONUT.BizFrm
             efwGridControl7.DataBind(dsres);
             this.efwGridControl7.MyGridView.BestFitColumns();
         }
+
+        private void DtS_DATE_EditValueChanged(object sender, EventArgs e)
+        {
+            BtnHistoryQ_Click(null, null);
+        }
+
+        private void DtS_DATE2_EditValueChanged(object sender, EventArgs e)
+        {
+            BtnHistoryQ2_Click(null, null);
+        }
+
+        private void DtS_DATE3_EditValueChanged(object sender, EventArgs e)
+        {
+            BtnHistoryQ3_Click(null, null);
+        }
+
+        private void DtS_DATE4_EditValueChanged(object sender, EventArgs e)
+        {
+            BtnHistoryQ4_Click(null, null);
+        }
     }
 }
