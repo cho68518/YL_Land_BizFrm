@@ -19,6 +19,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Xml;
 using YL_COMM.BizFrm;
+using DevExpress.XtraGrid.Views.Base;
 
 namespace YL_DONUT.BizFrm
 {
@@ -53,6 +54,11 @@ namespace YL_DONUT.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
+            DataSet ds = new DataSet();
+            //efwGridControl1.DataSource = ds;
+            efwGridControl1.DataBind(ds);
+
+            gridView1.InitNewRow += GridView1_InitNewRow;
         }
 
 
@@ -331,6 +337,22 @@ namespace YL_DONUT.BizFrm
                 btn.Appearance.BackColor = Color.Transparent;
                 btn.Appearance.BackColor2 = Color.Transparent;
             }
+        }
+
+        private void EfwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            gridView1.AddNewRow();
+            //int rowHandler = gridView1.RowCount - 1;
+
+            //gridView1.SetRowCellValue(rowHandler, "col1", "0");
+            //gridView1.SetRowCellValue(rowHandler, "col2", "0");
+        }
+
+        private void GridView1_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
+        {
+            ColumnView View = sender as ColumnView;
+            View.SetRowCellValue(e.RowHandle, View.Columns["col1"], "");
+            View.SetRowCellValue(e.RowHandle, View.Columns["col2"], "");
         }
     }
 }
