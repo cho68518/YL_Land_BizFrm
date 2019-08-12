@@ -97,6 +97,12 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["o_purchase_cost"].SummaryItem.FieldName = "o_purchase_cost";
             gridView1.Columns["o_purchase_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
+            gridView1.Columns["pp_ps_oper_price"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["pp_ps_oper_price"].SummaryItem.FieldName = "pp_ps_oper_price";
+            gridView1.Columns["pp_ps_oper_price"].SummaryItem.DisplayFormat = "{0:c}";
+
+            
+
             //this.efwGridControl1.BindControlSet(
             //new ColumnControlSet("id", txtID)
             //  

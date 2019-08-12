@@ -169,6 +169,7 @@ namespace YL_GSHOP.BizFrm
                 this.btnPOST_NO.EditValue2 = dr["post_no"].ToString();
                 this.btnPOST_NO.Text = dr["post_no"].ToString();
             }
+            Open1();
         }
         public override void NewMode()
         {
@@ -223,6 +224,39 @@ namespace YL_GSHOP.BizFrm
             }
         }
         #endregion
+
+        public void Open1()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_GSHOP_GSHOP04_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar);
+                        cmd.Parameters[0].Value = txtU_ID.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
@@ -330,6 +364,7 @@ namespace YL_GSHOP.BizFrm
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
                 Search();
+                Open1();
             }
         }
 
@@ -622,5 +657,6 @@ namespace YL_GSHOP.BizFrm
                 Search();
             }
         }
+
     }
 }
