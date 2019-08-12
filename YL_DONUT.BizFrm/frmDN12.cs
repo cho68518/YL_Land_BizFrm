@@ -137,7 +137,10 @@ namespace YL_DONUT.BizFrm
                             return;
                         }
 
-                        this.efwGridControl1.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        //this.efwGridControl1.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+
+                        this.efwGridControl1.DataSource = ExcelDataBaseHelper.OpenFile(fileName);
+
                         this.efwGridControl1.MyGridView.BestFitColumns();
                         lblCnt1.Text = string.Format("{0:#,###}", gridView1.DataRowCount.ToString());
                     }
@@ -355,7 +358,9 @@ namespace YL_DONUT.BizFrm
                             return;
                         }
 
-                        this.efwGridControl2.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        //this.efwGridControl2.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        this.efwGridControl2.DataSource = ExcelDataBaseHelper.OpenFile(fileName);
+
                         this.efwGridControl2.MyGridView.BestFitColumns();
                         lblCnt2.Text = string.Format("{0:#,###}", gridView2.DataRowCount.ToString());
                     }
@@ -576,7 +581,9 @@ namespace YL_DONUT.BizFrm
                             return;
                         }
 
-                        this.efwGridControl5.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        //this.efwGridControl5.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        this.efwGridControl5.DataSource = ExcelDataBaseHelper.OpenFile(fileName);
+
                         this.efwGridControl5.MyGridView.BestFitColumns();
                         lblCnt3.Text = string.Format("{0:#,###}", gridView5.DataRowCount.ToString());
                     }
@@ -907,7 +914,9 @@ namespace YL_DONUT.BizFrm
                             return;
                         }
 
-                        this.efwGridControl8.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        //this.efwGridControl8.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        this.efwGridControl8.DataSource = ExcelDataBaseHelper.OpenFile(fileName);
+
                         this.efwGridControl8.MyGridView.BestFitColumns();
                         lblCnt4.Text = string.Format("{0:#,###}", gridView5.DataRowCount.ToString());
                     }
