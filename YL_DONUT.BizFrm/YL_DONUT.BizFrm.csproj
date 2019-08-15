@@ -247,6 +247,18 @@
     <Compile Include="frmDN13.Designer.cs">
       <DependentUpon>frmDN13.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDN16.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN16.Designer.cs">
+      <DependentUpon>frmDN16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDN17.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN17.Designer.cs">
+      <DependentUpon>frmDN17.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +336,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN15.resx">
       <DependentUpon>frmDN15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN16.resx">
+      <DependentUpon>frmDN16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN17.resx">
+      <DependentUpon>frmDN17.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -407,6 +425,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apply_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
