@@ -228,7 +228,7 @@ namespace YL_GSHOP.BizFrm
                 {
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
-                        using (MySqlCommand cmd = new MySqlCommand("domalife.USP_DN_DN07_SAVE_01", con))
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN07_SAVE_01", con))
                         {
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;
@@ -263,7 +263,7 @@ namespace YL_GSHOP.BizFrm
             {
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_DN_DN07_SAVE_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN07_SAVE_01", con))
                     {
                         con.Open();
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -298,7 +298,7 @@ namespace YL_GSHOP.BizFrm
                 {
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
-                        using (MySqlCommand cmd = new MySqlCommand("domalife.USP_GSHOP08_SAVE_10", con))
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP08_SAVE_10", con))
                         {
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;

@@ -57,7 +57,7 @@ namespace YL_MM.BizFrm
 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_MM_MM07_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM07_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
