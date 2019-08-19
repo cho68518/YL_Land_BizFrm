@@ -76,6 +76,7 @@
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.txtQ_TYPE = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMember_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSearch_Type.Properties)).BeginInit();
@@ -87,10 +88,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQ_TYPE.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtQ_TYPE);
             this.panel1.Controls.Add(this.efwLabel3);
             this.panel1.Controls.Add(this.cmbMember_Type);
             this.panel1.Controls.Add(this.cmbSearch_Type);
@@ -489,6 +492,18 @@
             // 
             this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
+            // txtQ_TYPE
+            // 
+            this.txtQ_TYPE.EditValue2 = null;
+            this.txtQ_TYPE.Location = new System.Drawing.Point(438, 42);
+            this.txtQ_TYPE.Name = "txtQ_TYPE";
+            this.txtQ_TYPE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtQ_TYPE.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtQ_TYPE.RequireMessage = null;
+            this.txtQ_TYPE.Size = new System.Drawing.Size(206, 20);
+            this.txtQ_TYPE.TabIndex = 13;
+            this.txtQ_TYPE.Visible = false;
+            // 
             // frmMDMemberInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -511,6 +526,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQ_TYPE.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -557,5 +573,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbMember_Type;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtQ_TYPE;
     }
 }

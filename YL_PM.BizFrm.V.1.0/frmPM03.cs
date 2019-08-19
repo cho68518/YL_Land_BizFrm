@@ -146,7 +146,7 @@ namespace YL_PM.BizFrm
             {
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM03_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PM_PM03_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -196,7 +196,7 @@ namespace YL_PM.BizFrm
             {
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM03_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PM_PM03_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("P_COMPANYCD", MySqlDbType.VarChar, 10);
@@ -246,7 +246,7 @@ namespace YL_PM.BizFrm
             {
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM03_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PM_PM03_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("P_COMPANYCD", MySqlDbType.VarChar, 10);
@@ -314,7 +314,7 @@ namespace YL_PM.BizFrm
                 {
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
-                        using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM03_SAVE_01", con))
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PM_PM03_SAVE_01", con))
                         {
                             con.Open();
 
@@ -421,7 +421,7 @@ namespace YL_PM.BizFrm
             {
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM03_DELETE_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PM_PM03_DELETE_01", con))
                     {
                         con.Open();
 

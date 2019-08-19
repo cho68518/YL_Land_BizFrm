@@ -134,7 +134,7 @@ namespace YL_DONUT.BizFrm
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_DN_DN11_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN11_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -191,7 +191,7 @@ namespace YL_DONUT.BizFrm
 
                         for (int i = 0; i < gridView1.DataRowCount; i++)
                         {
-                            using (MySqlCommand cmd = new MySqlCommand("domamall.USP_DN_DN11_SAVE_01", con))
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN11_SAVE_01", con))
                             {
                                 // Console.WriteLine("********" + gridView1.GetRowCellValue(i, "is_fix"));
 

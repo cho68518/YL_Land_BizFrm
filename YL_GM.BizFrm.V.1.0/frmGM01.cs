@@ -199,7 +199,7 @@ namespace YL_GM.BizFrm
 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_GM_GM01_SELECT_03", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM01_SELECT_03", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -404,7 +404,9 @@ namespace YL_GM.BizFrm
                 int n1 = 0; int n2 = 0; int n3 = 0; int n4 = 0;
 
                 // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                
                 {
                     using (MySqlCommand cmd = new MySqlCommand("telecom.USP_GM_GM01_SELECT_01", con))
                     {

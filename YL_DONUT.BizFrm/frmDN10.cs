@@ -372,7 +372,7 @@ namespace YL_DONUT.BizFrm
                 {
                     for (int i = 0; i < gridView1.DataRowCount; i++)
                     {
-                        using (MySqlCommand cmd = new MySqlCommand("domamall.USP_DN_DN10_SAVE_01", con))
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN10_SAVE_01", con))
                         {
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;

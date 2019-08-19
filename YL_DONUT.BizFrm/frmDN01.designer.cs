@@ -108,8 +108,8 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -1100,14 +1100,6 @@
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 20;
             // 
-            // gridColumn17
-            // 
-            this.gridColumn17.Caption = "지불수단";
-            this.gridColumn17.FieldName = "o_pay_type";
-            this.gridColumn17.Name = "gridColumn17";
-            this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 22;
-            // 
             // gridColumn29
             // 
             this.gridColumn29.Caption = "PS 운영자가";
@@ -1117,6 +1109,14 @@
             this.gridColumn29.Name = "gridColumn29";
             this.gridColumn29.Visible = true;
             this.gridColumn29.VisibleIndex = 21;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "지불수단";
+            this.gridColumn17.FieldName = "o_pay_type";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 22;
             // 
             // gridColumn18
             // 

@@ -184,7 +184,7 @@ namespace YL_GSHOP.BizFrm.Dlg
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_GSHOP_GSHOP06_SELECT_02", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP06_SELECT_02", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 

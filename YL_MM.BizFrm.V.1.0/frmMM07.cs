@@ -57,30 +57,7 @@ namespace YL_MM.BizFrm
 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_MM_MM07_SELECT_01", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
-                        {
-                            cmd.Parameters.Add("i_qtype", MySqlDbType.VarChar, 20);
-                            cmd.Parameters[0].Value = this.cmbQ1.EditValue;
-
-                            cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
-                            cmd.Parameters[1].Value = this.txtSearch.EditValue;
-
-                            if (rbLevel.EditValue.ToString() == "T")
-                                sLevel = null;
-                            else
-                                sLevel = rbLevel.EditValue.ToString();
-
-                            cmd.Parameters.Add("i_level", MySqlDbType.VarChar, 20);
-                            cmd.Parameters[2].Value = sLevel;
-
-                            DataTable ds = new DataTable();
-                            sda.Fill(ds);
-                        }
-                    }
-                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_MM_MM07_SELECT_02", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM07_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 

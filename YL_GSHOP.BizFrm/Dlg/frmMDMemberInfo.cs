@@ -172,7 +172,7 @@ namespace YL_GSHOP.BizFrm.Dlg
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domalife.USP_GSHOP_GSHOP06_SELECT_02", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP06_SELECT_02", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -185,17 +185,19 @@ namespace YL_GSHOP.BizFrm.Dlg
                         cmd.Parameters.Add("i_member_type", MySqlDbType.VarChar, 10);
                         cmd.Parameters[2].Value = cmbMember_Type.EditValue;
 
+                        // MD일경우 분리
+                        cmd.Parameters.Add("i_Q_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[3].Value = "ALL";
+
                         //Console.WriteLine(" i_Search_type           ---> [" + cmd.Parameters[0].Value + "]");
                         //Console.WriteLine(" i_search_Name           ---> [" + cmd.Parameters[1].Value + "]");
                         //Console.WriteLine(" i_member_type           ---> [" + cmd.Parameters[2].Value + "]");
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
                             this.efwGridControl1.MyGridView.BestFitColumns();
-
                         }
                     }
                 }

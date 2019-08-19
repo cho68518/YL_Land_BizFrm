@@ -122,7 +122,7 @@ namespace YL_DONUT.BizFrm
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_DN_DN13_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN13_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 

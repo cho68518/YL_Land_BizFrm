@@ -82,6 +82,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Easy.Framework.Release\Easy.Framework.WinForm.Control.V.3.1.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -124,6 +127,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMA03_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMA03_Pop01.Designer.cs">
+      <DependentUpon>frmMA03_Pop01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMA03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMA03.Designer.cs">
+      <DependentUpon>frmMA03.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMA01.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,11 +177,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMA03.resx">
+      <DependentUpon>frmMA03.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMA01.resx">
       <DependentUpon>frmMA01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMA02.resx">
       <DependentUpon>frmMA02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMA03_Pop01.resx">
+      <DependentUpon>frmMA03_Pop01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

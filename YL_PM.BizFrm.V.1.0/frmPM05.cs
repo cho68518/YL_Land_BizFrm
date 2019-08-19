@@ -133,7 +133,7 @@ namespace YL_PM.BizFrm
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domamall.USP_PM_PM05_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PM_PM05_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
