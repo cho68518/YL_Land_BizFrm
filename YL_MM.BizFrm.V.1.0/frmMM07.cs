@@ -125,6 +125,7 @@ namespace YL_MM.BizFrm
                 MessageAgent.MessageShow(MessageType.Warning, " 변경할수 없는 등급의 추천인 입니다!");
                 return;
             }
+
             if (sLevel.ToString() == "0")
             {
                 popup.pRECV_ID = gridView1.GetFocusedRowCellValue("res_gen_u_id").ToString();
@@ -144,12 +145,27 @@ namespace YL_MM.BizFrm
                 popup.pRECV_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_chef_u_nickname").ToString();
             }
 
+
+            popup.pRECV_GEN_ID = gridView1.GetFocusedRowCellValue("res_gen_u_id").ToString();
+            popup.pRECV_GEN_U_NAME = gridView1.GetFocusedRowCellValue("res_gen_u_name").ToString();
+            popup.pRECV_GEN_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_gen_u_nickname").ToString();
+
+            popup.pRECV_VIP_ID = gridView1.GetFocusedRowCellValue("res_vip_u_id").ToString();
+            popup.pRECV_VIP_U_NAME = gridView1.GetFocusedRowCellValue("res_vip_u_name").ToString();
+            popup.pRECV_VIP_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_vip_u_nickname").ToString();
+
+            popup.pRECV_SHEF_ID = gridView1.GetFocusedRowCellValue("res_chef_u_id").ToString();
+            popup.pRECV_SHEF_U_NAME = gridView1.GetFocusedRowCellValue("res_chef_u_name").ToString();
+            popup.pRECV_SHEF_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_chef_u_nickname").ToString();
+
             popup.pDOMA_ID = gridView1.GetFocusedRowCellValue("res_doma_u_id").ToString();
             popup.pDOMA_U_NAME = gridView1.GetFocusedRowCellValue("res_doma_u_name").ToString();
             popup.pDOMA_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_doma_u_nickname").ToString();
 
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();
+
+
         }
 
 

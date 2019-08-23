@@ -39,8 +39,9 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.button1 = new System.Windows.Forms.Button();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dataGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -58,6 +59,7 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoExEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
@@ -75,6 +77,7 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -113,7 +116,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit4)).BeginInit();
@@ -135,6 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -175,6 +179,7 @@
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.button1);
             this.layoutControl2.Controls.Add(this.efwGridControl1);
             this.layoutControl2.Controls.Add(this.dtE_DATE);
             this.layoutControl2.Controls.Add(this.dtS_DATE);
@@ -188,6 +193,17 @@
             this.layoutControl2.Size = new System.Drawing.Size(1027, 361);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(888, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 20);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // efwGridControl1
             // 
@@ -209,7 +225,7 @@
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
             this.efwGridControl1.Location = new System.Drawing.Point(7, 31);
-            this.efwGridControl1.MainView = this.gridView1;
+            this.efwGridControl1.MainView = this.dataGridView;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
@@ -229,11 +245,11 @@
             serviceInfo3.UserParams = null;
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.dataGridView});
             // 
-            // gridView1
+            // dataGridView
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dataGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn15,
             this.gridColumn1,
             this.gridColumn2,
@@ -248,11 +264,12 @@
             this.gridColumn20,
             this.gridColumn9,
             this.gridColumn23,
-            this.gridColumn19});
-            this.gridView1.GridControl = this.efwGridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ColumnAutoWidth = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridColumn19,
+            this.gridColumn25});
+            this.dataGridView.GridControl = this.efwGridControl1;
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.OptionsView.ColumnAutoWidth = false;
+            this.dataGridView.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn15
             // 
@@ -403,6 +420,13 @@
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.OptionsColumn.AllowFocus = false;
             // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "rowchk";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 13;
+            // 
             // repositoryItemMemoExEdit4
             // 
             this.repositoryItemMemoExEdit4.AutoHeight = false;
@@ -511,7 +535,8 @@
             this.layoutControlItem3,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem10});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
             this.layoutControlGroup2.Size = new System.Drawing.Size(1027, 361);
@@ -537,7 +562,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(746, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(271, 24);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(135, 24);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // 주문상태
@@ -618,6 +643,15 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(1017, 330);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.button1;
+            this.layoutControlItem10.Location = new System.Drawing.Point(881, 0);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(136, 24);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
             // 
             // splitterControl1
             // 
@@ -1016,7 +1050,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit4)).EndInit();
@@ -1038,6 +1072,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -1105,7 +1140,7 @@
         private Easy.Framework.WinForm.Control.efwDateEdit dtE_DATE;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView dataGridView;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
@@ -1139,5 +1174,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
     }
 }

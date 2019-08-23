@@ -84,7 +84,7 @@ namespace YL_GM.BizFrm
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
                             //  this.efwGridControl1.MyGridView.BestFitColumns();
-
+                            0
                         }
                     }
                 }
