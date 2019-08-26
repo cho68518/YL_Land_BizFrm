@@ -58,7 +58,6 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet11 = new YL_DONUT.BizFrm.DataSet1();
-            this.spreadsheetFormulaBar1 = new DevExpress.XtraSpreadsheet.SpreadsheetFormulaBar();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -78,7 +77,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.spreadsheetFormulaBar1);
             this.panel2.Controls.Add(this.efwGridControl1);
             this.panel2.Controls.Add(this.efwSimpleButton5);
             this.panel2.Controls.Add(this.toggleSwitch1);
@@ -359,14 +357,6 @@
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // spreadsheetFormulaBar1
-            // 
-            this.spreadsheetFormulaBar1.Location = new System.Drawing.Point(970, 461);
-            this.spreadsheetFormulaBar1.MinimumSize = new System.Drawing.Size(0, 26);
-            this.spreadsheetFormulaBar1.Name = "spreadsheetFormulaBar1";
-            this.spreadsheetFormulaBar1.Size = new System.Drawing.Size(763, 26);
-            this.spreadsheetFormulaBar1.TabIndex = 19;
-            // 
             // frmTest01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -421,6 +411,5 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraSpreadsheet.SpreadsheetFormulaBar spreadsheetFormulaBar1;
     }
 }

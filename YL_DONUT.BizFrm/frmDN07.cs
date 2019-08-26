@@ -76,7 +76,7 @@ namespace YL_DONUT.BizFrm
         {
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                con.Query = "SELECT category_no as DCODE ,story_name as DNAME  FROM domaadmin.tb_story_info ORDER BY id ";
+                con.Query = "SELECT category_no as DCODE ,story_name as DNAME  FROM domaadmin.tb_story_info ORDER BY sort_id ";
 
                 DataSet ds = con.selectQueryDataSet();
                 ////DataTable retDT = ds.Tables[0];
@@ -180,9 +180,9 @@ namespace YL_DONUT.BizFrm
 
             //MessageBox.Show(string.Format("{0}: {1}", wstory_id, wcategory_no));
 
-            if (wcategory_no != "240" && wcategory_no != "205")
+            if (wcategory_no != "240" && wcategory_no != "205" && wcategory_no != "223")
             {
-                MessageAgent.MessageShow(MessageType.Error, "상세보기는 PR상담스토리 또는 PR후기스토리만 보실 수 있습니다!");
+                MessageAgent.MessageShow(MessageType.Error, "상세보기는 PR상담스토리, PR후기스토리, PR등록스토리만 보실 수 있습니다!");
                 return;
             }
             else

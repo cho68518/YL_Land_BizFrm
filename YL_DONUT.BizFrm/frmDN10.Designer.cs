@@ -29,45 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN10));
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
             this.btnDetail = new DevExpress.XtraEditors.CheckButton();
-            this.btnFixCancel = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnFix = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.chkE = new Easy.Framework.WinForm.Control.efwCheckEdit();
-            this.chkF = new Easy.Framework.WinForm.Control.efwCheckEdit();
-            this.chkD = new Easy.Framework.WinForm.Control.efwCheckEdit();
-            this.cmbMALL_TYPE = new Easy.Framework.WinForm.Control.efwLookUpEdit();
-            this.txtI_SEARCH = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
-            this.rbP_SHOW_TYPE = new Easy.Framework.WinForm.Control.efwRadioGroup();
-            this.cmbORDER_SEARCH = new Easy.Framework.WinForm.Control.efwLookUpEdit();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.닉네임 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -114,214 +85,88 @@
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.btnOrderGet = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.txtI_SEARCH = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.cmbORDER_SEARCH = new Easy.Framework.WinForm.Control.efwLookUpEdit();
+            this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwGroupControl3 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.dt1F = new Easy.Framework.WinForm.Control.efwDateEdit();
+            this.btnFixCancel = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.btnFix = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.lblnum1 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lblnum2 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
-            this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkF.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkD.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbMALL_TYPE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtI_SEARCH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbP_SHOW_TYPE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbORDER_SEARCH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.닉네임)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
+            this.efwGroupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtI_SEARCH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbORDER_SEARCH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
+            this.efwGroupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
             // 
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
-            this.efwGroupControl1.Controls.Add(this.layoutControl2);
+            this.efwGroupControl1.Controls.Add(this.efwGroupControl3);
+            this.efwGroupControl1.Controls.Add(this.efwLabel4);
+            this.efwGroupControl1.Controls.Add(this.efwGroupControl2);
+            this.efwGroupControl1.Controls.Add(this.btnDetail);
+            this.efwGroupControl1.Controls.Add(this.toggleSwitch1);
+            this.efwGroupControl1.Controls.Add(this.dtS_DATE);
+            this.efwGroupControl1.Controls.Add(this.efwLabel1);
             this.efwGroupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(3, 35);
             this.efwGroupControl1.Name = "efwGroupControl1";
             this.efwGroupControl1.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.efwGroupControl1.Size = new System.Drawing.Size(1134, 95);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1172, 125);
             this.efwGroupControl1.TabIndex = 19;
             this.efwGroupControl1.Text = "정산현황 및 마감";
-            // 
-            // layoutControl2
-            // 
-            this.layoutControl2.Controls.Add(this.toggleSwitch1);
-            this.layoutControl2.Controls.Add(this.btnDetail);
-            this.layoutControl2.Controls.Add(this.btnFixCancel);
-            this.layoutControl2.Controls.Add(this.btnFix);
-            this.layoutControl2.Controls.Add(this.chkE);
-            this.layoutControl2.Controls.Add(this.chkF);
-            this.layoutControl2.Controls.Add(this.chkD);
-            this.layoutControl2.Controls.Add(this.cmbMALL_TYPE);
-            this.layoutControl2.Controls.Add(this.txtI_SEARCH);
-            this.layoutControl2.Controls.Add(this.dtS_DATE);
-            this.layoutControl2.Controls.Add(this.rbP_SHOW_TYPE);
-            this.layoutControl2.Controls.Add(this.cmbORDER_SEARCH);
-            this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl2.Location = new System.Drawing.Point(2, 30);
-            this.layoutControl2.Name = "layoutControl2";
-            this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(1130, 63);
-            this.layoutControl2.TabIndex = 0;
-            this.layoutControl2.Text = "layoutControl2";
-            // 
-            // toggleSwitch1
-            // 
-            this.toggleSwitch1.Location = new System.Drawing.Point(207, 7);
-            this.toggleSwitch1.Name = "toggleSwitch1";
-            this.toggleSwitch1.Properties.OffText = "미 마감";
-            this.toggleSwitch1.Properties.OnText = "마감";
-            this.toggleSwitch1.Properties.ReadOnly = true;
-            this.toggleSwitch1.Size = new System.Drawing.Size(196, 25);
-            this.toggleSwitch1.StyleController = this.layoutControl2;
-            this.toggleSwitch1.TabIndex = 2;
             // 
             // btnDetail
             // 
             this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetail.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDetail.ImageOptions.Image")));
-            this.btnDetail.Location = new System.Drawing.Point(795, 7);
+            this.btnDetail.Location = new System.Drawing.Point(1048, 33);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(116, 22);
-            this.btnDetail.StyleController = this.layoutControl2;
-            this.btnDetail.TabIndex = 5;
+            this.btnDetail.Size = new System.Drawing.Size(54, 22);
+            this.btnDetail.TabIndex = 12;
             this.btnDetail.Text = "주문상세";
             this.btnDetail.ToolTip = "주문상세";
+            this.btnDetail.Visible = false;
             this.btnDetail.CheckedChanged += new System.EventHandler(this.BtnDetail_CheckedChanged);
             // 
-            // btnFixCancel
+            // toggleSwitch1
             // 
-            this.btnFixCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFixCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFixCancel.ImageOptions.Image")));
-            this.btnFixCancel.IsMultiLang = false;
-            this.btnFixCancel.Location = new System.Drawing.Point(675, 33);
-            this.btnFixCancel.Name = "btnFixCancel";
-            this.btnFixCancel.Size = new System.Drawing.Size(116, 22);
-            this.btnFixCancel.StyleController = this.layoutControl2;
-            this.btnFixCancel.TabIndex = 7;
-            this.btnFixCancel.Text = "마감취소";
-            this.btnFixCancel.ToolTip = "마감취소";
-            this.btnFixCancel.Click += new System.EventHandler(this.BtnFixCancel_Click);
-            // 
-            // btnFix
-            // 
-            this.btnFix.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFix.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFix.ImageOptions.Image")));
-            this.btnFix.IsMultiLang = false;
-            this.btnFix.Location = new System.Drawing.Point(675, 7);
-            this.btnFix.Name = "btnFix";
-            this.btnFix.Size = new System.Drawing.Size(116, 22);
-            this.btnFix.StyleController = this.layoutControl2;
-            this.btnFix.TabIndex = 4;
-            this.btnFix.Text = "월마감";
-            this.btnFix.ToolTip = "월마감";
-            this.btnFix.Click += new System.EventHandler(this.BtnFix_Click);
-            // 
-            // chkE
-            // 
-            this.chkE.EditValue = "Y";
-            this.chkE.EraserGroup = "CLR1";
-            this.chkE.Location = new System.Drawing.Point(174, 60);
-            this.chkE.Name = "chkE";
-            this.chkE.Properties.Caption = "구매완료";
-            this.chkE.Properties.ReadOnly = true;
-            this.chkE.Properties.ValueChecked = "E";
-            this.chkE.Properties.ValueUnchecked = "N";
-            this.chkE.Size = new System.Drawing.Size(229, 19);
-            this.chkE.StyleController = this.layoutControl2;
-            this.chkE.TabIndex = 12;
-            // 
-            // chkF
-            // 
-            this.chkF.EditValue = "Y";
-            this.chkF.EraserGroup = "CLR1";
-            this.chkF.Location = new System.Drawing.Point(87, 60);
-            this.chkF.Name = "chkF";
-            this.chkF.Properties.Caption = "배송완료";
-            this.chkF.Properties.ReadOnly = true;
-            this.chkF.Properties.ValueChecked = "F";
-            this.chkF.Properties.ValueUnchecked = "N";
-            this.chkF.Size = new System.Drawing.Size(83, 19);
-            this.chkF.StyleController = this.layoutControl2;
-            this.chkF.TabIndex = 11;
-            // 
-            // chkD
-            // 
-            this.chkD.EditValue = "Y";
-            this.chkD.EraserGroup = "CLR1";
-            this.chkD.Location = new System.Drawing.Point(7, 60);
-            this.chkD.Name = "chkD";
-            this.chkD.Properties.Caption = "배송중";
-            this.chkD.Properties.ReadOnly = true;
-            this.chkD.Properties.ValueChecked = "D";
-            this.chkD.Properties.ValueUnchecked = "N";
-            this.chkD.Size = new System.Drawing.Size(76, 19);
-            this.chkD.StyleController = this.layoutControl2;
-            this.chkD.TabIndex = 10;
-            // 
-            // cmbMALL_TYPE
-            // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbMALL_TYPE.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbMALL_TYPE.HierarchyInfo = hierarchy1;
-            this.cmbMALL_TYPE.IsMultiLang = false;
-            this.cmbMALL_TYPE.Location = new System.Drawing.Point(492, 34);
-            this.cmbMALL_TYPE.MasterCode = "E03.PAY_GBN";
-            this.cmbMALL_TYPE.Name = "cmbMALL_TYPE";
-            this.cmbMALL_TYPE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbMALL_TYPE.Size = new System.Drawing.Size(161, 20);
-            this.cmbMALL_TYPE.StyleController = this.layoutControl2;
-            this.cmbMALL_TYPE.TabIndex = 8;
-            // 
-            // txtI_SEARCH
-            // 
-            this.txtI_SEARCH.EditValue2 = null;
-            this.txtI_SEARCH.EraserGroup = "CLR1";
-            this.txtI_SEARCH.Location = new System.Drawing.Point(207, 36);
-            this.txtI_SEARCH.Name = "txtI_SEARCH";
-            this.txtI_SEARCH.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtI_SEARCH.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtI_SEARCH.RequireMessage = null;
-            this.txtI_SEARCH.Size = new System.Drawing.Size(196, 20);
-            this.txtI_SEARCH.StyleController = this.layoutControl2;
-            this.txtI_SEARCH.TabIndex = 9;
-            this.txtI_SEARCH.Visible = false;
-            this.txtI_SEARCH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtI_SEARCH_KeyDown);
+            this.toggleSwitch1.EditValue = true;
+            this.toggleSwitch1.Location = new System.Drawing.Point(280, 36);
+            this.toggleSwitch1.Name = "toggleSwitch1";
+            this.toggleSwitch1.Properties.OffText = "미 마감";
+            this.toggleSwitch1.Properties.OnText = "마감";
+            this.toggleSwitch1.Properties.ReadOnly = true;
+            this.toggleSwitch1.Size = new System.Drawing.Size(196, 25);
+            this.toggleSwitch1.TabIndex = 3;
             // 
             // dtS_DATE
             // 
             this.dtS_DATE.EditValue = new System.DateTime(2019, 7, 1, 0, 0, 0, 0);
             this.dtS_DATE.IsRequire = true;
-            this.dtS_DATE.Location = new System.Drawing.Point(82, 7);
+            this.dtS_DATE.Location = new System.Drawing.Point(153, 39);
             this.dtS_DATE.MaximumSize = new System.Drawing.Size(121, 0);
             this.dtS_DATE.MinimumSize = new System.Drawing.Size(121, 0);
             this.dtS_DATE.Name = "dtS_DATE";
@@ -337,282 +182,24 @@
             this.dtS_DATE.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dtS_DATE.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.dtS_DATE.Size = new System.Drawing.Size(121, 20);
-            this.dtS_DATE.StyleController = this.layoutControl2;
-            this.dtS_DATE.TabIndex = 0;
+            this.dtS_DATE.TabIndex = 2;
             // 
-            // rbP_SHOW_TYPE
+            // efwLabel1
             // 
-            this.rbP_SHOW_TYPE.IsMultiLang = false;
-            this.rbP_SHOW_TYPE.Location = new System.Drawing.Point(492, 7);
-            this.rbP_SHOW_TYPE.Name = "rbP_SHOW_TYPE";
-            this.rbP_SHOW_TYPE.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.rbP_SHOW_TYPE.Properties.Appearance.Options.UseBackColor = true;
-            this.rbP_SHOW_TYPE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.rbP_SHOW_TYPE.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.rbP_SHOW_TYPE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.rbP_SHOW_TYPE.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("T", "전체"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "발주"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "미발주")});
-            this.rbP_SHOW_TYPE.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
-            this.rbP_SHOW_TYPE.RequireMessage = null;
-            this.rbP_SHOW_TYPE.Size = new System.Drawing.Size(169, 23);
-            this.rbP_SHOW_TYPE.StyleController = this.layoutControl2;
-            this.rbP_SHOW_TYPE.TabIndex = 3;
-            // 
-            // cmbORDER_SEARCH
-            // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbORDER_SEARCH.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbORDER_SEARCH.HierarchyInfo = hierarchy2;
-            this.cmbORDER_SEARCH.IsMultiLang = false;
-            this.cmbORDER_SEARCH.Location = new System.Drawing.Point(82, 31);
-            this.cmbORDER_SEARCH.MasterCode = "E03.ORDER_SEARCH2";
-            this.cmbORDER_SEARCH.Name = "cmbORDER_SEARCH";
-            this.cmbORDER_SEARCH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbORDER_SEARCH.Size = new System.Drawing.Size(121, 20);
-            this.cmbORDER_SEARCH.StyleController = this.layoutControl2;
-            this.cmbORDER_SEARCH.TabIndex = 6;
-            this.cmbORDER_SEARCH.Popup += new System.EventHandler(this.CmbORDER_SEARCH_Popup);
-            // 
-            // layoutControlGroup2
-            // 
-            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup2.GroupBordersVisible = false;
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.emptySpaceItem1,
-            this.emptySpaceItem2,
-            this.emptySpaceItem3,
-            this.layoutControlItem9,
-            this.layoutControlItem10,
-            this.layoutControlItem11,
-            this.emptySpaceItem5,
-            this.layoutControlItem2,
-            this.layoutControlItem18,
-            this.layoutControlItem29,
-            this.layoutControlItem3,
-            this.layoutControlItem5,
-            this.layoutControlItem19,
-            this.닉네임,
-            this.layoutControlItem4,
-            this.layoutControlItem1,
-            this.emptySpaceItem4});
-            this.layoutControlGroup2.Name = "Root";
-            this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1113, 83);
-            this.layoutControlGroup2.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(908, 0);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(195, 26);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(400, 0);
-            this.emptySpaceItem2.MaxSize = new System.Drawing.Size(10, 0);
-            this.emptySpaceItem2.MinSize = new System.Drawing.Size(10, 10);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(10, 53);
-            this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(658, 0);
-            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(10, 0);
-            this.emptySpaceItem3.MinSize = new System.Drawing.Size(10, 10);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(10, 53);
-            this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.chkD;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 53);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(80, 23);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem9.TextVisible = false;
-            this.layoutControlItem9.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.chkF;
-            this.layoutControlItem10.Location = new System.Drawing.Point(80, 53);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(87, 23);
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem10.TextVisible = false;
-            this.layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.chkE;
-            this.layoutControlItem11.Location = new System.Drawing.Point(167, 53);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(233, 23);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem11.TextVisible = false;
-            this.layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(400, 53);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(703, 23);
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.emptySpaceItem5.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.rbP_SHOW_TYPE;
-            this.layoutControlItem2.CustomizationFormText = "노출여부";
-            this.layoutControlItem2.Location = new System.Drawing.Point(410, 0);
-            this.layoutControlItem2.MaxSize = new System.Drawing.Size(248, 27);
-            this.layoutControlItem2.MinSize = new System.Drawing.Size(248, 27);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(248, 27);
-            this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem2.Text = "발주여부";
-            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(70, 20);
-            this.layoutControlItem2.TextToControlDistance = 5;
-            this.layoutControlItem2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // layoutControlItem18
-            // 
-            this.layoutControlItem18.AllowHtmlStringInCaption = true;
-            this.layoutControlItem18.Control = this.cmbORDER_SEARCH;
-            this.layoutControlItem18.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem18.MaxSize = new System.Drawing.Size(200, 28);
-            this.layoutControlItem18.MinSize = new System.Drawing.Size(200, 28);
-            this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(200, 29);
-            this.layoutControlItem18.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem18.Text = "주문검색";
-            this.layoutControlItem18.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem18.TextSize = new System.Drawing.Size(70, 20);
-            this.layoutControlItem18.TextToControlDistance = 5;
-            // 
-            // layoutControlItem29
-            // 
-            this.layoutControlItem29.Control = this.dtS_DATE;
-            this.layoutControlItem29.CustomizationFormText = "개설일";
-            this.layoutControlItem29.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem29.MaxSize = new System.Drawing.Size(177, 24);
-            this.layoutControlItem29.MinSize = new System.Drawing.Size(177, 24);
-            this.layoutControlItem29.Name = "layoutControlItem29";
-            this.layoutControlItem29.Size = new System.Drawing.Size(177, 24);
-            this.layoutControlItem29.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem29.Text = "주문 월(月)";
-            this.layoutControlItem29.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem29.TextSize = new System.Drawing.Size(70, 20);
-            this.layoutControlItem29.TextToControlDistance = 5;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.btnFix;
-            this.layoutControlItem3.Location = new System.Drawing.Point(668, 0);
-            this.layoutControlItem3.MaxSize = new System.Drawing.Size(120, 26);
-            this.layoutControlItem3.MinSize = new System.Drawing.Size(120, 26);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(120, 26);
-            this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.btnFixCancel;
-            this.layoutControlItem5.Location = new System.Drawing.Point(668, 26);
-            this.layoutControlItem5.MaxSize = new System.Drawing.Size(120, 26);
-            this.layoutControlItem5.MinSize = new System.Drawing.Size(120, 26);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(435, 27);
-            this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // layoutControlItem19
-            // 
-            this.layoutControlItem19.Control = this.btnDetail;
-            this.layoutControlItem19.Location = new System.Drawing.Point(788, 0);
-            this.layoutControlItem19.MaxSize = new System.Drawing.Size(120, 26);
-            this.layoutControlItem19.MinSize = new System.Drawing.Size(120, 26);
-            this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(120, 26);
-            this.layoutControlItem19.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem19.TextVisible = false;
-            // 
-            // 닉네임
-            // 
-            this.닉네임.Control = this.txtI_SEARCH;
-            this.닉네임.Location = new System.Drawing.Point(200, 29);
-            this.닉네임.MaxSize = new System.Drawing.Size(200, 24);
-            this.닉네임.MinSize = new System.Drawing.Size(200, 24);
-            this.닉네임.Name = "닉네임";
-            this.닉네임.Size = new System.Drawing.Size(200, 24);
-            this.닉네임.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.닉네임.Text = " ";
-            this.닉네임.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.닉네임.TextSize = new System.Drawing.Size(0, 0);
-            this.닉네임.TextToControlDistance = 0;
-            this.닉네임.TextVisible = false;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.cmbMALL_TYPE;
-            this.layoutControlItem4.Location = new System.Drawing.Point(410, 27);
-            this.layoutControlItem4.MaxSize = new System.Drawing.Size(240, 24);
-            this.layoutControlItem4.MinSize = new System.Drawing.Size(240, 24);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(248, 26);
-            this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem4.Text = "샵구분";
-            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(70, 20);
-            this.layoutControlItem4.TextToControlDistance = 5;
-            this.layoutControlItem4.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.toggleSwitch1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(200, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(200, 29);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // emptySpaceItem4
-            // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(177, 0);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(23, 24);
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.efwLabel1.EraserGroup = null;
+            this.efwLabel1.IsMultiLang = false;
+            this.efwLabel1.Location = new System.Drawing.Point(43, 43);
+            this.efwLabel1.Name = "efwLabel1";
+            this.efwLabel1.Size = new System.Drawing.Size(81, 14);
+            this.efwLabel1.TabIndex = 1;
+            this.efwLabel1.Text = "주문/마감 월(月)";
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 130);
+            this.panel2.Location = new System.Drawing.Point(3, 160);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1134, 5);
+            this.panel2.Size = new System.Drawing.Size(1172, 5);
             this.panel2.TabIndex = 39;
             // 
             // efwGridControl1
@@ -621,14 +208,14 @@
             this.efwGridControl1.DBName = "";
             serviceInfo1.InstanceName = "";
             serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ParamsInfo = null;
             serviceInfo1.ProcName = "";
             serviceInfo1.UserParams = null;
             this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
             this.efwGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             serviceInfo2.InstanceName = "";
             serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ParamsInfo = null;
             serviceInfo2.ProcName = "";
             serviceInfo2.UserParams = null;
             this.efwGridControl1.InsertServiceInfo = serviceInfo2;
@@ -636,7 +223,7 @@
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsEditable = false;
             this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.Location = new System.Drawing.Point(3, 135);
+            this.efwGridControl1.Location = new System.Drawing.Point(3, 165);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
@@ -647,12 +234,12 @@
             this.repositoryItemMemoExEdit2,
             this.repositoryItemMemoEdit2,
             this.repositoryItemCheckEdit2});
-            this.efwGridControl1.Size = new System.Drawing.Size(1134, 627);
+            this.efwGridControl1.Size = new System.Drawing.Size(1172, 617);
             this.efwGridControl1.TabIndex = 42;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
             serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ParamsInfo = null;
             serviceInfo3.ProcName = "";
             serviceInfo3.UserParams = null;
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
@@ -1068,6 +655,173 @@
             // 
             this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
             // 
+            // efwGroupControl2
+            // 
+            this.efwGroupControl2.Controls.Add(this.lblnum1);
+            this.efwGroupControl2.Controls.Add(this.txtI_SEARCH);
+            this.efwGroupControl2.Controls.Add(this.cmbORDER_SEARCH);
+            this.efwGroupControl2.Controls.Add(this.efwLabel2);
+            this.efwGroupControl2.Controls.Add(this.btnOrderGet);
+            this.efwGroupControl2.IsMultiLang = false;
+            this.efwGroupControl2.Location = new System.Drawing.Point(473, 28);
+            this.efwGroupControl2.Name = "efwGroupControl2";
+            this.efwGroupControl2.ShowCaption = false;
+            this.efwGroupControl2.Size = new System.Drawing.Size(676, 44);
+            this.efwGroupControl2.TabIndex = 18;
+            this.efwGroupControl2.Text = "efwGroupControl2";
+            // 
+            // btnOrderGet
+            // 
+            this.btnOrderGet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrderGet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOrderGet.ImageOptions.Image")));
+            this.btnOrderGet.IsMultiLang = false;
+            this.btnOrderGet.Location = new System.Drawing.Point(40, 10);
+            this.btnOrderGet.Name = "btnOrderGet";
+            this.btnOrderGet.Size = new System.Drawing.Size(174, 26);
+            this.btnOrderGet.TabIndex = 20;
+            this.btnOrderGet.Text = "월 주문내역가져오기";
+            this.btnOrderGet.ToolTip = "월마감";
+            // 
+            // txtI_SEARCH
+            // 
+            this.txtI_SEARCH.EditValue2 = null;
+            this.txtI_SEARCH.EraserGroup = "CLR1";
+            this.txtI_SEARCH.Location = new System.Drawing.Point(421, 13);
+            this.txtI_SEARCH.Name = "txtI_SEARCH";
+            this.txtI_SEARCH.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtI_SEARCH.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtI_SEARCH.RequireMessage = null;
+            this.txtI_SEARCH.Size = new System.Drawing.Size(196, 20);
+            this.txtI_SEARCH.TabIndex = 26;
+            // 
+            // cmbORDER_SEARCH
+            // 
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbORDER_SEARCH.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbORDER_SEARCH.HierarchyInfo = hierarchy1;
+            this.cmbORDER_SEARCH.IsMultiLang = false;
+            this.cmbORDER_SEARCH.Location = new System.Drawing.Point(294, 13);
+            this.cmbORDER_SEARCH.MasterCode = "E03.ORDER_SEARCH2";
+            this.cmbORDER_SEARCH.Name = "cmbORDER_SEARCH";
+            this.cmbORDER_SEARCH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbORDER_SEARCH.Size = new System.Drawing.Size(121, 20);
+            this.cmbORDER_SEARCH.TabIndex = 25;
+            // 
+            // efwLabel2
+            // 
+            this.efwLabel2.EraserGroup = null;
+            this.efwLabel2.IsMultiLang = false;
+            this.efwLabel2.Location = new System.Drawing.Point(230, 16);
+            this.efwLabel2.Name = "efwLabel2";
+            this.efwLabel2.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel2.TabIndex = 24;
+            this.efwLabel2.Text = "주문검색";
+            // 
+            // efwLabel4
+            // 
+            this.efwLabel4.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.efwLabel4.Appearance.Options.UseForeColor = true;
+            this.efwLabel4.EraserGroup = null;
+            this.efwLabel4.IsMultiLang = false;
+            this.efwLabel4.Location = new System.Drawing.Point(42, 93);
+            this.efwLabel4.Name = "efwLabel4";
+            this.efwLabel4.Size = new System.Drawing.Size(322, 14);
+            this.efwLabel4.TabIndex = 27;
+            this.efwLabel4.Text = "※ 정산일을 입력 후 마감처리 시에는 확정 되므로 수정이 불가합니다.";
+            // 
+            // efwGroupControl3
+            // 
+            this.efwGroupControl3.Controls.Add(this.lblnum2);
+            this.efwGroupControl3.Controls.Add(this.efwLabel3);
+            this.efwGroupControl3.Controls.Add(this.dt1F);
+            this.efwGroupControl3.Controls.Add(this.btnFixCancel);
+            this.efwGroupControl3.Controls.Add(this.btnFix);
+            this.efwGroupControl3.IsMultiLang = false;
+            this.efwGroupControl3.Location = new System.Drawing.Point(473, 76);
+            this.efwGroupControl3.Name = "efwGroupControl3";
+            this.efwGroupControl3.ShowCaption = false;
+            this.efwGroupControl3.Size = new System.Drawing.Size(676, 44);
+            this.efwGroupControl3.TabIndex = 28;
+            this.efwGroupControl3.Text = "efwGroupControl3";
+            // 
+            // efwLabel3
+            // 
+            this.efwLabel3.EraserGroup = null;
+            this.efwLabel3.IsMultiLang = false;
+            this.efwLabel3.Location = new System.Drawing.Point(230, 16);
+            this.efwLabel3.Name = "efwLabel3";
+            this.efwLabel3.Size = new System.Drawing.Size(30, 14);
+            this.efwLabel3.TabIndex = 30;
+            this.efwLabel3.Text = "정산일";
+            // 
+            // dt1F
+            // 
+            this.dt1F.EditValue = null;
+            this.dt1F.EraserGroup = "CLR1";
+            this.dt1F.Location = new System.Drawing.Point(294, 12);
+            this.dt1F.Name = "dt1F";
+            this.dt1F.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.dt1F.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.dt1F.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dt1F.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dt1F.Size = new System.Drawing.Size(121, 20);
+            this.dt1F.TabIndex = 29;
+            // 
+            // btnFixCancel
+            // 
+            this.btnFixCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFixCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFixCancel.ImageOptions.Image")));
+            this.btnFixCancel.IsMultiLang = false;
+            this.btnFixCancel.Location = new System.Drawing.Point(421, 9);
+            this.btnFixCancel.Name = "btnFixCancel";
+            this.btnFixCancel.Size = new System.Drawing.Size(116, 26);
+            this.btnFixCancel.TabIndex = 28;
+            this.btnFixCancel.Text = "마감취소";
+            this.btnFixCancel.ToolTip = "마감취소";
+            // 
+            // btnFix
+            // 
+            this.btnFix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFix.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFix.ImageOptions.Image")));
+            this.btnFix.IsMultiLang = false;
+            this.btnFix.Location = new System.Drawing.Point(40, 9);
+            this.btnFix.Name = "btnFix";
+            this.btnFix.Size = new System.Drawing.Size(174, 26);
+            this.btnFix.TabIndex = 27;
+            this.btnFix.Text = "월 마감";
+            this.btnFix.ToolTip = "월마감";
+            // 
+            // lblnum1
+            // 
+            this.lblnum1.Appearance.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+            this.lblnum1.Appearance.Options.UseFont = true;
+            this.lblnum1.EraserGroup = null;
+            this.lblnum1.IsMultiLang = false;
+            this.lblnum1.Location = new System.Drawing.Point(14, 10);
+            this.lblnum1.Name = "lblnum1";
+            this.lblnum1.Size = new System.Drawing.Size(20, 25);
+            this.lblnum1.TabIndex = 27;
+            this.lblnum1.Text = "1.";
+            // 
+            // lblnum2
+            // 
+            this.lblnum2.Appearance.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+            this.lblnum2.Appearance.Options.UseFont = true;
+            this.lblnum2.EraserGroup = null;
+            this.lblnum2.IsMultiLang = false;
+            this.lblnum2.Location = new System.Drawing.Point(14, 9);
+            this.lblnum2.Name = "lblnum2";
+            this.lblnum2.Size = new System.Drawing.Size(20, 25);
+            this.lblnum2.TabIndex = 31;
+            this.lblnum2.Text = "2.";
+            // 
             // frmDN10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1076,48 +830,32 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.efwGroupControl1);
             this.Name = "frmDN10";
-            this.Size = new System.Drawing.Size(1140, 762);
+            this.Size = new System.Drawing.Size(1178, 782);
             this.Controls.SetChildIndex(this.efwGroupControl1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
-            this.layoutControl2.ResumeLayout(false);
+            this.efwGroupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkF.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkD.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbMALL_TYPE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtI_SEARCH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbP_SHOW_TYPE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbORDER_SEARCH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.닉네임)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
+            this.efwGroupControl2.ResumeLayout(false);
+            this.efwGroupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtI_SEARCH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbORDER_SEARCH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).EndInit();
+            this.efwGroupControl3.ResumeLayout(false);
+            this.efwGroupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1125,38 +863,7 @@
         #endregion
 
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl1;
-        private DevExpress.XtraLayout.LayoutControl layoutControl2;
-        private Easy.Framework.WinForm.Control.efwCheckEdit chkE;
-        private Easy.Framework.WinForm.Control.efwCheckEdit chkF;
-        private Easy.Framework.WinForm.Control.efwCheckEdit chkD;
-        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbMALL_TYPE;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtI_SEARCH;
-        private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
-        private Easy.Framework.WinForm.Control.efwRadioGroup rbP_SHOW_TYPE;
-        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbORDER_SEARCH;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.LayoutControlItem 닉네임;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
         private System.Windows.Forms.Panel panel2;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnFixCancel;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnFix;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.CheckButton btnDetail;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
-        private DevExpress.XtraEditors.ToggleSwitch toggleSwitch1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
@@ -1202,5 +909,22 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraEditors.CheckButton btnDetail;
+        private DevExpress.XtraEditors.ToggleSwitch toggleSwitch1;
+        private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
+        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnOrderGet;
+        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl3;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
+        private Easy.Framework.WinForm.Control.efwDateEdit dt1F;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnFixCancel;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnFix;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtI_SEARCH;
+        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbORDER_SEARCH;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
+        private Easy.Framework.WinForm.Control.efwLabel lblnum2;
+        private Easy.Framework.WinForm.Control.efwLabel lblnum1;
     }
 }
