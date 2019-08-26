@@ -81,7 +81,6 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl5 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
@@ -121,7 +120,6 @@
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -132,6 +130,8 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.item7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
             this.efwGroupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
@@ -154,7 +154,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).BeginInit();
             this.efwGroupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
@@ -193,7 +192,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -204,6 +202,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl3
@@ -249,7 +249,8 @@
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1,
             this.repositoryItemMemoExEdit1,
-            this.repositoryItemMemoEdit1});
+            this.repositoryItemMemoEdit1,
+            this.repositoryItemCheckEdit1});
             this.efwGridControl1.Size = new System.Drawing.Size(1012, 407);
             this.efwGridControl1.TabIndex = 6;
             this.efwGridControl1.TableName = "";
@@ -484,6 +485,7 @@
             // gridColumn82
             // 
             this.gridColumn82.Caption = "MD구분";
+            this.gridColumn82.ColumnEdit = this.repositoryItemCheckEdit1;
             this.gridColumn82.FieldName = "is_gr_md";
             this.gridColumn82.Name = "gridColumn82";
             this.gridColumn82.Visible = true;
@@ -492,7 +494,7 @@
             // gridColumn10
             // 
             this.gridColumn10.Caption = "참여횟수";
-            this.gridColumn10.FieldName = "count";
+            this.gridColumn10.FieldName = "workcount";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 13;
@@ -636,8 +638,7 @@
             this.layoutControlItem16,
             this.layoutControlItem2,
             this.layoutControlItem5,
-            this.emptySpaceItem1,
-            this.emptySpaceItem5});
+            this.emptySpaceItem1});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1012, 47);
             this.Root.TextVisible = false;
@@ -665,7 +666,7 @@
             this.layoutControlItem16.MaxSize = new System.Drawing.Size(171, 27);
             this.layoutControlItem16.MinSize = new System.Drawing.Size(171, 27);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(171, 27);
+            this.layoutControlItem16.Size = new System.Drawing.Size(503, 27);
             this.layoutControlItem16.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
@@ -703,23 +704,12 @@
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(282, 0);
-            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(10, 27);
-            this.emptySpaceItem1.MinSize = new System.Drawing.Size(10, 27);
+            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(10, 10);
+            this.emptySpaceItem1.MinSize = new System.Drawing.Size(10, 10);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(10, 27);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(660, 0);
-            this.emptySpaceItem5.MaxSize = new System.Drawing.Size(332, 27);
-            this.emptySpaceItem5.MinSize = new System.Drawing.Size(332, 27);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(332, 27);
-            this.emptySpaceItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // splitterControl1
             // 
@@ -869,7 +859,7 @@
             this.txtUSER_ID.EraserGroup = "CLR1";
             this.txtUSER_ID.Location = new System.Drawing.Point(87, 77);
             this.txtUSER_ID.Name = "txtUSER_ID";
-            this.txtUSER_ID.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtUSER_ID.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtUSER_ID.Properties.Appearance.Options.UseBackColor = true;
             this.txtUSER_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtUSER_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -901,7 +891,7 @@
             this.txtU_NAME.EraserGroup = "CLR1";
             this.txtU_NAME.Location = new System.Drawing.Point(87, 51);
             this.txtU_NAME.Name = "txtU_NAME";
-            this.txtU_NAME.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtU_NAME.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtU_NAME.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -917,7 +907,7 @@
             this.txtU_GENDER.EraserGroup = "CLR1";
             this.txtU_GENDER.Location = new System.Drawing.Point(87, 101);
             this.txtU_GENDER.Name = "txtU_GENDER";
-            this.txtU_GENDER.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtU_GENDER.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtU_GENDER.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_GENDER.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_GENDER.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -933,7 +923,7 @@
             this.txtBIRTH.EraserGroup = "CLR1";
             this.txtBIRTH.Location = new System.Drawing.Point(417, 75);
             this.txtBIRTH.Name = "txtBIRTH";
-            this.txtBIRTH.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtBIRTH.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtBIRTH.Properties.Appearance.Options.UseBackColor = true;
             this.txtBIRTH.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtBIRTH.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -949,7 +939,7 @@
             this.txtU_EMAIL.EraserGroup = "CLR1";
             this.txtU_EMAIL.Location = new System.Drawing.Point(87, 125);
             this.txtU_EMAIL.Name = "txtU_EMAIL";
-            this.txtU_EMAIL.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtU_EMAIL.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtU_EMAIL.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_EMAIL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_EMAIL.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -966,7 +956,7 @@
             this.txtU_CELL_NUM.EraserGroup = "CLR1";
             this.txtU_CELL_NUM.Location = new System.Drawing.Point(417, 99);
             this.txtU_CELL_NUM.Name = "txtU_CELL_NUM";
-            this.txtU_CELL_NUM.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtU_CELL_NUM.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtU_CELL_NUM.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_CELL_NUM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_CELL_NUM.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -982,7 +972,7 @@
             this.txtREG_DATE.EraserGroup = "CLR1";
             this.txtREG_DATE.Location = new System.Drawing.Point(87, 149);
             this.txtREG_DATE.Name = "txtREG_DATE";
-            this.txtREG_DATE.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtREG_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtREG_DATE.Properties.Appearance.Options.UseBackColor = true;
             this.txtREG_DATE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtREG_DATE.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -998,7 +988,7 @@
             this.txtLOGIN_DATE.EraserGroup = "CLR1";
             this.txtLOGIN_DATE.Location = new System.Drawing.Point(417, 123);
             this.txtLOGIN_DATE.Name = "txtLOGIN_DATE";
-            this.txtLOGIN_DATE.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtLOGIN_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtLOGIN_DATE.Properties.Appearance.Options.UseBackColor = true;
             this.txtLOGIN_DATE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLOGIN_DATE.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1014,7 +1004,7 @@
             this.txtIDX.EraserGroup = "CLR1";
             this.txtIDX.Location = new System.Drawing.Point(360, 147);
             this.txtIDX.Name = "txtIDX";
-            this.txtIDX.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtIDX.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtIDX.Properties.Appearance.Options.UseBackColor = true;
             this.txtIDX.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtIDX.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1090,7 +1080,7 @@
             this.txtU_ID.EraserGroup = "CLR1";
             this.txtU_ID.Location = new System.Drawing.Point(515, 147);
             this.txtU_ID.Name = "txtU_ID";
-            this.txtU_ID.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtU_ID.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtU_ID.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1313,18 +1303,6 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.btnSave;
-            this.layoutControlItem9.Location = new System.Drawing.Point(488, 0);
-            this.layoutControlItem9.MaxSize = new System.Drawing.Size(76, 26);
-            this.layoutControlItem9.MinSize = new System.Drawing.Size(76, 26);
-            this.layoutControlItem9.Name = "item1";
-            this.layoutControlItem9.Size = new System.Drawing.Size(76, 26);
-            this.layoutControlItem9.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem9.TextVisible = false;
-            // 
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.txtU_ADDR_DETAIL;
@@ -1439,6 +1417,25 @@
             this.item7.TextSize = new System.Drawing.Size(15, 14);
             this.item7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.btnSave;
+            this.layoutControlItem9.Location = new System.Drawing.Point(488, 0);
+            this.layoutControlItem9.MaxSize = new System.Drawing.Size(76, 26);
+            this.layoutControlItem9.MinSize = new System.Drawing.Size(76, 26);
+            this.layoutControlItem9.Name = "item1";
+            this.layoutControlItem9.Size = new System.Drawing.Size(76, 26);
+            this.layoutControlItem9.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.ValueChecked = "Y";
+            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
+            // 
             // frmGSHOP09
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1473,7 +1470,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).EndInit();
             this.efwGroupControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
@@ -1512,7 +1508,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -1523,6 +1518,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1620,12 +1617,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private Easy.Framework.WinForm.Control.efwDateEdit dtE_DATE;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
         private Easy.Framework.WinForm.Control.efwTextEdit txtU_ID;
         private DevExpress.XtraLayout.LayoutControlItem item7;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
     }
 }
