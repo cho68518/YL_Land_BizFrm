@@ -73,7 +73,7 @@ namespace YL_GSHOP.BizFrm
         {
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                con.Query = "SELECT category_no as DCODE ,story_name as DNAME FROM domaadmin.tb_story_info WHERE category_no in(240, 223, 243, 205) ORDER BY id ";
+                con.Query = "SELECT category_no as DCODE ,story_name as DNAME FROM domaadmin.tb_story_info WHERE category_no in(240, 223, 243, 205) ORDER BY sort_id ";
 
                 DataSet ds = con.selectQueryDataSet();
                 ////DataTable retDT = ds.Tables[0];

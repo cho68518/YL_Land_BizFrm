@@ -35,13 +35,29 @@ namespace YL_DONUT.BizFrm
             DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
 
             this.IsMenuVw = true;
-            this.IsSearch = true;
+            this.IsSearch = false;
             this.IsNewMode = false;
             this.IsSave = false;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = false;
             this.IsExcel = false;
+
+            this.label1.Font = new Font(this.label1.Font, FontStyle.Bold);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
 
@@ -101,11 +117,11 @@ namespace YL_DONUT.BizFrm
             //new ColumnControlSet("id", txtID)
             //  
             //this.efwGridControl1.Click += efwGridControl1_Click;
-            rbP_SHOW_TYPE.EditValue = "T";
+            //rbP_SHOW_TYPE.EditValue = "T";
 
-            chkD.Checked = true;
-            chkF.Checked = true;
-            chkE.Checked = true;
+            //chkD.Checked = true;
+            //chkF.Checked = true;
+            //chkE.Checked = true;
 
             dtS_DATE.Properties.Mask.EditMask = "yyyy-MM";
             dtS_DATE.Properties.DisplayFormat.FormatString = "yyyy-MM";
@@ -116,6 +132,20 @@ namespace YL_DONUT.BizFrm
             setCmb();
 
             cmbORDER_SEARCH.EditValue = "1";
+
+            //월마감 데이타가 있으면 월마감데이타 조회
+            if (MonthDataCnt() > 0)
+            {
+                toggleSwitch1.IsOn = true;
+                Search2();
+            }
+            else
+            {
+                toggleSwitch1.IsOn = false;
+                //Search1();
+            }
+                
+
         }
 
         #endregion
@@ -124,54 +154,56 @@ namespace YL_DONUT.BizFrm
 
         private void setCmb()
         {
-            try
-            {
-                Dictionary<string, string> myRecord;
+            //try
+            //{
+            //    Dictionary<string, string> myRecord;
 
 
-                string strQueruy1 = @"  SELECT
-                              T1.DCODE, T1.DNAME
-                              FROM
-                              (  SELECT ''  DCODE, N'전체'  DNAME
-	                             UNION ALL
-	                             SELECT CODE  DCODE, CODE_NM DNAME
-                                 FROM dbo.ETCCODE
-	                             WHERE GRP_CODE = 'MALL_TYPE' and Use_YN = 'Y' " + @") T1 ";
+            //    string strQueruy1 = @"  SELECT
+            //                  T1.DCODE, T1.DNAME
+            //                  FROM
+            //                  (  SELECT ''  DCODE, N'전체'  DNAME
+	           //                  UNION ALL
+	           //                  SELECT CODE  DCODE, CODE_NM DNAME
+            //                     FROM dbo.ETCCODE
+	           //                  WHERE GRP_CODE = 'MALL_TYPE' and Use_YN = 'Y' " + @") T1 ";
 
-                CodeAgent.SetLegacyCode(cmbMALL_TYPE, strQueruy1);
-                cmbMALL_TYPE.EditValue = "";
+            //    CodeAgent.SetLegacyCode(cmbMALL_TYPE, strQueruy1);
+            //    cmbMALL_TYPE.EditValue = "";
 
-                //string strQueruy2 = @"  SELECT
-                //              T1.DCODE, T1.DNAME
-                //              FROM
-                //              (  SELECT CODE  DCODE, CODE_NM DNAME
-                //                 FROM dbo.ETCCODE
-	               //              WHERE GRP_CODE = 'ORDER_SEARCH' " + @") T1 ";
+            //    //string strQueruy2 = @"  SELECT
+            //    //              T1.DCODE, T1.DNAME
+            //    //              FROM
+            //    //              (  SELECT CODE  DCODE, CODE_NM DNAME
+            //    //                 FROM dbo.ETCCODE
+	           //    //              WHERE GRP_CODE = 'ORDER_SEARCH' " + @") T1 ";
 
-                //CodeAgent.SetLegacyCode(cmbORDER_SEARCH, strQueruy2);
-                //cmbORDER_SEARCH.EditValue = "1";
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
+            //    //CodeAgent.SetLegacyCode(cmbORDER_SEARCH, strQueruy2);
+            //    //cmbORDER_SEARCH.EditValue = "1";
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            //}
         }
 
         #endregion
 
-        #region 조회
+        #region 주문내역 가져오기
 
-        public override void Search()
+        private void Search1()
         {
+            //주문내역 가져오기
+
             try
             {
                 this.Cursor = Cursors.WaitCursor;
 
                 string sP_SHOW_TYPE = string.Empty;
 
-                chkD.Checked = true;
-                chkF.Checked = false;
-                chkE.Checked = true;
+                //chkD.Checked = true;
+                //chkF.Checked = false;
+                //chkE.Checked = true;
 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
@@ -192,17 +224,15 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
                         cmd.Parameters[3].Value = txtI_SEARCH.EditValue;
 
-                        if (rbP_SHOW_TYPE.EditValue.ToString() != "Y" && rbP_SHOW_TYPE.EditValue.ToString() != "N")
-                            sP_SHOW_TYPE = null;
-                        else
-                            sP_SHOW_TYPE = rbP_SHOW_TYPE.EditValue.ToString();
+                        sP_SHOW_TYPE = null;
 
                         // efwRadioGroup1.Properties.Items[efwRadioGroup1.SelectedIndex].Value.ToString()
                         cmd.Parameters.Add("i_is_order", MySqlDbType.VarChar, 10);
                         cmd.Parameters[4].Value = sP_SHOW_TYPE;
 
                         cmd.Parameters.Add("i_order_mall_type", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[5].Value = cmbMALL_TYPE.EditValue;
+                        //cmd.Parameters[5].Value = cmbMALL_TYPE.EditValue;
+                        cmd.Parameters[5].Value = "";
 
                         cmd.Parameters.Add("i_o_type1", MySqlDbType.VarChar, 10);
                         cmd.Parameters[6].Value = "N";
@@ -214,13 +244,13 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters[8].Value = "N";
 
                         cmd.Parameters.Add("i_o_type4", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[9].Value = chkD.EditValue;
+                        cmd.Parameters[9].Value = "Y";
 
                         cmd.Parameters.Add("i_o_type5", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[10].Value = chkF.EditValue;
+                        cmd.Parameters[10].Value = "N";
 
                         cmd.Parameters.Add("i_o_type6", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[11].Value = chkE.EditValue;
+                        cmd.Parameters[11].Value = "Y";
 
                         cmd.Parameters.Add("i_o_type7", MySqlDbType.VarChar, 10);
                         cmd.Parameters[12].Value = "N";
@@ -263,6 +293,111 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        #endregion
+
+        #region 월 마감테이블에서 가져오기
+
+        private void Search2()
+        {
+            //월 마감테이블에서 가져오기
+
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+
+                string sP_SHOW_TYPE = string.Empty;
+
+                //chkD.Checked = true;
+                //chkF.Checked = false;
+                //chkE.Checked = true;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN10_SELECT_01", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 6);
+                        cmd.Parameters[1].Value = "";
+
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = cmbORDER_SEARCH.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtI_SEARCH.EditValue;
+
+                        sP_SHOW_TYPE = null;
+
+                        // efwRadioGroup1.Properties.Items[efwRadioGroup1.SelectedIndex].Value.ToString()
+                        cmd.Parameters.Add("i_is_order", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[4].Value = sP_SHOW_TYPE;
+
+                        cmd.Parameters.Add("i_order_mall_type", MySqlDbType.VarChar, 10);
+                        //cmd.Parameters[5].Value = cmbMALL_TYPE.EditValue;
+                        cmd.Parameters[5].Value = "";
+
+                        cmd.Parameters.Add("i_o_type1", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[6].Value = "N";
+
+                        cmd.Parameters.Add("i_o_type2", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[7].Value = "N";
+
+                        cmd.Parameters.Add("i_o_type3", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[8].Value = "N";
+
+                        cmd.Parameters.Add("i_o_type4", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[9].Value = "Y";
+
+                        cmd.Parameters.Add("i_o_type5", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[10].Value = "N";
+
+                        cmd.Parameters.Add("i_o_type6", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[11].Value = "Y";
+
+                        cmd.Parameters.Add("i_o_type7", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[12].Value = "N";
+
+                        cmd.Parameters.Add("i_o_type8", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[13].Value = "N";
+
+                        cmd.Parameters.Add("i_o_type9", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[14].Value = "N";
+
+                        cmd.Parameters.Add("i_o_type10", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[15].Value = "N";
+
+                        cmd.Parameters.Add("i_o_type11", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[16].Value = "N";
+
+                        cmd.Parameters.Add("i_o_type12", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[17].Value = "N";
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                            this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                this.Cursor = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+
+                SwitchChk();
+            }
+        }
 
         #endregion
 
@@ -522,5 +657,17 @@ namespace YL_DONUT.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+
+        private void BtnOrderGet_Click(object sender, EventArgs e)
+        {
+            Search1();
+        }
+
+        
+
+
+
+
+
     }
 }

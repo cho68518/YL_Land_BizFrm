@@ -61,7 +61,7 @@ namespace YL_DONUT.BizFrm
         {
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                con.Query = "SELECT category_no as DCODE ,story_name as DNAME  FROM domaadmin.tb_story_info ORDER BY id ";
+                con.Query = "SELECT category_no as DCODE ,story_name as DNAME  FROM domaadmin.tb_story_info ORDER BY sort_id ";
 
                 DataSet ds = con.selectQueryDataSet();
                 ////DataTable retDT = ds.Tables[0];

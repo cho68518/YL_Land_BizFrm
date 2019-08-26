@@ -77,7 +77,6 @@
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
-            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
@@ -311,8 +310,7 @@
             this.gridColumn16,
             this.gridColumn17,
             this.gridColumn18,
-            this.gridColumn19,
-            this.gridColumn20});
+            this.gridColumn19});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "     (건수: {0:d}"),
@@ -517,12 +515,6 @@
             // 
             this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
-            // gridColumn20
-            // 
-            this.gridColumn20.Name = "gridColumn20";
-            this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 11;
-            // 
             // gridSplitContainer1
             // 
             this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -608,7 +600,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
     }
 }
