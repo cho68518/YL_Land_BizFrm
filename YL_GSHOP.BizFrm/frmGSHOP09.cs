@@ -42,7 +42,7 @@ namespace YL_GSHOP.BizFrm
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = true;
-            this.IsSave = true;
+            this.IsSave = false;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = true;
@@ -50,6 +50,18 @@ namespace YL_GSHOP.BizFrm
 
             dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM") + "-01";
             dtE_DATE.EditValue = DateTime.Now;
+            dtWORKSHOP_DATE.EditValue = DateTime.Now;
+
+            dfSTART_TIME.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            dfSTART_TIME.Properties.Mask.EditMask = "HH:mm"; //'Short date' format 
+            dfSTART_TIME.Properties.Mask.UseMaskAsDisplayFormat = true;
+            dfSTART_TIME.EditValue = DateTime.Today;
+
+            dfEND_TIME.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            dfEND_TIME.Properties.Mask.EditMask = "HH:mm"; //'Short date' format 
+            dfEND_TIME.Properties.Mask.UseMaskAsDisplayFormat = true;
+            dfEND_TIME.EditValue = DateTime.Today;
+
 
             this.efwGridControl1.BindControlSet(
               new ColumnControlSet("u_name", txtU_NAME)
@@ -73,6 +85,12 @@ namespace YL_GSHOP.BizFrm
 
 
 
+        }
+        public override void NewMode()
+        {
+            base.NewMode();
+
+            Eraser.Clear(this, "CLR1");
         }
 
         public override void Search()
@@ -151,13 +169,17 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters["i_u_id"].Value = txtU_ID.EditValue;
                             cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_start_time", MySqlDbType.VarChar));
+                            cmd.Parameters.Add(new MySqlParameter("i_start_time", MySqlDbType.DateTime));
                             cmd.Parameters["i_start_time"].Value = dfSTART_TIME.EditValue;
                             cmd.Parameters["i_start_time"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_end_time", MySqlDbType.VarChar));
+                            cmd.Parameters.Add(new MySqlParameter("i_end_time", MySqlDbType.DateTime));
                             cmd.Parameters["i_end_time"].Value = dfEND_TIME.EditValue;
                             cmd.Parameters["i_end_time"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_work_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_work_type"].Value = "A";
+                            cmd.Parameters["i_work_type"].Direction = ParameterDirection.Input;
 
                             cmd.ExecuteNonQuery();
 
@@ -206,6 +228,68 @@ namespace YL_GSHOP.BizFrm
 
             }
             popup = null;
+        }
+
+        private void DfSTART_TIME_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                dfEND_TIME.Focus();
+        }
+
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtUSER_ID.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " ID를 선택하세요!");
+                return;
+            }
+
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "선택한 MD를 삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP09_SAVE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_workshop_date", MySqlDbType.DateTime));
+                            cmd.Parameters["i_workshop_date"].Value = dtWORKSHOP_DATE.EditValue;
+                            cmd.Parameters["i_workshop_date"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_id"].Value = txtU_ID.EditValue;
+                            cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_start_time", MySqlDbType.DateTime));
+                            cmd.Parameters["i_start_time"].Value = dfSTART_TIME.EditValue;
+                            cmd.Parameters["i_start_time"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_end_time", MySqlDbType.DateTime));
+                            cmd.Parameters["i_end_time"].Value = dfEND_TIME.EditValue;
+                            cmd.Parameters["i_end_time"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_work_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_work_type"].Value = "D";
+                            cmd.Parameters["i_work_type"].Direction = ParameterDirection.Input;
+
+                            cmd.ExecuteNonQuery();
+
+
+                            Open1();
+                            NewMode();
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
         }
     }
 }

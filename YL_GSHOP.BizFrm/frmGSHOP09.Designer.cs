@@ -500,6 +500,8 @@
             // gridColumn20
             // 
             this.gridColumn20.Caption = "시작시간";
+            this.gridColumn20.DisplayFormat.FormatString = "HH:mm";
+            this.gridColumn20.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn20.FieldName = "start_time";
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.Visible = true;
@@ -508,6 +510,8 @@
             // gridColumn28
             // 
             this.gridColumn28.Caption = "종료시간";
+            this.gridColumn28.DisplayFormat.FormatString = "HH:mm";
+            this.gridColumn28.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn28.FieldName = "end_time";
             this.gridColumn28.Name = "gridColumn28";
             this.gridColumn28.Visible = true;
@@ -775,7 +779,7 @@
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.IsMultiLang = false;
-            this.btnSave.Location = new System.Drawing.Point(576, 4);
+            this.btnSave.Location = new System.Drawing.Point(500, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(72, 22);
             this.btnSave.StyleController = this.layoutControl4;
@@ -791,13 +795,14 @@
             this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
             this.btnNew.IsMultiLang = false;
-            this.btnNew.Location = new System.Drawing.Point(500, 4);
+            this.btnNew.Location = new System.Drawing.Point(576, 4);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(72, 22);
             this.btnNew.StyleController = this.layoutControl4;
             this.btnNew.TabIndex = 8;
-            this.btnNew.Text = "신규";
+            this.btnNew.Text = "삭제";
             this.btnNew.ToolTip = "신규";
+            this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
             // 
             // btnMemberSch
             // 
@@ -832,6 +837,7 @@
             // txtU_ADDR_DETAIL
             // 
             this.txtU_ADDR_DETAIL.EditValue2 = null;
+            this.txtU_ADDR_DETAIL.EraserGroup = "CLR1";
             this.txtU_ADDR_DETAIL.Location = new System.Drawing.Point(182, 197);
             this.txtU_ADDR_DETAIL.Name = "txtU_ADDR_DETAIL";
             this.txtU_ADDR_DETAIL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -845,6 +851,7 @@
             // txtU_ADDR
             // 
             this.txtU_ADDR.EditValue2 = null;
+            this.txtU_ADDR.EraserGroup = "CLR1";
             this.txtU_ADDR.Location = new System.Drawing.Point(182, 173);
             this.txtU_ADDR.Name = "txtU_ADDR";
             this.txtU_ADDR.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -1045,13 +1052,17 @@
             this.dfSTART_TIME.Name = "dfSTART_TIME";
             this.dfSTART_TIME.Properties.Appearance.BackColor = System.Drawing.Color.Bisque;
             this.dfSTART_TIME.Properties.Appearance.Options.UseBackColor = true;
+            this.dfSTART_TIME.Properties.Appearance.Options.UseTextOptions = true;
+            this.dfSTART_TIME.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.dfSTART_TIME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.dfSTART_TIME.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.dfSTART_TIME.Properties.ReadOnly = true;
+            this.dfSTART_TIME.Properties.DisplayFormat.FormatString = "HH:mm";
+            this.dfSTART_TIME.Properties.EditFormat.FormatString = "HH:mm";
             this.dfSTART_TIME.RequireMessage = null;
             this.dfSTART_TIME.Size = new System.Drawing.Size(59, 20);
             this.dfSTART_TIME.StyleController = this.layoutControl4;
             this.dfSTART_TIME.TabIndex = 0;
+            this.dfSTART_TIME.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DfSTART_TIME_KeyDown);
             // 
             // dfEND_TIME
             // 
@@ -1062,9 +1073,12 @@
             this.dfEND_TIME.Name = "dfEND_TIME";
             this.dfEND_TIME.Properties.Appearance.BackColor = System.Drawing.Color.Bisque;
             this.dfEND_TIME.Properties.Appearance.Options.UseBackColor = true;
+            this.dfEND_TIME.Properties.Appearance.Options.UseTextOptions = true;
+            this.dfEND_TIME.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.dfEND_TIME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.dfEND_TIME.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.dfEND_TIME.Properties.ReadOnly = true;
+            this.dfEND_TIME.Properties.Mask.EditMask = "HH:mm";
+            this.dfEND_TIME.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.dfEND_TIME.RequireMessage = null;
             this.dfEND_TIME.Size = new System.Drawing.Size(57, 20);
             this.dfEND_TIME.StyleController = this.layoutControl4;
@@ -1107,7 +1121,6 @@
             this.emptySpaceItem7,
             this.layoutControlItem21,
             this.layoutControlItem8,
-            this.layoutControlItem9,
             this.layoutControlItem31,
             this.emptySpaceItem9,
             this.layoutControlItem3,
@@ -1117,7 +1130,8 @@
             this.emptySpaceItem3,
             this.layoutControlItem10,
             this.emptySpaceItem4,
-            this.item7});
+            this.item7,
+            this.layoutControlItem9});
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 2, 2);
             this.layoutControlGroup3.Size = new System.Drawing.Size(1012, 229);
@@ -1290,7 +1304,7 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnNew;
-            this.layoutControlItem8.Location = new System.Drawing.Point(488, 0);
+            this.layoutControlItem8.Location = new System.Drawing.Point(564, 0);
             this.layoutControlItem8.MaxSize = new System.Drawing.Size(76, 26);
             this.layoutControlItem8.MinSize = new System.Drawing.Size(76, 26);
             this.layoutControlItem8.Name = "item0";
@@ -1302,7 +1316,7 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnSave;
-            this.layoutControlItem9.Location = new System.Drawing.Point(564, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(488, 0);
             this.layoutControlItem9.MaxSize = new System.Drawing.Size(76, 26);
             this.layoutControlItem9.MinSize = new System.Drawing.Size(76, 26);
             this.layoutControlItem9.Name = "item1";
@@ -1401,6 +1415,7 @@
             this.layoutControlItem10.Size = new System.Drawing.Size(155, 26);
             this.layoutControlItem10.Text = "idx";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(15, 14);
+            this.layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // emptySpaceItem4
             // 
@@ -1422,6 +1437,7 @@
             this.item7.Size = new System.Drawing.Size(155, 26);
             this.item7.Text = "idx";
             this.item7.TextSize = new System.Drawing.Size(15, 14);
+            this.item7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // frmGSHOP09
             // 
