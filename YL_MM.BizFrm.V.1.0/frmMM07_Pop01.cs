@@ -24,9 +24,26 @@ namespace YL_MM.BizFrm
         public string pSEND_ID { get; set; }
         public string pU_NAME { get; set; }
         public string pU_NICKNAME { get; set; }
-        public string pRECV_ID  { get; set; }
+
+        public string pRECV_GEN_U_ID { get; set; }
+        public string pRECV_GEN_ID { get; set; }
+        public string pRECV_GEN_U_NAME { get; set; }
+        public string pRECV_GEN_U_NICKNAME { get; set; }
+
+        public string pRECV_VIP_U_ID { get; set; }
+        public string pRECV_VIP_ID { get; set; }
+        public string pRECV_VIP_U_NAME { get; set; }
+        public string pRECV_VIP_U_NICKNAME { get; set; }
+
+        public string pRECV_SHEF_U_ID { get; set; }
+        public string pRECV_SHEF_ID { get; set; }
+        public string pRECV_SHEF_U_NAME { get; set; }
+        public string pRECV_SHEF_U_NICKNAME { get; set; }
+
+        public string pRECV_ID { get; set; }
         public string pRECV_U_NAME { get; set; }
         public string pRECV_U_NICKNAME { get; set; }
+
         public string pDOMA_ID { get; set; }
         public string pDOMA_U_NAME { get; set; }
         public string pDOMA_U_NICKNAME { get; set; }
@@ -42,17 +59,29 @@ namespace YL_MM.BizFrm
         {
             txtIDX.EditValue = pIDX;
             txtLEVEL.EditValue = pLEVEL;
+
             txtSEND_ID.EditValue = pSEND_ID;
             txtU_NAME.EditValue = pU_NAME;
             txtU_NICKNAME.EditValue = pU_NICKNAME;
-            txtRECV_ID.EditValue = pRECV_ID;
-            txtRECV_U_NAME.EditValue = pRECV_U_NAME;
-            txtRECV_U_NICKNAME.EditValue = pRECV_U_NICKNAME;
+
+            txtRECV_GEN_ID.EditValue = pRECV_GEN_ID;
+            txtRECV_GEN_U_NAME.EditValue = pRECV_GEN_U_NAME;
+            txtRECV_GEN_U_NICKNAME.EditValue = pRECV_GEN_U_NICKNAME;
+
+            txtRECV_VIP_ID.EditValue = pRECV_VIP_ID;
+            txtRECV_VIP_U_NAME.EditValue = pRECV_VIP_U_NAME;
+            txtRECV_VIP_U_NICKNAME.EditValue = pRECV_VIP_U_NICKNAME;
+
+            txtRECV_SHEF_ID.EditValue = pRECV_SHEF_ID;
+            txtRECV_SHEF_U_NAME.EditValue = pRECV_SHEF_U_NAME;
+            txtRECV_SHEF_U_NICKNAME.EditValue = pRECV_SHEF_U_NICKNAME;
+            
             txtDOMA_ID.EditValue = pDOMA_ID;
             txtDOMA_U_NAME.EditValue = pDOMA_U_NAME;
             txtDOMA_U_NICKNAME.EditValue = pDOMA_U_NICKNAME;
             //txtRECV_U_ID.EditValue = "1";
 
+            rbLEVEL.EditValue = pLEVEL;
 
 
             gridView1.OptionsView.ShowFooter = true;
@@ -111,6 +140,7 @@ namespace YL_MM.BizFrm
                 this.txtRECV_U_NICKNAME.EditValue = popup.U_NICKNAME;
                 this.txtRECV_U_ID.EditValue = popup.U_ID;
 
+
             }
             popup = null;
         }
@@ -134,7 +164,7 @@ namespace YL_MM.BizFrm
                         cmd.Parameters[0].Value = txtIDX.EditValue;
 
                         cmd.Parameters.Add("i_level", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[1].Value = txtLEVEL.EditValue;
+                        cmd.Parameters[1].Value = rbLEVEL.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -224,7 +254,7 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_send_id"].Direction = ParameterDirection.Input;
                             //txtDOMA_U_ID
                             cmd.Parameters.Add(new MySqlParameter("i_level", MySqlDbType.VarChar));
-                            cmd.Parameters["i_level"].Value = txtLEVEL.EditValue;
+                            cmd.Parameters["i_level"].Value = rbLEVEL.EditValue;
                             cmd.Parameters["i_level"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_doma_id", MySqlDbType.VarChar));
@@ -246,7 +276,7 @@ namespace YL_MM.BizFrm
                         }
                     }
                 }
-
+                
                 catch (Exception ex)
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
@@ -255,6 +285,7 @@ namespace YL_MM.BizFrm
                 {
                     //EfwSimpleButton1_Click(null, null);
                 }
+                Open2();
             }
         }
 
@@ -314,7 +345,7 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_send_id"].Direction = ParameterDirection.Input;
                             //txtDOMA_U_ID
                             cmd.Parameters.Add(new MySqlParameter("i_level", MySqlDbType.VarChar));
-                            cmd.Parameters["i_level"].Value = txtLEVEL.EditValue;
+                            cmd.Parameters["i_level"].Value = rbLEVEL.EditValue;
                             cmd.Parameters["i_level"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_doma_id", MySqlDbType.VarChar));
@@ -346,6 +377,30 @@ namespace YL_MM.BizFrm
                 {
                     //EfwSimpleButton1_Click(null, null);
                 }
+                Open1();
+            }
+        }
+
+        private void rbLEVEL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (rbLEVEL.EditValue.ToString() == "0")
+            {
+                txtRECV_ID.EditValue = txtRECV_GEN_ID.EditValue.ToString();
+                txtRECV_U_NAME.EditValue = txtRECV_GEN_U_NAME.EditValue.ToString();
+                txtRECV_U_NICKNAME.EditValue = txtRECV_GEN_U_NICKNAME.EditValue.ToString();
+            }
+
+            if (rbLEVEL.EditValue.ToString() == "1")
+            {
+                txtRECV_ID.EditValue = txtRECV_VIP_ID.EditValue.ToString();
+                txtRECV_U_NAME.EditValue = txtRECV_VIP_U_NAME.EditValue.ToString();
+                txtRECV_U_NICKNAME.EditValue = txtRECV_VIP_U_NICKNAME.EditValue.ToString();
+            }
+            if (rbLEVEL.EditValue.ToString() == "2")
+            {
+                txtRECV_ID.EditValue = txtRECV_SHEF_ID.EditValue.ToString();
+                txtRECV_U_NAME.EditValue = txtRECV_SHEF_U_NAME.EditValue.ToString();
+                txtRECV_U_NICKNAME.EditValue = txtRECV_SHEF_U_NICKNAME.EditValue.ToString();
             }
         }
     }

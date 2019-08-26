@@ -69,7 +69,7 @@ namespace YL_GSHOP.BizFrm
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
 
-            gridView1.OptionsView.ShowFooter = true;
+            dataGridView.OptionsView.ShowFooter = true;
 
             this.efwGridControl1.BindControlSet(
                       new ColumnControlSet("ID", txtID)
@@ -233,7 +233,7 @@ namespace YL_GSHOP.BizFrm
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
 
-                        for (int i = 0; i < gridView1.DataRowCount; i++)
+                        for (int i = 0; i < dataGridView.DataRowCount; i++)
                         {
                             using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP03_SAVE_01", con))
                             {
@@ -244,18 +244,18 @@ namespace YL_GSHOP.BizFrm
                                 cmd.CommandType = CommandType.StoredProcedure;
 
                                 cmd.Parameters.Add("i_id", MySqlDbType.Int16, 50);
-                                cmd.Parameters[0].Value = Convert.ToInt16(gridView1.GetRowCellValue(i, "id"));
+                                cmd.Parameters[0].Value = Convert.ToInt16(dataGridView.GetRowCellValue(i, "id"));
 
                                 cmd.Parameters.Add("i_invoice", MySqlDbType.VarChar, 50);
-                                cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "invoice");
+                                cmd.Parameters[1].Value = dataGridView.GetRowCellValue(i, "invoice");
 
-                                Console.WriteLine("********" + gridView1.GetRowCellValue(i, "delivers"));
+                                Console.WriteLine("********" + dataGridView.GetRowCellValue(i, "delivers"));
 
                                 cmd.Parameters.Add("i_delivers", MySqlDbType.VarChar, 20);
-                                cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "delivers");
+                                cmd.Parameters[2].Value = dataGridView.GetRowCellValue(i, "delivers");
 
                                 cmd.Parameters.Add("i_remark", MySqlDbType.VarChar, 250);
-                                cmd.Parameters[3].Value = gridView1.GetRowCellValue(i, "remark");
+                                cmd.Parameters[3].Value = dataGridView.GetRowCellValue(i, "remark");
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();
@@ -317,8 +317,52 @@ namespace YL_GSHOP.BizFrm
 
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            var saveResult =
+            new SaveTableResultInfo() { IsError = true };
+            try
+            {
+                var dt = efwGridControl1.GetChangeDataWithRowState;
+                var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+                //변경된 데이터 카운트 구하기(차후 메시지 리턴시 사용함)
+                saveResult.InsertRowcount = dt.Select(StatusColumn + "='I'").Length;
+                saveResult.UpdateRowcount = dt.Select(StatusColumn + "='U'").Length;
+                saveResult.DeleteRowcount = dt.Select(StatusColumn + "='D'").Length;
+                saveResult.TranRowcount = dt.Rows.Count;
+                var tPack = new TransactionPack();
 
 
+
+                for (int cnt = 0; cnt < dataGridView.DataRowCount; cnt++)
+                {
+                    Console.WriteLine("1 ---> [" + dt.Rows[cnt][StatusColumn].ToString() + "]");
+                    Console.WriteLine("2 ---> [" + dt.Rows.Count + "]");
+                    //if (dt.Rows[cnt][StatusColumn].ToString() == "U")
+                    //{
+                    //    Console.WriteLine("3 ---> [" + cnt + "]");
+                    //}
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void gridView1_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        {
+            if (dataGridView.IsRowSelected(e.ControllerRow))
+                dataGridView.SetRowCellValue(e.ControllerRow, dataGridView.Columns["rowchk"], "U");
+            else
+                dataGridView.SetRowCellValue(e.ControllerRow, dataGridView.Columns["rowchk"], "");
+        }
+
+        private void gridView1_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            efwGridControl1.Focus();
+        }
 
     }
 }

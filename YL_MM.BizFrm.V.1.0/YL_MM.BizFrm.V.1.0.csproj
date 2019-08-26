@@ -118,6 +118,18 @@
     <Compile Include="Dlg\frmMemberInfo_Dup.Designer.cs">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMM09.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM09.Designer.cs">
+      <DependentUpon>frmMM09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM08.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM08.Designer.cs">
+      <DependentUpon>frmMM08.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMM07_Pop01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +204,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmMemberInfo_Dup.resx">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM08.resx">
+      <DependentUpon>frmMM08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM09.resx">
+      <DependentUpon>frmMM09.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM07_Pop01.resx">
       <DependentUpon>frmMM07_Pop01.cs</DependentUpon>

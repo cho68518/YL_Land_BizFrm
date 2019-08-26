@@ -142,13 +142,13 @@ namespace YL_GSHOP.BizFrm
 
 
 
-        private void TxtRECEIVE_NAME_KeyDown(object sender, KeyEventArgs e)
+        private void txtRECEIVE_NAME_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
 
-        private void TxtREC_U_NAME_KeyDown(object sender, KeyEventArgs e)
+        private void txtREC_U_NAME_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 Search();

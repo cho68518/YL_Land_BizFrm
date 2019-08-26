@@ -77,7 +77,7 @@ namespace YL_GSHOP.BizFrm
             //);
             //this.efwGridControl1.Click += efwGridControl1_Click;
             rbCOMFIRM.EditValue = "N";
-            
+
             setCmb();
         }
 

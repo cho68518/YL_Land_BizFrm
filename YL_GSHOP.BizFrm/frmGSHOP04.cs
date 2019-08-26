@@ -374,22 +374,16 @@ namespace YL_GSHOP.BizFrm
                 Search();
         }
 
-        private void TxtROAD_ADDR_KeyDown(object sender, KeyEventArgs e)
+        private void txtROAD_ADDR_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
 
-        private void BtnMemberSch_Click(object sender, EventArgs e)
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            popup = new frmMemberInfo
-            {
-                COMPANYCD = "YL01",
-                COMPANYNAME = "(주)와이엘랜드",
-                MEMBER_TYPE = "ALL",
-            };
-            popup.FormClosed += popup_FormClosed1;
-            PopUpBizAgent.Show(this, popup);
+            if (e.KeyCode == Keys.Enter)
+                Search();
         }
 
         private void popup_FormClosed1(object sender, FormClosedEventArgs e)
@@ -424,6 +418,8 @@ namespace YL_GSHOP.BizFrm
             PopUpBizAgent.Show(this, popup);
         }
 
+
+
         private void popup_FormClosed2(object sender, FormClosedEventArgs e)
         {
             popup.FormClosed -= popup_FormClosed2;
@@ -433,6 +429,18 @@ namespace YL_GSHOP.BizFrm
                 this.txtMD_U_ID.EditValue = popup.U_ID;
             }
             popup = null;
+        }
+
+        private void BtnMemberSch_Click(object sender, EventArgs e)
+        {
+            popup = new frmMemberInfo
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+                MEMBER_TYPE = "ALL",
+            };
+            popup.FormClosed += popup_FormClosed1;
+            PopUpBizAgent.Show(this, popup);
         }
 
         private void EfwSimpleButton2_Click(object sender, EventArgs e)
@@ -536,7 +544,7 @@ namespace YL_GSHOP.BizFrm
                         }
                     }
                 }
-                
+
                 catch (Exception ex)
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
@@ -544,7 +552,6 @@ namespace YL_GSHOP.BizFrm
                 txtRECOMM_NM.Text = "";
                 Search();
             }
-
         }
 
         private void EfwSimpleButton3_Click(object sender, EventArgs e)
@@ -648,7 +655,7 @@ namespace YL_GSHOP.BizFrm
                         }
                     }
                 }
-                
+
                 catch (Exception ex)
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
@@ -657,6 +664,5 @@ namespace YL_GSHOP.BizFrm
                 Search();
             }
         }
-
     }
 }

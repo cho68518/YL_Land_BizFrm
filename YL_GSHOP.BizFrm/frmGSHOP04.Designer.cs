@@ -78,6 +78,7 @@
             this.gridColumn58 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn59 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -191,7 +192,6 @@
             this.item6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.item7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.gridColumn59 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtPOSTNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
@@ -473,7 +473,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "원장명";
+            this.gridColumn3.Caption = "성명";
             this.gridColumn3.FieldName = "ceo_name";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -675,6 +675,14 @@
             this.gridColumn57.Visible = true;
             this.gridColumn57.VisibleIndex = 20;
             // 
+            // gridColumn59
+            // 
+            this.gridColumn59.Caption = "비고";
+            this.gridColumn59.FieldName = "remark";
+            this.gridColumn59.Name = "gridColumn59";
+            this.gridColumn59.Visible = true;
+            this.gridColumn59.VisibleIndex = 21;
+            // 
             // repositoryItemLookUpEdit1
             // 
             this.repositoryItemLookUpEdit1.AutoHeight = false;
@@ -731,6 +739,7 @@
             this.txtROAD_ADDR.Size = new System.Drawing.Size(196, 20);
             this.txtROAD_ADDR.StyleController = this.layoutControl2;
             this.txtROAD_ADDR.TabIndex = 0;
+            this.txtROAD_ADDR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtROAD_ADDR_KeyDown);
             // 
             // cmbQ1
             // 
@@ -764,6 +773,7 @@
             this.txtSearch.Size = new System.Drawing.Size(163, 20);
             this.txtSearch.StyleController = this.layoutControl2;
             this.txtSearch.TabIndex = 6;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // layoutControlGroup2
             // 
@@ -1043,7 +1053,7 @@
             // 
             // gridColumn31
             // 
-            this.gridColumn31.Caption = "원장명";
+            this.gridColumn31.Caption = "성명";
             this.gridColumn31.FieldName = "ceo_name";
             this.gridColumn31.Name = "gridColumn31";
             this.gridColumn31.OptionsColumn.AllowEdit = false;
@@ -1332,6 +1342,7 @@
             this.efwSimpleButton3.Size = new System.Drawing.Size(24, 22);
             this.efwSimpleButton3.StyleController = this.layoutControl4;
             this.efwSimpleButton3.TabIndex = 52;
+            this.efwSimpleButton3.Click += new System.EventHandler(this.EfwSimpleButton3_Click);
             // 
             // efwSimpleButton2
             // 
@@ -1344,6 +1355,7 @@
             this.efwSimpleButton2.Size = new System.Drawing.Size(24, 22);
             this.efwSimpleButton2.StyleController = this.layoutControl4;
             this.efwSimpleButton2.TabIndex = 51;
+            this.efwSimpleButton2.Click += new System.EventHandler(this.EfwSimpleButton2_Click);
             // 
             // efwSimpleButton1
             // 
@@ -1357,6 +1369,7 @@
             this.efwSimpleButton1.StyleController = this.layoutControl4;
             this.efwSimpleButton1.TabIndex = 50;
             this.efwSimpleButton1.Text = "회원검색";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
             // 
             // btnMemberSch
             // 
@@ -1370,6 +1383,7 @@
             this.btnMemberSch.StyleController = this.layoutControl4;
             this.btnMemberSch.TabIndex = 49;
             this.btnMemberSch.Text = "회원검색";
+            this.btnMemberSch.Click += new System.EventHandler(this.BtnMemberSch_Click);
             // 
             // btnSave
             // 
@@ -2037,14 +2051,6 @@
             this.emptySpaceItem7.Size = new System.Drawing.Size(515, 26);
             this.emptySpaceItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // gridColumn59
-            // 
-            this.gridColumn59.Caption = "비고";
-            this.gridColumn59.FieldName = "remark";
-            this.gridColumn59.Name = "gridColumn59";
-            this.gridColumn59.Visible = true;
-            this.gridColumn59.VisibleIndex = 21;
             // 
             // frmGSHOP04
             // 
