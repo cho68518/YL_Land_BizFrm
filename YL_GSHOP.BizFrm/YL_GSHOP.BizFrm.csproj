@@ -153,6 +153,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGSHOP09.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP09.Designer.cs">
+      <DependentUpon>frmGSHOP09.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGSHOP02.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP09.resx">
+      <DependentUpon>frmGSHOP09.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP02.resx">
       <DependentUpon>frmGSHOP02.cs</DependentUpon>
