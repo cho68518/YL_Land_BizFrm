@@ -225,12 +225,6 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTest01.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frmTest01.Designer.cs">
-      <DependentUpon>frmTest01.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTest02.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -290,9 +284,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTest01.resx">
-      <DependentUpon>frmTest01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest02.resx">
       <DependentUpon>frmTest02.cs</DependentUpon>
