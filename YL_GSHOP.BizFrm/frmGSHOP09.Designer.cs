@@ -63,6 +63,7 @@
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn82 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -131,11 +132,11 @@
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.item7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
             this.efwGroupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -203,7 +204,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl3
@@ -490,6 +490,13 @@
             this.gridColumn82.Name = "gridColumn82";
             this.gridColumn82.Visible = true;
             this.gridColumn82.VisibleIndex = 12;
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.ValueChecked = "Y";
+            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
             // 
             // gridColumn10
             // 
@@ -815,6 +822,8 @@
             this.txtU_ZIP.EraserGroup = "CLR1";
             this.txtU_ZIP.Location = new System.Drawing.Point(87, 173);
             this.txtU_ZIP.Name = "txtU_ZIP";
+            this.txtU_ZIP.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtU_ZIP.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_ZIP.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_ZIP.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtU_ZIP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -830,6 +839,8 @@
             this.txtU_ADDR_DETAIL.EraserGroup = "CLR1";
             this.txtU_ADDR_DETAIL.Location = new System.Drawing.Point(182, 197);
             this.txtU_ADDR_DETAIL.Name = "txtU_ADDR_DETAIL";
+            this.txtU_ADDR_DETAIL.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtU_ADDR_DETAIL.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_ADDR_DETAIL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_ADDR_DETAIL.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtU_ADDR_DETAIL.Properties.ReadOnly = true;
@@ -844,6 +855,8 @@
             this.txtU_ADDR.EraserGroup = "CLR1";
             this.txtU_ADDR.Location = new System.Drawing.Point(182, 173);
             this.txtU_ADDR.Name = "txtU_ADDR";
+            this.txtU_ADDR.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtU_ADDR.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_ADDR.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_ADDR.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtU_ADDR.Properties.ReadOnly = true;
@@ -859,7 +872,7 @@
             this.txtUSER_ID.EraserGroup = "CLR1";
             this.txtUSER_ID.Location = new System.Drawing.Point(87, 77);
             this.txtUSER_ID.Name = "txtUSER_ID";
-            this.txtUSER_ID.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtUSER_ID.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUSER_ID.Properties.Appearance.Options.UseBackColor = true;
             this.txtUSER_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtUSER_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -876,6 +889,8 @@
             this.txtU_NICKNAME.EraserGroup = "CLR1";
             this.txtU_NICKNAME.Location = new System.Drawing.Point(417, 51);
             this.txtU_NICKNAME.Name = "txtU_NICKNAME";
+            this.txtU_NICKNAME.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtU_NICKNAME.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_NICKNAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtU_NICKNAME.Properties.ReadOnly = true;
@@ -891,7 +906,7 @@
             this.txtU_NAME.EraserGroup = "CLR1";
             this.txtU_NAME.Location = new System.Drawing.Point(87, 51);
             this.txtU_NAME.Name = "txtU_NAME";
-            this.txtU_NAME.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtU_NAME.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtU_NAME.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -907,7 +922,7 @@
             this.txtU_GENDER.EraserGroup = "CLR1";
             this.txtU_GENDER.Location = new System.Drawing.Point(87, 101);
             this.txtU_GENDER.Name = "txtU_GENDER";
-            this.txtU_GENDER.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtU_GENDER.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtU_GENDER.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_GENDER.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_GENDER.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -923,7 +938,7 @@
             this.txtBIRTH.EraserGroup = "CLR1";
             this.txtBIRTH.Location = new System.Drawing.Point(417, 75);
             this.txtBIRTH.Name = "txtBIRTH";
-            this.txtBIRTH.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtBIRTH.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBIRTH.Properties.Appearance.Options.UseBackColor = true;
             this.txtBIRTH.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtBIRTH.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -939,7 +954,7 @@
             this.txtU_EMAIL.EraserGroup = "CLR1";
             this.txtU_EMAIL.Location = new System.Drawing.Point(87, 125);
             this.txtU_EMAIL.Name = "txtU_EMAIL";
-            this.txtU_EMAIL.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtU_EMAIL.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtU_EMAIL.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_EMAIL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_EMAIL.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -956,7 +971,7 @@
             this.txtU_CELL_NUM.EraserGroup = "CLR1";
             this.txtU_CELL_NUM.Location = new System.Drawing.Point(417, 99);
             this.txtU_CELL_NUM.Name = "txtU_CELL_NUM";
-            this.txtU_CELL_NUM.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtU_CELL_NUM.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtU_CELL_NUM.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_CELL_NUM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_CELL_NUM.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -972,7 +987,7 @@
             this.txtREG_DATE.EraserGroup = "CLR1";
             this.txtREG_DATE.Location = new System.Drawing.Point(87, 149);
             this.txtREG_DATE.Name = "txtREG_DATE";
-            this.txtREG_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtREG_DATE.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtREG_DATE.Properties.Appearance.Options.UseBackColor = true;
             this.txtREG_DATE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtREG_DATE.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -988,7 +1003,7 @@
             this.txtLOGIN_DATE.EraserGroup = "CLR1";
             this.txtLOGIN_DATE.Location = new System.Drawing.Point(417, 123);
             this.txtLOGIN_DATE.Name = "txtLOGIN_DATE";
-            this.txtLOGIN_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtLOGIN_DATE.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtLOGIN_DATE.Properties.Appearance.Options.UseBackColor = true;
             this.txtLOGIN_DATE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLOGIN_DATE.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1004,7 +1019,7 @@
             this.txtIDX.EraserGroup = "CLR1";
             this.txtIDX.Location = new System.Drawing.Point(360, 147);
             this.txtIDX.Name = "txtIDX";
-            this.txtIDX.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtIDX.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtIDX.Properties.Appearance.Options.UseBackColor = true;
             this.txtIDX.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtIDX.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1080,7 +1095,7 @@
             this.txtU_ID.EraserGroup = "CLR1";
             this.txtU_ID.Location = new System.Drawing.Point(515, 147);
             this.txtU_ID.Name = "txtU_ID";
-            this.txtU_ID.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtU_ID.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtU_ID.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1429,13 +1444,6 @@
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            this.repositoryItemCheckEdit1.ValueChecked = "Y";
-            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
-            // 
             // frmGSHOP09
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1452,6 +1460,7 @@
             this.efwGroupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
@@ -1519,7 +1528,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }

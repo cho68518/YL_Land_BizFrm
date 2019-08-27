@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTest01));
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.panel2 = new System.Windows.Forms.Panel();
             this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
@@ -47,9 +51,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwTextEdit1 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.imageList1 = new System.Windows.Forms.ImageList();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet11 = new YL_DONUT.BizFrm.DataSet1();
+            this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
@@ -63,10 +69,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.efwGridControl1);
             this.panel2.Controls.Add(this.efwSimpleButton5);
             this.panel2.Controls.Add(this.toggleSwitch1);
             this.panel2.Controls.Add(this.checkButton1);
@@ -283,6 +292,48 @@
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // efwGridControl1
+            // 
+            this.efwGridControl1.BindSet = null;
+            this.efwGridControl1.DBName = "";
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
+            this.efwGridControl1.IsAddExcelBtn = true;
+            this.efwGridControl1.isAddPrintBtn = true;
+            this.efwGridControl1.IsMultiLang = false;
+            this.efwGridControl1.Location = new System.Drawing.Point(823, 148);
+            this.efwGridControl1.MainView = this.gridView1;
+            this.efwGridControl1.Name = "efwGridControl1";
+            this.efwGridControl1.NowRowHandle = 0;
+            this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
+            this.efwGridControl1.PrevRowHandle = -2147483648;
+            this.efwGridControl1.Size = new System.Drawing.Size(273, 178);
+            this.efwGridControl1.TabIndex = 18;
+            this.efwGridControl1.TableName = "";
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
+            this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.efwGridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
             // frmTest01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -305,6 +356,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,5 +384,7 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
         private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private DataSet1 dataSet11;
+        private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
