@@ -36,7 +36,7 @@ namespace YL_DONUT.BizFrm
             DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
 
             this.IsMenuVw = true;
-            this.IsSearch = false;
+            this.IsSearch = true;
             this.IsNewMode = false;
             this.IsSave = false;
             this.IsDelete = false;
@@ -45,27 +45,13 @@ namespace YL_DONUT.BizFrm
             this.IsExcel = false;
 
             this.lblnum1.Font = new Font(this.lblnum1.Font, FontStyle.Bold);
-            this.lblnum2.Font = new Font(this.lblnum2.Font, FontStyle.Bold);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
             dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_write");
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_psoper_order");
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "month_close_yn");
 
             gridView1.OptionsView.ShowFooter = true;
 
@@ -139,15 +125,13 @@ namespace YL_DONUT.BizFrm
             if (MonthDataCnt() > 0)
             {
                 toggleSwitch1.IsOn = true;
-                Search2();
+                //Search2();
             }
             else
             {
                 toggleSwitch1.IsOn = false;
                 //Search1();
             }
-                
-
         }
 
         #endregion
@@ -193,115 +177,9 @@ namespace YL_DONUT.BizFrm
 
         #region 주문내역 가져오기
 
-        private void Search1()
+        public override void Search()
         {
             //주문내역 가져오기
-
-            try
-            {
-                this.Cursor = Cursors.WaitCursor;
-
-                string sP_SHOW_TYPE = string.Empty;
-
-                //chkD.Checked = true;
-                //chkF.Checked = false;
-                //chkE.Checked = true;
-
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-
-                {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN10_SELECT_01", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
-
-                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 6);
-                        cmd.Parameters[1].Value = "";
-
-                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[2].Value = cmbORDER_SEARCH.EditValue;
-
-                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[3].Value = txtI_SEARCH.EditValue;
-
-                        sP_SHOW_TYPE = null;
-
-                        // efwRadioGroup1.Properties.Items[efwRadioGroup1.SelectedIndex].Value.ToString()
-                        cmd.Parameters.Add("i_is_order", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[4].Value = sP_SHOW_TYPE;
-
-                        cmd.Parameters.Add("i_order_mall_type", MySqlDbType.VarChar, 10);
-                        //cmd.Parameters[5].Value = cmbMALL_TYPE.EditValue;
-                        cmd.Parameters[5].Value = "";
-
-                        cmd.Parameters.Add("i_o_type1", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[6].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type2", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[7].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type3", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[8].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type4", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[9].Value = "Y";
-
-                        cmd.Parameters.Add("i_o_type5", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[10].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type6", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[11].Value = "Y";
-
-                        cmd.Parameters.Add("i_o_type7", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[12].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type8", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[13].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type9", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[14].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type10", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[15].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type11", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[16].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type12", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[17].Value = "N";
-
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable ds = new DataTable();
-                            sda.Fill(ds);
-                            efwGridControl1.DataBind(ds);
-                            this.efwGridControl1.MyGridView.BestFitColumns();
-                        }
-                    }
-                }
-                this.Cursor = Cursors.Default;
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
-            finally
-            {
-                this.Cursor = Cursors.Default;
-
-                SwitchChk();
-            }
-        }
-
-        #endregion
-
-        #region 월 마감테이블에서 가져오기
-
-        private void Search2()
-        {
-            //월 마감테이블에서 가져오기
 
             try
             {
@@ -414,7 +292,7 @@ namespace YL_DONUT.BizFrm
         private void GridView1_CustomDrawFooterCell(object sender, DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e)
         {
             //e.Appearance.BackColor = Color.White;
-            e.Appearance.ForeColor = Color.Red;
+            
         }
 
         private void BtnDetail_CheckedChanged(object sender, EventArgs e)
@@ -503,6 +381,8 @@ namespace YL_DONUT.BizFrm
         {
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
+
                 //var saveResult = new SaveTableResultInfo() { IsError = true };
 
                 //var dt = efwGridControl1.GetChangeDataWithRowState;
@@ -533,65 +413,71 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add("i_yymm", MySqlDbType.VarChar, 10);
                             cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
 
+                            cmd.Parameters.Add("i_acc_date", MySqlDbType.VarChar, 10);
+                            cmd.Parameters[1].Value = dtAcc_Date.EditValue3;
+
                             cmd.Parameters.Add("o_date", MySqlDbType.DateTime, 50);
-                            cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "o_date");
+                            cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "o_date");
 
                             cmd.Parameters.Add("o_id", MySqlDbType.Int32, 11);
-                            cmd.Parameters[2].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "ID"));
+                            cmd.Parameters[3].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "id"));
+
+                            cmd.Parameters.Add("o_code", MySqlDbType.VarChar, 50);
+                            cmd.Parameters[4].Value = gridView1.GetRowCellValue(i, "o_code");
 
                             cmd.Parameters.Add("o_u_id", MySqlDbType.VarChar, 50);
-                            cmd.Parameters[3].Value = gridView1.GetRowCellValue(i, "o_u_id");
+                            cmd.Parameters[5].Value = gridView1.GetRowCellValue(i, "o_u_id");
 
                             cmd.Parameters.Add("o_u_name", MySqlDbType.VarChar, 50);
-                            cmd.Parameters[4].Value = gridView1.GetRowCellValue(i, "o_receive_name");
+                            cmd.Parameters[6].Value = gridView1.GetRowCellValue(i, "o_receive_name");
 
                             cmd.Parameters.Add("o_u_nickname", MySqlDbType.VarChar, 50);
-                            cmd.Parameters[5].Value = gridView1.GetRowCellValue(i, "u_nickname");
+                            cmd.Parameters[7].Value = gridView1.GetRowCellValue(i, "u_nickname");
 
                             cmd.Parameters.Add("o_type", MySqlDbType.VarChar, 20);
-                            cmd.Parameters[6].Value = gridView1.GetRowCellValue(i, "o_type");
+                            cmd.Parameters[8].Value = gridView1.GetRowCellValue(i, "o_type");
 
                             cmd.Parameters.Add("p_id", MySqlDbType.Int32, 11);
-                            cmd.Parameters[7].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "p_code"));
+                            cmd.Parameters[9].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "p_code"));
 
                             cmd.Parameters.Add("product_name", MySqlDbType.VarChar, 1000);
-                            cmd.Parameters[8].Value = gridView1.GetRowCellValue(i, "p_name");
+                            cmd.Parameters[10].Value = gridView1.GetRowCellValue(i, "p_name");
 
                             cmd.Parameters.Add("option_id", MySqlDbType.Int32, 11);
-                            cmd.Parameters[9].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "p_p_id"));
+                            cmd.Parameters[11].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "p_p_id"));
 
                             cmd.Parameters.Add("option_name", MySqlDbType.VarChar, 1000);
-                            cmd.Parameters[10].Value = gridView1.GetRowCellValue(i, "p_option_name");
+                            cmd.Parameters[12].Value = gridView1.GetRowCellValue(i, "p_option_name");
 
                             cmd.Parameters.Add("o_qty", MySqlDbType.Int32, 10);
-                            cmd.Parameters[11].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "p_num"));
+                            cmd.Parameters[13].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "p_num"));
 
                             cmd.Parameters.Add("o_total_cost", MySqlDbType.Int32, 15);
-                            cmd.Parameters[12].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "o_total_cost"));
+                            cmd.Parameters[14].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "o_total_cost"));
 
                             cmd.Parameters.Add("o_purchase_cost", MySqlDbType.Int32, 15);
-                            cmd.Parameters[13].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "o_purchase_cost"));
+                            cmd.Parameters[15].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "o_purchase_cost"));
 
                             cmd.Parameters.Add("chef_login_id", MySqlDbType.VarChar, 128);
-                            cmd.Parameters[14].Value = gridView1.GetRowCellValue(i, "u_id2");
+                            cmd.Parameters[16].Value = gridView1.GetRowCellValue(i, "u_id2");
 
                             cmd.Parameters.Add("chef_name", MySqlDbType.VarChar, 50);
-                            cmd.Parameters[15].Value = gridView1.GetRowCellValue(i, "chef_name");
+                            cmd.Parameters[17].Value = gridView1.GetRowCellValue(i, "chef_name");
 
                             cmd.Parameters.Add("chef_nickname", MySqlDbType.VarChar, 50);
-                            cmd.Parameters[16].Value = gridView1.GetRowCellValue(i, "chef_nickname");
+                            cmd.Parameters[18].Value = gridView1.GetRowCellValue(i, "chef_nickname");
 
                             cmd.Parameters.Add("chef_amt", MySqlDbType.Int32, 15);
-                            cmd.Parameters[17].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "chef_amt"));
+                            cmd.Parameters[19].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "chef_amt"));
 
                             cmd.Parameters.Add("tweet_cnt", MySqlDbType.Int32, 11);
-                            cmd.Parameters[18].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "t_cnt"));
+                            cmd.Parameters[20].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "t_cnt"));
 
                             cmd.Parameters.Add("is_write", MySqlDbType.VarChar, 2);
-                            cmd.Parameters[19].Value = gridView1.GetRowCellValue(i, "is_write");
+                            cmd.Parameters[21].Value = gridView1.GetRowCellValue(i, "is_write");
 
                             cmd.Parameters.Add("i_idx", MySqlDbType.Int32, 15);
-                            cmd.Parameters[20].Value = gridView1.GetRowCellValue(i, "idx");
+                            cmd.Parameters[22].Value = gridView1.GetRowCellValue(i, "idx");
 
                             cmd.ExecuteNonQuery();
                             con.Close();
@@ -600,10 +486,12 @@ namespace YL_DONUT.BizFrm
                 }
 
                 MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
+                Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
             }
         }
 
@@ -614,7 +502,7 @@ namespace YL_DONUT.BizFrm
             using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
             {
                 sql.Query = "SELECT count(*) FROM domamall.tb_ps_charge_month " +
-                             "WHERE yymm = '" + dtS_DATE.EditValue3.Substring(0, 6) + "'";
+                             "WHERE yymm = '" + dtS_DATE.EditValue3.Substring(0, 6) + "' and LENGTH(acc_date) > 0  ";
                 DataSet ds = sql.selectQueryDataSet();
                 nCnt = Convert.ToInt32(sql.selectQueryForSingleValue());
             }
@@ -680,18 +568,14 @@ namespace YL_DONUT.BizFrm
             }
         }
 
-        private void BtnOrderGet_Click(object sender, EventArgs e)
-        {
-            Search1();
-        }
-
         private void GridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
             GridView view = sender as GridView;
-            if (e.Column == view.Columns["chef_amt"])
+            if (e.Column == view.Columns["fix_chef_amt"])
             {
-                e.Appearance.BackColor = Color.LightGreen;
+                e.Appearance.BackColor = Color.LightYellow;
             }
         }
+
     }
 }
