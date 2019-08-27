@@ -121,6 +121,9 @@ namespace YL_DONUT.BizFrm
 
             cmbORDER_SEARCH.EditValue = "1";
 
+
+
+
             //월마감 데이타가 있으면 월마감데이타 조회
             if (MonthDataCnt() > 0)
             {
