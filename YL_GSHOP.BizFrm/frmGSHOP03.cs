@@ -319,36 +319,54 @@ namespace YL_GSHOP.BizFrm
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            var saveResult =
-            new SaveTableResultInfo() { IsError = true };
-            try
+
+
+
+            var saveResult = new SaveTableResultInfo() { IsError = true };
+
+            var dt = efwGridControl1.GetChangeDataWithRowState;
+            var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+
+
+            for (var i = 0; i < dt.Rows.Count; i++)
             {
-                var dt = efwGridControl1.GetChangeDataWithRowState;
-                var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
-
-                //변경된 데이터 카운트 구하기(차후 메시지 리턴시 사용함)
-                saveResult.InsertRowcount = dt.Select(StatusColumn + "='I'").Length;
-                saveResult.UpdateRowcount = dt.Select(StatusColumn + "='U'").Length;
-                saveResult.DeleteRowcount = dt.Select(StatusColumn + "='D'").Length;
-                saveResult.TranRowcount = dt.Rows.Count;
-                var tPack = new TransactionPack();
-
-
-
-                for (int cnt = 0; cnt < dataGridView.DataRowCount; cnt++)
+                if (dt.Rows[i][StatusColumn].ToString() == "U")
                 {
-                    Console.WriteLine("1 ---> [" + dt.Rows[cnt][StatusColumn].ToString() + "]");
-                    Console.WriteLine("2 ---> [" + dt.Rows.Count + "]");
-                    //if (dt.Rows[cnt][StatusColumn].ToString() == "U")
-                    //{
-                    //    Console.WriteLine("3 ---> [" + cnt + "]");
-                    //}
+                    Console.WriteLine("------------------------------------------------------------");
+                    Console.WriteLine("[U] " + dt.Rows[i]["chef_nickname"].ToString());
                 }
             }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
+
+            //var saveResult =  new SaveTableResultInfo() { IsError = true };
+            //try
+            //{
+            //    var dt = efwGridControl1.GetChangeDataWithRowState;
+            //    var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+            //    //변경된 데이터 카운트 구하기(차후 메시지 리턴시 사용함)
+            //    saveResult.InsertRowcount = dt.Select(StatusColumn + "='I'").Length;
+            //    saveResult.UpdateRowcount = dt.Select(StatusColumn + "='U'").Length;
+            //    saveResult.DeleteRowcount = dt.Select(StatusColumn + "='D'").Length;
+            //    saveResult.TranRowcount = dt.Rows.Count;
+            //    var tPack = new TransactionPack();
+
+
+
+            //    for (int cnt = 0; cnt < dataGridView.DataRowCount; cnt++)
+            //    {
+            //        Console.WriteLine("1 ---> [" + dt.Rows[cnt][StatusColumn].ToString() + "]");
+            //        Console.WriteLine("2 ---> [" + dt.Rows.Count + "]");
+            //        //if (dt.Rows[cnt][StatusColumn].ToString() == "U")
+            //        //{
+            //        //    Console.WriteLine("3 ---> [" + cnt + "]");
+            //        //}
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            //}
         }
 
         private void gridView1_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)

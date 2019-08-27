@@ -202,6 +202,7 @@ namespace YL_GSHOP.BizFrm
             {
                 COMPANYCD = "YL01",
                 COMPANYNAME = "(주)와이엘랜드",
+                MEMBER_TYPE = "ALL"
             };
             popup.FormClosed += popup_FormClosed1;
             PopUpBizAgent.Show(this, popup);
