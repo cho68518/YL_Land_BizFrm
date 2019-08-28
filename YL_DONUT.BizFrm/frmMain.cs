@@ -15,7 +15,7 @@ namespace YL_DONUT.BizFrm
 {
     public partial class frmMain : XtraForm
     {
-        public frmMain()
+        public frmMain() 
         {
             InitializeComponent();
         }

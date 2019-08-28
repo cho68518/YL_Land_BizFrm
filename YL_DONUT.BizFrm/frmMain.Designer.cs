@@ -163,7 +163,7 @@
             this.btnDN13.Name = "btnDN13";
             this.btnDN13.Size = new System.Drawing.Size(180, 35);
             this.btnDN13.TabIndex = 15;
-            this.btnDN13.Text = "frmDN13";
+            this.btnDN13.Text = "frmDN13(PS수수료 월정산요약)";
             this.btnDN13.Click += new System.EventHandler(this.BtnDN13_Click);
             // 
             // btnDN12
