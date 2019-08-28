@@ -29,17 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN18));
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtI_SEARCH = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.btnFixDate = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.btnFixCancel = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.cmbORDER_SEARCH = new Easy.Framework.WinForm.Control.efwLookUpEdit();
+            this.btnFix = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.dtAcc_Date = new Easy.Framework.WinForm.Control.efwDateEdit();
+            this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
-            this.advBandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
             this.주문기본정보 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -72,33 +82,31 @@
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.txtI_SEARCH = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.btnFixDate = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnFixCancel = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.cmbORDER_SEARCH = new Easy.Framework.WinForm.Control.efwLookUpEdit();
-            this.btnFix = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.dtAcc_Date = new Easy.Framework.WinForm.Control.efwDateEdit();
-            this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.bandedGridColumn4 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn5 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn6 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn7 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn8 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn9 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn10 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn11 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtI_SEARCH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbORDER_SEARCH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtAcc_Date.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtAcc_Date.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -116,6 +124,146 @@
             this.efwGroupControl1.Size = new System.Drawing.Size(1251, 106);
             this.efwGroupControl1.TabIndex = 20;
             this.efwGroupControl1.Text = "정산현황 및 마감";
+            // 
+            // efwGroupControl2
+            // 
+            this.efwGroupControl2.Controls.Add(this.txtI_SEARCH);
+            this.efwGroupControl2.Controls.Add(this.btnFixDate);
+            this.efwGroupControl2.Controls.Add(this.btnFixCancel);
+            this.efwGroupControl2.Controls.Add(this.cmbORDER_SEARCH);
+            this.efwGroupControl2.Controls.Add(this.btnFix);
+            this.efwGroupControl2.Controls.Add(this.efwLabel3);
+            this.efwGroupControl2.Controls.Add(this.efwLabel2);
+            this.efwGroupControl2.Controls.Add(this.dtAcc_Date);
+            this.efwGroupControl2.Controls.Add(this.efwLabel4);
+            this.efwGroupControl2.IsMultiLang = false;
+            this.efwGroupControl2.Location = new System.Drawing.Point(338, 31);
+            this.efwGroupControl2.Name = "efwGroupControl2";
+            this.efwGroupControl2.ShowCaption = false;
+            this.efwGroupControl2.Size = new System.Drawing.Size(895, 66);
+            this.efwGroupControl2.TabIndex = 19;
+            this.efwGroupControl2.Text = "efwGroupControl2";
+            // 
+            // txtI_SEARCH
+            // 
+            this.txtI_SEARCH.EditValue2 = null;
+            this.txtI_SEARCH.EraserGroup = "CLR1";
+            this.txtI_SEARCH.Location = new System.Drawing.Point(204, 9);
+            this.txtI_SEARCH.Name = "txtI_SEARCH";
+            this.txtI_SEARCH.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtI_SEARCH.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtI_SEARCH.RequireMessage = null;
+            this.txtI_SEARCH.Size = new System.Drawing.Size(157, 20);
+            this.txtI_SEARCH.TabIndex = 43;
+            // 
+            // btnFixDate
+            // 
+            this.btnFixDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFixDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFixDate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFixDate.ImageOptions.Image")));
+            this.btnFixDate.IsMultiLang = false;
+            this.btnFixDate.Location = new System.Drawing.Point(633, 4);
+            this.btnFixDate.Name = "btnFixDate";
+            this.btnFixDate.Size = new System.Drawing.Size(116, 26);
+            this.btnFixDate.TabIndex = 40;
+            this.btnFixDate.Text = "월 마감";
+            this.btnFixDate.ToolTip = "월 마감";
+            this.btnFixDate.Click += new System.EventHandler(this.BtnFixDate_Click);
+            // 
+            // btnFixCancel
+            // 
+            this.btnFixCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFixCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFixCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFixCancel.ImageOptions.Image")));
+            this.btnFixCancel.IsMultiLang = false;
+            this.btnFixCancel.Location = new System.Drawing.Point(755, 4);
+            this.btnFixCancel.Name = "btnFixCancel";
+            this.btnFixCancel.Size = new System.Drawing.Size(116, 26);
+            this.btnFixCancel.TabIndex = 39;
+            this.btnFixCancel.Text = "마감취소";
+            this.btnFixCancel.ToolTip = "마감취소";
+            this.btnFixCancel.Click += new System.EventHandler(this.BtnFixCancel_Click);
+            // 
+            // cmbORDER_SEARCH
+            // 
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbORDER_SEARCH.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbORDER_SEARCH.HierarchyInfo = hierarchy1;
+            this.cmbORDER_SEARCH.IsMultiLang = false;
+            this.cmbORDER_SEARCH.Location = new System.Drawing.Point(77, 9);
+            this.cmbORDER_SEARCH.MasterCode = "E03.ORDER_SEARCH2";
+            this.cmbORDER_SEARCH.Name = "cmbORDER_SEARCH";
+            this.cmbORDER_SEARCH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbORDER_SEARCH.Size = new System.Drawing.Size(121, 20);
+            this.cmbORDER_SEARCH.TabIndex = 42;
+            // 
+            // btnFix
+            // 
+            this.btnFix.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFix.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFix.ImageOptions.Image")));
+            this.btnFix.IsMultiLang = false;
+            this.btnFix.Location = new System.Drawing.Point(77, 35);
+            this.btnFix.Name = "btnFix";
+            this.btnFix.Size = new System.Drawing.Size(163, 26);
+            this.btnFix.TabIndex = 38;
+            this.btnFix.Text = "수수료 일괄 적용";
+            this.btnFix.ToolTip = "수수료 일괄 적용";
+            this.btnFix.Click += new System.EventHandler(this.BtnFix_Click);
+            // 
+            // efwLabel3
+            // 
+            this.efwLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.efwLabel3.EraserGroup = null;
+            this.efwLabel3.IsMultiLang = false;
+            this.efwLabel3.Location = new System.Drawing.Point(461, 12);
+            this.efwLabel3.Name = "efwLabel3";
+            this.efwLabel3.Size = new System.Drawing.Size(30, 14);
+            this.efwLabel3.TabIndex = 37;
+            this.efwLabel3.Text = "정산일";
+            // 
+            // efwLabel2
+            // 
+            this.efwLabel2.EraserGroup = null;
+            this.efwLabel2.IsMultiLang = false;
+            this.efwLabel2.Location = new System.Drawing.Point(20, 12);
+            this.efwLabel2.Name = "efwLabel2";
+            this.efwLabel2.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel2.TabIndex = 41;
+            this.efwLabel2.Text = "주문검색";
+            // 
+            // dtAcc_Date
+            // 
+            this.dtAcc_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtAcc_Date.EditValue = null;
+            this.dtAcc_Date.EraserGroup = "CLR1";
+            this.dtAcc_Date.Location = new System.Drawing.Point(504, 8);
+            this.dtAcc_Date.Name = "dtAcc_Date";
+            this.dtAcc_Date.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.dtAcc_Date.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.dtAcc_Date.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtAcc_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtAcc_Date.Size = new System.Drawing.Size(121, 20);
+            this.dtAcc_Date.TabIndex = 36;
+            // 
+            // efwLabel4
+            // 
+            this.efwLabel4.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.efwLabel4.Appearance.Options.UseForeColor = true;
+            this.efwLabel4.EraserGroup = null;
+            this.efwLabel4.IsMultiLang = false;
+            this.efwLabel4.Location = new System.Drawing.Point(461, 41);
+            this.efwLabel4.Name = "efwLabel4";
+            this.efwLabel4.Size = new System.Drawing.Size(322, 14);
+            this.efwLabel4.TabIndex = 27;
+            this.efwLabel4.Text = "※ 정산일을 입력 후 마감처리 시에는 확정 되므로 수정이 불가합니다.";
             // 
             // toggleSwitch1
             // 
@@ -182,7 +330,7 @@
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
             this.efwGridControl1.Location = new System.Drawing.Point(3, 141);
-            this.efwGridControl1.MainView = this.advBandedGridView1;
+            this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
@@ -202,17 +350,17 @@
             serviceInfo3.UserParams = null;
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.advBandedGridView1});
+            this.gridView1});
             this.efwGridControl1.Click += new System.EventHandler(this.EfwGridControl1_Click);
             // 
-            // advBandedGridView1
+            // gridView1
             // 
-            this.advBandedGridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
-            this.advBandedGridView1.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.advBandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
+            this.gridView1.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
             this.주문기본정보,
             this.gridBand1});
-            this.advBandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.gridColumn1,
             this.gridColumn19,
             this.gridColumn23,
@@ -238,9 +386,17 @@
             this.gridColumn18,
             this.bandedGridColumn1,
             this.bandedGridColumn2,
-            this.bandedGridColumn3});
-            this.advBandedGridView1.GridControl = this.efwGridControl1;
-            this.advBandedGridView1.Name = "advBandedGridView1";
+            this.bandedGridColumn3,
+            this.bandedGridColumn4,
+            this.bandedGridColumn5,
+            this.bandedGridColumn6,
+            this.bandedGridColumn7,
+            this.bandedGridColumn8,
+            this.bandedGridColumn9,
+            this.bandedGridColumn10,
+            this.bandedGridColumn11});
+            this.gridView1.GridControl = this.efwGridControl1;
+            this.gridView1.Name = "gridView1";
             // 
             // 주문기본정보
             // 
@@ -540,143 +696,61 @@
             this.repositoryItemCheckEdit1.ValueChecked = "Y";
             this.repositoryItemCheckEdit1.ValueUnchecked = "N";
             // 
-            // efwGroupControl2
+            // bandedGridColumn4
             // 
-            this.efwGroupControl2.Controls.Add(this.txtI_SEARCH);
-            this.efwGroupControl2.Controls.Add(this.btnFixDate);
-            this.efwGroupControl2.Controls.Add(this.btnFixCancel);
-            this.efwGroupControl2.Controls.Add(this.cmbORDER_SEARCH);
-            this.efwGroupControl2.Controls.Add(this.btnFix);
-            this.efwGroupControl2.Controls.Add(this.efwLabel3);
-            this.efwGroupControl2.Controls.Add(this.efwLabel2);
-            this.efwGroupControl2.Controls.Add(this.dtAcc_Date);
-            this.efwGroupControl2.Controls.Add(this.efwLabel4);
-            this.efwGroupControl2.IsMultiLang = false;
-            this.efwGroupControl2.Location = new System.Drawing.Point(338, 31);
-            this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.ShowCaption = false;
-            this.efwGroupControl2.Size = new System.Drawing.Size(895, 66);
-            this.efwGroupControl2.TabIndex = 19;
-            this.efwGroupControl2.Text = "efwGroupControl2";
+            this.bandedGridColumn4.Caption = "아이디";
+            this.bandedGridColumn4.FieldName = "id";
+            this.bandedGridColumn4.Name = "bandedGridColumn4";
+            this.bandedGridColumn4.Visible = true;
             // 
-            // txtI_SEARCH
+            // bandedGridColumn5
             // 
-            this.txtI_SEARCH.EditValue2 = null;
-            this.txtI_SEARCH.EraserGroup = "CLR1";
-            this.txtI_SEARCH.Location = new System.Drawing.Point(204, 9);
-            this.txtI_SEARCH.Name = "txtI_SEARCH";
-            this.txtI_SEARCH.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtI_SEARCH.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtI_SEARCH.RequireMessage = null;
-            this.txtI_SEARCH.Size = new System.Drawing.Size(157, 20);
-            this.txtI_SEARCH.TabIndex = 43;
+            this.bandedGridColumn5.Caption = "o_u_id";
+            this.bandedGridColumn5.FieldName = "o_u_id";
+            this.bandedGridColumn5.Name = "bandedGridColumn5";
+            this.bandedGridColumn5.Visible = true;
             // 
-            // btnFixDate
+            // bandedGridColumn6
             // 
-            this.btnFixDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFixDate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFixDate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFixDate.ImageOptions.Image")));
-            this.btnFixDate.IsMultiLang = false;
-            this.btnFixDate.Location = new System.Drawing.Point(633, 4);
-            this.btnFixDate.Name = "btnFixDate";
-            this.btnFixDate.Size = new System.Drawing.Size(116, 26);
-            this.btnFixDate.TabIndex = 40;
-            this.btnFixDate.Text = "월 마감";
-            this.btnFixDate.ToolTip = "월 마감";
-            this.btnFixDate.Click += new System.EventHandler(this.BtnFixDate_Click);
+            this.bandedGridColumn6.Caption = "제품코드";
+            this.bandedGridColumn6.FieldName = "p_code";
+            this.bandedGridColumn6.Name = "bandedGridColumn6";
+            this.bandedGridColumn6.Visible = true;
             // 
-            // btnFixCancel
+            // bandedGridColumn7
             // 
-            this.btnFixCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFixCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFixCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFixCancel.ImageOptions.Image")));
-            this.btnFixCancel.IsMultiLang = false;
-            this.btnFixCancel.Location = new System.Drawing.Point(755, 4);
-            this.btnFixCancel.Name = "btnFixCancel";
-            this.btnFixCancel.Size = new System.Drawing.Size(116, 26);
-            this.btnFixCancel.TabIndex = 39;
-            this.btnFixCancel.Text = "마감취소";
-            this.btnFixCancel.ToolTip = "마감취소";
+            this.bandedGridColumn7.Caption = "제품옵션코드";
+            this.bandedGridColumn7.FieldName = "p_p_id";
+            this.bandedGridColumn7.Name = "bandedGridColumn7";
+            this.bandedGridColumn7.Visible = true;
             // 
-            // cmbORDER_SEARCH
+            // bandedGridColumn8
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbORDER_SEARCH.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbORDER_SEARCH.HierarchyInfo = hierarchy1;
-            this.cmbORDER_SEARCH.IsMultiLang = false;
-            this.cmbORDER_SEARCH.Location = new System.Drawing.Point(77, 9);
-            this.cmbORDER_SEARCH.MasterCode = "E03.ORDER_SEARCH2";
-            this.cmbORDER_SEARCH.Name = "cmbORDER_SEARCH";
-            this.cmbORDER_SEARCH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbORDER_SEARCH.Size = new System.Drawing.Size(121, 20);
-            this.cmbORDER_SEARCH.TabIndex = 42;
+            this.bandedGridColumn8.Caption = "옵션명";
+            this.bandedGridColumn8.FieldName = "p_option_name";
+            this.bandedGridColumn8.Name = "bandedGridColumn8";
+            this.bandedGridColumn8.Visible = true;
             // 
-            // btnFix
+            // bandedGridColumn9
             // 
-            this.btnFix.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnFix.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFix.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFix.ImageOptions.Image")));
-            this.btnFix.IsMultiLang = false;
-            this.btnFix.Location = new System.Drawing.Point(77, 35);
-            this.btnFix.Name = "btnFix";
-            this.btnFix.Size = new System.Drawing.Size(163, 26);
-            this.btnFix.TabIndex = 38;
-            this.btnFix.Text = "수수료 일괄 적용";
-            this.btnFix.ToolTip = "수수료 일괄 적용";
+            this.bandedGridColumn9.Caption = "거래처금액";
+            this.bandedGridColumn9.FieldName = "o_purchase_cost";
+            this.bandedGridColumn9.Name = "bandedGridColumn9";
+            this.bandedGridColumn9.Visible = true;
             // 
-            // efwLabel3
+            // bandedGridColumn10
             // 
-            this.efwLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.efwLabel3.EraserGroup = null;
-            this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(461, 12);
-            this.efwLabel3.Name = "efwLabel3";
-            this.efwLabel3.Size = new System.Drawing.Size(30, 14);
-            this.efwLabel3.TabIndex = 37;
-            this.efwLabel3.Text = "정산일";
+            this.bandedGridColumn10.Caption = "세프아이디";
+            this.bandedGridColumn10.FieldName = "u_id2";
+            this.bandedGridColumn10.Name = "bandedGridColumn10";
+            this.bandedGridColumn10.Visible = true;
             // 
-            // efwLabel2
+            // bandedGridColumn11
             // 
-            this.efwLabel2.EraserGroup = null;
-            this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(20, 12);
-            this.efwLabel2.Name = "efwLabel2";
-            this.efwLabel2.Size = new System.Drawing.Size(40, 14);
-            this.efwLabel2.TabIndex = 41;
-            this.efwLabel2.Text = "주문검색";
-            // 
-            // dtAcc_Date
-            // 
-            this.dtAcc_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtAcc_Date.EditValue = null;
-            this.dtAcc_Date.EraserGroup = "CLR1";
-            this.dtAcc_Date.Location = new System.Drawing.Point(504, 8);
-            this.dtAcc_Date.Name = "dtAcc_Date";
-            this.dtAcc_Date.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.dtAcc_Date.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.dtAcc_Date.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtAcc_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtAcc_Date.Size = new System.Drawing.Size(121, 20);
-            this.dtAcc_Date.TabIndex = 36;
-            // 
-            // efwLabel4
-            // 
-            this.efwLabel4.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.efwLabel4.Appearance.Options.UseForeColor = true;
-            this.efwLabel4.EraserGroup = null;
-            this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(461, 41);
-            this.efwLabel4.Name = "efwLabel4";
-            this.efwLabel4.Size = new System.Drawing.Size(322, 14);
-            this.efwLabel4.TabIndex = 27;
-            this.efwLabel4.Text = "※ 정산일을 입력 후 마감처리 시에는 확정 되므로 수정이 불가합니다.";
+            this.bandedGridColumn11.Caption = "세프명";
+            this.bandedGridColumn11.FieldName = "chef_name";
+            this.bandedGridColumn11.Name = "bandedGridColumn11";
+            this.bandedGridColumn11.Visible = true;
             // 
             // frmDN18
             // 
@@ -691,15 +765,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
             this.efwGroupControl2.PerformLayout();
@@ -707,6 +772,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbORDER_SEARCH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtAcc_Date.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtAcc_Date.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -722,7 +796,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView advBandedGridView1;
+        private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView gridView1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn19;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn23;
@@ -761,5 +835,13 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
         private Easy.Framework.WinForm.Control.efwDateEdit dtAcc_Date;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn4;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn5;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn6;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn7;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn8;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn9;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn10;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn11;
     }
 }

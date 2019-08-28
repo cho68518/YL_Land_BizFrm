@@ -101,10 +101,8 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTest01.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frmTest01.Designer.cs">
+    <Compile Include="frmTest01.cs" />
+    <Compile Include="frmTest01.designer.cs">
       <DependentUpon>frmTest01.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
