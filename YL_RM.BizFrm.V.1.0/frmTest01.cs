@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace YL_RM.BizFrm
+namespace YL_PM.BizFrm
 {
     public partial class frmTest01 : FrmBase
     {
