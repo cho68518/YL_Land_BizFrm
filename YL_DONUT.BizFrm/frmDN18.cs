@@ -40,21 +40,29 @@ namespace YL_DONUT.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
+            advBandedGridView1.OptionsView.ShowFooter = true;
+
+            //그리드 컬럼에 체크박스 레포지토리아이템 추가
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "month_close_yn");
+
+            advBandedGridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
+            //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "총주문금액: {0:c}";
+            advBandedGridView1.Columns["p_num"].SummaryItem.DisplayFormat = "수량: {0}";
+
+
+            advBandedGridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
+            //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "총주문금액: {0:c}";
+            advBandedGridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
+
+            dtS_DATE.Properties.Mask.EditMask = "yyyy-MM";
+            dtS_DATE.Properties.DisplayFormat.FormatString = "yyyy-MM";
+            dtS_DATE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            dtS_DATE.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            dtS_DATE.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
             dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
 
-            gridView1.OptionsView.ShowFooter = true;
-
-
-            gridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
-            //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "총주문금액: {0:c}";
-            gridView1.Columns["p_num"].SummaryItem.DisplayFormat = "수량: {0}";
-
-
-            gridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
-            //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "총주문금액: {0:c}";
-            gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
         }
 
         #endregion
