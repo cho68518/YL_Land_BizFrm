@@ -327,8 +327,11 @@
             // gridColumn10
             // 
             this.gridColumn10.Caption = "입금액";
+            this.gridColumn10.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn10.FieldName = "lgd_amount";
             this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 11;
             // 

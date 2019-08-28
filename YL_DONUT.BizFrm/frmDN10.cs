@@ -269,6 +269,7 @@ namespace YL_DONUT.BizFrm
                     }
                 }
                 this.Cursor = Cursors.Default;
+
             }
             catch (Exception ex)
             {
@@ -589,8 +590,8 @@ namespace YL_DONUT.BizFrm
 
                             cmd.Parameters.Add("chef_login_id", MySqlDbType.VarChar, 128);
                             cmd.Parameters[16].Value = gridView1.GetRowCellValue(i, "u_id2");
-
                             cmd.Parameters.Add("chef_name", MySqlDbType.VarChar, 50);
+           
                             cmd.Parameters[17].Value = gridView1.GetRowCellValue(i, "chef_name");
 
                             cmd.Parameters.Add("chef_nickname", MySqlDbType.VarChar, 50);
