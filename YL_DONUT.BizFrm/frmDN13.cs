@@ -55,7 +55,7 @@ namespace YL_DONUT.BizFrm
 
             advBandedGridView1.Columns["g_cnt1"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["g_cnt1"].SummaryItem.FieldName = "g_cnt1";
-            advBandedGridView1.Columns["g_cnt1"].SummaryItem.DisplayFormat = "{0:c}";
+            advBandedGridView1.Columns["g_cnt1"].SummaryItem.DisplayFormat = "{0}";
 
             advBandedGridView1.Columns["chef_refund"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["chef_refund"].SummaryItem.FieldName = "chef_refund";
@@ -81,6 +81,21 @@ namespace YL_DONUT.BizFrm
             advBandedGridView1.Columns["t_cnt"].SummaryItem.FieldName = "t_cnt";
             advBandedGridView1.Columns["t_cnt"].SummaryItem.DisplayFormat = "{0:c}";
 
+            advBandedGridView1.Columns["g_cnt2"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["g_cnt2"].SummaryItem.FieldName = "g_cnt2";
+            advBandedGridView1.Columns["g_cnt2"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["g_chef_refund"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["g_chef_refund"].SummaryItem.FieldName = "g_chef_refund";
+            advBandedGridView1.Columns["g_chef_refund"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["o_total_cost2"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["o_total_cost2"].SummaryItem.FieldName = "o_total_cost2";
+            advBandedGridView1.Columns["o_total_cost2"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["t_chef_refund"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["t_chef_refund"].SummaryItem.FieldName = "t_chef_refund";
+            advBandedGridView1.Columns["t_chef_refund"].SummaryItem.DisplayFormat = "{0:c}";
 
             //this.efwGridControl1.BindControlSet(
             //new ColumnControlSet("id", txtID)
