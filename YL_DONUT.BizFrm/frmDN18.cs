@@ -56,6 +56,14 @@ namespace YL_DONUT.BizFrm
             //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "총주문금액: {0:c}";
             advBandedGridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
+            advBandedGridView1.Columns["chef_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["chef_amt"].SummaryItem.FieldName = "chef_amt";
+            advBandedGridView1.Columns["chef_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["fix_chef_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["fix_chef_amt"].SummaryItem.FieldName = "fix_chef_amt";
+            advBandedGridView1.Columns["fix_chef_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
             dtS_DATE.Properties.Mask.EditMask = "yyyy-MM";
             dtS_DATE.Properties.DisplayFormat.FormatString = "yyyy-MM";
             dtS_DATE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
