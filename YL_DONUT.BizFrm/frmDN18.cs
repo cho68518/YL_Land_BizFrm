@@ -34,7 +34,7 @@ namespace YL_DONUT.BizFrm
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = true;
-            this.IsSave = false;
+            this.IsSave = true;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = false;
@@ -70,7 +70,7 @@ namespace YL_DONUT.BizFrm
             dtS_DATE.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
             dtS_DATE.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
             dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
-
+            cmbORDER_SEARCH.EditValue = "1";
         }
 
         #endregion
@@ -105,6 +105,12 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
                         cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
 
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = cmbORDER_SEARCH.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = txtI_SEARCH.EditValue;
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -122,6 +128,130 @@ namespace YL_DONUT.BizFrm
         }
 
 
+        public override void Save()
+        {
+            if (dtAcc_Date.EditValue3 != "")
+            {
+                MessageAgent.MessageShow(MessageType.Confirm, "마감 처리되어 수정할수 없습니다.");
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    var saveResult = new SaveTableResultInfo() { IsError = true };
+
+                    var dt = efwGridControl1.GetChangeDataWithRowState;
+                    var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+                    for (var i = 0; i < dt.Rows.Count; i++)
+                    {
+                        if (dt.Rows[i][StatusColumn].ToString() == "U")
+                        {
+                            //Console.WriteLine("------------------------------------------------------------");
+                            //Console.WriteLine("[U] " + dt.Rows[i]["o_code"].ToString());
+                            using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                            {
+                                using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN18_SAVE_02", con))
+                                {
+
+                                    con.Open();
+                                    cmd.CommandType = CommandType.StoredProcedure;
+
+                                    cmd.Parameters.Add("i_yymm", MySqlDbType.VarChar, 6);
+                                    cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
+
+                                    cmd.Parameters.Add("i_acc_date", MySqlDbType.VarChar, 10);
+                                    cmd.Parameters[1].Value = dtAcc_Date.EditValue3;
+
+                                    cmd.Parameters.Add("o_date", MySqlDbType.DateTime, 50);
+                                    cmd.Parameters[2].Value = Convert.ToDateTime(dt.Rows[i]["o_date"].ToString());
+
+                                    cmd.Parameters.Add("o_id", MySqlDbType.Int32, 11);
+                                    cmd.Parameters[3].Value = Convert.ToInt32(dt.Rows[i]["id"].ToString());
+
+                                    cmd.Parameters.Add("o_code", MySqlDbType.VarChar, 50);
+                                    cmd.Parameters[4].Value = dt.Rows[i]["o_code"].ToString();
+
+                                    cmd.Parameters.Add("o_u_id", MySqlDbType.VarChar, 50);
+                                    cmd.Parameters[5].Value = dt.Rows[i]["o_u_id"].ToString();
+
+                                    cmd.Parameters.Add("o_u_name", MySqlDbType.VarChar, 50);
+                                    cmd.Parameters[6].Value = dt.Rows[i]["o_receive_name"].ToString();
+
+                                    cmd.Parameters.Add("o_u_nickname", MySqlDbType.VarChar, 50);
+                                    cmd.Parameters[7].Value = dt.Rows[i]["u_nickname"].ToString();
+
+                                    cmd.Parameters.Add("o_type", MySqlDbType.VarChar, 20);
+                                    cmd.Parameters[8].Value = dt.Rows[i]["o_type"].ToString();
+
+                                    cmd.Parameters.Add("p_id", MySqlDbType.Int32, 11);
+                                    cmd.Parameters[9].Value = Convert.ToInt32(dt.Rows[i]["p_code"].ToString());
+
+                                    cmd.Parameters.Add("product_name", MySqlDbType.VarChar, 1000);
+                                    cmd.Parameters[10].Value = dt.Rows[i]["p_name"].ToString();
+
+                                    cmd.Parameters.Add("option_id", MySqlDbType.Int32, 11);
+                                    cmd.Parameters[11].Value = Convert.ToInt32(dt.Rows[i]["p_p_id"].ToString());
+
+                                    cmd.Parameters.Add("option_name", MySqlDbType.VarChar, 1000);
+                                    cmd.Parameters[12].Value = dt.Rows[i]["p_option_name"].ToString();
+
+                                    cmd.Parameters.Add("o_qty", MySqlDbType.Int32, 10);
+                                    cmd.Parameters[13].Value = Convert.ToInt32(dt.Rows[i]["p_num"].ToString());
+
+                                    cmd.Parameters.Add("o_total_cost", MySqlDbType.Int32, 15);
+                                    cmd.Parameters[14].Value = Convert.ToInt32(dt.Rows[i]["o_total_cost"].ToString());
+
+                                    cmd.Parameters.Add("o_purchase_cost", MySqlDbType.Int32, 15);
+                                    cmd.Parameters[15].Value = Convert.ToInt32(dt.Rows[i]["o_purchase_cost"].ToString());
+
+                                    cmd.Parameters.Add("chef_login_id", MySqlDbType.VarChar, 128);
+                                    cmd.Parameters[16].Value = dt.Rows[i]["u_id2"].ToString();
+
+                                    cmd.Parameters.Add("chef_name", MySqlDbType.VarChar, 50);
+                                    cmd.Parameters[17].Value = dt.Rows[i]["chef_name"].ToString();
+
+                                    cmd.Parameters.Add("chef_nickname", MySqlDbType.VarChar, 50);
+                                    cmd.Parameters[18].Value = dt.Rows[i]["rec_u_nickname"].ToString();
+
+                                    cmd.Parameters.Add("chef_amt", MySqlDbType.Int32, 15);
+                                    cmd.Parameters[19].Value = Convert.ToInt32(dt.Rows[i]["fix_chef_amt"].ToString());
+
+                                    cmd.Parameters.Add("tweet_cnt", MySqlDbType.Int32, 11);
+                                    cmd.Parameters[20].Value = Convert.ToInt32(dt.Rows[i]["t_cnt"].ToString());
+
+                                    cmd.Parameters.Add("is_write", MySqlDbType.VarChar, 1);
+                                    cmd.Parameters[21].Value = dt.Rows[i]["is_write"].ToString();
+
+                                    cmd.Parameters.Add("i_idx", MySqlDbType.Int32, 15);
+                                    cmd.Parameters[22].Value = Convert.ToInt32(dt.Rows[i]["idx"].ToString());
+
+                                    cmd.Parameters.Add("gshop_name", MySqlDbType.VarChar, 100);
+                                    cmd.Parameters[23].Value = Convert.ToInt32(dt.Rows[i]["idx"].ToString());
+
+                                    //Console.WriteLine("o_date--->" + dt.Rows[i]["o_date"].ToString());
+                                    //Console.WriteLine("idx--->" + dt.Rows[i]["idx"].ToString());
+
+
+                                    cmd.ExecuteNonQuery();
+                                    con.Close();
+                                }
+                            }
+                        }
+                    }
+                    Search();
+                }
+
+
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
 
 
         #endregion
@@ -393,7 +523,7 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters[22].Value = gridView1.GetRowCellValue(i, "idx");
 
                             cmd.Parameters.Add("gshop_name", MySqlDbType.VarChar, 100);
-                            cmd.Parameters[22].Value = gridView1.GetRowCellValue(i, "o_receive_name");
+                            cmd.Parameters[23].Value = gridView1.GetRowCellValue(i, "o_receive_name");
 
 
                             cmd.ExecuteNonQuery();
@@ -411,6 +541,12 @@ namespace YL_DONUT.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 Cursor.Current = Cursors.Default;
             }
+        }
+
+        private void TxtI_SEARCH_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
         }
     }
 }
