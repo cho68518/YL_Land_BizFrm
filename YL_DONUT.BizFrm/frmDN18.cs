@@ -230,7 +230,7 @@ namespace YL_DONUT.BizFrm
             using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
             {
                 sql.Query = "SELECT count(*) FROM domamall.tb_ps_charge_month " +
-                             "WHERE yymm = '" + dtS_DATE.EditValue3.Substring(0, 6) + "' and LENGTH(acc_date) > 0 and p+type = '02' ";
+                             "WHERE yymm = '" + dtS_DATE.EditValue3.Substring(0, 6) + "' and LENGTH(acc_date) > 0 and p_type = '02' ";
                 DataSet ds = sql.selectQueryDataSet();
                 nCnt = Convert.ToInt32(sql.selectQueryForSingleValue());
             }
@@ -391,6 +391,10 @@ namespace YL_DONUT.BizFrm
 
                             cmd.Parameters.Add("i_idx", MySqlDbType.Int32, 15);
                             cmd.Parameters[22].Value = gridView1.GetRowCellValue(i, "idx");
+
+                            cmd.Parameters.Add("gshop_name", MySqlDbType.VarChar, 100);
+                            cmd.Parameters[22].Value = gridView1.GetRowCellValue(i, "o_receive_name");
+
 
                             cmd.ExecuteNonQuery();
                             con.Close();
