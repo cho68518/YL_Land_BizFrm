@@ -775,7 +775,9 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.Transparent;
+            this.gridColumn6.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn6.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.LemonChiffon;
             this.gridColumn6.AppearanceHeader.BackColor2 = System.Drawing.Color.Transparent;
             this.gridColumn6.AppearanceHeader.BorderColor = System.Drawing.Color.Transparent;
             this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Transparent;
