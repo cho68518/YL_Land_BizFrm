@@ -174,7 +174,7 @@
             this.efwGroupControl2.Location = new System.Drawing.Point(651, 28);
             this.efwGroupControl2.Name = "efwGroupControl2";
             this.efwGroupControl2.ShowCaption = false;
-            this.efwGroupControl2.Size = new System.Drawing.Size(642, 66);
+            this.efwGroupControl2.Size = new System.Drawing.Size(818, 66);
             this.efwGroupControl2.TabIndex = 18;
             this.efwGroupControl2.Text = "efwGroupControl2";
             // 
@@ -182,9 +182,9 @@
             // 
             this.btnFixDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFixDate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFixDate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.btnFixDate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFixDate.ImageOptions.Image")));
             this.btnFixDate.IsMultiLang = false;
-            this.btnFixDate.Location = new System.Drawing.Point(384, 9);
+            this.btnFixDate.Location = new System.Drawing.Point(208, 9);
             this.btnFixDate.Name = "btnFixDate";
             this.btnFixDate.Size = new System.Drawing.Size(116, 26);
             this.btnFixDate.TabIndex = 40;
@@ -198,7 +198,7 @@
             this.btnFixCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFixCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFixCancel.ImageOptions.Image")));
             this.btnFixCancel.IsMultiLang = false;
-            this.btnFixCancel.Location = new System.Drawing.Point(506, 10);
+            this.btnFixCancel.Location = new System.Drawing.Point(330, 10);
             this.btnFixCancel.Name = "btnFixCancel";
             this.btnFixCancel.Size = new System.Drawing.Size(116, 26);
             this.btnFixCancel.TabIndex = 39;
@@ -212,12 +212,12 @@
             this.btnFix.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFix.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFix.ImageOptions.Image")));
             this.btnFix.IsMultiLang = false;
-            this.btnFix.Location = new System.Drawing.Point(17, 9);
+            this.btnFix.Location = new System.Drawing.Point(587, 35);
             this.btnFix.Name = "btnFix";
             this.btnFix.Size = new System.Drawing.Size(163, 26);
             this.btnFix.TabIndex = 38;
-            this.btnFix.Text = "월 정산내역산정";
-            this.btnFix.ToolTip = "월 정산내역산정";
+            this.btnFix.Text = "수수료 일괄 적용";
+            this.btnFix.ToolTip = "수수료 일괄 적용";
             this.btnFix.Click += new System.EventHandler(this.BtnFix_Click);
             // 
             // efwLabel3
@@ -225,18 +225,18 @@
             this.efwLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.efwLabel3.EraserGroup = null;
             this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(212, 17);
+            this.efwLabel3.Location = new System.Drawing.Point(36, 17);
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(30, 14);
             this.efwLabel3.TabIndex = 37;
-            this.efwLabel3.Text = "마감일";
+            this.efwLabel3.Text = "정산일";
             // 
             // dtAcc_Date
             // 
             this.dtAcc_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtAcc_Date.EditValue = null;
             this.dtAcc_Date.EraserGroup = "CLR1";
-            this.dtAcc_Date.Location = new System.Drawing.Point(255, 13);
+            this.dtAcc_Date.Location = new System.Drawing.Point(79, 13);
             this.dtAcc_Date.Name = "dtAcc_Date";
             this.dtAcc_Date.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.dtAcc_Date.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -253,7 +253,7 @@
             this.efwLabel4.Appearance.Options.UseForeColor = true;
             this.efwLabel4.EraserGroup = null;
             this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(17, 41);
+            this.efwLabel4.Location = new System.Drawing.Point(78, 41);
             this.efwLabel4.Name = "efwLabel4";
             this.efwLabel4.Size = new System.Drawing.Size(322, 14);
             this.efwLabel4.TabIndex = 27;
@@ -775,13 +775,22 @@
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn6.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.LemonChiffon;
+            this.gridColumn6.AppearanceHeader.BackColor2 = System.Drawing.Color.Transparent;
+            this.gridColumn6.AppearanceHeader.BorderColor = System.Drawing.Color.Transparent;
+            this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Transparent;
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn6.AppearanceHeader.Options.UseBorderColor = true;
+            this.gridColumn6.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn6.Caption = "마감수수료";
             this.gridColumn6.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "fix_chef_amt";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 34;
+            this.gridColumn6.VisibleIndex = 29;
             // 
             // gridColumn67
             // 
@@ -790,7 +799,7 @@
             this.gridColumn67.Name = "gridColumn67";
             this.gridColumn67.OptionsColumn.AllowEdit = false;
             this.gridColumn67.Visible = true;
-            this.gridColumn67.VisibleIndex = 29;
+            this.gridColumn67.VisibleIndex = 30;
             // 
             // gridColumn68
             // 
@@ -799,7 +808,7 @@
             this.gridColumn68.Name = "gridColumn68";
             this.gridColumn68.OptionsColumn.AllowEdit = false;
             this.gridColumn68.Visible = true;
-            this.gridColumn68.VisibleIndex = 30;
+            this.gridColumn68.VisibleIndex = 31;
             // 
             // gridColumn1
             // 
@@ -808,7 +817,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 31;
+            this.gridColumn1.VisibleIndex = 32;
             // 
             // gridColumn2
             // 
@@ -817,7 +826,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 32;
+            this.gridColumn2.VisibleIndex = 33;
             // 
             // gridColumn3
             // 
@@ -826,7 +835,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 33;
+            this.gridColumn3.VisibleIndex = 34;
             // 
             // gridColumn4
             // 
@@ -842,16 +851,15 @@
             this.gridColumn7.Caption = "idx";
             this.gridColumn7.FieldName = "idx";
             this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 36;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "정산일";
             this.gridColumn9.FieldName = "acc_date";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 37;
+            this.gridColumn9.VisibleIndex = 36;
             // 
             // repositoryItemLookUpEdit2
             // 

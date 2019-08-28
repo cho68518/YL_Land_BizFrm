@@ -159,5 +159,6 @@ namespace YL_GSHOP.BizFrm
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
+
     }
 }
