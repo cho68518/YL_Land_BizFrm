@@ -89,6 +89,11 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["t_cnt"].SummaryItem.FieldName = "t_cnt";
             gridView1.Columns["t_cnt"].SummaryItem.DisplayFormat = "{0:c}";
 
+            gridView1.Columns["fix_chef_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["fix_chef_amt"].SummaryItem.FieldName = "fix_chef_amt";
+            gridView1.Columns["fix_chef_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+
             //gridView1.Columns["o_donut_d_cost"].Visible = false;
             gridView1.Columns["o_donut_m_cost"].Visible = false;
             //gridView1.Columns["o_donut_c_cost"].Visible = false;
@@ -213,51 +218,6 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
                         cmd.Parameters[3].Value = txtI_SEARCH.EditValue;
 
-                        sP_SHOW_TYPE = null;
-
-                        // efwRadioGroup1.Properties.Items[efwRadioGroup1.SelectedIndex].Value.ToString()
-                        cmd.Parameters.Add("i_is_order", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[4].Value = sP_SHOW_TYPE;
-
-                        cmd.Parameters.Add("i_order_mall_type", MySqlDbType.VarChar, 10);
-                        //cmd.Parameters[5].Value = cmbMALL_TYPE.EditValue;
-                        cmd.Parameters[5].Value = "";
-
-                        cmd.Parameters.Add("i_o_type1", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[6].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type2", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[7].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type3", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[8].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type4", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[9].Value = "Y";
-
-                        cmd.Parameters.Add("i_o_type5", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[10].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type6", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[11].Value = "Y";
-
-                        cmd.Parameters.Add("i_o_type7", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[12].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type8", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[13].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type9", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[14].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type10", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[15].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type11", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[16].Value = "N";
-
-                        cmd.Parameters.Add("i_o_type12", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[17].Value = "N";
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -291,6 +251,7 @@ namespace YL_DONUT.BizFrm
                 toggleSwitch1.IsOn = true;
             else
                 toggleSwitch1.IsOn = false;
+
         }
 
         private void GridView1_CustomDrawFooterCell(object sender, DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e)
@@ -409,8 +370,11 @@ namespace YL_DONUT.BizFrm
                             }
                         }
                     }
+                    Search();
                 }
 
+
+                
                 catch (Exception ex)
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
@@ -498,7 +462,7 @@ namespace YL_DONUT.BizFrm
             else
             {
                 //마감처리
-                if (MessageAgent.MessageShow(MessageType.Confirm, "마감처리를 하시겠습니까?") == DialogResult.OK)
+                if (MessageAgent.MessageShow(MessageType.Confirm, "수수료 적용을 하시겠습니까?") == DialogResult.OK)
                 {
                     MonthClose();
                 }
@@ -617,6 +581,7 @@ namespace YL_DONUT.BizFrm
 
                 MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
                 Cursor.Current = Cursors.Default;
+                Search();
             }
             catch (Exception ex)
             {
@@ -651,7 +616,7 @@ namespace YL_DONUT.BizFrm
 
                     MySqlCommand deleteCommand = new MySqlCommand();
                     deleteCommand.Connection = connection;
-                    deleteCommand.CommandText = "update domamall.tb_ps_charge_month set acc_date = ''  WHERE yymm=@wyymm";
+                    deleteCommand.CommandText = "update domamall.tb_ps_charge_month set acc_date = ''  WHERE yymm=@wyymm and p_type = '01' ";
 
                     deleteCommand.Parameters.Add("@wyymm", MySqlDbType.VarChar, 10);
                     deleteCommand.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
@@ -678,7 +643,7 @@ namespace YL_DONUT.BizFrm
                 // '" + dtS_DATE.EditValue3.Substring(0, 6) + "'
                 MySqlCommand deleteCommand = new MySqlCommand();
                 deleteCommand.Connection = connection;
-                deleteCommand.CommandText = "update domamall.tb_ps_charge_month set acc_date = '"  + dtAcc_Date.EditValue3.Substring(0, 8) + "'  WHERE yymm=@wyymm";
+                deleteCommand.CommandText = "update domamall.tb_ps_charge_month set acc_date = '"  + dtAcc_Date.EditValue3.Substring(0, 8) + "'  WHERE yymm=@wyymm and p_type = '01' ";
 
                 deleteCommand.Parameters.Add("@wyymm", MySqlDbType.VarChar, 10);
                 deleteCommand.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
@@ -706,6 +671,7 @@ namespace YL_DONUT.BizFrm
 
                     MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
                 }
+                Search();
             }
             catch (Exception ex)
             {
@@ -727,9 +693,9 @@ namespace YL_DONUT.BizFrm
                     return;
                 }
 
-                if (dtAcc_Date.EditValue3.Substring(0, 6) != dtS_DATE.EditValue3.Substring(0, 6))
+                if (Convert.ToInt32(dtAcc_Date.EditValue3.Substring(0, 6)) <= Convert.ToInt32(dtS_DATE.EditValue3.Substring(0, 6)))
                 {
-                    MessageAgent.MessageShow(MessageType.Confirm, " [주문/마감 월(月)] 년월과 [마감년월]은 일치 하여야 합니다.");
+                    MessageAgent.MessageShow(MessageType.Confirm, " [주문/마감 월(月)] 년월보다 이후의 [마감일자]를 선택하세요.");
                     return;
                 }
 
@@ -741,7 +707,9 @@ namespace YL_DONUT.BizFrm
 
                     MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
                 }
+                Search();
             }
+             
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
@@ -762,5 +730,11 @@ namespace YL_DONUT.BizFrm
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
+
+        //private void EfwGridControl1_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Enter)
+        //        dtS_DATE.Focus();
+        //}
     }
 }

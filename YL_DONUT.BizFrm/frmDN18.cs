@@ -121,10 +121,19 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+
+
+
         #endregion
 
+        private void EfwGridControl1_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void BtnFixDate_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
