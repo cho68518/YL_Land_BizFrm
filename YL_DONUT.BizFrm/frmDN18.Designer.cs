@@ -213,6 +213,8 @@
             // 
             // advBandedGridView1
             // 
+            this.advBandedGridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
+            this.advBandedGridView1.Appearance.FooterPanel.Options.UseForeColor = true;
             this.advBandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
             this.주문기본정보,
             this.gridBand1});
