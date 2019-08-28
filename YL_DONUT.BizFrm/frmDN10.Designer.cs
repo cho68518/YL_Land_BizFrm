@@ -88,9 +88,9 @@
             this.gridColumn64 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn65 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn66 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn67 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn68 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -388,7 +388,6 @@
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-
             // 
             // gridView1
             // 
@@ -765,9 +764,9 @@
             this.gridBand2.Columns.Add(this.gridColumn64);
             this.gridBand2.Columns.Add(this.gridColumn65);
             this.gridBand2.Columns.Add(this.gridColumn5);
-            this.gridBand2.Columns.Add(this.gridColumn9);
             this.gridBand2.Columns.Add(this.gridColumn66);
             this.gridBand2.Columns.Add(this.gridColumn6);
+            this.gridBand2.Columns.Add(this.gridColumn9);
             this.gridBand2.Columns.Add(this.gridColumn67);
             this.gridBand2.Columns.Add(this.gridColumn68);
             this.gridBand2.Columns.Add(this.gridColumn1);
@@ -780,6 +779,8 @@
             // 
             // gridColumn63
             // 
+            this.gridColumn63.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn63.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn63.Caption = "도마셰프ID";
             this.gridColumn63.FieldName = "u_id2";
             this.gridColumn63.Name = "gridColumn63";
@@ -788,6 +789,8 @@
             // 
             // gridColumn64
             // 
+            this.gridColumn64.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn64.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn64.Caption = "도마셰프명";
             this.gridColumn64.FieldName = "chef_name";
             this.gridColumn64.Name = "gridColumn64";
@@ -796,6 +799,8 @@
             // 
             // gridColumn65
             // 
+            this.gridColumn65.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn65.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn65.Caption = "도마셰프 닉네임";
             this.gridColumn65.FieldName = "chef_nickname";
             this.gridColumn65.Name = "gridColumn65";
@@ -804,22 +809,18 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.Caption = "현재 회원등급";
             this.gridColumn5.FieldName = "cur_u_chef_level";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "정산일";
-            this.gridColumn9.FieldName = "acc_date";
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.OptionsColumn.ReadOnly = true;
-            this.gridColumn9.Visible = true;
-            // 
             // gridColumn66
             // 
+            this.gridColumn66.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn66.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn66.Caption = "도마셰프 수수료";
             this.gridColumn66.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn66.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -846,8 +847,20 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             // 
+            // gridColumn9
+            // 
+            this.gridColumn9.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn9.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn9.Caption = "정산일";
+            this.gridColumn9.FieldName = "acc_date";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
+            this.gridColumn9.Visible = true;
+            // 
             // gridColumn67
             // 
+            this.gridColumn67.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn67.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn67.Caption = "트윗건수";
             this.gridColumn67.FieldName = "t_cnt";
             this.gridColumn67.Name = "gridColumn67";
@@ -856,6 +869,8 @@
             // 
             // gridColumn68
             // 
+            this.gridColumn68.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn68.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn68.Caption = "PS감사스토리";
             this.gridColumn68.FieldName = "is_write";
             this.gridColumn68.Name = "gridColumn68";
@@ -864,6 +879,8 @@
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.Caption = "PS감사스토리 생성일";
             this.gridColumn1.FieldName = "ps_reg_date";
             this.gridColumn1.Name = "gridColumn1";
@@ -872,6 +889,8 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.Caption = "PS감사스토리 작성일";
             this.gridColumn2.FieldName = "ps_write_date";
             this.gridColumn2.Name = "gridColumn2";
@@ -880,6 +899,8 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.Caption = "PS감사스토리 소멸일";
             this.gridColumn3.FieldName = "expiration_date";
             this.gridColumn3.Name = "gridColumn3";
@@ -888,6 +909,8 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.Caption = "PS운영자가격 결제유무";
             this.gridColumn4.FieldName = "is_psoper_order";
             this.gridColumn4.Name = "gridColumn4";
@@ -907,6 +930,8 @@
             // 
             // gridColumn7
             // 
+            this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn7.Caption = "idx";
             this.gridColumn7.FieldName = "idx";
             this.gridColumn7.Name = "gridColumn7";

@@ -45,7 +45,7 @@ namespace YL_DONUT.BizFrm
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
             //GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_write");
 
-            gridView1.OptionsView.ShowFooter = true;
+           advBandedGridView1.OptionsView.ShowFooter = true;
 
             //gridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             //gridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
@@ -53,33 +53,33 @@ namespace YL_DONUT.BizFrm
             //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
 
-            gridView1.Columns["total_count"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["total_count"].SummaryItem.FieldName = "total_count";
-            gridView1.Columns["total_count"].SummaryItem.DisplayFormat = "{0:c}";
+            advBandedGridView1.Columns["g_cnt1"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["g_cnt1"].SummaryItem.FieldName = "g_cnt1";
+            advBandedGridView1.Columns["g_cnt1"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["chef_refund"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["chef_refund"].SummaryItem.FieldName = "chef_refund";
-            gridView1.Columns["chef_refund"].SummaryItem.DisplayFormat = "{0:c}";
+            advBandedGridView1.Columns["chef_refund"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["chef_refund"].SummaryItem.FieldName = "chef_refund";
+            advBandedGridView1.Columns["chef_refund"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
-            gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            advBandedGridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
+            advBandedGridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["o_donut_d_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_donut_d_cost"].SummaryItem.FieldName = "o_donut_d_cost";
-            gridView1.Columns["o_donut_d_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            advBandedGridView1.Columns["o_donut_d_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["o_donut_d_cost"].SummaryItem.FieldName = "o_donut_d_cost";
+            advBandedGridView1.Columns["o_donut_d_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["o_donut_c_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_donut_c_cost"].SummaryItem.FieldName = "o_donut_c_cost";
-            gridView1.Columns["o_donut_c_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            advBandedGridView1.Columns["o_donut_c_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["o_donut_c_cost"].SummaryItem.FieldName = "o_donut_c_cost";
+            advBandedGridView1.Columns["o_donut_c_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["o_purchase_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_purchase_cost"].SummaryItem.FieldName = "o_purchase_cost";
-            gridView1.Columns["o_purchase_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            advBandedGridView1.Columns["o_purchase_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["o_purchase_cost"].SummaryItem.FieldName = "o_purchase_cost";
+            advBandedGridView1.Columns["o_purchase_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["t_cnt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["t_cnt"].SummaryItem.FieldName = "t_cnt";
-            gridView1.Columns["t_cnt"].SummaryItem.DisplayFormat = "{0:c}";
+            advBandedGridView1.Columns["t_cnt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["t_cnt"].SummaryItem.FieldName = "t_cnt";
+            advBandedGridView1.Columns["t_cnt"].SummaryItem.DisplayFormat = "{0:c}";
 
 
             //this.efwGridControl1.BindControlSet(
@@ -87,10 +87,6 @@ namespace YL_DONUT.BizFrm
             //  
             //this.efwGridControl1.Click += efwGridControl1_Click;
             //rbP_SHOW_TYPE.EditValue = "T";
-
-            chkD.Checked = true;
-            chkF.Checked = true;
-            chkE.Checked = true;
 
             dtS_DATE.Properties.Mask.EditMask = "yyyy-MM";
             dtS_DATE.Properties.DisplayFormat.FormatString = "yyyy-MM";
@@ -114,10 +110,6 @@ namespace YL_DONUT.BizFrm
                 this.Cursor = Cursors.WaitCursor;
 
                 string sP_SHOW_TYPE = string.Empty;
-
-                chkD.Checked = true;
-                chkF.Checked = false;
-                chkE.Checked = true;
 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
