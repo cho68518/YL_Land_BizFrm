@@ -87,11 +87,15 @@ namespace YL_DONUT.BizFrm
 
             gridView1.Columns["t_cnt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["t_cnt"].SummaryItem.FieldName = "t_cnt";
-            gridView1.Columns["t_cnt"].SummaryItem.DisplayFormat = "{0:c}";
+            gridView1.Columns["t_cnt"].SummaryItem.DisplayFormat = "{0}";
 
-            gridView1.Columns["fix_chef_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["fix_chef_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum; 
             gridView1.Columns["fix_chef_amt"].SummaryItem.FieldName = "fix_chef_amt";
             gridView1.Columns["fix_chef_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            //gridView1.Columns["lgd_amount"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum; 
+            //gridView1.Columns["lgd_amount"].SummaryItem.FieldName = "lgd_amount";
+            //gridView1.Columns["lgd_amount"].SummaryItem.DisplayFormat = "{0:c}";
 
 
             //gridView1.Columns["o_donut_d_cost"].Visible = false;
@@ -191,6 +195,9 @@ namespace YL_DONUT.BizFrm
 
             try
             {
+
+
+
                 this.Cursor = Cursors.WaitCursor;
 
                 string sP_SHOW_TYPE = string.Empty;
@@ -602,6 +609,17 @@ namespace YL_DONUT.BizFrm
                 nCnt = Convert.ToInt32(sql.selectQueryForSingleValue());
             }
 
+            dtAcc_Date.EditValue = "";
+            string sAccDate;
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = "SELECT date_format(acc_date, '%Y-%m-%d') FROM domamall.tb_ps_charge_month " +
+                             "WHERE yymm = '" + dtS_DATE.EditValue3.Substring(0, 6) + "' and LENGTH(acc_date) > 0  and p_type = '01' group by acc_date ";
+                DataSet ds = sql.selectQueryDataSet();
+                sAccDate = sql.selectQueryForSingleValue();
+            }
+            dtAcc_Date.EditValue = sAccDate;
+
             return nCnt;
         }
 
@@ -730,6 +748,13 @@ namespace YL_DONUT.BizFrm
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
+
+
+        private void DtS_DATE_EditValueChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
 
         //private void EfwGridControl1_KeyDown(object sender, KeyEventArgs e)
         //{
