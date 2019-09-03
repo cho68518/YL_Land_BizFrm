@@ -134,17 +134,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="frmDN14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN14.designer.cs">
+      <DependentUpon>frmDN14.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDN15.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmDN15.Designer.cs">
       <DependentUpon>frmDN15.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDN14.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frmDN14.Designer.cs">
-      <DependentUpon>frmDN14.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDN11.cs">
       <SubType>UserControl</SubType>
