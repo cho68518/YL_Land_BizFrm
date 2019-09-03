@@ -71,6 +71,8 @@ namespace YL_DONUT.BizFrm
             dtS_DATE.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
             dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
             cmbORDER_SEARCH.EditValue = "1";
+
+            SwitchChk();
         }
 
         #endregion
@@ -92,7 +94,8 @@ namespace YL_DONUT.BizFrm
         {
             try
             {
-                string sP_SHOW_TYPE = string.Empty;
+
+
 
                 //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
@@ -124,6 +127,12 @@ namespace YL_DONUT.BizFrm
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+
+                SwitchChk();
             }
         }
 
@@ -256,10 +265,7 @@ namespace YL_DONUT.BizFrm
 
         #endregion
 
-        private void EfwGridControl1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void BtnFixDate_Click(object sender, EventArgs e)
         {
@@ -304,6 +310,17 @@ namespace YL_DONUT.BizFrm
             else
                 toggleSwitch1.IsOn = false;
 
+            string sAccDate = "";
+
+            dtAcc_Date.EditValue = "";
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = "SELECT date_format(acc_date, '%Y-%m-%d') FROM domamall.tb_ps_charge_month " +
+                             "WHERE yymm = '" + dtS_DATE.EditValue3.Substring(0, 6) + "' and LENGTH(acc_date) > 0  and p_type = '02' group by acc_date ";
+                DataSet ds = sql.selectQueryDataSet();
+                sAccDate = sql.selectQueryForSingleValue();
+            }
+            dtAcc_Date.EditValue = sAccDate;
         }
         private void BtnFixCancel_Click(object sender, EventArgs e)
         {
@@ -548,5 +565,12 @@ namespace YL_DONUT.BizFrm
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
+
+        private void DtS_DATE_EditValueChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+
     }
 }
