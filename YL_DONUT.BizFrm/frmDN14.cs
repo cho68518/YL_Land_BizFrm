@@ -50,6 +50,9 @@ namespace YL_DONUT.BizFrm
         {
             base.FrmLoadEvent();
             DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
+            //gridView1.OptionsView.AllowHtmlDrawHeaders = true;
+            //gridView1.Appearance.HeaderPanel.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            //gridView1.ColumnPanelRowHeight = 40;
 
             this.IsMenuVw = true;
             this.IsSearch = true;

@@ -41,29 +41,29 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.advBandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridColumn25 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn26 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn29 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridColumn69 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandedGridColumn2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn3 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn4 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -128,6 +128,7 @@
             this.dtS_DATE.Size = new System.Drawing.Size(121, 20);
             this.dtS_DATE.StyleController = this.layoutControl2;
             this.dtS_DATE.TabIndex = 0;
+            this.dtS_DATE.EditValueChanged += new System.EventHandler(this.DtS_DATE_EditValueChanged);
             // 
             // layoutControlGroup2
             // 
@@ -251,18 +252,32 @@
             this.bandedGridColumn4});
             this.advBandedGridView1.GridControl = this.efwGridControl1;
             this.advBandedGridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "(건수 : {0}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "p_num", null, "{0}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, " (건수 : {0})"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "g_cnt1", this.gridColumn69, "{0:###,###,##0}"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_total_cost", this.gridColumn11, "{0:c}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_donut_d_cost", null, "{0:c}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_donut_m_cost", null, "{0:c}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_donut_c_cost", null, "{0:c}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_delivery_cost", null, "{0:c}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_purchase_cost", this.gridColumn16, "{0:c}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "chef_amt", this.gridColumn28, "{0:c}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "chef_amt", null, "합계 : {0:c} )"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "t_cnt", this.gridColumn29, "{0:c}")});
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "chef_refund", this.gridColumn28, "{0:c}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "g_cnt2", this.bandedGridColumn1, "{0:###,###,##0}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_total_cost2", this.bandedGridColumn3, "{0:c}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "g_chef_refund", this.bandedGridColumn2, "{0:c}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "t_chef_refund", this.bandedGridColumn4, "{0:c}")});
             this.advBandedGridView1.Name = "advBandedGridView1";
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand1.Caption = "주문 기본정보";
+            this.gridBand1.Columns.Add(this.gridColumn25);
+            this.gridBand1.Columns.Add(this.gridColumn27);
+            this.gridBand1.Columns.Add(this.gridColumn26);
+            this.gridBand1.Columns.Add(this.gridColumn1);
+            this.gridBand1.Columns.Add(this.gridColumn16);
+            this.gridBand1.Columns.Add(this.gridColumn3);
+            this.gridBand1.Columns.Add(this.gridColumn2);
+            this.gridBand1.Columns.Add(this.gridColumn29);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 300;
             // 
             // gridColumn25
             // 
@@ -291,21 +306,10 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             // 
-            // gridColumn11
-            // 
-            this.gridColumn11.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridColumn11.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn11.Caption = "주문금액";
-            this.gridColumn11.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn11.FieldName = "o_total_cost";
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Visible = true;
-            // 
             // gridColumn16
             // 
             this.gridColumn16.Caption = "실주문금액";
-            this.gridColumn16.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn16.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn16.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn16.FieldName = "o_purchase_cost";
             this.gridColumn16.Name = "gridColumn16";
@@ -313,7 +317,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "D머니";
-            this.gridColumn3.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn3.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn3.FieldName = "o_donut_d_cost";
             this.gridColumn3.Name = "gridColumn3";
@@ -321,7 +325,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "CD머니";
-            this.gridColumn2.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn2.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn2.FieldName = "o_donut_c_cost";
             this.gridColumn2.Name = "gridColumn2";
@@ -329,22 +333,47 @@
             // gridColumn29
             // 
             this.gridColumn29.Caption = "트윗건수";
-            this.gridColumn29.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn29.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn29.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn29.FieldName = "t_cnt";
             this.gridColumn29.Name = "gridColumn29";
             this.gridColumn29.Visible = true;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridBand2.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand2.Caption = "PS수수료 정보";
+            this.gridBand2.Columns.Add(this.gridColumn69);
+            this.gridBand2.Columns.Add(this.gridColumn11);
+            this.gridBand2.Columns.Add(this.gridColumn28);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 225;
             // 
             // gridColumn69
             // 
             this.gridColumn69.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gridColumn69.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn69.Caption = "판매건수";
-            this.gridColumn69.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn69.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn69.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn69.FieldName = "g_cnt1";
             this.gridColumn69.Name = "gridColumn69";
             this.gridColumn69.Visible = true;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn11.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn11.Caption = "주문금액";
+            this.gridColumn11.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn11.FieldName = "o_total_cost";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
             // 
             // gridColumn28
             // 
@@ -353,22 +382,47 @@
             this.gridColumn28.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gridColumn28.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn28.Caption = "수수료";
-            this.gridColumn28.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn28.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn28.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn28.FieldName = "chef_refund";
             this.gridColumn28.Name = "gridColumn28";
             this.gridColumn28.Visible = true;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridBand3.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand3.Caption = "G멀티샵 수수료정보";
+            this.gridBand3.Columns.Add(this.bandedGridColumn1);
+            this.gridBand3.Columns.Add(this.bandedGridColumn3);
+            this.gridBand3.Columns.Add(this.bandedGridColumn2);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 225;
             // 
             // bandedGridColumn1
             // 
             this.bandedGridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.bandedGridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn1.Caption = "판매건수";
-            this.bandedGridColumn1.DisplayFormat.FormatString = "###,###,##0";
+            this.bandedGridColumn1.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn1.FieldName = "g_cnt2";
             this.bandedGridColumn1.Name = "bandedGridColumn1";
             this.bandedGridColumn1.Visible = true;
+            // 
+            // bandedGridColumn3
+            // 
+            this.bandedGridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bandedGridColumn3.AppearanceHeader.Options.UseBackColor = true;
+            this.bandedGridColumn3.Caption = "주문금액";
+            this.bandedGridColumn3.DisplayFormat.FormatString = "###,###,###";
+            this.bandedGridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.bandedGridColumn3.FieldName = "o_total_cost2";
+            this.bandedGridColumn3.Name = "bandedGridColumn3";
+            this.bandedGridColumn3.Visible = true;
             // 
             // bandedGridColumn2
             // 
@@ -377,29 +431,27 @@
             this.bandedGridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.bandedGridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn2.Caption = "수수료";
-            this.bandedGridColumn2.DisplayFormat.FormatString = "###,###,##0";
+            this.bandedGridColumn2.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn2.FieldName = "g_chef_refund";
             this.bandedGridColumn2.Name = "bandedGridColumn2";
             this.bandedGridColumn2.Visible = true;
             // 
-            // bandedGridColumn3
+            // gridBand4
             // 
-            this.bandedGridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.bandedGridColumn3.AppearanceHeader.Options.UseBackColor = true;
-            this.bandedGridColumn3.Caption = "주문금액";
-            this.bandedGridColumn3.DisplayFormat.FormatString = "###,###,##0";
-            this.bandedGridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.bandedGridColumn3.FieldName = "o_total_cost2";
-            this.bandedGridColumn3.Name = "bandedGridColumn3";
-            this.bandedGridColumn3.Visible = true;
+            this.gridBand4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand4.Columns.Add(this.bandedGridColumn4);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 3;
+            this.gridBand4.Width = 75;
             // 
             // bandedGridColumn4
             // 
             this.bandedGridColumn4.AppearanceCell.ForeColor = System.Drawing.Color.Red;
             this.bandedGridColumn4.AppearanceCell.Options.UseForeColor = true;
             this.bandedGridColumn4.Caption = "총 수수료 합계";
-            this.bandedGridColumn4.DisplayFormat.FormatString = "###,###,##0";
+            this.bandedGridColumn4.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn4.FieldName = "t_chef_refund";
             this.bandedGridColumn4.Name = "bandedGridColumn4";
@@ -429,60 +481,6 @@
             this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
             this.repositoryItemCheckEdit2.ValueChecked = "Y";
             this.repositoryItemCheckEdit2.ValueUnchecked = "N";
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand1.Caption = "주문 기본정보";
-            this.gridBand1.Columns.Add(this.gridColumn25);
-            this.gridBand1.Columns.Add(this.gridColumn27);
-            this.gridBand1.Columns.Add(this.gridColumn26);
-            this.gridBand1.Columns.Add(this.gridColumn1);
-            this.gridBand1.Columns.Add(this.gridColumn16);
-            this.gridBand1.Columns.Add(this.gridColumn3);
-            this.gridBand1.Columns.Add(this.gridColumn2);
-            this.gridBand1.Columns.Add(this.gridColumn29);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 300;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridBand2.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.Caption = "PS수수료 정보";
-            this.gridBand2.Columns.Add(this.gridColumn69);
-            this.gridBand2.Columns.Add(this.gridColumn11);
-            this.gridBand2.Columns.Add(this.gridColumn28);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 225;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridBand3.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand3.Caption = "G멀티샵 수수료정보";
-            this.gridBand3.Columns.Add(this.bandedGridColumn1);
-            this.gridBand3.Columns.Add(this.bandedGridColumn3);
-            this.gridBand3.Columns.Add(this.bandedGridColumn2);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 225;
-            // 
-            // gridBand4
-            // 
-            this.gridBand4.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand4.Columns.Add(this.bandedGridColumn4);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 75;
             // 
             // frmDN13
             // 
