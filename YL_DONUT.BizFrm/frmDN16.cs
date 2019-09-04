@@ -50,11 +50,17 @@ namespace YL_DONUT.BizFrm
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl3, "Y", "N", "is_write1");
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl3, "Y", "N", "is_write2");
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl3, "Y", "N", "is_write3");
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl3, "Y", "N", "is_write4");
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl3, "Y", "N", "is_write5");
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl3, "Y", "N", "is_biz");
 
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl4, "Y", "N", "is_write1");
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl4, "Y", "N", "is_write2");
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl4, "Y", "N", "is_biz");
+
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl5, "Y", "N", "is_write1");
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl5, "Y", "N", "is_write2");
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl5, "Y", "N", "is_write3");
 
             this.dt1.EditValue = DateTime.Now;
             this.dt2.EditValue = DateTime.Now;
@@ -64,6 +70,8 @@ namespace YL_DONUT.BizFrm
             this.dt6.EditValue = DateTime.Now;
             this.dt7.EditValue = DateTime.Now;
             this.dt8.EditValue = DateTime.Now;
+            this.dt9.EditValue = DateTime.Now;
+            this.dt10.EditValue = DateTime.Now;
         }
 
         #endregion
@@ -72,23 +80,27 @@ namespace YL_DONUT.BizFrm
         {
             if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
             {
-                Open1();
+                Open1();  //일반 회원가입
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
             {
-                Open2();
+                Open2(); //VIP 회원가입
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
             {
-                Open3();
+                Open3(); //도마셰프 회원가입
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
             {
-                Open4();
+                Open4(); //G멀티샵 회원가입
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                Open5(); //알뜰폰개통
             }
         }
 
-        #region 일반회원가입 조회
+        #region 일반 회원가입
 
         private void Open1()
         {
@@ -133,9 +145,37 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void AdvBandedGridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            if (e.IsGetData && e.Column.FieldName == "yn1")
+            {
+                DataRow row = advBandedGridView1.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date1"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+            else if (e.IsGetData && e.Column.FieldName == "yn2")
+            {
+                DataRow row = advBandedGridView1.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date2"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+        }
+
         #endregion
 
-        #region VIP회원가입 조회
+        #region VIP 회원가입
 
         private void Open2()
         {
@@ -180,9 +220,49 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void AdvBandedGridView2_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            if (e.IsGetData && e.Column.FieldName == "yn1")
+            {
+                DataRow row = advBandedGridView2.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date1"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+            else if (e.IsGetData && e.Column.FieldName == "yn2")
+            {
+                DataRow row = advBandedGridView2.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date2"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+            else if (e.IsGetData && e.Column.FieldName == "yn3")
+            {
+                DataRow row = advBandedGridView2.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date3"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+        }
+
         #endregion
 
-        #region 도마셰프 회원가입 조회
+        #region 도마셰프 회원가입
 
         private void Open3()
         {
@@ -227,9 +307,73 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void AdvBandedGridView3_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            if (e.IsGetData && e.Column.FieldName == "yn1")
+            {
+                DataRow row = advBandedGridView3.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date1"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+            else if (e.IsGetData && e.Column.FieldName == "yn2")
+            {
+                DataRow row = advBandedGridView3.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date2"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+            else if (e.IsGetData && e.Column.FieldName == "yn3")
+            {
+                DataRow row = advBandedGridView3.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date3"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+            else if (e.IsGetData && e.Column.FieldName == "yn4")
+            {
+                DataRow row = advBandedGridView3.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date4"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+            else if (e.IsGetData && e.Column.FieldName == "yn5")
+            {
+                DataRow row = advBandedGridView3.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date5"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+        }
+
         #endregion
 
-        #region G멀티샵 회원가입 조회
+        #region G멀티샵 회원가입
 
         private void Open4()
         {
@@ -274,116 +418,6 @@ namespace YL_DONUT.BizFrm
             }
         }
 
-        #endregion
-
-        private void AdvBandedGridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
-        {
-            if (e.IsGetData && e.Column.FieldName == "yn1")
-            {
-                DataRow row = advBandedGridView1.GetDataRow(e.ListSourceRowIndex);
-                if (row == null) return;
-
-                string retVal = row["reg_date1"].ToString();
-
-                if (retVal != "" && retVal != null)
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
-                else
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
-            }
-            else if (e.IsGetData && e.Column.FieldName == "yn2")
-            {
-                DataRow row = advBandedGridView1.GetDataRow(e.ListSourceRowIndex);
-                if (row == null) return;
-
-                string retVal = row["reg_date2"].ToString();
-
-                if (retVal != "" && retVal != null)
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
-                else
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
-            }
-        }
-
-        private void AdvBandedGridView2_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
-        {
-            if (e.IsGetData && e.Column.FieldName == "yn1")
-            {
-                DataRow row = advBandedGridView2.GetDataRow(e.ListSourceRowIndex);
-                if (row == null) return;
-
-                string retVal = row["reg_date1"].ToString();
-
-                if (retVal != "" && retVal != null)
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
-                else
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
-            }
-            else if (e.IsGetData && e.Column.FieldName == "yn2")
-            {
-                DataRow row = advBandedGridView2.GetDataRow(e.ListSourceRowIndex);
-                if (row == null) return;
-
-                string retVal = row["reg_date2"].ToString();
-
-                if (retVal != "" && retVal != null)
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
-                else
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
-            }
-            else if (e.IsGetData && e.Column.FieldName == "yn3")
-            {
-                DataRow row = advBandedGridView2.GetDataRow(e.ListSourceRowIndex);
-                if (row == null) return;
-
-                string retVal = row["reg_date3"].ToString();
-
-                if (retVal != "" && retVal != null)
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
-                else
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
-            }
-        }
-
-        private void AdvBandedGridView3_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
-        {
-            if (e.IsGetData && e.Column.FieldName == "yn1")
-            {
-                DataRow row = advBandedGridView3.GetDataRow(e.ListSourceRowIndex);
-                if (row == null) return;
-
-                string retVal = row["reg_date1"].ToString();
-
-                if (retVal != "" && retVal != null)
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
-                else
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
-            }
-            else if (e.IsGetData && e.Column.FieldName == "yn2")
-            {
-                DataRow row = advBandedGridView3.GetDataRow(e.ListSourceRowIndex);
-                if (row == null) return;
-
-                string retVal = row["reg_date2"].ToString();
-
-                if (retVal != "" && retVal != null)
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
-                else
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
-            }
-            else if (e.IsGetData && e.Column.FieldName == "yn3")
-            {
-                DataRow row = advBandedGridView3.GetDataRow(e.ListSourceRowIndex);
-                if (row == null) return;
-
-                string retVal = row["reg_date3"].ToString();
-
-                if (retVal != "" && retVal != null)
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
-                else
-                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
-            }
-        }
-
         private void AdvBandedGridView4_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
             if (e.IsGetData && e.Column.FieldName == "yn1")
@@ -411,5 +445,104 @@ namespace YL_DONUT.BizFrm
                     e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
             }
         }
+
+        #endregion
+
+        #region 알뜰폰개통
+
+        private void Open5()
+        {
+            //G멀티샵 회원가입 조회
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                string sLevel = string.Empty;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN16_SELECT_05", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = this.dt9.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = this.dt10.EditValue3;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+
+                            efwGridControl5.DataBind(ds);
+                            this.efwGridControl5.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void AdvBandedGridView5_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            if (e.IsGetData && e.Column.FieldName == "yn1")
+            {
+                DataRow row = advBandedGridView5.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date1"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+            else if (e.IsGetData && e.Column.FieldName == "yn2")
+            {
+                DataRow row = advBandedGridView5.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date2"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+            else if (e.IsGetData && e.Column.FieldName == "yn3")
+            {
+                DataRow row = advBandedGridView5.GetDataRow(e.ListSourceRowIndex);
+                if (row == null) return;
+
+                string retVal = row["reg_date3"].ToString();
+
+                if (retVal != "" && retVal != null)
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Apply_16x16;
+                else
+                    e.Value = YL_DONUT.BizFrm.Properties.Resources.Cancel_16x16;
+            }
+        }
+
+        #endregion
+
+
+
+
+
+
+
+
+
+
     }
 }
