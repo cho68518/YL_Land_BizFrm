@@ -90,6 +90,7 @@ namespace YL_DONUT.BizFrm
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
+            cbG_Prod.EditValue = "0";
 
         }
 
@@ -102,6 +103,7 @@ namespace YL_DONUT.BizFrm
 
         public override void Search()
         {
+
             try
             {
                 string sCOMFIRM = string.Empty;
@@ -115,6 +117,11 @@ namespace YL_DONUT.BizFrm
 
                         cmd.Parameters.Add("i_prod_nm", MySqlDbType.VarChar, 50);
                         cmd.Parameters[0].Value = txtPRODUCT_NAME.EditValue;
+
+                        
+                        cmd.Parameters.Add("i_g_prod", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[1].Value = cbG_Prod.EditValue;
+
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -175,7 +182,114 @@ namespace YL_DONUT.BizFrm
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(this.txtIDX.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 변경할 상품을 선택하세요!");
+                return;
+            }
 
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN14_SAVE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtIDX.EditValue);
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_customer_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_customer_price"].Value = Convert.ToInt32(txtCUSTOMER_PRICE.EditValue);
+                            cmd.Parameters["i_customer_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_lowest_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_lowest_price"].Value = Convert.ToInt32(txtLOWEST_PRICE.EditValue);
+                            cmd.Parameters["i_lowest_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_supply_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_supply_price"].Value = Convert.ToInt32(txtSUPPLY_PRICE.EditValue);
+                            cmd.Parameters["i_supply_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_delivery_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_delivery_price"].Value = Convert.ToInt32(txtDELIVERY_PRICE.EditValue);
+                            cmd.Parameters["i_delivery_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_ps_donut01", MySqlDbType.Int32));
+                            cmd.Parameters["i_ps_donut01"].Value = Convert.ToInt32(txtPS_DONUT01.EditValue);
+                            cmd.Parameters["i_ps_donut01"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_ps_donut02", MySqlDbType.Int32));
+                            cmd.Parameters["i_ps_donut02"].Value = Convert.ToInt32(txtPS_DONUT02.EditValue);
+                            cmd.Parameters["i_ps_donut02"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_vip_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_vip_price"].Value = Convert.ToInt32(txtVIP_PRICE.EditValue);
+                            cmd.Parameters["i_vip_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_ps_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_ps_price"].Value = Convert.ToInt32(txtPS_PRICE.EditValue);
+                            cmd.Parameters["i_ps_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_ps_oper_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_ps_oper_price"].Value = Convert.ToInt32(txtPS_OPER_PRICE.EditValue);
+                            cmd.Parameters["i_ps_oper_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_chef_commission01", MySqlDbType.Int32));
+                            cmd.Parameters["i_chef_commission01"].Value = Convert.ToInt32(txtCHEF_COMMISSION01.EditValue);
+                            cmd.Parameters["i_chef_commission01"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_chef_commission02", MySqlDbType.Int32));
+                            cmd.Parameters["i_chef_commission02"].Value = Convert.ToInt32(txtCHEF_COMMISSION02.EditValue);
+                            cmd.Parameters["i_chef_commission02"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_td_donut", MySqlDbType.Int32));
+                            cmd.Parameters["i_td_donut"].Value = Convert.ToInt32(txtTD_DONUT.EditValue);
+                            cmd.Parameters["i_td_donut"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_ad_donut", MySqlDbType.Int32));
+                            cmd.Parameters["i_ad_donut"].Value = Convert.ToInt32(txtAD_DONUT.EditValue);
+                            cmd.Parameters["i_ad_donut"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_reco_donut", MySqlDbType.Int32));
+                            cmd.Parameters["i_reco_donut"].Value = Convert.ToInt32(txtRECO_DONUT.EditValue);
+                            cmd.Parameters["i_reco_donut"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_option_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_option_id"].Value = Convert.ToInt32(txtOPTION_ID.EditValue);
+                            cmd.Parameters["i_option_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_d_gs_cele_story", MySqlDbType.Int32));
+                            cmd.Parameters["i_d_gs_cele_story"].Value = Convert.ToInt32(txtD_GS_CELE_STORY.EditValue);
+                            cmd.Parameters["i_d_gs_cele_story"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_cash_gr_cele_story", MySqlDbType.Int32));
+                            cmd.Parameters["i_cash_gr_cele_story"].Value = Convert.ToInt32(txtCASH_GR_CELE_STORY.EditValue);
+                            cmd.Parameters["i_cash_gr_cele_story"].Direction = ParameterDirection.Input;
+                            
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+                            
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+            }
         }
 
         private void BtnExcelSample_Click(object sender, EventArgs e)
