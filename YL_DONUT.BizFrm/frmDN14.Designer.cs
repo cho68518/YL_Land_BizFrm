@@ -40,6 +40,7 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.cbG_Prod = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.lblCnt1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -86,6 +87,8 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.splitterControl2 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl5 = new Easy.Framework.WinForm.Control.efwGroupControl();
@@ -188,6 +191,7 @@
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbG_Prod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFileName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -207,6 +211,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).BeginInit();
             this.efwGroupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).BeginInit();
@@ -300,6 +306,7 @@
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.cbG_Prod);
             this.layoutControl2.Controls.Add(this.efwSimpleButton1);
             this.layoutControl2.Controls.Add(this.lblCnt1);
             this.layoutControl2.Controls.Add(this.efwLabel4);
@@ -316,13 +323,24 @@
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // cbG_Prod
+            // 
+            this.cbG_Prod.Location = new System.Drawing.Point(381, 7);
+            this.cbG_Prod.Name = "cbG_Prod";
+            this.cbG_Prod.Properties.Caption = "G 제품";
+            this.cbG_Prod.Properties.ValueChecked = "1";
+            this.cbG_Prod.Properties.ValueUnchecked = "0";
+            this.cbG_Prod.Size = new System.Drawing.Size(54, 19);
+            this.cbG_Prod.StyleController = this.layoutControl2;
+            this.cbG_Prod.TabIndex = 59;
+            // 
             // efwSimpleButton1
             // 
             this.efwSimpleButton1.ButtonType = Easy.Framework.Util.BtnType.Save;
             this.efwSimpleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
             this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(756, 7);
+            this.efwSimpleButton1.Location = new System.Drawing.Point(824, 7);
             this.efwSimpleButton1.Name = "efwSimpleButton1";
             this.efwSimpleButton1.Size = new System.Drawing.Size(125, 22);
             this.efwSimpleButton1.StyleController = this.layoutControl2;
@@ -338,7 +356,7 @@
             this.lblCnt1.Appearance.Options.UseForeColor = true;
             this.lblCnt1.EraserGroup = null;
             this.lblCnt1.IsMultiLang = false;
-            this.lblCnt1.Location = new System.Drawing.Point(457, 7);
+            this.lblCnt1.Location = new System.Drawing.Point(525, 7);
             this.lblCnt1.Name = "lblCnt1";
             this.lblCnt1.Size = new System.Drawing.Size(8, 14);
             this.lblCnt1.StyleController = this.layoutControl2;
@@ -349,7 +367,7 @@
             // 
             this.efwLabel4.EraserGroup = null;
             this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(381, 7);
+            this.efwLabel4.Location = new System.Drawing.Point(449, 7);
             this.efwLabel4.Name = "efwLabel4";
             this.efwLabel4.Size = new System.Drawing.Size(72, 14);
             this.efwLabel4.StyleController = this.layoutControl2;
@@ -361,7 +379,7 @@
             this.btnGetExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGetExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGetExcel.ImageOptions.Image")));
             this.btnGetExcel.IsMultiLang = false;
-            this.btnGetExcel.Location = new System.Drawing.Point(610, 7);
+            this.btnGetExcel.Location = new System.Drawing.Point(678, 7);
             this.btnGetExcel.Name = "btnGetExcel";
             this.btnGetExcel.Size = new System.Drawing.Size(142, 22);
             this.btnGetExcel.StyleController = this.layoutControl2;
@@ -374,7 +392,7 @@
             this.btnExcelSample.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcelSample.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcelSample.ImageOptions.Image")));
             this.btnExcelSample.IsMultiLang = false;
-            this.btnExcelSample.Location = new System.Drawing.Point(479, 7);
+            this.btnExcelSample.Location = new System.Drawing.Point(547, 7);
             this.btnExcelSample.Name = "btnExcelSample";
             this.btnExcelSample.Size = new System.Drawing.Size(127, 22);
             this.btnExcelSample.StyleController = this.layoutControl2;
@@ -385,7 +403,7 @@
             // txtFileName
             // 
             this.txtFileName.EditValue2 = null;
-            this.txtFileName.Location = new System.Drawing.Point(885, 7);
+            this.txtFileName.Location = new System.Drawing.Point(953, 7);
             this.txtFileName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -427,7 +445,7 @@
             this.repositoryItemMemoExEdit4,
             this.repositoryItemMemoEdit4,
             this.repositoryItemCheckEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1125, 407);
+            this.efwGridControl1.Size = new System.Drawing.Size(1193, 390);
             this.efwGridControl1.TabIndex = 25;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -748,10 +766,12 @@
             this.layoutControlItem31,
             this.emptySpaceItem1,
             this.layoutControlItem32,
-            this.layoutControlItem28});
+            this.layoutControlItem28,
+            this.layoutControlItem33,
+            this.emptySpaceItem7});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1139, 444);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1207, 427);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem3
@@ -774,14 +794,14 @@
             this.layoutControlItem1.Control = this.efwGridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1129, 411);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1197, 394);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem27
             // 
             this.layoutControlItem27.Control = this.txtFileName;
-            this.layoutControlItem27.Location = new System.Drawing.Point(878, 0);
+            this.layoutControlItem27.Location = new System.Drawing.Point(946, 0);
             this.layoutControlItem27.MaxSize = new System.Drawing.Size(251, 26);
             this.layoutControlItem27.MinSize = new System.Drawing.Size(251, 26);
             this.layoutControlItem27.Name = "layoutControlItem27";
@@ -807,7 +827,7 @@
             // layoutControlItem29
             // 
             this.layoutControlItem29.Control = this.btnGetExcel;
-            this.layoutControlItem29.Location = new System.Drawing.Point(603, 0);
+            this.layoutControlItem29.Location = new System.Drawing.Point(671, 0);
             this.layoutControlItem29.MaxSize = new System.Drawing.Size(146, 26);
             this.layoutControlItem29.MinSize = new System.Drawing.Size(146, 26);
             this.layoutControlItem29.Name = "layoutControlItem29";
@@ -819,7 +839,7 @@
             // lblCnt
             // 
             this.lblCnt.Control = this.lblCnt1;
-            this.lblCnt.Location = new System.Drawing.Point(450, 0);
+            this.lblCnt.Location = new System.Drawing.Point(518, 0);
             this.lblCnt.Name = "lblCnt";
             this.lblCnt.Size = new System.Drawing.Size(12, 26);
             this.lblCnt.TextSize = new System.Drawing.Size(0, 0);
@@ -828,7 +848,7 @@
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.efwLabel4;
-            this.layoutControlItem31.Location = new System.Drawing.Point(374, 0);
+            this.layoutControlItem31.Location = new System.Drawing.Point(442, 0);
             this.layoutControlItem31.Name = "layoutControlItem31";
             this.layoutControlItem31.Size = new System.Drawing.Size(76, 26);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
@@ -837,7 +857,7 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(462, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(530, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(10, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -845,7 +865,7 @@
             // layoutControlItem32
             // 
             this.layoutControlItem32.Control = this.efwSimpleButton1;
-            this.layoutControlItem32.Location = new System.Drawing.Point(749, 0);
+            this.layoutControlItem32.Location = new System.Drawing.Point(817, 0);
             this.layoutControlItem32.MaxSize = new System.Drawing.Size(129, 26);
             this.layoutControlItem32.MinSize = new System.Drawing.Size(129, 26);
             this.layoutControlItem32.Name = "layoutControlItem32";
@@ -857,7 +877,7 @@
             // layoutControlItem28
             // 
             this.layoutControlItem28.Control = this.btnExcelSample;
-            this.layoutControlItem28.Location = new System.Drawing.Point(472, 0);
+            this.layoutControlItem28.Location = new System.Drawing.Point(540, 0);
             this.layoutControlItem28.MaxSize = new System.Drawing.Size(131, 26);
             this.layoutControlItem28.MinSize = new System.Drawing.Size(131, 26);
             this.layoutControlItem28.Name = "layoutControlItem28";
@@ -865,6 +885,23 @@
             this.layoutControlItem28.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem28.TextVisible = false;
+            // 
+            // layoutControlItem33
+            // 
+            this.layoutControlItem33.Control = this.cbG_Prod;
+            this.layoutControlItem33.Location = new System.Drawing.Point(374, 0);
+            this.layoutControlItem33.Name = "layoutControlItem33";
+            this.layoutControlItem33.Size = new System.Drawing.Size(58, 26);
+            this.layoutControlItem33.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem33.TextVisible = false;
+            // 
+            // emptySpaceItem7
+            // 
+            this.emptySpaceItem7.AllowHotTrack = false;
+            this.emptySpaceItem7.Location = new System.Drawing.Point(432, 0);
+            this.emptySpaceItem7.Name = "emptySpaceItem7";
+            this.emptySpaceItem7.Size = new System.Drawing.Size(10, 26);
+            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // splitterControl2
             // 
@@ -1479,6 +1516,7 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "저장";
             this.btnSave.ToolTip = "저장";
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtPROD_NM
             // 
@@ -2176,6 +2214,7 @@
             this.efwGroupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cbG_Prod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFileName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -2195,6 +2234,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).EndInit();
             this.efwGroupControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).EndInit();
@@ -2424,5 +2465,8 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem32;
+        private Easy.Framework.WinForm.Control.efwCheckEdit cbG_Prod;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem33;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
     }
 }
