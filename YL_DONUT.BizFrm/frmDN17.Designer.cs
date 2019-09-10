@@ -68,12 +68,15 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbQ1.Properties)).BeginInit();
@@ -413,6 +416,9 @@
             this.gridColumn11,
             this.gridColumn12,
             this.gridColumn14,
+            this.gridColumn16,
+            this.gridColumn17,
+            this.gridColumn18,
             this.gridColumn13});
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -467,6 +473,22 @@
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 0;
             // 
+            // gridColumn16
+            // 
+            this.gridColumn16.Caption = "예약일";
+            this.gridColumn16.FieldName = "reserve_time";
+            this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.Visible = true;
+            this.gridColumn16.VisibleIndex = 1;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "공개";
+            this.gridColumn17.FieldName = "is_open";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 2;
+            // 
             // gridColumn13
             // 
             this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
@@ -476,7 +498,7 @@
             this.gridColumn13.FieldName = "contents";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 1;
+            this.gridColumn13.VisibleIndex = 4;
             // 
             // repositoryItemMemoEdit3
             // 
@@ -506,6 +528,14 @@
             this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
             this.repositoryItemCheckEdit2.ValueChecked = "Y";
             this.repositoryItemCheckEdit2.ValueUnchecked = "N";
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.Caption = "예약";
+            this.gridColumn18.FieldName = "is_reserve";
+            this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.Visible = true;
+            this.gridColumn18.VisibleIndex = 3;
             // 
             // frmDN17
             // 
@@ -585,5 +615,8 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbQ1;
         private Easy.Framework.WinForm.Control.efwTextEdit txtSearch;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
     }
 }
