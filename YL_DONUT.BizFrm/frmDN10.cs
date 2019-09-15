@@ -1,6 +1,7 @@
 ﻿using DevExpress.Utils.Win;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Popup;
+using DevExpress.XtraGrid.Views.Grid;
 using Easy.Framework.Common;
 using MySql.Data.MySqlClient;
 using System;
@@ -43,7 +44,8 @@ namespace YL_DONUT.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
-            this.label1.Font = new Font(this.label1.Font, FontStyle.Bold);
+            this.lblnum1.Font = new Font(this.lblnum1.Font, FontStyle.Bold);
+            this.lblnum2.Font = new Font(this.lblnum2.Font, FontStyle.Bold);
 
 
 
@@ -501,7 +503,23 @@ namespace YL_DONUT.BizFrm
         {
             try
             {
-                MonthDataChek();
+                //var saveResult = new SaveTableResultInfo() { IsError = true };
+
+                //var dt = efwGridControl1.GetChangeDataWithRowState;
+                //var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+                ////saveResult.InsertRowcount = dt.Select(StatusColumn + "='I'").Length;
+                ////saveResult.UpdateRowcount = dt.Select(StatusColumn + "='U'").Length;
+                ////saveResult.DeleteRowcount = dt.Select(StatusColumn + "='D'").Length;
+
+                //for (var i = 0; i < dt.Rows.Count; i++)
+                //{
+                //    if (dt.Rows[i][StatusColumn].ToString() == "U")
+                //    {
+                //        //Console.WriteLine("------------------------------------------------------------");
+                //        //Console.WriteLine("[U] " + dt.Rows[i]["chef_nickname"].ToString());
+                //    }
+                //}
 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
@@ -572,11 +590,15 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add("is_write", MySqlDbType.VarChar, 2);
                             cmd.Parameters[19].Value = gridView1.GetRowCellValue(i, "is_write");
 
+                            cmd.Parameters.Add("i_idx", MySqlDbType.Int32, 15);
+                            cmd.Parameters[20].Value = gridView1.GetRowCellValue(i, "idx");
+
                             cmd.ExecuteNonQuery();
                             con.Close();
                         }
                     }
                 }
+
                 MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
             }
             catch (Exception ex)
@@ -663,11 +685,13 @@ namespace YL_DONUT.BizFrm
             Search1();
         }
 
-        
-
-
-
-
-
+        private void GridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.Column == view.Columns["chef_amt"])
+            {
+                e.Appearance.BackColor = Color.LightGreen;
+            }
+        }
     }
 }
