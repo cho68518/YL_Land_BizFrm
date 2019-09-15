@@ -31,6 +31,7 @@
             this.btnDN01 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwPnlBody = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwSimpleButton6 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -74,6 +75,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton6);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton5);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton4);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton3);
@@ -97,6 +99,17 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(184, 822);
             this.efwPanelControl1.TabIndex = 10;
+            // 
+            // efwSimpleButton6
+            // 
+            this.efwSimpleButton6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwSimpleButton6.IsMultiLang = false;
+            this.efwSimpleButton6.Location = new System.Drawing.Point(2, 597);
+            this.efwSimpleButton6.Name = "efwSimpleButton6";
+            this.efwSimpleButton6.Size = new System.Drawing.Size(180, 35);
+            this.efwSimpleButton6.TabIndex = 20;
+            this.efwSimpleButton6.Text = "frmDN18(G멀티샵수수료정산)";
+            this.efwSimpleButton6.Click += new System.EventHandler(this.EfwSimpleButton6_Click);
             // 
             // efwSimpleButton5
             // 
@@ -150,7 +163,7 @@
             this.btnDN13.Name = "btnDN13";
             this.btnDN13.Size = new System.Drawing.Size(180, 35);
             this.btnDN13.TabIndex = 15;
-            this.btnDN13.Text = "frmDN13";
+            this.btnDN13.Text = "frmDN13(PS수수료 월정산요약)";
             this.btnDN13.Click += new System.EventHandler(this.BtnDN13_Click);
             // 
             // btnDN12
@@ -183,7 +196,7 @@
             this.btnDN10.Name = "btnDN10";
             this.btnDN10.Size = new System.Drawing.Size(180, 35);
             this.btnDN10.TabIndex = 12;
-            this.btnDN10.Text = "frmDN10";
+            this.btnDN10.Text = "frmDN10(PS수수료정산)";
             this.btnDN10.Click += new System.EventHandler(this.BtnDN10_Click);
             // 
             // btnDN09
@@ -324,5 +337,6 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton4;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton6;
     }
 }

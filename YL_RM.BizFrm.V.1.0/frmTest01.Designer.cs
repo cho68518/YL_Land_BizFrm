@@ -1,4 +1,4 @@
-﻿namespace YL_RM.BizFrm
+﻿namespace YL_PM.BizFrm
 {
     partial class frmTest01
     {
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // frmTest01
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "frmTest01";
-            this.Size = new System.Drawing.Size(1071, 651);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "frmTest01";
         }
 
         #endregion

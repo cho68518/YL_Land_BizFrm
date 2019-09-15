@@ -15,7 +15,7 @@ namespace YL_DONUT.BizFrm
 {
     public partial class frmMain : XtraForm
     {
-        public frmMain()
+        public frmMain() 
         {
             InitializeComponent();
         }
@@ -116,6 +116,11 @@ namespace YL_DONUT.BizFrm
         private void EfwSimpleButton5_Click(object sender, EventArgs e)
         {
             FrmBaseLoad(new frmDN17());
+        }
+
+        private void EfwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmDN18());
         }
     }
 }

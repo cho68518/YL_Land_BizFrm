@@ -73,6 +73,7 @@
             this.btnDispYes = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
@@ -330,7 +331,8 @@
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9,
-            this.gridColumn10});
+            this.gridColumn10,
+            this.gridColumn12});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "     (건수: {0:d}"),
@@ -472,6 +474,14 @@
             // 
             this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "스토리 아이디";
+            this.gridColumn12.FieldName = "story_id";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 9;
+            // 
             // frmDN08
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -540,5 +550,6 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
         private Easy.Framework.WinForm.Control.efwDateEdit dt1F;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
     }
 }

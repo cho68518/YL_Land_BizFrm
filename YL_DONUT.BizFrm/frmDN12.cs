@@ -312,6 +312,7 @@ namespace YL_DONUT.BizFrm
                         Cursor = Cursors.Default;
                         return;
                     }
+                    His_MySql1();
                 }
             }
             catch (Exception ex)
@@ -532,6 +533,7 @@ namespace YL_DONUT.BizFrm
                         Cursor = Cursors.Default;
                         return;
                     }
+                    His_MySql2();
                 }
             }
             catch (Exception ex)
@@ -1084,5 +1086,161 @@ namespace YL_DONUT.BizFrm
         {
             BtnHistoryQ4_Click(null, null);
         }
+
+        private void His_MySql1()
+        {
+            try
+            {
+                // 버튼 통합시 변수는 삭제
+                string sfrom_type = string.Empty;
+                string sto_type = string.Empty;
+                string swork_type = string.Empty;
+                string subject = string.Empty;
+
+                swork_type = "01";
+                subject = "[관리] PS추천지원금 정산";
+                sfrom_type = "DM";
+                sto_type = "DM";
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+
+                    for (int i = 0; i < gridView1.DataRowCount; i++)
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN12_SAVE_01", con))
+                        {
+
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add("i_user_id", MySqlDbType.VarChar, 60);
+                            cmd.Parameters[0].Value = UserInfo.instance().UserId;
+
+                            cmd.Parameters.Add("i_work_type", MySqlDbType.VarChar, 4);
+                            cmd.Parameters[1].Value = swork_type;
+
+                            cmd.Parameters.Add("i_work_date", MySqlDbType.VarChar, 8);
+                            cmd.Parameters[2].Value = DateTime.Now.ToString("yyyyMMdd");
+
+                            cmd.Parameters.Add("i_work_yymm", MySqlDbType.VarChar, 6);
+                            cmd.Parameters[3].Value = DateTime.Now.ToString("yyyyMM");
+
+                            cmd.Parameters.Add("i_to_id", MySqlDbType.VarChar, 128);
+                            cmd.Parameters[4].Value = gridView1.GetRowCellValue(i, gridView1.Columns[1]).ToString();
+
+                            cmd.Parameters.Add("i_name", MySqlDbType.VarChar, 50);
+                            cmd.Parameters[5].Value = gridView1.GetRowCellValue(i, gridView1.Columns[2]).ToString();
+
+                            cmd.Parameters.Add("i_nickname", MySqlDbType.VarChar, 50);
+                            cmd.Parameters[6].Value = gridView1.GetRowCellValue(i, gridView1.Columns[3]).ToString();
+
+                            cmd.Parameters.Add("i_amt", MySqlDbType.Int32, 11);
+                            cmd.Parameters[7].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[4]).ToString());
+
+                            cmd.Parameters.Add("i_from_type", MySqlDbType.VarChar, 20);
+                            cmd.Parameters[8].Value = sfrom_type;
+
+                            cmd.Parameters.Add("i_to_type", MySqlDbType.VarChar, 20);
+                            cmd.Parameters[9].Value = sto_type;
+
+                            cmd.Parameters.Add("i_ubject", MySqlDbType.VarChar, 500);
+                            cmd.Parameters[10].Value = subject;
+
+                            cmd.Parameters.Add("i_memo", MySqlDbType.VarChar, 500);
+                            cmd.Parameters[11].Value = gridView1.GetRowCellValue(i, gridView1.Columns[5]).ToString();
+
+                            cmd.Parameters.Add("i_date", MySqlDbType.VarChar, 500);
+                            cmd.Parameters[12].Value = gridView1.GetRowCellValue(i, gridView1.Columns[6]).ToString();
+
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
+        }
+
+        private void His_MySql2()
+        {
+            try
+            {
+                // 버튼 통합시 변수는 삭제
+                string sfrom_type = string.Empty;
+                string sto_type = string.Empty;
+                string swork_type = string.Empty;
+                string subject = string.Empty;
+
+                swork_type = "02";
+                subject = "[관리] PS운영자 수수료 정산";
+                sfrom_type = "DM";
+                sto_type = "DM";
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+
+                    for (int i = 0; i < gridView2.DataRowCount; i++)
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN12_SAVE_01", con))
+                        {
+
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add("i_user_id", MySqlDbType.VarChar, 60);
+                            cmd.Parameters[0].Value = UserInfo.instance().UserId;
+
+                            cmd.Parameters.Add("i_work_type", MySqlDbType.VarChar, 4);
+                            cmd.Parameters[1].Value = swork_type;
+
+                            cmd.Parameters.Add("i_work_date", MySqlDbType.VarChar, 8);
+                            cmd.Parameters[2].Value = DateTime.Now.ToString("yyyyMMdd");
+
+                            cmd.Parameters.Add("i_work_yymm", MySqlDbType.VarChar, 6);
+                            cmd.Parameters[3].Value = DateTime.Now.ToString("yyyyMM");
+
+                            cmd.Parameters.Add("i_to_id", MySqlDbType.VarChar, 128);
+                            cmd.Parameters[4].Value = gridView2.GetRowCellValue(i, gridView2.Columns[1]).ToString();
+
+                            cmd.Parameters.Add("i_name", MySqlDbType.VarChar, 50);
+                            cmd.Parameters[5].Value = gridView2.GetRowCellValue(i, gridView2.Columns[2]).ToString();
+
+                            cmd.Parameters.Add("i_nickname", MySqlDbType.VarChar, 50);
+                            cmd.Parameters[6].Value = gridView2.GetRowCellValue(i, gridView2.Columns[3]).ToString();
+
+                            cmd.Parameters.Add("i_amt", MySqlDbType.Int32, 11);
+                            cmd.Parameters[7].Value = Convert.ToInt32(gridView2.GetRowCellValue(i, gridView2.Columns[4]).ToString());
+
+                            cmd.Parameters.Add("i_from_type", MySqlDbType.VarChar, 20);
+                            cmd.Parameters[8].Value = sfrom_type;
+
+                            cmd.Parameters.Add("i_to_type", MySqlDbType.VarChar, 20);
+                            cmd.Parameters[9].Value = sto_type;
+
+                            cmd.Parameters.Add("i_ubject", MySqlDbType.VarChar, 500);
+                            cmd.Parameters[10].Value = subject;
+
+                            cmd.Parameters.Add("i_memo", MySqlDbType.VarChar, 500);
+                            cmd.Parameters[11].Value = gridView2.GetRowCellValue(i, gridView2.Columns[5]).ToString();
+
+                            cmd.Parameters.Add("i_date", MySqlDbType.VarChar, 500);
+                            cmd.Parameters[12].Value = gridView2.GetRowCellValue(i, gridView2.Columns[6]).ToString();
+
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
     }
 }

@@ -58,7 +58,7 @@ namespace YL_DONUT.BizFrm
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = false;
-            this.IsSave = false;
+            this.IsSave = true;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = false;
@@ -278,6 +278,55 @@ namespace YL_DONUT.BizFrm
         }
         #endregion
 
+
+        public override void Save()
+        {
+            try
+            {
+
+                var saveResult = new SaveTableResultInfo() { IsError = true };
+
+                var dt = efwGridControl1.GetChangeDataWithRowState;
+                var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+
+
+                for (var i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (dt.Rows[i][StatusColumn].ToString() == "U")
+                    {
+                        //Console.WriteLine("------------------------------------------------------------");
+                        //Console.WriteLine("[U] " + dt.Rows[i]["o_code"].ToString());
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN01_SAVE_01", con))
+                            {
+
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[0].Value = dt.Rows[i]["o_code"].ToString();
+
+                                cmd.Parameters.Add("i_remark", MySqlDbType.VarChar, 250);
+                                cmd.Parameters[1].Value = dt.Rows[i]["remark"].ToString();
+
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
@@ -363,6 +412,12 @@ namespace YL_DONUT.BizFrm
         private void CmbORDER_SEARCH_EditValueChanged(object sender, EventArgs e)
         {
             txtI_SEARCH.EditValue = "";
+        }
+
+        private void EfwGridControl1_EditorKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtI_SEARCH.Focus();
         }
 
     }

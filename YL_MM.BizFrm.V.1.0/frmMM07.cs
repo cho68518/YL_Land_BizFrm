@@ -109,16 +109,16 @@ namespace YL_MM.BizFrm
 
             popup = new frmMM07_Pop01();
 
-            popup.pIDX = gridView1.GetFocusedRowCellValue("res_u_id").ToString();
-            popup.pLEVEL = gridView1.GetFocusedRowCellValue("u_chef_level_cd").ToString();
+            popup.pIDX = advBandedGridView1.GetFocusedRowCellValue("res_u_id").ToString();
+            popup.pLEVEL = advBandedGridView1.GetFocusedRowCellValue("u_chef_level_cd").ToString();
 
-            popup.pSEND_ID = gridView1.GetFocusedRowCellValue("res_login_id").ToString();
-            popup.pU_NAME = gridView1.GetFocusedRowCellValue("res_u_name").ToString();
-            popup.pU_NICKNAME = gridView1.GetFocusedRowCellValue("res_u_nickname").ToString();
+            popup.pSEND_ID = advBandedGridView1.GetFocusedRowCellValue("res_login_id").ToString();
+            popup.pU_NAME = advBandedGridView1.GetFocusedRowCellValue("res_u_name").ToString();
+            popup.pU_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_u_nickname").ToString();
 
 
             string sLevel = string.Empty;
-            sLevel = gridView1.GetFocusedRowCellValue("u_chef_level_cd").ToString();
+            sLevel = advBandedGridView1.GetFocusedRowCellValue("u_chef_level_cd").ToString();
 
             if (Convert.ToInt16(sLevel.ToString()) >= 3 )
             {
@@ -128,39 +128,39 @@ namespace YL_MM.BizFrm
 
             if (sLevel.ToString() == "0")
             {
-                popup.pRECV_ID = gridView1.GetFocusedRowCellValue("res_gen_u_id").ToString();
-                popup.pRECV_U_NAME = gridView1.GetFocusedRowCellValue("res_gen_u_name").ToString();
-                popup.pRECV_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_gen_u_nickname").ToString();
+                popup.pRECV_ID = advBandedGridView1.GetFocusedRowCellValue("res_gen_u_id").ToString();
+                popup.pRECV_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_gen_u_name").ToString();
+                popup.pRECV_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_gen_u_nickname").ToString();
             }
             if (sLevel.ToString() == "1")
             {
-                popup.pRECV_ID = gridView1.GetFocusedRowCellValue("res_vip_u_id").ToString();
-                popup.pRECV_U_NAME = gridView1.GetFocusedRowCellValue("res_vip_u_name").ToString();
-                popup.pRECV_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_vip_u_nickname").ToString();
+                popup.pRECV_ID = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_id").ToString();
+                popup.pRECV_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_name").ToString();
+                popup.pRECV_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_nickname").ToString();
             }
             if (sLevel.ToString() == "2")
             {
-                popup.pRECV_ID = gridView1.GetFocusedRowCellValue("res_chef_u_id").ToString();
-                popup.pRECV_U_NAME = gridView1.GetFocusedRowCellValue("res_chef_u_name").ToString();
-                popup.pRECV_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_chef_u_nickname").ToString();
+                popup.pRECV_ID = advBandedGridView1.GetFocusedRowCellValue("res_chef_u_id").ToString();
+                popup.pRECV_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_chef_u_name").ToString();
+                popup.pRECV_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_chef_u_nickname").ToString();
             }
 
 
-            popup.pRECV_GEN_ID = gridView1.GetFocusedRowCellValue("res_gen_u_id").ToString();
-            popup.pRECV_GEN_U_NAME = gridView1.GetFocusedRowCellValue("res_gen_u_name").ToString();
-            popup.pRECV_GEN_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_gen_u_nickname").ToString();
+            popup.pRECV_GEN_ID = advBandedGridView1.GetFocusedRowCellValue("res_gen_u_id").ToString();
+            popup.pRECV_GEN_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_gen_u_name").ToString();
+            popup.pRECV_GEN_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_gen_u_nickname").ToString();
 
-            popup.pRECV_VIP_ID = gridView1.GetFocusedRowCellValue("res_vip_u_id").ToString();
-            popup.pRECV_VIP_U_NAME = gridView1.GetFocusedRowCellValue("res_vip_u_name").ToString();
-            popup.pRECV_VIP_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_vip_u_nickname").ToString();
+            popup.pRECV_VIP_ID = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_id").ToString();
+            popup.pRECV_VIP_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_name").ToString();
+            popup.pRECV_VIP_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_nickname").ToString();
 
-            popup.pRECV_SHEF_ID = gridView1.GetFocusedRowCellValue("res_chef_u_id").ToString();
-            popup.pRECV_SHEF_U_NAME = gridView1.GetFocusedRowCellValue("res_chef_u_name").ToString();
-            popup.pRECV_SHEF_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_chef_u_nickname").ToString();
+            popup.pRECV_SHEF_ID = advBandedGridView1.GetFocusedRowCellValue("res_chef_u_id").ToString();
+            popup.pRECV_SHEF_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_chef_u_name").ToString();
+            popup.pRECV_SHEF_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_chef_u_nickname").ToString();
 
-            popup.pDOMA_ID = gridView1.GetFocusedRowCellValue("res_doma_u_id").ToString();
-            popup.pDOMA_U_NAME = gridView1.GetFocusedRowCellValue("res_doma_u_name").ToString();
-            popup.pDOMA_U_NICKNAME = gridView1.GetFocusedRowCellValue("res_doma_u_nickname").ToString();
+            popup.pDOMA_ID = advBandedGridView1.GetFocusedRowCellValue("res_doma_u_id").ToString();
+            popup.pDOMA_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_doma_u_name").ToString();
+            popup.pDOMA_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_doma_u_nickname").ToString();
 
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();

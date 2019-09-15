@@ -199,6 +199,7 @@
             // 
             // efwGroupControl1
             // 
+            this.efwGroupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
             this.efwGroupControl1.Controls.Add(this.efwGroupControl3);
             this.efwGroupControl1.Controls.Add(this.layoutControl1);
@@ -995,8 +996,11 @@
             // 
             this.layoutControlItem21.Control = this.rbLEVEL;
             this.layoutControlItem21.Location = new System.Drawing.Point(0, 54);
+            this.layoutControlItem21.MaxSize = new System.Drawing.Size(413, 32);
+            this.layoutControlItem21.MinSize = new System.Drawing.Size(413, 32);
             this.layoutControlItem21.Name = "layoutControlItem21";
             this.layoutControlItem21.Size = new System.Drawing.Size(413, 32);
+            this.layoutControlItem21.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem21.Text = "회원구분";
             this.layoutControlItem21.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem21.TextSize = new System.Drawing.Size(80, 20);
@@ -1012,7 +1016,7 @@
             this.efwGroupControl2.Name = "efwGroupControl2";
             this.efwGroupControl2.Size = new System.Drawing.Size(997, 248);
             this.efwGroupControl2.TabIndex = 3;
-            this.efwGroupControl2.Text = "담당MD 수정";
+            this.efwGroupControl2.Text = "담당이사 추천인( 담당셰프 )";
             // 
             // layoutControl2
             // 

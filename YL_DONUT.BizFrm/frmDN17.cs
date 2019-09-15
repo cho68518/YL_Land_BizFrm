@@ -43,6 +43,9 @@ namespace YL_DONUT.BizFrm
             //GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_write1");
             //GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_write2");
 
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl2, "Y", "N", "is_open");
+            GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl2, "Y", "N", "is_reserve");
+
             this.dt1.EditValue = DateTime.Now;
             this.dt2.EditValue = DateTime.Now;
             cmbQ1.EditValue = "0";

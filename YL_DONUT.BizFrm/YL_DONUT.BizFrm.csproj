@@ -99,7 +99,7 @@
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Easy.Framework.Release\MySql.Data.dll</HintPath>
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -134,17 +134,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="frmDN14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN14.designer.cs">
+      <DependentUpon>frmDN14.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDN15.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmDN15.Designer.cs">
       <DependentUpon>frmDN15.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDN14.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frmDN14.Designer.cs">
-      <DependentUpon>frmDN14.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDN11.cs">
       <SubType>UserControl</SubType>
@@ -260,6 +260,12 @@
     <Compile Include="frmDN17.Designer.cs">
       <DependentUpon>frmDN17.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDN18.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN18.Designer.cs">
+      <DependentUpon>frmDN18.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN17.resx">
       <DependentUpon>frmDN17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN18.resx">
+      <DependentUpon>frmDN18.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
