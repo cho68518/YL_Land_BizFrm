@@ -313,6 +313,10 @@
             this.efwLabel10 = new Easy.Framework.WinForm.Control.efwLabel();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.btn2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.lblRes1 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.btn1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txt_o_code = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel16 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txt_o_u_id = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -320,7 +324,6 @@
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGridControl6 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.advBandedGridView6 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
-            this.gridBand26 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn219 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn236 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn238 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -336,7 +339,6 @@
             this.bandedGridColumn263 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn178 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn179 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand27 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn180 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.repositoryItemPictureEdit18 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.bandedGridColumn181 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -348,13 +350,11 @@
             this.bandedGridColumn185 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn186 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn187 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand28 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn188 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn189 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn190 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn191 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn192 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand29 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn193 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.repositoryItemPictureEdit19 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.bandedGridColumn194 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -363,13 +363,11 @@
             this.bandedGridColumn197 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn198 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn199 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand31 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn214 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn215 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn216 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn217 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn218 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand30 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn200 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.repositoryItemPictureEdit20 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.bandedGridColumn201 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -378,7 +376,6 @@
             this.bandedGridColumn204 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn205 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn206 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand32 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn207 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.repositoryItemPictureEdit21 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.bandedGridColumn208 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -387,15 +384,11 @@
             this.bandedGridColumn211 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn212 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn213 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand33 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand34 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand37 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn270 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn271 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn272 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn273 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn274 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand41 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn275 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.repositoryItemPictureEdit26 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.bandedGridColumn276 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -472,10 +465,17 @@
             this.dt14 = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dt13 = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel14 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.btn1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.lblRes1 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.btn2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.gridBand26 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand27 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand28 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand29 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand31 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand30 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand32 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand33 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand34 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand37 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand41 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
             this.efwGroupControl3.SuspendLayout();
@@ -546,6 +546,8 @@
             this.xtraTabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
+            this.efwGroupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_o_code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_o_u_id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl6)).BeginInit();
@@ -574,8 +576,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt14.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt13.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
-            this.efwGroupControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridView1
@@ -3668,6 +3668,55 @@
             this.efwGroupControl1.TabIndex = 48;
             this.efwGroupControl1.Text = "상세검증";
             // 
+            // btn2
+            // 
+            this.btn2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn2.ImageOptions.Image")));
+            this.btn2.IsMultiLang = false;
+            this.btn2.Location = new System.Drawing.Point(610, 67);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(193, 23);
+            this.btn2.TabIndex = 6;
+            this.btn2.Text = "PS감사 스토리 생성(담당셰프)";
+            this.btn2.Click += new System.EventHandler(this.Btn2_Click);
+            // 
+            // efwGroupControl2
+            // 
+            this.efwGroupControl2.Controls.Add(this.lblRes1);
+            this.efwGroupControl2.IsMultiLang = false;
+            this.efwGroupControl2.Location = new System.Drawing.Point(410, 36);
+            this.efwGroupControl2.Name = "efwGroupControl2";
+            this.efwGroupControl2.ShowCaption = false;
+            this.efwGroupControl2.Size = new System.Drawing.Size(177, 58);
+            this.efwGroupControl2.TabIndex = 5;
+            this.efwGroupControl2.Text = "efwGroupControl2";
+            // 
+            // lblRes1
+            // 
+            this.lblRes1.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
+            this.lblRes1.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lblRes1.Appearance.Options.UseFont = true;
+            this.lblRes1.Appearance.Options.UseForeColor = true;
+            this.lblRes1.Appearance.Options.UseTextOptions = true;
+            this.lblRes1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblRes1.EraserGroup = null;
+            this.lblRes1.IsMultiLang = false;
+            this.lblRes1.Location = new System.Drawing.Point(31, 17);
+            this.lblRes1.Name = "lblRes1";
+            this.lblRes1.Size = new System.Drawing.Size(110, 23);
+            this.lblRes1.TabIndex = 0;
+            this.lblRes1.Text = "efwLabel17";
+            // 
+            // btn1
+            // 
+            this.btn1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn1.ImageOptions.Image")));
+            this.btn1.IsMultiLang = false;
+            this.btn1.Location = new System.Drawing.Point(610, 36);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(193, 23);
+            this.btn1.TabIndex = 4;
+            this.btn1.Text = "PS축하 스토리 생성 (추천인)";
+            this.btn1.Click += new System.EventHandler(this.Btn1_Click);
+            // 
             // txt_o_code
             // 
             this.txt_o_code.EditValue2 = null;
@@ -3866,35 +3915,6 @@
             this.advBandedGridView6.OptionsView.ShowGroupPanel = false;
             this.advBandedGridView6.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.AdvBandedGridView6_CustomUnboundColumnData);
             // 
-            // gridBand26
-            // 
-            this.gridBand26.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridBand26.AppearanceHeader.BorderColor = System.Drawing.Color.Red;
-            this.gridBand26.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand26.AppearanceHeader.Options.UseBorderColor = true;
-            this.gridBand26.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand26.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand26.Caption = "회원정보";
-            this.gridBand26.Columns.Add(this.bandedGridColumn219);
-            this.gridBand26.Columns.Add(this.bandedGridColumn236);
-            this.gridBand26.Columns.Add(this.bandedGridColumn238);
-            this.gridBand26.Columns.Add(this.bandedGridColumn239);
-            this.gridBand26.Columns.Add(this.bandedGridColumn172);
-            this.gridBand26.Columns.Add(this.bandedGridColumn173);
-            this.gridBand26.Columns.Add(this.bandedGridColumn174);
-            this.gridBand26.Columns.Add(this.bandedGridColumn175);
-            this.gridBand26.Columns.Add(this.bandedGridColumn176);
-            this.gridBand26.Columns.Add(this.bandedGridColumn177);
-            this.gridBand26.Columns.Add(this.bandedGridColumn264);
-            this.gridBand26.Columns.Add(this.bandedGridColumn265);
-            this.gridBand26.Columns.Add(this.bandedGridColumn263);
-            this.gridBand26.Columns.Add(this.bandedGridColumn178);
-            this.gridBand26.Columns.Add(this.bandedGridColumn179);
-            this.gridBand26.Name = "gridBand26";
-            this.gridBand26.RowCount = 2;
-            this.gridBand26.VisibleIndex = 0;
-            this.gridBand26.Width = 825;
-            // 
             // bandedGridColumn219
             // 
             this.bandedGridColumn219.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -4038,30 +4058,6 @@
             this.bandedGridColumn179.Name = "bandedGridColumn179";
             this.bandedGridColumn179.OptionsColumn.ReadOnly = true;
             // 
-            // gridBand27
-            // 
-            this.gridBand27.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridBand27.AppearanceHeader.BorderColor = System.Drawing.Color.Red;
-            this.gridBand27.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand27.AppearanceHeader.Options.UseBorderColor = true;
-            this.gridBand27.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand27.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand27.Caption = "PS후기 스토리 (본인)";
-            this.gridBand27.Columns.Add(this.bandedGridColumn180);
-            this.gridBand27.Columns.Add(this.bandedGridColumn181);
-            this.gridBand27.Columns.Add(this.bandedGridColumn182);
-            this.gridBand27.Columns.Add(this.bandedGridColumn261);
-            this.gridBand27.Columns.Add(this.bandedGridColumn262);
-            this.gridBand27.Columns.Add(this.bandedGridColumn183);
-            this.gridBand27.Columns.Add(this.bandedGridColumn184);
-            this.gridBand27.Columns.Add(this.bandedGridColumn185);
-            this.gridBand27.Columns.Add(this.bandedGridColumn186);
-            this.gridBand27.Columns.Add(this.bandedGridColumn187);
-            this.gridBand27.Name = "gridBand27";
-            this.gridBand27.OptionsBand.AllowMove = false;
-            this.gridBand27.VisibleIndex = 1;
-            this.gridBand27.Width = 675;
-            // 
             // bandedGridColumn180
             // 
             this.bandedGridColumn180.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -4174,22 +4170,6 @@
             this.bandedGridColumn187.Name = "bandedGridColumn187";
             this.bandedGridColumn187.OptionsColumn.ReadOnly = true;
             // 
-            // gridBand28
-            // 
-            this.gridBand28.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.gridBand28.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand28.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand28.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand28.Caption = "추천인정보 (주문시 등록한)";
-            this.gridBand28.Columns.Add(this.bandedGridColumn188);
-            this.gridBand28.Columns.Add(this.bandedGridColumn189);
-            this.gridBand28.Columns.Add(this.bandedGridColumn190);
-            this.gridBand28.Columns.Add(this.bandedGridColumn191);
-            this.gridBand28.Columns.Add(this.bandedGridColumn192);
-            this.gridBand28.Name = "gridBand28";
-            this.gridBand28.VisibleIndex = 2;
-            this.gridBand28.Width = 375;
-            // 
             // bandedGridColumn188
             // 
             this.bandedGridColumn188.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -4239,24 +4219,6 @@
             this.bandedGridColumn192.Name = "bandedGridColumn192";
             this.bandedGridColumn192.OptionsColumn.ReadOnly = true;
             this.bandedGridColumn192.Visible = true;
-            // 
-            // gridBand29
-            // 
-            this.gridBand29.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridBand29.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand29.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand29.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand29.Caption = "PS축하 스토리 (추천인)";
-            this.gridBand29.Columns.Add(this.bandedGridColumn193);
-            this.gridBand29.Columns.Add(this.bandedGridColumn194);
-            this.gridBand29.Columns.Add(this.bandedGridColumn195);
-            this.gridBand29.Columns.Add(this.bandedGridColumn196);
-            this.gridBand29.Columns.Add(this.bandedGridColumn197);
-            this.gridBand29.Columns.Add(this.bandedGridColumn198);
-            this.gridBand29.Columns.Add(this.bandedGridColumn199);
-            this.gridBand29.Name = "gridBand29";
-            this.gridBand29.VisibleIndex = 3;
-            this.gridBand29.Width = 525;
             // 
             // bandedGridColumn193
             // 
@@ -4339,22 +4301,6 @@
             this.bandedGridColumn199.OptionsColumn.ReadOnly = true;
             this.bandedGridColumn199.Visible = true;
             // 
-            // gridBand31
-            // 
-            this.gridBand31.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.gridBand31.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand31.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand31.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand31.Caption = "담당셰프 정보";
-            this.gridBand31.Columns.Add(this.bandedGridColumn214);
-            this.gridBand31.Columns.Add(this.bandedGridColumn215);
-            this.gridBand31.Columns.Add(this.bandedGridColumn216);
-            this.gridBand31.Columns.Add(this.bandedGridColumn217);
-            this.gridBand31.Columns.Add(this.bandedGridColumn218);
-            this.gridBand31.Name = "gridBand31";
-            this.gridBand31.VisibleIndex = 4;
-            this.gridBand31.Width = 375;
-            // 
             // bandedGridColumn214
             // 
             this.bandedGridColumn214.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -4404,24 +4350,6 @@
             this.bandedGridColumn218.Name = "bandedGridColumn218";
             this.bandedGridColumn218.OptionsColumn.ReadOnly = true;
             this.bandedGridColumn218.Visible = true;
-            // 
-            // gridBand30
-            // 
-            this.gridBand30.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridBand30.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand30.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand30.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand30.Caption = "PS감사 스토리 (담당셰프)";
-            this.gridBand30.Columns.Add(this.bandedGridColumn200);
-            this.gridBand30.Columns.Add(this.bandedGridColumn201);
-            this.gridBand30.Columns.Add(this.bandedGridColumn202);
-            this.gridBand30.Columns.Add(this.bandedGridColumn203);
-            this.gridBand30.Columns.Add(this.bandedGridColumn204);
-            this.gridBand30.Columns.Add(this.bandedGridColumn205);
-            this.gridBand30.Columns.Add(this.bandedGridColumn206);
-            this.gridBand30.Name = "gridBand30";
-            this.gridBand30.VisibleIndex = 5;
-            this.gridBand30.Width = 525;
             // 
             // bandedGridColumn200
             // 
@@ -4502,24 +4430,6 @@
             this.bandedGridColumn206.OptionsColumn.ReadOnly = true;
             this.bandedGridColumn206.Visible = true;
             // 
-            // gridBand32
-            // 
-            this.gridBand32.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridBand32.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand32.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand32.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand32.Caption = "알뜰지원 스토리 (본인)";
-            this.gridBand32.Columns.Add(this.bandedGridColumn207);
-            this.gridBand32.Columns.Add(this.bandedGridColumn208);
-            this.gridBand32.Columns.Add(this.bandedGridColumn209);
-            this.gridBand32.Columns.Add(this.bandedGridColumn210);
-            this.gridBand32.Columns.Add(this.bandedGridColumn211);
-            this.gridBand32.Columns.Add(this.bandedGridColumn212);
-            this.gridBand32.Columns.Add(this.bandedGridColumn213);
-            this.gridBand32.Name = "gridBand32";
-            this.gridBand32.VisibleIndex = 6;
-            this.gridBand32.Width = 525;
-            // 
             // bandedGridColumn207
             // 
             this.bandedGridColumn207.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -4599,37 +4509,6 @@
             this.bandedGridColumn213.OptionsColumn.ReadOnly = true;
             this.bandedGridColumn213.Visible = true;
             // 
-            // gridBand33
-            // 
-            this.gridBand33.Caption = "gridBand33";
-            this.gridBand33.Name = "gridBand33";
-            this.gridBand33.RowCount = 2;
-            this.gridBand33.Visible = false;
-            this.gridBand33.VisibleIndex = -1;
-            // 
-            // gridBand34
-            // 
-            this.gridBand34.Caption = "gridBand34";
-            this.gridBand34.Name = "gridBand34";
-            this.gridBand34.Visible = false;
-            this.gridBand34.VisibleIndex = -1;
-            // 
-            // gridBand37
-            // 
-            this.gridBand37.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.gridBand37.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand37.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand37.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand37.Caption = "GS 담당셰프/상위셰프";
-            this.gridBand37.Columns.Add(this.bandedGridColumn270);
-            this.gridBand37.Columns.Add(this.bandedGridColumn271);
-            this.gridBand37.Columns.Add(this.bandedGridColumn272);
-            this.gridBand37.Columns.Add(this.bandedGridColumn273);
-            this.gridBand37.Columns.Add(this.bandedGridColumn274);
-            this.gridBand37.Name = "gridBand37";
-            this.gridBand37.VisibleIndex = 7;
-            this.gridBand37.Width = 375;
-            // 
             // bandedGridColumn270
             // 
             this.bandedGridColumn270.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -4674,24 +4553,6 @@
             this.bandedGridColumn274.FieldName = "u_chef_level4";
             this.bandedGridColumn274.Name = "bandedGridColumn274";
             this.bandedGridColumn274.Visible = true;
-            // 
-            // gridBand41
-            // 
-            this.gridBand41.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridBand41.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand41.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand41.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand41.Caption = "GS축하스토리 (일반,VIP:상위셰프, 셰프: 담당셰프, 셰프이상 생성X)";
-            this.gridBand41.Columns.Add(this.bandedGridColumn275);
-            this.gridBand41.Columns.Add(this.bandedGridColumn276);
-            this.gridBand41.Columns.Add(this.bandedGridColumn277);
-            this.gridBand41.Columns.Add(this.bandedGridColumn278);
-            this.gridBand41.Columns.Add(this.bandedGridColumn279);
-            this.gridBand41.Columns.Add(this.bandedGridColumn280);
-            this.gridBand41.Columns.Add(this.bandedGridColumn281);
-            this.gridBand41.Name = "gridBand41";
-            this.gridBand41.VisibleIndex = 8;
-            this.gridBand41.Width = 525;
             // 
             // bandedGridColumn275
             // 
@@ -5593,54 +5454,193 @@
             this.efwLabel14.TabIndex = 0;
             this.efwLabel14.Text = "스토리 생성일";
             // 
-            // btn1
+            // gridBand26
             // 
-            this.btn1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn1.ImageOptions.Image")));
-            this.btn1.IsMultiLang = false;
-            this.btn1.Location = new System.Drawing.Point(610, 36);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(193, 23);
-            this.btn1.TabIndex = 4;
-            this.btn1.Text = "PS축하 스토리 생성 (추천인)";
-            this.btn1.Click += new System.EventHandler(this.Btn1_Click);
+            this.gridBand26.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gridBand26.AppearanceHeader.BorderColor = System.Drawing.Color.Red;
+            this.gridBand26.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand26.AppearanceHeader.Options.UseBorderColor = true;
+            this.gridBand26.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand26.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand26.Caption = "회원정보";
+            this.gridBand26.Columns.Add(this.bandedGridColumn219);
+            this.gridBand26.Columns.Add(this.bandedGridColumn236);
+            this.gridBand26.Columns.Add(this.bandedGridColumn238);
+            this.gridBand26.Columns.Add(this.bandedGridColumn239);
+            this.gridBand26.Columns.Add(this.bandedGridColumn172);
+            this.gridBand26.Columns.Add(this.bandedGridColumn173);
+            this.gridBand26.Columns.Add(this.bandedGridColumn174);
+            this.gridBand26.Columns.Add(this.bandedGridColumn175);
+            this.gridBand26.Columns.Add(this.bandedGridColumn176);
+            this.gridBand26.Columns.Add(this.bandedGridColumn177);
+            this.gridBand26.Columns.Add(this.bandedGridColumn264);
+            this.gridBand26.Columns.Add(this.bandedGridColumn265);
+            this.gridBand26.Columns.Add(this.bandedGridColumn263);
+            this.gridBand26.Columns.Add(this.bandedGridColumn178);
+            this.gridBand26.Columns.Add(this.bandedGridColumn179);
+            this.gridBand26.Name = "gridBand26";
+            this.gridBand26.RowCount = 2;
+            this.gridBand26.VisibleIndex = 0;
+            this.gridBand26.Width = 825;
             // 
-            // efwGroupControl2
+            // gridBand27
             // 
-            this.efwGroupControl2.Controls.Add(this.lblRes1);
-            this.efwGroupControl2.IsMultiLang = false;
-            this.efwGroupControl2.Location = new System.Drawing.Point(410, 36);
-            this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.ShowCaption = false;
-            this.efwGroupControl2.Size = new System.Drawing.Size(177, 58);
-            this.efwGroupControl2.TabIndex = 5;
-            this.efwGroupControl2.Text = "efwGroupControl2";
+            this.gridBand27.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridBand27.AppearanceHeader.BorderColor = System.Drawing.Color.Red;
+            this.gridBand27.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand27.AppearanceHeader.Options.UseBorderColor = true;
+            this.gridBand27.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand27.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand27.Caption = "PS후기 스토리 (본인)";
+            this.gridBand27.Columns.Add(this.bandedGridColumn180);
+            this.gridBand27.Columns.Add(this.bandedGridColumn181);
+            this.gridBand27.Columns.Add(this.bandedGridColumn182);
+            this.gridBand27.Columns.Add(this.bandedGridColumn261);
+            this.gridBand27.Columns.Add(this.bandedGridColumn262);
+            this.gridBand27.Columns.Add(this.bandedGridColumn183);
+            this.gridBand27.Columns.Add(this.bandedGridColumn184);
+            this.gridBand27.Columns.Add(this.bandedGridColumn185);
+            this.gridBand27.Columns.Add(this.bandedGridColumn186);
+            this.gridBand27.Columns.Add(this.bandedGridColumn187);
+            this.gridBand27.Name = "gridBand27";
+            this.gridBand27.OptionsBand.AllowMove = false;
+            this.gridBand27.VisibleIndex = 1;
+            this.gridBand27.Width = 675;
             // 
-            // lblRes1
+            // gridBand28
             // 
-            this.lblRes1.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
-            this.lblRes1.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.lblRes1.Appearance.Options.UseFont = true;
-            this.lblRes1.Appearance.Options.UseForeColor = true;
-            this.lblRes1.Appearance.Options.UseTextOptions = true;
-            this.lblRes1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblRes1.EraserGroup = null;
-            this.lblRes1.IsMultiLang = false;
-            this.lblRes1.Location = new System.Drawing.Point(31, 17);
-            this.lblRes1.Name = "lblRes1";
-            this.lblRes1.Size = new System.Drawing.Size(110, 23);
-            this.lblRes1.TabIndex = 0;
-            this.lblRes1.Text = "efwLabel17";
+            this.gridBand28.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.gridBand28.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand28.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand28.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand28.Caption = "추천인정보 (주문시 등록한)";
+            this.gridBand28.Columns.Add(this.bandedGridColumn188);
+            this.gridBand28.Columns.Add(this.bandedGridColumn189);
+            this.gridBand28.Columns.Add(this.bandedGridColumn190);
+            this.gridBand28.Columns.Add(this.bandedGridColumn191);
+            this.gridBand28.Columns.Add(this.bandedGridColumn192);
+            this.gridBand28.Name = "gridBand28";
+            this.gridBand28.VisibleIndex = 2;
+            this.gridBand28.Width = 375;
             // 
-            // btn2
+            // gridBand29
             // 
-            this.btn2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
-            this.btn2.IsMultiLang = false;
-            this.btn2.Location = new System.Drawing.Point(610, 67);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(193, 23);
-            this.btn2.TabIndex = 6;
-            this.btn2.Text = "PS감사 스토리 생성(담당셰프)";
-            this.btn2.Click += new System.EventHandler(this.Btn2_Click);
+            this.gridBand29.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridBand29.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand29.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand29.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand29.Caption = "PS축하 스토리 (추천인)";
+            this.gridBand29.Columns.Add(this.bandedGridColumn193);
+            this.gridBand29.Columns.Add(this.bandedGridColumn194);
+            this.gridBand29.Columns.Add(this.bandedGridColumn195);
+            this.gridBand29.Columns.Add(this.bandedGridColumn196);
+            this.gridBand29.Columns.Add(this.bandedGridColumn197);
+            this.gridBand29.Columns.Add(this.bandedGridColumn198);
+            this.gridBand29.Columns.Add(this.bandedGridColumn199);
+            this.gridBand29.Name = "gridBand29";
+            this.gridBand29.VisibleIndex = 3;
+            this.gridBand29.Width = 525;
+            // 
+            // gridBand31
+            // 
+            this.gridBand31.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.gridBand31.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand31.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand31.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand31.Caption = "담당셰프 정보";
+            this.gridBand31.Columns.Add(this.bandedGridColumn214);
+            this.gridBand31.Columns.Add(this.bandedGridColumn215);
+            this.gridBand31.Columns.Add(this.bandedGridColumn216);
+            this.gridBand31.Columns.Add(this.bandedGridColumn217);
+            this.gridBand31.Columns.Add(this.bandedGridColumn218);
+            this.gridBand31.Name = "gridBand31";
+            this.gridBand31.VisibleIndex = 4;
+            this.gridBand31.Width = 375;
+            // 
+            // gridBand30
+            // 
+            this.gridBand30.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridBand30.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand30.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand30.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand30.Caption = "PS감사 스토리 (담당셰프) 일반, VIP";
+            this.gridBand30.Columns.Add(this.bandedGridColumn200);
+            this.gridBand30.Columns.Add(this.bandedGridColumn201);
+            this.gridBand30.Columns.Add(this.bandedGridColumn202);
+            this.gridBand30.Columns.Add(this.bandedGridColumn203);
+            this.gridBand30.Columns.Add(this.bandedGridColumn204);
+            this.gridBand30.Columns.Add(this.bandedGridColumn205);
+            this.gridBand30.Columns.Add(this.bandedGridColumn206);
+            this.gridBand30.Name = "gridBand30";
+            this.gridBand30.VisibleIndex = 5;
+            this.gridBand30.Width = 525;
+            // 
+            // gridBand32
+            // 
+            this.gridBand32.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridBand32.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand32.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand32.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand32.Caption = "알뜰지원 스토리 (본인)";
+            this.gridBand32.Columns.Add(this.bandedGridColumn207);
+            this.gridBand32.Columns.Add(this.bandedGridColumn208);
+            this.gridBand32.Columns.Add(this.bandedGridColumn209);
+            this.gridBand32.Columns.Add(this.bandedGridColumn210);
+            this.gridBand32.Columns.Add(this.bandedGridColumn211);
+            this.gridBand32.Columns.Add(this.bandedGridColumn212);
+            this.gridBand32.Columns.Add(this.bandedGridColumn213);
+            this.gridBand32.Name = "gridBand32";
+            this.gridBand32.VisibleIndex = 6;
+            this.gridBand32.Width = 525;
+            // 
+            // gridBand33
+            // 
+            this.gridBand33.Caption = "gridBand33";
+            this.gridBand33.Name = "gridBand33";
+            this.gridBand33.RowCount = 2;
+            this.gridBand33.Visible = false;
+            this.gridBand33.VisibleIndex = -1;
+            // 
+            // gridBand34
+            // 
+            this.gridBand34.Caption = "gridBand34";
+            this.gridBand34.Name = "gridBand34";
+            this.gridBand34.Visible = false;
+            this.gridBand34.VisibleIndex = -1;
+            // 
+            // gridBand37
+            // 
+            this.gridBand37.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.gridBand37.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand37.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand37.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand37.Caption = "GS 담당셰프/상위셰프";
+            this.gridBand37.Columns.Add(this.bandedGridColumn270);
+            this.gridBand37.Columns.Add(this.bandedGridColumn271);
+            this.gridBand37.Columns.Add(this.bandedGridColumn272);
+            this.gridBand37.Columns.Add(this.bandedGridColumn273);
+            this.gridBand37.Columns.Add(this.bandedGridColumn274);
+            this.gridBand37.Name = "gridBand37";
+            this.gridBand37.VisibleIndex = 7;
+            this.gridBand37.Width = 375;
+            // 
+            // gridBand41
+            // 
+            this.gridBand41.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridBand41.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand41.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand41.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand41.Caption = "GS축하스토리 (일반,VIP:상위셰프, 셰프: 담당셰프, 셰프이상 생성X)";
+            this.gridBand41.Columns.Add(this.bandedGridColumn275);
+            this.gridBand41.Columns.Add(this.bandedGridColumn276);
+            this.gridBand41.Columns.Add(this.bandedGridColumn277);
+            this.gridBand41.Columns.Add(this.bandedGridColumn278);
+            this.gridBand41.Columns.Add(this.bandedGridColumn279);
+            this.gridBand41.Columns.Add(this.bandedGridColumn280);
+            this.gridBand41.Columns.Add(this.bandedGridColumn281);
+            this.gridBand41.Name = "gridBand41";
+            this.gridBand41.VisibleIndex = 8;
+            this.gridBand41.Width = 525;
             // 
             // frmDN16
             // 
@@ -5726,6 +5726,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
+            this.efwGroupControl2.ResumeLayout(false);
+            this.efwGroupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_o_code.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_o_u_id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl6)).EndInit();
@@ -5756,9 +5759,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt14.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt13.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
-            this.efwGroupControl2.ResumeLayout(false);
-            this.efwGroupControl2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6162,17 +6162,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn272;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn273;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn274;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand26;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand27;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand28;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand29;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand31;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand30;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand32;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand33;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand34;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand37;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand41;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn275;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit26;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn276;
@@ -6191,5 +6180,16 @@
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
         private Easy.Framework.WinForm.Control.efwLabel lblRes1;
         private Easy.Framework.WinForm.Control.efwSimpleButton btn2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand26;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand27;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand28;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand29;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand31;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand30;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand32;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand33;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand34;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand37;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand41;
     }
 }
