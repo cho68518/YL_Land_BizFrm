@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F0584AE3-A808-4BF9-BF44-F518618F75EE}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_SCM.BizFrm</RootNamespace>
     <AssemblyName>YL_SCM.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
@@ -94,22 +97,28 @@
       <HintPath>..\..\..\..\Program Files (x86)\DevExpress 18.2\Components\Bin\Framework\DevExpress.XtraTreeList.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="Easy.Framework.Common.V.3.1">
-      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.Common.V.3.1.dll</HintPath>
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\Easy.Framework.Common.V.3.1.dll</HintPath>
     </Reference>
     <Reference Include="Easy.Framework.ExceptionCom.V.3.1">
-      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.ExceptionCom.V.3.1.dll</HintPath>
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\Easy.Framework.ExceptionCom.V.3.1.dll</HintPath>
     </Reference>
     <Reference Include="Easy.Framework.SrvCommon.V.3.1">
-      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.SrvCommon.V.3.1.dll</HintPath>
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\Easy.Framework.SrvCommon.V.3.1.dll</HintPath>
     </Reference>
     <Reference Include="Easy.Framework.SrvCore.V.3.1">
-      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.SrvCore.V.3.1.dll</HintPath>
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\Easy.Framework.SrvCore.V.3.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Easy.Framework.Translator">
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\Easy.Framework.Translator.dll</HintPath>
     </Reference>
     <Reference Include="Easy.Framework.Util.V.3.1">
-      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.Util.V.3.1.dll</HintPath>
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\Easy.Framework.Util.V.3.1.dll</HintPath>
     </Reference>
     <Reference Include="Easy.Framework.WinForm.Control.V.3.1">
-      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.WinForm.Control.V.3.1.dll</HintPath>
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\Easy.Framework.WinForm.Control.V.3.1.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -124,11 +133,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmMain.cs">
+    <Compile Include="ConstantLib.cs" />
+    <Compile Include="Dlg\frmZipNoInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="Dlg\frmZipNoInfo.designer.cs">
+      <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSCM01.cs">
       <SubType>UserControl</SubType>
@@ -136,14 +146,25 @@
     <Compile Include="frmSCM01.Designer.cs">
       <DependentUpon>frmSCM01.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
+      <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSCM01.resx">
       <DependentUpon>frmSCM01.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
