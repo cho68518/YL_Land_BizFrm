@@ -98,6 +98,8 @@ namespace YL_DONUT.BizFrm
             this.dt12.EditValue = DateTime.Now;
             this.dt13.EditValue = DateTime.Now;
             this.dt14.EditValue = DateTime.Now;
+
+            lblRes1.Text = "";
         }
 
         #endregion
@@ -776,6 +778,8 @@ namespace YL_DONUT.BizFrm
 
             txt_o_u_id.EditValue = dr["u_id"].ToString();
             txt_o_code.EditValue = dr["o_code"].ToString();
+
+            txt_p_id.EditValue = dr["p_id"].ToString();
         }
 
         private void Btn1_Click(object sender, EventArgs e)
@@ -839,61 +843,30 @@ namespace YL_DONUT.BizFrm
 
         private void Btn2_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(this.txt_o_u_id.Text) || string.IsNullOrEmpty(this.txt_o_code.Text))
-            //{
-            //    return;
-            //}
+            lblRes1.Text = "";
+        }
 
-            //using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
-            //{
-            //    sql.Query = "select count(*) " +
-            //                "  from                      " +
-            //                "  (                         " +
-            //                "   select a.id                    as src_idx " +
-            //                "        , 221                     as contents_type " +
-            //                "        , b.send_id               as user_id " +
-            //                "        , c.u_name                as user_name " +
-            //                "        , c.u_nickname            as user_nickname " +
-            //                "        , c.login_id              as login_id " +
-            //                "        , a.o_code                as o_code " +
-            //                "        , (SELECT p_id FROM domamall.tb_am_product_order_datas where o_code = a.o_code limit 1) as p_id " +
-            //                "        , b.recv_id               as recomender_u_id       " +
-            //                "        , d.u_name                as recomender_u_name " +
-            //                "        , d.u_nickname            as recomender_u_nickname " +
-            //                "        , d.login_id              as recomender_login_id " +
-            //                "        , date_format(adddate(a.o_delivery_end_date, interval 72 hour), '%Y-%m-%d 23:59:59') as expiration_date " +
-            //                "        , 'N'                     as is_write " +
-            //                "        , a.o_date " +
-            //                "        , a.o_deposit_confirm_date " +
-            //                "        , (SELECT IFNULL(group_concat(t.pm_id), 0) FROM domamall.tb_promotion_products t left join domamall.tb_am_product_order_datas tt on t.p_id = tt.p_id where tt.o_code = a.o_code ) as pm_id " +
-            //                "             , (select IF((select count(1) from domamall.tb_cate_product t  left join domamall.tb_am_product_order_datas tt on t.p_id = tt.p_id where tt.o_code = a.o_code " +
-            //                "           and (t.c_org_code like 'DC001#DC00115%' or t.c_org_code like 'DC001#DC00120%' or t.c_org_code like 'DC001#DC00121%' or t.c_org_code like 'DC001#DC00122%') ) > 0, 'Y', 'N')) as hangawi_yn " +
-            //                "        , a.reco_possible_donut as reco_donut " +
-            //                "        , (select chef_id from  domamall.tb_doma_chef_relations where user_id = b.recv_id and chef_type = 'C' and is_use = 'Y' limit 1) as chef_id " +
-            //                "     from domamall.tb_am_product_orders a " +
-            //                "      left join domalife.member_relations b on a.o_u_id  = b.recv_id " +
-            //                "      left join domalife.member_master c    on b.send_id = c.u_id " +
-            //                "      inner join domalife.member_master d   on a.o_u_id  = d.u_id " +
-            //                "    where a.o_type IN ('O','D','F') " +
-            //                "      and a.o_deposit_confirm_date is not null " +
-            //                "      and a.order_mall_type = 'PRIVATE' " +
-            //                "      and a.o_u_id          = '" + txt_o_u_id.EditValue + "' " +
-            //                "      and a.o_code          = '" + txt_o_code.EditValue + "' " +
-            //                "   order by a.o_date desc " +
-            //                "  ) pp " +
-            //                "where pp.pm_id not like '%3%' " +
-            //                "  and pp.hangawi_yn = 'N' " +
-            //                "  and pp.reco_donut > 0 " +
-            //                "  and pp.user_id != pp.chef_id ";
-            //    DataSet ds = sql.selectQueryDataSet();
+        private void Btn3_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txt_o_u_id.Text) || string.IsNullOrEmpty(this.txt_o_code.Text))
+            {
+                return;
+            }
 
-            //    int ncnt = Convert.ToInt32(sql.selectQueryForSingleValue());
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = "select ifnull(td_donut,0) " +
+                            "  from domamall.z_product_masters " +
+                            " where p_id = " + Convert.ToInt32(txt_p_id.EditValue.ToString());
+                DataSet ds = sql.selectQueryDataSet();
 
-            //    if (ncnt > 0)
-            //        lblRes1.Text = "생성!";
-            //    else
-            //        lblRes1.Text = "비생성!";
-            //}
+                int ncnt = Convert.ToInt32(sql.selectQueryForSingleValue());
+
+                if (ncnt > 0)
+                    lblRes1.Text = ncnt.ToString();
+                else
+                    lblRes1.Text = "0";
+            }
         }
     }
 }
