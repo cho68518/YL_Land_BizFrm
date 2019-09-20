@@ -20,6 +20,8 @@ using Newtonsoft.Json.Linq;
 using System.Xml;
 using YL_COMM.BizFrm;
 using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraEditors.Popup;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 
 namespace YL_DONUT.BizFrm
 {
@@ -27,7 +29,10 @@ namespace YL_DONUT.BizFrm
     {
         public frmTest01()
         {
-            InitializeComponent();  
+            InitializeComponent();
+
+            this.gridView1.MouseDown += GridView1_MouseDown;
+            this.efwGridControl1.DataSource = CreateTable(5);
 
         }
 
@@ -54,11 +59,11 @@ namespace YL_DONUT.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
-            DataSet ds = new DataSet();
-            //efwGridControl1.DataSource = ds;
-            efwGridControl1.DataBind(ds);
+            //DataSet ds = new DataSet();
+            ////efwGridControl1.DataSource = ds;
+            //efwGridControl1.DataBind(ds);
 
-            gridView1.InitNewRow += GridView1_InitNewRow;
+            //gridView1.InitNewRow += GridView1_InitNewRow;
         }
 
 
@@ -354,5 +359,61 @@ namespace YL_DONUT.BizFrm
             View.SetRowCellValue(e.RowHandle, View.Columns["col1"], "");
             View.SetRowCellValue(e.RowHandle, View.Columns["col2"], "");
         }
+
+
+
+
+        private void GridView1_MouseDown(object sender, MouseEventArgs e)
+        {
+            GridHitInfo hitInfo = gridView1.CalcHitInfo(e.Location);
+            ClearForm(); if (e.Button == MouseButtons.Right && (hitInfo.HitTest == GridHitTest.RowCell || hitInfo.HitTest == GridHitTest.Row))
+            {
+                DateEdit dateEdit = new DateEdit();
+                dateEdit.EditValue = this.gridView1.GetRowCellValue(hitInfo.RowHandle, gridView1.Columns["Date"]);
+                dateEditForm = new VistaPopupDateEditForm(dateEdit);
+                dateEditForm.Calendar.EditDateModified += new EventHandler(OnEditDateModified); dateEditForm.ClosePopup();
+                dateEditForm.Tag = hitInfo.RowHandle; dateEditForm.Location = PointToScreen(e.Location);
+                dateEditForm.Size = dateEditForm.CalcFormSize(); dateEditForm.ShowPopupForm();
+            }
+        }
+
+        private DataTable CreateTable(int rowCount)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("@STATUS", typeof(string));
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("ID", typeof(int));
+            table.Columns.Add("Number", typeof(int));
+            table.Columns.Add("Date", typeof(DateTime));
+            for (int i = 0; i < rowCount; i++)
+            {
+                //table.Rows.Add(new object[] { string.Format("Name{0}", i), i, 3 - i, DateTime.Now.AddDays(i) });
+                table.Rows.Add(new object[] { "A", string.Format("Name{0}", i), i, 3 - i, DateTime.Now.AddDays(i) });
+            }
+            return table;
+        }
+
+        VistaPopupDateEditForm dateEditForm;
+
+        private void ClearForm()
+        {
+            if (dateEditForm != null)
+            {
+                dateEditForm.Calendar.EditDateModified -= new EventHandler(OnEditDateModified);
+                dateEditForm.ClosePopup();
+                dateEditForm.Dispose();
+            }
+        }
+
+        private void OnEditDateModified(object sender, EventArgs e)
+        {
+            int rowHandle = Convert.ToInt32(dateEditForm.Tag);
+            gridView1.SetRowCellValue(rowHandle, gridView1.Columns["Date"], dateEditForm.Calendar.DateTime);
+            dateEditForm.HidePopupForm();
+        }
+
+
+
+
     }
 }
