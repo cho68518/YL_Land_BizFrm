@@ -30,9 +30,11 @@
         {
             this.efwPnlBody = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnSCM01 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwPnlBody)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
@@ -48,6 +50,8 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton4);
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton3);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton1);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton2);
             this.efwPanelControl1.Controls.Add(this.btnSCM01);
@@ -56,6 +60,28 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(123, 688);
             this.efwPanelControl1.TabIndex = 14;
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(2, 72);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton3.TabIndex = 5;
+            this.efwSimpleButton3.Text = "frmSCM03";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.EfwSimpleButton3_Click);
+            // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(2, 37);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton1.TabIndex = 4;
+            this.efwSimpleButton1.Text = "frmSCM02";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
             // 
             // efwSimpleButton2
             // 
@@ -78,16 +104,16 @@
             this.btnSCM01.Text = "frmSCM01";
             this.btnSCM01.Click += new System.EventHandler(this.BtnSCM01_Click);
             // 
-            // efwSimpleButton1
+            // efwSimpleButton4
             // 
-            this.efwSimpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(2, 37);
-            this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(119, 35);
-            this.efwSimpleButton1.TabIndex = 4;
-            this.efwSimpleButton1.Text = "frmSCM02";
-            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
+            this.efwSimpleButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwSimpleButton4.IsMultiLang = false;
+            this.efwSimpleButton4.Location = new System.Drawing.Point(2, 107);
+            this.efwSimpleButton4.Name = "efwSimpleButton4";
+            this.efwSimpleButton4.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton4.TabIndex = 6;
+            this.efwSimpleButton4.Text = "frmSCM04";
+            this.efwSimpleButton4.Click += new System.EventHandler(this.EfwSimpleButton4_Click);
             // 
             // frmMain
             // 
@@ -112,5 +138,7 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnSCM01;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton4;
     }
 }
