@@ -210,5 +210,49 @@ namespace YL_SCM.BizFrm
                 Search();
         }
 
+        private void BtnExcelUpdate_Click(object sender, EventArgs e)
+        {
+
+
+            //OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            //openFileDialog1.DefaultExt = "xls";
+            //openFileDialog1.FileName = "택배운송장번호_UPDATE.xls";
+            //openFileDialog1.Filter = "Excel97 - 2003 통합문서|*.xls";
+            //openFileDialog1.Title = "엑셀데이터 가져오기";
+
+            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    try
+            //    {
+            //        Cursor = Cursors.WaitCursor;
+
+            //        if (openFileDialog1.FileName != string.Empty)
+            //        {
+            //            string fileName = openFileDialog1.FileName;
+
+            //            if (fileName.IndexOf("후기머니관리_UPDATE.xls") < 0)
+            //            {
+            //                MessageAgent.MessageShow(MessageType.Error, "엑셀파일명에 문제가 있습니다. 파일명을 확인하세요.");
+            //                return;
+            //            }
+
+            //            this.efwGridControl3.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+
+            //            //this.efwGridControl1.DataSource = ExcelDataBaseHelper.OpenFile(fileName);
+
+            //            this.efwGridControl3.MyGridView.BestFitColumns();
+            //            lblCnt.Text = string.Format("{0:#,###}", gridView1.DataRowCount.ToString());
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show("엑셀 파일 드라이버가 잘못되었거나 엑셀파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+            //    }
+            //    finally
+            //    {
+            //        Cursor = Cursors.Default;
+            //    }
+            //}
+        }
     }
 }

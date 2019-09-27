@@ -40,6 +40,7 @@
             this.btnGSHOP02 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnGSHOP01 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwPnlBody)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton5);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton4);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton3);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton1);
@@ -181,6 +183,17 @@
             this.btnGSHOP01.Text = "frmGSHOP01";
             this.btnGSHOP01.Click += new System.EventHandler(this.BtnGSHOP01_Click);
             // 
+            // efwSimpleButton5
+            // 
+            this.efwSimpleButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwSimpleButton5.IsMultiLang = false;
+            this.efwSimpleButton5.Location = new System.Drawing.Point(2, 299);
+            this.efwSimpleButton5.Name = "efwSimpleButton5";
+            this.efwSimpleButton5.Size = new System.Drawing.Size(119, 33);
+            this.efwSimpleButton5.TabIndex = 12;
+            this.efwSimpleButton5.Text = "frmGSHOP10";
+            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -211,5 +224,6 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton4;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
     }
 }
