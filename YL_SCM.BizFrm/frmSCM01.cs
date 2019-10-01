@@ -227,12 +227,6 @@ namespace YL_SCM.BizFrm
         private void BtnSAVE_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(this.txtS_COMPANY_NAME.Text))
-            {
-                MessageAgent.MessageShow(MessageType.Warning, " 거래처명을 입력하세요!");
-                return;
-            }
-
             if (string.IsNullOrEmpty(this.txtS_ID.Text))
             {
                 MessageAgent.MessageShow(MessageType.Warning, " ID를 입력하세요!");
