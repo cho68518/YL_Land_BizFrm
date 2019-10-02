@@ -1539,6 +1539,7 @@
             this.btnPOST_NO.StyleController = this.layoutControl4;
             this.btnPOST_NO.TabIndex = 0;
             this.btnPOST_NO.TabStop = false;
+            this.btnPOST_NO.Click += new System.EventHandler(this.BtnPOST_NO_Click);
             // 
             // txtADDRESS1
             // 
