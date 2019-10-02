@@ -140,6 +140,18 @@
     <Compile Include="Dlg\frmZipNoInfo.designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSCM04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmSCM04.Designer.cs">
+      <DependentUpon>frmSCM04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSCM03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmSCM03.Designer.cs">
+      <DependentUpon>frmSCM03.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSCM02.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSCM02.resx">
       <DependentUpon>frmSCM02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSCM03.resx">
+      <DependentUpon>frmSCM03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSCM04.resx">
+      <DependentUpon>frmSCM04.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

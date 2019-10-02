@@ -78,5 +78,10 @@ namespace YL_GSHOP.BizFrm
         {
             FrmBaseLoad(new frmGSHOP09());
         }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmGSHOP10());
+        }
     }
 }

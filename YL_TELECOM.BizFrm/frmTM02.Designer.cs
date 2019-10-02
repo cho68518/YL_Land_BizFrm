@@ -188,7 +188,6 @@
             this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
-            this.efwGridControl1.IsEditable = false;
             this.efwGridControl1.IsMultiLang = false;
             this.efwGridControl1.Location = new System.Drawing.Point(2, 23);
             this.efwGridControl1.MainView = this.gridView1;
@@ -248,6 +247,7 @@
             this.gridColumn1.Caption = "아이디";
             this.gridColumn1.FieldName = "id";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             // 
@@ -256,6 +256,7 @@
             this.gridColumn11.Caption = "비밀번호";
             this.gridColumn11.FieldName = "pwd";
             this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 1;
             // 
@@ -265,6 +266,7 @@
             this.gridColumn2.FieldName = "name";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
             // 
@@ -273,7 +275,7 @@
             this.gridColumn3.Caption = "닉네임";
             this.gridColumn3.FieldName = "nickname";
             this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
             // 
@@ -282,7 +284,7 @@
             this.gridColumn4.Caption = "생년월일";
             this.gridColumn4.FieldName = "birth";
             this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.OptionsColumn.AllowEdit = false;
+            this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
             // 
@@ -291,7 +293,7 @@
             this.gridColumn5.Caption = "전화번호";
             this.gridColumn5.FieldName = "hpno";
             this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
             // 
@@ -300,7 +302,7 @@
             this.gridColumn8.Caption = "성별";
             this.gridColumn8.FieldName = "gender";
             this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.OptionsColumn.AllowEdit = false;
+            this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 6;
             // 
@@ -309,7 +311,7 @@
             this.gridColumn6.Caption = "가입일";
             this.gridColumn6.FieldName = "join_date";
             this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.OptionsColumn.AllowEdit = false;
+            this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
             // 
@@ -318,7 +320,7 @@
             this.gridColumn7.Caption = "이메일";
             this.gridColumn7.FieldName = "email";
             this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.AllowEdit = false;
+            this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 8;
             // 
@@ -327,7 +329,7 @@
             this.gridColumn9.Caption = "주소";
             this.gridColumn9.FieldName = "addr";
             this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.OptionsColumn.AllowEdit = false;
+            this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 9;
             // 
@@ -336,7 +338,7 @@
             this.gridColumn10.Caption = "구분";
             this.gridColumn10.FieldName = "join_site";
             this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.OptionsColumn.AllowEdit = false;
+            this.gridColumn10.OptionsColumn.ReadOnly = true;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 10;
             // 
@@ -345,7 +347,7 @@
             this.gridColumn12.Caption = "u_id";
             this.gridColumn12.FieldName = "u_id";
             this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.OptionsColumn.AllowEdit = false;
+            this.gridColumn12.OptionsColumn.ReadOnly = true;
             // 
             // repositoryItemLookUpEdit2
             // 
