@@ -155,7 +155,7 @@
             this.repositoryItemMemoExEdit1,
             this.repositoryItemMemoEdit1,
             this.repositoryItemButtonEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1383, 735);
+            this.efwGridControl1.Size = new System.Drawing.Size(1397, 745);
             this.efwGridControl1.TabIndex = 14;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -687,7 +687,7 @@
             this.panelTop.Location = new System.Drawing.Point(3, 35);
             this.panelTop.Name = "panelTop";
             this.panelTop.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panelTop.Size = new System.Drawing.Size(1383, 87);
+            this.panelTop.Size = new System.Drawing.Size(1397, 87);
             this.panelTop.TabIndex = 13;
             // 
             // efwGroupControl1
@@ -709,7 +709,7 @@
             this.efwGroupControl1.Name = "efwGroupControl1";
             this.efwGroupControl1.Padding = new System.Windows.Forms.Padding(5);
             this.efwGroupControl1.ShowCaption = false;
-            this.efwGroupControl1.Size = new System.Drawing.Size(1383, 77);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1397, 77);
             this.efwGroupControl1.TabIndex = 9;
             this.efwGroupControl1.Text = "efwGroupControl1";
             // 
@@ -867,7 +867,7 @@
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.panelTop);
             this.Name = "frmDN19";
-            this.Size = new System.Drawing.Size(1389, 857);
+            this.Size = new System.Drawing.Size(1403, 867);
             this.Controls.SetChildIndex(this.panelTop, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
