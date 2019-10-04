@@ -30,7 +30,7 @@ namespace YL_DONUT.BizFrm
             base.FrmLoadEvent();
             DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
 
-            this.IsMenuVw = false;
+            this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = false;
             this.IsSave = false;
@@ -57,7 +57,7 @@ namespace YL_DONUT.BizFrm
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN01_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN20_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
