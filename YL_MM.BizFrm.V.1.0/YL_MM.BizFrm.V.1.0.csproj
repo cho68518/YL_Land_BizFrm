@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{574A24CB-6C11-4F50-96CC-A188CC30B49E}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_MM.BizFrm</RootNamespace>
     <AssemblyName>YL_MM.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -184,6 +184,12 @@
     <Compile Include="frmMM06.Designer.cs">
       <DependentUpon>frmMM06.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMM10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM10.Designer.cs">
+      <DependentUpon>frmMM10.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTest01.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM07.resx">
       <DependentUpon>frmMM07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM10.resx">
+      <DependentUpon>frmMM10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest01.resx">
       <DependentUpon>frmTest01.cs</DependentUpon>

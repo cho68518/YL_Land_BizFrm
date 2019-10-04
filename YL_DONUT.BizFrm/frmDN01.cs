@@ -138,7 +138,7 @@ namespace YL_DONUT.BizFrm
                               FROM
                               (  SELECT ''  DCODE, N'전체'  DNAME
 	                             UNION ALL
-	                             SELECT CODE  DCODE, CODE_NM DNAME
+	                             SELECT CODE DCODE, CODE_NM DNAME
                                  FROM dbo.ETCCODE
 	                             WHERE GRP_CODE = 'MALL_TYPE' and Use_YN = 'Y' " + @") T1 ";
 

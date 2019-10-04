@@ -868,5 +868,31 @@ namespace YL_DONUT.BizFrm
                     lblRes1.Text = "0";
             }
         }
+
+        private void EfwGridControl7_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl7.GetSelectedRow(0);
+
+            txtContents.EditValue= null;
+            txtStory_id.EditValue = dr["story_id3"].ToString();
+        }
+
+        private void EfwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtStory_id.Text))
+            {
+                return;
+            }
+
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = "select contents " +
+                            "  from domalife.story_list " +
+                            " where story_id = " + Convert.ToInt32(txtStory_id.EditValue);
+                DataSet ds = sql.selectQueryDataSet();
+
+                txtContents.EditValue = sql.selectQueryForSingleValue();
+            }
+        }
     }
 }
