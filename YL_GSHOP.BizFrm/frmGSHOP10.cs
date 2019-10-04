@@ -66,6 +66,7 @@ namespace YL_GSHOP.BizFrm
                     , new ColumnControlSet("order_date", dtOrderDate)
                     , new ColumnControlSet("delivery_cd", cmbDelivery_Company)
                     , new ColumnControlSet("delivery_no", txtDelivery_No)
+                    , new ColumnControlSet("remark", txtRemark)
                    );
             this.efwGridControl2.Click += efwGridControl2_Click;
 
@@ -134,6 +135,7 @@ namespace YL_GSHOP.BizFrm
         {
             DataRow dr = this.efwGridControl2.GetSelectedRow(0);
             txtU_ZIP.EditValue = "";
+            txtIDX_ADDR.EditValue = "";
             if (dr != null && dr["post_no"].ToString() != "")
             {
                 this.txtU_ZIP.EditValue = dr["post_no"].ToString();
@@ -145,7 +147,6 @@ namespace YL_GSHOP.BizFrm
             {
                 cmbDelivery_Company.EditValue = "08";
             }
-
             Open1();
         }
 
@@ -153,6 +154,7 @@ namespace YL_GSHOP.BizFrm
         {
             DataRow dr = this.efwGridControl3.GetSelectedRow(0);
             txtU_ZIP.EditValue = "";
+            txtPost_No.EditValue = "";
             if (dr != null && dr["post_no"].ToString() != "")
             {
                 this.txtU_ZIP.EditValue = dr["post_no"].ToString();
@@ -507,16 +509,13 @@ namespace YL_GSHOP.BizFrm
                 MessageAgent.MessageShow(MessageType.Warning, "ID를 선택하세요");
                 return;
             }
-            if (string.IsNullOrEmpty(this.txtU_ZIP.Text))
-            {
-                MessageAgent.MessageShow(MessageType.Warning, "우편번호를 선택하세요");
-                return;
-            }
 
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
                 try
+
                 {
+                    string sIDX_ADDR = string.Empty;
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
                         using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP10_SAVE_02", con))
@@ -524,8 +523,14 @@ namespace YL_GSHOP.BizFrm
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;
 
+
+                            if (txtIDX_ADDR.EditValue.ToString() == "")
+                                sIDX_ADDR = "0";
+                            else
+                                sIDX_ADDR = txtIDX_ADDR.EditValue.ToString();
+
                             cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
-                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtIDX_ADDR.EditValue);
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(sIDX_ADDR);
                             cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
@@ -555,6 +560,7 @@ namespace YL_GSHOP.BizFrm
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
+                Open1();
             }
         }
 
@@ -644,5 +650,7 @@ namespace YL_GSHOP.BizFrm
             if (e.KeyCode == Keys.Enter)
                 Open2();
         }
+
+
     }
 }

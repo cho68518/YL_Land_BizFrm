@@ -34,6 +34,8 @@ namespace YL_SCM.BizFrm.Properties
         {
         }
 
+        public static byte[] SCM_DELIVERY_NO_UPDATE_sample { get; internal set; }
+
         /// <summary>
         ///   이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
         /// </summary>

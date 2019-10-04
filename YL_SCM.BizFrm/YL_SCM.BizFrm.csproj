@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F0584AE3-A808-4BF9-BF44-F518618F75EE}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_SCM.BizFrm</RootNamespace>
     <AssemblyName>YL_SCM.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -52,6 +52,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\DevExpress 18.2\Components\Bin\Framework\DevExpress.Utils.v18.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\DevExpress 18.2\Components\Bin\Framework\DevExpress.XtraBars.v18.2.dll</HintPath>
@@ -60,10 +62,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\DevExpress 18.2\Components\Bin\Framework\DevExpress.XtraCharts.v18.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\DevExpress 18.2\Components\Bin\Framework\DevExpress.XtraCharts.v18.2.UI.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.Web, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\DevExpress 18.2\Components\Bin\Framework\DevExpress.XtraCharts.v18.2.Wizard.dll</HintPath>
@@ -96,6 +100,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\DevExpress 18.2\Components\Bin\Framework\DevExpress.XtraTreeList.v18.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Easy.Framework.Common.V.3.1">
       <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\Easy.Framework.Common.V.3.1.dll</HintPath>
     </Reference>
@@ -139,6 +144,18 @@
     </Compile>
     <Compile Include="Dlg\frmZipNoInfo.designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSCM05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmSCM05.Designer.cs">
+      <DependentUpon>frmSCM05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSCM04_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSCM04_Pop01.Designer.cs">
+      <DependentUpon>frmSCM04_Pop01.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSCM04.cs">
       <SubType>UserControl</SubType>
@@ -191,6 +208,12 @@
     <EmbeddedResource Include="frmSCM04.resx">
       <DependentUpon>frmSCM04.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSCM04_Pop01.resx">
+      <DependentUpon>frmSCM04_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSCM05.resx">
+      <DependentUpon>frmSCM05.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -210,9 +233,33 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\SCM_DELIVERY_NO_UPDATE_sample.xls" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YL_COMM.BizFrm\YL_COMM.BizFrm.csproj">
+      <Project>{f299a712-3812-4968-ab49-8085b111090b}</Project>
+      <Name>YL_COMM.BizFrm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Accessibility">
+      <Guid>{1EA4DBF0-3C3B-11CF-810C-00AA00389B71}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

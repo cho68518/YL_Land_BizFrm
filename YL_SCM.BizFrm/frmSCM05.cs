@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraTreeList;
+﻿using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraTreeList;
 using Easy.Framework.Common;
 using Easy.Framework.SrvCommon;
 using Easy.Framework.WinForm.Control;
@@ -13,19 +14,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YL_SCM.BizFrm.Dlg;
-
-
 namespace YL_SCM.BizFrm
 {
-    public partial class frmSCM03 : FrmBase
+    public partial class frmSCM05 : FrmBase
     {
-        public frmSCM03()
+        public frmSCM05()
         {
             InitializeComponent();
-            //단축코드 설정 
-            this.QCode = " frmSCM03";
+            this.QCode = " frmSCM05";
             //폼명설정
-            this.FrmName = "주문 확정처리";
+            this.FrmName = "기간별 출고마감현황";
+
 
         }
 
@@ -44,11 +43,10 @@ namespace YL_SCM.BizFrm
             this.IsExcel = false;
 
             gridView1.OptionsView.ShowFooter = true;
-            rbShowType.EditValue = "N";
+            cmbSellers.EditValue = "N";
+
             SetCmb();
         }
-
-
         private void SetCmb()
         {
             // 공급자구분
@@ -69,10 +67,8 @@ namespace YL_SCM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbSellers, codeArray);
             }
-
             cmbSellers.EditValue = "1";
         }
-
         public override void Search()
         {
             try
@@ -83,7 +79,7 @@ namespace YL_SCM.BizFrm
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_SCM_SCM03_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_SCM_SCM05_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -96,13 +92,13 @@ namespace YL_SCM.BizFrm
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[2].Value = dtE_DATE.EditValue3;
 
-                        cmd.Parameters.Add("i_ProdName", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[3].Value = txtProdName.EditValue;
+                        //cmd.Parameters.Add("i_ProdName", MySqlDbType.VarChar, 50);
+                        //cmd.Parameters[3].Value = txtProdName.EditValue;
 
-                        if (rbShowType.EditValue.ToString() != "Y" && rbShowType.EditValue.ToString() != "N")
-                            sShow_Type = null;
-                        else
-                            sShow_Type = rbShowType.EditValue.ToString();
+                        //if (rbShowType.EditValue.ToString() != "Y" && rbShowType.EditValue.ToString() != "N")
+                        //    sShow_Type = null;
+                        //else
+                        //    sShow_Type = rbShowType.EditValue.ToString();
 
                         cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
                         cmd.Parameters[4].Value = sShow_Type;
@@ -122,66 +118,7 @@ namespace YL_SCM.BizFrm
             }
         }
 
-        public override void Save()
-        {
-            try
-            {
 
-                var saveResult = new SaveTableResultInfo() { IsError = true };
 
-                var dt = efwGridControl1.GetChangeDataWithRowState;
-                var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
-
-                string sConfirm = string.Empty;
-                for (var i = 0; i < dt.Rows.Count; i++)
-                {
-                    if (dt.Rows[i][StatusColumn].ToString() == "U")
-                    {
-                        //Console.WriteLine("------------------------------------------------------------");
-                        //Console.WriteLine("[U] " + dt.Rows[i]["o_code"].ToString());
-                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-                        {
-                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_SCM_SCM03_SAVE_01", con))
-                            {
-
-                                con.Open();
-                                cmd.CommandType = CommandType.StoredProcedure;
-
-                                cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
-                                cmd.Parameters[0].Value = dt.Rows[i]["o_code"].ToString();
-
-                                if (dt.Rows[i]["s_confirm"].ToString() != "Y" && dt.Rows[i]["s_confirm"].ToString() != "N")
-                                    sConfirm = "N";
-                                else
-                                    sConfirm = dt.Rows[i]["s_confirm"].ToString();
-
-                                cmd.Parameters.Add("i_s_confirm", MySqlDbType.VarChar, 1);
-                                cmd.Parameters[1].Value = sConfirm;
-
-                                cmd.Parameters.Add("i_s_remark", MySqlDbType.VarChar, 255);
-                                cmd.Parameters[2].Value = dt.Rows[i]["s_remark"].ToString();
-
-                                cmd.ExecuteNonQuery();
-                                con.Close();
-                            }
-
-                        }
-                    }
-                   
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
-            MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
-        }
-
-        private void txtProdName_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Search();
-        }
     }
 }

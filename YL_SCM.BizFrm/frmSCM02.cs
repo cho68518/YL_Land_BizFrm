@@ -69,8 +69,8 @@ namespace YL_SCM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbSellers, codeArray);
             }
-            
 
+            cmbSellers.EditValue = "1";
         }
 
         public override void Search()
