@@ -218,5 +218,25 @@ namespace YL_SCM.BizFrm
             popup = new frmSCM04_Pop01();
             popup.ShowDialog();
         }
+
+        private void dtS_DATE_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void efwLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtE_DATE_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void efwLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
