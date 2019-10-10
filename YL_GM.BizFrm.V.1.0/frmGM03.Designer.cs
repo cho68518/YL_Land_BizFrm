@@ -68,6 +68,7 @@
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.rbYearType = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwLabel81 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -108,7 +109,8 @@
             this.efwArea15 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea14 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea6 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbTot = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -129,13 +131,13 @@
             this.efwGroupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).BeginInit();
             this.efwPanelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
-            this.efwPanelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rbYearType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
+            this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbYearType.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -534,8 +536,35 @@
             this.efwPanelControl2.Size = new System.Drawing.Size(752, 281);
             this.efwPanelControl2.TabIndex = 111;
             // 
+            // chartControl1
+            // 
+            this.chartControl1.AutoLayout = false;
+            this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.GridLines.MinorVisible = true;
+            xyDiagram1.AxisY.NumericScaleOptions.AutoGrid = false;
+            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram1;
+            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl1.Location = new System.Drawing.Point(2, 2);
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.PaletteName = "Mixed";
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Series 1";
+            sideBySideBarSeriesView1.ColorEach = true;
+            series1.View = sideBySideBarSeriesView1;
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl1.Size = new System.Drawing.Size(748, 277);
+            this.chartControl1.TabIndex = 73;
+            // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwLabel1);
+            this.efwPanelControl1.Controls.Add(this.lbTot);
             this.efwPanelControl1.Controls.Add(this.rbYearType);
             this.efwPanelControl1.Controls.Add(this.efwLabel81);
             this.efwPanelControl1.Controls.Add(this.efwArea7);
@@ -1253,30 +1282,41 @@
             this.efwArea6.TabIndex = 66;
             this.efwArea6.Text = "0";
             // 
-            // chartControl1
+            // efwLabel1
             // 
-            this.chartControl1.AutoLayout = false;
-            this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.GridLines.MinorVisible = true;
-            xyDiagram1.AxisY.NumericScaleOptions.AutoGrid = false;
-            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram1;
-            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.Location = new System.Drawing.Point(2, 2);
-            this.chartControl1.Name = "chartControl1";
-            this.chartControl1.PaletteName = "Mixed";
-            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series1.Name = "Series 1";
-            sideBySideBarSeriesView1.ColorEach = true;
-            series1.View = sideBySideBarSeriesView1;
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
-            this.chartControl1.Size = new System.Drawing.Size(748, 277);
-            this.chartControl1.TabIndex = 73;
+            this.efwLabel1.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.efwLabel1.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.efwLabel1.Appearance.Options.UseFont = true;
+            this.efwLabel1.Appearance.Options.UseForeColor = true;
+            this.efwLabel1.Appearance.Options.UseTextOptions = true;
+            this.efwLabel1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.efwLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.efwLabel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.efwLabel1.EraserGroup = null;
+            this.efwLabel1.IsMultiLang = false;
+            this.efwLabel1.Location = new System.Drawing.Point(222, 313);
+            this.efwLabel1.Name = "efwLabel1";
+            this.efwLabel1.Size = new System.Drawing.Size(121, 28);
+            this.efwLabel1.TabIndex = 111;
+            this.efwLabel1.Text = "합계";
+            // 
+            // lbTot
+            // 
+            this.lbTot.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbTot.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lbTot.Appearance.Options.UseFont = true;
+            this.lbTot.Appearance.Options.UseForeColor = true;
+            this.lbTot.Appearance.Options.UseTextOptions = true;
+            this.lbTot.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbTot.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbTot.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbTot.EraserGroup = null;
+            this.lbTot.IsMultiLang = false;
+            this.lbTot.Location = new System.Drawing.Point(344, 313);
+            this.lbTot.Name = "lbTot";
+            this.lbTot.Size = new System.Drawing.Size(82, 28);
+            this.lbTot.TabIndex = 110;
+            this.lbTot.Text = "0";
             // 
             // frmGM03
             // 
@@ -1310,13 +1350,13 @@
             this.efwGroupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).EndInit();
             this.efwPanelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
-            this.efwPanelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rbYearType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
+            this.efwPanelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rbYearType.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1397,5 +1437,7 @@
         private Easy.Framework.WinForm.Control.efwLabel efwArea6;
         private Easy.Framework.WinForm.Control.efwRadioGroup rbYearType;
         private DevExpress.XtraCharts.ChartControl chartControl1;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
+        private Easy.Framework.WinForm.Control.efwLabel lbTot;
     }
 }

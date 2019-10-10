@@ -43,6 +43,22 @@ namespace YL_SCM.BizFrm
             this.IsExcel = false;
 
             gridView1.OptionsView.ShowFooter = true;
+
+            gridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
+            gridView1.Columns["p_num"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
+            gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["c_delivery_price"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["c_delivery_price"].SummaryItem.FieldName = "c_delivery_price";
+            gridView1.Columns["c_delivery_price"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["c_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["c_amt"].SummaryItem.FieldName = "c_amt";
+            gridView1.Columns["c_amt"].SummaryItem.DisplayFormat = "{0:c}";
             cmbSellers.EditValue = "N";
 
             SetCmb();
@@ -92,16 +108,8 @@ namespace YL_SCM.BizFrm
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[2].Value = dtE_DATE.EditValue3;
 
-                        //cmd.Parameters.Add("i_ProdName", MySqlDbType.VarChar, 50);
-                        //cmd.Parameters[3].Value = txtProdName.EditValue;
 
-                        //if (rbShowType.EditValue.ToString() != "Y" && rbShowType.EditValue.ToString() != "N")
-                        //    sShow_Type = null;
-                        //else
-                        //    sShow_Type = rbShowType.EditValue.ToString();
 
-                        cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[4].Value = sShow_Type;
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -111,14 +119,18 @@ namespace YL_SCM.BizFrm
                         }
                     }
                 }
+
+                txtOutQty.EditValue = Convert.ToInt32(gridView1.Columns["p_num"].SummaryItem.SummaryValue);
+                txtOutAmt.EditValue = Convert.ToInt32(gridView1.Columns["o_total_cost"].SummaryItem.SummaryValue);
+                txtDeliveryPrice.EditValue = Convert.ToInt32(gridView1.Columns["c_delivery_price"].SummaryItem.SummaryValue);
+                txtConfirmAmt.EditValue = Convert.ToInt32(gridView1.Columns["c_amt"].SummaryItem.SummaryValue);
+
             }
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
-
-
 
     }
 }
