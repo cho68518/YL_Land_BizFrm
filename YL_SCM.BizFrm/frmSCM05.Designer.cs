@@ -67,6 +67,7 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ewfPanel)).BeginInit();
             this.ewfPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtOutQty.Properties)).BeginInit();
@@ -352,6 +353,7 @@
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.efwGridControl1.Click += new System.EventHandler(this.efwGridControl1_Click);
             // 
             // gridView1
             // 
@@ -371,7 +373,8 @@
             this.gridColumn13,
             this.gridColumn14,
             this.gridColumn15,
-            this.gridColumn16});
+            this.gridColumn16,
+            this.gridColumn17});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.BestFitMode = DevExpress.XtraGrid.Views.Grid.GridBestFitMode.Fast;
@@ -517,6 +520,8 @@
             // 
             // gridColumn14
             // 
+            this.gridColumn14.AppearanceHeader.ForeColor = System.Drawing.Color.Blue;
+            this.gridColumn14.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn14.Caption = "배송비";
             this.gridColumn14.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn14.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -528,6 +533,8 @@
             // 
             // gridColumn15
             // 
+            this.gridColumn15.AppearanceHeader.ForeColor = System.Drawing.Color.Blue;
+            this.gridColumn15.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn15.Caption = "확정단가";
             this.gridColumn15.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn15.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -539,6 +546,8 @@
             // 
             // gridColumn16
             // 
+            this.gridColumn16.AppearanceHeader.ForeColor = System.Drawing.Color.Blue;
+            this.gridColumn16.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn16.Caption = "확정금액";
             this.gridColumn16.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn16.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -547,6 +556,14 @@
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 15;
             this.gridColumn16.Width = 90;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "ID";
+            this.gridColumn17.FieldName = "id";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 16;
             // 
             // frmSCM05
             // 
@@ -611,5 +628,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
         private Easy.Framework.WinForm.Control.efwTextEdit txtOutQty;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
     }
 }

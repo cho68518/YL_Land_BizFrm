@@ -46,7 +46,7 @@ namespace YL_MM.BizFrm
 
         private void EfwSimpleButton2_Click(object sender, EventArgs e)
         {
-            
+            FrmBaseLoad(new frmMM03());
         }
 
         private void EfwSimpleButton4_Click(object sender, EventArgs e)

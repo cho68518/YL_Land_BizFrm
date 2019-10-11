@@ -131,6 +131,63 @@ namespace YL_SCM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+        public override void Save()
+        {
+            try
+            {
 
+                var saveResult = new SaveTableResultInfo() { IsError = true };
+
+                var dt = efwGridControl1.GetChangeDataWithRowState;
+                var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+                for (var i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (dt.Rows[i][StatusColumn].ToString() == "U")
+                    {
+                        //Console.WriteLine("------------------------------------------------------------");
+                        //Console.WriteLine("[U] " + dt.Rows[i]["o_code"].ToString());
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_SCM_SCM05_SAVE_01", con))
+                            {
+
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add("i_id", MySqlDbType.Int32, 50);
+                                cmd.Parameters[0].Value = Convert.ToInt32(dt.Rows[i]["id"]).ToString();
+
+                                cmd.Parameters.Add("i_c_delivery_price", MySqlDbType.Int32, 11);
+                                cmd.Parameters[1].Value = Convert.ToInt32(dt.Rows[i]["c_delivery_price"]).ToString();
+
+
+                                cmd.Parameters.Add("i_c_price", MySqlDbType.Int32, 11);
+                                cmd.Parameters[2].Value = Convert.ToInt32(dt.Rows[i]["c_price"]).ToString();
+
+                                cmd.Parameters.Add("i_c_amt", MySqlDbType.Int32, 11);
+                                cmd.Parameters[3].Value = Convert.ToInt32(dt.Rows[i]["c_amt"]).ToString();
+
+
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

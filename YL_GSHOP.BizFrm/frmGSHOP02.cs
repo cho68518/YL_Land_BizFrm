@@ -248,7 +248,7 @@ namespace YL_GSHOP.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
-                    }
+        }
 
 
 

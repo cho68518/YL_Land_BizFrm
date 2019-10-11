@@ -127,7 +127,6 @@
             this.efwLabel4.Size = new System.Drawing.Size(9, 14);
             this.efwLabel4.TabIndex = 12;
             this.efwLabel4.Text = "~";
-            this.efwLabel4.Click += new System.EventHandler(this.efwLabel4_Click);
             // 
             // efwLabel3
             // 
@@ -138,7 +137,6 @@
             this.efwLabel3.Size = new System.Drawing.Size(30, 14);
             this.efwLabel3.TabIndex = 11;
             this.efwLabel3.Text = "주문일";
-            this.efwLabel3.Click += new System.EventHandler(this.efwLabel3_Click);
             // 
             // dtE_DATE
             // 
@@ -156,7 +154,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtE_DATE.Size = new System.Drawing.Size(99, 20);
             this.dtE_DATE.TabIndex = 10;
-            this.dtE_DATE.EditValueChanged += new System.EventHandler(this.dtE_DATE_EditValueChanged);
             // 
             // dtS_DATE
             // 
@@ -174,7 +171,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtS_DATE.Size = new System.Drawing.Size(99, 20);
             this.dtS_DATE.TabIndex = 9;
-            this.dtS_DATE.EditValueChanged += new System.EventHandler(this.dtS_DATE_EditValueChanged);
             // 
             // rbShowType
             // 

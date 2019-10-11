@@ -52,5 +52,10 @@ namespace YL_SCM.BizFrm
         {
             FrmBaseLoad(new frmSCM05());
         }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmSCM06());
+        }
     }
 }
