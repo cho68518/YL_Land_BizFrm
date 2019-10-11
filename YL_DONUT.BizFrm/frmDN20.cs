@@ -17,6 +17,7 @@ namespace YL_DONUT.BizFrm
 {
     public partial class frmDN20 : FrmBase
     {
+        frmDN20_Pop01 popup;
         public frmDN20()
         {
             InitializeComponent();
@@ -72,7 +73,7 @@ namespace YL_DONUT.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
-                            this.efwGridControl1.MyGridView.BestFitColumns();
+                           // this.efwGridControl1.MyGridView.BestFitColumns();
 
                         }
                     }
@@ -84,5 +85,10 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void btnExcelUpdate_Click(object sender, EventArgs e)
+        {
+            popup = new frmDN20_Pop01();
+            popup.ShowDialog();
+        }
     }
 }

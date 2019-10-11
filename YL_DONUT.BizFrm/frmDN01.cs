@@ -66,7 +66,7 @@ namespace YL_DONUT.BizFrm
 
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
-
+            cbG_Prod.EditValue = "0";
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
             gridView1.OptionsView.ShowFooter = true;
@@ -259,6 +259,9 @@ namespace YL_DONUT.BizFrm
 
                         cmd.Parameters.Add("i_o_type12", MySqlDbType.VarChar, 10);
                         cmd.Parameters[17].Value = chkB.EditValue;
+
+                        cmd.Parameters.Add("i_g_prod", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[18].Value = cbG_Prod.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

@@ -155,47 +155,101 @@ namespace YL_GSHOP.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+        //public override void Save()
+        //{
+        //    if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+        //    {
+        //        try
+        //        {
+        //            cmbO_TYPE.Focus();
+        //            using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+        //            {
+
+        //                for (int i = 0; i < gridView1.DataRowCount; i++)
+        //                {
+        //                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP02_SAVE_01", con))
+        //                    {
+        //                       // Console.WriteLine("********" + gridView1.GetRowCellValue(i, "is_fix"));
+
+
+        //                        con.Open();
+        //                        cmd.CommandType = CommandType.StoredProcedure;
+
+        //                        cmd.Parameters.Add("i_id", MySqlDbType.Int16, 50);
+        //                        cmd.Parameters[0].Value = Convert.ToInt16(gridView1.GetRowCellValue(i, "id"));
+
+        //                        cmd.Parameters.Add("i_is_fix", MySqlDbType.VarChar, 1);
+        //                        cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "is_fix");
+
+        //                        cmd.Parameters.Add("i_remark", MySqlDbType.VarChar, 255);
+        //                        cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "remark");
+
+        //                        cmd.ExecuteNonQuery();
+        //                        con.Close();
+        //                    }
+        //                }
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+        //        }
+        //    }
+        //}
+
+
         public override void Save()
         {
-            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            try
             {
-                try
-                {
-                    cmbO_TYPE.Focus();
-                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-                    {
 
-                        for (int i = 0; i < gridView1.DataRowCount; i++)
+                var saveResult = new SaveTableResultInfo() { IsError = true };
+
+                var dt = efwGridControl1.GetChangeDataWithRowState;
+                var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+                for (var i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (dt.Rows[i][StatusColumn].ToString() == "U")
+                    {
+                        //Console.WriteLine("------------------------------------------------------------");
+                        //Console.WriteLine("[U] " + dt.Rows[i]["o_code"].ToString());
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                         {
                             using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP02_SAVE_01", con))
                             {
-                               // Console.WriteLine("********" + gridView1.GetRowCellValue(i, "is_fix"));
-
 
                                 con.Open();
                                 cmd.CommandType = CommandType.StoredProcedure;
 
-                                cmd.Parameters.Add("i_id", MySqlDbType.Int16, 50);
-                                cmd.Parameters[0].Value = Convert.ToInt16(gridView1.GetRowCellValue(i, "id"));
+                                cmd.Parameters.Add("i_id", MySqlDbType.Int32, 50);
+                                cmd.Parameters[0].Value = Convert.ToInt32(dt.Rows[i]["id"]).ToString();
 
                                 cmd.Parameters.Add("i_is_fix", MySqlDbType.VarChar, 1);
-                                cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "is_fix");
+                                cmd.Parameters[1].Value = dt.Rows[i]["is_fix"].ToString();
+
 
                                 cmd.Parameters.Add("i_remark", MySqlDbType.VarChar, 255);
-                                cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "remark");
+                                cmd.Parameters[2].Value = dt.Rows[i]["remark"].ToString();
+
+
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();
                             }
+
                         }
                     }
+
                 }
-                catch (Exception ex)
-                {
-                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-                }
+
             }
-        }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+                    }
+
 
 
 

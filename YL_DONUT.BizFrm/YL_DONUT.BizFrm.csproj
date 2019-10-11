@@ -134,6 +134,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="frmDN20_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDN20_Pop01.Designer.cs">
+      <DependentUpon>frmDN20_Pop01.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDN20.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -370,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN19.resx">
       <DependentUpon>frmDN19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN20_Pop01.resx">
+      <DependentUpon>frmDN20_Pop01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

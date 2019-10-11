@@ -235,6 +235,7 @@ namespace YL_GM.BizFrm
                                 efwArea15.Text = String.Format("{0:#,##0}", rows[0]["Area15"]);
                                 efwArea16.Text = String.Format("{0:#,##0}", rows[0]["Area16"]);
                                 efwArea17.Text = String.Format("{0:#,##0}", rows[0]["Area17"]);
+                                lbTot.Text = String.Format("{0:#,##0}", rows[0]["Tot"]);
                             }
                         }
                     }
