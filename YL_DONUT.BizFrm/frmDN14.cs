@@ -91,6 +91,91 @@ namespace YL_DONUT.BizFrm
 
             this.efwGridControl1.Click += efwGridControl1_Click;
             cbG_Prod.EditValue = "0";
+            SetCmb();
+        }
+
+
+        private void SetCmb()
+        {
+            // 공급자구분
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(s_idx,'') as DCODE ,s_company_name as DNAME  FROM domaadmin.tb_sellers_info where s_status = 'Y'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbSellers, codeArray);
+            }
+            cmbSellers.EditValue = "";
+
+
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "SELECT c_code as DCODE, c_name as DNAME  FROM domamall.tb_cate_masters " +
+                    "         where c_level = 1 " +
+                    "         group by c_code, c_name ";
+
+                DataSet ds = con.selectQueryDataSet();
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbCate_Code1, codeArray);
+            }
+
+            //using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            //{
+            //    con.Query = "SELECT '0' as DCODE, '선택하세요' as DNAME  " ;
+
+            //    DataSet ds1 = con.selectQueryDataSet();
+            //    DataRow[] dr1 = ds1.Tables[0].Select();
+            //    CodeData[] codeArray = new CodeData[dr1.Length];
+
+            //    for (int i = 0; i < dr1.Length; i++)
+            //        codeArray[i] = new CodeData(dr1[i]["DCODE"].ToString(), dr1[i]["DNAME"].ToString());
+
+            //    CodeAgent.MakeCodeControl(this.cmbCate_Code2, codeArray);
+            //}
+
+            //using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            //{
+            //    con.Query = "SELECT '0' as DCODE, '선택하세요' as DNAME  " ;
+
+            //    DataSet ds2 = con.selectQueryDataSet();
+            //    DataRow[] dr2 = ds2.Tables[0].Select();
+            //    CodeData[] codeArray = new CodeData[dr2.Length];
+
+            //    for (int i = 0; i < dr2.Length; i++)
+            //        codeArray[i] = new CodeData(dr2[i]["DCODE"].ToString(), dr2[i]["DNAME"].ToString());
+
+            //    CodeAgent.MakeCodeControl(this.cmbCate_Code3, codeArray);
+            //}
+
+            //using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            //{
+            //    con.Query = "SELECT '0' as DCODE, '선택하세요' as DNAME  ";
+
+            //    DataSet ds3 = con.selectQueryDataSet();
+            //    DataRow[] dr3 = ds3.Tables[0].Select();
+            //    CodeData[] codeArray = new CodeData[dr3.Length];
+
+            //    for (int i = 0; i < dr3.Length; i++)
+            //        codeArray[i] = new CodeData(dr3[i]["DCODE"].ToString(), dr3[i]["DNAME"].ToString());
+
+            //    CodeAgent.MakeCodeControl(this.cmbCate_Code4, codeArray);
+            //}
 
         }
 
@@ -106,7 +191,8 @@ namespace YL_DONUT.BizFrm
 
             try
             {
-                string sCOMFIRM = string.Empty;
+                string sShow_Type = string.Empty;
+                string sSellers = string.Empty;
                 //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
@@ -115,12 +201,28 @@ namespace YL_DONUT.BizFrm
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("i_prod_nm", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[0].Value = txtPRODUCT_NAME.EditValue;
+                        if (cmbSellers.EditValue.ToString() != "Y" && cmbSellers.EditValue.ToString() != "N")
+                            sSellers = null;
+                        else
+                            sSellers = cmbSellers.EditValue.ToString();
 
-                        
+                        cmd.Parameters.Add("i_StoreCode", MySqlDbType.Int32);
+                        cmd.Parameters[0].Value = sSellers;
+
+
+                        cmd.Parameters.Add("i_prod_nm", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtPRODUCT_NAME.EditValue;
+
+                        if (rbShowType.EditValue.ToString() != "Y" && rbShowType.EditValue.ToString() != "N")
+                            sShow_Type = null;
+                        else
+                            sShow_Type = rbShowType.EditValue.ToString();
+
+                        cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[2].Value = sShow_Type;
+
                         cmd.Parameters.Add("i_g_prod", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[1].Value = cbG_Prod.EditValue;
+                        cmd.Parameters[3].Value = cbG_Prod.EditValue;
 
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
@@ -470,5 +572,154 @@ namespace YL_DONUT.BizFrm
             MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
             Search();
         }
+
+        private void cmbCate_Code1_EditValueChanged(object sender, EventArgs e)
+        {
+            string sCate_Code1 = cmbCate_Code1.EditValue.ToString();
+
+            if (this.cmbCate_Code1.EditValue == null)
+            {
+                return;
+            }
+
+            cmbCate_Code2.Properties.DataSource = null;
+            cmbCate_Code3.Properties.DataSource = null;
+            cmbCate_Code4.Properties.DataSource = null;
+
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "select '0' as DCODE, '선택하세요' as DNAME  " +
+                    "        union all " +
+                    "        select c_code as DCODE, c_name as DNAME  FROM domamall.tb_cate_masters " +
+                    "         where substr(c_code,1,7)  = " + "'" + sCate_Code1 + "'" + " and " +
+                    "               c_level = 2 " +
+                    "         group by c_code, c_name ";
+
+                DataSet ds = con.selectQueryDataSet();
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbCate_Code2, codeArray);
+            }
+            set1();
+        }
+
+        private void set1()
+        {
+            if (this.cmbCate_Code2.EditValue == null)
+            {
+                return;
+            }
+
+            cmbCate_Code3.Properties.DataSource = null;
+            cmbCate_Code4.Properties.DataSource = null;
+
+            string sCate_Code1 = cmbCate_Code1.EditValue.ToString();
+            string sCate_Code2 = cmbCate_Code2.EditValue.ToString();
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "select '0' as DCODE, '선택하세요' as DNAME  " +
+                    "        union all " +
+                    "        SELECT c_code as DCODE, c_name as DNAME  FROM domamall.tb_cate_masters " +
+                    "         where substr(c_code,1,7)  = " + "'" + sCate_Code1 + "'" + " and " +
+                    "               substr(c_code,1,9)  = " + "'" + sCate_Code2 + "'" + " and " +
+                    "               c_level = 3 " +
+                    "         group by c_code, c_name ";
+
+                DataSet ds2 = con.selectQueryDataSet();
+                DataRow[] dr2 = ds2.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr2.Length];
+
+
+                for (int i = 0; i < dr2.Length; i++)
+                    codeArray[i] = new CodeData(dr2[i]["DCODE"].ToString(), dr2[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbCate_Code3, codeArray);
+
+
+            }
+        }
+
+
+        private void cmbCate_Code2_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.cmbCate_Code2.EditValue == null)
+            {
+                return;
+            }
+
+            cmbCate_Code3.Properties.DataSource = null;
+
+            cmbCate_Code4.Properties.DataSource = null;
+            string sCate_Code1 = cmbCate_Code1.EditValue.ToString();
+            string sCate_Code2 = cmbCate_Code2.EditValue.ToString();
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "select '0' as DCODE, '선택하세요' as DNAME  " +
+                    "        union all " +
+                    "        SELECT c_code as DCODE, c_name as DNAME  FROM domamall.tb_cate_masters " +
+                    "         where substr(c_code,1,7)  = " + "'" + sCate_Code1 + "'" + " and " +
+                    "               substr(c_code,1,9)  = " + "'" + sCate_Code2 + "'" + " and " +
+                    "               c_level = 3 " +
+                    "         group by c_code, c_name ";
+
+                DataSet ds2 = con.selectQueryDataSet();
+                DataRow[] dr2 = ds2.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr2.Length];
+
+
+                for (int i = 0; i < dr2.Length; i++)
+                    codeArray[i] = new CodeData(dr2[i]["DCODE"].ToString(), dr2[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbCate_Code3, codeArray);
+
+
+            }
+        }
+
+        private void cmbCate_Code3_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.cmbCate_Code3.EditValue == null)
+            {
+                return;
+            }
+
+            cmbCate_Code4.Properties.DataSource = null;
+
+            string sCate_Code1 = cmbCate_Code1.EditValue.ToString();
+            string sCate_Code2 = cmbCate_Code2.EditValue.ToString();
+            string sCate_Code3 = cmbCate_Code3.EditValue.ToString();
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "select '0' as DCODE, '선택하세요' as DNAME  " +
+                    "        union all " +
+                    "        SELECT c_code as DCODE, c_name as DNAME  FROM domamall.tb_cate_masters " +
+                    "         where substr(c_code,1,7)  = " + "'" + sCate_Code1 + "'" + " and " +
+                    "               substr(c_code,1,9)  = " + "'" + sCate_Code2 + "'" + " and " +
+                    "               substr(c_code,1,11) = " + "'" + sCate_Code3 + "'" + " and " +
+                    "               c_level = 4 " +
+                    "         group by c_code, c_name ";
+
+                DataSet ds3 = con.selectQueryDataSet();
+                DataRow[] dr3 = ds3.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr3.Length];
+
+
+                for (int i = 0; i < dr3.Length; i++)
+                    codeArray[i] = new CodeData(dr3[i]["DCODE"].ToString(), dr3[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbCate_Code4, codeArray);
+            }
+        }
+
+
     }
 }

@@ -43,9 +43,9 @@ namespace YL_SCM.BizFrm
 
             gridView1.OptionsView.ShowFooter = true;
 
-            gridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
-            gridView1.Columns["p_num"].SummaryItem.DisplayFormat = "{0}";
+            //gridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
+            //gridView1.Columns["p_num"].SummaryItem.DisplayFormat = "{0}";
 
             cmbSellers.EditValue = "N";
 
