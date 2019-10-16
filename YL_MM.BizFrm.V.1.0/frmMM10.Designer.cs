@@ -36,6 +36,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMM10));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo7 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo8 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwTopPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dt1T = new Easy.Framework.WinForm.Control.efwDateEdit();
@@ -61,17 +67,62 @@
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.efwGridControl2 = new Easy.Framework.WinForm.Control.efwGridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.efwGridControl3 = new Easy.Framework.WinForm.Control.efwGridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn58 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn59 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn60 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwTopPanelControl1)).BeginInit();
             this.efwTopPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties.CalendarTimeProperties)).BeginInit();
@@ -86,6 +137,12 @@
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.xtraTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // efwTopPanelControl1
@@ -102,7 +159,7 @@
             this.efwTopPanelControl1.Location = new System.Drawing.Point(3, 35);
             this.efwTopPanelControl1.Name = "efwTopPanelControl1";
             this.efwTopPanelControl1.Padding = new System.Windows.Forms.Padding(2);
-            this.efwTopPanelControl1.Size = new System.Drawing.Size(1355, 56);
+            this.efwTopPanelControl1.Size = new System.Drawing.Size(1003, 56);
             this.efwTopPanelControl1.TabIndex = 4;
             // 
             // efwLabel2
@@ -207,6 +264,8 @@
             this.cmbQ1.Location = new System.Drawing.Point(111, 18);
             this.cmbQ1.MasterCode = "E03.MEMBERQ_GBN5";
             this.cmbQ1.Name = "cmbQ1";
+            this.cmbQ1.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cmbQ1.Properties.Appearance.Options.UseBackColor = true;
             this.cmbQ1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbQ1.Size = new System.Drawing.Size(117, 20);
@@ -217,7 +276,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 91);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1355, 5);
+            this.panel2.Size = new System.Drawing.Size(1003, 5);
             this.panel2.TabIndex = 6;
             // 
             // efwXtraTabControl1
@@ -227,7 +286,7 @@
             this.efwXtraTabControl1.Location = new System.Drawing.Point(3, 96);
             this.efwXtraTabControl1.Name = "efwXtraTabControl1";
             this.efwXtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.efwXtraTabControl1.Size = new System.Drawing.Size(1355, 791);
+            this.efwXtraTabControl1.Size = new System.Drawing.Size(1003, 398);
             this.efwXtraTabControl1.TabIndex = 7;
             this.efwXtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -240,7 +299,7 @@
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Padding = new System.Windows.Forms.Padding(5);
-            this.xtraTabPage1.Size = new System.Drawing.Size(1349, 760);
+            this.xtraTabPage1.Size = new System.Drawing.Size(997, 367);
             this.xtraTabPage1.Text = "VIP 회원";
             // 
             // efwGridControl1
@@ -270,7 +329,7 @@
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.Size = new System.Drawing.Size(1339, 750);
+            this.efwGridControl1.Size = new System.Drawing.Size(987, 357);
             this.efwGridControl1.TabIndex = 8;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -392,6 +451,22 @@
             this.gridColumn6.FieldName = "o_code";
             this.gridColumn6.Name = "gridColumn6";
             // 
+            // gridColumn19
+            // 
+            this.gridColumn19.Caption = "가입일";
+            this.gridColumn19.FieldName = "reg_date";
+            this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.Visible = true;
+            this.gridColumn19.VisibleIndex = 8;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "신청일";
+            this.gridColumn7.FieldName = "o_date";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 9;
+            // 
             // gridColumn17
             // 
             this.gridColumn17.Caption = "시작일";
@@ -403,18 +478,18 @@
             // gridColumn8
             // 
             this.gridColumn8.Caption = "만료일";
-            this.gridColumn8.FieldName = "end_date2";
+            this.gridColumn8.FieldName = "end_date";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 11;
             // 
-            // gridColumn7
+            // gridColumn20
             // 
-            this.gridColumn7.Caption = "신청일";
-            this.gridColumn7.FieldName = "o_date";
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 9;
+            this.gridColumn20.Caption = "잔여일";
+            this.gridColumn20.FieldName = "daycnt";
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.Visible = true;
+            this.gridColumn20.VisibleIndex = 12;
             // 
             // gridColumn18
             // 
@@ -448,35 +523,466 @@
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.efwGridControl2);
             this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Padding = new System.Windows.Forms.Padding(5);
-            this.xtraTabPage2.Size = new System.Drawing.Size(1349, 760);
+            this.xtraTabPage2.Size = new System.Drawing.Size(997, 367);
             this.xtraTabPage2.Text = "도마셰프 회원";
+            // 
+            // efwGridControl2
+            // 
+            this.efwGridControl2.BindSet = null;
+            this.efwGridControl2.DBName = "";
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
+            this.efwGridControl2.DeleteServiceInfo = serviceInfo4;
+            this.efwGridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
+            this.efwGridControl2.InsertServiceInfo = serviceInfo5;
+            this.efwGridControl2.IsAddExcelBtn = true;
+            this.efwGridControl2.isAddPrintBtn = true;
+            this.efwGridControl2.IsEditable = false;
+            this.efwGridControl2.IsMultiLang = false;
+            this.efwGridControl2.Location = new System.Drawing.Point(5, 5);
+            this.efwGridControl2.MainView = this.gridView2;
+            this.efwGridControl2.Name = "efwGridControl2";
+            this.efwGridControl2.NowRowHandle = 0;
+            this.efwGridControl2.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl2.PKColumns")));
+            this.efwGridControl2.PrevRowHandle = -2147483648;
+            this.efwGridControl2.Size = new System.Drawing.Size(987, 357);
+            this.efwGridControl2.TabIndex = 9;
+            this.efwGridControl2.TableName = "";
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
+            this.efwGridControl2.UpdateServiceInfo = serviceInfo6;
+            this.efwGridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn21,
+            this.gridColumn22,
+            this.gridColumn23,
+            this.gridColumn24,
+            this.gridColumn25,
+            this.gridColumn26,
+            this.gridColumn27,
+            this.gridColumn28,
+            this.gridColumn29,
+            this.gridColumn30,
+            this.gridColumn31,
+            this.gridColumn32,
+            this.gridColumn33,
+            this.gridColumn34,
+            this.gridColumn35,
+            this.gridColumn36,
+            this.gridColumn37,
+            this.gridColumn38,
+            this.gridColumn39,
+            this.gridColumn40});
+            this.gridView2.GridControl = this.efwGridControl2;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsView.ColumnAutoWidth = false;
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "닉네임";
+            this.gridColumn21.FieldName = "u_nickname";
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 0;
+            // 
+            // gridColumn22
+            // 
+            this.gridColumn22.Caption = "이름";
+            this.gridColumn22.FieldName = "u_name";
+            this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.Visible = true;
+            this.gridColumn22.VisibleIndex = 1;
+            // 
+            // gridColumn23
+            // 
+            this.gridColumn23.Caption = "아이디";
+            this.gridColumn23.FieldName = "login_id";
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 2;
+            // 
+            // gridColumn24
+            // 
+            this.gridColumn24.Caption = "u_id";
+            this.gridColumn24.FieldName = "u_id";
+            this.gridColumn24.Name = "gridColumn24";
+            // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "회원등급";
+            this.gridColumn25.FieldName = "u_chef_level";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 3;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "담당셰프 닉네임";
+            this.gridColumn26.FieldName = "chef_u_nickname";
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 4;
+            // 
+            // gridColumn27
+            // 
+            this.gridColumn27.Caption = "담당셰프 이름";
+            this.gridColumn27.FieldName = "chef_u_name";
+            this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 5;
+            // 
+            // gridColumn28
+            // 
+            this.gridColumn28.Caption = "담당셰프 아이디";
+            this.gridColumn28.FieldName = "chef_login_id";
+            this.gridColumn28.Name = "gridColumn28";
+            this.gridColumn28.Visible = true;
+            this.gridColumn28.VisibleIndex = 6;
+            // 
+            // gridColumn29
+            // 
+            this.gridColumn29.Caption = "담당셰프 u_id";
+            this.gridColumn29.FieldName = "chef_u_id";
+            this.gridColumn29.Name = "gridColumn29";
+            // 
+            // gridColumn30
+            // 
+            this.gridColumn30.Caption = "담당셰프 회원등급";
+            this.gridColumn30.FieldName = "chef_u_chef_level";
+            this.gridColumn30.Name = "gridColumn30";
+            this.gridColumn30.Visible = true;
+            this.gridColumn30.VisibleIndex = 7;
+            // 
+            // gridColumn31
+            // 
+            this.gridColumn31.Caption = "주문코드";
+            this.gridColumn31.FieldName = "o_code";
+            this.gridColumn31.Name = "gridColumn31";
+            // 
+            // gridColumn32
+            // 
+            this.gridColumn32.Caption = "가입일";
+            this.gridColumn32.FieldName = "reg_date";
+            this.gridColumn32.Name = "gridColumn32";
+            this.gridColumn32.Visible = true;
+            this.gridColumn32.VisibleIndex = 8;
+            // 
+            // gridColumn33
+            // 
+            this.gridColumn33.Caption = "신청일";
+            this.gridColumn33.FieldName = "o_date";
+            this.gridColumn33.Name = "gridColumn33";
+            this.gridColumn33.Visible = true;
+            this.gridColumn33.VisibleIndex = 9;
+            // 
+            // gridColumn34
+            // 
+            this.gridColumn34.Caption = "시작일";
+            this.gridColumn34.FieldName = "o_deposit_confirm_date";
+            this.gridColumn34.Name = "gridColumn34";
+            this.gridColumn34.Visible = true;
+            this.gridColumn34.VisibleIndex = 10;
+            // 
+            // gridColumn35
+            // 
+            this.gridColumn35.Caption = "만료일";
+            this.gridColumn35.FieldName = "end_date";
+            this.gridColumn35.Name = "gridColumn35";
+            this.gridColumn35.Visible = true;
+            this.gridColumn35.VisibleIndex = 11;
+            // 
+            // gridColumn36
+            // 
+            this.gridColumn36.Caption = "잔여일";
+            this.gridColumn36.FieldName = "daycnt";
+            this.gridColumn36.Name = "gridColumn36";
+            this.gridColumn36.Visible = true;
+            this.gridColumn36.VisibleIndex = 12;
+            // 
+            // gridColumn37
+            // 
+            this.gridColumn37.Caption = "입금일";
+            this.gridColumn37.FieldName = "o_deposit_confirm_date";
+            this.gridColumn37.Name = "gridColumn37";
+            this.gridColumn37.Visible = true;
+            this.gridColumn37.VisibleIndex = 13;
+            // 
+            // gridColumn38
+            // 
+            this.gridColumn38.Caption = "결제방법";
+            this.gridColumn38.FieldName = "o_pay_type";
+            this.gridColumn38.Name = "gridColumn38";
+            this.gridColumn38.Visible = true;
+            this.gridColumn38.VisibleIndex = 14;
+            // 
+            // gridColumn39
+            // 
+            this.gridColumn39.Caption = "결제금액";
+            this.gridColumn39.FieldName = "lgd_amount2";
+            this.gridColumn39.Name = "gridColumn39";
+            this.gridColumn39.Visible = true;
+            this.gridColumn39.VisibleIndex = 15;
+            // 
+            // gridColumn40
+            // 
+            this.gridColumn40.Caption = "상태";
+            this.gridColumn40.FieldName = "status";
+            this.gridColumn40.Name = "gridColumn40";
             // 
             // xtraTabPage3
             // 
+            this.xtraTabPage3.Controls.Add(this.efwGridControl3);
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Padding = new System.Windows.Forms.Padding(5);
-            this.xtraTabPage3.Size = new System.Drawing.Size(1349, 760);
+            this.xtraTabPage3.Size = new System.Drawing.Size(997, 367);
             this.xtraTabPage3.Text = "G멀티샵 회원";
             // 
-            // gridColumn19
+            // efwGridControl3
             // 
-            this.gridColumn19.Caption = "가입일";
-            this.gridColumn19.FieldName = "reg_date";
-            this.gridColumn19.Name = "gridColumn19";
-            this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 8;
+            this.efwGridControl3.BindSet = null;
+            this.efwGridControl3.DBName = "";
+            serviceInfo7.InstanceName = "";
+            serviceInfo7.IsUserIDAdd = true;
+            serviceInfo7.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo7.ParamsInfo")));
+            serviceInfo7.ProcName = "";
+            serviceInfo7.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo7.UserParams")));
+            this.efwGridControl3.DeleteServiceInfo = serviceInfo7;
+            this.efwGridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            serviceInfo8.InstanceName = "";
+            serviceInfo8.IsUserIDAdd = true;
+            serviceInfo8.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo8.ParamsInfo")));
+            serviceInfo8.ProcName = "";
+            serviceInfo8.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo8.UserParams")));
+            this.efwGridControl3.InsertServiceInfo = serviceInfo8;
+            this.efwGridControl3.IsAddExcelBtn = true;
+            this.efwGridControl3.isAddPrintBtn = true;
+            this.efwGridControl3.IsEditable = false;
+            this.efwGridControl3.IsMultiLang = false;
+            this.efwGridControl3.Location = new System.Drawing.Point(5, 5);
+            this.efwGridControl3.MainView = this.gridView3;
+            this.efwGridControl3.Name = "efwGridControl3";
+            this.efwGridControl3.NowRowHandle = 0;
+            this.efwGridControl3.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl3.PKColumns")));
+            this.efwGridControl3.PrevRowHandle = -2147483648;
+            this.efwGridControl3.Size = new System.Drawing.Size(987, 357);
+            this.efwGridControl3.TabIndex = 9;
+            this.efwGridControl3.TableName = "";
+            serviceInfo9.InstanceName = "";
+            serviceInfo9.IsUserIDAdd = true;
+            serviceInfo9.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo9.ParamsInfo")));
+            serviceInfo9.ProcName = "";
+            serviceInfo9.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo9.UserParams")));
+            this.efwGridControl3.UpdateServiceInfo = serviceInfo9;
+            this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
             // 
-            // gridColumn20
+            // gridView3
             // 
-            this.gridColumn20.Caption = "잔여일";
-            this.gridColumn20.FieldName = "daycnt";
-            this.gridColumn20.Name = "gridColumn20";
-            this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 12;
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn61,
+            this.gridColumn41,
+            this.gridColumn42,
+            this.gridColumn43,
+            this.gridColumn44,
+            this.gridColumn45,
+            this.gridColumn46,
+            this.gridColumn47,
+            this.gridColumn48,
+            this.gridColumn49,
+            this.gridColumn50,
+            this.gridColumn51,
+            this.gridColumn52,
+            this.gridColumn53,
+            this.gridColumn54,
+            this.gridColumn55,
+            this.gridColumn56,
+            this.gridColumn57,
+            this.gridColumn58,
+            this.gridColumn59,
+            this.gridColumn60});
+            this.gridView3.GridControl = this.efwGridControl3;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsView.ColumnAutoWidth = false;
+            // 
+            // gridColumn61
+            // 
+            this.gridColumn61.Caption = "상호명";
+            this.gridColumn61.FieldName = "gshop_name";
+            this.gridColumn61.Name = "gridColumn61";
+            this.gridColumn61.Visible = true;
+            this.gridColumn61.VisibleIndex = 0;
+            // 
+            // gridColumn41
+            // 
+            this.gridColumn41.Caption = "닉네임";
+            this.gridColumn41.FieldName = "u_nickname";
+            this.gridColumn41.Name = "gridColumn41";
+            this.gridColumn41.Visible = true;
+            this.gridColumn41.VisibleIndex = 1;
+            // 
+            // gridColumn42
+            // 
+            this.gridColumn42.Caption = "이름";
+            this.gridColumn42.FieldName = "u_name";
+            this.gridColumn42.Name = "gridColumn42";
+            this.gridColumn42.Visible = true;
+            this.gridColumn42.VisibleIndex = 2;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.Caption = "아이디";
+            this.gridColumn43.FieldName = "login_id";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 3;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.Caption = "u_id";
+            this.gridColumn44.FieldName = "u_id";
+            this.gridColumn44.Name = "gridColumn44";
+            // 
+            // gridColumn45
+            // 
+            this.gridColumn45.Caption = "회원등급";
+            this.gridColumn45.FieldName = "u_chef_level";
+            this.gridColumn45.Name = "gridColumn45";
+            this.gridColumn45.Visible = true;
+            this.gridColumn45.VisibleIndex = 4;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.Caption = "담당셰프 닉네임";
+            this.gridColumn46.FieldName = "chef_u_nickname";
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.Visible = true;
+            this.gridColumn46.VisibleIndex = 5;
+            // 
+            // gridColumn47
+            // 
+            this.gridColumn47.Caption = "담당셰프 이름";
+            this.gridColumn47.FieldName = "chef_u_name";
+            this.gridColumn47.Name = "gridColumn47";
+            this.gridColumn47.Visible = true;
+            this.gridColumn47.VisibleIndex = 6;
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.Caption = "담당셰프 아이디";
+            this.gridColumn48.FieldName = "chef_login_id";
+            this.gridColumn48.Name = "gridColumn48";
+            this.gridColumn48.Visible = true;
+            this.gridColumn48.VisibleIndex = 7;
+            // 
+            // gridColumn49
+            // 
+            this.gridColumn49.Caption = "담당셰프 u_id";
+            this.gridColumn49.FieldName = "md_u_id";
+            this.gridColumn49.Name = "gridColumn49";
+            // 
+            // gridColumn50
+            // 
+            this.gridColumn50.Caption = "담당셰프 회원등급";
+            this.gridColumn50.FieldName = "chef_u_chef_level";
+            this.gridColumn50.Name = "gridColumn50";
+            this.gridColumn50.Visible = true;
+            this.gridColumn50.VisibleIndex = 8;
+            // 
+            // gridColumn51
+            // 
+            this.gridColumn51.Caption = "주문코드";
+            this.gridColumn51.FieldName = "o_code";
+            this.gridColumn51.Name = "gridColumn51";
+            // 
+            // gridColumn52
+            // 
+            this.gridColumn52.Caption = "가입일";
+            this.gridColumn52.FieldName = "create_date";
+            this.gridColumn52.Name = "gridColumn52";
+            this.gridColumn52.Visible = true;
+            this.gridColumn52.VisibleIndex = 9;
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.Caption = "신청일";
+            this.gridColumn53.FieldName = "o_date";
+            this.gridColumn53.Name = "gridColumn53";
+            this.gridColumn53.Visible = true;
+            this.gridColumn53.VisibleIndex = 10;
+            // 
+            // gridColumn54
+            // 
+            this.gridColumn54.Caption = "시작일";
+            this.gridColumn54.FieldName = "o_deposit_confirm_date";
+            this.gridColumn54.Name = "gridColumn54";
+            this.gridColumn54.Visible = true;
+            this.gridColumn54.VisibleIndex = 11;
+            // 
+            // gridColumn55
+            // 
+            this.gridColumn55.Caption = "만료일";
+            this.gridColumn55.FieldName = "end_date";
+            this.gridColumn55.Name = "gridColumn55";
+            this.gridColumn55.Visible = true;
+            this.gridColumn55.VisibleIndex = 12;
+            // 
+            // gridColumn56
+            // 
+            this.gridColumn56.Caption = "잔여일";
+            this.gridColumn56.FieldName = "daycnt";
+            this.gridColumn56.Name = "gridColumn56";
+            this.gridColumn56.Visible = true;
+            this.gridColumn56.VisibleIndex = 13;
+            // 
+            // gridColumn57
+            // 
+            this.gridColumn57.Caption = "입금일";
+            this.gridColumn57.FieldName = "o_deposit_confirm_date";
+            this.gridColumn57.Name = "gridColumn57";
+            this.gridColumn57.Visible = true;
+            this.gridColumn57.VisibleIndex = 14;
+            // 
+            // gridColumn58
+            // 
+            this.gridColumn58.Caption = "결제방법";
+            this.gridColumn58.FieldName = "o_pay_type";
+            this.gridColumn58.Name = "gridColumn58";
+            this.gridColumn58.Visible = true;
+            this.gridColumn58.VisibleIndex = 15;
+            // 
+            // gridColumn59
+            // 
+            this.gridColumn59.Caption = "결제금액";
+            this.gridColumn59.FieldName = "lgd_amount2";
+            this.gridColumn59.Name = "gridColumn59";
+            this.gridColumn59.Visible = true;
+            this.gridColumn59.VisibleIndex = 16;
+            // 
+            // gridColumn60
+            // 
+            this.gridColumn60.Caption = "상태";
+            this.gridColumn60.FieldName = "status";
+            this.gridColumn60.Name = "gridColumn60";
             // 
             // frmMM10
             // 
@@ -486,7 +992,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.efwTopPanelControl1);
             this.Name = "frmMM10";
-            this.Size = new System.Drawing.Size(1361, 887);
+            this.Size = new System.Drawing.Size(1009, 494);
             this.Controls.SetChildIndex(this.efwTopPanelControl1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.efwXtraTabControl1, 0);
@@ -505,6 +1011,12 @@
             this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.xtraTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -547,5 +1059,50 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+        private Easy.Framework.WinForm.Control.efwGridControl efwGridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
+        private Easy.Framework.WinForm.Control.efwGridControl efwGridControl3;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn61;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn50;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn51;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn57;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn58;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn59;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn60;
     }
 }
