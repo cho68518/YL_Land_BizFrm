@@ -68,6 +68,7 @@ namespace YL_DONUT.BizFrm
 
             this.efwGridControl1.BindControlSet(
                       new ColumnControlSet("idx", txtIDX)
+                    , new ColumnControlSet("p_id", txtP_ID)
                     , new ColumnControlSet("option_id", txtOPTION_ID)
                     , new ColumnControlSet("product_name", txtPROD_NM)
                     , new ColumnControlSet("customer_price", txtCUSTOMER_PRICE)
@@ -87,10 +88,16 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("d_gs_cele_story", txtD_GS_CELE_STORY)
                     , new ColumnControlSet("cash_gr_cele_story", txtCASH_GR_CELE_STORY)
                     , new ColumnControlSet("remark", txtREMARK)
+                    , new ColumnControlSet("c_code", txtC_Code)
+                    , new ColumnControlSet("c_code1", txtC_Code1)
+                    , new ColumnControlSet("c_code2", txtC_Code2)
+                    , new ColumnControlSet("c_code3", txtC_Code3)
+                    , new ColumnControlSet("c_code4", txtC_Code4)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
             cbG_Prod.EditValue = "0";
+            rbShowType.EditValue = "Y";
             SetCmb();
         }
 
@@ -134,53 +141,31 @@ namespace YL_DONUT.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbCate_Code1, codeArray);
             }
-
-            //using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
-            //{
-            //    con.Query = "SELECT '0' as DCODE, '선택하세요' as DNAME  " ;
-
-            //    DataSet ds1 = con.selectQueryDataSet();
-            //    DataRow[] dr1 = ds1.Tables[0].Select();
-            //    CodeData[] codeArray = new CodeData[dr1.Length];
-
-            //    for (int i = 0; i < dr1.Length; i++)
-            //        codeArray[i] = new CodeData(dr1[i]["DCODE"].ToString(), dr1[i]["DNAME"].ToString());
-
-            //    CodeAgent.MakeCodeControl(this.cmbCate_Code2, codeArray);
-            //}
-
-            //using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
-            //{
-            //    con.Query = "SELECT '0' as DCODE, '선택하세요' as DNAME  " ;
-
-            //    DataSet ds2 = con.selectQueryDataSet();
-            //    DataRow[] dr2 = ds2.Tables[0].Select();
-            //    CodeData[] codeArray = new CodeData[dr2.Length];
-
-            //    for (int i = 0; i < dr2.Length; i++)
-            //        codeArray[i] = new CodeData(dr2[i]["DCODE"].ToString(), dr2[i]["DNAME"].ToString());
-
-            //    CodeAgent.MakeCodeControl(this.cmbCate_Code3, codeArray);
-            //}
-
-            //using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
-            //{
-            //    con.Query = "SELECT '0' as DCODE, '선택하세요' as DNAME  ";
-
-            //    DataSet ds3 = con.selectQueryDataSet();
-            //    DataRow[] dr3 = ds3.Tables[0].Select();
-            //    CodeData[] codeArray = new CodeData[dr3.Length];
-
-            //    for (int i = 0; i < dr3.Length; i++)
-            //        codeArray[i] = new CodeData(dr3[i]["DCODE"].ToString(), dr3[i]["DNAME"].ToString());
-
-            //    CodeAgent.MakeCodeControl(this.cmbCate_Code4, codeArray);
-            //}
-
         }
 
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
+
+            if (this.txtC_Code1.EditValue == null)
+                return;
+            else
+                cmbCate_Code1.EditValue = txtC_Code1.EditValue.ToString();
+
+            if (this.txtC_Code2.EditValue == null)
+                return;
+            else
+                cmbCate_Code2.EditValue = txtC_Code2.EditValue.ToString();
+
+            if (this.txtC_Code3.EditValue == null)
+                return;
+            else
+                cmbCate_Code3.EditValue = txtC_Code3.EditValue.ToString();
+
+            if (this.txtC_Code4.EditValue == null)
+                return;
+            else
+                cmbCate_Code4.EditValue = txtC_Code4.EditValue.ToString();
+            
             Open1();
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
         }
@@ -201,7 +186,7 @@ namespace YL_DONUT.BizFrm
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        if (cmbSellers.EditValue.ToString() != "Y" && cmbSellers.EditValue.ToString() != "N")
+                        if (cmbSellers.EditValue.ToString() == "" )
                             sSellers = null;
                         else
                             sSellers = cmbSellers.EditValue.ToString();
@@ -284,12 +269,12 @@ namespace YL_DONUT.BizFrm
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+
             if (string.IsNullOrEmpty(this.txtIDX.Text))
             {
-                MessageAgent.MessageShow(MessageType.Warning, " 변경할 상품을 선택하세요!");
+                MessageAgent.MessageShow(MessageType.Warning, " 상품 옵션 정보가 없어 수정할수 없습니다!");
                 return;
             }
-
 
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
@@ -305,6 +290,10 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
                             cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtIDX.EditValue);
                             cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_p_id"].Value = Convert.ToInt32(txtP_ID.EditValue);
+                            cmd.Parameters["i_p_id"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_customer_price", MySqlDbType.Int32));
                             cmd.Parameters["i_customer_price"].Value = Convert.ToInt32(txtCUSTOMER_PRICE.EditValue);
@@ -377,6 +366,23 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
                             cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
                             cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+
+                            cmd.Parameters.Add(new MySqlParameter("i_cate_code1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_cate_code1"].Value = cmbCate_Code1.EditValue;
+                            cmd.Parameters["i_cate_code1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_cate_code2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_cate_code2"].Value = cmbCate_Code2.EditValue;
+                            cmd.Parameters["i_cate_code2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_cate_code3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_cate_code3"].Value = cmbCate_Code3.EditValue;
+                            cmd.Parameters["i_cate_code3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_cate_code4", MySqlDbType.VarChar));
+                            cmd.Parameters["i_cate_code4"].Value = cmbCate_Code4.EditValue;
+                            cmd.Parameters["i_cate_code4"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
@@ -585,7 +591,9 @@ namespace YL_DONUT.BizFrm
             cmbCate_Code2.Properties.DataSource = null;
             cmbCate_Code3.Properties.DataSource = null;
             cmbCate_Code4.Properties.DataSource = null;
-
+            cmbCate_Code2.EditValue = "0";
+            cmbCate_Code3.EditValue = "0";
+            cmbCate_Code4.EditValue = "0";
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
@@ -723,3 +731,4 @@ namespace YL_DONUT.BizFrm
 
     }
 }
+

@@ -53,12 +53,51 @@ namespace YL_MM.BizFrm
             this.IsExcel = false;
 
             gridView1.OptionsView.ShowFooter = true;
+
+            this.efwGridControl1.BindControlSet(
+            new ColumnControlSet("c_code1", txtC_Code1)
+          , new ColumnControlSet("c_code2", txtC_Code2)
+          , new ColumnControlSet("c_code3", txtC_Code3)
+          , new ColumnControlSet("c_code4", txtC_Code4)
+       );
+
+            this.efwGridControl1.Click += efwGridControl1_Click;
+
             rbShowType.EditValue = "T";
 
             SetCmb();
-
+        
         }
- 
+
+
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+
+            if (this.txtC_Code1.EditValue == null)
+                return;
+            else
+                cmbCate_Code1.EditValue = txtC_Code1.EditValue.ToString();
+
+            if (this.txtC_Code2.EditValue == null)
+                return;
+            else
+                cmbCate_Code2.EditValue = txtC_Code2.EditValue.ToString();
+
+            if (this.txtC_Code3.EditValue == null)
+                return;
+            else
+                cmbCate_Code3.EditValue = txtC_Code3.EditValue.ToString();
+
+            if (this.txtC_Code4.EditValue == null)
+                return;
+            else
+                cmbCate_Code4.EditValue = txtC_Code4.EditValue.ToString();
+
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+        }
+
+
+
         private void SetCmb()
         {
             // 공급자구분
