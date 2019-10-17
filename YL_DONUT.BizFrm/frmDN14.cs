@@ -316,7 +316,7 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_ps_donut01"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_ps_donut02", MySqlDbType.Int32));
-                            cmd.Parameters["i_ps_donut02"].Value = Convert.ToInt32(txtPS_DONUT02.EditValue);
+                            cmd.Parameters["i_ps_donut02"].Value = Convert.ToInt32(txtPS_DONUT02.EditValue).ToString();
                             cmd.Parameters["i_ps_donut02"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_vip_price", MySqlDbType.Int32));
