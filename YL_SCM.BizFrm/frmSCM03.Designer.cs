@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSCM03));
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSCM03));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.txtOrderNo = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
@@ -63,8 +66,10 @@
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOrderNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -79,6 +84,9 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.txtOrderNo);
+            this.efwPanelControl1.Controls.Add(this.efwLabel5);
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton1);
             this.efwPanelControl1.Controls.Add(this.efwLabel4);
             this.efwPanelControl1.Controls.Add(this.efwLabel3);
             this.efwPanelControl1.Controls.Add(this.dtE_DATE);
@@ -91,8 +99,40 @@
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1113, 50);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1277, 50);
             this.efwPanelControl1.TabIndex = 3;
+            // 
+            // txtOrderNo
+            // 
+            this.txtOrderNo.EditValue2 = null;
+            this.txtOrderNo.Location = new System.Drawing.Point(1098, 14);
+            this.txtOrderNo.Name = "txtOrderNo";
+            this.txtOrderNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOrderNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOrderNo.RequireMessage = null;
+            this.txtOrderNo.Size = new System.Drawing.Size(60, 20);
+            this.txtOrderNo.TabIndex = 15;
+            // 
+            // efwLabel5
+            // 
+            this.efwLabel5.EraserGroup = null;
+            this.efwLabel5.IsMultiLang = false;
+            this.efwLabel5.Location = new System.Drawing.Point(1042, 17);
+            this.efwLabel5.Name = "efwLabel5";
+            this.efwLabel5.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel5.TabIndex = 14;
+            this.efwLabel5.Text = "주문번호";
+            // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(1165, 13);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(104, 23);
+            this.efwSimpleButton1.TabIndex = 13;
+            this.efwSimpleButton1.Text = "SMS 문자전송";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
             // 
             // efwLabel4
             // 
@@ -151,7 +191,7 @@
             // rbShowType
             // 
             this.rbShowType.IsMultiLang = false;
-            this.rbShowType.Location = new System.Drawing.Point(813, 10);
+            this.rbShowType.Location = new System.Drawing.Point(798, 10);
             this.rbShowType.Name = "rbShowType";
             this.rbShowType.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbShowType.Properties.Appearance.Options.UseBackColor = true;
@@ -162,7 +202,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "미확정"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "확정")});
             this.rbShowType.RequireMessage = null;
-            this.rbShowType.Size = new System.Drawing.Size(200, 30);
+            this.rbShowType.Size = new System.Drawing.Size(194, 30);
             this.rbShowType.TabIndex = 8;
             // 
             // txtProdName
@@ -243,7 +283,7 @@
             this.efwGridControl1.PrevRowHandle = -2147483648;
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1113, 494);
+            this.efwGridControl1.Size = new System.Drawing.Size(1277, 483);
             this.efwGridControl1.TabIndex = 4;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -273,7 +313,8 @@
             this.gridColumn12,
             this.gridColumn13,
             this.gridColumn15,
-            this.gridColumn16});
+            this.gridColumn16,
+            this.gridColumn17});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -439,6 +480,14 @@
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 15;
             // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "id";
+            this.gridColumn17.FieldName = "id";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 16;
+            // 
             // frmSCM03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -446,12 +495,13 @@
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmSCM03";
-            this.Size = new System.Drawing.Size(1119, 579);
+            this.Size = new System.Drawing.Size(1283, 568);
             this.Controls.SetChildIndex(this.efwPanelControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOrderNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
@@ -497,5 +547,9 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
         private Easy.Framework.WinForm.Control.efwDateEdit dtE_DATE;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOrderNo;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
     }
 }

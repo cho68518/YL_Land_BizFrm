@@ -19,6 +19,8 @@ namespace YL_SCM.BizFrm
 {
     public partial class frmSCM03 : FrmBase
     {
+        frmSCM03_Pop01 popup;
+
         public frmSCM03()
         {
             InitializeComponent();
@@ -44,10 +46,26 @@ namespace YL_SCM.BizFrm
             this.IsExcel = false;
 
             gridView1.OptionsView.ShowFooter = true;
+           
+            this.efwGridControl1.BindControlSet(
+               new ColumnControlSet("id", txtOrderNo)
+            );
+            this.efwGridControl1.Click += efwGridControl1_Click;
+
             rbShowType.EditValue = "N";
             SetCmb();
         }
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
 
+            txtOrderNo.EditValue = "";
+            if (dr != null && dr["id"].ToString() != "")
+            {
+                this.txtOrderNo.EditValue = Convert.ToInt32(dr["id"].ToString());
+            }
+
+        }
 
         private void SetCmb()
         {
@@ -69,7 +87,8 @@ namespace YL_SCM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbSellers, codeArray);
             }
-
+            dtS_DATE.EditValue = DateTime.Now;
+            dtE_DATE.EditValue = DateTime.Now;
             cmbSellers.EditValue = "1";
         }
 
@@ -182,6 +201,20 @@ namespace YL_SCM.BizFrm
         {
             if (e.KeyCode == Keys.Enter)
                 Search();
+        }
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtOrderNo.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 주문 번호를 선택하세요!");
+                return;
+            }
+            popup = new frmSCM03_Pop01();
+
+            popup.pOrderNo =Convert.ToInt32(txtOrderNo.EditValue);
+
+            popup.ShowDialog();
         }
     }
 }

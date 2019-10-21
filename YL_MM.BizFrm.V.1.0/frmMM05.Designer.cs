@@ -1308,7 +1308,7 @@
             this.cmbDORAMD_TYPE.HierarchyInfo = hierarchy4;
             this.cmbDORAMD_TYPE.IsMultiLang = false;
             this.cmbDORAMD_TYPE.Location = new System.Drawing.Point(388, 205);
-            this.cmbDORAMD_TYPE.MasterCode = "E03.DR_MD_TYPE";
+            this.cmbDORAMD_TYPE.MasterCode = "E03.DR_MD_TYPE1";
             this.cmbDORAMD_TYPE.Name = "cmbDORAMD_TYPE";
             this.cmbDORAMD_TYPE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});

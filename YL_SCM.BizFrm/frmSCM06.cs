@@ -43,11 +43,26 @@ namespace YL_SCM.BizFrm
 
             gridView1.OptionsView.ShowFooter = true;
 
-            //gridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            //gridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
-            //gridView1.Columns["p_num"].SummaryItem.DisplayFormat = "{0}";
+            gridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
+            gridView1.Columns["p_num"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView1.Columns["c_delivery_price"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["c_delivery_price"].SummaryItem.FieldName = "c_delivery_price";
+            gridView1.Columns["c_delivery_price"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["c_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["c_amt"].SummaryItem.FieldName = "c_amt";
+            gridView1.Columns["c_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["tot_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["tot_amt"].SummaryItem.FieldName = "tot_amt";
+            gridView1.Columns["tot_amt"].SummaryItem.DisplayFormat = "{0:c}";
 
             cmbSellers.EditValue = "N";
+
+            dtS_DATE.EditValue = DateTime.Now;
+            dtE_DATE.EditValue = DateTime.Now;
 
             SetCmb();
         }
@@ -76,6 +91,45 @@ namespace YL_SCM.BizFrm
 
 
 
+        public override void Search()
+        {
+            try
+            {
+                string sShow_Type = string.Empty;
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_SCM_SCM06_SELECT_01", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_StoreCode", MySqlDbType.Int32);
+                        cmd.Parameters[0].Value = Convert.ToInt32(cmbSellers.EditValue);
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[2].Value = dtE_DATE.EditValue3;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                            //    this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            txtConfirmAmt.EditValue = Convert.ToInt32(gridView1.Columns["tot_amt"].SummaryItem.SummaryValue);
+        }
 
     }
 }

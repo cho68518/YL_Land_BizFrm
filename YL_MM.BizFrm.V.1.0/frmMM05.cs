@@ -350,6 +350,27 @@ namespace YL_MM.BizFrm
                                 cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
                                 cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtIDX.EditValue);
                                 cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
+                                cmd.Parameters["i_u_id"].Value = txtU_ID.EditValue;
+                                cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_name", MySqlDbType.VarChar));
+                                cmd.Parameters["i_name"].Value = txtU_NAME.EditValue;
+                                cmd.Parameters["i_name"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_nickname", MySqlDbType.VarChar));
+                                cmd.Parameters["i_nickname"].Value = txtU_NICKNAME.EditValue;
+                                cmd.Parameters["i_nickname"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_u_email", MySqlDbType.VarChar));
+                                cmd.Parameters["i_u_email"].Value = txtU_EMAIL.EditValue;
+                                cmd.Parameters["i_u_email"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_doramd_type", MySqlDbType.VarChar));
+                                cmd.Parameters["i_doramd_type"].Value = cmbDORAMD_TYPE.EditValue;
+                                cmd.Parameters["i_doramd_type"].Direction = ParameterDirection.Input;
+
                                 cmd.ExecuteNonQuery();
                                 con.Close();
                             }

@@ -35,8 +35,6 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.ewfPanel = new Easy.Framework.WinForm.Control.efwPanelControl();
-            this.txtDeliveryPrice = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
@@ -58,9 +56,10 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtConfirmAmt = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ewfPanel)).BeginInit();
             this.ewfPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDeliveryPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -68,12 +67,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbSellers.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtConfirmAmt.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ewfPanel
             // 
-            this.ewfPanel.Controls.Add(this.txtDeliveryPrice);
-            this.ewfPanel.Controls.Add(this.efwLabel7);
+            this.ewfPanel.Controls.Add(this.txtConfirmAmt);
+            this.ewfPanel.Controls.Add(this.efwLabel6);
             this.ewfPanel.Controls.Add(this.efwLabel4);
             this.ewfPanel.Controls.Add(this.efwLabel3);
             this.ewfPanel.Controls.Add(this.dtE_DATE);
@@ -85,38 +85,6 @@
             this.ewfPanel.Name = "ewfPanel";
             this.ewfPanel.Size = new System.Drawing.Size(1043, 50);
             this.ewfPanel.TabIndex = 6;
-            // 
-            // txtDeliveryPrice
-            // 
-            this.txtDeliveryPrice.EditValue2 = null;
-            this.txtDeliveryPrice.Location = new System.Drawing.Point(852, 14);
-            this.txtDeliveryPrice.Name = "txtDeliveryPrice";
-            this.txtDeliveryPrice.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.txtDeliveryPrice.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.txtDeliveryPrice.Properties.Appearance.Options.UseBackColor = true;
-            this.txtDeliveryPrice.Properties.Appearance.Options.UseForeColor = true;
-            this.txtDeliveryPrice.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtDeliveryPrice.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtDeliveryPrice.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.txtDeliveryPrice.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtDeliveryPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtDeliveryPrice.Properties.EditFormat.FormatString = "###,###,##0";
-            this.txtDeliveryPrice.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtDeliveryPrice.Properties.ReadOnly = true;
-            this.txtDeliveryPrice.RequireMessage = null;
-            this.txtDeliveryPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtDeliveryPrice.Size = new System.Drawing.Size(100, 18);
-            this.txtDeliveryPrice.TabIndex = 19;
-            // 
-            // efwLabel7
-            // 
-            this.efwLabel7.EraserGroup = null;
-            this.efwLabel7.IsMultiLang = false;
-            this.efwLabel7.Location = new System.Drawing.Point(794, 17);
-            this.efwLabel7.Name = "efwLabel7";
-            this.efwLabel7.Size = new System.Drawing.Size(44, 14);
-            this.efwLabel7.TabIndex = 15;
-            this.efwLabel7.Text = "전월 잔액";
             // 
             // efwLabel4
             // 
@@ -219,6 +187,7 @@
             this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
+            this.efwGridControl1.IsEditable = false;
             this.efwGridControl1.IsMultiLang = false;
             this.efwGridControl1.Location = new System.Drawing.Point(3, 85);
             this.efwGridControl1.MainView = this.gridView1;
@@ -262,16 +231,20 @@
             // gridColumn18
             // 
             this.gridColumn18.Caption = "출고일";
+            this.gridColumn18.FieldName = "o_delivery_start_date";
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 3;
+            this.gridColumn18.VisibleIndex = 0;
+            this.gridColumn18.Width = 90;
             // 
             // gridColumn19
             // 
             this.gridColumn19.Caption = "입금일";
+            this.gridColumn19.FieldName = "o_deposit_confirm_date";
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 4;
+            this.gridColumn19.VisibleIndex = 1;
+            this.gridColumn19.Width = 90;
             // 
             // gridColumn1
             // 
@@ -280,7 +253,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.VisibleIndex = 2;
             this.gridColumn1.Width = 130;
             // 
             // gridColumn2
@@ -290,7 +263,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 3;
             this.gridColumn2.Width = 100;
             // 
             // gridColumn5
@@ -300,19 +273,22 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 2;
+            this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 160;
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "option_name";
+            this.gridColumn3.Caption = "옵션명";
+            this.gridColumn3.FieldName = "option_name";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 5;
+            this.gridColumn3.Width = 250;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "주문상태";
+            this.gridColumn4.FieldName = "o_type";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 6;
@@ -320,6 +296,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "주문일";
+            this.gridColumn6.FieldName = "o_date";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
@@ -327,6 +304,9 @@
             // gridColumn7
             // 
             this.gridColumn7.Caption = "수량";
+            this.gridColumn7.DisplayFormat.FormatString = "###,##,##0";
+            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn7.FieldName = "p_num";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 8;
@@ -334,6 +314,9 @@
             // gridColumn8
             // 
             this.gridColumn8.Caption = "배송비";
+            this.gridColumn8.DisplayFormat.FormatString = "###,##,##0";
+            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn8.FieldName = "c_delivery_price";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 9;
@@ -341,6 +324,9 @@
             // gridColumn9
             // 
             this.gridColumn9.Caption = "확정단가";
+            this.gridColumn9.DisplayFormat.FormatString = "###,##,##0";
+            this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn9.FieldName = "c_price";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 10;
@@ -348,6 +334,9 @@
             // gridColumn10
             // 
             this.gridColumn10.Caption = "확정금액";
+            this.gridColumn10.DisplayFormat.FormatString = "###,##,##0";
+            this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn10.FieldName = "c_amt";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 11;
@@ -355,9 +344,44 @@
             // gridColumn11
             // 
             this.gridColumn11.Caption = "총금액";
+            this.gridColumn11.DisplayFormat.FormatString = "###,##,##0";
+            this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn11.FieldName = "tot_amt";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 12;
+            // 
+            // txtConfirmAmt
+            // 
+            this.txtConfirmAmt.EditValue2 = null;
+            this.txtConfirmAmt.Location = new System.Drawing.Point(824, 15);
+            this.txtConfirmAmt.Name = "txtConfirmAmt";
+            this.txtConfirmAmt.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.txtConfirmAmt.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.txtConfirmAmt.Properties.Appearance.Options.UseBackColor = true;
+            this.txtConfirmAmt.Properties.Appearance.Options.UseForeColor = true;
+            this.txtConfirmAmt.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtConfirmAmt.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtConfirmAmt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.txtConfirmAmt.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtConfirmAmt.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtConfirmAmt.Properties.EditFormat.FormatString = "###,###,##0";
+            this.txtConfirmAmt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtConfirmAmt.Properties.ReadOnly = true;
+            this.txtConfirmAmt.RequireMessage = null;
+            this.txtConfirmAmt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtConfirmAmt.Size = new System.Drawing.Size(110, 18);
+            this.txtConfirmAmt.TabIndex = 22;
+            // 
+            // efwLabel6
+            // 
+            this.efwLabel6.EraserGroup = null;
+            this.efwLabel6.IsMultiLang = false;
+            this.efwLabel6.Location = new System.Drawing.Point(753, 17);
+            this.efwLabel6.Name = "efwLabel6";
+            this.efwLabel6.Size = new System.Drawing.Size(54, 14);
+            this.efwLabel6.TabIndex = 21;
+            this.efwLabel6.Text = "미지급 금액";
             // 
             // frmSCM06
             // 
@@ -372,7 +396,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ewfPanel)).EndInit();
             this.ewfPanel.ResumeLayout(false);
             this.ewfPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDeliveryPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
@@ -380,6 +403,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbSellers.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtConfirmAmt.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,8 +411,6 @@
         #endregion
 
         private Easy.Framework.WinForm.Control.efwPanelControl ewfPanel;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtDeliveryPrice;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel7;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
         private Easy.Framework.WinForm.Control.efwDateEdit dtE_DATE;
@@ -410,5 +432,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtConfirmAmt;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
     }
 }

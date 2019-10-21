@@ -58,7 +58,8 @@ namespace YL_SCM.BizFrm
 
                 repositoryItemLookUpEdit1.EndUpdate();
             }
-
+            dtS_DATE.EditValue = DateTime.Now;
+            dtE_DATE.EditValue = DateTime.Now;
             SetCmb();
         }
 

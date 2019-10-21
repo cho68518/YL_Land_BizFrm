@@ -60,7 +60,8 @@ namespace YL_SCM.BizFrm
             gridView1.Columns["c_amt"].SummaryItem.FieldName = "c_amt";
             gridView1.Columns["c_amt"].SummaryItem.DisplayFormat = "{0:c}";
             cmbSellers.EditValue = "N";
-
+            dtS_DATE.EditValue = DateTime.Now;
+            dtE_DATE.EditValue = DateTime.Now;
             SetCmb();
         }
         private void SetCmb()

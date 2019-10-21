@@ -664,5 +664,51 @@ namespace YL_GSHOP.BizFrm
                 Search();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (UserInfo.instance().UserId != "0000000029" && UserInfo.instance().UserId != "0000000012" && UserInfo.instance().UserId != "0000000013" && UserInfo.instance().UserId != "0000000024" )
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "삭제할 권한이 없습니다 IT 사업부에 문의하세요!");
+                return;
+            }
+
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "(주의) 삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP04_DELETE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gshop_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_gshop_id"].Value = Convert.ToInt32(txtGSHOP_ID.EditValue);
+                            cmd.Parameters["i_gshop_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_id"].Value = txtU_ID.EditValue;
+                            cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+                Open1();
+            }
+        }
     }
 }

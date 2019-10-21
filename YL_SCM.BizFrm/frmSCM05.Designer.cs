@@ -34,6 +34,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSCM05));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.ewfPanel = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.txtOutQty = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtConfirmAmt = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -68,6 +70,7 @@
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.efwComboBox1 = new Easy.Framework.WinForm.Control.efwComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ewfPanel)).BeginInit();
             this.ewfPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtOutQty.Properties)).BeginInit();
@@ -108,12 +111,11 @@
             // txtOutQty
             // 
             this.txtOutQty.EditValue2 = null;
-            this.txtOutQty.EraserGroup = "CLR1";
-            this.txtOutQty.Location = new System.Drawing.Point(668, 15);
+            this.txtOutQty.Location = new System.Drawing.Point(668, 14);
             this.txtOutQty.Name = "txtOutQty";
-            this.txtOutQty.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.txtOutQty.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.txtOutQty.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
-            this.txtOutQty.Properties.Appearance.Options.UseFont = true;
+            this.txtOutQty.Properties.Appearance.Options.UseBackColor = true;
             this.txtOutQty.Properties.Appearance.Options.UseForeColor = true;
             this.txtOutQty.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtOutQty.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -565,16 +567,35 @@
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 16;
             // 
+            // efwComboBox1
+            // 
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.efwComboBox1.ChildHierarchyInfo = childHierarchy2;
+            this.efwComboBox1.EditValue = null;
+            this.efwComboBox1.FormattingEnabled = true;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.efwComboBox1.HierarchyInfo = hierarchy2;
+            this.efwComboBox1.IsMultiLang = false;
+            this.efwComboBox1.Location = new System.Drawing.Point(519, 321);
+            this.efwComboBox1.Name = "efwComboBox1";
+            this.efwComboBox1.Size = new System.Drawing.Size(121, 22);
+            this.efwComboBox1.TabIndex = 7;
+            // 
             // frmSCM05
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.efwComboBox1);
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.ewfPanel);
             this.Name = "frmSCM05";
             this.Size = new System.Drawing.Size(1056, 569);
             this.Controls.SetChildIndex(this.ewfPanel, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
+            this.Controls.SetChildIndex(this.efwComboBox1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ewfPanel)).EndInit();
             this.ewfPanel.ResumeLayout(false);
             this.ewfPanel.PerformLayout();
@@ -627,7 +648,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtOutQty;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOutQty;
+        private Easy.Framework.WinForm.Control.efwComboBox efwComboBox1;
     }
 }
