@@ -485,8 +485,6 @@
             this.gridColumn17.Caption = "id";
             this.gridColumn17.FieldName = "id";
             this.gridColumn17.Name = "gridColumn17";
-            this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 16;
             // 
             // frmSCM03
             // 

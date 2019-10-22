@@ -212,7 +212,7 @@ namespace YL_SCM.BizFrm
             }
             popup = new frmSCM03_Pop01();
 
-            popup.pOrderNo =Convert.ToInt32(txtOrderNo.EditValue);
+            popup.pOrderNo = Convert.ToInt32(txtOrderNo.EditValue);
 
             popup.ShowDialog();
         }
