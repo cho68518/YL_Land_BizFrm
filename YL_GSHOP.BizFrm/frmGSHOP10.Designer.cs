@@ -150,6 +150,8 @@
             this.cmbEvent = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.txtProdNameQ = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtIssue = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).BeginInit();
             this.efwXtraTabControl1.SuspendLayout();
             this.xtraTabPage2.SuspendLayout();
@@ -199,6 +201,7 @@
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEvent.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProdNameQ.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIssue.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwXtraTabControl1
@@ -208,7 +211,7 @@
             this.efwXtraTabControl1.Location = new System.Drawing.Point(3, 35);
             this.efwXtraTabControl1.Name = "efwXtraTabControl1";
             this.efwXtraTabControl1.SelectedTabPage = this.xtraTabPage2;
-            this.efwXtraTabControl1.Size = new System.Drawing.Size(1105, 639);
+            this.efwXtraTabControl1.Size = new System.Drawing.Size(1288, 639);
             this.efwXtraTabControl1.TabIndex = 2;
             this.efwXtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -1214,7 +1217,7 @@
             // 
             this.xtraTabPage1.Controls.Add(this.efwGroupControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1099, 610);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1282, 610);
             this.xtraTabPage1.Text = "이벤트 발주등록";
             // 
             // efwGroupControl1
@@ -1226,7 +1229,7 @@
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(0, 0);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(1099, 610);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1282, 610);
             this.efwGroupControl1.TabIndex = 0;
             this.efwGroupControl1.Text = "이벤트 목록";
             // 
@@ -1256,7 +1259,7 @@
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.Size = new System.Drawing.Size(1095, 547);
+            this.efwGridControl1.Size = new System.Drawing.Size(1278, 547);
             this.efwGridControl1.TabIndex = 2;
             this.efwGridControl1.TableName = "";
             serviceInfo9.InstanceName = "";
@@ -1462,6 +1465,8 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.txtIssue);
+            this.efwPanelControl1.Controls.Add(this.label1);
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
             this.efwPanelControl1.Controls.Add(this.cmbEvent);
             this.efwPanelControl1.Controls.Add(this.txtProdNameQ);
@@ -1469,7 +1474,7 @@
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(2, 23);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1095, 38);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1278, 38);
             this.efwPanelControl1.TabIndex = 1;
             // 
             // efwLabel1
@@ -1498,6 +1503,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbEvent.Size = new System.Drawing.Size(357, 20);
             this.cmbEvent.TabIndex = 51;
+            this.cmbEvent.EditValueChanged += new System.EventHandler(this.cmbEvent_EditValueChanged);
             // 
             // txtProdNameQ
             // 
@@ -1521,13 +1527,34 @@
             this.efwLabel3.TabIndex = 44;
             this.efwLabel3.Text = "상호명";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(724, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 14);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "특이사항";
+            // 
+            // txtIssue
+            // 
+            this.txtIssue.EditValue2 = null;
+            this.txtIssue.Location = new System.Drawing.Point(777, 9);
+            this.txtIssue.Name = "txtIssue";
+            this.txtIssue.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtIssue.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtIssue.Properties.ReadOnly = true;
+            this.txtIssue.RequireMessage = null;
+            this.txtIssue.Size = new System.Drawing.Size(496, 20);
+            this.txtIssue.TabIndex = 54;
+            // 
             // frmGSHOP10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.efwXtraTabControl1);
             this.Name = "frmGSHOP10";
-            this.Size = new System.Drawing.Size(1111, 674);
+            this.Size = new System.Drawing.Size(1294, 674);
             this.Controls.SetChildIndex(this.efwXtraTabControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).EndInit();
             this.efwXtraTabControl1.ResumeLayout(false);
@@ -1582,6 +1609,7 @@
             this.efwPanelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEvent.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProdNameQ.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIssue.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1696,5 +1724,7 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbDelivery_Company;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtIssue;
+        private System.Windows.Forms.Label label1;
     }
 }

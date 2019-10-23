@@ -651,6 +651,16 @@ namespace YL_GSHOP.BizFrm
                 Open2();
         }
 
+        private void cmbEvent_EditValueChanged(object sender, EventArgs e)
+        {
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = "SELECT code_val1 as u_name FROM domaadmin.tb_common_code " +
+                             "WHERE gcode_id = '00010' and code_id = " + cmbEvent.EditValue;
+                DataSet ds = sql.selectQueryDataSet();
 
+                txtIssue.EditValue = sql.selectQueryForSingleValue();
+            }
+        }
     }
 }
