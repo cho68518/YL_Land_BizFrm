@@ -391,6 +391,7 @@
             this.gridColumn23});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -856,6 +857,7 @@
             this.txtCEO_NAME.Properties.Appearance.Options.UseBackColor = true;
             this.txtCEO_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtCEO_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtCEO_NAME.Properties.ReadOnly = true;
             this.txtCEO_NAME.RequireMessage = null;
             this.txtCEO_NAME.Size = new System.Drawing.Size(216, 20);
             this.txtCEO_NAME.StyleController = this.layoutControl4;
@@ -870,6 +872,7 @@
             this.txtHP_NO.Name = "txtHP_NO";
             this.txtHP_NO.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtHP_NO.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtHP_NO.Properties.ReadOnly = true;
             this.txtHP_NO.RequireMessage = null;
             this.txtHP_NO.Size = new System.Drawing.Size(216, 20);
             this.txtHP_NO.StyleController = this.layoutControl4;
@@ -902,6 +905,7 @@
             this.txtREGISTER_NO.Properties.Appearance.Options.UseBackColor = true;
             this.txtREGISTER_NO.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtREGISTER_NO.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtREGISTER_NO.Properties.ReadOnly = true;
             this.txtREGISTER_NO.RequireMessage = null;
             this.txtREGISTER_NO.Size = new System.Drawing.Size(216, 20);
             this.txtREGISTER_NO.StyleController = this.layoutControl4;
@@ -917,6 +921,7 @@
             this.txtU_NICKNAME.Properties.Appearance.Options.UseBackColor = true;
             this.txtU_NICKNAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtU_NICKNAME.Properties.ReadOnly = true;
             this.txtU_NICKNAME.RequireMessage = null;
             this.txtU_NICKNAME.Size = new System.Drawing.Size(216, 20);
             this.txtU_NICKNAME.StyleController = this.layoutControl4;
@@ -932,6 +937,7 @@
             this.txtEMAIL.Properties.Appearance.Options.UseBackColor = true;
             this.txtEMAIL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtEMAIL.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtEMAIL.Properties.ReadOnly = true;
             this.txtEMAIL.RequireMessage = null;
             this.txtEMAIL.Size = new System.Drawing.Size(216, 20);
             this.txtEMAIL.StyleController = this.layoutControl4;
@@ -947,6 +953,7 @@
             this.txtTEL_NO.Properties.Appearance.Options.UseBackColor = true;
             this.txtTEL_NO.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtTEL_NO.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTEL_NO.Properties.ReadOnly = true;
             this.txtTEL_NO.RequireMessage = null;
             this.txtTEL_NO.Size = new System.Drawing.Size(216, 20);
             this.txtTEL_NO.StyleController = this.layoutControl4;
@@ -980,6 +987,7 @@
             this.btnPOST_NO.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.btnPOST_NO.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.btnPOST_NO.Properties.ReadOnly = true;
             this.btnPOST_NO.Size = new System.Drawing.Size(101, 20);
             this.btnPOST_NO.StyleController = this.layoutControl4;
             this.btnPOST_NO.TabIndex = 0;
@@ -994,6 +1002,7 @@
             this.txtADDRESS1.Name = "txtADDRESS1";
             this.txtADDRESS1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtADDRESS1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtADDRESS1.Properties.ReadOnly = true;
             this.txtADDRESS1.RequireMessage = null;
             this.txtADDRESS1.Size = new System.Drawing.Size(418, 20);
             this.txtADDRESS1.StyleController = this.layoutControl4;
@@ -1008,6 +1017,7 @@
             this.txtADDRESS2.Name = "txtADDRESS2";
             this.txtADDRESS2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtADDRESS2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtADDRESS2.Properties.ReadOnly = true;
             this.txtADDRESS2.RequireMessage = null;
             this.txtADDRESS2.Size = new System.Drawing.Size(418, 20);
             this.txtADDRESS2.StyleController = this.layoutControl4;
@@ -1030,9 +1040,11 @@
             this.cmbTAREA1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbTAREA1.Properties.NullText = "전국";
+            this.cmbTAREA1.Properties.ReadOnly = true;
             this.cmbTAREA1.Size = new System.Drawing.Size(166, 20);
             this.cmbTAREA1.StyleController = this.layoutControl4;
             this.cmbTAREA1.TabIndex = 4;
+            this.cmbTAREA1.EditValueChanged += new System.EventHandler(this.CmbTAREA1_EditValueChanged);
             // 
             // cmbSAREA1
             // 
@@ -1052,6 +1064,7 @@
             this.cmbSAREA1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbSAREA1.Properties.NullText = "시/구/군";
+            this.cmbSAREA1.Properties.ReadOnly = true;
             this.cmbSAREA1.Size = new System.Drawing.Size(248, 20);
             this.cmbSAREA1.StyleController = this.layoutControl4;
             this.cmbSAREA1.TabIndex = 48;
@@ -1065,6 +1078,7 @@
             this.txtRECOMM_NM.Name = "txtRECOMM_NM";
             this.txtRECOMM_NM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtRECOMM_NM.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRECOMM_NM.Properties.ReadOnly = true;
             this.txtRECOMM_NM.RequireMessage = null;
             this.txtRECOMM_NM.Size = new System.Drawing.Size(136, 20);
             this.txtRECOMM_NM.StyleController = this.layoutControl4;
@@ -1079,6 +1093,7 @@
             this.txtRECOMM_U_ID.Name = "txtRECOMM_U_ID";
             this.txtRECOMM_U_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtRECOMM_U_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRECOMM_U_ID.Properties.ReadOnly = true;
             this.txtRECOMM_U_ID.RequireMessage = null;
             this.txtRECOMM_U_ID.Size = new System.Drawing.Size(388, 20);
             this.txtRECOMM_U_ID.StyleController = this.layoutControl4;

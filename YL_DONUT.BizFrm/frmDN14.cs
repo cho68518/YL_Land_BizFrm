@@ -93,6 +93,7 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("c_code2", txtC_Code2)
                     , new ColumnControlSet("c_code3", txtC_Code3)
                     , new ColumnControlSet("c_code4", txtC_Code4)
+                    , new ColumnControlSet("gshop_price", txtGSHOP_PRICE)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -383,6 +384,10 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_cate_code4", MySqlDbType.VarChar));
                             cmd.Parameters["i_cate_code4"].Value = cmbCate_Code4.EditValue;
                             cmd.Parameters["i_cate_code4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gshop_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_gshop_price"].Value = Convert.ToInt32(txtGSHOP_PRICE.EditValue);
+                            cmd.Parameters["i_gshop_price"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

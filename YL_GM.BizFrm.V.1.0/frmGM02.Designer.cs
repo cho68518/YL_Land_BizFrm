@@ -47,6 +47,8 @@
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.rbYrarType = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.splitterControl2 = new DevExpress.XtraEditors.SplitterControl();
@@ -76,12 +78,14 @@
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.panelTop = new System.Windows.Forms.Panel();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
@@ -114,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -226,6 +231,7 @@
             this.efwGridControl2.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            this.efwGridControl2.DoubleClick += new System.EventHandler(this.efwGridControl2_DoubleClick);
             // 
             // gridView2
             // 
@@ -233,7 +239,9 @@
             this.gridView2.Appearance.FooterPanel.Options.UseForeColor = true;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn19,
-            this.gridColumn35});
+            this.gridColumn35,
+            this.gridColumn20,
+            this.gridColumn21});
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ColumnAutoWidth = false;
@@ -257,6 +265,18 @@
             this.gridColumn35.Visible = true;
             this.gridColumn35.VisibleIndex = 1;
             this.gridColumn35.Width = 80;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.Caption = "u_id";
+            this.gridColumn20.FieldName = "u_id2";
+            this.gridColumn20.Name = "gridColumn20";
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "u_name";
+            this.gridColumn21.FieldName = "u_name2";
+            this.gridColumn21.Name = "gridColumn21";
             // 
             // efwPanelControl2
             // 
@@ -588,6 +608,7 @@
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.efwLabel1);
             this.layoutControl2.Controls.Add(this.splitterControl1);
             this.layoutControl2.Controls.Add(this.dtS_DATE);
             this.layoutControl2.Location = new System.Drawing.Point(3, 3);
@@ -596,6 +617,19 @@
             this.layoutControl2.Size = new System.Drawing.Size(1199, 43);
             this.layoutControl2.TabIndex = 1;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // efwLabel1
+            // 
+            this.efwLabel1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.efwLabel1.Appearance.Options.UseForeColor = true;
+            this.efwLabel1.EraserGroup = null;
+            this.efwLabel1.IsMultiLang = false;
+            this.efwLabel1.Location = new System.Drawing.Point(274, 7);
+            this.efwLabel1.Name = "efwLabel1";
+            this.efwLabel1.Size = new System.Drawing.Size(245, 14);
+            this.efwLabel1.StyleController = this.layoutControl2;
+            this.efwLabel1.TabIndex = 40;
+            this.efwLabel1.Text = "담당 MD를 더블클릭 하시면 상세 내역이 조회됩니다.";
             // 
             // splitterControl1
             // 
@@ -634,7 +668,8 @@
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem29,
             this.emptySpaceItem1,
-            this.emptySpaceItem2});
+            this.emptySpaceItem2,
+            this.layoutControlItem1});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
             this.layoutControlGroup2.Size = new System.Drawing.Size(1199, 43);
@@ -658,9 +693,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(370, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(516, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(819, 36);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(673, 36);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -668,8 +703,17 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(165, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(205, 36);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(102, 36);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.efwLabel1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(267, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(249, 36);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
             // frmGM02
             // 
@@ -711,6 +755,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -762,5 +807,9 @@
         private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl2;
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
         private DevExpress.XtraCharts.ChartControl chartControl2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

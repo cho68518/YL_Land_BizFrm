@@ -251,6 +251,26 @@ namespace YL_GM.BizFrm
             popup.ShowDialog();
         }
 
+        private void efwGridControl2_DoubleClick(object sender, EventArgs e)
+        {
+
+            popup = new frmGM02_03_Pop01();
+
+
+            DataRow row = gridView2.GetDataRow(gridView2.GetSelectedRows()[0]);
+
+            popup.pU_ID = gridView2.GetFocusedRowCellValue("u_id2").ToString();
+            popup.pYEAR = dtS_DATE.EditValue3.Substring(0, 4);
+            popup.pQTYPE = "GM02";
+
+            popup.pQ1 = gridView2.GetFocusedRowCellValue("u_name2").ToString();
+            popup.pQ2 = gridView2.GetFocusedRowCellValue("u_nickname").ToString();
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+
         private void popup_FormClosed(object sender, FormClosedEventArgs e)
         {
             popup.FormClosed -= popup_FormClosed;

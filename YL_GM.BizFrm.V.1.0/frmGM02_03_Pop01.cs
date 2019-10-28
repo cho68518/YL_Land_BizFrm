@@ -56,7 +56,7 @@ namespace YL_GM.BizFrm
                     , new ColumnControlSet("tel_no", txtTEL_NO)
                     , new ColumnControlSet("post_no", btnPOST_NO)
                     , new ColumnControlSet("road_addr", txtADDRESS1)
-                    //, new ColumnControlSet("jibun_addr", txtADDRESS2)
+                  //  , new ColumnControlSet("road_addr2", txtADDRESS2)
                     , new ColumnControlSet("sido_code", cmbTAREA1)
                     , new ColumnControlSet("gugun_code", cmbSAREA1)
                     , new ColumnControlSet("recomm_nicknm", txtRECOMM_NM)
@@ -70,12 +70,17 @@ namespace YL_GM.BizFrm
             Open();
         }
         #endregion
-
-
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+            btnPOST_NO.EditValue = "";
+            if (dr != null && dr["post_no"].ToString() != "")
+            {
+                this.btnPOST_NO.EditValue2 = dr["post_no"].ToString();
+                this.btnPOST_NO.Text = dr["post_no"].ToString();
+            }
         }
+
 
         private void SetCmb()
         {
@@ -99,6 +104,44 @@ namespace YL_GM.BizFrm
 
             }
         }
+
+        private void CmbTAREA1_EditValueChanged(object sender, EventArgs e)
+        {
+            string sCSIDO = cmbTAREA1.EditValue.ToString();
+
+            if (string.IsNullOrEmpty(this.cmbTAREA1.EditValue.ToString()))
+            {
+                return;
+            }
+
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                //con.Query = "select DCODE, DNAME from ( select gugun as DCODE, concat(gugun_nm, IFNULL((select '   ( 선점 )' from domabiz.md_place where sido = a.sido and gugun = a.gugun), '')) as DNAME from domabiz.place_master a  where sido = " + sCSIDO + "  ) AS t1 group by dcode, dname ";
+                con.Query = "select DCODE, DNAME from " +
+                            " ( select gugun as DCODE, " +
+                            "          concat(gugun_nm, IFNULL((select '   ( 선점 )' from domabiz.md_place where sido = a.sido and gugun = a.gugun), '')) as DNAME " +
+                            "     from domabiz.place_master a  " +
+                            "    where sido = " + sCSIDO + "  ) AS t1 " +
+                            "group by dcode, dname ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbSAREA1, codeArray);
+
+            }
+        }
+
+
         private void Open()
         {
             try

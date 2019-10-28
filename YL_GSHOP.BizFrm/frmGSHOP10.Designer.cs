@@ -146,12 +146,12 @@
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.txtIssue = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.label1 = new System.Windows.Forms.Label();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cmbEvent = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.txtProdNameQ = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIssue = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).BeginInit();
             this.efwXtraTabControl1.SuspendLayout();
             this.xtraTabPage2.SuspendLayout();
@@ -199,9 +199,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIssue.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEvent.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProdNameQ.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIssue.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwXtraTabControl1
@@ -225,7 +225,7 @@
             this.xtraTabPage2.Controls.Add(this.splitterControl4);
             this.xtraTabPage2.Controls.Add(this.efwGroupControl5);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1099, 610);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1282, 610);
             this.xtraTabPage2.Text = "발주 현황";
             // 
             // efwGroupControl7
@@ -251,7 +251,7 @@
             this.efwGroupControl7.IsMultiLang = false;
             this.efwGroupControl7.Location = new System.Drawing.Point(574, 421);
             this.efwGroupControl7.Name = "efwGroupControl7";
-            this.efwGroupControl7.Size = new System.Drawing.Size(525, 189);
+            this.efwGroupControl7.Size = new System.Drawing.Size(708, 189);
             this.efwGroupControl7.TabIndex = 10;
             this.efwGroupControl7.Text = "발주등록";
             // 
@@ -822,7 +822,7 @@
             this.splitterControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitterControl4.Location = new System.Drawing.Point(0, 416);
             this.splitterControl4.Name = "splitterControl4";
-            this.splitterControl4.Size = new System.Drawing.Size(1099, 5);
+            this.splitterControl4.Size = new System.Drawing.Size(1282, 5);
             this.splitterControl4.TabIndex = 7;
             this.splitterControl4.TabStop = false;
             // 
@@ -835,7 +835,7 @@
             this.efwGroupControl5.IsMultiLang = false;
             this.efwGroupControl5.Location = new System.Drawing.Point(0, 0);
             this.efwGroupControl5.Name = "efwGroupControl5";
-            this.efwGroupControl5.Size = new System.Drawing.Size(1099, 416);
+            this.efwGroupControl5.Size = new System.Drawing.Size(1282, 416);
             this.efwGroupControl5.TabIndex = 6;
             this.efwGroupControl5.Text = "발주 목록";
             // 
@@ -865,7 +865,7 @@
             this.efwGridControl2.NowRowHandle = 0;
             this.efwGridControl2.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl2.PKColumns")));
             this.efwGridControl2.PrevRowHandle = -2147483648;
-            this.efwGridControl2.Size = new System.Drawing.Size(1095, 353);
+            this.efwGridControl2.Size = new System.Drawing.Size(1278, 353);
             this.efwGridControl2.TabIndex = 6;
             this.efwGridControl2.TableName = "";
             serviceInfo6.InstanceName = "";
@@ -1123,7 +1123,7 @@
             this.efwPanelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl4.Location = new System.Drawing.Point(2, 23);
             this.efwPanelControl4.Name = "efwPanelControl4";
-            this.efwPanelControl4.Size = new System.Drawing.Size(1095, 38);
+            this.efwPanelControl4.Size = new System.Drawing.Size(1278, 38);
             this.efwPanelControl4.TabIndex = 4;
             // 
             // btnOrder_Query
@@ -1444,6 +1444,8 @@
             this.gridColumn16.Caption = "샵아이디";
             this.gridColumn16.FieldName = "gshop_id";
             this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.Visible = true;
+            this.gridColumn16.VisibleIndex = 14;
             // 
             // gridColumn17
             // 
@@ -1476,6 +1478,27 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1278, 38);
             this.efwPanelControl1.TabIndex = 1;
+            // 
+            // txtIssue
+            // 
+            this.txtIssue.EditValue2 = null;
+            this.txtIssue.Location = new System.Drawing.Point(777, 9);
+            this.txtIssue.Name = "txtIssue";
+            this.txtIssue.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtIssue.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtIssue.Properties.ReadOnly = true;
+            this.txtIssue.RequireMessage = null;
+            this.txtIssue.Size = new System.Drawing.Size(496, 20);
+            this.txtIssue.TabIndex = 54;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(724, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 14);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "특이사항";
             // 
             // efwLabel1
             // 
@@ -1526,27 +1549,6 @@
             this.efwLabel3.Size = new System.Drawing.Size(30, 14);
             this.efwLabel3.TabIndex = 44;
             this.efwLabel3.Text = "상호명";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(724, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 14);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "특이사항";
-            // 
-            // txtIssue
-            // 
-            this.txtIssue.EditValue2 = null;
-            this.txtIssue.Location = new System.Drawing.Point(777, 9);
-            this.txtIssue.Name = "txtIssue";
-            this.txtIssue.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtIssue.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtIssue.Properties.ReadOnly = true;
-            this.txtIssue.RequireMessage = null;
-            this.txtIssue.Size = new System.Drawing.Size(496, 20);
-            this.txtIssue.TabIndex = 54;
             // 
             // frmGSHOP10
             // 
@@ -1607,9 +1609,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIssue.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEvent.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProdNameQ.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIssue.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

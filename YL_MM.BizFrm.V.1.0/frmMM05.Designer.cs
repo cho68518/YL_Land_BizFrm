@@ -1354,15 +1354,17 @@
             // 
             // chkIS_GR_MD
             // 
+            this.chkIS_GR_MD.Enabled = false;
             this.chkIS_GR_MD.EraserGroup = "CLR1";
-            this.chkIS_GR_MD.Location = new System.Drawing.Point(417, 182);
+            this.chkIS_GR_MD.Location = new System.Drawing.Point(482, 205);
             this.chkIS_GR_MD.Name = "chkIS_GR_MD";
             this.chkIS_GR_MD.Properties.Caption = "그룹MD";
             this.chkIS_GR_MD.Properties.ValueChecked = "Y";
             this.chkIS_GR_MD.Properties.ValueUnchecked = "N";
-            this.chkIS_GR_MD.Size = new System.Drawing.Size(61, 19);
+            this.chkIS_GR_MD.Size = new System.Drawing.Size(73, 19);
             this.chkIS_GR_MD.StyleController = this.layoutControl1;
             this.chkIS_GR_MD.TabIndex = 24;
+            this.chkIS_GR_MD.Visible = false;
             // 
             // txtD
             // 
@@ -1480,26 +1482,28 @@
             // chkIS_BIZ
             // 
             this.chkIS_BIZ.EraserGroup = "CLR1";
-            this.chkIS_BIZ.Location = new System.Drawing.Point(546, 182);
+            this.chkIS_BIZ.Location = new System.Drawing.Point(417, 182);
             this.chkIS_BIZ.Name = "chkIS_BIZ";
             this.chkIS_BIZ.Properties.Caption = "미용실(G샵)";
+            this.chkIS_BIZ.Properties.ReadOnly = true;
             this.chkIS_BIZ.Properties.ValueChecked = "Y";
             this.chkIS_BIZ.Properties.ValueUnchecked = "N";
-            this.chkIS_BIZ.Size = new System.Drawing.Size(87, 19);
+            this.chkIS_BIZ.Size = new System.Drawing.Size(216, 19);
             this.chkIS_BIZ.StyleController = this.layoutControl1;
             this.chkIS_BIZ.TabIndex = 16;
             // 
             // chkIS_DORAMD
             // 
             this.chkIS_DORAMD.EraserGroup = "CLR1";
-            this.chkIS_DORAMD.Location = new System.Drawing.Point(482, 182);
+            this.chkIS_DORAMD.Location = new System.Drawing.Point(559, 205);
             this.chkIS_DORAMD.Name = "chkIS_DORAMD";
             this.chkIS_DORAMD.Properties.Caption = "도라MD";
             this.chkIS_DORAMD.Properties.ValueChecked = "Y";
             this.chkIS_DORAMD.Properties.ValueUnchecked = "N";
-            this.chkIS_DORAMD.Size = new System.Drawing.Size(60, 19);
+            this.chkIS_DORAMD.Size = new System.Drawing.Size(59, 19);
             this.chkIS_DORAMD.StyleController = this.layoutControl1;
             this.chkIS_DORAMD.TabIndex = 15;
+            this.chkIS_DORAMD.Visible = false;
             // 
             // txtU_ID
             // 
@@ -1559,6 +1563,7 @@
             this.chkIS_STOCK_FRIEND.Location = new System.Drawing.Point(370, 182);
             this.chkIS_STOCK_FRIEND.Name = "chkIS_STOCK_FRIEND";
             this.chkIS_STOCK_FRIEND.Properties.Caption = "주주";
+            this.chkIS_STOCK_FRIEND.Properties.ReadOnly = true;
             this.chkIS_STOCK_FRIEND.Properties.ValueChecked = "Y";
             this.chkIS_STOCK_FRIEND.Properties.ValueUnchecked = "N";
             this.chkIS_STOCK_FRIEND.Size = new System.Drawing.Size(43, 19);
@@ -1571,6 +1576,7 @@
             this.chkIS_AL_FRIEND.Location = new System.Drawing.Point(313, 182);
             this.chkIS_AL_FRIEND.Name = "chkIS_AL_FRIEND";
             this.chkIS_AL_FRIEND.Properties.Caption = "알뜰폰";
+            this.chkIS_AL_FRIEND.Properties.ReadOnly = true;
             this.chkIS_AL_FRIEND.Properties.ValueChecked = "Y";
             this.chkIS_AL_FRIEND.Properties.ValueUnchecked = "N";
             this.chkIS_AL_FRIEND.Size = new System.Drawing.Size(53, 19);
@@ -1837,7 +1843,6 @@
             this.layoutControlItem7,
             this.layoutControlItem21,
             this.layoutControlItem11,
-            this.layoutControlItem30,
             this.layoutControlItem31,
             this.layoutControlItem34,
             this.layoutControlItem35,
@@ -1845,7 +1850,6 @@
             this.layoutControlItem37,
             this.layoutControlItem38,
             this.layoutControlItem39,
-            this.layoutControlItem40,
             this.layoutControlItem23,
             this.layoutControlItem41,
             this.layoutControlItem42,
@@ -1857,7 +1861,9 @@
             this.emptySpaceItem3,
             this.emptySpaceItem4,
             this.emptySpaceItem5,
-            this.layoutControlItem19});
+            this.layoutControlItem19,
+            this.layoutControlItem40,
+            this.layoutControlItem30});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 2, 2);
             this.layoutControlGroup1.Size = new System.Drawing.Size(815, 263);
@@ -2039,9 +2045,9 @@
             // layoutControlItem30
             // 
             this.layoutControlItem30.Control = this.chkIS_DORAMD;
-            this.layoutControlItem30.Location = new System.Drawing.Point(470, 178);
+            this.layoutControlItem30.Location = new System.Drawing.Point(547, 201);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(64, 23);
+            this.layoutControlItem30.Size = new System.Drawing.Size(63, 58);
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem30.TextVisible = false;
             this.layoutControlItem30.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
@@ -2049,9 +2055,9 @@
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.chkIS_BIZ;
-            this.layoutControlItem31.Location = new System.Drawing.Point(534, 178);
+            this.layoutControlItem31.Location = new System.Drawing.Point(405, 178);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(91, 23);
+            this.layoutControlItem31.Size = new System.Drawing.Size(220, 23);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextVisible = false;
             // 
@@ -2124,11 +2130,12 @@
             // layoutControlItem40
             // 
             this.layoutControlItem40.Control = this.chkIS_GR_MD;
-            this.layoutControlItem40.Location = new System.Drawing.Point(405, 178);
+            this.layoutControlItem40.Location = new System.Drawing.Point(470, 201);
             this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(65, 23);
+            this.layoutControlItem40.Size = new System.Drawing.Size(77, 58);
             this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem40.TextVisible = false;
+            this.layoutControlItem40.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem23
             // 
@@ -2182,9 +2189,9 @@
             // emptySpaceItem12
             // 
             this.emptySpaceItem12.AllowHotTrack = false;
-            this.emptySpaceItem12.Location = new System.Drawing.Point(470, 201);
+            this.emptySpaceItem12.Location = new System.Drawing.Point(610, 201);
             this.emptySpaceItem12.Name = "emptySpaceItem12";
-            this.emptySpaceItem12.Size = new System.Drawing.Size(155, 58);
+            this.emptySpaceItem12.Size = new System.Drawing.Size(15, 58);
             this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem43

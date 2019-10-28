@@ -83,7 +83,7 @@ namespace YL_GSHOP.BizFrm
                     , new ColumnControlSet("email", txtEMAIL)
                     , new ColumnControlSet("tel_no", txtTEL_NO)
                     , new ColumnControlSet("road_addr", txtADDRESS1)
-                    //, new ColumnControlSet("jibun_addr", txtADDRESS2)
+                    , new ColumnControlSet("road_addr2", txtADDRESS2)
                     , new ColumnControlSet("sido_code", cmbTAREA1)
                     , new ColumnControlSet("gugun_code", cmbSAREA1)
                     , new ColumnControlSet("recomm_nicknm", txtRECOMM_NM)
@@ -97,7 +97,7 @@ namespace YL_GSHOP.BizFrm
                    ); ;
 
             this.efwGridControl1.Click += efwGridControl1_Click;
-
+            cbCom.EditValue = "N";
             SetCmb();
         }
 
@@ -184,6 +184,7 @@ namespace YL_GSHOP.BizFrm
             try
             {
                 string sCOMFIRM = string.Empty;
+                string sCom = string.Empty;
                 //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
@@ -206,6 +207,9 @@ namespace YL_GSHOP.BizFrm
 
                         cmd.Parameters.Add("i_road_addr", MySqlDbType.VarChar, 50);
                         cmd.Parameters[4].Value = txtROAD_ADDR.EditValue;
+
+                        cmd.Parameters.Add("i_Com", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[5].Value = cbCom.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -710,5 +714,7 @@ namespace YL_GSHOP.BizFrm
                 Open1();
             }
         }
+
+
     }
 }
