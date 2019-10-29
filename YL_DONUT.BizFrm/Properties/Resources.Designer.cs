@@ -119,16 +119,15 @@ namespace YL_DONUT.BizFrm.Properties {
                 return ((byte[])(obj));
             }
         }
-
-        internal static byte[] 후기머니관리_UPDATE_sample
-        {
-            get
-            {
+        
+        /// <summary>
+        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static byte[] 후기머니관리_UPDATE_sample {
+            get {
                 object obj = ResourceManager.GetObject("후기머니관리_UPDATE_sample", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
-
     }
 }
