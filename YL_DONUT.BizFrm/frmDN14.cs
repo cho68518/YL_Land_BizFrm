@@ -77,7 +77,7 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("delivery_price", txtDELIVERY_PRICE)
                     , new ColumnControlSet("ps_donut01", txtPS_DONUT01)
                     , new ColumnControlSet("ps_donut02", txtPS_DONUT02)
-                    , new ColumnControlSet("vip_price", txtVIP_PRICE)
+                    , new ColumnControlSet("vip_price", txtCHEF_COMMISSION01)
                     , new ColumnControlSet("ps_price", txtPS_PRICE)
                     , new ColumnControlSet("ps_oper_price", txtPS_OPER_PRICE)
                     , new ColumnControlSet("chef_commission01", txtCHEF_COMMISSION01)
@@ -94,6 +94,8 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("c_code3", txtC_Code3)
                     , new ColumnControlSet("c_code4", txtC_Code4)
                     , new ColumnControlSet("gshop_price", txtGSHOP_PRICE)
+                    , new ColumnControlSet("ad_gs_cele_story", txtAD_GS_CELE_STORY)
+                    , new ColumnControlSet("ad_gr_cele_story", txtAD_GR_CELE_STORY)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -321,7 +323,7 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_ps_donut02"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_vip_price", MySqlDbType.Int32));
-                            cmd.Parameters["i_vip_price"].Value = Convert.ToInt32(txtVIP_PRICE.EditValue);
+                            cmd.Parameters["i_vip_price"].Value = Convert.ToInt32(txtCHEF_COMMISSION01.EditValue);
                             cmd.Parameters["i_vip_price"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_ps_price", MySqlDbType.Int32));
@@ -389,10 +391,19 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_gshop_price"].Value = Convert.ToInt32(txtGSHOP_PRICE.EditValue);
                             cmd.Parameters["i_gshop_price"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_ad_gs_cele_story", MySqlDbType.Int32));
+                            cmd.Parameters["i_ad_gs_cele_story"].Value = Convert.ToInt32(txtAD_GS_CELE_STORY.EditValue);
+                            cmd.Parameters["i_ad_gs_cele_story"].Direction = ParameterDirection.Input;
+                            
+                            cmd.Parameters.Add(new MySqlParameter("i_ad_gr_cele_story", MySqlDbType.Int32));
+                            cmd.Parameters["i_ad_gr_cele_story"].Value = Convert.ToInt32(txtAD_GR_CELE_STORY.EditValue);
+                            cmd.Parameters["i_ad_gr_cele_story"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
-                            
+
+
                             MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
                         }
                     }
@@ -740,7 +751,10 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

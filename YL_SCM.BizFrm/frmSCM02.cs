@@ -19,6 +19,9 @@ namespace YL_SCM.BizFrm
 {
     public partial class frmSCM02 : FrmBase
     {
+        Timer timer = new Timer();
+
+
         public frmSCM02()
         {
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace YL_SCM.BizFrm
             this.FrmName = "품목별 재고등록";
 
         }
+
 
         public override void FrmLoadEvent()
         {
@@ -45,10 +49,32 @@ namespace YL_SCM.BizFrm
 
             gridView1.OptionsView.ShowFooter = true;
             rbShowType.EditValue = "Y";
+
+
+            this.efwGridControl1.BindControlSet(
+              new ColumnControlSet("id", txtP_ID)
+            , new ColumnControlSet("option_id", txtOPTION_ID)
+            );
+            this.efwGridControl1.Click += efwGridControl1_Click;
+
+
             SetCmb();
+
+
         }
 
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
 
+            if (dr != null && dr["id"].ToString() != "")
+            {
+                this.txtP_ID.EditValue = dr["id"].ToString();
+                this.txtOPTION_ID.Text = dr["option_id"].ToString();
+            }
+
+            Open1();
+        }
         private void SetCmb()
         {
             // 공급자구분
@@ -73,6 +99,8 @@ namespace YL_SCM.BizFrm
             cmbSellers.EditValue = "1";
         }
 
+
+        
         public override void Search()
         {
             try
@@ -165,7 +193,7 @@ namespace YL_SCM.BizFrm
                                 cmd.Parameters.Add("i_p_input_due_date", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[4].Value = dt.Rows[i]["p_input_due_date"].ToString();
 
-                                                               
+
                                 cmd.Parameters.Add("i_p_input_due_qty", MySqlDbType.Int32, 10);
                                 cmd.Parameters[5].Value = Convert.ToInt32(dt.Rows[i]["p_input_due_qty"]).ToString();
 
@@ -204,6 +232,43 @@ namespace YL_SCM.BizFrm
                 Search();
         }
 
+        private void Open1()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_SCM_SCM02_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_StoreCode", MySqlDbType.Int32);
+                        cmd.Parameters[0].Value = Convert.ToInt32(cmbSellers.EditValue);
+
+                        cmd.Parameters.Add("i_p_id", MySqlDbType.Int32);
+                        cmd.Parameters[1].Value = Convert.ToInt32(txtP_ID.EditValue);
+
+                        cmd.Parameters.Add("i_option_id", MySqlDbType.Int32);
+                        cmd.Parameters[2].Value = Convert.ToInt32(txtOPTION_ID.EditValue);
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
 
 
     }
