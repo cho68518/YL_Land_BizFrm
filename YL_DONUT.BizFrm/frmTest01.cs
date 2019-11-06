@@ -412,6 +412,30 @@ namespace YL_DONUT.BizFrm
             dateEditForm.HidePopupForm();
         }
 
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            var dialogResult = openFileDialog.ShowDialog();
+            if (dialogResult != DialogResult.OK) return;
+            txtFileName.EditValue = openFileDialog.FileName;
+
+            Upload(openFileDialog.FileName);
+        }
+
+        private void Upload(string fileName)
+        {
+            try
+            {
+                WebClient client = new WebClient();
+                client.Credentials = new NetworkCredential("twoone@admin", "twoone5906");
+                client.UploadFile("ftp://14.34.8.38/Upgrade/ikoas/111.xml.zip", @"D:\111.xml");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
 
 
 
