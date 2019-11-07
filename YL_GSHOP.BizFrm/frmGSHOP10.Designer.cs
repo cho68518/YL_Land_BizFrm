@@ -1311,6 +1311,7 @@
             this.gridColumn23.Caption = "주문일";
             this.gridColumn23.FieldName = "o_date";
             this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.OptionsColumn.ReadOnly = true;
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 1;
             this.gridColumn23.Width = 110;
@@ -1380,6 +1381,7 @@
             this.gridColumn24.Caption = "품명";
             this.gridColumn24.FieldName = "p_name";
             this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.OptionsColumn.ReadOnly = true;
             this.gridColumn24.Visible = true;
             this.gridColumn24.VisibleIndex = 8;
             this.gridColumn24.Width = 130;
@@ -1389,6 +1391,7 @@
             this.gridColumn25.Caption = "주문수량/건수";
             this.gridColumn25.FieldName = "p_num";
             this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.OptionsColumn.ReadOnly = true;
             this.gridColumn25.Visible = true;
             this.gridColumn25.VisibleIndex = 9;
             this.gridColumn25.Width = 90;
@@ -1438,12 +1441,14 @@
             this.gridColumn15.Caption = "사용자Id";
             this.gridColumn15.FieldName = "u_id";
             this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.OptionsColumn.ReadOnly = true;
             // 
             // gridColumn16
             // 
             this.gridColumn16.Caption = "샵아이디";
             this.gridColumn16.FieldName = "gshop_id";
             this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.OptionsColumn.ReadOnly = true;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 14;
             // 
@@ -1452,18 +1457,21 @@
             this.gridColumn17.Caption = "이벤트공통코드";
             this.gridColumn17.FieldName = "common_code";
             this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.OptionsColumn.ReadOnly = true;
             // 
             // gridColumn18
             // 
             this.gridColumn18.Caption = "이벤트코드";
             this.gridColumn18.FieldName = "event_code";
             this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.OptionsColumn.ReadOnly = true;
             // 
             // gridColumn19
             // 
             this.gridColumn19.Caption = "idx";
             this.gridColumn19.FieldName = "idx";
             this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.OptionsColumn.ReadOnly = true;
             // 
             // efwPanelControl1
             // 

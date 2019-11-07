@@ -334,7 +334,6 @@ namespace YL_MM.BizFrm
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
 
-
                 if (ValidationAgentEx.IsRequireCheck(this.layoutControl1.Controls, "R1"))
                 {
                     try

@@ -405,7 +405,6 @@
             this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
-            this.efwGridControl1.IsEditable = false;
             this.efwGridControl1.IsMultiLang = false;
             this.efwGridControl1.Location = new System.Drawing.Point(7, 31);
             this.efwGridControl1.MainView = this.gridView1;
@@ -475,6 +474,7 @@
             this.gridColumn7.Caption = "아이디";
             this.gridColumn7.FieldName = "gshop_id";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn1
             // 
@@ -545,6 +545,7 @@
             this.gridColumn9.Caption = "핸드폰번호";
             this.gridColumn9.FieldName = "hp_no";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 7;
             // 
@@ -553,6 +554,7 @@
             this.gridColumn12.Caption = "E-MAIL";
             this.gridColumn12.FieldName = "email";
             this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 9;
             // 
@@ -561,6 +563,7 @@
             this.gridColumn16.Caption = "우편번호";
             this.gridColumn16.FieldName = "post_no";
             this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.OptionsColumn.AllowEdit = false;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 8;
             // 
@@ -569,6 +572,7 @@
             this.gridColumn10.Caption = "기본주소";
             this.gridColumn10.FieldName = "road_addr";
             this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 10;
             // 
@@ -577,6 +581,7 @@
             this.gridColumn25.Caption = "상세주소";
             this.gridColumn25.FieldName = "road_addr2";
             this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.OptionsColumn.AllowEdit = false;
             this.gridColumn25.Visible = true;
             this.gridColumn25.VisibleIndex = 11;
             // 
@@ -585,12 +590,14 @@
             this.gridColumn21.Caption = "E_MAIL";
             this.gridColumn21.FieldName = "email";
             this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "추천인";
             this.gridColumn11.FieldName = "recomm_nicknm";
             this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 12;
             // 
@@ -599,6 +606,7 @@
             this.gridColumn24.Caption = "담당MD";
             this.gridColumn24.FieldName = "md_nicknm";
             this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.OptionsColumn.AllowEdit = false;
             this.gridColumn24.Visible = true;
             this.gridColumn24.VisibleIndex = 13;
             // 
@@ -607,17 +615,20 @@
             this.gridColumn13.Caption = "지역1";
             this.gridColumn13.FieldName = "u_region_name";
             this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn14
             // 
             this.gridColumn14.Caption = "지역2";
             this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn15
             // 
             this.gridColumn15.Caption = "추천인구분";
             this.gridColumn15.FieldName = "recomm_doramd_type";
             this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.OptionsColumn.AllowEdit = false;
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 14;
             // 
@@ -626,12 +637,14 @@
             this.gridColumn17.Caption = "시도코드";
             this.gridColumn17.FieldName = "sido_code";
             this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn18
             // 
             this.gridColumn18.Caption = "시도";
             this.gridColumn18.FieldName = "sido_nm";
             this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.OptionsColumn.AllowEdit = false;
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 15;
             // 
@@ -640,12 +653,14 @@
             this.gridColumn19.Caption = "구군코드";
             this.gridColumn19.FieldName = "gugun_code";
             this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn20
             // 
             this.gridColumn20.Caption = "구군";
             this.gridColumn20.FieldName = "gugun_nm";
             this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.OptionsColumn.AllowEdit = false;
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 16;
             // 
@@ -654,12 +669,14 @@
             this.gridColumn22.Caption = "추천인ID";
             this.gridColumn22.FieldName = "recomm_u_id";
             this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn23
             // 
             this.gridColumn23.Caption = "주문번호";
             this.gridColumn23.FieldName = "o_code";
             this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 17;
             // 
@@ -668,18 +685,21 @@
             this.gridColumn26.Caption = "md_u_id";
             this.gridColumn26.FieldName = "md_u_id";
             this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn27
             // 
             this.gridColumn27.Caption = "u_id";
             this.gridColumn27.FieldName = "u_id";
             this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn58
             // 
             this.gridColumn58.Caption = "가상계좌상태";
             this.gridColumn58.FieldName = "lgd_casflag";
             this.gridColumn58.Name = "gridColumn58";
+            this.gridColumn58.OptionsColumn.AllowEdit = false;
             this.gridColumn58.Visible = true;
             this.gridColumn58.VisibleIndex = 18;
             // 
@@ -688,6 +708,7 @@
             this.gridColumn56.Caption = "입금일";
             this.gridColumn56.FieldName = "o_deposit_confirm_date";
             this.gridColumn56.Name = "gridColumn56";
+            this.gridColumn56.OptionsColumn.AllowEdit = false;
             this.gridColumn56.Visible = true;
             this.gridColumn56.VisibleIndex = 19;
             // 
@@ -696,6 +717,7 @@
             this.gridColumn57.Caption = "확정일";
             this.gridColumn57.FieldName = "o_confirm_date";
             this.gridColumn57.Name = "gridColumn57";
+            this.gridColumn57.OptionsColumn.AllowEdit = false;
             this.gridColumn57.Visible = true;
             this.gridColumn57.VisibleIndex = 20;
             // 
@@ -704,6 +726,7 @@
             this.gridColumn59.Caption = "비고";
             this.gridColumn59.FieldName = "remark";
             this.gridColumn59.Name = "gridColumn59";
+            this.gridColumn59.OptionsColumn.AllowEdit = false;
             this.gridColumn59.Visible = true;
             this.gridColumn59.VisibleIndex = 21;
             // 

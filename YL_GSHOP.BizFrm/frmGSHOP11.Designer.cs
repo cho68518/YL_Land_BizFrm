@@ -106,6 +106,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtShopName = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.label6 = new System.Windows.Forms.Label();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
@@ -529,6 +530,7 @@
             // efwGroupControl2
             // 
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
+            this.efwGroupControl2.Controls.Add(this.efwSimpleButton1);
             this.efwGroupControl2.Controls.Add(this.dtAdvice_Date);
             this.efwGroupControl2.Controls.Add(this.cbDmSend);
             this.efwGroupControl2.Controls.Add(this.cmbPlace2_1);
@@ -901,6 +903,16 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "상호";
             // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(745, 55);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.efwSimpleButton1.TabIndex = 74;
+            this.efwSimpleButton1.Text = "efwSimpleButton1";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
+            // 
             // frmGSHOP11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1013,5 +1025,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private Easy.Framework.WinForm.Control.efwCheckEdit cbDmSend;
         private Easy.Framework.WinForm.Control.efwDateEdit dtAdvice_Date;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
     }
 }
