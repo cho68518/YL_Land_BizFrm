@@ -432,27 +432,7 @@ namespace YL_GSHOP.BizFrm
                 Search();
         }
 
-        private void efwSimpleButton1_Click(object sender, EventArgs e)
-        {
-            string filePath = "C:\\temp\\스토리.jpg";
-            string uName = "twoone@admin";
-            string password = "twoone5906";
-            try
-            {
-                WebClient client = new WebClient();
 
-                NetworkCredential nc = new NetworkCredential(uName, password);
-
-                Uri addy = new Uri("\\\\14.34.8.38\\Upgrade\\ikoas\\");
-                client.Credentials = nc;
-                byte[] arrReturn = client.UploadFile(addy, filePath);
-                Console.WriteLine(arrReturn.ToString());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
     }
 }
 
