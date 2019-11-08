@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -430,6 +431,8 @@ namespace YL_GSHOP.BizFrm
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
+
+
     }
 }
 

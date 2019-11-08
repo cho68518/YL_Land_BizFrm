@@ -145,6 +145,12 @@
     <Compile Include="Dlg\frmZipNoInfo.designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSCM03_Pop02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSCM03_Pop02.Designer.cs">
+      <DependentUpon>frmSCM03_Pop02.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSCM03_Pop01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSCM03_Pop01.resx">
       <DependentUpon>frmSCM03_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSCM03_Pop02.resx">
+      <DependentUpon>frmSCM03_Pop02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSCM06.resx">
       <DependentUpon>frmSCM06.cs</DependentUpon>

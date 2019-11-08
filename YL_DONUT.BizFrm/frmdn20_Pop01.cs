@@ -30,7 +30,7 @@ namespace YL_DONUT.BizFrm
         {
 
             //OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.DefaultExt = "xls";
+            openFileDialog1.DefaultExt = "xlsx";
             openFileDialog1.FileName = "delivery_num_upload_송장일괄등록.xlsx";
             openFileDialog1.Filter = "Excel97 - 2003 통합문서|*.xlsx";
             openFileDialog1.Title = "엑셀데이터 가져오기";
@@ -45,7 +45,7 @@ namespace YL_DONUT.BizFrm
                     {
                         string fileName = openFileDialog1.FileName;
 
-                        if (fileName.IndexOf("delivery_num_upload_송장일괄등록.xls") < 0)
+                        if (fileName.IndexOf("delivery_num_upload_송장일괄등록.xlsx") < 0)
                         {
                             MessageAgent.MessageShow(MessageType.Error, "엑셀파일명에 문제가 있습니다. 파일명을 확인하세요.");
                             return;

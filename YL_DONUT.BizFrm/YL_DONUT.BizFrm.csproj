@@ -411,6 +411,7 @@
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
+    <None Include="G_SERIES_UPDATE_sample.xls" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -420,6 +421,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\GOODS_SERIES_UPDATE_sample.xls" />
+    <None Include="Resources\G_SERIES_UPDATE_sample.xls" />
     <None Include="Resources\PS운영자_PS수수료_정산내역_D머니적립_sample.xls" />
     <None Include="Resources\PS운영자_추천지원금_정산내역_D머니적립_sample.xls" />
     <None Include="Resources\YSMS및개인간거래 AD머니적립_sample.xls" />

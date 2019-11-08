@@ -19,7 +19,9 @@ namespace YL_SCM.BizFrm
 {
     public partial class frmSCM03 : FrmBase
     {
+        Timer timer = new Timer();
         frmSCM03_Pop01 popup;
+        frmSCM03_Pop02 popup1;
 
         public frmSCM03()
         {
@@ -54,6 +56,8 @@ namespace YL_SCM.BizFrm
 
             rbShowType.EditValue = "N";
             SetCmb();
+
+            Time_Start();
         }
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
@@ -91,6 +95,46 @@ namespace YL_SCM.BizFrm
             dtE_DATE.EditValue = DateTime.Now;
             cmbSellers.EditValue = "1";
         }
+
+        public void Time_Start()
+        {
+            timer1.Tick += timer_tick;
+            timer1.Interval = 2000;
+            timer1.Start();
+        }
+
+        public void Time_Stop()
+        {
+            timer1.Stop();
+            timer1.Tick -= timer_tick;
+        }
+
+
+        void timer_tick(object sender,EventArgs e)
+        {
+            string sChkType = string.Empty;
+
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = "SELECT count(*) as Cht FROM domamall.tb_am_product_orders t1 " +
+                             "WHERE date_format(o_date, '%Y%m%d') = '20191030' and " +
+                             "      o_type = 'O' ";
+                DataSet ds = sql.selectQueryDataSet();
+
+                sChkType = sql.selectQueryForSingleValue();
+            }
+
+            if (sChkType != "0" && sChkType != null)
+            {
+                popup1 = new frmSCM03_Pop02();
+                popup1.pChkType = "1";
+                Time_Stop();
+                popup1.ShowDialog();
+                Time_Start();
+
+            }
+        }
+
 
         public override void Search()
         {
