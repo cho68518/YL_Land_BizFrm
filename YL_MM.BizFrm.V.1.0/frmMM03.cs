@@ -163,6 +163,11 @@ namespace YL_MM.BizFrm
 
             popup = null;
         }
+
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

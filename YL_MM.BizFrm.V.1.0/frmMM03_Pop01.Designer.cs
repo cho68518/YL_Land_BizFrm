@@ -1524,7 +1524,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "사용"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "사용안함")});
             this.efwRadioGroup2.RequireMessage = null;
-            this.efwRadioGroup2.Size = new System.Drawing.Size(135, 24);
+            this.efwRadioGroup2.Size = new System.Drawing.Size(169, 24);
             this.efwRadioGroup2.TabIndex = 84;
             // 
             // efwSimpleButton3

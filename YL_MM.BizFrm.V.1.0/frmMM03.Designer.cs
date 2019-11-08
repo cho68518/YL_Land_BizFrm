@@ -195,6 +195,7 @@
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.efwGridControl1.Click += new System.EventHandler(this.efwGridControl1_Click);
             // 
             // gridView1
             // 
