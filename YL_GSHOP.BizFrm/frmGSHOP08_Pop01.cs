@@ -31,6 +31,7 @@ namespace YL_GSHOP.BizFrm
         public string pWK_HAN { get; set; }
         public string pCHEF_LEVEL { get; set; }
         public string pIS_USE { get; set; }
+        public string pCATEGORY_NO { get; set; }
 
         frmGSHOP08_Pop02 popup;
 
@@ -57,9 +58,12 @@ namespace YL_GSHOP.BizFrm
             setMap();
             SetPic();
 
-            if (pPR_NAME != pPR_NAVER_NAME)
+            if (pCATEGORY_NO != "205")    // PR후기스토리가 아닌경우만
             {
-                AutoSave();
+                if (pPR_NAME != pPR_NAVER_NAME)
+                {
+                    AutoSave();
+                }
             }
         }
 
@@ -237,10 +241,10 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters[0].Value = pSTORY_ID;
 
                             cmd.Parameters.Add("i_pr_name", MySqlDbType.VarChar, 100);
-                            cmd.Parameters[1].Value = this.txtPR_NAME.EditValue;
+                            cmd.Parameters[1].Value = this.txtPR_NAME.EditValue.ToString();
 
                             cmd.Parameters.Add("i_pr_cell_num", MySqlDbType.VarChar, 45);
-                            cmd.Parameters[2].Value = this.txtPR_CELL_NUM.EditValue;
+                            cmd.Parameters[2].Value = this.txtPR_CELL_NUM.EditValue.ToString();
 
                             cmd.ExecuteNonQuery();
 

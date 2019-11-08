@@ -203,6 +203,7 @@ namespace YL_GSHOP.BizFrm
                 popup.pWK_HAN = gridView1.GetFocusedRowCellValue("wk_han").ToString();
                 popup.pCHEF_LEVEL = gridView1.GetFocusedRowCellValue("u_chef_level").ToString();
                 popup.pIS_USE = gridView1.GetFocusedRowCellValue("is_use").ToString();
+                popup.pCATEGORY_NO = wcategory_no;
 
                 popup.FormClosed += popup_FormClosed;
                 popup.ShowDialog();
