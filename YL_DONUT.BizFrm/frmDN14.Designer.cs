@@ -35,6 +35,9 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo7 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo8 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -46,9 +49,6 @@
             Easy.Framework.WinForm.Control.Hierarchy hierarchy4 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy5 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
@@ -108,9 +108,16 @@
             this.efwGroupControl5 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl6 = new DevExpress.XtraLayout.LayoutControl();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwGridControl3 = new Easy.Framework.WinForm.Control.efwGridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.repositoryItemLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
+            this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.efwPanelControl3 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl3 = new DevExpress.XtraEditors.SplitterControl();
@@ -219,13 +226,6 @@
             this.cmbCate_Code3 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.cmbCate_Code2 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.cmbCate_Code1 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
-            this.efwPanelControl3 = new Easy.Framework.WinForm.Control.efwPanelControl();
-            this.efwGridControl3 = new Easy.Framework.WinForm.Control.efwGridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.repositoryItemLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
-            this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
-            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -252,6 +252,14 @@
             this.layoutControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).BeginInit();
             this.efwPanelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl3)).BeginInit();
+            this.efwPanelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
@@ -318,14 +326,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl3)).BeginInit();
-            this.efwPanelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -982,6 +982,117 @@
             this.efwPanelControl2.Size = new System.Drawing.Size(1263, 1);
             this.efwPanelControl2.TabIndex = 44;
             // 
+            // efwGridControl3
+            // 
+            this.efwGridControl3.BindSet = null;
+            this.efwGridControl3.DBName = "";
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = null;
+            this.efwGridControl3.DeleteServiceInfo = serviceInfo4;
+            this.efwGridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = null;
+            this.efwGridControl3.InsertServiceInfo = serviceInfo5;
+            this.efwGridControl3.IsAddExcelBtn = true;
+            this.efwGridControl3.isAddPrintBtn = true;
+            this.efwGridControl3.IsEditable = false;
+            this.efwGridControl3.IsMultiLang = false;
+            this.efwGridControl3.Location = new System.Drawing.Point(2, 45);
+            this.efwGridControl3.MainView = this.gridView3;
+            this.efwGridControl3.Name = "efwGridControl3";
+            this.efwGridControl3.NowRowHandle = 0;
+            this.efwGridControl3.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl3.PKColumns")));
+            this.efwGridControl3.PrevRowHandle = -2147483648;
+            this.efwGridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit3,
+            this.repositoryItemMemoExEdit2,
+            this.repositoryItemMemoEdit2,
+            this.repositoryItemCheckEdit3});
+            this.efwGridControl3.Size = new System.Drawing.Size(1259, 0);
+            this.efwGridControl3.TabIndex = 67;
+            this.efwGridControl3.TableName = "";
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = null;
+            this.efwGridControl3.UpdateServiceInfo = serviceInfo6;
+            this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // gridView3
+            // 
+            this.gridView3.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
+            this.gridView3.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gridView3.Appearance.GroupFooter.BackColor = System.Drawing.Color.Transparent;
+            this.gridView3.Appearance.GroupFooter.BackColor2 = System.Drawing.Color.Transparent;
+            this.gridView3.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Red;
+            this.gridView3.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.gridView3.Appearance.GroupFooter.Options.UseForeColor = true;
+            this.gridView3.GridControl = this.efwGridControl3;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsView.ColumnAutoWidth = false;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
+            // 
+            // repositoryItemLookUpEdit3
+            // 
+            this.repositoryItemLookUpEdit3.AutoHeight = false;
+            this.repositoryItemLookUpEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit3.Name = "repositoryItemLookUpEdit3";
+            // 
+            // repositoryItemMemoExEdit2
+            // 
+            this.repositoryItemMemoExEdit2.AutoHeight = false;
+            this.repositoryItemMemoExEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemMemoExEdit2.Name = "repositoryItemMemoExEdit2";
+            // 
+            // repositoryItemMemoEdit2
+            // 
+            this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
+            // 
+            // repositoryItemCheckEdit3
+            // 
+            this.repositoryItemCheckEdit3.AutoHeight = false;
+            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
+            this.repositoryItemCheckEdit3.ValueChecked = "Y";
+            this.repositoryItemCheckEdit3.ValueUnchecked = "N";
+            // 
+            // efwPanelControl3
+            // 
+            this.efwPanelControl3.Controls.Add(this.efwSimpleButton3);
+            this.efwPanelControl3.Controls.Add(this.efwSimpleButton5);
+            this.efwPanelControl3.Controls.Add(this.efwLabel4);
+            this.efwPanelControl3.Controls.Add(this.efwSimpleButton4);
+            this.efwPanelControl3.Controls.Add(this.efwSimpleButton1);
+            this.efwPanelControl3.Controls.Add(this.btnGetExcel);
+            this.efwPanelControl3.Controls.Add(this.btnExcelSample);
+            this.efwPanelControl3.Controls.Add(this.lblCnt);
+            this.efwPanelControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwPanelControl3.Location = new System.Drawing.Point(2, 1);
+            this.efwPanelControl3.Name = "efwPanelControl3";
+            this.efwPanelControl3.Size = new System.Drawing.Size(1259, 44);
+            this.efwPanelControl3.TabIndex = 66;
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(236, 11);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(137, 22);
+            this.efwSimpleButton3.TabIndex = 63;
+            this.efwSimpleButton3.Text = "일반상품 엑셀양식";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
+            // 
             // efwSimpleButton5
             // 
             this.efwSimpleButton5.ButtonType = Easy.Framework.Util.BtnType.Save;
@@ -1006,18 +1117,6 @@
             this.efwSimpleButton4.TabIndex = 64;
             this.efwSimpleButton4.Text = "엑셀데이타 가져오기";
             this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
-            // 
-            // efwSimpleButton3
-            // 
-            this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
-            this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(236, 11);
-            this.efwSimpleButton3.Name = "efwSimpleButton3";
-            this.efwSimpleButton3.Size = new System.Drawing.Size(137, 22);
-            this.efwSimpleButton3.TabIndex = 63;
-            this.efwSimpleButton3.Text = "일반상품 엑셀양식";
-            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
             // layoutControlGroup6
             // 
@@ -2434,105 +2533,6 @@
             this.cmbCate_Code1.TabIndex = 0;
             this.cmbCate_Code1.EditValueChanged += new System.EventHandler(this.cmbCate_Code1_EditValueChanged);
             // 
-            // efwPanelControl3
-            // 
-            this.efwPanelControl3.Controls.Add(this.efwSimpleButton3);
-            this.efwPanelControl3.Controls.Add(this.efwSimpleButton5);
-            this.efwPanelControl3.Controls.Add(this.efwLabel4);
-            this.efwPanelControl3.Controls.Add(this.efwSimpleButton4);
-            this.efwPanelControl3.Controls.Add(this.efwSimpleButton1);
-            this.efwPanelControl3.Controls.Add(this.btnGetExcel);
-            this.efwPanelControl3.Controls.Add(this.btnExcelSample);
-            this.efwPanelControl3.Controls.Add(this.lblCnt);
-            this.efwPanelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwPanelControl3.Location = new System.Drawing.Point(2, 1);
-            this.efwPanelControl3.Name = "efwPanelControl3";
-            this.efwPanelControl3.Size = new System.Drawing.Size(1259, 44);
-            this.efwPanelControl3.TabIndex = 66;
-            // 
-            // efwGridControl3
-            // 
-            this.efwGridControl3.BindSet = null;
-            this.efwGridControl3.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = null;
-            this.efwGridControl3.DeleteServiceInfo = serviceInfo4;
-            this.efwGridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = null;
-            this.efwGridControl3.InsertServiceInfo = serviceInfo5;
-            this.efwGridControl3.IsAddExcelBtn = true;
-            this.efwGridControl3.isAddPrintBtn = true;
-            this.efwGridControl3.IsEditable = false;
-            this.efwGridControl3.IsMultiLang = false;
-            this.efwGridControl3.Location = new System.Drawing.Point(2, 45);
-            this.efwGridControl3.MainView = this.gridView3;
-            this.efwGridControl3.Name = "efwGridControl3";
-            this.efwGridControl3.NowRowHandle = 0;
-            this.efwGridControl3.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl3.PKColumns")));
-            this.efwGridControl3.PrevRowHandle = -2147483648;
-            this.efwGridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemLookUpEdit3,
-            this.repositoryItemMemoExEdit2,
-            this.repositoryItemMemoEdit2,
-            this.repositoryItemCheckEdit3});
-            this.efwGridControl3.Size = new System.Drawing.Size(1259, 0);
-            this.efwGridControl3.TabIndex = 67;
-            this.efwGridControl3.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = null;
-            this.efwGridControl3.UpdateServiceInfo = serviceInfo6;
-            this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
-            // 
-            // gridView3
-            // 
-            this.gridView3.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
-            this.gridView3.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.gridView3.Appearance.GroupFooter.BackColor = System.Drawing.Color.Transparent;
-            this.gridView3.Appearance.GroupFooter.BackColor2 = System.Drawing.Color.Transparent;
-            this.gridView3.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Red;
-            this.gridView3.Appearance.GroupFooter.Options.UseBackColor = true;
-            this.gridView3.Appearance.GroupFooter.Options.UseForeColor = true;
-            this.gridView3.GridControl = this.efwGridControl3;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.OptionsView.ColumnAutoWidth = false;
-            this.gridView3.OptionsView.ShowGroupPanel = false;
-            // 
-            // repositoryItemLookUpEdit3
-            // 
-            this.repositoryItemLookUpEdit3.AutoHeight = false;
-            this.repositoryItemLookUpEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit3.Name = "repositoryItemLookUpEdit3";
-            // 
-            // repositoryItemMemoExEdit2
-            // 
-            this.repositoryItemMemoExEdit2.AutoHeight = false;
-            this.repositoryItemMemoExEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemMemoExEdit2.Name = "repositoryItemMemoExEdit2";
-            // 
-            // repositoryItemMemoEdit2
-            // 
-            this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
-            // 
-            // repositoryItemCheckEdit3
-            // 
-            this.repositoryItemCheckEdit3.AutoHeight = false;
-            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
-            this.repositoryItemCheckEdit3.ValueChecked = "Y";
-            this.repositoryItemCheckEdit3.ValueUnchecked = "N";
-            // 
             // frmDN14
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2580,6 +2580,15 @@
             this.layoutControl6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).EndInit();
             this.efwPanelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl3)).EndInit();
+            this.efwPanelControl3.ResumeLayout(false);
+            this.efwPanelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).EndInit();
@@ -2647,15 +2656,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl3)).EndInit();
-            this.efwPanelControl3.ResumeLayout(false);
-            this.efwPanelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             this.ResumeLayout(false);
 
         }
