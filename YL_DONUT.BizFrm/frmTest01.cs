@@ -434,10 +434,16 @@ namespace YL_DONUT.BizFrm
             {
                 MessageBox.Show(ex.ToString());
             }
-
         }
 
+        private void btnGuId_Click(object sender, EventArgs e)
+        {
+            string sGuId = string.Empty;
 
+            sGuId = Guid.NewGuid().ToString().Replace("-", "");
 
+            txtGuId.EditValue = sGuId;
+            txtImgName.EditValue = "gshop_00000016" + "_" + sGuId + ".";
+        }
     }
 }
