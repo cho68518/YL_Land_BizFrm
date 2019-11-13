@@ -73,8 +73,18 @@ namespace YL_SCM.BizFrm.Dlg
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(this.txtSch.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 도로명 또는 읍,면,동을 입력하세요!");
+                return;
+            }
             try
             {
+                if (string.IsNullOrEmpty(this.txtSch.Text))
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 도로명 또는 읍,면,동을 입력하세요!");
+                    return;
+                }
                 keyword = txtSch.Text.Trim();
                 apiurl = "http://www.juso.go.kr/addrlink/addrLinkApi.do?currentPage=" + currentPage + "&countPerPage=" + countPerPage + "&keyword=" + keyword + "&confmKey=" + confmKey;
 

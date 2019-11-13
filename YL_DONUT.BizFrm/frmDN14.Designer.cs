@@ -35,6 +35,9 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo7 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo8 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -46,9 +49,6 @@
             Easy.Framework.WinForm.Control.Hierarchy hierarchy4 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy5 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
@@ -108,9 +108,16 @@
             this.efwGroupControl5 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl6 = new DevExpress.XtraLayout.LayoutControl();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwGridControl3 = new Easy.Framework.WinForm.Control.efwGridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.repositoryItemLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
+            this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.efwPanelControl3 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl3 = new DevExpress.XtraEditors.SplitterControl();
@@ -219,13 +226,6 @@
             this.cmbCate_Code3 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.cmbCate_Code2 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.cmbCate_Code1 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
-            this.efwPanelControl3 = new Easy.Framework.WinForm.Control.efwPanelControl();
-            this.efwGridControl3 = new Easy.Framework.WinForm.Control.efwGridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.repositoryItemLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
-            this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
-            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -252,6 +252,14 @@
             this.layoutControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).BeginInit();
             this.efwPanelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl3)).BeginInit();
+            this.efwPanelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
@@ -318,14 +326,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl3)).BeginInit();
-            this.efwPanelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -336,7 +336,7 @@
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(3, 35);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(1298, 414);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1523, 413);
             this.efwGroupControl1.TabIndex = 21;
             this.efwGroupControl1.Text = "후기 머니관리";
             // 
@@ -348,7 +348,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(2, 23);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(1294, 389);
+            this.layoutControl2.Size = new System.Drawing.Size(1519, 388);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -363,7 +363,7 @@
             this.efwPanelControl1.Controls.Add(this.txtFileName);
             this.efwPanelControl1.Location = new System.Drawing.Point(7, 7);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1280, 52);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1505, 52);
             this.efwPanelControl1.TabIndex = 60;
             // 
             // rbShowType
@@ -494,7 +494,7 @@
             this.repositoryItemMemoExEdit4,
             this.repositoryItemMemoEdit4,
             this.repositoryItemCheckEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1280, 322);
+            this.efwGridControl1.Size = new System.Drawing.Size(1505, 321);
             this.efwGridControl1.TabIndex = 25;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -753,8 +753,6 @@
             this.gridColumn42.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn42.FieldName = "d_gs_cele_story";
             this.gridColumn42.Name = "gridColumn42";
-            this.gridColumn42.Visible = true;
-            this.gridColumn42.VisibleIndex = 20;
             this.gridColumn42.Width = 140;
             // 
             // gridColumn43
@@ -764,8 +762,6 @@
             this.gridColumn43.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn43.FieldName = "cash_gr_cele_story";
             this.gridColumn43.Name = "gridColumn43";
-            this.gridColumn43.Visible = true;
-            this.gridColumn43.VisibleIndex = 21;
             this.gridColumn43.Width = 130;
             // 
             // gridColumn49
@@ -774,7 +770,7 @@
             this.gridColumn49.FieldName = "gshop_price";
             this.gridColumn49.Name = "gridColumn49";
             this.gridColumn49.Visible = true;
-            this.gridColumn49.VisibleIndex = 22;
+            this.gridColumn49.VisibleIndex = 20;
             // 
             // gridColumn50
             // 
@@ -782,7 +778,7 @@
             this.gridColumn50.FieldName = "ad_gs_cele_story";
             this.gridColumn50.Name = "gridColumn50";
             this.gridColumn50.Visible = true;
-            this.gridColumn50.VisibleIndex = 23;
+            this.gridColumn50.VisibleIndex = 21;
             // 
             // gridColumn51
             // 
@@ -790,7 +786,7 @@
             this.gridColumn51.FieldName = "ad_gr_cele_story";
             this.gridColumn51.Name = "gridColumn51";
             this.gridColumn51.Visible = true;
-            this.gridColumn51.VisibleIndex = 24;
+            this.gridColumn51.VisibleIndex = 22;
             // 
             // gridColumn40
             // 
@@ -798,7 +794,7 @@
             this.gridColumn40.FieldName = "remark";
             this.gridColumn40.Name = "gridColumn40";
             this.gridColumn40.Visible = true;
-            this.gridColumn40.VisibleIndex = 25;
+            this.gridColumn40.VisibleIndex = 23;
             this.gridColumn40.Width = 155;
             // 
             // gridColumn45
@@ -859,7 +855,7 @@
             this.layoutControlItem39});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1294, 389);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1519, 388);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem1
@@ -867,7 +863,7 @@
             this.layoutControlItem1.Control = this.efwGridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1284, 326);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1509, 325);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -876,7 +872,7 @@
             this.layoutControlItem39.Control = this.efwPanelControl1;
             this.layoutControlItem39.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem39.Name = "layoutControlItem39";
-            this.layoutControlItem39.Size = new System.Drawing.Size(1284, 56);
+            this.layoutControlItem39.Size = new System.Drawing.Size(1509, 56);
             this.layoutControlItem39.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem39.TextVisible = false;
             // 
@@ -944,9 +940,9 @@
             // splitterControl2
             // 
             this.splitterControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl2.Location = new System.Drawing.Point(3, 449);
+            this.splitterControl2.Location = new System.Drawing.Point(3, 448);
             this.splitterControl2.Name = "splitterControl2";
-            this.splitterControl2.Size = new System.Drawing.Size(1298, 5);
+            this.splitterControl2.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl2.TabIndex = 33;
             this.splitterControl2.TabStop = false;
             // 
@@ -956,9 +952,9 @@
             this.efwGroupControl5.Controls.Add(this.layoutControl6);
             this.efwGroupControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwGroupControl5.IsMultiLang = false;
-            this.efwGroupControl5.Location = new System.Drawing.Point(3, 454);
+            this.efwGroupControl5.Location = new System.Drawing.Point(3, 453);
             this.efwGroupControl5.Name = "efwGroupControl5";
-            this.efwGroupControl5.Size = new System.Drawing.Size(1298, 31);
+            this.efwGroupControl5.Size = new System.Drawing.Size(1523, 29);
             this.efwGroupControl5.TabIndex = 34;
             this.efwGroupControl5.Text = "엑셀 업로드";
             // 
@@ -969,7 +965,7 @@
             this.layoutControl6.Location = new System.Drawing.Point(2, 23);
             this.layoutControl6.Name = "layoutControl6";
             this.layoutControl6.Root = this.layoutControlGroup6;
-            this.layoutControl6.Size = new System.Drawing.Size(1294, 6);
+            this.layoutControl6.Size = new System.Drawing.Size(1519, 4);
             this.layoutControl6.TabIndex = 0;
             this.layoutControl6.Text = "layoutControl3";
             // 
@@ -979,8 +975,119 @@
             this.efwPanelControl2.Controls.Add(this.efwPanelControl3);
             this.efwPanelControl2.Location = new System.Drawing.Point(7, 7);
             this.efwPanelControl2.Name = "efwPanelControl2";
-            this.efwPanelControl2.Size = new System.Drawing.Size(1263, 1);
+            this.efwPanelControl2.Size = new System.Drawing.Size(1488, 1);
             this.efwPanelControl2.TabIndex = 44;
+            // 
+            // efwGridControl3
+            // 
+            this.efwGridControl3.BindSet = null;
+            this.efwGridControl3.DBName = "";
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = null;
+            this.efwGridControl3.DeleteServiceInfo = serviceInfo4;
+            this.efwGridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = null;
+            this.efwGridControl3.InsertServiceInfo = serviceInfo5;
+            this.efwGridControl3.IsAddExcelBtn = true;
+            this.efwGridControl3.isAddPrintBtn = true;
+            this.efwGridControl3.IsEditable = false;
+            this.efwGridControl3.IsMultiLang = false;
+            this.efwGridControl3.Location = new System.Drawing.Point(2, 45);
+            this.efwGridControl3.MainView = this.gridView3;
+            this.efwGridControl3.Name = "efwGridControl3";
+            this.efwGridControl3.NowRowHandle = 0;
+            this.efwGridControl3.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl3.PKColumns")));
+            this.efwGridControl3.PrevRowHandle = -2147483648;
+            this.efwGridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit3,
+            this.repositoryItemMemoExEdit2,
+            this.repositoryItemMemoEdit2,
+            this.repositoryItemCheckEdit3});
+            this.efwGridControl3.Size = new System.Drawing.Size(1484, 0);
+            this.efwGridControl3.TabIndex = 67;
+            this.efwGridControl3.TableName = "";
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = null;
+            this.efwGridControl3.UpdateServiceInfo = serviceInfo6;
+            this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // gridView3
+            // 
+            this.gridView3.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
+            this.gridView3.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gridView3.Appearance.GroupFooter.BackColor = System.Drawing.Color.Transparent;
+            this.gridView3.Appearance.GroupFooter.BackColor2 = System.Drawing.Color.Transparent;
+            this.gridView3.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Red;
+            this.gridView3.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.gridView3.Appearance.GroupFooter.Options.UseForeColor = true;
+            this.gridView3.GridControl = this.efwGridControl3;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsView.ColumnAutoWidth = false;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
+            // 
+            // repositoryItemLookUpEdit3
+            // 
+            this.repositoryItemLookUpEdit3.AutoHeight = false;
+            this.repositoryItemLookUpEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit3.Name = "repositoryItemLookUpEdit3";
+            // 
+            // repositoryItemMemoExEdit2
+            // 
+            this.repositoryItemMemoExEdit2.AutoHeight = false;
+            this.repositoryItemMemoExEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemMemoExEdit2.Name = "repositoryItemMemoExEdit2";
+            // 
+            // repositoryItemMemoEdit2
+            // 
+            this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
+            // 
+            // repositoryItemCheckEdit3
+            // 
+            this.repositoryItemCheckEdit3.AutoHeight = false;
+            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
+            this.repositoryItemCheckEdit3.ValueChecked = "Y";
+            this.repositoryItemCheckEdit3.ValueUnchecked = "N";
+            // 
+            // efwPanelControl3
+            // 
+            this.efwPanelControl3.Controls.Add(this.efwSimpleButton3);
+            this.efwPanelControl3.Controls.Add(this.efwSimpleButton5);
+            this.efwPanelControl3.Controls.Add(this.efwLabel4);
+            this.efwPanelControl3.Controls.Add(this.efwSimpleButton4);
+            this.efwPanelControl3.Controls.Add(this.efwSimpleButton1);
+            this.efwPanelControl3.Controls.Add(this.btnGetExcel);
+            this.efwPanelControl3.Controls.Add(this.btnExcelSample);
+            this.efwPanelControl3.Controls.Add(this.lblCnt);
+            this.efwPanelControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwPanelControl3.Location = new System.Drawing.Point(2, 1);
+            this.efwPanelControl3.Name = "efwPanelControl3";
+            this.efwPanelControl3.Size = new System.Drawing.Size(1484, 44);
+            this.efwPanelControl3.TabIndex = 66;
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(236, 11);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(137, 22);
+            this.efwSimpleButton3.TabIndex = 63;
+            this.efwSimpleButton3.Text = "일반상품 엑셀양식";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
             // efwSimpleButton5
             // 
@@ -1007,18 +1114,6 @@
             this.efwSimpleButton4.Text = "엑셀데이타 가져오기";
             this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
             // 
-            // efwSimpleButton3
-            // 
-            this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
-            this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(236, 11);
-            this.efwSimpleButton3.Name = "efwSimpleButton3";
-            this.efwSimpleButton3.Size = new System.Drawing.Size(137, 22);
-            this.efwSimpleButton3.TabIndex = 63;
-            this.efwSimpleButton3.Text = "일반상품 엑셀양식";
-            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
-            // 
             // layoutControlGroup6
             // 
             this.layoutControlGroup6.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -1027,7 +1122,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup6.Name = "Root";
             this.layoutControlGroup6.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup6.Size = new System.Drawing.Size(1277, 12);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(1502, 12);
             this.layoutControlGroup6.TextVisible = false;
             // 
             // layoutControlItem4
@@ -1035,16 +1130,16 @@
             this.layoutControlItem4.Control = this.efwPanelControl2;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1267, 5);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1492, 5);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // splitterControl3
             // 
             this.splitterControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl3.Location = new System.Drawing.Point(3, 485);
+            this.splitterControl3.Location = new System.Drawing.Point(3, 482);
             this.splitterControl3.Name = "splitterControl3";
-            this.splitterControl3.Size = new System.Drawing.Size(1298, 5);
+            this.splitterControl3.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl3.TabIndex = 35;
             this.splitterControl3.TabStop = false;
             // 
@@ -1054,9 +1149,9 @@
             this.efwGroupControl3.Controls.Add(this.layoutControl3);
             this.efwGroupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwGroupControl3.IsMultiLang = false;
-            this.efwGroupControl3.Location = new System.Drawing.Point(3, 490);
+            this.efwGroupControl3.Location = new System.Drawing.Point(3, 487);
             this.efwGroupControl3.Name = "efwGroupControl3";
-            this.efwGroupControl3.Size = new System.Drawing.Size(1298, 31);
+            this.efwGroupControl3.Size = new System.Drawing.Size(1523, 31);
             this.efwGroupControl3.TabIndex = 36;
             this.efwGroupControl3.Text = "변경 HISTORY";
             // 
@@ -1068,7 +1163,7 @@
             this.layoutControl3.Location = new System.Drawing.Point(2, 23);
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup3;
-            this.layoutControl3.Size = new System.Drawing.Size(1294, 6);
+            this.layoutControl3.Size = new System.Drawing.Size(1519, 6);
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -1103,7 +1198,7 @@
             this.repositoryItemMemoExEdit1,
             this.repositoryItemMemoEdit1,
             this.repositoryItemCheckEdit2});
-            this.efwGridControl2.Size = new System.Drawing.Size(1263, 20);
+            this.efwGridControl2.Size = new System.Drawing.Size(1488, 20);
             this.efwGridControl2.TabIndex = 25;
             this.efwGridControl2.TableName = "";
             serviceInfo9.InstanceName = "";
@@ -1391,7 +1486,7 @@
             this.layoutControlItem21});
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1277, 55);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1502, 55);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // emptySpaceItem2
@@ -1399,7 +1494,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(320, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem1";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(947, 24);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(1172, 24);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem20
@@ -1422,16 +1517,16 @@
             this.layoutControlItem21.Control = this.efwGridControl2;
             this.layoutControlItem21.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem21.Name = "layoutControlItem1";
-            this.layoutControlItem21.Size = new System.Drawing.Size(1267, 24);
+            this.layoutControlItem21.Size = new System.Drawing.Size(1492, 24);
             this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem21.TextVisible = false;
             // 
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 521);
+            this.splitterControl1.Location = new System.Drawing.Point(3, 518);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(1298, 5);
+            this.splitterControl1.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl1.TabIndex = 37;
             this.splitterControl1.TabStop = false;
             // 
@@ -1490,9 +1585,9 @@
             this.efwGroupControl4.Controls.Add(this.cmbCate_Code1);
             this.efwGroupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl4.IsMultiLang = false;
-            this.efwGroupControl4.Location = new System.Drawing.Point(3, 526);
+            this.efwGroupControl4.Location = new System.Drawing.Point(3, 523);
             this.efwGroupControl4.Name = "efwGroupControl4";
-            this.efwGroupControl4.Size = new System.Drawing.Size(1298, 256);
+            this.efwGroupControl4.Size = new System.Drawing.Size(1523, 259);
             this.efwGroupControl4.TabIndex = 66;
             this.efwGroupControl4.Text = "수정";
             // 
@@ -1514,7 +1609,7 @@
             this.efwGroupControl2.IsMultiLang = false;
             this.efwGroupControl2.Location = new System.Drawing.Point(70, 87);
             this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(81, 40);
+            this.efwGroupControl2.Size = new System.Drawing.Size(76, 45);
             this.efwGroupControl2.TabIndex = 38;
             this.efwGroupControl2.Text = "key";
             this.efwGroupControl2.Visible = false;
@@ -1533,7 +1628,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(2, 23);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(77, 15);
+            this.layoutControl1.Size = new System.Drawing.Size(72, 20);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -1973,6 +2068,7 @@
             this.efwLabel14.Size = new System.Drawing.Size(95, 14);
             this.efwLabel14.TabIndex = 33;
             this.efwLabel14.Text = "현금(GR축하스토리)";
+            this.efwLabel14.Visible = false;
             // 
             // efwLabel15
             // 
@@ -2057,6 +2153,7 @@
             this.txtCASH_GR_CELE_STORY.RequireMessage = null;
             this.txtCASH_GR_CELE_STORY.Size = new System.Drawing.Size(100, 20);
             this.txtCASH_GR_CELE_STORY.TabIndex = 26;
+            this.txtCASH_GR_CELE_STORY.Visible = false;
             // 
             // txtTD_DONUT
             // 
@@ -2176,6 +2273,7 @@
             this.txtD_GS_CELE_STORY.RequireMessage = null;
             this.txtD_GS_CELE_STORY.Size = new System.Drawing.Size(100, 20);
             this.txtD_GS_CELE_STORY.TabIndex = 19;
+            this.txtD_GS_CELE_STORY.Visible = false;
             // 
             // txtAD_DONUT
             // 
@@ -2281,6 +2379,7 @@
             this.efwLabel12.Size = new System.Drawing.Size(103, 14);
             this.efwLabel12.TabIndex = 12;
             this.efwLabel12.Text = "D머니(GS축하스토리)";
+            this.efwLabel12.Visible = false;
             // 
             // efwLabel11
             // 
@@ -2434,105 +2533,6 @@
             this.cmbCate_Code1.TabIndex = 0;
             this.cmbCate_Code1.EditValueChanged += new System.EventHandler(this.cmbCate_Code1_EditValueChanged);
             // 
-            // efwPanelControl3
-            // 
-            this.efwPanelControl3.Controls.Add(this.efwSimpleButton3);
-            this.efwPanelControl3.Controls.Add(this.efwSimpleButton5);
-            this.efwPanelControl3.Controls.Add(this.efwLabel4);
-            this.efwPanelControl3.Controls.Add(this.efwSimpleButton4);
-            this.efwPanelControl3.Controls.Add(this.efwSimpleButton1);
-            this.efwPanelControl3.Controls.Add(this.btnGetExcel);
-            this.efwPanelControl3.Controls.Add(this.btnExcelSample);
-            this.efwPanelControl3.Controls.Add(this.lblCnt);
-            this.efwPanelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwPanelControl3.Location = new System.Drawing.Point(2, 1);
-            this.efwPanelControl3.Name = "efwPanelControl3";
-            this.efwPanelControl3.Size = new System.Drawing.Size(1259, 44);
-            this.efwPanelControl3.TabIndex = 66;
-            // 
-            // efwGridControl3
-            // 
-            this.efwGridControl3.BindSet = null;
-            this.efwGridControl3.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = null;
-            this.efwGridControl3.DeleteServiceInfo = serviceInfo4;
-            this.efwGridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = null;
-            this.efwGridControl3.InsertServiceInfo = serviceInfo5;
-            this.efwGridControl3.IsAddExcelBtn = true;
-            this.efwGridControl3.isAddPrintBtn = true;
-            this.efwGridControl3.IsEditable = false;
-            this.efwGridControl3.IsMultiLang = false;
-            this.efwGridControl3.Location = new System.Drawing.Point(2, 45);
-            this.efwGridControl3.MainView = this.gridView3;
-            this.efwGridControl3.Name = "efwGridControl3";
-            this.efwGridControl3.NowRowHandle = 0;
-            this.efwGridControl3.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl3.PKColumns")));
-            this.efwGridControl3.PrevRowHandle = -2147483648;
-            this.efwGridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemLookUpEdit3,
-            this.repositoryItemMemoExEdit2,
-            this.repositoryItemMemoEdit2,
-            this.repositoryItemCheckEdit3});
-            this.efwGridControl3.Size = new System.Drawing.Size(1259, 0);
-            this.efwGridControl3.TabIndex = 67;
-            this.efwGridControl3.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = null;
-            this.efwGridControl3.UpdateServiceInfo = serviceInfo6;
-            this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
-            // 
-            // gridView3
-            // 
-            this.gridView3.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
-            this.gridView3.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.gridView3.Appearance.GroupFooter.BackColor = System.Drawing.Color.Transparent;
-            this.gridView3.Appearance.GroupFooter.BackColor2 = System.Drawing.Color.Transparent;
-            this.gridView3.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Red;
-            this.gridView3.Appearance.GroupFooter.Options.UseBackColor = true;
-            this.gridView3.Appearance.GroupFooter.Options.UseForeColor = true;
-            this.gridView3.GridControl = this.efwGridControl3;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.OptionsView.ColumnAutoWidth = false;
-            this.gridView3.OptionsView.ShowGroupPanel = false;
-            // 
-            // repositoryItemLookUpEdit3
-            // 
-            this.repositoryItemLookUpEdit3.AutoHeight = false;
-            this.repositoryItemLookUpEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit3.Name = "repositoryItemLookUpEdit3";
-            // 
-            // repositoryItemMemoExEdit2
-            // 
-            this.repositoryItemMemoExEdit2.AutoHeight = false;
-            this.repositoryItemMemoExEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemMemoExEdit2.Name = "repositoryItemMemoExEdit2";
-            // 
-            // repositoryItemMemoEdit2
-            // 
-            this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
-            // 
-            // repositoryItemCheckEdit3
-            // 
-            this.repositoryItemCheckEdit3.AutoHeight = false;
-            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
-            this.repositoryItemCheckEdit3.ValueChecked = "Y";
-            this.repositoryItemCheckEdit3.ValueUnchecked = "N";
-            // 
             // frmDN14
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2545,7 +2545,7 @@
             this.Controls.Add(this.splitterControl2);
             this.Controls.Add(this.efwGroupControl1);
             this.Name = "frmDN14";
-            this.Size = new System.Drawing.Size(1304, 782);
+            this.Size = new System.Drawing.Size(1529, 782);
             this.Controls.SetChildIndex(this.efwGroupControl1, 0);
             this.Controls.SetChildIndex(this.splitterControl2, 0);
             this.Controls.SetChildIndex(this.efwGroupControl5, 0);
@@ -2580,6 +2580,15 @@
             this.layoutControl6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).EndInit();
             this.efwPanelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl3)).EndInit();
+            this.efwPanelControl3.ResumeLayout(false);
+            this.efwPanelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).EndInit();
@@ -2647,15 +2656,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl3)).EndInit();
-            this.efwPanelControl3.ResumeLayout(false);
-            this.efwPanelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             this.ResumeLayout(false);
 
         }

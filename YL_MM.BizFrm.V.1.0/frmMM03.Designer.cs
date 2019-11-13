@@ -83,7 +83,7 @@
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1069, 46);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1288, 46);
             this.efwPanelControl1.TabIndex = 3;
             // 
             // rbShowType
@@ -184,7 +184,7 @@
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.btnDetail});
-            this.efwGridControl1.Size = new System.Drawing.Size(1069, 432);
+            this.efwGridControl1.Size = new System.Drawing.Size(1288, 432);
             this.efwGridControl1.TabIndex = 4;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -236,12 +236,14 @@
             this.gridColumn6.Caption = "종류";
             this.gridColumn6.FieldName = "type";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.ReadOnly = true;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "카테고리";
             this.gridColumn11.FieldName = "p_ct_code";
             this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 0;
             this.gridColumn11.Width = 110;
@@ -281,6 +283,7 @@
             this.gridColumn7.Caption = "소비자가격";
             this.gridColumn7.FieldName = "p_org_price";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 4;
             this.gridColumn7.Width = 90;
@@ -290,6 +293,7 @@
             this.gridColumn8.Caption = "상태";
             this.gridColumn8.FieldName = "p_sell_type";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 5;
             this.gridColumn8.Width = 90;
@@ -299,6 +303,7 @@
             this.gridColumn9.Caption = "노출여부";
             this.gridColumn9.FieldName = "p_show_type";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 6;
             this.gridColumn9.Width = 80;
@@ -308,6 +313,7 @@
             this.gridColumn10.Caption = "등록일";
             this.gridColumn10.FieldName = "create_date";
             this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.OptionsColumn.ReadOnly = true;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 7;
             this.gridColumn10.Width = 100;
@@ -317,6 +323,7 @@
             this.gridColumn12.Caption = "상품등록업체명";
             this.gridColumn12.FieldName = "company_name";
             this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.ReadOnly = true;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 8;
             this.gridColumn12.Width = 160;
@@ -354,7 +361,7 @@
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmMM03";
-            this.Size = new System.Drawing.Size(1075, 513);
+            this.Size = new System.Drawing.Size(1294, 513);
             this.Controls.SetChildIndex(this.efwPanelControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
