@@ -75,6 +75,12 @@ namespace YL_GSHOP.BizFrm.Dlg
         {
             try
             {
+                if (string.IsNullOrEmpty(this.txtSch.Text))
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 도로명 또는 읍,면동,을 입력하세요!");
+                    return;
+                }
+
                 keyword = txtSch.Text.Trim();
                 apiurl = "http://www.juso.go.kr/addrlink/addrLinkApi.do?currentPage=" + currentPage + "&countPerPage=" + countPerPage + "&keyword=" + keyword + "&confmKey=" + confmKey;
 

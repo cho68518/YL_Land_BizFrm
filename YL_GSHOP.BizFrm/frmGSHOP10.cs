@@ -501,6 +501,15 @@ namespace YL_GSHOP.BizFrm
             FrmInfo.ShowDialog();
             txtADDRESS2.Focus();
         }
+        private void txtPost_No_Click(object sender, EventArgs e)
+        {
+            frmZipNoInfo FrmInfo = new frmZipNoInfo() { ParentBtn = txtPost_No, ParentAddr1 = txtAddr1, ParentAddr2 = txtAddr2 };
+            FrmInfo.COMPANYCD = "YL01";
+            FrmInfo.COMPANYNAME = "(주)와이엘랜드";
+            FrmInfo.ShowDialog();
+            txtAddr2.Focus();
+        }
+
 
         private void btnSaveAddress_Click(object sender, EventArgs e)
         {

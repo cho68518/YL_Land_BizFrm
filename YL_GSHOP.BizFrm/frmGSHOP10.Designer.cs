@@ -377,6 +377,7 @@
             this.txtPost_No.Properties.ReadOnly = true;
             this.txtPost_No.Size = new System.Drawing.Size(71, 20);
             this.txtPost_No.TabIndex = 57;
+            this.txtPost_No.Click += new System.EventHandler(this.txtPost_No_Click);
             // 
             // txtAddr2
             // 
