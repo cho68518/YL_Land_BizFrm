@@ -1,4 +1,5 @@
-﻿using Easy.Framework.Common;
+﻿using DevExpress.XtraGrid.Views.Grid;
+using Easy.Framework.Common;
 using Easy.Framework.WinForm.Control;
 using MySql.Data.MySqlClient;
 using System;
@@ -892,6 +893,17 @@ namespace YL_DONUT.BizFrm
                 DataSet ds = sql.selectQueryDataSet();
 
                 txtContents.EditValue = sql.selectQueryForSingleValue();
+            }
+        }
+
+        private void advBandedGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                if (view.GetRowCellValue(view.FocusedRowHandle, view.FocusedColumn) != null && view.GetRowCellValue(view.FocusedRowHandle, view.FocusedColumn).ToString() != String.Empty)
+                    Clipboard.SetText(view.GetRowCellValue(view.FocusedRowHandle, view.FocusedColumn).ToString());
+                e.Handled = true;
             }
         }
     }

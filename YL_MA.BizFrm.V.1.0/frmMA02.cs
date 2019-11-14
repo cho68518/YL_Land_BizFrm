@@ -341,9 +341,11 @@ namespace YL_MA.BizFrm
                 string retVal = row["PICYESNO"].ToString();
 
                 if (retVal == "Y")
-                    e.Value = YL_MA.BizFrm.Properties.Resources.PictureBox_16x16;
+                    //e.Value = YL_MA.BizFrm.Properties.Resources.PictureBox_16x16;
+                    e.Value = "http://blog.snsdoma.net/files/domashop/gshop_00000002/gshop_00000002.jpg";
                 else
-                    e.Value = " ";
+                    //e.Value = " ";
+                    e.Value = "http://blog.snsdoma.net/files/domashop/gshop_00000002/gshop_00000002.jpg";
             }
         }
 
