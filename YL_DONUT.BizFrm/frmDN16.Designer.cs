@@ -734,6 +734,7 @@
             this.advBandedGridView1.Name = "advBandedGridView1";
             this.advBandedGridView1.OptionsView.ShowGroupPanel = false;
             this.advBandedGridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.AdvBandedGridView1_CustomUnboundColumnData);
+            this.advBandedGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.advBandedGridView1_KeyDown);
             // 
             // gridBand3
             // 

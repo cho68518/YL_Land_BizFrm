@@ -920,7 +920,7 @@ namespace YL_DONUT.BizFrm
                         //this.efwGridControl8.DataSource = ExcelDataBaseHelper.OpenFile(fileName);
 
                         this.efwGridControl8.MyGridView.BestFitColumns();
-                        lblCnt4.Text = string.Format("{0:#,###}", gridView5.DataRowCount.ToString());
+                        lblCnt4.Text = string.Format("{0:#,###}", gridView8.DataRowCount.ToString());
                     }
                 }
                 catch (Exception ex)
@@ -1242,5 +1242,172 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void btnGetExcel5_Click(object sender, EventArgs e)
+        {
+            //엑셀데이타 가져오기
+            openFileDialog1.DefaultExt = "xls";
+            openFileDialog1.FileName = "텔레콤_도넛_TD머니차감.xls";
+            openFileDialog1.Filter = "Excel97 - 2003 통합문서|*.xls";
+            openFileDialog1.Title = "엑셀데이터 가져오기";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    if (openFileDialog1.FileName != string.Empty)
+                    {
+                        string fileName = openFileDialog1.FileName;
+
+                        if (fileName.IndexOf("텔레콤_도넛_TD머니차감.xls") < 0)
+                        {
+                            MessageAgent.MessageShow(MessageType.Error, "엑셀파일명에 문제가 있습니다. 파일명을 확인하세요.");
+                            return;
+                        }
+
+                        this.efwGridControl10.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        //this.efwGridControl10.DataSource = ExcelDataBaseHelper.OpenFile(fileName);
+
+                        this.efwGridControl10.MyGridView.BestFitColumns();
+                        lblCnt5.Text = string.Format("{0:#,###}", gridView10.DataRowCount.ToString());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("엑셀 파일 드라이버가 잘못되었거나 엑셀파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void btnSave5_Click(object sender, EventArgs e)
+        {
+            //텔레콤_도넛_TD머니차감
+            if (gridView10.DataRowCount <= 0)
+            {
+                MessageAgent.MessageShow(MessageType.Error, "처리할 내역이 없습니다.");
+                return;
+            }
+
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                DialogResult drt = MessageAgent.MessageShow(MessageType.Confirm, "적립처리를 하시겠습니까?");
+
+                if (drt == DialogResult.OK)
+                {
+                    try
+                    {
+                        string strIN_DAY = DateTime.Now.ToString("yyyyMMdd");
+                        string smsg = string.Empty;
+                        string sfrom_id = string.Empty;
+                        string sto_id = string.Empty;
+                        string sname = string.Empty;
+                        string snickname = string.Empty;
+                        int namt = 0;
+                        string smemo = string.Empty;
+                        string sdate = string.Empty;
+                        string sfrom_type = string.Empty;
+                        string sto_type = string.Empty;
+                        string swork_type = string.Empty;
+                        string subject = string.Empty;
+
+                        TransactionPack tPack = new TransactionPack();
+                        TransactionPack tPack2 = new TransactionPack();
+
+                        for (int i = 0; i < gridView10.DataRowCount; i++)
+                        {
+                            // @fromID         (sender_id)   AdminYL, AdminTelecom, AdminYL, AdminLife, AdminDoma  ( = 차감)                                                                               
+                            // @toID	       (receiver_id)                                                       ( = 적립)                             
+                            // @fromType	   (from_type)                                                                                      
+                            // @toType	       (to_type)                                                                                        
+                            // @reqAmount	   (donut_count2)                                                                                   
+                            // @feeType	       (send_code)   Fee가 있는 경우 1 ( TRUE ), 없는경우 0 ( FALSE )                                         
+                            // @EventSystemID  (send_type)   EventSystemID : Telecom,DoToc,DonutToc,Shop,Show(장터),Blog,AD(광고),Movie,Charge(충전)
+                            // @EventID	       (contents_id2)                                                                                   
+                            // @EventComment   (contents_type2)                                                                                 
+                            // @EventEtc	   (mileage_message)                                                                                
+                            // @result
+
+                            swork_type = "04";
+                            subject = "[관리] 텔레콤 TD머니 임시차감";
+                            sfrom_type = "TD";
+                            sto_type = "TD";
+                            sfrom_id = gridView10.GetRowCellValue(i, gridView10.Columns[1]).ToString();
+                            sto_id = "AdminTelecom";
+                            sname = gridView10.GetRowCellValue(i, gridView10.Columns[2]).ToString();
+                            snickname = gridView10.GetRowCellValue(i, gridView10.Columns[3]).ToString();
+                            namt = Convert.ToInt32(gridView10.GetRowCellValue(i, gridView10.Columns[4]).ToString());
+                            smemo = gridView10.GetRowCellValue(i, gridView10.Columns[5]).ToString();
+                            sdate = gridView10.GetRowCellValue(i, gridView10.Columns[6]).ToString();
+
+                            //smsg = smemo + "(AD머니) : " + string.Format("{0:#,###}", namt) + "원";
+                            smsg = smemo;
+
+                            Console.WriteLine(sto_id);
+                            Console.WriteLine(sname);
+                            Console.WriteLine(snickname);
+                            Console.WriteLine(smemo);
+                            Console.WriteLine(smsg);
+                            Console.WriteLine("------------------------------------");
+
+
+                            tPack.Add("YEOYOU_MONEY.dbo.MONEY_ADD_PROC"
+                                    , sfrom_id
+                                    , sto_id
+                                    , sfrom_type
+                                    , sto_type
+                                    , namt
+                                    , 0
+                                    , "AdminCharge"
+                                    , "AdminCharge"
+                                    , subject
+                                    , smsg
+                                    , 0
+                                );
+
+                            tPack2.Add("YEOYOU_MONEY.dbo.USP_DN_DN12_SAVE_10"
+                                    , UserInfo.instance().UserId
+                                    , swork_type
+                                    , DateTime.Now.ToString("yyyyMMdd")
+                                    , DateTime.Now.ToString("yyyyMM")
+                                    , sto_id
+                                    , sname
+                                    , snickname
+                                    , namt
+                                    , sfrom_type
+                                    , sto_type
+                                    , subject
+                                    , smemo
+                                    , sdate
+                                );
+                        }
+                        ServiceAgent.ExecuteNoneQuery("CONIS_IBS", tPack);
+                        ServiceAgent.ExecuteNoneQuery("CONIS_IBS", tPack2);
+
+                        BtnHistoryQ4_Click(null, null);
+
+                        MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
+                        Cursor = Cursors.Default;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageAgent.MessageShow(MessageType.Error, ex.Message);
+                        Cursor = Cursors.Default;
+                        return;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor = Cursors.Default;
+            }
+        }
     }
 }

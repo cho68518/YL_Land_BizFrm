@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTest01));
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtImgName = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtGuId = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.btnGuId = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtFileName = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.btnUpload = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
@@ -58,10 +61,9 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet11 = new YL_DONUT.BizFrm.DataSet1();
-            this.btnGuId = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.txtGuId = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtImgName = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtImgName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGuId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFileName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -77,8 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGuId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtImgName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -109,6 +109,40 @@
             this.panel2.Size = new System.Drawing.Size(1309, 743);
             this.panel2.TabIndex = 3;
             // 
+            // txtImgName
+            // 
+            this.txtImgName.EditValue = "";
+            this.txtImgName.EditValue2 = null;
+            this.txtImgName.Location = new System.Drawing.Point(488, 590);
+            this.txtImgName.Name = "txtImgName";
+            this.txtImgName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtImgName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtImgName.RequireMessage = null;
+            this.txtImgName.Size = new System.Drawing.Size(544, 20);
+            this.txtImgName.TabIndex = 23;
+            // 
+            // txtGuId
+            // 
+            this.txtGuId.EditValue = "";
+            this.txtGuId.EditValue2 = null;
+            this.txtGuId.Location = new System.Drawing.Point(488, 541);
+            this.txtGuId.Name = "txtGuId";
+            this.txtGuId.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtGuId.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGuId.RequireMessage = null;
+            this.txtGuId.Size = new System.Drawing.Size(544, 20);
+            this.txtGuId.TabIndex = 22;
+            // 
+            // btnGuId
+            // 
+            this.btnGuId.IsMultiLang = false;
+            this.btnGuId.Location = new System.Drawing.Point(344, 536);
+            this.btnGuId.Name = "btnGuId";
+            this.btnGuId.Size = new System.Drawing.Size(123, 31);
+            this.btnGuId.TabIndex = 21;
+            this.btnGuId.Text = "GUID Get(UUID)";
+            this.btnGuId.Click += new System.EventHandler(this.btnGuId_Click);
+            // 
             // txtFileName
             // 
             this.txtFileName.EditValue = "";
@@ -135,18 +169,18 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo4;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
-            this.efwGridControl1.InsertServiceInfo = serviceInfo5;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
@@ -156,15 +190,15 @@
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.Size = new System.Drawing.Size(436, 243);
+            this.efwGridControl1.Size = new System.Drawing.Size(496, 104);
             this.efwGridControl1.TabIndex = 18;
             this.efwGridControl1.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo6;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -369,40 +403,6 @@
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnGuId
-            // 
-            this.btnGuId.IsMultiLang = false;
-            this.btnGuId.Location = new System.Drawing.Point(344, 536);
-            this.btnGuId.Name = "btnGuId";
-            this.btnGuId.Size = new System.Drawing.Size(123, 31);
-            this.btnGuId.TabIndex = 21;
-            this.btnGuId.Text = "GUID Get(UUID)";
-            this.btnGuId.Click += new System.EventHandler(this.btnGuId_Click);
-            // 
-            // txtGuId
-            // 
-            this.txtGuId.EditValue = "";
-            this.txtGuId.EditValue2 = null;
-            this.txtGuId.Location = new System.Drawing.Point(488, 541);
-            this.txtGuId.Name = "txtGuId";
-            this.txtGuId.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtGuId.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtGuId.RequireMessage = null;
-            this.txtGuId.Size = new System.Drawing.Size(544, 20);
-            this.txtGuId.TabIndex = 22;
-            // 
-            // txtImgName
-            // 
-            this.txtImgName.EditValue = "";
-            this.txtImgName.EditValue2 = null;
-            this.txtImgName.Location = new System.Drawing.Point(488, 590);
-            this.txtImgName.Name = "txtImgName";
-            this.txtImgName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtImgName.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtImgName.RequireMessage = null;
-            this.txtImgName.Size = new System.Drawing.Size(544, 20);
-            this.txtImgName.TabIndex = 23;
-            // 
             // frmTest01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -413,6 +413,8 @@
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtImgName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGuId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFileName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -428,8 +430,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGuId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtImgName.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
