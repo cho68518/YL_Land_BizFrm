@@ -369,7 +369,7 @@
             // rbShowType
             // 
             this.rbShowType.IsMultiLang = false;
-            this.rbShowType.Location = new System.Drawing.Point(437, 11);
+            this.rbShowType.Location = new System.Drawing.Point(619, 11);
             this.rbShowType.Name = "rbShowType";
             this.rbShowType.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbShowType.Properties.Appearance.Options.UseBackColor = true;
@@ -433,13 +433,13 @@
             this.txtPRODUCT_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPRODUCT_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPRODUCT_NAME.RequireMessage = null;
-            this.txtPRODUCT_NAME.Size = new System.Drawing.Size(139, 20);
+            this.txtPRODUCT_NAME.Size = new System.Drawing.Size(332, 20);
             this.txtPRODUCT_NAME.TabIndex = 0;
             this.txtPRODUCT_NAME.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPRODUCT_NAME_KeyDown);
             // 
             // cbG_Prod
             // 
-            this.cbG_Prod.Location = new System.Drawing.Point(661, 17);
+            this.cbG_Prod.Location = new System.Drawing.Point(843, 17);
             this.cbG_Prod.Name = "cbG_Prod";
             this.cbG_Prod.Properties.Caption = "G 제품";
             this.cbG_Prod.Properties.ValueChecked = "1";

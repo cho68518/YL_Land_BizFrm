@@ -22,6 +22,9 @@ namespace YL_MM.BizFrm
     public partial class frmMM03_Pop01 : FrmPopUpBase
     {
         public int Id { get; set; }
+
+        frmMM03_Pop02 popup;
+
         public frmMM03_Pop01()
         {
             InitializeComponent();
@@ -576,7 +579,8 @@ namespace YL_MM.BizFrm
                         cmd.Parameters["o_pc_use_type"].Direction = ParameterDirection.Output;
 
 
-
+                        cmd.Parameters.Add(new MySqlParameter("o_shops_type", MySqlDbType.VarChar));
+                        cmd.Parameters["o_shops_type"].Direction = ParameterDirection.Output;
 
                         cmd.ExecuteNonQuery();
 
@@ -641,6 +645,7 @@ namespace YL_MM.BizFrm
                         picPc_Thumbnail.LoadAsync(cmd.Parameters["o_pc_thumbnail"].Value.ToString());
                         rbPC_Use_Type.EditValue = cmd.Parameters["o_pc_use_type"].Value.ToString();
                         txtPC_Content.EditValue = cmd.Parameters["o_pc_content"].Value.ToString();
+                        cmbShops_Type.EditValue = cmd.Parameters["o_shops_type"].Value.ToString();
 
                         Open2();
                         // 전사 상거래 상세 내용
@@ -777,5 +782,52 @@ namespace YL_MM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+
+        private void picP_IMG_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("1");
+        }
+
+
+
+        private void picP_IMG2_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("2");
+        }
+
+        private void picP_CONTENTS_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("3");
+        }
+
+        private void picPc_Thumbnail_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("4");
+        }
+        private void OpenDlg(string s1)
+        {
+            popup = new frmMM03_Pop02();
+            //popup.Owner = this;
+
+            if (s1 == "1")
+                popup.pURL = txtP_Img.Text;
+            else if (s1 == "2")
+                popup.pURL = txtP_Img2.Text;
+            else if (s1 == "3")
+                popup.pURL = txtP_Contents.Text;
+            else if (s1 == "4")
+                popup.pURL = txtPc_Thumbnail.Text;
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            //OpenTag(gfloorInfo.FLR, "LDT");
+            popup = null;
+        }
+
     }
 }

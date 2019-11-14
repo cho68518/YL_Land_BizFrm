@@ -62,13 +62,13 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.txtP_Contents = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtP_Img2 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtP_Img = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwGridControl2 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtP_Contents = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtP_Img2 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtP_Img = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtP_Id = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtC_Code4 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtC_Code3 = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -189,11 +189,11 @@
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Contents.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Img2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Img.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code3.Properties)).BeginInit();
@@ -322,39 +322,6 @@
             this.efwGroupControl1.TabIndex = 10;
             this.efwGroupControl1.Text = "1. 상품 정보";
             // 
-            // txtP_Contents
-            // 
-            this.txtP_Contents.EditValue2 = null;
-            this.txtP_Contents.Location = new System.Drawing.Point(1035, 58);
-            this.txtP_Contents.Name = "txtP_Contents";
-            this.txtP_Contents.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtP_Contents.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtP_Contents.RequireMessage = null;
-            this.txtP_Contents.Size = new System.Drawing.Size(61, 20);
-            this.txtP_Contents.TabIndex = 56;
-            // 
-            // txtP_Img2
-            // 
-            this.txtP_Img2.EditValue2 = null;
-            this.txtP_Img2.Location = new System.Drawing.Point(971, 58);
-            this.txtP_Img2.Name = "txtP_Img2";
-            this.txtP_Img2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtP_Img2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtP_Img2.RequireMessage = null;
-            this.txtP_Img2.Size = new System.Drawing.Size(61, 20);
-            this.txtP_Img2.TabIndex = 55;
-            // 
-            // txtP_Img
-            // 
-            this.txtP_Img.EditValue2 = null;
-            this.txtP_Img.Location = new System.Drawing.Point(907, 58);
-            this.txtP_Img.Name = "txtP_Img";
-            this.txtP_Img.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtP_Img.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtP_Img.RequireMessage = null;
-            this.txtP_Img.Size = new System.Drawing.Size(61, 20);
-            this.txtP_Img.TabIndex = 54;
-            // 
             // efwGridControl2
             // 
             this.efwGridControl2.BindSet = null;
@@ -419,6 +386,39 @@
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 1;
             this.gridColumn17.Width = 150;
+            // 
+            // txtP_Contents
+            // 
+            this.txtP_Contents.EditValue2 = null;
+            this.txtP_Contents.Location = new System.Drawing.Point(1035, 58);
+            this.txtP_Contents.Name = "txtP_Contents";
+            this.txtP_Contents.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_Contents.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Contents.RequireMessage = null;
+            this.txtP_Contents.Size = new System.Drawing.Size(61, 20);
+            this.txtP_Contents.TabIndex = 56;
+            // 
+            // txtP_Img2
+            // 
+            this.txtP_Img2.EditValue2 = null;
+            this.txtP_Img2.Location = new System.Drawing.Point(971, 58);
+            this.txtP_Img2.Name = "txtP_Img2";
+            this.txtP_Img2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_Img2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Img2.RequireMessage = null;
+            this.txtP_Img2.Size = new System.Drawing.Size(61, 20);
+            this.txtP_Img2.TabIndex = 55;
+            // 
+            // txtP_Img
+            // 
+            this.txtP_Img.EditValue2 = null;
+            this.txtP_Img.Location = new System.Drawing.Point(907, 58);
+            this.txtP_Img.Name = "txtP_Img";
+            this.txtP_Img.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_Img.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Img.RequireMessage = null;
+            this.txtP_Img.Size = new System.Drawing.Size(61, 20);
+            this.txtP_Img.TabIndex = 54;
             // 
             // txtP_Id
             // 
@@ -767,6 +767,7 @@
             this.picP_CONTENTS.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picP_CONTENTS.Size = new System.Drawing.Size(174, 141);
             this.picP_CONTENTS.TabIndex = 25;
+            this.picP_CONTENTS.DoubleClick += new System.EventHandler(this.picP_CONTENTS_DoubleClick);
             // 
             // efwLabel11
             // 
@@ -787,6 +788,7 @@
             this.picP_IMG2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picP_IMG2.Size = new System.Drawing.Size(174, 141);
             this.picP_IMG2.TabIndex = 23;
+            this.picP_IMG2.DoubleClick += new System.EventHandler(this.picP_IMG2_DoubleClick);
             // 
             // btnFileOpen
             // 
@@ -818,6 +820,7 @@
             this.picP_IMG.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picP_IMG.Size = new System.Drawing.Size(174, 141);
             this.picP_IMG.TabIndex = 20;
+            this.picP_IMG.DoubleClick += new System.EventHandler(this.picP_IMG_DoubleClick);
             // 
             // txtP_Name
             // 
@@ -1966,6 +1969,7 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.Size = new System.Drawing.Size(174, 141);
             this.picPc_Thumbnail.TabIndex = 48;
+            this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
             // frmMM03_Pop01
             // 
@@ -1986,11 +1990,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Contents.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Img2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Img.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code3.Properties)).EndInit();

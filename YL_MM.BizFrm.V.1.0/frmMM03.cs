@@ -10,6 +10,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -95,7 +96,6 @@ namespace YL_MM.BizFrm
 
         #endregion
 
-
         public override void Search()
         {
             try
@@ -137,6 +137,8 @@ namespace YL_MM.BizFrm
                             //  this.efwGridControl1.MyGridView.BestFitColumns();
                         }
                     }
+
+
                 }
             }
             catch (Exception ex)
@@ -146,7 +148,9 @@ namespace YL_MM.BizFrm
         }
 
 
-        private void BtnDispYes_Click(object sender, EventArgs e)
+
+
+    private void BtnDispYes_Click(object sender, EventArgs e)
         {
 
             popup = new frmMM03_Pop01();
