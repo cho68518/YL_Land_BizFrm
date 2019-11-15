@@ -11,6 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web.Script.Serialization;
+using Tamir.SharpSsh;
+using Tamir.Streams;
+using DevExpress.Utils.OAuth.Provider;
 
 namespace YL_MM.BizFrm
 {
@@ -91,6 +94,35 @@ namespace YL_MM.BizFrm
             }
 
 
+        }
+
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sftpURL = "14.63.165.36";
+                string sUserName = "root";
+                string sPassword = "@dhkdldpf2!";
+                int nPort = 22023;
+                string sftpDirectory = "/domalifefiles/files/product/domamall";
+
+                // 저장 경로 
+                
+                string LocalDirectory = "D:\\temp"; //Local directory from where the files will be uploaded
+                string FileName = "test1.jpg";    //File name, which one will be uploaded
+                 
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+                
+                
+                sSftp.Connect(nPort);
+               // sSftp.Mkdir("/domalifefiles/files/product/domamall/temp");
+                sSftp.Put(LocalDirectory + "/" + FileName, sftpDirectory + "/" + FileName);
+                sSftp.Close();
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
     }
 }

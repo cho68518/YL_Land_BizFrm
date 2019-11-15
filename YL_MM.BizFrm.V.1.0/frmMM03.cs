@@ -15,6 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YL_MM.BizFrm.Dlg;
+using DevExpress.XtraGrid.Columns;
 
 namespace YL_MM.BizFrm
 {
@@ -35,8 +36,29 @@ namespace YL_MM.BizFrm
             //폼명설정
             this.FrmName = "제품코드";
 
+
+            //var riPicEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            //riPicEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+
+            //GridColumn images = gridView1.Columns.AddField("Image");
+            //images.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            //images.Visible = true;
+            //images.ColumnEdit = riPicEdit;
+
+            //gridView1.Columns["ImageURL"].Visible = true;
+
+            ////gridView1.Columns["ImageURL"].OptionsColumn.FixedWidth = false;
+            //gridView1.Columns["ImageURL"].Width = 500;
+            //gridView1.RowHeight = 100;
+
+            gridView1.CustomUnboundColumnData += gridView1_CustomUnboundColumnData;
+
+
             //UserInfo.instance().ORG_CD;
         }
+
+
+
         #endregion
 
         #region FrmLoadEvent()
@@ -44,6 +66,8 @@ namespace YL_MM.BizFrm
         {
             base.FrmLoadEvent();
             DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Skin;
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Black");
 
             this.IsMenuVw = true;
             this.IsSearch = true;
@@ -55,22 +79,34 @@ namespace YL_MM.BizFrm
             this.IsExcel = false;
 
             gridView1.OptionsView.ShowFooter = true;
-
-       //     this.efwGridControl1.BindControlSet(
-       //     new ColumnControlSet("c_code1", txtC_Code1)
-
-       //);
-
-            //this.efwGridControl1.Click += efwGridControl1_Click;
-
             rbShowType.EditValue = "T";
-
             SetCmb();
         
         }
 
 
-           private void SetCmb()
+        void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+
+            DataRow dr = (e.Row as DataRowView).Row;
+            string url = dr["ImageURL"].ToString();
+            if (iconsCache.ContainsKey(url))
+            {
+                e.Value = iconsCache[url];
+                return;
+            }
+            var request = WebRequest.Create(url);
+            using (var response = request.GetResponse())
+            {
+                using (var stream = response.GetResponseStream())
+                {
+                    e.Value = Bitmap.FromStream(stream);
+                    iconsCache.Add(url, (Bitmap)e.Value);
+                }
+            }
+        }
+
+        private void SetCmb()
         {
             // 공급자구분
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
@@ -141,16 +177,18 @@ namespace YL_MM.BizFrm
 
                 }
             }
+
+
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
 
+        Dictionary<String, Bitmap> iconsCache = new Dictionary<string, Bitmap>();
 
 
-
-    private void BtnDispYes_Click(object sender, EventArgs e)
+        private void BtnDispYes_Click(object sender, EventArgs e)
         {
 
             popup = new frmMM03_Pop01();

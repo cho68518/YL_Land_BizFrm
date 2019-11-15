@@ -30,6 +30,7 @@
         {
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwTextEdit1 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,16 +55,28 @@
             this.efwTextEdit1.Size = new System.Drawing.Size(541, 20);
             this.efwTextEdit1.TabIndex = 3;
             // 
+            // efwSimpleButton2
+            // 
+            this.efwSimpleButton2.IsMultiLang = false;
+            this.efwSimpleButton2.Location = new System.Drawing.Point(93, 219);
+            this.efwSimpleButton2.Name = "efwSimpleButton2";
+            this.efwSimpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.efwSimpleButton2.TabIndex = 4;
+            this.efwSimpleButton2.Text = "SFTP TEST";
+            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
+            // 
             // frmTest02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.efwSimpleButton2);
             this.Controls.Add(this.efwTextEdit1);
             this.Controls.Add(this.efwSimpleButton1);
             this.Name = "frmTest02";
             this.Size = new System.Drawing.Size(1040, 611);
             this.Controls.SetChildIndex(this.efwSimpleButton1, 0);
             this.Controls.SetChildIndex(this.efwTextEdit1, 0);
+            this.Controls.SetChildIndex(this.efwSimpleButton2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -73,5 +86,6 @@
 
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
         private Easy.Framework.WinForm.Control.efwTextEdit efwTextEdit1;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
     }
 }
