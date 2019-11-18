@@ -107,12 +107,11 @@ namespace YL_MM.BizFrm
                 string sftpDirectory = "/domalifefiles/files/product/domamall";
 
                 // 저장 경로 
-                
+
                 string LocalDirectory = "D:\\temp"; //Local directory from where the files will be uploaded
                 string FileName = "test1.jpg";    //File name, which one will be uploaded
                  
                 Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
-                
                 
                 sSftp.Connect(nPort);
                // sSftp.Mkdir("/domalifefiles/files/product/domamall/temp");

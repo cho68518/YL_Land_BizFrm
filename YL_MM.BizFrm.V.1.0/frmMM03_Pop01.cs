@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraTreeList;
 using Easy.Framework.Common;
+using Easy.Framework.Common.PopUp;
 using Easy.Framework.SrvCommon;
 using Easy.Framework.WinForm.Control;
 using MySql.Data.MySqlClient;
@@ -278,12 +279,13 @@ namespace YL_MM.BizFrm
 
         private void cmbCate_Code1_EditValueChanged(object sender, EventArgs e)
         {
-            string sCate_Code1 = cmbCate_Code1.EditValue.ToString();
+            
 
             if (this.cmbCate_Code1.EditValue == null)
             {
                 return;
             }
+            string sCate_Code1 = cmbCate_Code1.EditValue.ToString();
 
             cmbCate_Code2.Properties.DataSource = null;
             cmbCate_Code3.Properties.DataSource = null;
@@ -603,7 +605,7 @@ namespace YL_MM.BizFrm
                         cmbP_Show_Type.EditValue = cmd.Parameters["o_show_type"].Value.ToString();
                         cmbP_Chef_Level.EditValue = cmd.Parameters["o_chef_level"].Value.ToString();
                         cmbP_Sell_Type.EditValue = cmd.Parameters["o_sell_type"].Value.ToString();
-                        cmbP_Max_Send_Num.EditValue = cmd.Parameters["o_max_send_num"].Value.ToString();
+                        txtP_Max_Send_Num.EditValue = cmd.Parameters["o_max_send_num"].Value.ToString();
                         cmbP_EC_Code.EditValue = cmd.Parameters["o_ec_code"].Value.ToString();
 
                         txtP_Img.EditValue = cmd.Parameters["o_p_img"].Value.ToString();
@@ -827,6 +829,483 @@ namespace YL_MM.BizFrm
 
             //OpenTag(gfloorInfo.FLR, "LDT");
             popup = null;
+        }
+
+        private void btnFileOpen1_Click(object sender, EventArgs e)
+        { 
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    txtPicPath1.EditValue = openFileDialog.FileName;
+                    picP_IMG.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+                
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+            }
+
+        }
+        private void btnFileOpen1_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    txtPicPath1.EditValue = openFileDialog.FileName;
+                    picP_IMG.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void btnFileOpen2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    txtPicPath2.EditValue = openFileDialog.FileName;
+                    picP_IMG2.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void btnFileOpen3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    txtPicPath3.EditValue = openFileDialog.FileName;
+                    picP_CONTENTS.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void btnFileOpen4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    txtPicPath4.EditValue = openFileDialog.FileName;
+                    picPc_Thumbnail.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void bthNew_Click(object sender, EventArgs e)
+        {
+            cmbShops_Type.EditValue = "0";
+
+            cmbCate_Code1.Properties.DataSource = null;
+            cmbCate_Code2.Properties.DataSource = null;
+            cmbCate_Code3.Properties.DataSource = null;
+            cmbCate_Code4.Properties.DataSource = null;
+            cmbCate_Code1.EditValue = "0";
+            cmbCate_Code2.EditValue = "0";
+            cmbCate_Code3.EditValue = "0";
+            cmbCate_Code4.EditValue = "0";
+
+
+            txtP_Id.EditValue = null;
+            txtC_Code1.EditValue = null;
+            txtC_Code2.EditValue = null;
+            txtC_Code3.EditValue = null;
+            txtC_Code4.EditValue = null;
+            txtP_Img.EditValue = null;
+            txtP_Img2.EditValue = null;
+            txtP_Contents.EditValue = null;
+            txtPc_Thumbnail.EditValue = null;
+            txtPicPath1.EditValue = null;
+            txtPicPath2.EditValue = null;
+            txtPicPath3.EditValue = null;
+            txtPicPath4.EditValue = null;
+
+            txtP_Code.EditValue = null;
+            txtP_Min_Purchase_Num.EditValue = null;
+            txtP_Multi_Discount_Cost.EditValue = null;
+            txtP_Max_Purchase_Num.EditValue = null;
+            rbP_Compare_Type.EditValue = "T";
+            txtP_Compare_Text.EditValue = null;
+            cmbP_Show_Type.EditValue = "0";
+            cmbP_Sell_Type.EditValue = "0";
+            cmbP_Chef_Level.EditValue = "0";
+            txtP_Max_Send_Num.EditValue = "0";
+            cmbP_EC_Code.EditValue = "0";
+
+            picP_IMG.EditValue = null;
+            picP_IMG2.EditValue = null;
+            picP_CONTENTS.EditValue = null;
+            picPc_Thumbnail.EditValue = null;
+
+            txtP_Delivery_Price.EditValue = null;
+            cmbP_Delivery_Type.EditValue = "0";
+            txtBasic_Price.EditValue = null;
+            txtVip_Price.EditValue = null;
+            txtPs_Oper_Price.EditValue = null;
+            cmbP_PS_Num.EditValue = "0";
+            cmbP_Taxation.EditValue = "0";
+            txtP_Org_Price.EditValue = null;
+            txtDiscount_Price.EditValue = null;
+
+            cbP_Discount_Donut1.EditValue = null;
+            cbP_Discount_Donut2.EditValue = null;
+            cbP_Discount_Donut3.EditValue = null;
+            rbPrice_Show_Type.EditValue = "1";
+
+            txtRefunds_DM.EditValue = null;
+            txtRefunds_GD.EditValue = null;
+            txtRefunds_TD.EditValue = null;
+            txtRefunds_GM.EditValue = null;
+            txtRefunds_GF.EditValue = null;
+            txtRefunds_AS.EditValue = null;
+            txtRefunds_CG.EditValue = null;
+            txtRefunds_CR.EditValue = null;
+
+            txtPC_Title.EditValue = null;
+            rbPC_Use_Type.EditValue = 'Y';
+            txtPC_Content.EditValue = null;
+
+            gridView1.Columns.Clear();
+            gridView2.Columns.Clear();
+
+
+            SetCmb();
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            // 필수항목 CHECK
+
+            if (string.IsNullOrEmpty(this.txtP_Name.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "상품명을 입력하세요!");
+                txtP_Name.Focus();
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Shops_Type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Shops_Type"].Value = cmbShops_Type.EditValue;
+                            cmd.Parameters["i_Shops_Type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Cate_Code1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Cate_Code1"].Value = cmbCate_Code1.EditValue;
+                            cmd.Parameters["i_Cate_Code1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Cate_Code2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Cate_Code2"].Value = cmbCate_Code2.EditValue;
+                            cmd.Parameters["i_Cate_Code2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Cate_Code3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Cate_Code3"].Value = cmbCate_Code3.EditValue;
+                            cmd.Parameters["i_Cate_Code3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Cate_Code4", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Cate_Code4"].Value = cmbCate_Code4.EditValue;
+                            cmd.Parameters["i_Cate_Code4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Id", MySqlDbType.Int32));
+                            cmd.Parameters["i_P_Id"].Value = Convert.ToInt32(txtP_Id.EditValue);
+                            cmd.Parameters["i_P_Id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_C_Code1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_C_Code1"].Value = txtC_Code1.EditValue;
+                            cmd.Parameters["i_C_Code1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_C_Code2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_C_Code2"].Value = txtC_Code2.EditValue;
+                            cmd.Parameters["i_C_Code2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_C_Code3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_C_Code3"].Value = txtC_Code3.EditValue;
+                            cmd.Parameters["i_C_Code3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_C_Code4", MySqlDbType.VarChar));
+                            cmd.Parameters["i_C_Code4"].Value = txtC_Code4.EditValue;
+                            cmd.Parameters["i_C_Code4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Img", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Img"].Value = txtP_Img.EditValue;
+                            cmd.Parameters["i_P_Img"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Img2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Img2"].Value = txtP_Img2.EditValue;
+                            cmd.Parameters["i_P_Img2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Contents", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Contents"].Value = txtP_Contents.EditValue;
+                            cmd.Parameters["i_P_Contents"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Pc_Thumbnail", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Pc_Thumbnail"].Value = txtPc_Thumbnail.EditValue;
+                            cmd.Parameters["i_Pc_Thumbnail"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_PicPath1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_PicPath1"].Value = txtPicPath1.EditValue;
+                            cmd.Parameters["i_PicPath1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_PicPath2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_PicPath2"].Value = txtPicPath2.EditValue;
+                            cmd.Parameters["i_PicPath2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_PicPath3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_PicPath3"].Value = txtPicPath3.EditValue;
+                            cmd.Parameters["i_PicPath3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_PicPath4", MySqlDbType.VarChar));
+                            cmd.Parameters["i_PicPath4"].Value = txtPicPath4.EditValue;
+                            cmd.Parameters["i_PicPath4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Code"].Value = txtP_Code.EditValue;
+                            cmd.Parameters["i_P_Code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Min_Purchase_Num", MySqlDbType.Int32));
+                            cmd.Parameters["i_P_Min_Purchase_Num"].Value = Convert.ToInt32(txtP_Min_Purchase_Num.EditValue);
+                            cmd.Parameters["i_P_Min_Purchase_Num"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Multi_Discount_Cost", MySqlDbType.Int32));
+                            cmd.Parameters["i_P_Multi_Discount_Cost"].Value = Convert.ToInt32(txtP_Multi_Discount_Cost.EditValue);
+                            cmd.Parameters["i_P_Multi_Discount_Cost"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Max_Purchase_Num", MySqlDbType.Int32));
+                            cmd.Parameters["i_P_Max_Purchase_Num"].Value = Convert.ToInt32(txtP_Max_Purchase_Num.EditValue);
+                            cmd.Parameters["i_P_Max_Purchase_Num"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Compare_Type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Compare_Type"].Value = rbP_Compare_Type.EditValue;
+                            cmd.Parameters["i_P_Compare_Type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Compare_Text", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Compare_Text"].Value = txtP_Compare_Text.EditValue;
+                            cmd.Parameters["i_P_Compare_Text"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Show_Type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Show_Type"].Value = cmbP_Show_Type.EditValue;
+                            cmd.Parameters["i_P_Show_Type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Sell_Type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Sell_Type"].Value = cmbP_Sell_Type.EditValue;
+                            cmd.Parameters["i_P_Sell_Type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Chef_Level", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Chef_Level"].Value = cmbP_Chef_Level.EditValue;
+                            cmd.Parameters["i_P_Chef_Level"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Max_Send_Num", MySqlDbType.Int32));
+                            cmd.Parameters["i_P_Max_Send_Num"].Value = Convert.ToInt32(txtP_Max_Send_Num.EditValue);
+                            cmd.Parameters["i_P_Max_Send_Num"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_EC_Code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_EC_Code"].Value = cmbP_EC_Code.EditValue;
+                            cmd.Parameters["i_P_EC_Code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Delivery_Price", MySqlDbType.Int32));
+                            cmd.Parameters["i_P_Delivery_Price"].Value = Convert.ToInt32(txtP_Delivery_Price.EditValue);
+                            cmd.Parameters["i_P_Delivery_Price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Delivery_Type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Delivery_Type"].Value = cmbP_Delivery_Type.EditValue;
+                            cmd.Parameters["i_P_Delivery_Type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Basic_Price", MySqlDbType.Int32));
+                            cmd.Parameters["i_Basic_Price"].Value = Convert.ToInt32(txtBasic_Price.EditValue);
+                            cmd.Parameters["i_Basic_Price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Vip_Price", MySqlDbType.Int32));
+                            cmd.Parameters["i_Vip_Price"].Value = Convert.ToInt32(txtVip_Price.EditValue);
+                            cmd.Parameters["i_Vip_Price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Ps_Oper_Price", MySqlDbType.Int32));
+                            cmd.Parameters["i_Ps_Oper_Price"].Value = Convert.ToInt32(txtPs_Oper_Price.EditValue);
+                            cmd.Parameters["i_Ps_Oper_Price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_PS_Num", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_PS_Num"].Value = cmbP_PS_Num.EditValue;
+                            cmd.Parameters["i_P_PS_Num"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Taxation", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Taxation"].Value = cmbP_Taxation.EditValue;
+                            cmd.Parameters["i_P_Taxation"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Org_Price", MySqlDbType.Int32));
+                            cmd.Parameters["i_P_Org_Price"].Value = Convert.ToInt32(txtP_Org_Price.EditValue);
+                            cmd.Parameters["i_P_Org_Price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Discount_Price", MySqlDbType.Int32));
+                            cmd.Parameters["i_Discount_Price"].Value = Convert.ToInt32(txtDiscount_Price.EditValue);
+                            cmd.Parameters["i_Discount_Price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Discount_Donut1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Discount_Donut1"].Value = cbP_Discount_Donut1.EditValue;
+                            cmd.Parameters["i_P_Discount_Donut1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Discount_Donut2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Discount_Donut2"].Value = cbP_Discount_Donut2.EditValue;
+                            cmd.Parameters["i_P_Discount_Donut2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Discount_Donut3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Discount_Donut3"].Value = cbP_Discount_Donut3.EditValue;
+                            cmd.Parameters["i_P_Discount_Donut3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Price_Show_Type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Price_Show_Type"].Value = rbPrice_Show_Type.EditValue;
+                            cmd.Parameters["i_Price_Show_Type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Refunds_DM", MySqlDbType.Int32));
+                            cmd.Parameters["i_Refunds_DM"].Value = Convert.ToInt32(txtRefunds_DM.EditValue);
+                            cmd.Parameters["i_Refunds_DM"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Refunds_GD", MySqlDbType.Int32));
+                            cmd.Parameters["i_Refunds_GD"].Value = Convert.ToInt32(txtRefunds_GD.EditValue);
+                            cmd.Parameters["i_Refunds_GD"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Refunds_TD", MySqlDbType.Int32));
+                            cmd.Parameters["i_Refunds_TD"].Value = Convert.ToInt32(txtRefunds_TD.EditValue);
+                            cmd.Parameters["i_Refunds_TD"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Refunds_GM", MySqlDbType.Int32));
+                            cmd.Parameters["i_Refunds_GM"].Value = Convert.ToInt32(txtRefunds_GM.EditValue);
+                            cmd.Parameters["i_Refunds_GM"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Refunds_GF", MySqlDbType.Int32));
+                            cmd.Parameters["i_Refunds_GF"].Value = Convert.ToInt32(txtRefunds_GF.EditValue);
+                            cmd.Parameters["i_Refunds_GF"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Refunds_AS", MySqlDbType.Int32));
+                            cmd.Parameters["i_Refunds_AS"].Value = Convert.ToInt32(txtRefunds_AS.EditValue);
+                            cmd.Parameters["i_Refunds_AS"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Refunds_CG", MySqlDbType.Int32));
+                            cmd.Parameters["i_Refunds_CG"].Value = Convert.ToInt32(txtRefunds_CG.EditValue);
+                            cmd.Parameters["i_Refunds_CG"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Refunds_CR", MySqlDbType.Int32));
+                            cmd.Parameters["i_Refunds_CR"].Value = Convert.ToInt32(txtRefunds_CR.EditValue);
+                            cmd.Parameters["i_Refunds_CR"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_PC_Title", MySqlDbType.VarChar));
+                            cmd.Parameters["i_PC_Title"].Value = txtPC_Title.EditValue;
+                            cmd.Parameters["i_PC_Title"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_PC_Use_Type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_PC_Use_Type"].Value = rbPC_Use_Type.EditValue;
+                            cmd.Parameters["i_PC_Use_Type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_PC_Content", MySqlDbType.VarChar));
+                            cmd.Parameters["i_PC_Content"].Value = txtPC_Content.EditValue;
+                            cmd.Parameters["i_PC_Content"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+
+            }
         }
 
     }

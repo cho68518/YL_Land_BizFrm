@@ -87,23 +87,32 @@ namespace YL_MM.BizFrm
 
         void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
-
-            DataRow dr = (e.Row as DataRowView).Row;
-            string url = dr["ImageURL"].ToString();
-            if (iconsCache.ContainsKey(url))
+            try
             {
-                e.Value = iconsCache[url];
-                return;
-            }
-            var request = WebRequest.Create(url);
-            using (var response = request.GetResponse())
-            {
-                using (var stream = response.GetResponseStream())
+                DataRow dr = (e.Row as DataRowView).Row;
+                string url = dr["ImageURL"].ToString();
+                if (iconsCache.ContainsKey(url))
                 {
-                    e.Value = Bitmap.FromStream(stream);
-                    iconsCache.Add(url, (Bitmap)e.Value);
+                    e.Value = iconsCache[url];
+                    return;
                 }
+                var request = WebRequest.Create(url);
+               
+                using (var response = request.GetResponse())
+                {
+                    using (var stream = response.GetResponseStream())
+                    {
+                        e.Value = Bitmap.FromStream(stream);
+                        iconsCache.Add(url, (Bitmap)e.Value);
+                    }
+                }
+                
             }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
         }
 
         private void SetCmb()
@@ -206,10 +215,7 @@ namespace YL_MM.BizFrm
             popup = null;
         }
 
-        private void efwGridControl1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
 
