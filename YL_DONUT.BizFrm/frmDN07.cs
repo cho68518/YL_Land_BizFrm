@@ -180,36 +180,58 @@ namespace YL_DONUT.BizFrm
 
             //MessageBox.Show(string.Format("{0}: {1}", wstory_id, wcategory_no));
 
-            if (wcategory_no != "240" && wcategory_no != "205" && wcategory_no != "223")
-            {
-                MessageAgent.MessageShow(MessageType.Error, "상세보기는 PR상담스토리, PR후기스토리, PR등록스토리만 보실 수 있습니다!");
-                return;
-            }
-            else
-            {
-                popup = new frmDN07_Pop01();
-                //popup.Owner = this;
-                popup.pSTORY_ID = nstory_id;
-                popup.pLATITUDE = gridView1.GetFocusedRowCellValue("latitude").ToString();
-                popup.pLONGITUDE = gridView1.GetFocusedRowCellValue("longitude").ToString();
-                popup.pNICKNAME = gridView1.GetFocusedRowCellValue("u_nickname").ToString();
-                popup.pNAME = gridView1.GetFocusedRowCellValue("u_name").ToString();
-                popup.pLOGIN_ID = gridView1.GetFocusedRowCellValue("u_login_id").ToString();
-                popup.pSTORY_NAME = gridView1.GetFocusedRowCellValue("story_name").ToString();
-                popup.pREG_DATE = gridView1.GetFocusedRowCellValue("reg_date").ToString();
-                popup.pPR_NAME = gridView1.GetFocusedRowCellValue("pr_name").ToString();
-                popup.pPR_NAVER_NAME = gridView1.GetFocusedRowCellValue("pr_naver_name").ToString();
-                popup.pPR_CELL_NUM = gridView1.GetFocusedRowCellValue("pr_cell_num").ToString();
-                popup.pPR_JIBUN_ADDR = gridView1.GetFocusedRowCellValue("pr_jibun_addr").ToString();
-                popup.pPR_ROAD_ADDR = gridView1.GetFocusedRowCellValue("pr_road_addr").ToString();
-                popup.pCONTENTS = gridView1.GetFocusedRowCellValue("contents").ToString();
-                popup.pWK_HAN = gridView1.GetFocusedRowCellValue("wk_han").ToString();
-                popup.pCHEF_LEVEL = gridView1.GetFocusedRowCellValue("u_chef_level").ToString();
-                popup.pIS_USE = gridView1.GetFocusedRowCellValue("is_use").ToString();
+            //if (wcategory_no != "240" && wcategory_no != "205" && wcategory_no != "223")
+            //{
+            //    MessageAgent.MessageShow(MessageType.Error, "상세보기는 PR상담스토리, PR후기스토리, PR등록스토리만 보실 수 있습니다!");
+            //    return;
+            //}
+            //else
+            //{
+            //    popup = new frmDN07_Pop01();
+            //    popup.Owner = this;
+            //    popup.pSTORY_ID = nstory_id;
+            //    popup.pLATITUDE = gridView1.GetFocusedRowCellValue("latitude").ToString();
+            //    popup.pLONGITUDE = gridView1.GetFocusedRowCellValue("longitude").ToString();
+            //    popup.pNICKNAME = gridView1.GetFocusedRowCellValue("u_nickname").ToString();
+            //    popup.pNAME = gridView1.GetFocusedRowCellValue("u_name").ToString();
+            //    popup.pLOGIN_ID = gridView1.GetFocusedRowCellValue("u_login_id").ToString();
+            //    popup.pSTORY_NAME = gridView1.GetFocusedRowCellValue("story_name").ToString();
+            //    popup.pREG_DATE = gridView1.GetFocusedRowCellValue("reg_date").ToString();
+            //    popup.pPR_NAME = gridView1.GetFocusedRowCellValue("pr_name").ToString();
+            //    popup.pPR_NAVER_NAME = gridView1.GetFocusedRowCellValue("pr_naver_name").ToString();
+            //    popup.pPR_CELL_NUM = gridView1.GetFocusedRowCellValue("pr_cell_num").ToString();
+            //    popup.pPR_JIBUN_ADDR = gridView1.GetFocusedRowCellValue("pr_jibun_addr").ToString();
+            //    popup.pPR_ROAD_ADDR = gridView1.GetFocusedRowCellValue("pr_road_addr").ToString();
+            //    popup.pCONTENTS = gridView1.GetFocusedRowCellValue("contents").ToString();
+            //    popup.pWK_HAN = gridView1.GetFocusedRowCellValue("wk_han").ToString();
+            //    popup.pCHEF_LEVEL = gridView1.GetFocusedRowCellValue("u_chef_level").ToString();
+            //    popup.pIS_USE = gridView1.GetFocusedRowCellValue("is_use").ToString();
 
-                popup.FormClosed += popup_FormClosed;
-                popup.ShowDialog();
-            }
+            //    popup.FormClosed += popup_FormClosed;
+            //    popup.ShowDialog();
+            //}
+            popup = new frmDN07_Pop01();
+            //popup.Owner = this;
+            popup.pSTORY_ID = nstory_id;
+            popup.pLATITUDE = gridView1.GetFocusedRowCellValue("latitude").ToString();
+            popup.pLONGITUDE = gridView1.GetFocusedRowCellValue("longitude").ToString();
+            popup.pNICKNAME = gridView1.GetFocusedRowCellValue("u_nickname").ToString();
+            popup.pNAME = gridView1.GetFocusedRowCellValue("u_name").ToString();
+            popup.pLOGIN_ID = gridView1.GetFocusedRowCellValue("u_login_id").ToString();
+            popup.pSTORY_NAME = gridView1.GetFocusedRowCellValue("story_name").ToString();
+            popup.pREG_DATE = gridView1.GetFocusedRowCellValue("reg_date").ToString();
+            popup.pPR_NAME = gridView1.GetFocusedRowCellValue("pr_name").ToString();
+            popup.pPR_NAVER_NAME = gridView1.GetFocusedRowCellValue("pr_naver_name").ToString();
+            popup.pPR_CELL_NUM = gridView1.GetFocusedRowCellValue("pr_cell_num").ToString();
+            popup.pPR_JIBUN_ADDR = gridView1.GetFocusedRowCellValue("pr_jibun_addr").ToString();
+            popup.pPR_ROAD_ADDR = gridView1.GetFocusedRowCellValue("pr_road_addr").ToString();
+            popup.pCONTENTS = gridView1.GetFocusedRowCellValue("contents").ToString();
+            popup.pWK_HAN = gridView1.GetFocusedRowCellValue("wk_han").ToString();
+            popup.pCHEF_LEVEL = gridView1.GetFocusedRowCellValue("u_chef_level").ToString();
+            popup.pIS_USE = gridView1.GetFocusedRowCellValue("is_use").ToString();
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
         }
 
         private void popup_FormClosed(object sender, FormClosedEventArgs e)

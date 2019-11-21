@@ -85,7 +85,8 @@
             this.Controls.Add(this.picImg);
             this.Controls.Add(this.panel1);
             this.Name = "frmMM03_Pop02";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "상품 이미지";
             this.Load += new System.EventHandler(this.frmMM03_Pop02_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picImg.Properties)).EndInit();

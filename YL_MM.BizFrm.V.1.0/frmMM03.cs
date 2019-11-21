@@ -215,7 +215,20 @@ namespace YL_MM.BizFrm
             popup = null;
         }
 
+        private void txtProdName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
+        }
 
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            popup = new frmMM03_Pop01();
+            popup.ShowDialog();
+
+
+            popup.Id = 0;
+        }
     }
 }
 

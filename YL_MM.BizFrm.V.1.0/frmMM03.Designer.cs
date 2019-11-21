@@ -31,14 +31,14 @@
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMM03));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMM03));
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.rbShowType = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.txtProdName = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -64,6 +64,7 @@
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rbShowType.Properties)).BeginInit();
@@ -77,6 +78,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton1);
             this.efwPanelControl1.Controls.Add(this.rbShowType);
             this.efwPanelControl1.Controls.Add(this.txtProdName);
             this.efwPanelControl1.Controls.Add(this.efwLabel2);
@@ -116,6 +118,7 @@
             this.txtProdName.RequireMessage = null;
             this.txtProdName.Size = new System.Drawing.Size(182, 20);
             this.txtProdName.TabIndex = 7;
+            this.txtProdName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProdName_KeyDown);
             // 
             // efwLabel2
             // 
@@ -227,8 +230,6 @@
             this.gridColumn1.FieldName = "id";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.ReadOnly = true;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 12;
             // 
             // gridColumn4
             // 
@@ -236,8 +237,6 @@
             this.gridColumn4.FieldName = "option_id";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.ReadOnly = true;
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 13;
             // 
             // gridColumn6
             // 
@@ -245,8 +244,6 @@
             this.gridColumn6.FieldName = "type";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.ReadOnly = true;
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 14;
             // 
             // gridColumn14
             // 
@@ -365,9 +362,9 @@
             // btnDetail
             // 
             this.btnDetail.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             this.btnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDetail.Click += new System.EventHandler(this.BtnDispYes_Click);
@@ -377,8 +374,17 @@
             this.gridColumn15.Caption = "ImageURL";
             this.gridColumn15.FieldName = "ImageURL";
             this.gridColumn15.Name = "gridColumn15";
-            this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 11;
+            // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(840, 6);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(97, 35);
+            this.efwSimpleButton1.TabIndex = 9;
+            this.efwSimpleButton1.Text = "상품 등록";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
             // 
             // frmMM03
             // 
@@ -431,5 +437,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit riPicEdit;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
     }
 }

@@ -91,7 +91,7 @@ namespace YL_DONUT.BizFrm
                             sda.Fill(ds);
 
                             efwGridControl1.DataBind(ds);
-                            this.efwGridControl1.MyGridView.BestFitColumns();
+                            //this.efwGridControl1.MyGridView.BestFitColumns();
                         }
                     }
                 }

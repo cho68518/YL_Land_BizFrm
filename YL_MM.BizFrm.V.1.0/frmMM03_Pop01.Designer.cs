@@ -61,11 +61,13 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwGroupControlProd = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.btnSave = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.bthNew = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.btnFileOpen1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGroupControl5 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.txtPc_Thumbnail = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtPicPath4 = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -80,10 +82,14 @@
             this.txtC_Code3 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtP_Img = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtC_Code4 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.bthNew = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.btnFileOpen1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGridControl2 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.efwLabel19 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cmbP_EC_Code = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.txtP_Max_Send_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -115,7 +121,7 @@
             this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cmbP_Seller_Id = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
+            this.dtOrder_Date = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.txtP_Code = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -185,6 +191,8 @@
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.riPicEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.splitterControl3 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.efwLabel37 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -229,8 +237,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picP_IMG.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbP_Seller_Id.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtOrder_Date.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtOrder_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbShops_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code4.Properties)).BeginInit();
@@ -266,6 +274,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riPicEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).BeginInit();
             this.efwGroupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Content.Properties)).BeginInit();
@@ -278,10 +288,10 @@
             // 
             this.efwGroupControlProd.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControlProd.CaptionImageOptions.Image")));
             this.efwGroupControlProd.Controls.Add(this.btnSave);
+            this.efwGroupControlProd.Controls.Add(this.efwGroupControl5);
             this.efwGroupControlProd.Controls.Add(this.efwSimpleButton1);
             this.efwGroupControlProd.Controls.Add(this.bthNew);
             this.efwGroupControlProd.Controls.Add(this.btnFileOpen1);
-            this.efwGroupControlProd.Controls.Add(this.efwGroupControl5);
             this.efwGroupControlProd.Controls.Add(this.efwGridControl2);
             this.efwGroupControlProd.Controls.Add(this.efwLabel19);
             this.efwGroupControlProd.Controls.Add(this.cmbP_EC_Code);
@@ -314,7 +324,7 @@
             this.efwGroupControlProd.Controls.Add(this.efwLabel7);
             this.efwGroupControlProd.Controls.Add(this.cmbP_Seller_Id);
             this.efwGroupControlProd.Controls.Add(this.efwLabel6);
-            this.efwGroupControlProd.Controls.Add(this.dtS_DATE);
+            this.efwGroupControlProd.Controls.Add(this.dtOrder_Date);
             this.efwGroupControlProd.Controls.Add(this.txtP_Code);
             this.efwGroupControlProd.Controls.Add(this.efwLabel5);
             this.efwGroupControlProd.Controls.Add(this.efwLabel4);
@@ -335,30 +345,6 @@
             resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.Name = "btnSave";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // efwSimpleButton1
-            // 
-            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
-            this.efwSimpleButton1.IsMultiLang = false;
-            resources.ApplyResources(this.efwSimpleButton1, "efwSimpleButton1");
-            this.efwSimpleButton1.Name = "efwSimpleButton1";
-            // 
-            // bthNew
-            // 
-            this.bthNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bthNew.ImageOptions.Image")));
-            this.bthNew.IsMultiLang = false;
-            resources.ApplyResources(this.bthNew, "bthNew");
-            this.bthNew.Name = "bthNew";
-            this.bthNew.Click += new System.EventHandler(this.bthNew_Click);
-            // 
-            // btnFileOpen1
-            // 
-            this.btnFileOpen1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFileOpen1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFileOpen1.ImageOptions.Image")));
-            this.btnFileOpen1.IsMultiLang = false;
-            resources.ApplyResources(this.btnFileOpen1, "btnFileOpen1");
-            this.btnFileOpen1.Name = "btnFileOpen1";
-            this.btnFileOpen1.Click += new System.EventHandler(this.btnFileOpen1_Click_1);
             // 
             // efwGroupControl5
             // 
@@ -510,6 +496,30 @@
             this.txtC_Code4.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtC_Code4.RequireMessage = null;
             // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.efwSimpleButton1.IsMultiLang = false;
+            resources.ApplyResources(this.efwSimpleButton1, "efwSimpleButton1");
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            // 
+            // bthNew
+            // 
+            this.bthNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bthNew.ImageOptions.Image")));
+            this.bthNew.IsMultiLang = false;
+            resources.ApplyResources(this.bthNew, "bthNew");
+            this.bthNew.Name = "bthNew";
+            this.bthNew.Click += new System.EventHandler(this.bthNew_Click);
+            // 
+            // btnFileOpen1
+            // 
+            this.btnFileOpen1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFileOpen1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFileOpen1.ImageOptions.Image")));
+            this.btnFileOpen1.IsMultiLang = false;
+            resources.ApplyResources(this.btnFileOpen1, "btnFileOpen1");
+            this.btnFileOpen1.Name = "btnFileOpen1";
+            this.btnFileOpen1.Click += new System.EventHandler(this.btnFileOpen1_Click_1);
+            // 
             // efwGridControl2
             // 
             this.efwGridControl2.BindSet = null;
@@ -549,7 +559,8 @@
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn16,
-            this.gridColumn17});
+            this.gridColumn17,
+            this.gridColumn15});
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ShowGroupPanel = false;
@@ -564,8 +575,14 @@
             // gridColumn17
             // 
             resources.ApplyResources(this.gridColumn17, "gridColumn17");
-            this.gridColumn17.FieldName = "c_name_detail";
+            this.gridColumn17.FieldName = "ec_sub_content";
             this.gridColumn17.Name = "gridColumn17";
+            // 
+            // gridColumn15
+            // 
+            resources.ApplyResources(this.gridColumn15, "gridColumn15");
+            this.gridColumn15.FieldName = "c_code";
+            this.gridColumn15.Name = "gridColumn15";
             // 
             // efwLabel19
             // 
@@ -886,19 +903,19 @@
             resources.ApplyResources(this.efwLabel6, "efwLabel6");
             this.efwLabel6.Name = "efwLabel6";
             // 
-            // dtS_DATE
+            // dtOrder_Date
             // 
-            resources.ApplyResources(this.dtS_DATE, "dtS_DATE");
-            this.dtS_DATE.IsRequire = true;
-            this.dtS_DATE.Name = "dtS_DATE";
-            this.dtS_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
-            this.dtS_DATE.Properties.Appearance.Options.UseBackColor = true;
-            this.dtS_DATE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.dtS_DATE.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.dtS_DATE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtS_DATE.Properties.Buttons"))))});
-            this.dtS_DATE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtS_DATE.Properties.CalendarTimeProperties.Buttons"))))});
+            resources.ApplyResources(this.dtOrder_Date, "dtOrder_Date");
+            this.dtOrder_Date.IsRequire = true;
+            this.dtOrder_Date.Name = "dtOrder_Date";
+            this.dtOrder_Date.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
+            this.dtOrder_Date.Properties.Appearance.Options.UseBackColor = true;
+            this.dtOrder_Date.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.dtOrder_Date.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.dtOrder_Date.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtOrder_Date.Properties.Buttons"))))});
+            this.dtOrder_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtOrder_Date.Properties.CalendarTimeProperties.Buttons"))))});
             // 
             // txtP_Code
             // 
@@ -908,6 +925,7 @@
             this.txtP_Code.Name = "txtP_Code";
             this.txtP_Code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtP_Code.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Code.Properties.ReadOnly = true;
             this.txtP_Code.RequireMessage = null;
             // 
             // efwLabel5
@@ -1530,7 +1548,9 @@
             this.efwGridControl1.PrevRowHandle = -2147483648;
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1,
-            this.repositoryItemLookUpEdit2});
+            this.repositoryItemLookUpEdit2,
+            this.btnDelete,
+            this.riPicEdit});
             this.efwGridControl1.TableName = "";
             serviceInfo6.InstanceName = "";
             serviceInfo6.IsUserIDAdd = true;
@@ -1567,6 +1587,7 @@
             resources.ApplyResources(this.gridColumn1, "gridColumn1");
             this.gridColumn1.FieldName = "id";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
             // 
             // gridColumn2
             // 
@@ -1677,8 +1698,24 @@
             // gridColumn14
             // 
             resources.ApplyResources(this.gridColumn14, "gridColumn14");
+            this.gridColumn14.ColumnEdit = this.btnDelete;
             this.gridColumn14.FieldName = "delete";
             this.gridColumn14.Name = "gridColumn14";
+            // 
+            // btnDelete
+            // 
+            resources.ApplyResources(this.btnDelete, "btnDelete");
+            resources.ApplyResources(editorButtonImageOptions1, "editorButtonImageOptions1");
+            this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("btnDelete.Buttons"))), resources.GetString("btnDelete.Buttons1"), ((int)(resources.GetObject("btnDelete.Buttons2"))), ((bool)(resources.GetObject("btnDelete.Buttons3"))), ((bool)(resources.GetObject("btnDelete.Buttons4"))), ((bool)(resources.GetObject("btnDelete.Buttons5"))), editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, resources.GetString("btnDelete.Buttons6"), ((object)(resources.GetObject("btnDelete.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("btnDelete.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("btnDelete.Buttons9"))))});
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // riPicEdit
+            // 
+            this.riPicEdit.Name = "riPicEdit";
+            this.riPicEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             // 
             // splitterControl3
             // 
@@ -1822,8 +1859,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picP_IMG.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbP_Seller_Id.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtOrder_Date.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtOrder_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Code.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbShops_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code4.Properties)).EndInit();
@@ -1860,6 +1897,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riPicEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).EndInit();
             this.efwGroupControl4.ResumeLayout(false);
             this.efwGroupControl4.PerformLayout();
@@ -1905,7 +1944,7 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel7;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbP_Seller_Id;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
-        private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
+        private Easy.Framework.WinForm.Control.efwDateEdit dtOrder_Date;
         private Easy.Framework.WinForm.Control.efwTextEdit txtP_Code;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
@@ -1972,7 +2011,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraEditors.SplitterControl splitterControl3;
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl4;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel36;
@@ -2007,5 +2045,9 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton btnSave;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
         private Easy.Framework.WinForm.Control.efwSimpleButton bthNew;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit riPicEdit;
     }
 }
