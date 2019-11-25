@@ -1316,11 +1316,18 @@ namespace YL_MM.BizFrm
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            // 필수항목 CHECK
+            // 필수항목 CHECK txtP_Img
 
             if (string.IsNullOrEmpty(this.txtP_Name.Text))
             {
                 MessageAgent.MessageShow(MessageType.Warning, "상품명을 입력하세요!");
+                txtP_Name.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txtP_Img.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "상품 이미지 썸네일 300*300을 선택해주세요 !");
                 txtP_Name.Focus();
                 return;
             }
@@ -1349,19 +1356,19 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_P_Id"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_C_Code1", MySqlDbType.VarChar));
-                            cmd.Parameters["i_C_Code1"].Value = txtC_Code1.EditValue;
+                            cmd.Parameters["i_C_Code1"].Value = cmbCate_Code1.EditValue;
                             cmd.Parameters["i_C_Code1"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_C_Code2", MySqlDbType.VarChar));
-                            cmd.Parameters["i_C_Code2"].Value = txtC_Code2.EditValue;
+                            cmd.Parameters["i_C_Code2"].Value = cmbCate_Code2.EditValue;
                             cmd.Parameters["i_C_Code2"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_C_Code3", MySqlDbType.VarChar));
-                            cmd.Parameters["i_C_Code3"].Value = txtC_Code3.EditValue;
+                            cmd.Parameters["i_C_Code3"].Value = cmbCate_Code3.EditValue;
                             cmd.Parameters["i_C_Code3"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_C_Code4", MySqlDbType.VarChar));
-                            cmd.Parameters["i_C_Code4"].Value = txtC_Code4.EditValue;
+                            cmd.Parameters["i_C_Code4"].Value = cmbCate_Code4.EditValue;
                             cmd.Parameters["i_C_Code4"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_P_Name", MySqlDbType.VarChar));
@@ -1532,11 +1539,15 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_Order_Date"].Value = dtOrder_Date.EditValue;
                             cmd.Parameters["i_Order_Date"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("o_Result_P_Id", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Result_P_Id"].Direction = ParameterDirection.Output;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
-                            cmd.ExecuteNonQuery();
 
+
+                            cmd.ExecuteNonQuery();
+                            txtP_Id.EditValue = cmd.Parameters["o_Result_P_Id"].Value.ToString();
                             MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
 
 

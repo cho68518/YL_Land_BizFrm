@@ -134,6 +134,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="frmDN01_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDN01_Pop01.Designer.cs">
+      <DependentUpon>frmDN01_Pop01.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDN17_Pop01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +328,9 @@
     <Compile Include="XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmDN01_Pop01.resx">
+      <DependentUpon>frmDN01_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDN17_Pop01.resx">
       <DependentUpon>FrmDN17_Pop01.cs</DependentUpon>
     </EmbeddedResource>

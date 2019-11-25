@@ -203,6 +203,7 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwLabel38 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).BeginInit();
             this.efwGroupControlProd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).BeginInit();
@@ -287,11 +288,13 @@
             // efwGroupControlProd
             // 
             this.efwGroupControlProd.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControlProd.CaptionImageOptions.Image")));
+            this.efwGroupControlProd.Controls.Add(this.efwLabel38);
             this.efwGroupControlProd.Controls.Add(this.btnSave);
             this.efwGroupControlProd.Controls.Add(this.efwGroupControl5);
             this.efwGroupControlProd.Controls.Add(this.efwSimpleButton1);
             this.efwGroupControlProd.Controls.Add(this.bthNew);
             this.efwGroupControlProd.Controls.Add(this.btnFileOpen1);
+            this.efwGroupControlProd.Controls.Add(this.txtP_Id);
             this.efwGroupControlProd.Controls.Add(this.efwGridControl2);
             this.efwGroupControlProd.Controls.Add(this.efwLabel19);
             this.efwGroupControlProd.Controls.Add(this.cmbP_EC_Code);
@@ -353,7 +356,6 @@
             this.efwGroupControl5.Controls.Add(this.txtPicPath3);
             this.efwGroupControl5.Controls.Add(this.txtPicPath2);
             this.efwGroupControl5.Controls.Add(this.txtPicPath1);
-            this.efwGroupControl5.Controls.Add(this.txtP_Id);
             this.efwGroupControl5.Controls.Add(this.txtC_Code2);
             this.efwGroupControl5.Controls.Add(this.txtP_Contents);
             this.efwGroupControl5.Controls.Add(this.txtC_Code1);
@@ -419,8 +421,8 @@
             // txtP_Id
             // 
             this.txtP_Id.EditValue2 = null;
-            this.txtP_Id.EraserGroup = "CLR1";
             resources.ApplyResources(this.txtP_Id, "txtP_Id");
+            this.txtP_Id.EraserGroup = "CLR1";
             this.txtP_Id.Name = "txtP_Id";
             this.txtP_Id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtP_Id.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1810,6 +1812,13 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
+            // efwLabel38
+            // 
+            this.efwLabel38.EraserGroup = null;
+            this.efwLabel38.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel38, "efwLabel38");
+            this.efwLabel38.Name = "efwLabel38";
+            // 
             // frmMM03_Pop01
             // 
             resources.ApplyResources(this, "$this");
@@ -2049,5 +2058,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit riPicEdit;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel38;
     }
 }

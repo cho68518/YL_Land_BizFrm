@@ -38,6 +38,7 @@ namespace YL_DONUT.BizFrm
 {
     public partial class frmDN01 : FrmBase
     {
+        frmDN01_Pop01 popup;
         public frmDN01()
         {
             InitializeComponent();
@@ -122,9 +123,31 @@ namespace YL_DONUT.BizFrm
             chkA.Checked = true;
             chkB.Checked = true;
 
+            this.efwGridControl1.BindControlSet(
+              new ColumnControlSet("id", txtId)
+            );
+
+            this.efwGridControl1.Click += efwGridControl1_Click;
+
 
             setCmb();
         }
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+          //  int nId = Convert.ToInt32(txtId.EditValue.ToString());
+            if (dr != null && dr["id"].ToString() != "")
+            {
+                this.txtId.EditValue = dr["id"].ToString();
+                popup = new frmDN01_Pop01();
+                popup.Id = Convert.ToInt32(txtId.EditValue.ToString());
+                popup.ShowDialog();
+                
+
+            }
+
+        }
+
 
         private void setCmb()
         {
@@ -330,10 +353,6 @@ namespace YL_DONUT.BizFrm
         }
 
 
-        private void efwGridControl1_Click(object sender, EventArgs e)
-        {
-            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
-        }
 
         private void BtnCardOpen_Click(object sender, EventArgs e)
         {

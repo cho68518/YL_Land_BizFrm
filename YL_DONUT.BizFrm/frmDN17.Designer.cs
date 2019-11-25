@@ -38,7 +38,11 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtContents_Id = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.lblpic3 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lblpic2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtSearch = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.lblpic1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cmbQ1 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -78,7 +82,13 @@
             this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.splitterControl2 = new DevExpress.XtraEditors.SplitterControl();
+            this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.picImg3 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.picImg2 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.picImg1 = new Easy.Framework.WinForm.Control.efwPictureEdit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContents_Id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbQ1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2.Properties.CalendarTimeProperties)).BeginInit();
@@ -98,11 +108,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
+            this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtContents_Id);
+            this.panel2.Controls.Add(this.lblpic3);
+            this.panel2.Controls.Add(this.lblpic2);
             this.panel2.Controls.Add(this.txtSearch);
+            this.panel2.Controls.Add(this.lblpic1);
             this.panel2.Controls.Add(this.efwLabel3);
             this.panel2.Controls.Add(this.cmbQ1);
             this.panel2.Controls.Add(this.efwLabel2);
@@ -115,6 +134,40 @@
             this.panel2.Size = new System.Drawing.Size(1381, 41);
             this.panel2.TabIndex = 2;
             // 
+            // txtContents_Id
+            // 
+            this.txtContents_Id.EditValue2 = null;
+            this.txtContents_Id.Location = new System.Drawing.Point(1171, 15);
+            this.txtContents_Id.Name = "txtContents_Id";
+            this.txtContents_Id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtContents_Id.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtContents_Id.RequireMessage = null;
+            this.txtContents_Id.Size = new System.Drawing.Size(100, 20);
+            this.txtContents_Id.TabIndex = 47;
+            this.txtContents_Id.Visible = false;
+            // 
+            // lblpic3
+            // 
+            this.lblpic3.EraserGroup = null;
+            this.lblpic3.IsMultiLang = false;
+            this.lblpic3.Location = new System.Drawing.Point(1118, 16);
+            this.lblpic3.Name = "lblpic3";
+            this.lblpic3.Size = new System.Drawing.Size(33, 14);
+            this.lblpic3.TabIndex = 46;
+            this.lblpic3.Text = "lblpic3";
+            this.lblpic3.Visible = false;
+            // 
+            // lblpic2
+            // 
+            this.lblpic2.EraserGroup = null;
+            this.lblpic2.IsMultiLang = false;
+            this.lblpic2.Location = new System.Drawing.Point(1041, 16);
+            this.lblpic2.Name = "lblpic2";
+            this.lblpic2.Size = new System.Drawing.Size(33, 14);
+            this.lblpic2.TabIndex = 45;
+            this.lblpic2.Text = "lblpic2";
+            this.lblpic2.Visible = false;
+            // 
             // txtSearch
             // 
             this.txtSearch.EditValue2 = null;
@@ -126,6 +179,17 @@
             this.txtSearch.Size = new System.Drawing.Size(310, 20);
             this.txtSearch.TabIndex = 15;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyDown);
+            // 
+            // lblpic1
+            // 
+            this.lblpic1.EraserGroup = null;
+            this.lblpic1.IsMultiLang = false;
+            this.lblpic1.Location = new System.Drawing.Point(983, 16);
+            this.lblpic1.Name = "lblpic1";
+            this.lblpic1.Size = new System.Drawing.Size(33, 14);
+            this.lblpic1.TabIndex = 44;
+            this.lblpic1.Text = "lblpic1";
+            this.lblpic1.Visible = false;
             // 
             // efwLabel3
             // 
@@ -378,7 +442,7 @@
             serviceInfo4.ProcName = "";
             serviceInfo4.UserParams = null;
             this.efwGridControl2.DeleteServiceInfo = serviceInfo4;
-            this.efwGridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efwGridControl2.Dock = System.Windows.Forms.DockStyle.Top;
             serviceInfo5.InstanceName = "";
             serviceInfo5.IsUserIDAdd = true;
             serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
@@ -401,7 +465,7 @@
             this.repositoryItemMemoEdit2,
             this.repositoryItemCheckEdit2,
             this.repositoryItemMemoEdit3});
-            this.efwGridControl2.Size = new System.Drawing.Size(565, 684);
+            this.efwGridControl2.Size = new System.Drawing.Size(565, 451);
             this.efwGridControl2.TabIndex = 40;
             this.efwGridControl2.TableName = "";
             serviceInfo6.InstanceName = "";
@@ -548,10 +612,71 @@
             this.repositoryItemCheckEdit2.ValueChecked = "Y";
             this.repositoryItemCheckEdit2.ValueUnchecked = "N";
             // 
+            // splitterControl2
+            // 
+            this.splitterControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitterControl2.Location = new System.Drawing.Point(819, 527);
+            this.splitterControl2.Name = "splitterControl2";
+            this.splitterControl2.Size = new System.Drawing.Size(565, 5);
+            this.splitterControl2.TabIndex = 42;
+            this.splitterControl2.TabStop = false;
+            // 
+            // efwGroupControl1
+            // 
+            this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
+            this.efwGroupControl1.Controls.Add(this.picImg3);
+            this.efwGroupControl1.Controls.Add(this.picImg2);
+            this.efwGroupControl1.Controls.Add(this.picImg1);
+            this.efwGroupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efwGroupControl1.IsMultiLang = false;
+            this.efwGroupControl1.Location = new System.Drawing.Point(819, 532);
+            this.efwGroupControl1.Name = "efwGroupControl1";
+            this.efwGroupControl1.Size = new System.Drawing.Size(565, 228);
+            this.efwGroupControl1.TabIndex = 43;
+            this.efwGroupControl1.Text = "이미지";
+            // 
+            // picImg3
+            // 
+            this.picImg3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picImg3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picImg3.Location = new System.Drawing.Point(374, 23);
+            this.picImg3.Name = "picImg3";
+            this.picImg3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picImg3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picImg3.Size = new System.Drawing.Size(186, 203);
+            this.picImg3.TabIndex = 5;
+            this.picImg3.DoubleClick += new System.EventHandler(this.PicImg3_DoubleClick);
+            // 
+            // picImg2
+            // 
+            this.picImg2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picImg2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picImg2.Location = new System.Drawing.Point(188, 23);
+            this.picImg2.Name = "picImg2";
+            this.picImg2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picImg2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picImg2.Size = new System.Drawing.Size(186, 203);
+            this.picImg2.TabIndex = 4;
+            this.picImg2.DoubleClick += new System.EventHandler(this.PicImg2_DoubleClick);
+            // 
+            // picImg1
+            // 
+            this.picImg1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picImg1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picImg1.Location = new System.Drawing.Point(2, 23);
+            this.picImg1.Name = "picImg1";
+            this.picImg1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picImg1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picImg1.Size = new System.Drawing.Size(186, 203);
+            this.picImg1.TabIndex = 3;
+            this.picImg1.DoubleClick += new System.EventHandler(this.PicImg1_DoubleClick);
+            // 
             // frmDN17
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.efwGroupControl1);
+            this.Controls.Add(this.splitterControl2);
             this.Controls.Add(this.efwGridControl2);
             this.Controls.Add(this.splitterControl1);
             this.Controls.Add(this.efwGridControl1);
@@ -562,8 +687,11 @@
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             this.Controls.SetChildIndex(this.splitterControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl2, 0);
+            this.Controls.SetChildIndex(this.splitterControl2, 0);
+            this.Controls.SetChildIndex(this.efwGroupControl1, 0);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContents_Id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbQ1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2.Properties.CalendarTimeProperties)).EndInit();
@@ -583,6 +711,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
+            this.efwGroupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picImg3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -630,5 +763,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
+        private DevExpress.XtraEditors.SplitterControl splitterControl2;
+        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl1;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picImg3;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picImg2;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picImg1;
+        private Easy.Framework.WinForm.Control.efwLabel lblpic3;
+        private Easy.Framework.WinForm.Control.efwLabel lblpic2;
+        private Easy.Framework.WinForm.Control.efwLabel lblpic1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtContents_Id;
     }
 }

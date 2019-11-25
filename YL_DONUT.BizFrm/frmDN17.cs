@@ -1,4 +1,5 @@
 ﻿using Easy.Framework.Common;
+using Easy.Framework.WinForm.Control;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace YL_DONUT.BizFrm
 {
     public partial class frmDN17 : FrmBase
     {
+        frmDN17_Pop01 popup;
         public frmDN17()
         {
             InitializeComponent();
@@ -54,7 +56,16 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["t_cnt"].SummaryItem.FieldName = "t_cnt";
             gridView1.Columns["t_cnt"].SummaryItem.DisplayFormat = "총 트윗건수: {0}";
 
+
             this.efwGridControl1.Click += efwGridControl1_Click;
+
+
+            this.efwGridControl2.BindControlSet(
+               new ColumnControlSet("contents_id", txtContents_Id)
+            );
+
+            this.efwGridControl2.Click += efwGridControl2_Click;
+
         }
 
         #endregion
@@ -124,7 +135,7 @@ namespace YL_DONUT.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("i_regdate", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[0].Value = dr["reg_date"].ToString().Replace("-","");
+                        cmd.Parameters[0].Value = dr["reg_date"].ToString().Replace("-", "");
 
                         cmd.Parameters.Add("i_login_id", MySqlDbType.VarChar, 255);
                         cmd.Parameters[1].Value = dr["login_id"].ToString();
@@ -149,12 +160,113 @@ namespace YL_DONUT.BizFrm
             {
                 Cursor.Current = Cursors.Default;
             }
+            //SetPic();
         }
+
+
+
+        private void efwGridControl2_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl2.GetSelectedRow(0);
+
+            if (dr != null && dr["contents_id"].ToString() != "")
+            {
+                this.txtContents_Id.EditValue = dr["contents_id"].ToString();
+
+            }
+
+            SetPic();
+        }
+
 
         private void TxtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
+
+        private void SetPic()
+        {
+            picImg1.Image = null;
+            picImg2.Image = null;
+            picImg3.Image = null;
+
+            lblpic1.Text = "";
+            lblpic2.Text = "";
+            lblpic3.Text = "";
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "SELECT image_url FROM domalife.y_thumbnail_list WHERE contents_id = " + txtContents_Id.EditValue;
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                //pictureEdit.Image = Image.FromFile(@"c:\sample.jpg");
+                for (int i = 0; i < dr.Length; i++)
+                {
+                    if (i == 0)
+                    {
+                        picImg1.LoadAsync(dr[i]["image_url"].ToString());
+                        lblpic1.Text = dr[i]["image_url"].ToString();
+                    }
+                    else if (i == 1)
+                    {
+                        picImg2.LoadAsync(dr[i]["image_url"].ToString());
+                        lblpic2.Text = dr[i]["image_url"].ToString();
+                    }
+                    else if (i == 2)
+                    {
+                        picImg3.LoadAsync(dr[i]["image_url"].ToString());
+                        lblpic3.Text = dr[i]["image_url"].ToString();
+                    }
+                }
+            }
+        }
+        private void PicImg1_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("1");
+        }
+
+        private void PicImg2_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("2");
+        }
+
+        private void PicImg3_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("3");
+        }
+        private void OpenDlg(string s1)
+        {
+            popup = new frmDN17_Pop01();
+            //popup.Owner = this;
+
+            if (s1 == "1")
+                popup.pURL = lblpic1.Text;
+            else if (s1 == "2")
+                popup.pURL = lblpic2.Text;
+            else if (s1 == "3")
+                popup.pURL = lblpic3.Text;
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            //if (popup.DialogResult == DialogResult.OK)
+            //{
+            //    this.txtX.EditValue = popup.nX;
+            //    this.txtY.EditValue = popup.nY;
+            //}
+
+            //OpenTag(gfloorInfo.FLR, "LDT");
+            popup = null;
+        }
+
+
     }
-}
+ }
