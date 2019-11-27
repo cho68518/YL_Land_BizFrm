@@ -101,8 +101,8 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["pp_ps_oper_price"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["pp_ps_oper_price"].SummaryItem.FieldName = "pp_ps_oper_price";
             gridView1.Columns["pp_ps_oper_price"].SummaryItem.DisplayFormat = "{0:c}";
+            txtId.EditValue = "0";
 
-            
 
             //this.efwGridControl1.BindControlSet(
             //new ColumnControlSet("id", txtID)
@@ -135,15 +135,14 @@ namespace YL_DONUT.BizFrm
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
-          //  int nId = Convert.ToInt32(txtId.EditValue.ToString());
-            if (dr != null && dr["id"].ToString() != "")
+            int nId = Convert.ToInt32(txtId.EditValue.ToString());
+            if (nId != 0)
             {
-                this.txtId.EditValue = dr["id"].ToString();
+                this.txtId.EditValue = dr["id"].ToString(); 
                 popup = new frmDN01_Pop01();
                 popup.Id = Convert.ToInt32(txtId.EditValue.ToString());
+                txtId.EditValue = "0";
                 popup.ShowDialog();
-                
-
             }
 
         }
