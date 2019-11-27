@@ -32,6 +32,12 @@ namespace YL_DONUT.BizFrm
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN01_Pop01));
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtO_Total_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Purchase_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Donut_C_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Donut_M_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Donut_D_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Delivery_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel26 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Return_Reason_Detail = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -80,6 +86,7 @@ namespace YL_DONUT.BizFrm
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtID = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtP_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel32 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel31 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtP_num = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -133,15 +140,14 @@ namespace YL_DONUT.BizFrm
             this.txtO_Delivery_Start_Date = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel55 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Delivery_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtO_Delivery_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtO_Donut_D_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtO_Donut_M_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtO_Donut_C_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtO_Purchase_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtP_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtO_Total_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Purchase_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_C_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_M_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_D_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Cost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Reason_Detail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Success_Date.Properties.CalendarTimeProperties)).BeginInit();
@@ -170,6 +176,7 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Price.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_num.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPP_Title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Name.Properties)).BeginInit();
@@ -199,13 +206,6 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_D_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_M_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_C_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Purchase_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Price.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -271,6 +271,120 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl1.Size = new System.Drawing.Size(622, 399);
             this.efwGroupControl1.TabIndex = 0;
             this.efwGroupControl1.Text = "주문 수정";
+            // 
+            // txtO_Total_Cost
+            // 
+            this.txtO_Total_Cost.EditValue = "0";
+            this.txtO_Total_Cost.EditValue2 = null;
+            this.txtO_Total_Cost.IsNumericKeyOnly = true;
+            this.txtO_Total_Cost.Location = new System.Drawing.Point(111, 237);
+            this.txtO_Total_Cost.Name = "txtO_Total_Cost";
+            this.txtO_Total_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Total_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Total_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Total_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Total_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Total_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Total_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Total_Cost.Properties.Mask.EditMask = "n0";
+            this.txtO_Total_Cost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtO_Total_Cost.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtO_Total_Cost.Properties.ReadOnly = true;
+            this.txtO_Total_Cost.RequireMessage = null;
+            this.txtO_Total_Cost.Size = new System.Drawing.Size(100, 20);
+            this.txtO_Total_Cost.TabIndex = 65;
+            // 
+            // txtO_Purchase_Cost
+            // 
+            this.txtO_Purchase_Cost.EditValue = "0";
+            this.txtO_Purchase_Cost.EditValue2 = null;
+            this.txtO_Purchase_Cost.Location = new System.Drawing.Point(506, 263);
+            this.txtO_Purchase_Cost.Name = "txtO_Purchase_Cost";
+            this.txtO_Purchase_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Purchase_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Purchase_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Purchase_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Purchase_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Purchase_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Purchase_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Purchase_Cost.Properties.ReadOnly = true;
+            this.txtO_Purchase_Cost.RequireMessage = null;
+            this.txtO_Purchase_Cost.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Purchase_Cost.TabIndex = 64;
+            // 
+            // txtO_Donut_C_Cost
+            // 
+            this.txtO_Donut_C_Cost.EditValue = "0";
+            this.txtO_Donut_C_Cost.EditValue2 = null;
+            this.txtO_Donut_C_Cost.Location = new System.Drawing.Point(304, 263);
+            this.txtO_Donut_C_Cost.Name = "txtO_Donut_C_Cost";
+            this.txtO_Donut_C_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Donut_C_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Donut_C_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Donut_C_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Donut_C_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Donut_C_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_C_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_C_Cost.Properties.ReadOnly = true;
+            this.txtO_Donut_C_Cost.RequireMessage = null;
+            this.txtO_Donut_C_Cost.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Donut_C_Cost.TabIndex = 63;
+            // 
+            // txtO_Donut_M_Cost
+            // 
+            this.txtO_Donut_M_Cost.EditValue = "0";
+            this.txtO_Donut_M_Cost.EditValue2 = null;
+            this.txtO_Donut_M_Cost.Location = new System.Drawing.Point(109, 263);
+            this.txtO_Donut_M_Cost.Name = "txtO_Donut_M_Cost";
+            this.txtO_Donut_M_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Donut_M_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Donut_M_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Donut_M_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Donut_M_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Donut_M_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_M_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_M_Cost.Properties.ReadOnly = true;
+            this.txtO_Donut_M_Cost.RequireMessage = null;
+            this.txtO_Donut_M_Cost.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Donut_M_Cost.TabIndex = 62;
+            // 
+            // txtO_Donut_D_Cost
+            // 
+            this.txtO_Donut_D_Cost.EditValue = "0";
+            this.txtO_Donut_D_Cost.EditValue2 = null;
+            this.txtO_Donut_D_Cost.Location = new System.Drawing.Point(505, 237);
+            this.txtO_Donut_D_Cost.Name = "txtO_Donut_D_Cost";
+            this.txtO_Donut_D_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Donut_D_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Donut_D_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Donut_D_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Donut_D_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Donut_D_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_D_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_D_Cost.Properties.ReadOnly = true;
+            this.txtO_Donut_D_Cost.RequireMessage = null;
+            this.txtO_Donut_D_Cost.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Donut_D_Cost.TabIndex = 61;
+            // 
+            // txtO_Delivery_Cost
+            // 
+            this.txtO_Delivery_Cost.EditValue = "0";
+            this.txtO_Delivery_Cost.EditValue2 = null;
+            this.txtO_Delivery_Cost.Location = new System.Drawing.Point(304, 237);
+            this.txtO_Delivery_Cost.Name = "txtO_Delivery_Cost";
+            this.txtO_Delivery_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Delivery_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Delivery_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Delivery_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Delivery_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Delivery_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Delivery_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Delivery_Cost.Properties.Mask.EditMask = "n3";
+            this.txtO_Delivery_Cost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtO_Delivery_Cost.Properties.ReadOnly = true;
+            this.txtO_Delivery_Cost.RequireMessage = null;
+            this.txtO_Delivery_Cost.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Delivery_Cost.TabIndex = 60;
             // 
             // efwSimpleButton1
             // 
@@ -849,6 +963,24 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl2.Size = new System.Drawing.Size(685, 112);
             this.efwGroupControl2.TabIndex = 1;
             this.efwGroupControl2.Text = "상품정보";
+            // 
+            // txtP_Price
+            // 
+            this.txtP_Price.EditValue = "0";
+            this.txtP_Price.EditValue2 = null;
+            this.txtP_Price.Location = new System.Drawing.Point(354, 83);
+            this.txtP_Price.Name = "txtP_Price";
+            this.txtP_Price.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtP_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtP_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtP_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Price.Properties.ReadOnly = true;
+            this.txtP_Price.RequireMessage = null;
+            this.txtP_Price.Size = new System.Drawing.Size(119, 20);
+            this.txtP_Price.TabIndex = 65;
             // 
             // efwLabel32
             // 
@@ -1472,132 +1604,6 @@ namespace YL_DONUT.BizFrm
             this.txtO_Delivery_Num.Size = new System.Drawing.Size(179, 20);
             this.txtO_Delivery_Num.TabIndex = 58;
             // 
-            // txtO_Delivery_Cost
-            // 
-            this.txtO_Delivery_Cost.EditValue = "0";
-            this.txtO_Delivery_Cost.EditValue2 = null;
-            this.txtO_Delivery_Cost.Location = new System.Drawing.Point(304, 237);
-            this.txtO_Delivery_Cost.Name = "txtO_Delivery_Cost";
-            this.txtO_Delivery_Cost.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtO_Delivery_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtO_Delivery_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Delivery_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Delivery_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtO_Delivery_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Delivery_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Delivery_Cost.Properties.ReadOnly = true;
-            this.txtO_Delivery_Cost.RequireMessage = null;
-            this.txtO_Delivery_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Delivery_Cost.TabIndex = 60;
-            // 
-            // txtO_Donut_D_Cost
-            // 
-            this.txtO_Donut_D_Cost.EditValue = "0";
-            this.txtO_Donut_D_Cost.EditValue2 = null;
-            this.txtO_Donut_D_Cost.Location = new System.Drawing.Point(505, 237);
-            this.txtO_Donut_D_Cost.Name = "txtO_Donut_D_Cost";
-            this.txtO_Donut_D_Cost.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtO_Donut_D_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtO_Donut_D_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Donut_D_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Donut_D_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtO_Donut_D_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Donut_D_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Donut_D_Cost.Properties.ReadOnly = true;
-            this.txtO_Donut_D_Cost.RequireMessage = null;
-            this.txtO_Donut_D_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Donut_D_Cost.TabIndex = 61;
-            // 
-            // txtO_Donut_M_Cost
-            // 
-            this.txtO_Donut_M_Cost.EditValue = "0";
-            this.txtO_Donut_M_Cost.EditValue2 = null;
-            this.txtO_Donut_M_Cost.Location = new System.Drawing.Point(109, 263);
-            this.txtO_Donut_M_Cost.Name = "txtO_Donut_M_Cost";
-            this.txtO_Donut_M_Cost.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtO_Donut_M_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtO_Donut_M_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Donut_M_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Donut_M_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtO_Donut_M_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Donut_M_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Donut_M_Cost.Properties.ReadOnly = true;
-            this.txtO_Donut_M_Cost.RequireMessage = null;
-            this.txtO_Donut_M_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Donut_M_Cost.TabIndex = 62;
-            // 
-            // txtO_Donut_C_Cost
-            // 
-            this.txtO_Donut_C_Cost.EditValue = "0";
-            this.txtO_Donut_C_Cost.EditValue2 = null;
-            this.txtO_Donut_C_Cost.Location = new System.Drawing.Point(304, 263);
-            this.txtO_Donut_C_Cost.Name = "txtO_Donut_C_Cost";
-            this.txtO_Donut_C_Cost.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtO_Donut_C_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtO_Donut_C_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Donut_C_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Donut_C_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtO_Donut_C_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Donut_C_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Donut_C_Cost.Properties.ReadOnly = true;
-            this.txtO_Donut_C_Cost.RequireMessage = null;
-            this.txtO_Donut_C_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Donut_C_Cost.TabIndex = 63;
-            // 
-            // txtO_Purchase_Cost
-            // 
-            this.txtO_Purchase_Cost.EditValue = "0";
-            this.txtO_Purchase_Cost.EditValue2 = null;
-            this.txtO_Purchase_Cost.Location = new System.Drawing.Point(506, 263);
-            this.txtO_Purchase_Cost.Name = "txtO_Purchase_Cost";
-            this.txtO_Purchase_Cost.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtO_Purchase_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtO_Purchase_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Purchase_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Purchase_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtO_Purchase_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Purchase_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Purchase_Cost.Properties.ReadOnly = true;
-            this.txtO_Purchase_Cost.RequireMessage = null;
-            this.txtO_Purchase_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Purchase_Cost.TabIndex = 64;
-            // 
-            // txtP_Price
-            // 
-            this.txtP_Price.EditValue = "0";
-            this.txtP_Price.EditValue2 = null;
-            this.txtP_Price.Location = new System.Drawing.Point(354, 83);
-            this.txtP_Price.Name = "txtP_Price";
-            this.txtP_Price.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtP_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtP_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtP_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtP_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtP_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtP_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtP_Price.Properties.ReadOnly = true;
-            this.txtP_Price.RequireMessage = null;
-            this.txtP_Price.Size = new System.Drawing.Size(119, 20);
-            this.txtP_Price.TabIndex = 65;
-            // 
-            // txtO_Total_Cost
-            // 
-            this.txtO_Total_Cost.EditValue = "0";
-            this.txtO_Total_Cost.EditValue2 = null;
-            this.txtO_Total_Cost.Location = new System.Drawing.Point(111, 237);
-            this.txtO_Total_Cost.Name = "txtO_Total_Cost";
-            this.txtO_Total_Cost.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtO_Total_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtO_Total_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Total_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Total_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtO_Total_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Total_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Total_Cost.Properties.ReadOnly = true;
-            this.txtO_Total_Cost.RequireMessage = null;
-            this.txtO_Total_Cost.Size = new System.Drawing.Size(100, 20);
-            this.txtO_Total_Cost.TabIndex = 65;
-            // 
             // frmDN01_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1615,6 +1621,12 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Purchase_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_C_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_M_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_D_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Cost.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Reason_Detail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Success_Date.Properties.CalendarTimeProperties)).EndInit();
@@ -1644,6 +1656,7 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
             this.efwGroupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Price.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_num.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPP_Title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Name.Properties)).EndInit();
@@ -1675,13 +1688,6 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_D_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_M_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_C_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Purchase_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Price.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
