@@ -110,7 +110,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Tamir.SharpSSH">
-      <HintPath>C:\Users\Ylland\Downloads\SharpSSH-1.1.1.13.bin\SharpSSH-1.1.1.13.bin\Tamir.SharpSSH.dll</HintPath>
+      <HintPath>..\..\Easy.Framework.Release\Tamir.SharpSSH.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

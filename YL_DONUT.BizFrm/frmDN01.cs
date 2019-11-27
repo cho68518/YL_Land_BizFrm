@@ -18,6 +18,9 @@
 //</history>
 #endregion
 
+using DevExpress.Utils;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraTreeList;
 using Easy.Framework.Common;
 using Easy.Framework.SrvCommon;
@@ -134,16 +137,7 @@ namespace YL_DONUT.BizFrm
         }
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
-            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
-            int nId = Convert.ToInt32(txtId.EditValue.ToString());
-            if (nId != 0)
-            {
-                this.txtId.EditValue = dr["id"].ToString(); 
-                popup = new frmDN01_Pop01();
-                popup.Id = Convert.ToInt32(txtId.EditValue.ToString());
-                txtId.EditValue = "0";
-                popup.ShowDialog();
-            }
+
 
         }
 
@@ -441,5 +435,22 @@ namespace YL_DONUT.BizFrm
                 txtI_SEARCH.Focus();
         }
 
+
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            if (e.RowHandle > 0)
+            {
+                DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+                int nId = Convert.ToInt32(txtId.EditValue.ToString());
+                if (nId != 0)
+                {
+                    this.txtId.EditValue = dr["id"].ToString();
+                    popup = new frmDN01_Pop01();
+                    popup.Id = Convert.ToInt32(txtId.EditValue.ToString());
+                    txtId.EditValue = "0";
+                    popup.ShowDialog();
+                }
+            }
+        }
     }
 }
