@@ -868,6 +868,7 @@
             this.Id.Name = "Id";
             this.Id.Size = new System.Drawing.Size(169, 52);
             this.Id.TextSize = new System.Drawing.Size(11, 14);
+            this.Id.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // splitterControl1
             // 

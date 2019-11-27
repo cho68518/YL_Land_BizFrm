@@ -438,7 +438,7 @@ namespace YL_DONUT.BizFrm
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            if (e.RowHandle > 0)
+            if (e.RowHandle >= 0)
             {
                 DataRow dr = this.efwGridControl1.GetSelectedRow(0);
                 int nId = Convert.ToInt32(txtId.EditValue.ToString());

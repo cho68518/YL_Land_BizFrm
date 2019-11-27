@@ -1,4 +1,6 @@
-﻿namespace YL_DONUT.BizFrm
+﻿using System.Windows.Forms;
+
+namespace YL_DONUT.BizFrm
 {
     partial class frmDN01_Pop01
     {
@@ -30,6 +32,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN01_Pop01));
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel26 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Return_Reason_Detail = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel25 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -43,17 +46,11 @@
             this.efwLabel20 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Deposit_Confirm_Date = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel19 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtO_Purchase_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel18 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtO_Donut_C_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel17 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtO_Donut_M_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel16 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtO_Donut_D_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel15 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtO_Delivery_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel14 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtO_Total_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel10 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Receive_Message1 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel11 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -84,7 +81,6 @@
             this.txtID = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.efwLabel32 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtP_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel31 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtP_num = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel30 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -96,6 +92,7 @@
             this.efwLabel27 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtP_Code = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwGroupControl3 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtLGD_PayDate = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel34 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtLGD_CasFlag = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtLGD_Payer = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -118,7 +115,6 @@
             this.efwLabel40 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtLGD_FinanceCode = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel36 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtLGD_PayDate = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel39 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtLGD_Amount = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel33 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -137,6 +133,13 @@
             this.txtO_Delivery_Start_Date = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel55 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Delivery_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Delivery_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Donut_D_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Donut_M_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Donut_C_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Purchase_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtP_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtO_Total_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Reason_Detail.Properties)).BeginInit();
@@ -149,12 +152,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Cancel_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Deposit_Confirm_Date.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Deposit_Confirm_Date.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Purchase_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_C_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_M_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_D_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Receive_Message1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Receive_Contact1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Receive_Name1.Properties)).BeginInit();
@@ -173,7 +170,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Price.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_num.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPP_Title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Name.Properties)).BeginInit();
@@ -181,6 +177,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
             this.efwGroupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLGD_PayDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_CasFlag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_Payer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_SaOwner.Properties)).BeginInit();
@@ -191,8 +188,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_AccountNum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_FinanceName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_FinanceCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLGD_PayDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLGD_PayDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_Amount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_Tid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_PayType.Properties)).BeginInit();
@@ -204,11 +199,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_D_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_M_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_C_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Purchase_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Price.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
             // 
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
+            this.efwGroupControl1.Controls.Add(this.txtO_Total_Cost);
+            this.efwGroupControl1.Controls.Add(this.txtO_Purchase_Cost);
+            this.efwGroupControl1.Controls.Add(this.txtO_Donut_C_Cost);
+            this.efwGroupControl1.Controls.Add(this.txtO_Donut_M_Cost);
+            this.efwGroupControl1.Controls.Add(this.txtO_Donut_D_Cost);
+            this.efwGroupControl1.Controls.Add(this.txtO_Delivery_Cost);
+            this.efwGroupControl1.Controls.Add(this.efwSimpleButton1);
             this.efwGroupControl1.Controls.Add(this.efwLabel26);
             this.efwGroupControl1.Controls.Add(this.txtO_Return_Reason_Detail);
             this.efwGroupControl1.Controls.Add(this.efwLabel25);
@@ -222,17 +231,11 @@
             this.efwGroupControl1.Controls.Add(this.efwLabel20);
             this.efwGroupControl1.Controls.Add(this.txtO_Deposit_Confirm_Date);
             this.efwGroupControl1.Controls.Add(this.efwLabel19);
-            this.efwGroupControl1.Controls.Add(this.txtO_Purchase_Cost);
             this.efwGroupControl1.Controls.Add(this.efwLabel18);
-            this.efwGroupControl1.Controls.Add(this.txtO_Donut_C_Cost);
             this.efwGroupControl1.Controls.Add(this.efwLabel17);
-            this.efwGroupControl1.Controls.Add(this.txtO_Donut_M_Cost);
             this.efwGroupControl1.Controls.Add(this.efwLabel16);
-            this.efwGroupControl1.Controls.Add(this.txtO_Donut_D_Cost);
             this.efwGroupControl1.Controls.Add(this.efwLabel15);
-            this.efwGroupControl1.Controls.Add(this.txtO_Delivery_Cost);
             this.efwGroupControl1.Controls.Add(this.efwLabel14);
-            this.efwGroupControl1.Controls.Add(this.txtO_Total_Cost);
             this.efwGroupControl1.Controls.Add(this.efwLabel10);
             this.efwGroupControl1.Controls.Add(this.txtO_Receive_Message1);
             this.efwGroupControl1.Controls.Add(this.efwLabel11);
@@ -269,6 +272,17 @@
             this.efwGroupControl1.TabIndex = 0;
             this.efwGroupControl1.Text = "주문 수정";
             // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(506, 30);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(102, 23);
+            this.efwSimpleButton1.TabIndex = 58;
+            this.efwSimpleButton1.Text = "수정";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
+            // 
             // efwLabel26
             // 
             this.efwLabel26.EraserGroup = null;
@@ -286,6 +300,7 @@
             this.txtO_Return_Reason_Detail.Name = "txtO_Return_Reason_Detail";
             this.txtO_Return_Reason_Detail.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Return_Reason_Detail.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Return_Reason_Detail.Properties.ReadOnly = true;
             this.txtO_Return_Reason_Detail.RequireMessage = null;
             this.txtO_Return_Reason_Detail.Size = new System.Drawing.Size(499, 20);
             this.txtO_Return_Reason_Detail.TabIndex = 56;
@@ -307,6 +322,7 @@
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtRemark.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRemark.Properties.ReadOnly = true;
             this.txtRemark.RequireMessage = null;
             this.txtRemark.Size = new System.Drawing.Size(499, 20);
             this.txtRemark.TabIndex = 54;
@@ -335,6 +351,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtO_Return_Success_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtO_Return_Success_Date.Properties.ReadOnly = true;
             this.txtO_Return_Success_Date.Size = new System.Drawing.Size(102, 20);
             this.txtO_Return_Success_Date.TabIndex = 50;
             // 
@@ -362,6 +379,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtO_Complete_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtO_Complete_Date.Properties.ReadOnly = true;
             this.txtO_Complete_Date.Size = new System.Drawing.Size(102, 20);
             this.txtO_Complete_Date.TabIndex = 48;
             // 
@@ -389,6 +407,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtO_Cancel_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtO_Cancel_Date.Properties.ReadOnly = true;
             this.txtO_Cancel_Date.Size = new System.Drawing.Size(102, 20);
             this.txtO_Cancel_Date.TabIndex = 46;
             // 
@@ -416,6 +435,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtO_Deposit_Confirm_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtO_Deposit_Confirm_Date.Properties.ReadOnly = true;
             this.txtO_Deposit_Confirm_Date.Size = new System.Drawing.Size(102, 20);
             this.txtO_Deposit_Confirm_Date.TabIndex = 44;
             // 
@@ -429,17 +449,6 @@
             this.efwLabel19.TabIndex = 43;
             this.efwLabel19.Text = "실주문금액";
             // 
-            // txtO_Purchase_Cost
-            // 
-            this.txtO_Purchase_Cost.EditValue2 = null;
-            this.txtO_Purchase_Cost.Location = new System.Drawing.Point(506, 263);
-            this.txtO_Purchase_Cost.Name = "txtO_Purchase_Cost";
-            this.txtO_Purchase_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Purchase_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Purchase_Cost.RequireMessage = null;
-            this.txtO_Purchase_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Purchase_Cost.TabIndex = 42;
-            // 
             // efwLabel18
             // 
             this.efwLabel18.EraserGroup = null;
@@ -449,17 +458,6 @@
             this.efwLabel18.Size = new System.Drawing.Size(39, 14);
             this.efwLabel18.TabIndex = 41;
             this.efwLabel18.Text = "CD 머니";
-            // 
-            // txtO_Donut_C_Cost
-            // 
-            this.txtO_Donut_C_Cost.EditValue2 = null;
-            this.txtO_Donut_C_Cost.Location = new System.Drawing.Point(304, 263);
-            this.txtO_Donut_C_Cost.Name = "txtO_Donut_C_Cost";
-            this.txtO_Donut_C_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Donut_C_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Donut_C_Cost.RequireMessage = null;
-            this.txtO_Donut_C_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Donut_C_Cost.TabIndex = 40;
             // 
             // efwLabel17
             // 
@@ -471,17 +469,6 @@
             this.efwLabel17.TabIndex = 39;
             this.efwLabel17.Text = "M 머니";
             // 
-            // txtO_Donut_M_Cost
-            // 
-            this.txtO_Donut_M_Cost.EditValue2 = null;
-            this.txtO_Donut_M_Cost.Location = new System.Drawing.Point(108, 263);
-            this.txtO_Donut_M_Cost.Name = "txtO_Donut_M_Cost";
-            this.txtO_Donut_M_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Donut_M_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Donut_M_Cost.RequireMessage = null;
-            this.txtO_Donut_M_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Donut_M_Cost.TabIndex = 38;
-            // 
             // efwLabel16
             // 
             this.efwLabel16.EraserGroup = null;
@@ -491,17 +478,6 @@
             this.efwLabel16.Size = new System.Drawing.Size(28, 14);
             this.efwLabel16.TabIndex = 37;
             this.efwLabel16.Text = "D머니";
-            // 
-            // txtO_Donut_D_Cost
-            // 
-            this.txtO_Donut_D_Cost.EditValue2 = null;
-            this.txtO_Donut_D_Cost.Location = new System.Drawing.Point(506, 237);
-            this.txtO_Donut_D_Cost.Name = "txtO_Donut_D_Cost";
-            this.txtO_Donut_D_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Donut_D_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Donut_D_Cost.RequireMessage = null;
-            this.txtO_Donut_D_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Donut_D_Cost.TabIndex = 36;
             // 
             // efwLabel15
             // 
@@ -513,17 +489,6 @@
             this.efwLabel15.TabIndex = 35;
             this.efwLabel15.Text = "배송비";
             // 
-            // txtO_Delivery_Cost
-            // 
-            this.txtO_Delivery_Cost.EditValue2 = null;
-            this.txtO_Delivery_Cost.Location = new System.Drawing.Point(304, 237);
-            this.txtO_Delivery_Cost.Name = "txtO_Delivery_Cost";
-            this.txtO_Delivery_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Delivery_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Delivery_Cost.RequireMessage = null;
-            this.txtO_Delivery_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Delivery_Cost.TabIndex = 34;
-            // 
             // efwLabel14
             // 
             this.efwLabel14.EraserGroup = null;
@@ -534,19 +499,10 @@
             this.efwLabel14.TabIndex = 33;
             this.efwLabel14.Text = "총 주문금액";
             // 
-            // txtO_Total_Cost
-            // 
-            this.txtO_Total_Cost.EditValue2 = null;
-            this.txtO_Total_Cost.Location = new System.Drawing.Point(108, 237);
-            this.txtO_Total_Cost.Name = "txtO_Total_Cost";
-            this.txtO_Total_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Total_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Total_Cost.RequireMessage = null;
-            this.txtO_Total_Cost.Size = new System.Drawing.Size(102, 20);
-            this.txtO_Total_Cost.TabIndex = 32;
-            // 
             // efwLabel10
             // 
+            this.efwLabel10.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.efwLabel10.Appearance.Options.UseForeColor = true;
             this.efwLabel10.EraserGroup = null;
             this.efwLabel10.IsMultiLang = false;
             this.efwLabel10.Location = new System.Drawing.Point(18, 214);
@@ -568,6 +524,8 @@
             // 
             // efwLabel11
             // 
+            this.efwLabel11.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.efwLabel11.Appearance.Options.UseForeColor = true;
             this.efwLabel11.EraserGroup = null;
             this.efwLabel11.IsMultiLang = false;
             this.efwLabel11.Location = new System.Drawing.Point(239, 188);
@@ -589,6 +547,8 @@
             // 
             // efwLabel12
             // 
+            this.efwLabel12.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.efwLabel12.Appearance.Options.UseForeColor = true;
             this.efwLabel12.EraserGroup = null;
             this.efwLabel12.IsMultiLang = false;
             this.efwLabel12.Location = new System.Drawing.Point(17, 188);
@@ -610,6 +570,8 @@
             // 
             // efwLabel13
             // 
+            this.efwLabel13.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.efwLabel13.Appearance.Options.UseForeColor = true;
             this.efwLabel13.EraserGroup = null;
             this.efwLabel13.IsMultiLang = false;
             this.efwLabel13.Location = new System.Drawing.Point(17, 162);
@@ -629,7 +591,6 @@
             this.txtO_Receive_ZipCode1.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtO_Receive_ZipCode1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtO_Receive_ZipCode1.Properties.ReadOnly = true;
             this.txtO_Receive_ZipCode1.Size = new System.Drawing.Size(102, 20);
             this.txtO_Receive_ZipCode1.TabIndex = 24;
             // 
@@ -640,13 +601,14 @@
             this.txtO_Receive_Address1.Name = "txtO_Receive_Address1";
             this.txtO_Receive_Address1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Receive_Address1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Receive_Address1.Properties.ReadOnly = true;
             this.txtO_Receive_Address1.RequireMessage = null;
             this.txtO_Receive_Address1.Size = new System.Drawing.Size(394, 20);
             this.txtO_Receive_Address1.TabIndex = 23;
             // 
             // efwLabel9
             // 
+            this.efwLabel9.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.efwLabel9.Appearance.Options.UseForeColor = true;
             this.efwLabel9.EraserGroup = null;
             this.efwLabel9.IsMultiLang = false;
             this.efwLabel9.Location = new System.Drawing.Point(18, 137);
@@ -668,6 +630,8 @@
             // 
             // efwLabel8
             // 
+            this.efwLabel8.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.efwLabel8.Appearance.Options.UseForeColor = true;
             this.efwLabel8.EraserGroup = null;
             this.efwLabel8.IsMultiLang = false;
             this.efwLabel8.Location = new System.Drawing.Point(239, 111);
@@ -689,6 +653,8 @@
             // 
             // efwLabel7
             // 
+            this.efwLabel7.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.efwLabel7.Appearance.Options.UseForeColor = true;
             this.efwLabel7.EraserGroup = null;
             this.efwLabel7.IsMultiLang = false;
             this.efwLabel7.Location = new System.Drawing.Point(17, 111);
@@ -710,6 +676,8 @@
             // 
             // efwLabel6
             // 
+            this.efwLabel6.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.efwLabel6.Appearance.Options.UseForeColor = true;
             this.efwLabel6.EraserGroup = null;
             this.efwLabel6.IsMultiLang = false;
             this.efwLabel6.Location = new System.Drawing.Point(17, 85);
@@ -729,7 +697,6 @@
             this.txtO_Receive_ZipCode.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtO_Receive_ZipCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtO_Receive_ZipCode.Properties.ReadOnly = true;
             this.txtO_Receive_ZipCode.Size = new System.Drawing.Size(102, 20);
             this.txtO_Receive_ZipCode.TabIndex = 15;
             // 
@@ -740,7 +707,6 @@
             this.txtO_Receive_Address.Name = "txtO_Receive_Address";
             this.txtO_Receive_Address.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Receive_Address.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Receive_Address.Properties.ReadOnly = true;
             this.txtO_Receive_Address.RequireMessage = null;
             this.txtO_Receive_Address.Size = new System.Drawing.Size(394, 20);
             this.txtO_Receive_Address.TabIndex = 14;
@@ -769,6 +735,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtO_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtO_Date.Properties.ReadOnly = true;
             this.dtO_Date.Size = new System.Drawing.Size(102, 20);
             this.dtO_Date.TabIndex = 8;
             // 
@@ -789,6 +756,7 @@
             this.txtU_Name.Name = "txtU_Name";
             this.txtU_Name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_Name.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtU_Name.Properties.ReadOnly = true;
             this.txtU_Name.RequireMessage = null;
             this.txtU_Name.Size = new System.Drawing.Size(102, 20);
             this.txtU_Name.TabIndex = 6;
@@ -797,7 +765,7 @@
             // 
             this.efwLabel3.EraserGroup = null;
             this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(420, 33);
+            this.efwLabel3.Location = new System.Drawing.Point(239, 36);
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(40, 14);
             this.efwLabel3.TabIndex = 5;
@@ -806,19 +774,20 @@
             // txtO_Code
             // 
             this.txtO_Code.EditValue2 = null;
-            this.txtO_Code.Location = new System.Drawing.Point(483, 30);
+            this.txtO_Code.Location = new System.Drawing.Point(304, 30);
             this.txtO_Code.Name = "txtO_Code";
             this.txtO_Code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Code.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Code.Properties.ReadOnly = true;
             this.txtO_Code.RequireMessage = null;
-            this.txtO_Code.Size = new System.Drawing.Size(125, 20);
+            this.txtO_Code.Size = new System.Drawing.Size(177, 20);
             this.txtO_Code.TabIndex = 4;
             // 
             // efwLabel2
             // 
             this.efwLabel2.EraserGroup = null;
             this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(239, 33);
+            this.efwLabel2.Location = new System.Drawing.Point(441, 59);
             this.efwLabel2.Name = "efwLabel2";
             this.efwLabel2.Size = new System.Drawing.Size(40, 14);
             this.efwLabel2.TabIndex = 3;
@@ -827,10 +796,11 @@
             // txtO_Type
             // 
             this.txtO_Type.EditValue2 = null;
-            this.txtO_Type.Location = new System.Drawing.Point(304, 30);
+            this.txtO_Type.Location = new System.Drawing.Point(506, 56);
             this.txtO_Type.Name = "txtO_Type";
             this.txtO_Type.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Type.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Type.Properties.ReadOnly = true;
             this.txtO_Type.RequireMessage = null;
             this.txtO_Type.Size = new System.Drawing.Size(102, 20);
             this.txtO_Type.TabIndex = 2;
@@ -852,6 +822,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtID.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtID.Properties.ReadOnly = true;
             this.txtID.RequireMessage = null;
             this.txtID.Size = new System.Drawing.Size(102, 20);
             this.txtID.TabIndex = 0;
@@ -859,8 +830,8 @@
             // efwGroupControl2
             // 
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
-            this.efwGroupControl2.Controls.Add(this.efwLabel32);
             this.efwGroupControl2.Controls.Add(this.txtP_Price);
+            this.efwGroupControl2.Controls.Add(this.efwLabel32);
             this.efwGroupControl2.Controls.Add(this.efwLabel31);
             this.efwGroupControl2.Controls.Add(this.txtP_num);
             this.efwGroupControl2.Controls.Add(this.efwLabel30);
@@ -875,7 +846,7 @@
             this.efwGroupControl2.IsMultiLang = false;
             this.efwGroupControl2.Location = new System.Drawing.Point(622, 0);
             this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(842, 112);
+            this.efwGroupControl2.Size = new System.Drawing.Size(685, 112);
             this.efwGroupControl2.TabIndex = 1;
             this.efwGroupControl2.Text = "상품정보";
             // 
@@ -883,22 +854,11 @@
             // 
             this.efwLabel32.EraserGroup = null;
             this.efwLabel32.IsMultiLang = false;
-            this.efwLabel32.Location = new System.Drawing.Point(312, 86);
+            this.efwLabel32.Location = new System.Drawing.Point(288, 87);
             this.efwLabel32.Name = "efwLabel32";
             this.efwLabel32.Size = new System.Drawing.Size(40, 14);
             this.efwLabel32.TabIndex = 67;
             this.efwLabel32.Text = "주문가격";
-            // 
-            // txtP_Price
-            // 
-            this.txtP_Price.EditValue2 = null;
-            this.txtP_Price.Location = new System.Drawing.Point(377, 81);
-            this.txtP_Price.Name = "txtP_Price";
-            this.txtP_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtP_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtP_Price.RequireMessage = null;
-            this.txtP_Price.Size = new System.Drawing.Size(179, 20);
-            this.txtP_Price.TabIndex = 66;
             // 
             // efwLabel31
             // 
@@ -913,10 +873,11 @@
             // txtP_num
             // 
             this.txtP_num.EditValue2 = null;
-            this.txtP_num.Location = new System.Drawing.Point(108, 82);
+            this.txtP_num.Location = new System.Drawing.Point(84, 83);
             this.txtP_num.Name = "txtP_num";
             this.txtP_num.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtP_num.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_num.Properties.ReadOnly = true;
             this.txtP_num.RequireMessage = null;
             this.txtP_num.Size = new System.Drawing.Size(179, 20);
             this.txtP_num.TabIndex = 64;
@@ -925,7 +886,7 @@
             // 
             this.efwLabel30.EraserGroup = null;
             this.efwLabel30.IsMultiLang = false;
-            this.efwLabel30.Location = new System.Drawing.Point(313, 60);
+            this.efwLabel30.Location = new System.Drawing.Point(289, 61);
             this.efwLabel30.Name = "efwLabel30";
             this.efwLabel30.Size = new System.Drawing.Size(30, 14);
             this.efwLabel30.TabIndex = 63;
@@ -934,19 +895,20 @@
             // txtPP_Title
             // 
             this.txtPP_Title.EditValue2 = null;
-            this.txtPP_Title.Location = new System.Drawing.Point(377, 55);
+            this.txtPP_Title.Location = new System.Drawing.Point(353, 56);
             this.txtPP_Title.Name = "txtPP_Title";
             this.txtPP_Title.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPP_Title.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPP_Title.Properties.ReadOnly = true;
             this.txtPP_Title.RequireMessage = null;
-            this.txtPP_Title.Size = new System.Drawing.Size(455, 20);
+            this.txtPP_Title.Size = new System.Drawing.Size(321, 20);
             this.txtPP_Title.TabIndex = 62;
             // 
             // efwLabel29
             // 
             this.efwLabel29.EraserGroup = null;
             this.efwLabel29.IsMultiLang = false;
-            this.efwLabel29.Location = new System.Drawing.Point(312, 32);
+            this.efwLabel29.Location = new System.Drawing.Point(288, 33);
             this.efwLabel29.Name = "efwLabel29";
             this.efwLabel29.Size = new System.Drawing.Size(30, 14);
             this.efwLabel29.TabIndex = 59;
@@ -965,21 +927,23 @@
             // txtP_Name
             // 
             this.txtP_Name.EditValue2 = null;
-            this.txtP_Name.Location = new System.Drawing.Point(377, 29);
+            this.txtP_Name.Location = new System.Drawing.Point(353, 30);
             this.txtP_Name.Name = "txtP_Name";
             this.txtP_Name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtP_Name.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Name.Properties.ReadOnly = true;
             this.txtP_Name.RequireMessage = null;
-            this.txtP_Name.Size = new System.Drawing.Size(455, 20);
+            this.txtP_Name.Size = new System.Drawing.Size(321, 20);
             this.txtP_Name.TabIndex = 58;
             // 
             // txtP_P_Id
             // 
             this.txtP_P_Id.EditValue2 = null;
-            this.txtP_P_Id.Location = new System.Drawing.Point(108, 56);
+            this.txtP_P_Id.Location = new System.Drawing.Point(84, 57);
             this.txtP_P_Id.Name = "txtP_P_Id";
             this.txtP_P_Id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtP_P_Id.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_P_Id.Properties.ReadOnly = true;
             this.txtP_P_Id.RequireMessage = null;
             this.txtP_P_Id.Size = new System.Drawing.Size(179, 20);
             this.txtP_P_Id.TabIndex = 60;
@@ -997,10 +961,11 @@
             // txtP_Code
             // 
             this.txtP_Code.EditValue2 = null;
-            this.txtP_Code.Location = new System.Drawing.Point(108, 30);
+            this.txtP_Code.Location = new System.Drawing.Point(84, 31);
             this.txtP_Code.Name = "txtP_Code";
             this.txtP_Code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtP_Code.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Code.Properties.ReadOnly = true;
             this.txtP_Code.RequireMessage = null;
             this.txtP_Code.Size = new System.Drawing.Size(179, 20);
             this.txtP_Code.TabIndex = 58;
@@ -1008,6 +973,7 @@
             // efwGroupControl3
             // 
             this.efwGroupControl3.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl3.CaptionImageOptions.Image")));
+            this.efwGroupControl3.Controls.Add(this.txtLGD_PayDate);
             this.efwGroupControl3.Controls.Add(this.efwLabel34);
             this.efwGroupControl3.Controls.Add(this.txtLGD_CasFlag);
             this.efwGroupControl3.Controls.Add(this.txtLGD_Payer);
@@ -1030,7 +996,6 @@
             this.efwGroupControl3.Controls.Add(this.efwLabel40);
             this.efwGroupControl3.Controls.Add(this.txtLGD_FinanceCode);
             this.efwGroupControl3.Controls.Add(this.efwLabel36);
-            this.efwGroupControl3.Controls.Add(this.txtLGD_PayDate);
             this.efwGroupControl3.Controls.Add(this.efwLabel39);
             this.efwGroupControl3.Controls.Add(this.txtLGD_Amount);
             this.efwGroupControl3.Controls.Add(this.efwLabel33);
@@ -1044,15 +1009,27 @@
             this.efwGroupControl3.IsMultiLang = false;
             this.efwGroupControl3.Location = new System.Drawing.Point(622, 112);
             this.efwGroupControl3.Name = "efwGroupControl3";
-            this.efwGroupControl3.Size = new System.Drawing.Size(842, 194);
+            this.efwGroupControl3.Size = new System.Drawing.Size(685, 194);
             this.efwGroupControl3.TabIndex = 69;
             this.efwGroupControl3.Text = "결재정보";
+            // 
+            // txtLGD_PayDate
+            // 
+            this.txtLGD_PayDate.EditValue2 = null;
+            this.txtLGD_PayDate.Location = new System.Drawing.Point(554, 61);
+            this.txtLGD_PayDate.Name = "txtLGD_PayDate";
+            this.txtLGD_PayDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtLGD_PayDate.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_PayDate.Properties.ReadOnly = true;
+            this.txtLGD_PayDate.RequireMessage = null;
+            this.txtLGD_PayDate.Size = new System.Drawing.Size(119, 20);
+            this.txtLGD_PayDate.TabIndex = 97;
             // 
             // efwLabel34
             // 
             this.efwLabel34.EraserGroup = null;
             this.efwLabel34.IsMultiLang = false;
-            this.efwLabel34.Location = new System.Drawing.Point(312, 143);
+            this.efwLabel34.Location = new System.Drawing.Point(288, 143);
             this.efwLabel34.Name = "efwLabel34";
             this.efwLabel34.Size = new System.Drawing.Size(40, 14);
             this.efwLabel34.TabIndex = 96;
@@ -1061,30 +1038,32 @@
             // txtLGD_CasFlag
             // 
             this.txtLGD_CasFlag.EditValue2 = null;
-            this.txtLGD_CasFlag.Location = new System.Drawing.Point(377, 140);
+            this.txtLGD_CasFlag.Location = new System.Drawing.Point(353, 140);
             this.txtLGD_CasFlag.Name = "txtLGD_CasFlag";
             this.txtLGD_CasFlag.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_CasFlag.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_CasFlag.Properties.ReadOnly = true;
             this.txtLGD_CasFlag.RequireMessage = null;
-            this.txtLGD_CasFlag.Size = new System.Drawing.Size(179, 20);
+            this.txtLGD_CasFlag.Size = new System.Drawing.Size(119, 20);
             this.txtLGD_CasFlag.TabIndex = 95;
             // 
             // txtLGD_Payer
             // 
             this.txtLGD_Payer.EditValue2 = null;
-            this.txtLGD_Payer.Location = new System.Drawing.Point(377, 114);
+            this.txtLGD_Payer.Location = new System.Drawing.Point(353, 114);
             this.txtLGD_Payer.Name = "txtLGD_Payer";
             this.txtLGD_Payer.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_Payer.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_Payer.Properties.ReadOnly = true;
             this.txtLGD_Payer.RequireMessage = null;
-            this.txtLGD_Payer.Size = new System.Drawing.Size(179, 20);
+            this.txtLGD_Payer.Size = new System.Drawing.Size(119, 20);
             this.txtLGD_Payer.TabIndex = 94;
             // 
             // efwLabel23
             // 
             this.efwLabel23.EraserGroup = null;
             this.efwLabel23.IsMultiLang = false;
-            this.efwLabel23.Location = new System.Drawing.Point(312, 64);
+            this.efwLabel23.Location = new System.Drawing.Point(288, 64);
             this.efwLabel23.Name = "efwLabel23";
             this.efwLabel23.Size = new System.Drawing.Size(40, 14);
             this.efwLabel23.TabIndex = 93;
@@ -1093,10 +1072,11 @@
             // txtLGD_SaOwner
             // 
             this.txtLGD_SaOwner.EditValue2 = null;
-            this.txtLGD_SaOwner.Location = new System.Drawing.Point(108, 166);
+            this.txtLGD_SaOwner.Location = new System.Drawing.Point(84, 166);
             this.txtLGD_SaOwner.Name = "txtLGD_SaOwner";
             this.txtLGD_SaOwner.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_SaOwner.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_SaOwner.Properties.ReadOnly = true;
             this.txtLGD_SaOwner.RequireMessage = null;
             this.txtLGD_SaOwner.Size = new System.Drawing.Size(179, 20);
             this.txtLGD_SaOwner.TabIndex = 92;
@@ -1115,7 +1095,7 @@
             // 
             this.efwLabel48.EraserGroup = null;
             this.efwLabel48.IsMultiLang = false;
-            this.efwLabel48.Location = new System.Drawing.Point(586, 137);
+            this.efwLabel48.Location = new System.Drawing.Point(488, 143);
             this.efwLabel48.Name = "efwLabel48";
             this.efwLabel48.Size = new System.Drawing.Size(40, 14);
             this.efwLabel48.TabIndex = 88;
@@ -1124,12 +1104,13 @@
             // txtLGD_CasseqNo
             // 
             this.txtLGD_CasseqNo.EditValue2 = null;
-            this.txtLGD_CasseqNo.Location = new System.Drawing.Point(653, 134);
+            this.txtLGD_CasseqNo.Location = new System.Drawing.Point(555, 140);
             this.txtLGD_CasseqNo.Name = "txtLGD_CasseqNo";
             this.txtLGD_CasseqNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_CasseqNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_CasseqNo.Properties.ReadOnly = true;
             this.txtLGD_CasseqNo.RequireMessage = null;
-            this.txtLGD_CasseqNo.Size = new System.Drawing.Size(179, 20);
+            this.txtLGD_CasseqNo.Size = new System.Drawing.Size(119, 20);
             this.txtLGD_CasseqNo.TabIndex = 87;
             // 
             // efwLabel49
@@ -1145,10 +1126,11 @@
             // txtLGD_CascAmount
             // 
             this.txtLGD_CascAmount.EditValue2 = null;
-            this.txtLGD_CascAmount.Location = new System.Drawing.Point(108, 137);
+            this.txtLGD_CascAmount.Location = new System.Drawing.Point(84, 137);
             this.txtLGD_CascAmount.Name = "txtLGD_CascAmount";
             this.txtLGD_CascAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_CascAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_CascAmount.Properties.ReadOnly = true;
             this.txtLGD_CascAmount.RequireMessage = null;
             this.txtLGD_CascAmount.Size = new System.Drawing.Size(179, 20);
             this.txtLGD_CascAmount.TabIndex = 85;
@@ -1156,19 +1138,20 @@
             // txtLGD_CastAmount
             // 
             this.txtLGD_CastAmount.EditValue2 = null;
-            this.txtLGD_CastAmount.Location = new System.Drawing.Point(653, 108);
+            this.txtLGD_CastAmount.Location = new System.Drawing.Point(555, 114);
             this.txtLGD_CastAmount.Name = "txtLGD_CastAmount";
             this.txtLGD_CastAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_CastAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_CastAmount.Properties.ReadOnly = true;
             this.txtLGD_CastAmount.RequireMessage = null;
-            this.txtLGD_CastAmount.Size = new System.Drawing.Size(179, 20);
+            this.txtLGD_CastAmount.Size = new System.Drawing.Size(119, 20);
             this.txtLGD_CastAmount.TabIndex = 84;
             // 
             // efwLabel42
             // 
             this.efwLabel42.EraserGroup = null;
             this.efwLabel42.IsMultiLang = false;
-            this.efwLabel42.Location = new System.Drawing.Point(586, 111);
+            this.efwLabel42.Location = new System.Drawing.Point(488, 117);
             this.efwLabel42.Name = "efwLabel42";
             this.efwLabel42.Size = new System.Drawing.Size(40, 14);
             this.efwLabel42.TabIndex = 83;
@@ -1178,7 +1161,7 @@
             // 
             this.efwLabel43.EraserGroup = null;
             this.efwLabel43.IsMultiLang = false;
-            this.efwLabel43.Location = new System.Drawing.Point(312, 117);
+            this.efwLabel43.Location = new System.Drawing.Point(288, 117);
             this.efwLabel43.Name = "efwLabel43";
             this.efwLabel43.Size = new System.Drawing.Size(40, 14);
             this.efwLabel43.TabIndex = 82;
@@ -1197,10 +1180,11 @@
             // txtLGD_AccountOwner
             // 
             this.txtLGD_AccountOwner.EditValue2 = null;
-            this.txtLGD_AccountOwner.Location = new System.Drawing.Point(108, 111);
+            this.txtLGD_AccountOwner.Location = new System.Drawing.Point(84, 111);
             this.txtLGD_AccountOwner.Name = "txtLGD_AccountOwner";
             this.txtLGD_AccountOwner.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_AccountOwner.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_AccountOwner.Properties.ReadOnly = true;
             this.txtLGD_AccountOwner.RequireMessage = null;
             this.txtLGD_AccountOwner.Size = new System.Drawing.Size(179, 20);
             this.txtLGD_AccountOwner.TabIndex = 79;
@@ -1209,7 +1193,7 @@
             // 
             this.efwLabel45.EraserGroup = null;
             this.efwLabel45.IsMultiLang = false;
-            this.efwLabel45.Location = new System.Drawing.Point(586, 84);
+            this.efwLabel45.Location = new System.Drawing.Point(488, 90);
             this.efwLabel45.Name = "efwLabel45";
             this.efwLabel45.Size = new System.Drawing.Size(40, 14);
             this.efwLabel45.TabIndex = 78;
@@ -1218,30 +1202,32 @@
             // txtLGD_AccountNum
             // 
             this.txtLGD_AccountNum.EditValue2 = null;
-            this.txtLGD_AccountNum.Location = new System.Drawing.Point(653, 81);
+            this.txtLGD_AccountNum.Location = new System.Drawing.Point(555, 87);
             this.txtLGD_AccountNum.Name = "txtLGD_AccountNum";
             this.txtLGD_AccountNum.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_AccountNum.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_AccountNum.Properties.ReadOnly = true;
             this.txtLGD_AccountNum.RequireMessage = null;
-            this.txtLGD_AccountNum.Size = new System.Drawing.Size(179, 20);
+            this.txtLGD_AccountNum.Size = new System.Drawing.Size(119, 20);
             this.txtLGD_AccountNum.TabIndex = 77;
             // 
             // txtLGD_FinanceName
             // 
             this.txtLGD_FinanceName.EditValue2 = null;
-            this.txtLGD_FinanceName.Location = new System.Drawing.Point(377, 87);
+            this.txtLGD_FinanceName.Location = new System.Drawing.Point(353, 87);
             this.txtLGD_FinanceName.Name = "txtLGD_FinanceName";
             this.txtLGD_FinanceName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_FinanceName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_FinanceName.Properties.ReadOnly = true;
             this.txtLGD_FinanceName.RequireMessage = null;
-            this.txtLGD_FinanceName.Size = new System.Drawing.Size(179, 20);
+            this.txtLGD_FinanceName.Size = new System.Drawing.Size(119, 20);
             this.txtLGD_FinanceName.TabIndex = 76;
             // 
             // efwLabel41
             // 
             this.efwLabel41.EraserGroup = null;
             this.efwLabel41.IsMultiLang = false;
-            this.efwLabel41.Location = new System.Drawing.Point(312, 90);
+            this.efwLabel41.Location = new System.Drawing.Point(288, 90);
             this.efwLabel41.Name = "efwLabel41";
             this.efwLabel41.Size = new System.Drawing.Size(40, 14);
             this.efwLabel41.TabIndex = 75;
@@ -1260,10 +1246,11 @@
             // txtLGD_FinanceCode
             // 
             this.txtLGD_FinanceCode.EditValue2 = null;
-            this.txtLGD_FinanceCode.Location = new System.Drawing.Point(108, 84);
+            this.txtLGD_FinanceCode.Location = new System.Drawing.Point(84, 84);
             this.txtLGD_FinanceCode.Name = "txtLGD_FinanceCode";
             this.txtLGD_FinanceCode.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_FinanceCode.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_FinanceCode.Properties.ReadOnly = true;
             this.txtLGD_FinanceCode.RequireMessage = null;
             this.txtLGD_FinanceCode.Size = new System.Drawing.Size(179, 20);
             this.txtLGD_FinanceCode.TabIndex = 72;
@@ -1272,34 +1259,17 @@
             // 
             this.efwLabel36.EraserGroup = null;
             this.efwLabel36.IsMultiLang = false;
-            this.efwLabel36.Location = new System.Drawing.Point(586, 58);
+            this.efwLabel36.Location = new System.Drawing.Point(488, 64);
             this.efwLabel36.Name = "efwLabel36";
             this.efwLabel36.Size = new System.Drawing.Size(30, 14);
             this.efwLabel36.TabIndex = 71;
             this.efwLabel36.Text = "결재일";
             // 
-            // txtLGD_PayDate
-            // 
-            this.txtLGD_PayDate.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
-            this.txtLGD_PayDate.IsRequire = true;
-            this.txtLGD_PayDate.Location = new System.Drawing.Point(653, 55);
-            this.txtLGD_PayDate.Name = "txtLGD_PayDate";
-            this.txtLGD_PayDate.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
-            this.txtLGD_PayDate.Properties.Appearance.Options.UseBackColor = true;
-            this.txtLGD_PayDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtLGD_PayDate.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtLGD_PayDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtLGD_PayDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtLGD_PayDate.Size = new System.Drawing.Size(179, 20);
-            this.txtLGD_PayDate.TabIndex = 70;
-            // 
             // efwLabel39
             // 
             this.efwLabel39.EraserGroup = null;
             this.efwLabel39.IsMultiLang = false;
-            this.efwLabel39.Location = new System.Drawing.Point(586, 32);
+            this.efwLabel39.Location = new System.Drawing.Point(488, 38);
             this.efwLabel39.Name = "efwLabel39";
             this.efwLabel39.Size = new System.Drawing.Size(40, 14);
             this.efwLabel39.TabIndex = 69;
@@ -1308,12 +1278,13 @@
             // txtLGD_Amount
             // 
             this.txtLGD_Amount.EditValue2 = null;
-            this.txtLGD_Amount.Location = new System.Drawing.Point(653, 29);
+            this.txtLGD_Amount.Location = new System.Drawing.Point(555, 35);
             this.txtLGD_Amount.Name = "txtLGD_Amount";
             this.txtLGD_Amount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_Amount.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_Amount.Properties.ReadOnly = true;
             this.txtLGD_Amount.RequireMessage = null;
-            this.txtLGD_Amount.Size = new System.Drawing.Size(179, 20);
+            this.txtLGD_Amount.Size = new System.Drawing.Size(119, 20);
             this.txtLGD_Amount.TabIndex = 68;
             // 
             // efwLabel33
@@ -1329,10 +1300,11 @@
             // txtLGD_Tid
             // 
             this.txtLGD_Tid.EditValue2 = null;
-            this.txtLGD_Tid.Location = new System.Drawing.Point(108, 58);
+            this.txtLGD_Tid.Location = new System.Drawing.Point(84, 58);
             this.txtLGD_Tid.Name = "txtLGD_Tid";
             this.txtLGD_Tid.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_Tid.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_Tid.Properties.ReadOnly = true;
             this.txtLGD_Tid.RequireMessage = null;
             this.txtLGD_Tid.Size = new System.Drawing.Size(179, 20);
             this.txtLGD_Tid.TabIndex = 66;
@@ -1340,19 +1312,20 @@
             // txtLGD_PayType
             // 
             this.txtLGD_PayType.EditValue2 = null;
-            this.txtLGD_PayType.Location = new System.Drawing.Point(377, 61);
+            this.txtLGD_PayType.Location = new System.Drawing.Point(353, 61);
             this.txtLGD_PayType.Name = "txtLGD_PayType";
             this.txtLGD_PayType.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_PayType.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_PayType.Properties.ReadOnly = true;
             this.txtLGD_PayType.RequireMessage = null;
-            this.txtLGD_PayType.Size = new System.Drawing.Size(179, 20);
+            this.txtLGD_PayType.Size = new System.Drawing.Size(119, 20);
             this.txtLGD_PayType.TabIndex = 64;
             // 
             // efwLabel35
             // 
             this.efwLabel35.EraserGroup = null;
             this.efwLabel35.IsMultiLang = false;
-            this.efwLabel35.Location = new System.Drawing.Point(312, 38);
+            this.efwLabel35.Location = new System.Drawing.Point(288, 38);
             this.efwLabel35.Name = "efwLabel35";
             this.efwLabel35.Size = new System.Drawing.Size(40, 14);
             this.efwLabel35.TabIndex = 63;
@@ -1361,12 +1334,13 @@
             // txtLGD_Response_Msg
             // 
             this.txtLGD_Response_Msg.EditValue2 = null;
-            this.txtLGD_Response_Msg.Location = new System.Drawing.Point(377, 35);
+            this.txtLGD_Response_Msg.Location = new System.Drawing.Point(353, 35);
             this.txtLGD_Response_Msg.Name = "txtLGD_Response_Msg";
             this.txtLGD_Response_Msg.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_Response_Msg.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_Response_Msg.Properties.ReadOnly = true;
             this.txtLGD_Response_Msg.RequireMessage = null;
-            this.txtLGD_Response_Msg.Size = new System.Drawing.Size(179, 20);
+            this.txtLGD_Response_Msg.Size = new System.Drawing.Size(119, 20);
             this.txtLGD_Response_Msg.TabIndex = 62;
             // 
             // efwLabel37
@@ -1382,10 +1356,11 @@
             // txtLGD_Response_Code
             // 
             this.txtLGD_Response_Code.EditValue2 = null;
-            this.txtLGD_Response_Code.Location = new System.Drawing.Point(108, 32);
+            this.txtLGD_Response_Code.Location = new System.Drawing.Point(84, 32);
             this.txtLGD_Response_Code.Name = "txtLGD_Response_Code";
             this.txtLGD_Response_Code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_Response_Code.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLGD_Response_Code.Properties.ReadOnly = true;
             this.txtLGD_Response_Code.RequireMessage = null;
             this.txtLGD_Response_Code.Size = new System.Drawing.Size(179, 20);
             this.txtLGD_Response_Code.TabIndex = 60;
@@ -1405,7 +1380,7 @@
             this.efwGroupControl4.IsMultiLang = false;
             this.efwGroupControl4.Location = new System.Drawing.Point(622, 306);
             this.efwGroupControl4.Name = "efwGroupControl4";
-            this.efwGroupControl4.Size = new System.Drawing.Size(842, 93);
+            this.efwGroupControl4.Size = new System.Drawing.Size(685, 93);
             this.efwGroupControl4.TabIndex = 70;
             this.efwGroupControl4.Text = "배송정보";
             // 
@@ -1413,7 +1388,7 @@
             // 
             this.efwLabel52.EraserGroup = null;
             this.efwLabel52.IsMultiLang = false;
-            this.efwLabel52.Location = new System.Drawing.Point(313, 61);
+            this.efwLabel52.Location = new System.Drawing.Point(289, 60);
             this.efwLabel52.Name = "efwLabel52";
             this.efwLabel52.Size = new System.Drawing.Size(50, 14);
             this.efwLabel52.TabIndex = 63;
@@ -1422,19 +1397,20 @@
             // txtO_Delivery_End_Date
             // 
             this.txtO_Delivery_End_Date.EditValue2 = null;
-            this.txtO_Delivery_End_Date.Location = new System.Drawing.Point(378, 58);
+            this.txtO_Delivery_End_Date.Location = new System.Drawing.Point(354, 57);
             this.txtO_Delivery_End_Date.Name = "txtO_Delivery_End_Date";
             this.txtO_Delivery_End_Date.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Delivery_End_Date.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Delivery_End_Date.Properties.ReadOnly = true;
             this.txtO_Delivery_End_Date.RequireMessage = null;
-            this.txtO_Delivery_End_Date.Size = new System.Drawing.Size(179, 20);
+            this.txtO_Delivery_End_Date.Size = new System.Drawing.Size(119, 20);
             this.txtO_Delivery_End_Date.TabIndex = 62;
             // 
             // efwLabel53
             // 
             this.efwLabel53.EraserGroup = null;
             this.efwLabel53.IsMultiLang = false;
-            this.efwLabel53.Location = new System.Drawing.Point(313, 37);
+            this.efwLabel53.Location = new System.Drawing.Point(289, 36);
             this.efwLabel53.Name = "efwLabel53";
             this.efwLabel53.Size = new System.Drawing.Size(40, 14);
             this.efwLabel53.TabIndex = 59;
@@ -1453,21 +1429,23 @@
             // txtO_Delivery_Comp_Name
             // 
             this.txtO_Delivery_Comp_Name.EditValue2 = null;
-            this.txtO_Delivery_Comp_Name.Location = new System.Drawing.Point(378, 32);
+            this.txtO_Delivery_Comp_Name.Location = new System.Drawing.Point(354, 31);
             this.txtO_Delivery_Comp_Name.Name = "txtO_Delivery_Comp_Name";
             this.txtO_Delivery_Comp_Name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Delivery_Comp_Name.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Delivery_Comp_Name.Properties.ReadOnly = true;
             this.txtO_Delivery_Comp_Name.RequireMessage = null;
-            this.txtO_Delivery_Comp_Name.Size = new System.Drawing.Size(179, 20);
+            this.txtO_Delivery_Comp_Name.Size = new System.Drawing.Size(119, 20);
             this.txtO_Delivery_Comp_Name.TabIndex = 58;
             // 
             // txtO_Delivery_Start_Date
             // 
             this.txtO_Delivery_Start_Date.EditValue2 = null;
-            this.txtO_Delivery_Start_Date.Location = new System.Drawing.Point(108, 58);
+            this.txtO_Delivery_Start_Date.Location = new System.Drawing.Point(84, 57);
             this.txtO_Delivery_Start_Date.Name = "txtO_Delivery_Start_Date";
             this.txtO_Delivery_Start_Date.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Delivery_Start_Date.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Delivery_Start_Date.Properties.ReadOnly = true;
             this.txtO_Delivery_Start_Date.RequireMessage = null;
             this.txtO_Delivery_Start_Date.Size = new System.Drawing.Size(179, 20);
             this.txtO_Delivery_Start_Date.TabIndex = 60;
@@ -1485,19 +1463,146 @@
             // txtO_Delivery_Num
             // 
             this.txtO_Delivery_Num.EditValue2 = null;
-            this.txtO_Delivery_Num.Location = new System.Drawing.Point(108, 32);
+            this.txtO_Delivery_Num.Location = new System.Drawing.Point(84, 31);
             this.txtO_Delivery_Num.Name = "txtO_Delivery_Num";
             this.txtO_Delivery_Num.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Delivery_Num.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Delivery_Num.Properties.ReadOnly = true;
             this.txtO_Delivery_Num.RequireMessage = null;
             this.txtO_Delivery_Num.Size = new System.Drawing.Size(179, 20);
             this.txtO_Delivery_Num.TabIndex = 58;
+            // 
+            // txtO_Delivery_Cost
+            // 
+            this.txtO_Delivery_Cost.EditValue = "0";
+            this.txtO_Delivery_Cost.EditValue2 = null;
+            this.txtO_Delivery_Cost.Location = new System.Drawing.Point(304, 237);
+            this.txtO_Delivery_Cost.Name = "txtO_Delivery_Cost";
+            this.txtO_Delivery_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Delivery_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Delivery_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Delivery_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Delivery_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Delivery_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Delivery_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Delivery_Cost.Properties.ReadOnly = true;
+            this.txtO_Delivery_Cost.RequireMessage = null;
+            this.txtO_Delivery_Cost.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Delivery_Cost.TabIndex = 60;
+            // 
+            // txtO_Donut_D_Cost
+            // 
+            this.txtO_Donut_D_Cost.EditValue = "0";
+            this.txtO_Donut_D_Cost.EditValue2 = null;
+            this.txtO_Donut_D_Cost.Location = new System.Drawing.Point(505, 237);
+            this.txtO_Donut_D_Cost.Name = "txtO_Donut_D_Cost";
+            this.txtO_Donut_D_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Donut_D_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Donut_D_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Donut_D_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Donut_D_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Donut_D_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_D_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_D_Cost.Properties.ReadOnly = true;
+            this.txtO_Donut_D_Cost.RequireMessage = null;
+            this.txtO_Donut_D_Cost.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Donut_D_Cost.TabIndex = 61;
+            // 
+            // txtO_Donut_M_Cost
+            // 
+            this.txtO_Donut_M_Cost.EditValue = "0";
+            this.txtO_Donut_M_Cost.EditValue2 = null;
+            this.txtO_Donut_M_Cost.Location = new System.Drawing.Point(109, 263);
+            this.txtO_Donut_M_Cost.Name = "txtO_Donut_M_Cost";
+            this.txtO_Donut_M_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Donut_M_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Donut_M_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Donut_M_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Donut_M_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Donut_M_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_M_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_M_Cost.Properties.ReadOnly = true;
+            this.txtO_Donut_M_Cost.RequireMessage = null;
+            this.txtO_Donut_M_Cost.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Donut_M_Cost.TabIndex = 62;
+            // 
+            // txtO_Donut_C_Cost
+            // 
+            this.txtO_Donut_C_Cost.EditValue = "0";
+            this.txtO_Donut_C_Cost.EditValue2 = null;
+            this.txtO_Donut_C_Cost.Location = new System.Drawing.Point(304, 263);
+            this.txtO_Donut_C_Cost.Name = "txtO_Donut_C_Cost";
+            this.txtO_Donut_C_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Donut_C_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Donut_C_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Donut_C_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Donut_C_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Donut_C_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_C_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_C_Cost.Properties.ReadOnly = true;
+            this.txtO_Donut_C_Cost.RequireMessage = null;
+            this.txtO_Donut_C_Cost.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Donut_C_Cost.TabIndex = 63;
+            // 
+            // txtO_Purchase_Cost
+            // 
+            this.txtO_Purchase_Cost.EditValue = "0";
+            this.txtO_Purchase_Cost.EditValue2 = null;
+            this.txtO_Purchase_Cost.Location = new System.Drawing.Point(506, 263);
+            this.txtO_Purchase_Cost.Name = "txtO_Purchase_Cost";
+            this.txtO_Purchase_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Purchase_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Purchase_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Purchase_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Purchase_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Purchase_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Purchase_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Purchase_Cost.Properties.ReadOnly = true;
+            this.txtO_Purchase_Cost.RequireMessage = null;
+            this.txtO_Purchase_Cost.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Purchase_Cost.TabIndex = 64;
+            // 
+            // txtP_Price
+            // 
+            this.txtP_Price.EditValue = "0";
+            this.txtP_Price.EditValue2 = null;
+            this.txtP_Price.Location = new System.Drawing.Point(354, 83);
+            this.txtP_Price.Name = "txtP_Price";
+            this.txtP_Price.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtP_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtP_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtP_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Price.Properties.ReadOnly = true;
+            this.txtP_Price.RequireMessage = null;
+            this.txtP_Price.Size = new System.Drawing.Size(119, 20);
+            this.txtP_Price.TabIndex = 65;
+            // 
+            // txtO_Total_Cost
+            // 
+            this.txtO_Total_Cost.EditValue = "0";
+            this.txtO_Total_Cost.EditValue2 = null;
+            this.txtO_Total_Cost.Location = new System.Drawing.Point(111, 237);
+            this.txtO_Total_Cost.Name = "txtO_Total_Cost";
+            this.txtO_Total_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtO_Total_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtO_Total_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Total_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Total_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtO_Total_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Total_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Total_Cost.Properties.ReadOnly = true;
+            this.txtO_Total_Cost.RequireMessage = null;
+            this.txtO_Total_Cost.Size = new System.Drawing.Size(100, 20);
+            this.txtO_Total_Cost.TabIndex = 65;
             // 
             // frmDN01_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1464, 399);
+            this.ClientSize = new System.Drawing.Size(1307, 399);
             this.Controls.Add(this.efwGroupControl4);
             this.Controls.Add(this.efwGroupControl3);
             this.Controls.Add(this.efwGroupControl2);
@@ -1520,12 +1625,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Cancel_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Deposit_Confirm_Date.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Deposit_Confirm_Date.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Purchase_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_C_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_M_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_D_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Receive_Message1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Receive_Contact1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Receive_Name1.Properties)).EndInit();
@@ -1545,7 +1644,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
             this.efwGroupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Price.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_num.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPP_Title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Name.Properties)).EndInit();
@@ -1554,6 +1652,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).EndInit();
             this.efwGroupControl3.ResumeLayout(false);
             this.efwGroupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLGD_PayDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_CasFlag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_Payer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_SaOwner.Properties)).EndInit();
@@ -1564,8 +1663,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_AccountNum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_FinanceName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_FinanceCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLGD_PayDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLGD_PayDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_Amount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_Tid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_PayType.Properties)).EndInit();
@@ -1578,6 +1675,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_D_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_M_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_C_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Purchase_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Price.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1608,17 +1712,11 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel20;
         private Easy.Framework.WinForm.Control.efwDateEdit txtO_Deposit_Confirm_Date;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel19;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Purchase_Cost;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel18;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Donut_C_Cost;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel17;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Donut_M_Cost;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel16;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Donut_D_Cost;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel15;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Delivery_Cost;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel14;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Total_Cost;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel10;
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Receive_Message1;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel11;
@@ -1639,7 +1737,6 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Receive_Address;
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel32;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtP_Price;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel31;
         private Easy.Framework.WinForm.Control.efwTextEdit txtP_num;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel30;
@@ -1669,7 +1766,6 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel40;
         private Easy.Framework.WinForm.Control.efwTextEdit txtLGD_FinanceCode;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel36;
-        private Easy.Framework.WinForm.Control.efwDateEdit txtLGD_PayDate;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel39;
         private Easy.Framework.WinForm.Control.efwTextEdit txtLGD_Amount;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel33;
@@ -1692,5 +1788,17 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtLGD_Payer;
         private Easy.Framework.WinForm.Control.efwTextEdit txtLGD_CasFlag;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel34;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtLGD_PayDate;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Purchase_Cost;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Donut_C_Cost;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Donut_M_Cost;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Donut_D_Cost;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Delivery_Cost;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtP_Price;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Total_Cost;
+
+        public SizeGripStyle SizeGripStyle { get; private set; }
+        public FormStartPosition StartPosition { get; private set; }
     }
 }

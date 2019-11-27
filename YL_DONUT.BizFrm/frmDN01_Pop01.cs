@@ -26,6 +26,7 @@ namespace YL_DONUT.BizFrm
 
         private void frmDN01_Pop01_Load(object sender, EventArgs e)
         {
+            DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
             txtID.EditValue = Id;
             Open1();
         }
@@ -263,8 +264,80 @@ namespace YL_DONUT.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
+
         }
 
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
 
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN01_SAVE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_id"].Value = Convert.ToInt32(txtID.EditValue);
+                            cmd.Parameters["i_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_receive_zipcode", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_receive_zipcode"].Value = txtO_Receive_ZipCode.EditValue;
+                            cmd.Parameters["i_o_receive_zipcode"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_receive_address", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_receive_address"].Value = txtO_Receive_Address.EditValue;
+                            cmd.Parameters["i_o_receive_address"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_receive_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_receive_name"].Value = txtO_Receive_Name.EditValue;
+                            cmd.Parameters["i_o_receive_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_receive_contact", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_receive_contact"].Value = txtO_Receive_Contact.EditValue;
+                            cmd.Parameters["i_o_receive_contact"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_receive_message", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_receive_message"].Value = txtO_Receive_Message.EditValue;
+                            cmd.Parameters["i_o_receive_message"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_receive_zipcode1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_receive_zipcode1"].Value = txtO_Receive_ZipCode1.EditValue;
+                            cmd.Parameters["i_o_receive_zipcode1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_receive_address1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_receive_address1"].Value = txtO_Receive_Address1.EditValue;
+                            cmd.Parameters["i_o_receive_address1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_receive_name1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_receive_name1"].Value = txtO_Receive_Name1.EditValue;
+                            cmd.Parameters["i_o_receive_name1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_receive_contact1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_receive_contact1"].Value = txtO_Receive_Contact1.EditValue;
+                            cmd.Parameters["i_o_receive_contact1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_receive_message1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_receive_message1"].Value = txtO_Receive_Message1.EditValue;
+                            cmd.Parameters["i_o_receive_message1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
     }
 }
