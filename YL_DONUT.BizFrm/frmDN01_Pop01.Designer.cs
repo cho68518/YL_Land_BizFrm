@@ -307,6 +307,9 @@ namespace YL_DONUT.BizFrm
             this.txtO_Purchase_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
             this.txtO_Purchase_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtO_Purchase_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Purchase_Cost.Properties.Mask.EditMask = "n0";
+            this.txtO_Purchase_Cost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtO_Purchase_Cost.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtO_Purchase_Cost.Properties.ReadOnly = true;
             this.txtO_Purchase_Cost.RequireMessage = null;
             this.txtO_Purchase_Cost.Size = new System.Drawing.Size(102, 20);
@@ -325,6 +328,9 @@ namespace YL_DONUT.BizFrm
             this.txtO_Donut_C_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
             this.txtO_Donut_C_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtO_Donut_C_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_C_Cost.Properties.Mask.EditMask = "n0";
+            this.txtO_Donut_C_Cost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtO_Donut_C_Cost.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtO_Donut_C_Cost.Properties.ReadOnly = true;
             this.txtO_Donut_C_Cost.RequireMessage = null;
             this.txtO_Donut_C_Cost.Size = new System.Drawing.Size(102, 20);
@@ -343,6 +349,9 @@ namespace YL_DONUT.BizFrm
             this.txtO_Donut_M_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
             this.txtO_Donut_M_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtO_Donut_M_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_M_Cost.Properties.Mask.EditMask = "n0";
+            this.txtO_Donut_M_Cost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtO_Donut_M_Cost.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtO_Donut_M_Cost.Properties.ReadOnly = true;
             this.txtO_Donut_M_Cost.RequireMessage = null;
             this.txtO_Donut_M_Cost.Size = new System.Drawing.Size(102, 20);
@@ -361,6 +370,9 @@ namespace YL_DONUT.BizFrm
             this.txtO_Donut_D_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
             this.txtO_Donut_D_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtO_Donut_D_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtO_Donut_D_Cost.Properties.Mask.EditMask = "n0";
+            this.txtO_Donut_D_Cost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtO_Donut_D_Cost.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtO_Donut_D_Cost.Properties.ReadOnly = true;
             this.txtO_Donut_D_Cost.RequireMessage = null;
             this.txtO_Donut_D_Cost.Size = new System.Drawing.Size(102, 20);
@@ -379,8 +391,9 @@ namespace YL_DONUT.BizFrm
             this.txtO_Delivery_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
             this.txtO_Delivery_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtO_Delivery_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtO_Delivery_Cost.Properties.Mask.EditMask = "n3";
+            this.txtO_Delivery_Cost.Properties.Mask.EditMask = "n0";
             this.txtO_Delivery_Cost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtO_Delivery_Cost.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtO_Delivery_Cost.Properties.ReadOnly = true;
             this.txtO_Delivery_Cost.RequireMessage = null;
             this.txtO_Delivery_Cost.Size = new System.Drawing.Size(102, 20);
@@ -537,7 +550,7 @@ namespace YL_DONUT.BizFrm
             // 
             // txtO_Deposit_Confirm_Date
             // 
-            this.txtO_Deposit_Confirm_Date.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
+            this.txtO_Deposit_Confirm_Date.EditValue = new System.DateTime(2019, 11, 27, 0, 0, 0, 0);
             this.txtO_Deposit_Confirm_Date.IsRequire = true;
             this.txtO_Deposit_Confirm_Date.Location = new System.Drawing.Point(108, 289);
             this.txtO_Deposit_Confirm_Date.Name = "txtO_Deposit_Confirm_Date";
@@ -968,7 +981,8 @@ namespace YL_DONUT.BizFrm
             // 
             this.txtP_Price.EditValue = "0";
             this.txtP_Price.EditValue2 = null;
-            this.txtP_Price.Location = new System.Drawing.Point(354, 83);
+            this.txtP_Price.IsNumericKeyOnly = true;
+            this.txtP_Price.Location = new System.Drawing.Point(353, 83);
             this.txtP_Price.Name = "txtP_Price";
             this.txtP_Price.Properties.Appearance.Options.UseTextOptions = true;
             this.txtP_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -977,10 +991,13 @@ namespace YL_DONUT.BizFrm
             this.txtP_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
             this.txtP_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtP_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Price.Properties.Mask.EditMask = "n0";
+            this.txtP_Price.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtP_Price.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtP_Price.Properties.ReadOnly = true;
             this.txtP_Price.RequireMessage = null;
-            this.txtP_Price.Size = new System.Drawing.Size(119, 20);
-            this.txtP_Price.TabIndex = 65;
+            this.txtP_Price.Size = new System.Drawing.Size(100, 20);
+            this.txtP_Price.TabIndex = 66;
             // 
             // efwLabel32
             // 
@@ -1801,8 +1818,8 @@ namespace YL_DONUT.BizFrm
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Donut_M_Cost;
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Donut_D_Cost;
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Delivery_Cost;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtP_Price;
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Total_Cost;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtP_Price;
 
         public SizeGripStyle SizeGripStyle { get; private set; }
         public FormStartPosition StartPosition { get; private set; }
