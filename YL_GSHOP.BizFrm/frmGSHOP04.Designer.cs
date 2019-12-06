@@ -59,6 +59,7 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn60 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -434,6 +435,7 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn7,
             this.gridColumn1,
+            this.gridColumn57,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
@@ -442,6 +444,7 @@
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn12,
+            this.gridColumn60,
             this.gridColumn16,
             this.gridColumn10,
             this.gridColumn25,
@@ -461,7 +464,6 @@
             this.gridColumn27,
             this.gridColumn58,
             this.gridColumn56,
-            this.gridColumn57,
             this.gridColumn59});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -493,7 +495,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 2;
             // 
             // gridColumn3
             // 
@@ -502,7 +504,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 3;
             // 
             // gridColumn4
             // 
@@ -511,7 +513,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 4;
             // 
             // gridColumn5
             // 
@@ -520,7 +522,7 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.VisibleIndex = 5;
             // 
             // gridColumn6
             // 
@@ -529,7 +531,7 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.VisibleIndex = 6;
             // 
             // gridColumn8
             // 
@@ -538,7 +540,7 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 6;
+            this.gridColumn8.VisibleIndex = 7;
             // 
             // gridColumn9
             // 
@@ -547,7 +549,7 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 7;
+            this.gridColumn9.VisibleIndex = 8;
             // 
             // gridColumn12
             // 
@@ -558,6 +560,14 @@
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 9;
             // 
+            // gridColumn60
+            // 
+            this.gridColumn60.Caption = "등급";
+            this.gridColumn60.FieldName = "u_chef_level";
+            this.gridColumn60.Name = "gridColumn60";
+            this.gridColumn60.Visible = true;
+            this.gridColumn60.VisibleIndex = 10;
+            // 
             // gridColumn16
             // 
             this.gridColumn16.Caption = "우편번호";
@@ -565,7 +575,7 @@
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.OptionsColumn.AllowEdit = false;
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 8;
+            this.gridColumn16.VisibleIndex = 11;
             // 
             // gridColumn10
             // 
@@ -574,7 +584,7 @@
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 10;
+            this.gridColumn10.VisibleIndex = 12;
             // 
             // gridColumn25
             // 
@@ -583,7 +593,7 @@
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.OptionsColumn.AllowEdit = false;
             this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 11;
+            this.gridColumn25.VisibleIndex = 13;
             // 
             // gridColumn21
             // 
@@ -599,7 +609,7 @@
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 12;
+            this.gridColumn11.VisibleIndex = 14;
             // 
             // gridColumn24
             // 
@@ -608,7 +618,7 @@
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.OptionsColumn.AllowEdit = false;
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 13;
+            this.gridColumn24.VisibleIndex = 15;
             // 
             // gridColumn13
             // 
@@ -630,7 +640,7 @@
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.AllowEdit = false;
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 14;
+            this.gridColumn15.VisibleIndex = 16;
             // 
             // gridColumn17
             // 
@@ -646,7 +656,7 @@
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.OptionsColumn.AllowEdit = false;
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 15;
+            this.gridColumn18.VisibleIndex = 17;
             // 
             // gridColumn19
             // 
@@ -662,7 +672,7 @@
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.OptionsColumn.AllowEdit = false;
             this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 16;
+            this.gridColumn20.VisibleIndex = 18;
             // 
             // gridColumn22
             // 
@@ -678,7 +688,7 @@
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 17;
+            this.gridColumn23.VisibleIndex = 19;
             // 
             // gridColumn26
             // 
@@ -701,7 +711,7 @@
             this.gridColumn58.Name = "gridColumn58";
             this.gridColumn58.OptionsColumn.AllowEdit = false;
             this.gridColumn58.Visible = true;
-            this.gridColumn58.VisibleIndex = 18;
+            this.gridColumn58.VisibleIndex = 20;
             // 
             // gridColumn56
             // 
@@ -710,7 +720,7 @@
             this.gridColumn56.Name = "gridColumn56";
             this.gridColumn56.OptionsColumn.AllowEdit = false;
             this.gridColumn56.Visible = true;
-            this.gridColumn56.VisibleIndex = 19;
+            this.gridColumn56.VisibleIndex = 21;
             // 
             // gridColumn57
             // 
@@ -719,7 +729,7 @@
             this.gridColumn57.Name = "gridColumn57";
             this.gridColumn57.OptionsColumn.AllowEdit = false;
             this.gridColumn57.Visible = true;
-            this.gridColumn57.VisibleIndex = 20;
+            this.gridColumn57.VisibleIndex = 1;
             // 
             // gridColumn59
             // 
@@ -728,7 +738,7 @@
             this.gridColumn59.Name = "gridColumn59";
             this.gridColumn59.OptionsColumn.AllowEdit = false;
             this.gridColumn59.Visible = true;
-            this.gridColumn59.VisibleIndex = 21;
+            this.gridColumn59.VisibleIndex = 22;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -2435,5 +2445,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
         private Easy.Framework.WinForm.Control.efwCheckEdit cbCom;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn60;
     }
 }

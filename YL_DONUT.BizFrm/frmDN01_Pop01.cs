@@ -202,6 +202,9 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_o_delivery_end_date", MySqlDbType.DateTime));
                         cmd.Parameters["o_o_delivery_end_date"].Direction = ParameterDirection.Output;
 
+                        cmd.Parameters.Add(new MySqlParameter("o_p_id", MySqlDbType.VarChar));
+                        cmd.Parameters["o_p_id"].Direction = ParameterDirection.Output;
+
                         cmd.ExecuteNonQuery();
 
                         txtO_Type.EditValue = cmd.Parameters["o_o_type"].Value.ToString();
@@ -256,7 +259,7 @@ namespace YL_DONUT.BizFrm
                         txtO_Delivery_Comp_Name.EditValue = cmd.Parameters["o_o_delivery_comp_name"].Value.ToString();
                         txtO_Delivery_Start_Date.EditValue = cmd.Parameters["o_o_delivery_start_date"].Value.ToString();
                         txtO_Delivery_End_Date.EditValue = cmd.Parameters["o_o_delivery_end_date"].Value.ToString();
-
+                        txtP_ID.EditValue = cmd.Parameters["o_p_id"].Value.ToString();
                     }
                 }
             }

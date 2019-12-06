@@ -140,6 +140,8 @@ namespace YL_DONUT.BizFrm
             this.txtO_Delivery_Start_Date = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel55 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Delivery_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel38 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtP_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).BeginInit();
@@ -206,6 +208,7 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_ID.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -957,6 +960,8 @@ namespace YL_DONUT.BizFrm
             // efwGroupControl2
             // 
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
+            this.efwGroupControl2.Controls.Add(this.efwLabel38);
+            this.efwGroupControl2.Controls.Add(this.txtP_ID);
             this.efwGroupControl2.Controls.Add(this.txtP_Price);
             this.efwGroupControl2.Controls.Add(this.efwLabel32);
             this.efwGroupControl2.Controls.Add(this.efwLabel31);
@@ -1621,6 +1626,28 @@ namespace YL_DONUT.BizFrm
             this.txtO_Delivery_Num.Size = new System.Drawing.Size(179, 20);
             this.txtO_Delivery_Num.TabIndex = 58;
             // 
+            // efwLabel38
+            // 
+            this.efwLabel38.EraserGroup = null;
+            this.efwLabel38.IsMultiLang = false;
+            this.efwLabel38.Location = new System.Drawing.Point(488, 87);
+            this.efwLabel38.Name = "efwLabel38";
+            this.efwLabel38.Size = new System.Drawing.Size(36, 14);
+            this.efwLabel38.TabIndex = 69;
+            this.efwLabel38.Text = "상품 ID";
+            // 
+            // txtP_ID
+            // 
+            this.txtP_ID.EditValue2 = null;
+            this.txtP_ID.Location = new System.Drawing.Point(554, 83);
+            this.txtP_ID.Name = "txtP_ID";
+            this.txtP_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_ID.Properties.ReadOnly = true;
+            this.txtP_ID.RequireMessage = null;
+            this.txtP_ID.Size = new System.Drawing.Size(119, 20);
+            this.txtP_ID.TabIndex = 68;
+            // 
             // frmDN01_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1705,6 +1732,7 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_ID.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1820,6 +1848,8 @@ namespace YL_DONUT.BizFrm
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Delivery_Cost;
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Total_Cost;
         private Easy.Framework.WinForm.Control.efwTextEdit txtP_Price;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel38;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtP_ID;
 
         public SizeGripStyle SizeGripStyle { get; private set; }
         public FormStartPosition StartPosition { get; private set; }
