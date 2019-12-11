@@ -83,6 +83,16 @@ namespace YL_DONUT.BizFrm.Properties {
         /// <summary>
         ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static byte[] PR체험스토리_D머니적립_sample {
+            get {
+                object obj = ResourceManager.GetObject("PR체험스토리_D머니적립_sample", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static byte[] PS운영자_PS수수료_정산내역_D머니적립_sample {
             get {
                 object obj = ResourceManager.GetObject("PS운영자_PS수수료_정산내역_D머니적립_sample", resourceCulture);
@@ -123,22 +133,11 @@ namespace YL_DONUT.BizFrm.Properties {
         /// <summary>
         ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static byte[] G_SERIES_UPDATE_sample
-        {
+        internal static byte[] 후기머니관리_UPDATE_sample {
             get {
-                object obj = ResourceManager.GetObject("G_SERIES_UPDATE_sample", resourceCulture);
+                object obj = ResourceManager.GetObject("후기머니관리_UPDATE_sample", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
-        internal static byte[] GOODS_SERIES_UPDATE_sample
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("GOODS_SERIES_UPDATE_sample", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-
     }
 }
