@@ -67,6 +67,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwGroupControlProd = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel38 = new Easy.Framework.WinForm.Control.efwLabel();
             this.btnSave = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGroupControl5 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.txtPc_Thumbnail = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -74,7 +75,6 @@
             this.txtPicPath3 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtPicPath2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtPicPath1 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtP_Id = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtC_Code2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtP_Contents = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtC_Code1 = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -82,9 +82,9 @@
             this.txtC_Code3 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtP_Img = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtC_Code4 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.bthNew = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnFileOpen1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.txtP_Id = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwGridControl2 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -203,7 +203,6 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.efwLabel38 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).BeginInit();
             this.efwGroupControlProd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).BeginInit();
@@ -213,7 +212,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Contents.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code1.Properties)).BeginInit();
@@ -221,6 +219,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Img.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbP_EC_Code.Properties)).BeginInit();
@@ -291,7 +290,6 @@
             this.efwGroupControlProd.Controls.Add(this.efwLabel38);
             this.efwGroupControlProd.Controls.Add(this.btnSave);
             this.efwGroupControlProd.Controls.Add(this.efwGroupControl5);
-            this.efwGroupControlProd.Controls.Add(this.efwSimpleButton1);
             this.efwGroupControlProd.Controls.Add(this.bthNew);
             this.efwGroupControlProd.Controls.Add(this.btnFileOpen1);
             this.efwGroupControlProd.Controls.Add(this.txtP_Id);
@@ -340,6 +338,13 @@
             resources.ApplyResources(this.efwGroupControlProd, "efwGroupControlProd");
             this.efwGroupControlProd.IsMultiLang = false;
             this.efwGroupControlProd.Name = "efwGroupControlProd";
+            // 
+            // efwLabel38
+            // 
+            this.efwLabel38.EraserGroup = null;
+            this.efwLabel38.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel38, "efwLabel38");
+            this.efwLabel38.Name = "efwLabel38";
             // 
             // btnSave
             // 
@@ -418,16 +423,6 @@
             this.txtPicPath1.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPicPath1.RequireMessage = null;
             // 
-            // txtP_Id
-            // 
-            this.txtP_Id.EditValue2 = null;
-            resources.ApplyResources(this.txtP_Id, "txtP_Id");
-            this.txtP_Id.EraserGroup = "CLR1";
-            this.txtP_Id.Name = "txtP_Id";
-            this.txtP_Id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtP_Id.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtP_Id.RequireMessage = null;
-            // 
             // txtC_Code2
             // 
             this.txtC_Code2.EditValue2 = null;
@@ -498,13 +493,6 @@
             this.txtC_Code4.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtC_Code4.RequireMessage = null;
             // 
-            // efwSimpleButton1
-            // 
-            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
-            this.efwSimpleButton1.IsMultiLang = false;
-            resources.ApplyResources(this.efwSimpleButton1, "efwSimpleButton1");
-            this.efwSimpleButton1.Name = "efwSimpleButton1";
-            // 
             // bthNew
             // 
             this.bthNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bthNew.ImageOptions.Image")));
@@ -521,6 +509,16 @@
             resources.ApplyResources(this.btnFileOpen1, "btnFileOpen1");
             this.btnFileOpen1.Name = "btnFileOpen1";
             this.btnFileOpen1.Click += new System.EventHandler(this.btnFileOpen1_Click_1);
+            // 
+            // txtP_Id
+            // 
+            this.txtP_Id.EditValue2 = null;
+            resources.ApplyResources(this.txtP_Id, "txtP_Id");
+            this.txtP_Id.EraserGroup = "CLR1";
+            this.txtP_Id.Name = "txtP_Id";
+            this.txtP_Id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_Id.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Id.RequireMessage = null;
             // 
             // efwGridControl2
             // 
@@ -1812,13 +1810,6 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
-            // efwLabel38
-            // 
-            this.efwLabel38.EraserGroup = null;
-            this.efwLabel38.IsMultiLang = false;
-            resources.ApplyResources(this.efwLabel38, "efwLabel38");
-            this.efwLabel38.Name = "efwLabel38";
-            // 
             // frmMM03_Pop01
             // 
             resources.ApplyResources(this, "$this");
@@ -1843,7 +1834,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Contents.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code1.Properties)).EndInit();
@@ -1851,6 +1841,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Img.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbP_EC_Code.Properties)).EndInit();
@@ -2052,7 +2043,6 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtPicPath1;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnFileOpen1;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnSave;
-        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
         private Easy.Framework.WinForm.Control.efwSimpleButton bthNew;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;

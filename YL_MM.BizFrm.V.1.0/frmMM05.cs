@@ -173,6 +173,7 @@ namespace YL_MM.BizFrm
                       , new ColumnControlSet("vip_reco_nickname" , txtVIP_RECO_NICKNAME)
                       , new ColumnControlSet("doramd_type"       , cmbDORAMD_TYPE)
                       , new ColumnControlSet("is_support_team"   , chkIS_SUPPORT_TEAM)
+                      , new ColumnControlSet("is_comp_md"        , chkIS_COMP_MD)
                       );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -369,6 +370,10 @@ namespace YL_MM.BizFrm
                                 cmd.Parameters.Add(new MySqlParameter("i_doramd_type", MySqlDbType.VarChar));
                                 cmd.Parameters["i_doramd_type"].Value = cmbDORAMD_TYPE.EditValue;
                                 cmd.Parameters["i_doramd_type"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_is_comp_md", MySqlDbType.VarChar));
+                                cmd.Parameters["i_is_comp_md"].Value = chkIS_COMP_MD.EditValue;
+                                cmd.Parameters["i_is_comp_md"].Direction = ParameterDirection.Input;
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();

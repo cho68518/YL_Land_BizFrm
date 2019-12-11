@@ -16,43 +16,127 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using YL_MM.BizFrm;
+using YL_SCM.BizFrm;
 using Tamir.SharpSsh;
 using System.Collections;
 using System.Net.Sockets;
-namespace YL_MM.BizFrm
+using System.Net;
+
+namespace YL_SCM.BizFrm
 {
-    public partial class frmMM03_Pop01 : FrmPopUpBase
+    public partial class frmSCM08 : FrmBase
     {
-        public int Id { get; set; }
-
-        frmMM03_Pop02 popup;
-
-        public frmMM03_Pop01()
+        public frmSCM08()
         {
             InitializeComponent();
+            //단축코드 설정 
+            this.QCode = "MM03";
+            //폼명설정
+            this.FrmName = "제품코드 등록";
+
         }
+        frmSCM08_Pop01 popup;
 
-        private void frmMM03_Pop01_Load(object sender, EventArgs e)
+        public override void FrmLoadEvent()
         {
-            txtP_Id.EditValue = Id;
-            cbP_Discount_Donut1.EditValue = null;
-            cbP_Discount_Donut2.EditValue = null;
-            cbP_Discount_Donut3.EditValue = null;
+            base.FrmLoadEvent();
+            DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Skin;
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Black");
+
+            this.IsMenuVw = true;
+            this.IsSearch = true;
+            this.IsNewMode = false;
+            this.IsSave = false;
+            this.IsDelete = false;
+            this.IsCancel = false;
+            this.IsPrint = false;
+            this.IsExcel = false;
+
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = "select concat('y1044_',lpad(max(substring(p_code,7,9)) + 1,9,'0')) from domamall.tb_am_product_masters " +
+                             " where substring(p_code, 1, 6) = 'y1044_' ";
+                DataSet ds = sql.selectQueryDataSet();
+
+                txtP_Code.EditValue = sql.selectQueryForSingleValue();
+            }
             gridView1.OptionsView.ShowFooter = true;
+
+            this.efwGridControl1.BindControlSet(
+            new ColumnControlSet("id", txtP_Id)
+            );
+            this.efwGridControl1.Click += efwGridControl1_Click;
+            gridView1.CustomUnboundColumnData += gridView1_CustomUnboundColumnData;
+            rbPC_Use_Type.EditValue = "N";
+            rbShowType.EditValue = "T";
+            
+            New();
+
             SetCmb();
-            Open1();
+        }
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+            
+            if (dr != null && dr["id"].ToString() != "")
+            {
+                Open1();
+            }
+        }
+        void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            try
+            {
+                DataRow dr = (e.Row as DataRowView).Row;
+                string url = dr["ImageURL"].ToString();
+                if (iconsCache.ContainsKey(url))
+                {
+                    e.Value = iconsCache[url];
+                    return;
+                }
+                var request = WebRequest.Create(url);
 
+                using (var response = request.GetResponse())
+                {
+                    using (var stream = response.GetResponseStream())
+                    {
+                        e.Value = Bitmap.FromStream(stream);
+                        iconsCache.Add(url, (Bitmap)e.Value);
+                    }
+                }
 
-
-            if (txtP_Id.EditValue.ToString() == "0")
-                New();
-
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
 
         }
 
         private void SetCmb()
         {
+            // 공급자구분
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(s_idx,'') as DCODE ,s_company_name as DNAME  FROM domaadmin.tb_sellers_info where s_status = 'Y'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbP_Seller_Id, codeArray);
+            }
+            cmbP_Seller_Id.EditValue = "1";
+            
+
             // 샵구분
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
@@ -70,23 +154,6 @@ namespace YL_MM.BizFrm
                 CodeAgent.MakeCodeControl(this.cmbShops_Type, codeArray);
             }
 
-            // 상품등록업체
-            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
-            {
-                con.Query = "SELECT s_idx as DCODE, s_company_name as DNAME  FROM domaadmin.tb_sellers_info " +
-                    "          order by s_idx ";
-
-                DataSet ds = con.selectQueryDataSet();
-                DataRow[] dr = ds.Tables[0].Select();
-                CodeData[] codeArray = new CodeData[dr.Length];
-
-                for (int i = 0; i < dr.Length; i++)
-                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
-
-                CodeAgent.MakeCodeControl(this.cmbP_Seller_Id, codeArray);
-            }
-
-
             // 노출여부
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
@@ -103,7 +170,7 @@ namespace YL_MM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbP_Show_Type, codeArray);
             }
-
+            cmbP_Show_Type.EditValue = "N";
             // 상태
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
@@ -186,7 +253,7 @@ namespace YL_MM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbP_Delivery_Type, codeArray);
 
-             }
+            }
 
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
@@ -209,42 +276,6 @@ namespace YL_MM.BizFrm
             }
 
 
-            // 옵션 내용에 포함될 COMBO
-
-            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
-            {
-                con.Query = "SELECT  code_id as DCODE, code_nm as DNAME FROM domaadmin.tb_common_code " +
-                    "         where gcode_id = '00022' " +
-                    "         group by code_id, code_nm ";
-
-                DataSet ds = con.selectQueryDataSet();
-                DataTable retDT = ds.Tables[0];
-
-                repositoryItemLookUpEdit1.DataSource = retDT;
-                //컨트롤 초기화
-                InitCodeControl(repositoryItemLookUpEdit1);
-
-                repositoryItemLookUpEdit1.EndUpdate();
-            }
-
-
-            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
-            {
-                con.Query = "SELECT  code_id as DCODE, code_nm as DNAME FROM domaadmin.tb_common_code " +
-                    "         where gcode_id = '00023' " +
-                    "         group by code_id, code_nm ";
-
-                DataSet ds = con.selectQueryDataSet();
-                DataTable retDT = ds.Tables[0];
-
-                repositoryItemLookUpEdit2.DataSource = retDT;
-                //컨트롤 초기화
-                InitCodeControl(repositoryItemLookUpEdit2);
-
-                repositoryItemLookUpEdit2.EndUpdate();
-            }
-
-            
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
                 con.Query = "SELECT code_id as DCODE, code_nm as DNAME  FROM  domaadmin.tb_common_code " +
@@ -260,8 +291,9 @@ namespace YL_MM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbP_PS_Num, codeArray);
             }
-
+ 
         }
+
 
         #region SET CATE COMBO Event()
         private void SetLegacyCode_Mysql(RepositoryItemLookUpEdit cdControl, string codeGroup)
@@ -287,7 +319,7 @@ namespace YL_MM.BizFrm
 
         private void cmbCate_Code1_EditValueChanged(object sender, EventArgs e)
         {
-            
+
 
             if (this.cmbCate_Code1.EditValue == null)
             {
@@ -436,6 +468,62 @@ namespace YL_MM.BizFrm
         }
         #endregion
 
+
+        public override void Search()
+        {
+            try
+            {
+                string sShow_Type = string.Empty;
+                string sCOMFIRM = string.Empty;
+                string sShowType = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SELECT_01", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        if (cmbP_Seller_Id.EditValue.ToString() != "Y" && cmbP_Seller_Id.EditValue.ToString() != "N")
+                            sShowType = null;
+                        else
+                            sShowType = cmbP_Seller_Id.EditValue.ToString();
+
+                        cmd.Parameters.Add("i_StoreCode", MySqlDbType.Int32);
+                        cmd.Parameters[0].Value = sShowType;
+
+                        cmd.Parameters.Add("i_ProdName", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtProdName.EditValue;
+
+                        if (rbShowType.EditValue.ToString() != "Y" && rbShowType.EditValue.ToString() != "N")
+                            sShow_Type = null;
+                        else
+                            sShow_Type = rbShowType.EditValue.ToString();
+
+                        cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[2].Value = sShow_Type;
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                            //  this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+
+
+                }
+            }
+
+
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        Dictionary<String, Bitmap> iconsCache = new Dictionary<string, Bitmap>();
+
         private void Open1()
         {
             try
@@ -446,7 +534,7 @@ namespace YL_MM.BizFrm
                     {
                         con.Open();
                         cmd.CommandType = CommandType.StoredProcedure;
-                         cmd.Parameters.Add(new MySqlParameter("i_p_id", MySqlDbType.Int32));
+                        cmd.Parameters.Add(new MySqlParameter("i_p_id", MySqlDbType.Int32));
                         cmd.Parameters["i_p_id"].Value = Convert.ToInt32(txtP_Id.EditValue);
                         cmd.Parameters["i_p_id"].Direction = ParameterDirection.Input;
 
@@ -467,7 +555,7 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add(new MySqlParameter("o_p_code", MySqlDbType.VarChar));
                         cmd.Parameters["o_p_code"].Direction = ParameterDirection.Output;
-                        
+
                         cmd.Parameters.Add(new MySqlParameter("o_seller_id", MySqlDbType.VarChar));
                         cmd.Parameters["o_seller_id"].Direction = ParameterDirection.Output;
 
@@ -476,19 +564,19 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add(new MySqlParameter("o_multi_discount_cost", MySqlDbType.VarChar));
                         cmd.Parameters["o_multi_discount_cost"].Direction = ParameterDirection.Output;
-                        
+
                         cmd.Parameters.Add(new MySqlParameter("o_max_purchase_num", MySqlDbType.VarChar));
                         cmd.Parameters["o_max_purchase_num"].Direction = ParameterDirection.Output;
-                        
+
                         cmd.Parameters.Add(new MySqlParameter("o_compare_text", MySqlDbType.VarChar));
                         cmd.Parameters["o_compare_text"].Direction = ParameterDirection.Output;
-                        
+
                         cmd.Parameters.Add(new MySqlParameter("o_ompare_type", MySqlDbType.VarChar));
                         cmd.Parameters["o_ompare_type"].Direction = ParameterDirection.Output;
-                        
+
                         cmd.Parameters.Add(new MySqlParameter("o_show_type", MySqlDbType.VarChar));
                         cmd.Parameters["o_show_type"].Direction = ParameterDirection.Output;
-                        
+
                         cmd.Parameters.Add(new MySqlParameter("o_chef_level", MySqlDbType.VarChar));
                         cmd.Parameters["o_chef_level"].Direction = ParameterDirection.Output;
 
@@ -657,9 +745,6 @@ namespace YL_MM.BizFrm
                         txtPC_Content.EditValue = cmd.Parameters["o_pc_content"].Value.ToString();
                         cmbShops_Type.EditValue = cmd.Parameters["o_shops_type"].Value.ToString();
 
-                        Open2();
-                        // 전사 상거래 상세 내용
-                        Open3();
 
 
                     }
@@ -670,71 +755,6 @@ namespace YL_MM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
-
-        private void Open2()
-        {
-            try
-            {
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-
-                {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SELECT_03", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("i_p_id", MySqlDbType.Int32);
-                        cmd.Parameters[0].Value = txtP_Id.EditValue;
-
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable ds = new DataTable();
-                            sda.Fill(ds);
-                            efwGridControl1.DataBind(ds);
-                            //  this.efwGridControl1.MyGridView.BestFitColumns();
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
-        }
-
-        private void Open3()
-        {
-            try
-            {
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-
-                {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SELECT_04", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("i_p_id", MySqlDbType.Int32);
-                        cmd.Parameters[0].Value = txtP_Id.EditValue;
-
-                        cmd.Parameters.Add("i_p_ce_code", MySqlDbType.VarChar);
-                        cmd.Parameters[1].Value = cmbP_EC_Code.EditValue;
-
-
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable ds = new DataTable();
-                            sda.Fill(ds);
-                            efwGridControl2.DataBind(ds);
-                            //  this.efwGridControl1.MyGridView.BestFitColumns();
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
-        }
-
         private void Query_ComBo_Set()
         {
             if (this.txtC_Code1.EditValue == null)
@@ -759,465 +779,14 @@ namespace YL_MM.BizFrm
 
         }
 
-        private void cmbP_EC_Code_EditValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-
-                {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SELECT_04", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("i_p_id", MySqlDbType.Int32);
-                        cmd.Parameters[0].Value = txtP_Id.EditValue;
-
-                        cmd.Parameters.Add("i_p_ce_code", MySqlDbType.VarChar);
-                        cmd.Parameters[1].Value = cmbP_EC_Code.EditValue;
-
-
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable ds = new DataTable();
-                            sda.Fill(ds);
-                            efwGridControl2.DataBind(ds);
-                            //  this.efwGridControl1.MyGridView.BestFitColumns();
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
-        }
-
-        private void picP_IMG_DoubleClick(object sender, EventArgs e)
-        {
-            OpenDlg("1");
-        }
-
-        private void picP_IMG2_DoubleClick(object sender, EventArgs e)
-        {
-            OpenDlg("2");
-        }
-
-        private void picP_CONTENTS_DoubleClick(object sender, EventArgs e)
-        {
-            OpenDlg("3");
-        }
-
-        private void picPc_Thumbnail_DoubleClick(object sender, EventArgs e)
-        {
-            OpenDlg("4");
-        }
-        private void OpenDlg(string s1)
-        {
-            popup = new frmMM03_Pop02();
-            //popup.Owner = this;
-
-            if (s1 == "1")
-                popup.pURL = txtP_Img.Text;
-            else if (s1 == "2")
-                popup.pURL = txtP_Img2.Text;
-            else if (s1 == "3")
-                popup.pURL = txtP_Contents.Text;
-            else if (s1 == "4")
-                popup.pURL = txtPc_Thumbnail.Text;
-
-            popup.FormClosed += popup_FormClosed;
-            popup.ShowDialog();
-        }
-        private void popup_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            popup.FormClosed -= popup_FormClosed;
-
-            //OpenTag(gfloorInfo.FLR, "LDT");
-            popup = null;
-        }
-
-        private void btnFileOpen1_Click(object sender, EventArgs e)
-        { 
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.DefaultExt = "jpg";
-            openFileDialog.FileName = "*.jpg";
-            openFileDialog.Filter = "이미지파일|*.xls";
-            openFileDialog.Title = "이미지파일 가져오기";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    Cursor = Cursors.WaitCursor;
-
-                    txtPicPath1.EditValue = openFileDialog.FileName;
-                    picP_IMG.LoadAsync(openFileDialog.FileName);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
-                }
-                
-                finally
-                {
-                    Cursor = Cursors.Default;
-                }
-            }
-
-        }
-        private void btnFileOpen1_Click_1(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.DefaultExt = "jpg";
-            openFileDialog.FileName = "*.jpg";
-            openFileDialog.Filter = "이미지파일|*.xls";
-            openFileDialog.Title = "이미지파일 가져오기";
-
-            string sftpURL = "14.63.165.36";
-            string sUserName = "root";
-            string sPassword = "@dhkdldpf2!";
-            int nPort = 22023;
-            string sftpDirectory = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
-
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    Cursor = Cursors.WaitCursor;
-
-                    txtPicPath1.EditValue = openFileDialog.FileName;
-                    picP_IMG.LoadAsync(openFileDialog.FileName);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
-                }
-
-                finally
-                {
-                    Cursor = Cursors.Default;
-                }
-                // 폴더생성
-
-                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
-                if (di.Exists == false)
-                {
-                    di.Create();
-                }
-
-                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
-
-                string sOldFile = txtPicPath1.EditValue.ToString();
-                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
-                string sNewFile = "c:\\temp\\"+ sFileName;
-                System.IO.File.Copy(sOldFile, sNewFile);
-
-
-                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
-                
-
-                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
-
-                sSftp.Connect(nPort);
-
-                // 저장 경로에 있는지 체크
-                string sFtpPath = "/domalifefiles/files/product/domamall/";
-                string sFtpPath2 = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
-
-                ArrayList ay = sSftp.GetFileList(sFtpPath);
-                bool isdir = false;
-
-                for (int i = 0; i < ay.Count; i++)
-                {
-                   // string sChk = ay[i].ToString();
-                    if (ay[i].ToString() == txtP_Code.EditValue.ToString() )
-                    {
-                        isdir = true;
-                    }
-                }
-                if (isdir == false)
-                {
-
-                    sSftp.Mkdir(sFtpPath2);
-                }
-
-                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
-                sSftp.Close();
-                txtP_Img.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue+"/"+sFileName;
-            }
-            
-        }
-
-        private void btnFileOpen2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.DefaultExt = "jpg";
-            openFileDialog.FileName = "*.jpg";
-            openFileDialog.Filter = "이미지파일|*.xls";
-            openFileDialog.Title = "이미지파일 가져오기";
-
-            string sftpURL = "14.63.165.36";
-            string sUserName = "root";
-            string sPassword = "@dhkdldpf2!";
-            int nPort = 22023;
-            string sftpDirectory = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    Cursor = Cursors.WaitCursor;
-
-                    txtPicPath2.EditValue = openFileDialog.FileName;
-                    picP_IMG2.LoadAsync(openFileDialog.FileName);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
-                }
-
-                finally
-                {
-                    Cursor = Cursors.Default;
-                }
-
-                // 폴더생성
-
-                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
-                if (di.Exists == false)
-                {
-                    di.Create();
-                }
-
-                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
-
-                string sOldFile = txtPicPath2.EditValue.ToString();
-                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
-                string sNewFile = "c:\\temp\\" + sFileName;
-                System.IO.File.Copy(sOldFile, sNewFile);
-
-
-                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
-
-
-                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
-
-                sSftp.Connect(nPort);
-
-                // 저장 경로에 있는지 체크
-                string sFtpPath = "/domalifefiles/files/product/domamall/";
-                string sFtpPath2 = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
-
-                ArrayList ay = sSftp.GetFileList(sFtpPath);
-                bool isdir = false;
-
-                for (int i = 0; i < ay.Count; i++)
-                {
-                    // string sChk = ay[i].ToString();
-                    if (ay[i].ToString() == txtP_Code.EditValue.ToString())
-                    {
-                        isdir = true;
-                    }
-                }
-                if (isdir == false)
-                {
-
-                    sSftp.Mkdir(sFtpPath2);
-                }
-
-                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
-                sSftp.Close();
-                txtP_Img2.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
-
-
-
-            }
-        }
-
-        private void btnFileOpen3_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.DefaultExt = "jpg";
-            openFileDialog.FileName = "*.jpg";
-            openFileDialog.Filter = "이미지파일|*.xls";
-            openFileDialog.Title = "이미지파일 가져오기";
-
-            string sftpURL = "14.63.165.36";
-            string sUserName = "root";
-            string sPassword = "@dhkdldpf2!";
-            int nPort = 22023;
-            string sftpDirectory = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    Cursor = Cursors.WaitCursor;
-
-                    txtPicPath3.EditValue = openFileDialog.FileName;
-                    picP_CONTENTS.LoadAsync(openFileDialog.FileName);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
-                }
-
-                finally
-                {
-                    Cursor = Cursors.Default;
-                }
-
-                // 폴더생성
-
-                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
-                if (di.Exists == false)
-                {
-                    di.Create();
-                }
-
-                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
-
-                string sOldFile = txtPicPath3.EditValue.ToString();
-                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
-                string sNewFile = "c:\\temp\\" + sFileName;
-                System.IO.File.Copy(sOldFile, sNewFile);
-
-
-                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
-
-
-                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
-
-                sSftp.Connect(nPort);
-
-                // 저장 경로에 있는지 체크
-                string sFtpPath = "/domalifefiles/files/product/domamall/";
-                string sFtpPath2 = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
-
-                ArrayList ay = sSftp.GetFileList(sFtpPath);
-                bool isdir = false;
-
-                for (int i = 0; i < ay.Count; i++)
-                {
-                    // string sChk = ay[i].ToString();
-                    if (ay[i].ToString() == txtP_Code.EditValue.ToString())
-                    {
-                        isdir = true;
-                    }
-                }
-                if (isdir == false)
-                {
-
-                    sSftp.Mkdir(sFtpPath2);
-                }
-
-                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
-                sSftp.Close();
-                txtP_Contents.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
-
-
-
-            }
-        }
-
-        private void btnFileOpen4_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.DefaultExt = "jpg";
-            openFileDialog.FileName = "*.jpg";
-            openFileDialog.Filter = "이미지파일|*.xls";
-            openFileDialog.Title = "이미지파일 가져오기";
-
-            string sftpURL = "14.63.165.36";
-            string sUserName = "root";
-            string sPassword = "@dhkdldpf2!";
-            int nPort = 22023;
-            string sftpDirectory = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    Cursor = Cursors.WaitCursor;
-
-                    txtPicPath4.EditValue = openFileDialog.FileName;
-                    picPc_Thumbnail.LoadAsync(openFileDialog.FileName);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
-                }
-
-                finally
-                {
-                    Cursor = Cursors.Default;
-                }
-
-
-                // 폴더생성
-
-                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
-                if (di.Exists == false)
-                {
-                    di.Create();
-                }
-
-                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
-
-                string sOldFile = txtPicPath4.EditValue.ToString();
-                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
-                string sNewFile = "c:\\temp\\" + sFileName;
-                System.IO.File.Copy(sOldFile, sNewFile);
-
-
-                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
-
-
-                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
-
-                sSftp.Connect(nPort);
-
-                // 저장 경로에 있는지 체크
-                string sFtpPath = "/domalifefiles/files/product/domamall/";
-                string sFtpPath2 = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
-
-                ArrayList ay = sSftp.GetFileList(sFtpPath);
-                bool isdir = false;
-
-                for (int i = 0; i < ay.Count; i++)
-                {
-                    // string sChk = ay[i].ToString();
-                    if (ay[i].ToString() == txtP_Code.EditValue.ToString())
-                    {
-                        isdir = true;
-                    }
-                }
-                if (isdir == false)
-                {
-
-                    sSftp.Mkdir(sFtpPath2);
-                }
-
-                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
-                sSftp.Close();
-                txtPc_Thumbnail.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
-
-
-            }
-        }
-
         private void bthNew_Click(object sender, EventArgs e)
         {
             New();
-
         }
 
         private void New()
         {
             cmbShops_Type.EditValue = "0";
-
             cmbCate_Code1.Properties.DataSource = null;
             cmbCate_Code2.Properties.DataSource = null;
             cmbCate_Code3.Properties.DataSource = null;
@@ -1243,9 +812,9 @@ namespace YL_MM.BizFrm
             txtPicPath4.EditValue = null;
 
             txtP_Code.EditValue = null;
-            txtP_Min_Purchase_Num.EditValue = null;
-            txtP_Multi_Discount_Cost.EditValue = null;
-            txtP_Max_Purchase_Num.EditValue = null;
+            txtP_Min_Purchase_Num.EditValue = "0";
+            txtP_Multi_Discount_Cost.EditValue = "0";
+            txtP_Max_Purchase_Num.EditValue = "0";
             rbP_Compare_Type.EditValue = "T";
             txtP_Compare_Text.EditValue = null;
             cmbP_Show_Type.EditValue = "N";
@@ -1257,7 +826,6 @@ namespace YL_MM.BizFrm
             picP_IMG.EditValue = null;
             picP_IMG2.EditValue = null;
             picP_CONTENTS.EditValue = null;
-            picPc_Thumbnail.EditValue = null;
 
             txtP_Delivery_Price.EditValue = null;
             cmbP_Delivery_Type.EditValue = "0";
@@ -1282,26 +850,16 @@ namespace YL_MM.BizFrm
             txtRefunds_AS.EditValue = null;
             txtRefunds_CG.EditValue = null;
             txtRefunds_CR.EditValue = null;
-
-            txtPC_Title.EditValue = null;
-            rbPC_Use_Type.EditValue = 'Y';
-            txtPC_Content.EditValue = null;
-
-
+            rbPC_Use_Type.EditValue = "N";
 
             //gridView1.Columns.Clear();
             //gridView2.Columns.Clear();
 
-            while (gridView1.RowCount != 0)
-            {
-                gridView1.SelectAll();
-                gridView1.DeleteSelectedRows();
-            }
-            while (gridView2.RowCount != 0)
-            {
-                gridView2.SelectAll();
-                gridView2.DeleteSelectedRows();
-            }
+            //while (gridView1.RowCount != 0)
+            //{
+            //    gridView1.SelectAll();
+            //    gridView1.DeleteSelectedRows();
+            //}
 
             using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
             {
@@ -1312,9 +870,10 @@ namespace YL_MM.BizFrm
                 txtP_Code.EditValue = sql.selectQueryForSingleValue();
             }
 
-
             SetCmb();
         }
+
+
         private void btnSave_Click(object sender, EventArgs e)
         {
 
@@ -1522,15 +1081,15 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_Refunds_CR"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_PC_Title", MySqlDbType.VarChar));
-                            cmd.Parameters["i_PC_Title"].Value = txtPC_Title.EditValue;
+                            cmd.Parameters["i_PC_Title"].Value = "";
                             cmd.Parameters["i_PC_Title"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_PC_Use_Type", MySqlDbType.VarChar));
-                            cmd.Parameters["i_PC_Use_Type"].Value = rbPC_Use_Type.EditValue;
+                            cmd.Parameters["i_PC_Use_Type"].Value = "N";
                             cmd.Parameters["i_PC_Use_Type"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_PC_Content", MySqlDbType.VarChar));
-                            cmd.Parameters["i_PC_Content"].Value = txtPC_Content.EditValue;
+                            cmd.Parameters["i_PC_Content"].Value = "";
                             cmd.Parameters["i_PC_Content"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_User_id", MySqlDbType.VarChar));
@@ -1561,148 +1120,292 @@ namespace YL_MM.BizFrm
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
-                Save1();
-                Save2();
                 Open1();
 
             }
         }
 
-        private void Save1()
+        private void btnFileOpen1_Click_1(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
 
-            try
+            string sftpURL = "14.63.165.36";
+            string sUserName = "root";
+            string sPassword = "@dhkdldpf2!";
+            int nPort = 22023;
+            string sftpDirectory = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
+
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                try
                 {
+                    Cursor = Cursors.WaitCursor;
 
-                    for (int i = 0; i < gridView2.DataRowCount; i++)
+                    txtPicPath1.EditValue = openFileDialog.FileName;
+                    picP_IMG.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+                // 폴더생성
+
+                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+
+                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
+
+                string sOldFile = txtPicPath1.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                string sNewFile = "c:\\temp\\" + sFileName;
+                System.IO.File.Copy(sOldFile, sNewFile);
+
+
+                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
+
+
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+
+                sSftp.Connect(nPort);
+
+                // 저장 경로에 있는지 체크
+                string sFtpPath = "/domalifefiles/files/product/domamall/";
+                string sFtpPath2 = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
+
+                ArrayList ay = sSftp.GetFileList(sFtpPath);
+                bool isdir = false;
+
+                for (int i = 0; i < ay.Count; i++)
+                {
+                    // string sChk = ay[i].ToString();
+                    if (ay[i].ToString() == txtP_Code.EditValue.ToString())
                     {
-                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_02", con))
-                        {
-
-                            con.Open();
-                            cmd.CommandType = CommandType.StoredProcedure;
-
-                            cmd.Parameters.Add("i_p_id", MySqlDbType.Int32, 11);
-                            cmd.Parameters[0].Value = txtP_Id.EditValue;
-
-                            cmd.Parameters.Add("i_c_code", MySqlDbType.VarChar, 50);
-                            cmd.Parameters[1].Value = gridView2.GetRowCellValue(i, "c_code");
-
-                            cmd.Parameters.Add("i_ec_sub_content", MySqlDbType.VarChar, 255);
-                            cmd.Parameters[2].Value = gridView2.GetRowCellValue(i, "ec_sub_content");
-
-                            cmd.ExecuteNonQuery();
-                            con.Close();
-                        }
+                        isdir = true;
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
-
-        }
-        private void Save2()
-        {
-
-            try
-            {
-                int nId = 0;
-                string sId = "";
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                if (isdir == false)
                 {
 
-                    for (int i = 0; i < gridView1.DataRowCount; i++)
-                    {
-                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_03", con))
-                        {
-
-                            con.Open();
-                            cmd.CommandType = CommandType.StoredProcedure;
-
-                            cmd.Parameters.Add("i_p_id", MySqlDbType.Int32, 11);
-                            cmd.Parameters[0].Value = txtP_Id.EditValue;
-
-                            sId = gridView1.GetRowCellValue(i, "id").ToString();
-
-                            if (sId == "")
-                                nId = 0;
-                            else
-                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "id"));
-
-                            cmd.Parameters.Add("i_id", MySqlDbType.Int32, 11);
-                            cmd.Parameters[1].Value = nId;
-
-                            cmd.Parameters.Add("i_pp_title", MySqlDbType.VarChar, 255);
-                            cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "pp_title");
-
-                            cmd.Parameters.Add("i_pp_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[3].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_price"));
-
-                            cmd.Parameters.Add("i_pp_org_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[4].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_org_price"));
-
-                            cmd.Parameters.Add("i_pp_vip_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[5].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_vip_price"));
-
-                            cmd.Parameters.Add("i_pp_ps_oper_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[6].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_ps_oper_price"));
-
-                            cmd.Parameters.Add("i_pp_discount_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[7].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_discount_price"));
-
-                            cmd.Parameters.Add("i_pp_md_chef_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[8].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_md_chef_price"));
-
-                            cmd.Parameters.Add("i_pp_chef_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[9].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_chef_price"));
-
-                            cmd.Parameters.Add("i_pp_num", MySqlDbType.Int32, 11);
-                            cmd.Parameters[10].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_num"));
-
-                            cmd.Parameters.Add("i_refund_donut_cost", MySqlDbType.Int32, 11);
-                            cmd.Parameters[11].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "refund_donut_cost"));
-
-                            cmd.Parameters.Add("i_is_use", MySqlDbType.VarChar, 1);
-                            cmd.Parameters[12].Value = gridView1.GetRowCellValue(i, "is_use");
-
-                            cmd.Parameters.Add("i_is_donut", MySqlDbType.VarChar, 1);
-                            cmd.Parameters[13].Value = gridView1.GetRowCellValue(i, "is_donut");
-
-                            cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 100);
-                            cmd.Parameters[14].Value = txtP_Name.EditValue;
-
-                            cmd.Parameters.Add("i_p_delivery_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[15].Value = Convert.ToInt32(txtP_Delivery_Price.EditValue);
-
-                            cmd.ExecuteNonQuery();
-                            con.Close();
-                        }
-                    }
+                    sSftp.Mkdir(sFtpPath2);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+
+                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
+                sSftp.Close();
+                txtP_Img.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
             }
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnFileOpen2_Click(object sender, EventArgs e)
         {
-            int nOption_id = 0;
-            string sOption_Id = gridView1.GetFocusedRowCellValue("id").ToString();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
 
-            if (sOption_Id == "")
-                nOption_id = 0;
-            else
-                nOption_id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("id").ToString());
+            string sftpURL = "14.63.165.36";
+            string sUserName = "root";
+            string sPassword = "@dhkdldpf2!";
+            int nPort = 22023;
+            string sftpDirectory = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    txtPicPath2.EditValue = openFileDialog.FileName;
+                    picP_IMG2.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+
+                // 폴더생성
+
+                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+
+                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
+
+                string sOldFile = txtPicPath2.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                string sNewFile = "c:\\temp\\" + sFileName;
+                System.IO.File.Copy(sOldFile, sNewFile);
 
 
-            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
+
+
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+
+                sSftp.Connect(nPort);
+
+                // 저장 경로에 있는지 체크
+                string sFtpPath = "/domalifefiles/files/product/domamall/";
+                string sFtpPath2 = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
+
+                ArrayList ay = sSftp.GetFileList(sFtpPath);
+                bool isdir = false;
+
+                for (int i = 0; i < ay.Count; i++)
+                {
+                    // string sChk = ay[i].ToString();
+                    if (ay[i].ToString() == txtP_Code.EditValue.ToString())
+                    {
+                        isdir = true;
+                    }
+                }
+                if (isdir == false)
+                {
+
+                    sSftp.Mkdir(sFtpPath2);
+                }
+
+                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
+                sSftp.Close();
+                txtP_Img2.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
+
+
+
+            }
+        }
+
+        private void btnFileOpen3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            string sftpURL = "14.63.165.36";
+            string sUserName = "root";
+            string sPassword = "@dhkdldpf2!";
+            int nPort = 22023;
+            string sftpDirectory = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    txtPicPath3.EditValue = openFileDialog.FileName;
+                    picP_CONTENTS.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+
+                // 폴더생성
+
+                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+
+                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
+
+                string sOldFile = txtPicPath3.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                string sNewFile = "c:\\temp\\" + sFileName;
+                System.IO.File.Copy(sOldFile, sNewFile);
+
+
+                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
+
+
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+
+                sSftp.Connect(nPort);
+
+                // 저장 경로에 있는지 체크
+                string sFtpPath = "/domalifefiles/files/product/domamall/";
+                string sFtpPath2 = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
+
+                ArrayList ay = sSftp.GetFileList(sFtpPath);
+                bool isdir = false;
+
+                for (int i = 0; i < ay.Count; i++)
+                {
+                    // string sChk = ay[i].ToString();
+                    if (ay[i].ToString() == txtP_Code.EditValue.ToString())
+                    {
+                        isdir = true;
+                    }
+                }
+                if (isdir == false)
+                {
+
+                    sSftp.Mkdir(sFtpPath2);
+                }
+
+                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
+                sSftp.Close();
+                txtP_Contents.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
+
+
+
+            }
+        }
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtP_Id.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Informational, "삭제할 상품을 선택하세요.");
+                return;
+            }
+            
+            string sCount = "0";
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = "SELECT count(*) as count FROM domamall.tb_am_product_order_datas " +
+                             "WHERE p_id = " + txtP_Id.EditValue;
+                DataSet ds = sql.selectQueryDataSet();
+
+                sCount = sql.selectQueryForSingleValue();
+            }
+
+            if ( sCount != "0" )
+            {
+                MessageAgent.MessageShow(MessageType.Informational, "주문 이력이 존재하여 삭제할수 업습니다.");
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "선택한 상품을 삭제 하시겠습니까?") == DialogResult.OK)
             {
                 try
                 {
@@ -1713,47 +1416,74 @@ namespace YL_MM.BizFrm
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_P_Id", MySqlDbType.VarChar));
-                            cmd.Parameters["i_P_Id"].Value = txtP_Id.EditValue;
-                            cmd.Parameters["i_P_Id"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_p_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_p_id"].Value = Convert.ToInt32(txtP_Id.EditValue);
+                            cmd.Parameters["i_p_id"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_Option_Id", MySqlDbType.Int32));
-                            cmd.Parameters["i_Option_Id"].Value = nOption_id;
-                            cmd.Parameters["i_Option_Id"].Direction = ParameterDirection.Input;
-
-                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
-                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
-
-                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
-
-
-
                         }
                     }
                 }
+
                 catch (Exception ex)
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
-                Open1();
+                New();
+                Search();
+
+
             }
-
         }
-        private void PicUp()
+
+        private void picP_IMG_DoubleClick(object sender, EventArgs e)
         {
+            OpenDlg("1");
+        }
 
-            //if (Pic1 == "1")
-            //    popup.pURL = txtP_Img.Text;
-            //else if (Pic1 == "2")
-            //    popup.pURL = txtP_Img2.Text;
-            //else if (Pic1 == "3")
-            //    popup.pURL = txtP_Contents.Text;
-            //else if (Pic1 == "4")
-            //    popup.pURL = txtPc_Thumbnail.Text;
+        private void picP_IMG2_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("2");
+        }
 
+        private void picP_CONTENTS_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("3");
+        }
 
+        private void picPc_Thumbnail_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("4");
+        }
+        private void OpenDlg(string s1)
+        {
+            popup = new frmSCM08_Pop01();
+            //popup.Owner = this;
 
+            if (s1 == "1")
+                popup.pURL = txtP_Img.Text;
+            else if (s1 == "2")
+                popup.pURL = txtP_Img2.Text;
+            else if (s1 == "3")
+                popup.pURL = txtP_Contents.Text;
+            else if (s1 == "4")
+                popup.pURL = txtPc_Thumbnail.Text;
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            //OpenTag(gfloorInfo.FLR, "LDT");
+            popup = null;
+        }
+
+        private void txtProdName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
         }
     }
 }
