@@ -34,6 +34,7 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbType = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -56,7 +57,6 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
@@ -109,6 +109,18 @@
             this.layoutControl2.Size = new System.Drawing.Size(1022, 720);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(588, 7);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(110, 22);
+            this.efwSimpleButton1.StyleController = this.layoutControl2;
+            this.efwSimpleButton1.TabIndex = 27;
+            this.efwSimpleButton1.Text = "조회";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
             // 
             // rbType
             // 
@@ -374,18 +386,6 @@
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // efwSimpleButton1
-            // 
-            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
-            this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(588, 7);
-            this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(110, 22);
-            this.efwSimpleButton1.StyleController = this.layoutControl2;
-            this.efwSimpleButton1.TabIndex = 27;
-            this.efwSimpleButton1.Text = "조회";
-            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.efwSimpleButton1;
@@ -410,7 +410,7 @@
             this.ClientSize = new System.Drawing.Size(1026, 745);
             this.Controls.Add(this.efwGroupControl1);
             this.Name = "frmMA03_Pop01";
-            this.Text = "Form2";
+            this.Text = "매출상세현황";
             this.Load += new System.EventHandler(this.FrmGM04_Pop01_Load);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);

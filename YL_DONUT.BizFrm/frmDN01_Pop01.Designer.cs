@@ -32,6 +32,7 @@ namespace YL_DONUT.BizFrm
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN01_Pop01));
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtO_Total_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtO_Purchase_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtO_Donut_C_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -86,6 +87,8 @@ namespace YL_DONUT.BizFrm
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtID = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel38 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtP_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtP_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel32 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel31 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -140,8 +143,6 @@ namespace YL_DONUT.BizFrm
             this.txtO_Delivery_Start_Date = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel55 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Delivery_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwLabel38 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtP_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).BeginInit();
@@ -178,6 +179,7 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_ID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Price.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_num.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPP_Title.Properties)).BeginInit();
@@ -208,7 +210,6 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_ID.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -271,9 +272,20 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(0, 0);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(622, 399);
+            this.efwGroupControl1.Size = new System.Drawing.Size(622, 391);
             this.efwGroupControl1.TabIndex = 0;
             this.efwGroupControl1.Text = "주문 수정";
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(516, 30);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(152, 47);
+            this.efwSimpleButton3.TabIndex = 65;
+            this.efwSimpleButton3.Text = "주문/품절취소,반품승인";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
             // txtO_Total_Cost
             // 
@@ -982,12 +994,34 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl2.TabIndex = 1;
             this.efwGroupControl2.Text = "상품정보";
             // 
+            // efwLabel38
+            // 
+            this.efwLabel38.EraserGroup = null;
+            this.efwLabel38.IsMultiLang = false;
+            this.efwLabel38.Location = new System.Drawing.Point(483, 87);
+            this.efwLabel38.Name = "efwLabel38";
+            this.efwLabel38.Size = new System.Drawing.Size(36, 14);
+            this.efwLabel38.TabIndex = 69;
+            this.efwLabel38.Text = "상품 ID";
+            // 
+            // txtP_ID
+            // 
+            this.txtP_ID.EditValue2 = null;
+            this.txtP_ID.Location = new System.Drawing.Point(549, 83);
+            this.txtP_ID.Name = "txtP_ID";
+            this.txtP_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_ID.Properties.ReadOnly = true;
+            this.txtP_ID.RequireMessage = null;
+            this.txtP_ID.Size = new System.Drawing.Size(119, 20);
+            this.txtP_ID.TabIndex = 68;
+            // 
             // txtP_Price
             // 
             this.txtP_Price.EditValue = "0";
             this.txtP_Price.EditValue2 = null;
             this.txtP_Price.IsNumericKeyOnly = true;
-            this.txtP_Price.Location = new System.Drawing.Point(353, 83);
+            this.txtP_Price.Location = new System.Drawing.Point(348, 83);
             this.txtP_Price.Name = "txtP_Price";
             this.txtP_Price.Properties.Appearance.Options.UseTextOptions = true;
             this.txtP_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1008,7 +1042,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel32.EraserGroup = null;
             this.efwLabel32.IsMultiLang = false;
-            this.efwLabel32.Location = new System.Drawing.Point(288, 87);
+            this.efwLabel32.Location = new System.Drawing.Point(283, 87);
             this.efwLabel32.Name = "efwLabel32";
             this.efwLabel32.Size = new System.Drawing.Size(40, 14);
             this.efwLabel32.TabIndex = 67;
@@ -1040,7 +1074,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel30.EraserGroup = null;
             this.efwLabel30.IsMultiLang = false;
-            this.efwLabel30.Location = new System.Drawing.Point(289, 61);
+            this.efwLabel30.Location = new System.Drawing.Point(284, 61);
             this.efwLabel30.Name = "efwLabel30";
             this.efwLabel30.Size = new System.Drawing.Size(30, 14);
             this.efwLabel30.TabIndex = 63;
@@ -1049,7 +1083,7 @@ namespace YL_DONUT.BizFrm
             // txtPP_Title
             // 
             this.txtPP_Title.EditValue2 = null;
-            this.txtPP_Title.Location = new System.Drawing.Point(353, 56);
+            this.txtPP_Title.Location = new System.Drawing.Point(348, 56);
             this.txtPP_Title.Name = "txtPP_Title";
             this.txtPP_Title.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPP_Title.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1062,7 +1096,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel29.EraserGroup = null;
             this.efwLabel29.IsMultiLang = false;
-            this.efwLabel29.Location = new System.Drawing.Point(288, 33);
+            this.efwLabel29.Location = new System.Drawing.Point(283, 33);
             this.efwLabel29.Name = "efwLabel29";
             this.efwLabel29.Size = new System.Drawing.Size(30, 14);
             this.efwLabel29.TabIndex = 59;
@@ -1081,7 +1115,7 @@ namespace YL_DONUT.BizFrm
             // txtP_Name
             // 
             this.txtP_Name.EditValue2 = null;
-            this.txtP_Name.Location = new System.Drawing.Point(353, 30);
+            this.txtP_Name.Location = new System.Drawing.Point(348, 30);
             this.txtP_Name.Name = "txtP_Name";
             this.txtP_Name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtP_Name.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1170,7 +1204,7 @@ namespace YL_DONUT.BizFrm
             // txtLGD_PayDate
             // 
             this.txtLGD_PayDate.EditValue2 = null;
-            this.txtLGD_PayDate.Location = new System.Drawing.Point(554, 61);
+            this.txtLGD_PayDate.Location = new System.Drawing.Point(549, 61);
             this.txtLGD_PayDate.Name = "txtLGD_PayDate";
             this.txtLGD_PayDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_PayDate.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1183,7 +1217,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel34.EraserGroup = null;
             this.efwLabel34.IsMultiLang = false;
-            this.efwLabel34.Location = new System.Drawing.Point(288, 143);
+            this.efwLabel34.Location = new System.Drawing.Point(283, 143);
             this.efwLabel34.Name = "efwLabel34";
             this.efwLabel34.Size = new System.Drawing.Size(40, 14);
             this.efwLabel34.TabIndex = 96;
@@ -1192,7 +1226,7 @@ namespace YL_DONUT.BizFrm
             // txtLGD_CasFlag
             // 
             this.txtLGD_CasFlag.EditValue2 = null;
-            this.txtLGD_CasFlag.Location = new System.Drawing.Point(353, 140);
+            this.txtLGD_CasFlag.Location = new System.Drawing.Point(348, 140);
             this.txtLGD_CasFlag.Name = "txtLGD_CasFlag";
             this.txtLGD_CasFlag.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_CasFlag.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1204,7 +1238,7 @@ namespace YL_DONUT.BizFrm
             // txtLGD_Payer
             // 
             this.txtLGD_Payer.EditValue2 = null;
-            this.txtLGD_Payer.Location = new System.Drawing.Point(353, 114);
+            this.txtLGD_Payer.Location = new System.Drawing.Point(348, 114);
             this.txtLGD_Payer.Name = "txtLGD_Payer";
             this.txtLGD_Payer.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_Payer.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1217,7 +1251,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel23.EraserGroup = null;
             this.efwLabel23.IsMultiLang = false;
-            this.efwLabel23.Location = new System.Drawing.Point(288, 64);
+            this.efwLabel23.Location = new System.Drawing.Point(283, 64);
             this.efwLabel23.Name = "efwLabel23";
             this.efwLabel23.Size = new System.Drawing.Size(40, 14);
             this.efwLabel23.TabIndex = 93;
@@ -1249,7 +1283,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel48.EraserGroup = null;
             this.efwLabel48.IsMultiLang = false;
-            this.efwLabel48.Location = new System.Drawing.Point(488, 143);
+            this.efwLabel48.Location = new System.Drawing.Point(483, 143);
             this.efwLabel48.Name = "efwLabel48";
             this.efwLabel48.Size = new System.Drawing.Size(40, 14);
             this.efwLabel48.TabIndex = 88;
@@ -1258,7 +1292,7 @@ namespace YL_DONUT.BizFrm
             // txtLGD_CasseqNo
             // 
             this.txtLGD_CasseqNo.EditValue2 = null;
-            this.txtLGD_CasseqNo.Location = new System.Drawing.Point(555, 140);
+            this.txtLGD_CasseqNo.Location = new System.Drawing.Point(550, 140);
             this.txtLGD_CasseqNo.Name = "txtLGD_CasseqNo";
             this.txtLGD_CasseqNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_CasseqNo.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1292,7 +1326,7 @@ namespace YL_DONUT.BizFrm
             // txtLGD_CastAmount
             // 
             this.txtLGD_CastAmount.EditValue2 = null;
-            this.txtLGD_CastAmount.Location = new System.Drawing.Point(555, 114);
+            this.txtLGD_CastAmount.Location = new System.Drawing.Point(550, 114);
             this.txtLGD_CastAmount.Name = "txtLGD_CastAmount";
             this.txtLGD_CastAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_CastAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1305,7 +1339,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel42.EraserGroup = null;
             this.efwLabel42.IsMultiLang = false;
-            this.efwLabel42.Location = new System.Drawing.Point(488, 117);
+            this.efwLabel42.Location = new System.Drawing.Point(483, 117);
             this.efwLabel42.Name = "efwLabel42";
             this.efwLabel42.Size = new System.Drawing.Size(40, 14);
             this.efwLabel42.TabIndex = 83;
@@ -1315,7 +1349,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel43.EraserGroup = null;
             this.efwLabel43.IsMultiLang = false;
-            this.efwLabel43.Location = new System.Drawing.Point(288, 117);
+            this.efwLabel43.Location = new System.Drawing.Point(283, 117);
             this.efwLabel43.Name = "efwLabel43";
             this.efwLabel43.Size = new System.Drawing.Size(40, 14);
             this.efwLabel43.TabIndex = 82;
@@ -1347,7 +1381,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel45.EraserGroup = null;
             this.efwLabel45.IsMultiLang = false;
-            this.efwLabel45.Location = new System.Drawing.Point(488, 90);
+            this.efwLabel45.Location = new System.Drawing.Point(483, 90);
             this.efwLabel45.Name = "efwLabel45";
             this.efwLabel45.Size = new System.Drawing.Size(40, 14);
             this.efwLabel45.TabIndex = 78;
@@ -1356,7 +1390,7 @@ namespace YL_DONUT.BizFrm
             // txtLGD_AccountNum
             // 
             this.txtLGD_AccountNum.EditValue2 = null;
-            this.txtLGD_AccountNum.Location = new System.Drawing.Point(555, 87);
+            this.txtLGD_AccountNum.Location = new System.Drawing.Point(550, 87);
             this.txtLGD_AccountNum.Name = "txtLGD_AccountNum";
             this.txtLGD_AccountNum.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_AccountNum.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1368,7 +1402,7 @@ namespace YL_DONUT.BizFrm
             // txtLGD_FinanceName
             // 
             this.txtLGD_FinanceName.EditValue2 = null;
-            this.txtLGD_FinanceName.Location = new System.Drawing.Point(353, 87);
+            this.txtLGD_FinanceName.Location = new System.Drawing.Point(348, 87);
             this.txtLGD_FinanceName.Name = "txtLGD_FinanceName";
             this.txtLGD_FinanceName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_FinanceName.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1381,7 +1415,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel41.EraserGroup = null;
             this.efwLabel41.IsMultiLang = false;
-            this.efwLabel41.Location = new System.Drawing.Point(288, 90);
+            this.efwLabel41.Location = new System.Drawing.Point(283, 90);
             this.efwLabel41.Name = "efwLabel41";
             this.efwLabel41.Size = new System.Drawing.Size(40, 14);
             this.efwLabel41.TabIndex = 75;
@@ -1413,7 +1447,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel36.EraserGroup = null;
             this.efwLabel36.IsMultiLang = false;
-            this.efwLabel36.Location = new System.Drawing.Point(488, 64);
+            this.efwLabel36.Location = new System.Drawing.Point(483, 64);
             this.efwLabel36.Name = "efwLabel36";
             this.efwLabel36.Size = new System.Drawing.Size(30, 14);
             this.efwLabel36.TabIndex = 71;
@@ -1423,7 +1457,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel39.EraserGroup = null;
             this.efwLabel39.IsMultiLang = false;
-            this.efwLabel39.Location = new System.Drawing.Point(488, 38);
+            this.efwLabel39.Location = new System.Drawing.Point(483, 38);
             this.efwLabel39.Name = "efwLabel39";
             this.efwLabel39.Size = new System.Drawing.Size(40, 14);
             this.efwLabel39.TabIndex = 69;
@@ -1432,7 +1466,7 @@ namespace YL_DONUT.BizFrm
             // txtLGD_Amount
             // 
             this.txtLGD_Amount.EditValue2 = null;
-            this.txtLGD_Amount.Location = new System.Drawing.Point(555, 35);
+            this.txtLGD_Amount.Location = new System.Drawing.Point(550, 35);
             this.txtLGD_Amount.Name = "txtLGD_Amount";
             this.txtLGD_Amount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_Amount.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1466,7 +1500,7 @@ namespace YL_DONUT.BizFrm
             // txtLGD_PayType
             // 
             this.txtLGD_PayType.EditValue2 = null;
-            this.txtLGD_PayType.Location = new System.Drawing.Point(353, 61);
+            this.txtLGD_PayType.Location = new System.Drawing.Point(348, 61);
             this.txtLGD_PayType.Name = "txtLGD_PayType";
             this.txtLGD_PayType.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_PayType.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1479,7 +1513,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel35.EraserGroup = null;
             this.efwLabel35.IsMultiLang = false;
-            this.efwLabel35.Location = new System.Drawing.Point(288, 38);
+            this.efwLabel35.Location = new System.Drawing.Point(283, 38);
             this.efwLabel35.Name = "efwLabel35";
             this.efwLabel35.Size = new System.Drawing.Size(40, 14);
             this.efwLabel35.TabIndex = 63;
@@ -1488,7 +1522,7 @@ namespace YL_DONUT.BizFrm
             // txtLGD_Response_Msg
             // 
             this.txtLGD_Response_Msg.EditValue2 = null;
-            this.txtLGD_Response_Msg.Location = new System.Drawing.Point(353, 35);
+            this.txtLGD_Response_Msg.Location = new System.Drawing.Point(348, 35);
             this.txtLGD_Response_Msg.Name = "txtLGD_Response_Msg";
             this.txtLGD_Response_Msg.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLGD_Response_Msg.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1523,6 +1557,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwGroupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl4.CaptionImageOptions.Image")));
             this.efwGroupControl4.Controls.Add(this.efwLabel52);
+            this.efwGroupControl4.Controls.Add(this.efwSimpleButton3);
             this.efwGroupControl4.Controls.Add(this.txtO_Delivery_End_Date);
             this.efwGroupControl4.Controls.Add(this.efwLabel53);
             this.efwGroupControl4.Controls.Add(this.efwLabel54);
@@ -1534,7 +1569,7 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl4.IsMultiLang = false;
             this.efwGroupControl4.Location = new System.Drawing.Point(622, 306);
             this.efwGroupControl4.Name = "efwGroupControl4";
-            this.efwGroupControl4.Size = new System.Drawing.Size(685, 93);
+            this.efwGroupControl4.Size = new System.Drawing.Size(685, 85);
             this.efwGroupControl4.TabIndex = 70;
             this.efwGroupControl4.Text = "배송정보";
             // 
@@ -1542,7 +1577,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel52.EraserGroup = null;
             this.efwLabel52.IsMultiLang = false;
-            this.efwLabel52.Location = new System.Drawing.Point(289, 60);
+            this.efwLabel52.Location = new System.Drawing.Point(283, 60);
             this.efwLabel52.Name = "efwLabel52";
             this.efwLabel52.Size = new System.Drawing.Size(50, 14);
             this.efwLabel52.TabIndex = 63;
@@ -1551,7 +1586,7 @@ namespace YL_DONUT.BizFrm
             // txtO_Delivery_End_Date
             // 
             this.txtO_Delivery_End_Date.EditValue2 = null;
-            this.txtO_Delivery_End_Date.Location = new System.Drawing.Point(354, 57);
+            this.txtO_Delivery_End_Date.Location = new System.Drawing.Point(348, 57);
             this.txtO_Delivery_End_Date.Name = "txtO_Delivery_End_Date";
             this.txtO_Delivery_End_Date.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Delivery_End_Date.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1564,7 +1599,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel53.EraserGroup = null;
             this.efwLabel53.IsMultiLang = false;
-            this.efwLabel53.Location = new System.Drawing.Point(289, 36);
+            this.efwLabel53.Location = new System.Drawing.Point(283, 36);
             this.efwLabel53.Name = "efwLabel53";
             this.efwLabel53.Size = new System.Drawing.Size(40, 14);
             this.efwLabel53.TabIndex = 59;
@@ -1583,7 +1618,7 @@ namespace YL_DONUT.BizFrm
             // txtO_Delivery_Comp_Name
             // 
             this.txtO_Delivery_Comp_Name.EditValue2 = null;
-            this.txtO_Delivery_Comp_Name.Location = new System.Drawing.Point(354, 31);
+            this.txtO_Delivery_Comp_Name.Location = new System.Drawing.Point(348, 31);
             this.txtO_Delivery_Comp_Name.Name = "txtO_Delivery_Comp_Name";
             this.txtO_Delivery_Comp_Name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Delivery_Comp_Name.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1626,33 +1661,11 @@ namespace YL_DONUT.BizFrm
             this.txtO_Delivery_Num.Size = new System.Drawing.Size(179, 20);
             this.txtO_Delivery_Num.TabIndex = 58;
             // 
-            // efwLabel38
-            // 
-            this.efwLabel38.EraserGroup = null;
-            this.efwLabel38.IsMultiLang = false;
-            this.efwLabel38.Location = new System.Drawing.Point(488, 87);
-            this.efwLabel38.Name = "efwLabel38";
-            this.efwLabel38.Size = new System.Drawing.Size(36, 14);
-            this.efwLabel38.TabIndex = 69;
-            this.efwLabel38.Text = "상품 ID";
-            // 
-            // txtP_ID
-            // 
-            this.txtP_ID.EditValue2 = null;
-            this.txtP_ID.Location = new System.Drawing.Point(554, 83);
-            this.txtP_ID.Name = "txtP_ID";
-            this.txtP_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtP_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtP_ID.Properties.ReadOnly = true;
-            this.txtP_ID.RequireMessage = null;
-            this.txtP_ID.Size = new System.Drawing.Size(119, 20);
-            this.txtP_ID.TabIndex = 68;
-            // 
             // frmDN01_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1307, 399);
+            this.ClientSize = new System.Drawing.Size(1307, 391);
             this.Controls.Add(this.efwGroupControl4);
             this.Controls.Add(this.efwGroupControl3);
             this.Controls.Add(this.efwGroupControl2);
@@ -1700,6 +1713,7 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
             this.efwGroupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_ID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Price.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_num.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPP_Title.Properties)).EndInit();
@@ -1732,7 +1746,6 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_ID.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1850,6 +1863,7 @@ namespace YL_DONUT.BizFrm
         private Easy.Framework.WinForm.Control.efwTextEdit txtP_Price;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel38;
         private Easy.Framework.WinForm.Control.efwTextEdit txtP_ID;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
 
         public SizeGripStyle SizeGripStyle { get; private set; }
         public FormStartPosition StartPosition { get; private set; }

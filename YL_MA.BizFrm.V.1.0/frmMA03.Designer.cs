@@ -76,6 +76,7 @@
             this.efwLabel13 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel12 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.btnDetail = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwYY5 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -92,6 +93,7 @@
             this.efwYY0 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel34 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.dtEDATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dtSDATE = new Easy.Framework.WinForm.Control.efwDateEdit();
@@ -1064,6 +1066,20 @@
             this.efwLabel12.TabIndex = 136;
             this.efwLabel12.Text = "TD 잔액";
             // 
+            // efwSimpleButton2
+            // 
+            this.efwSimpleButton2.ButtonType = Easy.Framework.Util.BtnType.Search;
+            this.efwSimpleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton2.Enabled = false;
+            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
+            this.efwSimpleButton2.IsMultiLang = false;
+            this.efwSimpleButton2.Location = new System.Drawing.Point(615, 5);
+            this.efwSimpleButton2.Name = "efwSimpleButton2";
+            this.efwSimpleButton2.Size = new System.Drawing.Size(152, 30);
+            this.efwSimpleButton2.TabIndex = 171;
+            this.efwSimpleButton2.Text = "주문현황";
+            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
+            // 
             // efwGroupControl2
             // 
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
@@ -1371,6 +1387,8 @@
             // 
             // efwPanelControl2
             // 
+            this.efwPanelControl2.Controls.Add(this.efwSimpleButton3);
+            this.efwPanelControl2.Controls.Add(this.efwSimpleButton2);
             this.efwPanelControl2.Controls.Add(this.efwSimpleButton1);
             this.efwPanelControl2.Controls.Add(this.dtEDATE);
             this.efwPanelControl2.Controls.Add(this.dtSDATE);
@@ -1380,6 +1398,20 @@
             this.efwPanelControl2.Name = "efwPanelControl2";
             this.efwPanelControl2.Size = new System.Drawing.Size(1218, 41);
             this.efwPanelControl2.TabIndex = 123;
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.ButtonType = Easy.Framework.Util.BtnType.Search;
+            this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton3.Enabled = false;
+            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(789, 5);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(174, 30);
+            this.efwSimpleButton3.TabIndex = 172;
+            this.efwSimpleButton3.Text = "여유쇼핑 매출 상세현황";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
             // efwSimpleButton1
             // 
@@ -1638,5 +1670,7 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel12;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnDetail;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
     }
 }

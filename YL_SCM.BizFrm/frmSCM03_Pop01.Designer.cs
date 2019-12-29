@@ -193,7 +193,7 @@
             // 
             // btnSendSMS
             // 
-            this.btnSendSMS.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.btnSendSMS.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSendSMS.ImageOptions.Image")));
             this.btnSendSMS.IsMultiLang = false;
             this.btnSendSMS.Location = new System.Drawing.Point(71, 236);
             this.btnSendSMS.Name = "btnSendSMS";

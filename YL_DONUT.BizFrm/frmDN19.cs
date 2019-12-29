@@ -78,7 +78,7 @@ namespace YL_DONUT.BizFrm
         {
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                con.Query = "SELECT category_no as DCODE ,story_name as DNAME  FROM domaadmin.tb_story_info ORDER BY sort_id ";
+                con.Query = "select '0' as DCODE, '전체' as DNAMe union all SELECT category_no as DCODE ,story_name as DNAME  FROM domaadmin.tb_story_info ORDER BY 1 ";
 
                 DataSet ds = con.selectQueryDataSet();
                 ////DataTable retDT = ds.Tables[0];
@@ -99,11 +99,11 @@ namespace YL_DONUT.BizFrm
 
         public override void Search()
         {
-            if (this.cmbStory.EditValue == null || this.cmbStory.EditValue.ToString() == "")
-            {
-                MessageAgent.MessageShow(MessageType.Error, "스토리를 선택하세요!");
-                return;
-            }
+            //if (this.cmbStory.EditValue == null || this.cmbStory.EditValue.ToString() == "")
+            //{
+            //    MessageAgent.MessageShow(MessageType.Error, "스토리를 선택하세요!");
+            //    return;
+            //}
 
             try
             {

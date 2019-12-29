@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BizNode.cs" />
+    <Compile Include="ConstantLib.cs" />
     <Compile Include="DeptNode.cs" />
     <Compile Include="Dlg\frmDeptInfo.cs">
       <SubType>Form</SubType>
@@ -126,6 +127,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMA03_Pop03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMA03_Pop03.Designer.cs">
+      <DependentUpon>frmMA03_Pop03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMA03_Pop02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMA03_Pop02.Designer.cs">
+      <DependentUpon>frmMA03_Pop02.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMA03_Pop01.cs">
       <SubType>Form</SubType>
@@ -177,6 +190,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMA03_Pop03.resx">
+      <DependentUpon>frmMA03_Pop03.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMA03.resx">
       <DependentUpon>frmMA03.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMA03_Pop01.resx">
       <DependentUpon>frmMA03_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMA03_Pop02.resx">
+      <DependentUpon>frmMA03_Pop02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

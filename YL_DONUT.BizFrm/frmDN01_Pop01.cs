@@ -343,6 +343,48 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            Cancel();
+        }
+
+        private void Cancel()
+        {
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "취소/반품 승인을 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN01_SAVE_03", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_id"].Value = Convert.ToInt32(txtID.EditValue);
+                            cmd.Parameters["i_id"].Direction = ParameterDirection.Input;
+
+                            cmd.ExecuteNonQuery();
+
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+
+                Open1();
+            }
+
+
+
+        }
+
+
 
     }
 }

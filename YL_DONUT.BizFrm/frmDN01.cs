@@ -42,6 +42,8 @@ namespace YL_DONUT.BizFrm
     public partial class frmDN01 : FrmBase
     {
         frmDN01_Pop01 popup;
+
+
         public frmDN01()
         {
             InitializeComponent();
@@ -50,8 +52,11 @@ namespace YL_DONUT.BizFrm
             this.QCode = " frmDN01";
             //폼명설정
             this.FrmName = "주문 현황";
-        }
 
+
+                    }
+
+                
         #region FrmLoadEvent()
 
         public override void FrmLoadEvent()
@@ -126,7 +131,7 @@ namespace YL_DONUT.BizFrm
             chkA.Checked = true;
             chkB.Checked = true;
 
-            this.efwGridControl1.BindControlSet(
+            this.efwGridControl1.BindControlSet( 
               new ColumnControlSet("id", txtId)
             );
 
@@ -134,13 +139,14 @@ namespace YL_DONUT.BizFrm
 
 
             setCmb();
+
+
         }
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
 
 
         }
-
 
         private void setCmb()
         {
@@ -179,6 +185,24 @@ namespace YL_DONUT.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
 
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM domaadmin.tb_common_code where gcode_id = '00025'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbChange_type, codeArray);
+            }
+            cmbChange_type.EditValue = "";
 
         }
 
@@ -347,58 +371,6 @@ namespace YL_DONUT.BizFrm
 
 
 
-        private void BtnCardOpen_Click(object sender, EventArgs e)
-        {
-            // ('I','O','P','D','E')
-            chkI.Checked = true;
-            chkO.Checked = true;
-            chkP.Checked = true;
-            chkD.Checked = true;
-            chkE.Checked = true;
-            chkF.Checked = false;
-            chkC.Checked = false;
-            chkZ.Checked = false;
-            chkX.Checked = false;
-            chkT.Checked = false;
-            chkA.Checked = false;
-            chkB.Checked = false;
-            Search();
-        }
-
-        private void EfwSimpleButton1_Click(object sender, EventArgs e)
-        {
-            chkI.Checked = true;
-            chkO.Checked = true;
-            chkP.Checked = true;
-            chkD.Checked = true;
-            chkF.Checked = true;
-            chkE.Checked = true;
-            chkC.Checked = true;
-            chkZ.Checked = false;
-            chkX.Checked = false;
-            chkT.Checked = false;
-            chkA.Checked = true;
-            chkB.Checked = true;
-            Search();
-        }
-
-
-        private void EfwSimpleButton2_Click(object sender, EventArgs e)
-        {   // o_type IN ('I','O','P','D','E') and
-            chkI.Checked = true;
-            chkO.Checked = true;
-            chkP.Checked = true;
-            chkD.Checked = true;
-            chkF.Checked = false;
-            chkE.Checked = true;
-            chkC.Checked = false;
-            chkZ.Checked = false;
-            chkX.Checked = false;
-            chkT.Checked = false;
-            chkA.Checked = false;
-            chkB.Checked = false;
-            Search();
-        }
 
         private void TxtP_NAME_KeyDown(object sender, KeyEventArgs e)
         {
@@ -451,6 +423,141 @@ namespace YL_DONUT.BizFrm
                     popup.ShowDialog();
                 }
             }
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gridView1.RowCount; i++)
+                gridView1.SetRowCellValue(i, gridView1.Columns["chk"], "Y");
+        }
+
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gridView1.RowCount; i++)
+                gridView1.SetRowCellValue(i, gridView1.Columns["chk"], "N");
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "발주완료 처리를 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+
+                        for (int i = 0; i < gridView1.DataRowCount; i++)
+                        {
+
+                            if (gridView1.GetRowCellValue(i, "chk").ToString() == "Y")
+                            {
+                                using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN01_SAVE_04", con))
+                                {
+                                    // Console.WriteLine("********" + gridView1.GetRowCellValue(i, "is_fix"));
+
+
+                                    con.Open();
+                                    cmd.CommandType = CommandType.StoredProcedure;
+
+                                    cmd.Parameters.Add("i_id", MySqlDbType.Int32, 50);
+                                    cmd.Parameters[0].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "id"));
+
+                                    cmd.ExecuteNonQuery();
+                                    con.Close();
+                                }
+                            }
+                        }
+                    }
+                    MessageAgent.MessageShow(MessageType.Informational, "발주 완료처리 되었습니다.");
+                    Search();
+                }
+                
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "주문 상태를 변경 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+
+                        for (int i = 0; i < gridView1.DataRowCount; i++)
+                        {
+
+                            if (gridView1.GetRowCellValue(i, "chk").ToString() == "Y")
+                            {
+                                using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN01_SAVE_05", con))
+                                {
+                                    // Console.WriteLine("********" + gridView1.GetRowCellValue(i, "is_fix"));
+
+
+                                    con.Open();
+                                    cmd.CommandType = CommandType.StoredProcedure;
+
+                                    cmd.Parameters.Add("i_id", MySqlDbType.Int32, 50);
+                                    cmd.Parameters[0].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "id"));
+
+                                    cmd.Parameters.Add("i_o_type", MySqlDbType.VarChar, 10);
+                                    cmd.Parameters[1].Value = cmbChange_type.EditValue;
+
+                                    cmd.ExecuteNonQuery();
+                                    con.Close();
+                                }
+                            }
+                        }
+                    }
+                    MessageAgent.MessageShow(MessageType.Informational, "주문 상태가 변경 되었습니다.");
+                    Search();
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
+
+        private void efwSimpleButton7_Click(object sender, EventArgs e)
+        {
+            chkI.Checked = true;
+            chkO.Checked = true;
+            chkP.Checked = true;
+            chkD.Checked = true;
+            chkF.Checked = true;
+            chkE.Checked = true;
+            chkC.Checked = true;
+            chkZ.Checked = false;
+            chkX.Checked = false;
+            chkT.Checked = false;
+            chkA.Checked = true;
+            chkB.Checked = true;
+            Search();
+        }
+
+        private void efwSimpleButton8_Click(object sender, EventArgs e)
+        {
+            chkI.Checked = true;
+            chkO.Checked = true;
+            chkP.Checked = true;
+            chkD.Checked = true;
+            chkF.Checked = false;
+            chkE.Checked = true;
+            chkC.Checked = false;
+            chkZ.Checked = false;
+            chkX.Checked = false;
+            chkT.Checked = false;
+            chkA.Checked = false;
+            chkB.Checked = false;
+            Search();
         }
     }
 }

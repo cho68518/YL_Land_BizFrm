@@ -39,6 +39,8 @@ namespace YL_MA.BizFrm
     public partial class frmMA03 : FrmBase
     {
         frmMA03_Pop01 popup;
+        frmMA03_Pop02 popup1;
+        frmMA03_Pop03 popup2;
 
         public frmMA03()
         {
@@ -227,7 +229,42 @@ namespace YL_MA.BizFrm
             popup = null;
         }
 
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            popup1 = new frmMA03_Pop02();
 
-}
+            popup1.pSDate = dtSDATE.EditValue3.Substring(0, 4) + "-" + dtSDATE.EditValue3.Substring(4, 2);
+            popup1.pEDate = dtEDATE.EditValue3.Substring(0, 4) + "-" + dtEDATE.EditValue3.Substring(4, 2);
+
+            popup1.FormClosed += popup1_FormClosed;
+            popup1.ShowDialog();
+        }
+
+        private void popup1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup1.FormClosed -= popup1_FormClosed;
+
+            popup1 = null;
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            popup2 = new frmMA03_Pop03();
+
+            popup2.pSDate = dtSDATE.EditValue3.Substring(0, 4) + "-" + dtSDATE.EditValue3.Substring(4, 2);
+            popup2.pEDate = dtEDATE.EditValue3.Substring(0, 4) + "-" + dtEDATE.EditValue3.Substring(4, 2);
+
+            popup2.FormClosed += popup2_FormClosed;
+            popup2.ShowDialog();
+        }
+
+        private void popup2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup2.FormClosed -= popup2_FormClosed;
+
+            popup2 = null;
+        }
+
+    }
 }
 
