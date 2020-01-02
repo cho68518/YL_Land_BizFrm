@@ -534,7 +534,7 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Padding = new System.Windows.Forms.Padding(5);
             this.xtraTabPage2.Size = new System.Drawing.Size(1260, 529);
-            this.xtraTabPage2.Text = "도마셰프 회원";
+            this.xtraTabPage2.Text = "G메니저 회원";
             // 
             // efwGridControl2
             // 

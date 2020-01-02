@@ -803,7 +803,7 @@
             // 
             // gridColumn27
             // 
-            this.gridColumn27.Caption = "도마셰프 닉네임";
+            this.gridColumn27.Caption = "G메니저 닉네임";
             this.gridColumn27.FieldName = "doma_nickname";
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.OptionsColumn.ReadOnly = true;

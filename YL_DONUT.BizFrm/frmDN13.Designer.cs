@@ -281,27 +281,27 @@
             // 
             // gridColumn25
             // 
-            this.gridColumn25.Caption = "도마셰프ID";
+            this.gridColumn25.Caption = "G메니저ID";
             this.gridColumn25.FieldName = "u_id";
             this.gridColumn25.Name = "gridColumn25";
             // 
             // gridColumn27
             // 
-            this.gridColumn27.Caption = "도마셰프 닉네임";
+            this.gridColumn27.Caption = "G메니저 닉네임";
             this.gridColumn27.FieldName = "chef_nickname";
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.Visible = true;
             // 
             // gridColumn26
             // 
-            this.gridColumn26.Caption = "도마셰프명";
+            this.gridColumn26.Caption = "G메니저명";
             this.gridColumn26.FieldName = "chef_name";
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.Visible = true;
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "도마셰프 로그인 아이디";
+            this.gridColumn1.Caption = "G메니저 로그인 아이디";
             this.gridColumn1.FieldName = "login_id";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;

@@ -142,8 +142,8 @@ namespace YL_GM.BizFrm
             dt.Columns.Add(colName);
             dt.Columns.Add(colQuantity);
 
-            dt.Rows.Add("셰프이사", "1,000");
-            dt.Rows.Add("도마셰프", "2,000");
+            dt.Rows.Add("G메니저이사", "1,000");
+            dt.Rows.Add("G메니저", "2,000");
             dt.Rows.Add("VIP", "3,000");
             dt.Rows.Add("도마", "4,000");
 

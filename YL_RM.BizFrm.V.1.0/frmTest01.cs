@@ -9,21 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace YL_PM.BizFrm
+namespace YL_RM.BizFrm
 {
     public partial class frmTest01 : FrmBase
     {
-        public frmTest01()
+        public Form1()
         {
             InitializeComponent();
         }
-
-        public override void FrmLoadEvent()
-        {
-            base.FrmLoadEvent();
-
-            this.IsMenuVw = true;
-        }
-
     }
 }

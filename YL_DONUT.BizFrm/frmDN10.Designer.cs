@@ -766,7 +766,7 @@
             this.gridBand2.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.Caption = "PS운영자(도마셰프) 정보";
+            this.gridBand2.Caption = "PS운영자(G메니저) 정보";
             this.gridBand2.Columns.Add(this.gridColumn63);
             this.gridBand2.Columns.Add(this.gridColumn64);
             this.gridBand2.Columns.Add(this.gridColumn65);
@@ -788,7 +788,7 @@
             // 
             this.gridColumn63.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gridColumn63.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn63.Caption = "도마셰프ID";
+            this.gridColumn63.Caption = "G메니저ID";
             this.gridColumn63.FieldName = "u_id2";
             this.gridColumn63.Name = "gridColumn63";
             this.gridColumn63.OptionsColumn.AllowEdit = false;
@@ -798,7 +798,7 @@
             // 
             this.gridColumn64.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gridColumn64.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn64.Caption = "도마셰프명";
+            this.gridColumn64.Caption = "G메니저명";
             this.gridColumn64.FieldName = "chef_name";
             this.gridColumn64.Name = "gridColumn64";
             this.gridColumn64.OptionsColumn.AllowEdit = false;
@@ -808,7 +808,7 @@
             // 
             this.gridColumn65.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gridColumn65.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn65.Caption = "도마셰프 닉네임";
+            this.gridColumn65.Caption = "G메니저 닉네임";
             this.gridColumn65.FieldName = "chef_nickname";
             this.gridColumn65.Name = "gridColumn65";
             this.gridColumn65.OptionsColumn.AllowEdit = false;
@@ -828,7 +828,7 @@
             // 
             this.gridColumn66.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gridColumn66.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn66.Caption = "도마셰프 수수료";
+            this.gridColumn66.Caption = "G메니저 수수료";
             this.gridColumn66.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn66.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn66.FieldName = "chef_amt";

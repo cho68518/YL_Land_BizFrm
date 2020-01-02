@@ -220,7 +220,7 @@
             this.efwGroupControl3.Name = "efwGroupControl3";
             this.efwGroupControl3.Size = new System.Drawing.Size(53, 31);
             this.efwGroupControl3.TabIndex = 4;
-            this.efwGroupControl3.Text = "도마셰프 수정";
+            this.efwGroupControl3.Text = "G메니저 수정";
             this.efwGroupControl3.Visible = false;
             // 
             // layoutControl3
@@ -609,7 +609,7 @@
             this.rbLEVEL.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "일반"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "VIP"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "도마셰프")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "G메니저")});
             this.rbLEVEL.RequireMessage = null;
             this.rbLEVEL.Size = new System.Drawing.Size(324, 28);
             this.rbLEVEL.StyleController = this.layoutControl1;
@@ -1016,7 +1016,7 @@
             this.efwGroupControl2.Name = "efwGroupControl2";
             this.efwGroupControl2.Size = new System.Drawing.Size(997, 248);
             this.efwGroupControl2.TabIndex = 3;
-            this.efwGroupControl2.Text = "담당이사 추천인( 담당셰프 )";
+            this.efwGroupControl2.Text = "담당이사 추천인( 담당G메니저 )";
             // 
             // layoutControl2
             // 
@@ -1245,7 +1245,7 @@
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(321, 30);
             this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem12.Text = "셰프 아이디";
+            this.layoutControlItem12.Text = "G메니저 아이디";
             this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(80, 14);
             this.layoutControlItem12.TextToControlDistance = 5;
@@ -1257,7 +1257,7 @@
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(321, 27);
-            this.layoutControlItem14.Text = "셰프 이름";
+            this.layoutControlItem14.Text = "G메니저 이름";
             this.layoutControlItem14.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem14.TextSize = new System.Drawing.Size(80, 23);
             this.layoutControlItem14.TextToControlDistance = 5;
@@ -1269,7 +1269,7 @@
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 57);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.Size = new System.Drawing.Size(413, 27);
-            this.layoutControlItem15.Text = "셰프 닉네임";
+            this.layoutControlItem15.Text = "G메니저 닉네임";
             this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem15.TextSize = new System.Drawing.Size(80, 23);
             this.layoutControlItem15.TextToControlDistance = 5;

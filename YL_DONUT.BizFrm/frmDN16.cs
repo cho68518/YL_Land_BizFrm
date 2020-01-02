@@ -117,7 +117,7 @@ namespace YL_DONUT.BizFrm
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
             {
-                Open3(); //도마셰프 회원가입
+                Open3(); //G메니저 회원가입
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
             {
@@ -299,7 +299,7 @@ namespace YL_DONUT.BizFrm
 
         #endregion
 
-        #region 도마셰프 회원가입
+        #region G메니저 회원가입
 
         private void Open3()
         {

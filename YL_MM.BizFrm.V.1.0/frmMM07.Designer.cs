@@ -694,7 +694,7 @@
             this.rbLevel.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "일반"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "VIP"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "도마셰프"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "G메니저"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("T", "전체")});
             this.rbLevel.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
             this.rbLevel.RequireMessage = null;
@@ -883,7 +883,7 @@
             this.gridBand5.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand5.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand5.Caption = "담당셰프";
+            this.gridBand5.Caption = "담당G메니저";
             this.gridBand5.Columns.Add(this.gridColumn22);
             this.gridBand5.Columns.Add(this.gridColumn23);
             this.gridBand5.Columns.Add(this.gridColumn16);
@@ -897,7 +897,7 @@
             this.gridBand6.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand6.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand6.Caption = "상위셰프";
+            this.gridBand6.Caption = "상위G메니저";
             this.gridBand6.Columns.Add(this.gridColumn25);
             this.gridBand6.Columns.Add(this.gridColumn26);
             this.gridBand6.Columns.Add(this.gridColumn27);
@@ -911,7 +911,7 @@
             this.gridBand4.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand4.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand4.Caption = "도마셰프 추천인";
+            this.gridBand4.Caption = "G메니저 추천인";
             this.gridBand4.Columns.Add(this.gridColumn14);
             this.gridBand4.Columns.Add(this.gridColumn15);
             this.gridBand4.Columns.Add(this.gridColumn28);

@@ -908,7 +908,7 @@
             this.efwLabel30.Name = "efwLabel30";
             this.efwLabel30.Size = new System.Drawing.Size(20, 14);
             this.efwLabel30.TabIndex = 117;
-            this.efwLabel30.Text = "셰프";
+            this.efwLabel30.Text = "G메니저";
             this.efwLabel30.Visible = false;
             // 
             // cbP_Discount_Donut1
@@ -1027,7 +1027,7 @@
             this.efwLabel31.Name = "efwLabel31";
             this.efwLabel31.Size = new System.Drawing.Size(48, 14);
             this.efwLabel31.TabIndex = 115;
-            this.efwLabel31.Text = "셰프G머니";
+            this.efwLabel31.Text = "G메니저 G머니";
             this.efwLabel31.Visible = false;
             // 
             // efwLabel23

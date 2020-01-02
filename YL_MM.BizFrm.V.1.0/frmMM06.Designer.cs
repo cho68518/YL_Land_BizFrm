@@ -1758,7 +1758,7 @@
             this.layoutControlItem27.Location = new System.Drawing.Point(424, 191);
             this.layoutControlItem27.Name = "layoutControlItem27";
             this.layoutControlItem27.Size = new System.Drawing.Size(445, 41);
-            this.layoutControlItem27.Text = "담당셰프";
+            this.layoutControlItem27.Text = "담당G메니저";
             this.layoutControlItem27.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem27.TextSize = new System.Drawing.Size(70, 20);
             this.layoutControlItem27.TextToControlDistance = 5;

@@ -2006,7 +2006,7 @@
     <value>77</value>
   </data>
   <data name="efwLabel31.Text" xml:space="preserve">
-    <value>셰프G머니</value>
+    <value>G메니저 G머니</value>
   </data>
   <data name="&gt;&gt;efwLabel31.Name" xml:space="preserve">
     <value>efwLabel31</value>
@@ -2981,7 +2981,7 @@
     <value>6</value>
   </data>
   <data name="gridColumn8.Caption" xml:space="preserve">
-    <value>MD 셰프정산가</value>
+    <value>MD G메니저정산가</value>
   </data>
   <data name="gridColumn8.Visible" type="System.Boolean, mscorlib">
     <value>True</value>

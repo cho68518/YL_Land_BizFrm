@@ -138,7 +138,7 @@
             this.rbTelType.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.rbTelType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("V", "VIP"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("S", "도마셰프    "),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("S", "G메니저    "),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("G", "G 멀티샵")});
             this.rbTelType.RequireMessage = null;
             this.rbTelType.Size = new System.Drawing.Size(255, 26);
@@ -353,7 +353,7 @@
             // 
             // gridColumn8
             // 
-            this.gridColumn8.Caption = "담당셰프 ID";
+            this.gridColumn8.Caption = "담당G메니저 ID";
             this.gridColumn8.FieldName = "login_id_shef";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
@@ -362,7 +362,7 @@
             // 
             // gridColumn9
             // 
-            this.gridColumn9.Caption = "당당셰프 닉네임";
+            this.gridColumn9.Caption = "당당G메니저 닉네임";
             this.gridColumn9.FieldName = "u_nickname_shef";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;

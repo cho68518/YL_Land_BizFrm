@@ -1770,7 +1770,7 @@
             this.xtraTabPage3.Controls.Add(this.panel4);
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1601, 813);
-            this.xtraTabPage3.Text = "도마셰프 회원가입";
+            this.xtraTabPage3.Text = "G메니저 회원가입";
             // 
             // efwGridControl3
             // 
@@ -4489,7 +4489,7 @@
             this.gridBand31.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand31.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand31.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand31.Caption = "담당셰프 정보";
+            this.gridBand31.Caption = "담당 G메니저 정보";
             this.gridBand31.Columns.Add(this.bandedGridColumn214);
             this.gridBand31.Columns.Add(this.bandedGridColumn215);
             this.gridBand31.Columns.Add(this.bandedGridColumn216);
@@ -4555,7 +4555,7 @@
             this.gridBand30.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand30.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand30.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand30.Caption = "PS감사 스토리 (담당셰프) 일반, VIP";
+            this.gridBand30.Caption = "PS감사 스토리 (담당G메니저) 일반, VIP";
             this.gridBand30.Columns.Add(this.bandedGridColumn200);
             this.gridBand30.Columns.Add(this.bandedGridColumn201);
             this.gridBand30.Columns.Add(this.bandedGridColumn202);
@@ -4764,7 +4764,7 @@
             this.gridBand37.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand37.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand37.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand37.Caption = "GS 담당셰프/상위셰프";
+            this.gridBand37.Caption = "GS 담당G메니저/상위G메니저";
             this.gridBand37.Columns.Add(this.bandedGridColumn270);
             this.gridBand37.Columns.Add(this.bandedGridColumn271);
             this.gridBand37.Columns.Add(this.bandedGridColumn272);
@@ -4825,7 +4825,7 @@
             this.gridBand41.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand41.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand41.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand41.Caption = "GS축하스토리 (일반,VIP:상위셰프, 셰프: 담당셰프, 셰프이상 생성X)";
+            this.gridBand41.Caption = "GS축하스토리 (일반,VIP:상위G메니저, G메니저: 담당G메니저, G메니저이상 생성X)";
             this.gridBand41.Columns.Add(this.bandedGridColumn275);
             this.gridBand41.Columns.Add(this.bandedGridColumn276);
             this.gridBand41.Columns.Add(this.bandedGridColumn277);

@@ -737,7 +737,7 @@ namespace YL_MM.BizFrm
 
         private void TxtU_CHEF_Click(object sender, EventArgs e)
         {
-            // 셰프회원 Help
+            // G메니저회원 Help
             //frmMemberInfo FrmInfo = new frmMemberInfo() { ParentBtn = txtU_CHEF };
             //FrmInfo.COMPANYCD = txtCOMPANYCD.EditValue.ToString();
             //FrmInfo.COMPANYNAME = txtCOMPANYNAME.EditValue.ToString();

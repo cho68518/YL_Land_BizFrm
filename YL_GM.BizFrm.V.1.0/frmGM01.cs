@@ -221,7 +221,7 @@ namespace YL_GM.BizFrm
                                 //-----------------------------------------------------------------------------------
                                 //회원 정보현황
                                 //-----------------------------------------------------------------------------------
-                                //1.셰프이사
+                                //1.G메니저이사
                                 //현재회원수
                                 lbl4.Text = String.Format("{0:#,##0}", rows[0]["ChefTotal"]);
                                 //금일인원
@@ -244,7 +244,7 @@ namespace YL_GM.BizFrm
                                 else
                                     lbl53.Text = "0";
 
-                                //2.도마셰프(PS운영자)
+                                //2.G메니저(PS운영자)
                                 //현재회원수
                                 lbl5.Text = String.Format("{0:#,##0}", rows[0]["PsTotal"]);
                                 //금일인원
@@ -695,13 +695,13 @@ namespace YL_GM.BizFrm
             dt.Columns.Add(colName);
             dt.Columns.Add(colQuantity);
 
-            //dt.Rows.Add("셰프이사", "1,000");
-            //dt.Rows.Add("도마셰프", "2,000");
+            //dt.Rows.Add("G메니저이사", "1,000");
+            //dt.Rows.Add("G메니저", "2,000");
             //dt.Rows.Add("VIP", "3,000");
             //dt.Rows.Add("도마", "4,000");
 
-            dt.Rows.Add("셰프이사", lbl4.Text);
-            dt.Rows.Add("도마셰프", lbl5.Text);
+            dt.Rows.Add("G메니저이사", lbl4.Text);
+            dt.Rows.Add("G메니저", lbl5.Text);
             dt.Rows.Add("VIP", lbl6.Text);
             dt.Rows.Add("도마", lbl7.Text);
 
@@ -739,8 +739,8 @@ namespace YL_GM.BizFrm
             dt.Columns.Add(colName);
             dt.Columns.Add(colQuantity);
 
-            //dt.Rows.Add("셰프이사", "1,000");
-            //dt.Rows.Add("도마셰프", "2,000");
+            //dt.Rows.Add("G메니저이사", "1,000");
+            //dt.Rows.Add("G메니저", "2,000");
             //dt.Rows.Add("VIP", "3,000");
             //dt.Rows.Add("도마", "4,000");
 
@@ -769,7 +769,7 @@ namespace YL_GM.BizFrm
         private void BtnOpen_Click(object sender, EventArgs e)
         {
             popup1 = new frmGM01_Pop02();
-            popup1.pMember_NM = "셰프(이사)";
+            popup1.pMember_NM = "G메니저(이사)";
             popup1.pQ3 = "3";
 
             popup1.FormClosed += popup_FormClosed1;
@@ -779,7 +779,7 @@ namespace YL_GM.BizFrm
         private void EfwSimpleButton1_Click(object sender, EventArgs e)
         {
             popup1 = new frmGM01_Pop02();
-            popup1.pMember_NM = "도마셰프";
+            popup1.pMember_NM = "G메니저";
             popup1.pQ3 = "2";
 
             popup1.FormClosed += popup_FormClosed1;

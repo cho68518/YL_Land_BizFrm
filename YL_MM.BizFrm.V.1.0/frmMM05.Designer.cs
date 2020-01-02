@@ -571,13 +571,13 @@
             // 
             // gridColumn11
             // 
-            this.gridColumn11.Caption = "담당셰프Id";
+            this.gridColumn11.Caption = "담당G메니저Id";
             this.gridColumn11.FieldName = "chef_login_id";
             this.gridColumn11.Name = "gridColumn11";
             // 
             // gridColumn33
             // 
-            this.gridColumn33.Caption = "담당셰프";
+            this.gridColumn33.Caption = "담당G메니저";
             this.gridColumn33.FieldName = "chef_u_nickname";
             this.gridColumn33.Name = "gridColumn33";
             this.gridColumn33.Visible = true;
@@ -2142,7 +2142,7 @@
             this.layoutControlItem23.Location = new System.Drawing.Point(0, 202);
             this.layoutControlItem23.Name = "layoutControlItem23";
             this.layoutControlItem23.Size = new System.Drawing.Size(291, 24);
-            this.layoutControlItem23.Text = "담당셰프";
+            this.layoutControlItem23.Text = "담당G메니저";
             this.layoutControlItem23.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem23.TextSize = new System.Drawing.Size(70, 20);
             this.layoutControlItem23.TextToControlDistance = 5;
