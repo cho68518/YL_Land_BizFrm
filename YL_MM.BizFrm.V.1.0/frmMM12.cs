@@ -23,7 +23,6 @@ namespace YL_MM.BizFrm
     public partial class frmMM12 : FrmBase
         
     {
-        frmMM12_Pop01 popup;
         public frmMM12()
         {
             InitializeComponent();
@@ -59,14 +58,15 @@ namespace YL_MM.BizFrm
             gridView1.OptionsView.ShowFooter = true;
 
             this.efwGridControl1.BindControlSet(
-              new ColumnControlSet("idx", cmbOrderMallType)
-            , new ColumnControlSet("idx", txtU_Name)
-            , new ColumnControlSet("idx", txtU_Nickname)
-            , new ColumnControlSet("idx", txtLogin_Id)
-            , new ColumnControlSet("idx", txtO_Code)
-            , new ColumnControlSet("idx", txtO_Date)
-            , new ColumnControlSet("idx", txtO_Deposit_Confirm_Date)
-            , new ColumnControlSet("idx", txtRemark)
+              new ColumnControlSet("mall_type", cmbU_Chef_Level)
+            , new ColumnControlSet("u_name", txtU_Name)
+            , new ColumnControlSet("u_nickname", txtU_Nickname)
+            , new ColumnControlSet("login_id", txtLogin_Id)
+            , new ColumnControlSet("o_code", txtO_Code)
+            , new ColumnControlSet("o_date", txtO_Date)
+            , new ColumnControlSet("o_deposit_confirm_date", txtO_Deposit_Confirm_Date)
+            , new ColumnControlSet("remark", txtRemark)
+            , new ColumnControlSet("remark", txtRemark)
             );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -79,10 +79,10 @@ namespace YL_MM.BizFrm
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
-            txtIdx.EditValue = "";
-            if (dr != null && dr["idx"].ToString() != "")
+            
+            if (dr != null && dr["o_code"].ToString() != "")
             {
-                this.cmbOrderMallType.EditValue = dr["order_mall_type"].ToString();
+                this.cmbU_Chef_Level.EditValue = dr["mall_type"].ToString();
                 this.txtU_Name.EditValue = dr["u_name"].ToString();
                 this.txtU_Nickname.EditValue = dr["u_nickname"].ToString();
                 this.txtLogin_Id.EditValue = dr["login_id"].ToString();
@@ -110,9 +110,9 @@ namespace YL_MM.BizFrm
                 for (int i = 0; i < dr.Length; i++)
                     codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
 
-                CodeAgent.MakeCodeControl(this.cmbOrderMallType, codeArray);
+                CodeAgent.MakeCodeControl(this.cmbU_Chef_Level, codeArray);
             }
-            cmbOrderMallType.EditValue = "1";
+            cmbU_Chef_Level.EditValue = "1";
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
@@ -181,23 +181,235 @@ namespace YL_MM.BizFrm
             }
         }
 
-        private void btnMemberSch_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            popup = new frmMM12_Pop01();
-            
-            popup.OrderMallType = cmbOrderMallType.EditValue.ToString();
+            {
+                if (string.IsNullOrEmpty(this.txtO_Code.Text))
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 주무번호를 선택하세요!");
+                    return;
+                }
 
-            popup.FormClosed += popup_FormClosed;
-            popup.ShowDialog();
+
+                if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM12_SAVE_01", con))
+                            {
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_proc_type", MySqlDbType.VarChar));
+                                cmd.Parameters["i_proc_type"].Value = "A";
+                                cmd.Parameters["i_proc_type"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_mall_type", MySqlDbType.VarChar));
+                                cmd.Parameters["i_mall_type"].Value = cmbU_Chef_Level.EditValue;
+                                cmd.Parameters["i_mall_type"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                                cmd.Parameters["i_o_code"].Value = txtO_Code.EditValue;
+                                cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_o_deposit_confirm_date", MySqlDbType.DateTime));
+                                cmd.Parameters["i_o_deposit_confirm_date"].Value = txtO_Deposit_Confirm_Date.EditValue;
+                                cmd.Parameters["i_o_deposit_confirm_date"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                                cmd.Parameters["i_remark"].Value = txtRemark.EditValue;
+                                cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                                cmd.ExecuteNonQuery();
+
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                    }
+                    MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                    Search();
+                }
+            }
         }
 
-        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            popup.FormClosed -= popup_FormClosed;
+            {
+                if (string.IsNullOrEmpty(this.txtO_Code.Text))
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 주무번호를 선택하세요!");
+                    return;
+                }
 
-            popup = null;
+
+                if (MessageAgent.MessageShow(MessageType.Confirm, "취소 하시겠습니까?") == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM12_SAVE_01", con))
+                            {
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_proc_type", MySqlDbType.VarChar));
+                                cmd.Parameters["i_proc_type"].Value = "D";
+                                cmd.Parameters["i_proc_type"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_mall_type", MySqlDbType.VarChar));
+                                cmd.Parameters["i_mall_type"].Value = cmbU_Chef_Level.EditValue;
+                                cmd.Parameters["i_mall_type"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                                cmd.Parameters["i_o_code"].Value = txtO_Code.EditValue;
+                                cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_o_deposit_confirm_date", MySqlDbType.DateTime));
+                                cmd.Parameters["i_o_deposit_confirm_date"].Value = null;
+                                cmd.Parameters["i_o_deposit_confirm_date"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                                cmd.Parameters["i_remark"].Value = txtRemark.EditValue;
+                                cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                                cmd.ExecuteNonQuery();
+
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                    }
+                    MessageAgent.MessageShow(MessageType.Informational, "취소 되었습니다.");
+                    Search();
+                }
+            }
         }
-        
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            {
+                if (string.IsNullOrEmpty(this.txtO_Code.Text))
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 주무번호를 선택하세요!");
+                    return;
+                }
+
+
+                if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM12_SAVE_01", con))
+                            {
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_proc_type", MySqlDbType.VarChar));
+                                cmd.Parameters["i_proc_type"].Value = "A";
+                                cmd.Parameters["i_proc_type"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_mall_type", MySqlDbType.VarChar));
+                                cmd.Parameters["i_mall_type"].Value = cmbU_Chef_Level.EditValue;
+                                cmd.Parameters["i_mall_type"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                                cmd.Parameters["i_o_code"].Value = txtO_Code.EditValue;
+                                cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_o_deposit_confirm_date", MySqlDbType.DateTime));
+                                cmd.Parameters["i_o_deposit_confirm_date"].Value = txtO_Deposit_Confirm_Date.EditValue;
+                                cmd.Parameters["i_o_deposit_confirm_date"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                                cmd.Parameters["i_remark"].Value = txtRemark.EditValue;
+                                cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                                cmd.ExecuteNonQuery();
+
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                    }
+                    MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                    Search();
+                }
+            }
+        }
+
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            {
+                if (string.IsNullOrEmpty(this.txtO_Code.Text))
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 주무번호를 선택하세요!");
+                    return;
+                }
+
+
+                if (MessageAgent.MessageShow(MessageType.Confirm, "취소 하시겠습니까?") == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM12_SAVE_01", con))
+                            {
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_proc_type", MySqlDbType.VarChar));
+                                cmd.Parameters["i_proc_type"].Value = "D";
+                                cmd.Parameters["i_proc_type"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_mall_type", MySqlDbType.VarChar));
+                                cmd.Parameters["i_mall_type"].Value = cmbU_Chef_Level.EditValue;
+                                cmd.Parameters["i_mall_type"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                                cmd.Parameters["i_o_code"].Value = txtO_Code.EditValue;
+                                cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_o_deposit_confirm_date", MySqlDbType.DateTime));
+                                cmd.Parameters["i_o_deposit_confirm_date"].Value = null;
+                                cmd.Parameters["i_o_deposit_confirm_date"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                                cmd.Parameters["i_remark"].Value = txtRemark.EditValue;
+                                cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                                cmd.ExecuteNonQuery();
+
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                    }
+                    MessageAgent.MessageShow(MessageType.Informational, "취소 되었습니다.");
+                    Search();
+                }
+            }
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
+        }
     }
 }
 

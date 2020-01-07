@@ -70,6 +70,8 @@
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbTot = new Easy.Framework.WinForm.Control.efwLabel();
             this.rbYearType = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwLabel81 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea7 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -109,8 +111,6 @@
             this.efwArea15 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea14 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea6 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.lbTot = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -610,6 +610,42 @@
             this.efwPanelControl1.Size = new System.Drawing.Size(436, 281);
             this.efwPanelControl1.TabIndex = 110;
             // 
+            // efwLabel1
+            // 
+            this.efwLabel1.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.efwLabel1.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.efwLabel1.Appearance.Options.UseFont = true;
+            this.efwLabel1.Appearance.Options.UseForeColor = true;
+            this.efwLabel1.Appearance.Options.UseTextOptions = true;
+            this.efwLabel1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.efwLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.efwLabel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.efwLabel1.EraserGroup = null;
+            this.efwLabel1.IsMultiLang = false;
+            this.efwLabel1.Location = new System.Drawing.Point(222, 313);
+            this.efwLabel1.Name = "efwLabel1";
+            this.efwLabel1.Size = new System.Drawing.Size(121, 28);
+            this.efwLabel1.TabIndex = 111;
+            this.efwLabel1.Text = "합계";
+            // 
+            // lbTot
+            // 
+            this.lbTot.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbTot.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lbTot.Appearance.Options.UseFont = true;
+            this.lbTot.Appearance.Options.UseForeColor = true;
+            this.lbTot.Appearance.Options.UseTextOptions = true;
+            this.lbTot.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbTot.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbTot.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbTot.EraserGroup = null;
+            this.lbTot.IsMultiLang = false;
+            this.lbTot.Location = new System.Drawing.Point(344, 313);
+            this.lbTot.Name = "lbTot";
+            this.lbTot.Size = new System.Drawing.Size(82, 28);
+            this.lbTot.TabIndex = 110;
+            this.lbTot.Text = "0";
+            // 
             // rbYearType
             // 
             this.rbYearType.IsMultiLang = false;
@@ -626,6 +662,7 @@
             this.rbYearType.RequireMessage = null;
             this.rbYearType.Size = new System.Drawing.Size(147, 30);
             this.rbYearType.TabIndex = 109;
+            this.rbYearType.SelectedIndexChanged += new System.EventHandler(this.RbYearType_Click);
             this.rbYearType.Click += new System.EventHandler(this.RbYearType_Click);
             // 
             // efwLabel81
@@ -1281,42 +1318,6 @@
             this.efwArea6.Size = new System.Drawing.Size(82, 28);
             this.efwArea6.TabIndex = 66;
             this.efwArea6.Text = "0";
-            // 
-            // efwLabel1
-            // 
-            this.efwLabel1.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.efwLabel1.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.efwLabel1.Appearance.Options.UseFont = true;
-            this.efwLabel1.Appearance.Options.UseForeColor = true;
-            this.efwLabel1.Appearance.Options.UseTextOptions = true;
-            this.efwLabel1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.efwLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efwLabel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.efwLabel1.EraserGroup = null;
-            this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(222, 313);
-            this.efwLabel1.Name = "efwLabel1";
-            this.efwLabel1.Size = new System.Drawing.Size(121, 28);
-            this.efwLabel1.TabIndex = 111;
-            this.efwLabel1.Text = "합계";
-            // 
-            // lbTot
-            // 
-            this.lbTot.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.lbTot.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.lbTot.Appearance.Options.UseFont = true;
-            this.lbTot.Appearance.Options.UseForeColor = true;
-            this.lbTot.Appearance.Options.UseTextOptions = true;
-            this.lbTot.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbTot.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbTot.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lbTot.EraserGroup = null;
-            this.lbTot.IsMultiLang = false;
-            this.lbTot.Location = new System.Drawing.Point(344, 313);
-            this.lbTot.Name = "lbTot";
-            this.lbTot.Size = new System.Drawing.Size(82, 28);
-            this.lbTot.TabIndex = 110;
-            this.lbTot.Text = "0";
             // 
             // frmGM03
             // 

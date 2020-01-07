@@ -130,12 +130,6 @@
     <Compile Include="Dlg\frmMemberInfo_Dup.Designer.cs">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMM12_Pop01.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMM12_Pop01.Designer.cs">
-      <DependentUpon>frmMM12_Pop01.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMM12.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -300,9 +294,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM12.resx">
       <DependentUpon>frmMM12.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMM12_Pop01.resx">
-      <DependentUpon>frmMM12_Pop01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest01.resx">
       <DependentUpon>frmTest01.cs</DependentUpon>

@@ -226,7 +226,7 @@ namespace YL_GM.BizFrm
             SeriesPoint sPont = null;
 
             //시리즈 포인트
-            for (int i = 0; i < gridView1.DataRowCount; i++)
+            for (int i = 0; i < gridView2.DataRowCount; i++)
             {
                 sPont = new SeriesPoint(gridView2.GetRowCellValue(i, "u_nickname"), Convert.ToInt16(gridView2.GetRowCellValue(i, "total")));
                                 this.chartControl2.Series["Series 1"].Points.Add(sPont);

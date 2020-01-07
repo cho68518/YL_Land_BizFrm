@@ -1837,6 +1837,468 @@
         BoDYpGIwQaoByOoxBIjBMPVAPNgMIAPDDdiOJkEMBumBGEA+/s8AAIlq7ChZ7r+CAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="txtRefunds_CR.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtRefunds_CR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>999, 109</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRefunds_CR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtRefunds_CR.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_CR.Name" xml:space="preserve">
+    <value>txtRefunds_CR</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_CR.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_CR.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_CR.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtRefunds_CG.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtRefunds_CG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>999, 83</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask1" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType1" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat1" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRefunds_CG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtRefunds_CG.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_CG.Name" xml:space="preserve">
+    <value>txtRefunds_CG</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_CG.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_CG.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_CG.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtRefunds_AS.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtRefunds_AS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>999, 57</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask2" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType2" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat2" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRefunds_AS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtRefunds_AS.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_AS.Name" xml:space="preserve">
+    <value>txtRefunds_AS</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_AS.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_AS.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_AS.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtRefunds_GF.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtRefunds_GF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>999, 31</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask3" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType3" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat3" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRefunds_GF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtRefunds_GF.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GF.Name" xml:space="preserve">
+    <value>txtRefunds_GF</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GF.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GF.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GF.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtRefunds_GM.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtRefunds_GM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>747, 109</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask4" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType4" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat4" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRefunds_GM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtRefunds_GM.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GM.Name" xml:space="preserve">
+    <value>txtRefunds_GM</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GM.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GM.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GM.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtRefunds_TD.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtRefunds_TD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>747, 83</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask5" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType5" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRefunds_TD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtRefunds_TD.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_TD.Name" xml:space="preserve">
+    <value>txtRefunds_TD</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_TD.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_TD.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_TD.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtRefunds_GD.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtRefunds_GD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>747, 57</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask6" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType6" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat6" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRefunds_GD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtRefunds_GD.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GD.Name" xml:space="preserve">
+    <value>txtRefunds_GD</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GD.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GD.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_GD.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtRefunds_DM.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtRefunds_DM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>747, 31</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask7" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType7" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat7" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRefunds_DM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtRefunds_DM.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_DM.Name" xml:space="preserve">
+    <value>txtRefunds_DM</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_DM.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_DM.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtRefunds_DM.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txtDiscount_Price.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtDiscount_Price.Location" type="System.Drawing.Point, System.Drawing">
+    <value>498, 83</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask8" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType8" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat8" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtDiscount_Price.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtDiscount_Price.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="&gt;&gt;txtDiscount_Price.Name" xml:space="preserve">
+    <value>txtDiscount_Price</value>
+  </data>
+  <data name="&gt;&gt;txtDiscount_Price.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtDiscount_Price.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtDiscount_Price.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="txtP_Org_Price.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtP_Org_Price.Location" type="System.Drawing.Point, System.Drawing">
+    <value>498, 57</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask9" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType9" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat9" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtP_Org_Price.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtP_Org_Price.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="&gt;&gt;txtP_Org_Price.Name" xml:space="preserve">
+    <value>txtP_Org_Price</value>
+  </data>
+  <data name="&gt;&gt;txtP_Org_Price.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtP_Org_Price.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtP_Org_Price.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txtPs_Oper_Price.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtPs_Oper_Price.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 109</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask10" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType10" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat10" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtPs_Oper_Price.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtPs_Oper_Price.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;txtPs_Oper_Price.Name" xml:space="preserve">
+    <value>txtPs_Oper_Price</value>
+  </data>
+  <data name="&gt;&gt;txtPs_Oper_Price.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtPs_Oper_Price.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtPs_Oper_Price.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtVip_Price.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtVip_Price.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 83</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask11" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType11" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat11" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtVip_Price.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtVip_Price.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="&gt;&gt;txtVip_Price.Name" xml:space="preserve">
+    <value>txtVip_Price</value>
+  </data>
+  <data name="&gt;&gt;txtVip_Price.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtVip_Price.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtVip_Price.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtP_Delivery_Price.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtP_Delivery_Price.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 31</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.EditMask12" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.MaskType12" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat12" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtP_Delivery_Price.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtP_Delivery_Price.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;txtP_Delivery_Price.Name" xml:space="preserve">
+    <value>txtP_Delivery_Price</value>
+  </data>
+  <data name="&gt;&gt;txtP_Delivery_Price.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtP_Delivery_Price.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtP_Delivery_Price.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txtBasic_Price.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtBasic_Price.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 57</value>
+  </data>
+  <data name="txtO_Total_Cost.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="txtO_Total_Cost.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+    <value>Numeric</value>
+  </data>
+  <data name="txtO_Total_Cost.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtBasic_Price.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="txtBasic_Price.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="&gt;&gt;txtBasic_Price.Name" xml:space="preserve">
+    <value>txtBasic_Price</value>
+  </data>
+  <data name="&gt;&gt;txtBasic_Price.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtBasic_Price.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtBasic_Price.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
   <data name="rbPrice_Show_Type.Location" type="System.Drawing.Point, System.Drawing">
     <value>275, 134</value>
   </data>
@@ -1868,7 +2330,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;rbPrice_Show_Type.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>14</value>
   </data>
   <data name="cmbP_PS_Num.Location" type="System.Drawing.Point, System.Drawing">
     <value>107, 135</value>
@@ -1892,7 +2354,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cmbP_PS_Num.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>15</value>
   </data>
   <data name="efwLabel34.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 138</value>
@@ -1916,34 +2378,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel34.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="txtRefunds_CR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>999, 109</value>
-  </data>
-  <data name="txtRefunds_CR.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtRefunds_CR.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtRefunds_CR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtRefunds_CR.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_CR.Name" xml:space="preserve">
-    <value>txtRefunds_CR</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_CR.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_CR.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_CR.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>16</value>
   </data>
   <data name="efwLabel30.Location" type="System.Drawing.Point, System.Drawing">
     <value>913, 112</value>
@@ -1967,40 +2402,13 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel30.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="txtRefunds_CG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>999, 83</value>
-  </data>
-  <data name="txtRefunds_CG.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtRefunds_CG.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtRefunds_CG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtRefunds_CG.TabIndex" type="System.Int32, mscorlib">
-    <value>78</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_CG.Name" xml:space="preserve">
-    <value>txtRefunds_CG</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_CG.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_CG.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_CG.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>17</value>
   </data>
   <data name="efwLabel31.Location" type="System.Drawing.Point, System.Drawing">
     <value>913, 86</value>
   </data>
   <data name="efwLabel31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 14</value>
+    <value>70, 14</value>
   </data>
   <data name="efwLabel31.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
@@ -2018,34 +2426,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel31.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="txtRefunds_AS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>999, 57</value>
-  </data>
-  <data name="txtRefunds_AS.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtRefunds_AS.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtRefunds_AS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtRefunds_AS.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_AS.Name" xml:space="preserve">
-    <value>txtRefunds_AS</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_AS.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_AS.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_AS.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>18</value>
   </data>
   <data name="efwLabel32.Location" type="System.Drawing.Point, System.Drawing">
     <value>913, 60</value>
@@ -2069,34 +2450,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel32.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="txtRefunds_GF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>999, 31</value>
-  </data>
-  <data name="txtRefunds_GF.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtRefunds_GF.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtRefunds_GF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtRefunds_GF.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GF.Name" xml:space="preserve">
-    <value>txtRefunds_GF</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GF.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GF.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GF.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>19</value>
   </data>
   <data name="efwLabel33.Location" type="System.Drawing.Point, System.Drawing">
     <value>913, 34</value>
@@ -2120,34 +2474,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel33.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="txtRefunds_GM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>747, 109</value>
-  </data>
-  <data name="txtRefunds_GM.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtRefunds_GM.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtRefunds_GM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtRefunds_GM.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GM.Name" xml:space="preserve">
-    <value>txtRefunds_GM</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GM.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GM.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GM.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>20</value>
   </data>
   <data name="efwLabel26.Location" type="System.Drawing.Point, System.Drawing">
     <value>670, 112</value>
@@ -2171,34 +2498,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel26.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="txtRefunds_TD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>747, 83</value>
-  </data>
-  <data name="txtRefunds_TD.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtRefunds_TD.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtRefunds_TD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtRefunds_TD.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_TD.Name" xml:space="preserve">
-    <value>txtRefunds_TD</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_TD.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_TD.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_TD.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>21</value>
   </data>
   <data name="efwLabel27.Location" type="System.Drawing.Point, System.Drawing">
     <value>670, 86</value>
@@ -2222,34 +2522,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel27.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="txtRefunds_GD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>747, 57</value>
-  </data>
-  <data name="txtRefunds_GD.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtRefunds_GD.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtRefunds_GD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtRefunds_GD.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GD.Name" xml:space="preserve">
-    <value>txtRefunds_GD</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GD.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GD.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_GD.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>22</value>
   </data>
   <data name="efwLabel28.Location" type="System.Drawing.Point, System.Drawing">
     <value>670, 60</value>
@@ -2273,34 +2546,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel28.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="txtRefunds_DM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>747, 31</value>
-  </data>
-  <data name="txtRefunds_DM.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtRefunds_DM.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtRefunds_DM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtRefunds_DM.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_DM.Name" xml:space="preserve">
-    <value>txtRefunds_DM</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_DM.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_DM.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtRefunds_DM.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>23</value>
   </data>
   <data name="efwLabel29.Location" type="System.Drawing.Point, System.Drawing">
     <value>670, 34</value>
@@ -2324,7 +2570,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel29.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>24</value>
   </data>
   <data name="efwLabel25.Location" type="System.Drawing.Point, System.Drawing">
     <value>275, 112</value>
@@ -2348,7 +2594,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel25.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>25</value>
   </data>
   <data name="cbP_Discount_Donut3.Location" type="System.Drawing.Point, System.Drawing">
     <value>510, 110</value>
@@ -2372,7 +2618,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cbP_Discount_Donut3.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>26</value>
   </data>
   <data name="cbP_Discount_Donut2.Location" type="System.Drawing.Point, System.Drawing">
     <value>436, 110</value>
@@ -2396,7 +2642,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cbP_Discount_Donut2.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>27</value>
   </data>
   <data name="cbP_Discount_Donut1.Location" type="System.Drawing.Point, System.Drawing">
     <value>363, 110</value>
@@ -2420,34 +2666,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cbP_Discount_Donut1.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="txtDiscount_Price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>498, 83</value>
-  </data>
-  <data name="txtDiscount_Price.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtDiscount_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtDiscount_Price.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtDiscount_Price.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="&gt;&gt;txtDiscount_Price.Name" xml:space="preserve">
-    <value>txtDiscount_Price</value>
-  </data>
-  <data name="&gt;&gt;txtDiscount_Price.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtDiscount_Price.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtDiscount_Price.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>28</value>
   </data>
   <data name="efwLabel24.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 86</value>
@@ -2471,34 +2690,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel24.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="txtP_Org_Price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>498, 57</value>
-  </data>
-  <data name="txtP_Org_Price.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtP_Org_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtP_Org_Price.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtP_Org_Price.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;txtP_Org_Price.Name" xml:space="preserve">
-    <value>txtP_Org_Price</value>
-  </data>
-  <data name="&gt;&gt;txtP_Org_Price.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtP_Org_Price.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtP_Org_Price.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>29</value>
   </data>
   <data name="efwLabel23.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 60</value>
@@ -2522,7 +2714,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel23.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>30</value>
   </data>
   <data name="cmbP_Taxation.Location" type="System.Drawing.Point, System.Drawing">
     <value>498, 31</value>
@@ -2546,7 +2738,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cmbP_Taxation.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>31</value>
   </data>
   <data name="efwLabel22.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 34</value>
@@ -2570,34 +2762,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel22.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="txtPs_Oper_Price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 109</value>
-  </data>
-  <data name="txtPs_Oper_Price.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtPs_Oper_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtPs_Oper_Price.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtPs_Oper_Price.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="&gt;&gt;txtPs_Oper_Price.Name" xml:space="preserve">
-    <value>txtPs_Oper_Price</value>
-  </data>
-  <data name="&gt;&gt;txtPs_Oper_Price.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtPs_Oper_Price.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtPs_Oper_Price.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>32</value>
   </data>
   <data name="efwLabel21.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 112</value>
@@ -2621,34 +2786,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel21.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="txtVip_Price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 83</value>
-  </data>
-  <data name="txtVip_Price.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtVip_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtVip_Price.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtVip_Price.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
-  </data>
-  <data name="&gt;&gt;txtVip_Price.Name" xml:space="preserve">
-    <value>txtVip_Price</value>
-  </data>
-  <data name="&gt;&gt;txtVip_Price.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtVip_Price.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtVip_Price.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>33</value>
   </data>
   <data name="efwLabel20.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 86</value>
@@ -2672,34 +2810,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel20.ZOrder" xml:space="preserve">
-    <value>32</value>
-  </data>
-  <data name="txtBasic_Price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 57</value>
-  </data>
-  <data name="txtBasic_Price.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtBasic_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtBasic_Price.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtBasic_Price.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;txtBasic_Price.Name" xml:space="preserve">
-    <value>txtBasic_Price</value>
-  </data>
-  <data name="&gt;&gt;txtBasic_Price.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtBasic_Price.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtBasic_Price.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>34</value>
   </data>
   <data name="efwLabel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 60</value>
@@ -2723,7 +2834,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel2.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>35</value>
   </data>
   <data name="cmbP_Delivery_Type.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 31</value>
@@ -2747,33 +2858,6 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cmbP_Delivery_Type.ZOrder" xml:space="preserve">
-    <value>35</value>
-  </data>
-  <data name="txtP_Delivery_Price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 31</value>
-  </data>
-  <data name="txtP_Delivery_Price.Properties.Mask.EditMask" xml:space="preserve">
-    <value>###,###,##0</value>
-  </data>
-  <data name="txtP_Delivery_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
-    <value>Numeric</value>
-  </data>
-  <data name="txtP_Delivery_Price.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="txtP_Delivery_Price.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;txtP_Delivery_Price.Name" xml:space="preserve">
-    <value>txtP_Delivery_Price</value>
-  </data>
-  <data name="&gt;&gt;txtP_Delivery_Price.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtP_Delivery_Price.Parent" xml:space="preserve">
-    <value>s</value>
-  </data>
-  <data name="&gt;&gt;txtP_Delivery_Price.ZOrder" xml:space="preserve">
     <value>36</value>
   </data>
   <data name="efwLabel1.Location" type="System.Drawing.Point, System.Drawing">

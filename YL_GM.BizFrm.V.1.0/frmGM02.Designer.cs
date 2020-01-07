@@ -299,11 +299,12 @@
             this.rbYrarType.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rbYrarType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "전체"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "년도별")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "년도별")});
             this.rbYrarType.RequireMessage = null;
             this.rbYrarType.Size = new System.Drawing.Size(128, 23);
             this.rbYrarType.TabIndex = 42;
-            this.rbYrarType.Click += new System.EventHandler(this.RbYrarType_Click);
+            this.rbYrarType.SelectedIndexChanged += new System.EventHandler(this.RbYrarType_Click);
+            this.rbYrarType.ContextMenuStripChanged += new System.EventHandler(this.RbYrarType_Click);
             // 
             // splitterControl2
             // 
