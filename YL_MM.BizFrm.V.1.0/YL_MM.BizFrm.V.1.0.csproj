@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{574A24CB-6C11-4F50-96CC-A188CC30B49E}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_MM.BizFrm</RootNamespace>
     <AssemblyName>YL_MM.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -129,6 +129,18 @@
     </Compile>
     <Compile Include="Dlg\frmMemberInfo_Dup.Designer.cs">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM14.Designer.cs">
+      <DependentUpon>frmMM14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM13.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM13.Designer.cs">
+      <DependentUpon>frmMM13.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMM12.cs">
       <SubType>UserControl</SubType>
@@ -294,6 +306,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM12.resx">
       <DependentUpon>frmMM12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM13.resx">
+      <DependentUpon>frmMM13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM14.resx">
+      <DependentUpon>frmMM14.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest01.resx">
       <DependentUpon>frmTest01.cs</DependentUpon>

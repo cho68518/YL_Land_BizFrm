@@ -109,6 +109,9 @@
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwTopPanelControl1)).BeginInit();
             this.efwTopPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkZ.Properties)).BeginInit();
@@ -408,7 +411,8 @@
             this.gridColumn11,
             this.gridColumn12,
             this.gridColumn13,
-            this.gridColumn14});
+            this.gridColumn14,
+            this.gridColumn44});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -593,7 +597,8 @@
             this.gridColumn25,
             this.gridColumn26,
             this.gridColumn27,
-            this.gridColumn28});
+            this.gridColumn28,
+            this.gridColumn45});
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ColumnAutoWidth = false;
@@ -779,7 +784,8 @@
             this.gridColumn39,
             this.gridColumn40,
             this.gridColumn41,
-            this.gridColumn42});
+            this.gridColumn42,
+            this.gridColumn46});
             this.gridView3.GridControl = this.efwGridControl3;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ColumnAutoWidth = false;
@@ -906,6 +912,36 @@
             this.gridColumn42.Visible = true;
             this.gridColumn42.VisibleIndex = 13;
             // 
+            // gridColumn44
+            // 
+            this.gridColumn44.Caption = "결재횟수";
+            this.gridColumn44.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn44.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn44.FieldName = "vip_cnt";
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 13;
+            // 
+            // gridColumn45
+            // 
+            this.gridColumn45.Caption = "결재횟수";
+            this.gridColumn45.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn45.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn45.FieldName = "chef_cnt";
+            this.gridColumn45.Name = "gridColumn45";
+            this.gridColumn45.Visible = true;
+            this.gridColumn45.VisibleIndex = 13;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.Caption = "결재횟수";
+            this.gridColumn46.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn46.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn46.FieldName = "gshop_cnt";
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.Visible = true;
+            this.gridColumn46.VisibleIndex = 14;
+            // 
             // frmMM11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1015,5 +1051,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
     }
 }

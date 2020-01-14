@@ -133,6 +133,20 @@
             this.cmbCate_Code1 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.s = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtRefunds_CR = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtRefunds_CG = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtRefunds_AS = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtRefunds_GF = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtRefunds_GM = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtRefunds_TD = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtRefunds_GD = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtRefunds_DM = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtDiscount_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtP_Org_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtPs_Oper_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtVip_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtP_Delivery_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtBasic_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.rbPrice_Show_Type = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.cmbP_PS_Num = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwLabel34 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -189,20 +203,6 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.txtBasic_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtP_Delivery_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtVip_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtPs_Oper_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtP_Org_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtDiscount_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtRefunds_DM = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtRefunds_GD = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtRefunds_TD = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtRefunds_GM = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtRefunds_GF = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtRefunds_AS = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtRefunds_CG = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtRefunds_CR = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).BeginInit();
             this.efwGroupControlProd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).BeginInit();
@@ -247,6 +247,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s)).BeginInit();
             this.s.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_CR.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_CG.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_AS.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GF.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GM.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_TD.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GD.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_DM.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiscount_Price.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Org_Price.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPs_Oper_Price.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVip_Price.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Delivery_Price.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBasic_Price.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbPrice_Show_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbP_PS_Num.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbP_Discount_Donut3.Properties)).BeginInit();
@@ -268,20 +282,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rbPC_Use_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPc_Thumbnail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBasic_Price.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Delivery_Price.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVip_Price.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPs_Oper_Price.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Org_Price.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiscount_Price.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_DM.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GD.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_TD.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GM.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GF.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_AS.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_CG.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_CR.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControlProd
@@ -1080,6 +1080,258 @@
             this.s.IsMultiLang = false;
             this.s.Name = "s";
             // 
+            // txtRefunds_CR
+            // 
+            resources.ApplyResources(this.txtRefunds_CR, "txtRefunds_CR");
+            this.txtRefunds_CR.EditValue2 = null;
+            this.txtRefunds_CR.IsNumericKeyOnly = true;
+            this.txtRefunds_CR.Name = "txtRefunds_CR";
+            this.txtRefunds_CR.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRefunds_CR.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRefunds_CR.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRefunds_CR.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRefunds_CR.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtRefunds_CR.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_CR.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_CR.Properties.Mask.EditMask = resources.GetString("txtRefunds_CR.Properties.Mask.EditMask");
+            this.txtRefunds_CR.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtRefunds_CR.Properties.Mask.MaskType")));
+            this.txtRefunds_CR.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtRefunds_CR.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtRefunds_CR.RequireMessage = null;
+            // 
+            // txtRefunds_CG
+            // 
+            resources.ApplyResources(this.txtRefunds_CG, "txtRefunds_CG");
+            this.txtRefunds_CG.EditValue2 = null;
+            this.txtRefunds_CG.IsNumericKeyOnly = true;
+            this.txtRefunds_CG.Name = "txtRefunds_CG";
+            this.txtRefunds_CG.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRefunds_CG.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRefunds_CG.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRefunds_CG.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRefunds_CG.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtRefunds_CG.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_CG.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_CG.Properties.Mask.EditMask = resources.GetString("txtRefunds_CG.Properties.Mask.EditMask");
+            this.txtRefunds_CG.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtRefunds_CG.Properties.Mask.MaskType")));
+            this.txtRefunds_CG.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtRefunds_CG.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtRefunds_CG.RequireMessage = null;
+            // 
+            // txtRefunds_AS
+            // 
+            resources.ApplyResources(this.txtRefunds_AS, "txtRefunds_AS");
+            this.txtRefunds_AS.EditValue2 = null;
+            this.txtRefunds_AS.IsNumericKeyOnly = true;
+            this.txtRefunds_AS.Name = "txtRefunds_AS";
+            this.txtRefunds_AS.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRefunds_AS.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRefunds_AS.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRefunds_AS.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRefunds_AS.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtRefunds_AS.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_AS.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_AS.Properties.Mask.EditMask = resources.GetString("txtRefunds_AS.Properties.Mask.EditMask");
+            this.txtRefunds_AS.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtRefunds_AS.Properties.Mask.MaskType")));
+            this.txtRefunds_AS.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtRefunds_AS.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtRefunds_AS.RequireMessage = null;
+            // 
+            // txtRefunds_GF
+            // 
+            resources.ApplyResources(this.txtRefunds_GF, "txtRefunds_GF");
+            this.txtRefunds_GF.EditValue2 = null;
+            this.txtRefunds_GF.IsNumericKeyOnly = true;
+            this.txtRefunds_GF.Name = "txtRefunds_GF";
+            this.txtRefunds_GF.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRefunds_GF.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRefunds_GF.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRefunds_GF.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRefunds_GF.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtRefunds_GF.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_GF.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_GF.Properties.Mask.EditMask = resources.GetString("txtRefunds_GF.Properties.Mask.EditMask");
+            this.txtRefunds_GF.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtRefunds_GF.Properties.Mask.MaskType")));
+            this.txtRefunds_GF.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtRefunds_GF.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtRefunds_GF.RequireMessage = null;
+            // 
+            // txtRefunds_GM
+            // 
+            resources.ApplyResources(this.txtRefunds_GM, "txtRefunds_GM");
+            this.txtRefunds_GM.EditValue2 = null;
+            this.txtRefunds_GM.IsNumericKeyOnly = true;
+            this.txtRefunds_GM.Name = "txtRefunds_GM";
+            this.txtRefunds_GM.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRefunds_GM.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRefunds_GM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRefunds_GM.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRefunds_GM.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtRefunds_GM.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_GM.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_GM.Properties.Mask.EditMask = resources.GetString("txtRefunds_GM.Properties.Mask.EditMask");
+            this.txtRefunds_GM.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtRefunds_GM.Properties.Mask.MaskType")));
+            this.txtRefunds_GM.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtRefunds_GM.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtRefunds_GM.RequireMessage = null;
+            // 
+            // txtRefunds_TD
+            // 
+            resources.ApplyResources(this.txtRefunds_TD, "txtRefunds_TD");
+            this.txtRefunds_TD.EditValue2 = null;
+            this.txtRefunds_TD.IsNumericKeyOnly = true;
+            this.txtRefunds_TD.Name = "txtRefunds_TD";
+            this.txtRefunds_TD.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRefunds_TD.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRefunds_TD.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRefunds_TD.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRefunds_TD.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtRefunds_TD.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_TD.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_TD.Properties.Mask.EditMask = resources.GetString("txtRefunds_TD.Properties.Mask.EditMask");
+            this.txtRefunds_TD.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtRefunds_TD.Properties.Mask.MaskType")));
+            this.txtRefunds_TD.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtRefunds_TD.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtRefunds_TD.RequireMessage = null;
+            // 
+            // txtRefunds_GD
+            // 
+            resources.ApplyResources(this.txtRefunds_GD, "txtRefunds_GD");
+            this.txtRefunds_GD.EditValue2 = null;
+            this.txtRefunds_GD.IsNumericKeyOnly = true;
+            this.txtRefunds_GD.Name = "txtRefunds_GD";
+            this.txtRefunds_GD.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRefunds_GD.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRefunds_GD.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRefunds_GD.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRefunds_GD.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtRefunds_GD.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_GD.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_GD.Properties.Mask.EditMask = resources.GetString("txtRefunds_GD.Properties.Mask.EditMask");
+            this.txtRefunds_GD.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtRefunds_GD.Properties.Mask.MaskType")));
+            this.txtRefunds_GD.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtRefunds_GD.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtRefunds_GD.RequireMessage = null;
+            // 
+            // txtRefunds_DM
+            // 
+            resources.ApplyResources(this.txtRefunds_DM, "txtRefunds_DM");
+            this.txtRefunds_DM.EditValue2 = null;
+            this.txtRefunds_DM.IsNumericKeyOnly = true;
+            this.txtRefunds_DM.Name = "txtRefunds_DM";
+            this.txtRefunds_DM.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRefunds_DM.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRefunds_DM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRefunds_DM.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRefunds_DM.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtRefunds_DM.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_DM.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRefunds_DM.Properties.Mask.EditMask = resources.GetString("txtRefunds_DM.Properties.Mask.EditMask");
+            this.txtRefunds_DM.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtRefunds_DM.Properties.Mask.MaskType")));
+            this.txtRefunds_DM.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtRefunds_DM.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtRefunds_DM.RequireMessage = null;
+            // 
+            // txtDiscount_Price
+            // 
+            resources.ApplyResources(this.txtDiscount_Price, "txtDiscount_Price");
+            this.txtDiscount_Price.EditValue2 = null;
+            this.txtDiscount_Price.IsNumericKeyOnly = true;
+            this.txtDiscount_Price.Name = "txtDiscount_Price";
+            this.txtDiscount_Price.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtDiscount_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtDiscount_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtDiscount_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDiscount_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtDiscount_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtDiscount_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtDiscount_Price.Properties.Mask.EditMask = resources.GetString("txtDiscount_Price.Properties.Mask.EditMask");
+            this.txtDiscount_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtDiscount_Price.Properties.Mask.MaskType")));
+            this.txtDiscount_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtDiscount_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtDiscount_Price.RequireMessage = null;
+            // 
+            // txtP_Org_Price
+            // 
+            resources.ApplyResources(this.txtP_Org_Price, "txtP_Org_Price");
+            this.txtP_Org_Price.EditValue2 = null;
+            this.txtP_Org_Price.IsNumericKeyOnly = true;
+            this.txtP_Org_Price.Name = "txtP_Org_Price";
+            this.txtP_Org_Price.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtP_Org_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtP_Org_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_Org_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Org_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtP_Org_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Org_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Org_Price.Properties.Mask.EditMask = resources.GetString("txtP_Org_Price.Properties.Mask.EditMask");
+            this.txtP_Org_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtP_Org_Price.Properties.Mask.MaskType")));
+            this.txtP_Org_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtP_Org_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtP_Org_Price.RequireMessage = null;
+            // 
+            // txtPs_Oper_Price
+            // 
+            resources.ApplyResources(this.txtPs_Oper_Price, "txtPs_Oper_Price");
+            this.txtPs_Oper_Price.EditValue2 = null;
+            this.txtPs_Oper_Price.IsNumericKeyOnly = true;
+            this.txtPs_Oper_Price.Name = "txtPs_Oper_Price";
+            this.txtPs_Oper_Price.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPs_Oper_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtPs_Oper_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtPs_Oper_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPs_Oper_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtPs_Oper_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPs_Oper_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPs_Oper_Price.Properties.Mask.EditMask = resources.GetString("txtPs_Oper_Price.Properties.Mask.EditMask");
+            this.txtPs_Oper_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtPs_Oper_Price.Properties.Mask.MaskType")));
+            this.txtPs_Oper_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtPs_Oper_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtPs_Oper_Price.RequireMessage = null;
+            // 
+            // txtVip_Price
+            // 
+            resources.ApplyResources(this.txtVip_Price, "txtVip_Price");
+            this.txtVip_Price.EditValue2 = null;
+            this.txtVip_Price.IsNumericKeyOnly = true;
+            this.txtVip_Price.Name = "txtVip_Price";
+            this.txtVip_Price.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtVip_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtVip_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtVip_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtVip_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtVip_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtVip_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtVip_Price.Properties.Mask.EditMask = resources.GetString("txtVip_Price.Properties.Mask.EditMask");
+            this.txtVip_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtVip_Price.Properties.Mask.MaskType")));
+            this.txtVip_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtVip_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtVip_Price.RequireMessage = null;
+            // 
+            // txtP_Delivery_Price
+            // 
+            resources.ApplyResources(this.txtP_Delivery_Price, "txtP_Delivery_Price");
+            this.txtP_Delivery_Price.EditValue2 = null;
+            this.txtP_Delivery_Price.IsNumericKeyOnly = true;
+            this.txtP_Delivery_Price.Name = "txtP_Delivery_Price";
+            this.txtP_Delivery_Price.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtP_Delivery_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtP_Delivery_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_Delivery_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Delivery_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtP_Delivery_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Delivery_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Delivery_Price.Properties.Mask.EditMask = resources.GetString("txtP_Delivery_Price.Properties.Mask.EditMask");
+            this.txtP_Delivery_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtP_Delivery_Price.Properties.Mask.MaskType")));
+            this.txtP_Delivery_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtP_Delivery_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtP_Delivery_Price.RequireMessage = null;
+            // 
+            // txtBasic_Price
+            // 
+            resources.ApplyResources(this.txtBasic_Price, "txtBasic_Price");
+            this.txtBasic_Price.EditValue2 = null;
+            this.txtBasic_Price.IsNumericKeyOnly = true;
+            this.txtBasic_Price.Name = "txtBasic_Price";
+            this.txtBasic_Price.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtBasic_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtBasic_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtBasic_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtBasic_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtBasic_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtBasic_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtBasic_Price.Properties.Mask.EditMask = resources.GetString("txtBasic_Price.Properties.Mask.EditMask");
+            this.txtBasic_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtBasic_Price.Properties.Mask.MaskType")));
+            this.txtBasic_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtBasic_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtBasic_Price.RequireMessage = null;
+            // 
             // rbPrice_Show_Type
             // 
             this.rbPrice_Show_Type.IsMultiLang = false;
@@ -1586,258 +1838,6 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
-            // txtBasic_Price
-            // 
-            resources.ApplyResources(this.txtBasic_Price, "txtBasic_Price");
-            this.txtBasic_Price.EditValue2 = null;
-            this.txtBasic_Price.IsNumericKeyOnly = true;
-            this.txtBasic_Price.Name = "txtBasic_Price";
-            this.txtBasic_Price.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtBasic_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtBasic_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtBasic_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtBasic_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtBasic_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtBasic_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtBasic_Price.Properties.Mask.EditMask = resources.GetString("txtO_Total_Cost.Properties.Mask.EditMask");
-            this.txtBasic_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtO_Total_Cost.Properties.Mask.MaskType")));
-            this.txtBasic_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtO_Total_Cost.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txtBasic_Price.RequireMessage = null;
-            // 
-            // txtP_Delivery_Price
-            // 
-            resources.ApplyResources(this.txtP_Delivery_Price, "txtP_Delivery_Price");
-            this.txtP_Delivery_Price.EditValue2 = null;
-            this.txtP_Delivery_Price.IsNumericKeyOnly = true;
-            this.txtP_Delivery_Price.Name = "txtP_Delivery_Price";
-            this.txtP_Delivery_Price.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtP_Delivery_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtP_Delivery_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtP_Delivery_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtP_Delivery_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtP_Delivery_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtP_Delivery_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtP_Delivery_Price.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask12");
-            this.txtP_Delivery_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType12")));
-            this.txtP_Delivery_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat12")));
-            this.txtP_Delivery_Price.RequireMessage = null;
-            // 
-            // txtVip_Price
-            // 
-            resources.ApplyResources(this.txtVip_Price, "txtVip_Price");
-            this.txtVip_Price.EditValue2 = null;
-            this.txtVip_Price.IsNumericKeyOnly = true;
-            this.txtVip_Price.Name = "txtVip_Price";
-            this.txtVip_Price.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtVip_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtVip_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtVip_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtVip_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtVip_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtVip_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtVip_Price.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask11");
-            this.txtVip_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType11")));
-            this.txtVip_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat11")));
-            this.txtVip_Price.RequireMessage = null;
-            // 
-            // txtPs_Oper_Price
-            // 
-            resources.ApplyResources(this.txtPs_Oper_Price, "txtPs_Oper_Price");
-            this.txtPs_Oper_Price.EditValue2 = null;
-            this.txtPs_Oper_Price.IsNumericKeyOnly = true;
-            this.txtPs_Oper_Price.Name = "txtPs_Oper_Price";
-            this.txtPs_Oper_Price.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtPs_Oper_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtPs_Oper_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtPs_Oper_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtPs_Oper_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtPs_Oper_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPs_Oper_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPs_Oper_Price.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask10");
-            this.txtPs_Oper_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType10")));
-            this.txtPs_Oper_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat10")));
-            this.txtPs_Oper_Price.RequireMessage = null;
-            // 
-            // txtP_Org_Price
-            // 
-            resources.ApplyResources(this.txtP_Org_Price, "txtP_Org_Price");
-            this.txtP_Org_Price.EditValue2 = null;
-            this.txtP_Org_Price.IsNumericKeyOnly = true;
-            this.txtP_Org_Price.Name = "txtP_Org_Price";
-            this.txtP_Org_Price.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtP_Org_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtP_Org_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtP_Org_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtP_Org_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtP_Org_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtP_Org_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtP_Org_Price.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask9");
-            this.txtP_Org_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType9")));
-            this.txtP_Org_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat9")));
-            this.txtP_Org_Price.RequireMessage = null;
-            // 
-            // txtDiscount_Price
-            // 
-            resources.ApplyResources(this.txtDiscount_Price, "txtDiscount_Price");
-            this.txtDiscount_Price.EditValue2 = null;
-            this.txtDiscount_Price.IsNumericKeyOnly = true;
-            this.txtDiscount_Price.Name = "txtDiscount_Price";
-            this.txtDiscount_Price.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtDiscount_Price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtDiscount_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtDiscount_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtDiscount_Price.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtDiscount_Price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtDiscount_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtDiscount_Price.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask8");
-            this.txtDiscount_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType8")));
-            this.txtDiscount_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat8")));
-            this.txtDiscount_Price.RequireMessage = null;
-            // 
-            // txtRefunds_DM
-            // 
-            resources.ApplyResources(this.txtRefunds_DM, "txtRefunds_DM");
-            this.txtRefunds_DM.EditValue2 = null;
-            this.txtRefunds_DM.IsNumericKeyOnly = true;
-            this.txtRefunds_DM.Name = "txtRefunds_DM";
-            this.txtRefunds_DM.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtRefunds_DM.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtRefunds_DM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtRefunds_DM.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRefunds_DM.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtRefunds_DM.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_DM.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_DM.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask7");
-            this.txtRefunds_DM.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType7")));
-            this.txtRefunds_DM.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat7")));
-            this.txtRefunds_DM.RequireMessage = null;
-            // 
-            // txtRefunds_GD
-            // 
-            resources.ApplyResources(this.txtRefunds_GD, "txtRefunds_GD");
-            this.txtRefunds_GD.EditValue2 = null;
-            this.txtRefunds_GD.IsNumericKeyOnly = true;
-            this.txtRefunds_GD.Name = "txtRefunds_GD";
-            this.txtRefunds_GD.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtRefunds_GD.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtRefunds_GD.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtRefunds_GD.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRefunds_GD.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtRefunds_GD.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_GD.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_GD.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask6");
-            this.txtRefunds_GD.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType6")));
-            this.txtRefunds_GD.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat6")));
-            this.txtRefunds_GD.RequireMessage = null;
-            // 
-            // txtRefunds_TD
-            // 
-            resources.ApplyResources(this.txtRefunds_TD, "txtRefunds_TD");
-            this.txtRefunds_TD.EditValue2 = null;
-            this.txtRefunds_TD.IsNumericKeyOnly = true;
-            this.txtRefunds_TD.Name = "txtRefunds_TD";
-            this.txtRefunds_TD.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtRefunds_TD.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtRefunds_TD.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtRefunds_TD.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRefunds_TD.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtRefunds_TD.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_TD.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_TD.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask5");
-            this.txtRefunds_TD.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType5")));
-            this.txtRefunds_TD.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat5")));
-            this.txtRefunds_TD.RequireMessage = null;
-            // 
-            // txtRefunds_GM
-            // 
-            resources.ApplyResources(this.txtRefunds_GM, "txtRefunds_GM");
-            this.txtRefunds_GM.EditValue2 = null;
-            this.txtRefunds_GM.IsNumericKeyOnly = true;
-            this.txtRefunds_GM.Name = "txtRefunds_GM";
-            this.txtRefunds_GM.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtRefunds_GM.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtRefunds_GM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtRefunds_GM.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRefunds_GM.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtRefunds_GM.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_GM.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_GM.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask4");
-            this.txtRefunds_GM.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType4")));
-            this.txtRefunds_GM.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat4")));
-            this.txtRefunds_GM.RequireMessage = null;
-            // 
-            // txtRefunds_GF
-            // 
-            resources.ApplyResources(this.txtRefunds_GF, "txtRefunds_GF");
-            this.txtRefunds_GF.EditValue2 = null;
-            this.txtRefunds_GF.IsNumericKeyOnly = true;
-            this.txtRefunds_GF.Name = "txtRefunds_GF";
-            this.txtRefunds_GF.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtRefunds_GF.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtRefunds_GF.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtRefunds_GF.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRefunds_GF.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtRefunds_GF.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_GF.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_GF.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask3");
-            this.txtRefunds_GF.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType3")));
-            this.txtRefunds_GF.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat3")));
-            this.txtRefunds_GF.RequireMessage = null;
-            // 
-            // txtRefunds_AS
-            // 
-            resources.ApplyResources(this.txtRefunds_AS, "txtRefunds_AS");
-            this.txtRefunds_AS.EditValue2 = null;
-            this.txtRefunds_AS.IsNumericKeyOnly = true;
-            this.txtRefunds_AS.Name = "txtRefunds_AS";
-            this.txtRefunds_AS.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtRefunds_AS.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtRefunds_AS.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtRefunds_AS.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRefunds_AS.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtRefunds_AS.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_AS.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_AS.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask2");
-            this.txtRefunds_AS.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType2")));
-            this.txtRefunds_AS.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat2")));
-            this.txtRefunds_AS.RequireMessage = null;
-            // 
-            // txtRefunds_CG
-            // 
-            resources.ApplyResources(this.txtRefunds_CG, "txtRefunds_CG");
-            this.txtRefunds_CG.EditValue2 = null;
-            this.txtRefunds_CG.IsNumericKeyOnly = true;
-            this.txtRefunds_CG.Name = "txtRefunds_CG";
-            this.txtRefunds_CG.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtRefunds_CG.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtRefunds_CG.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtRefunds_CG.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRefunds_CG.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtRefunds_CG.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_CG.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_CG.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask1");
-            this.txtRefunds_CG.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType1")));
-            this.txtRefunds_CG.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat1")));
-            this.txtRefunds_CG.RequireMessage = null;
-            // 
-            // txtRefunds_CR
-            // 
-            resources.ApplyResources(this.txtRefunds_CR, "txtRefunds_CR");
-            this.txtRefunds_CR.EditValue2 = null;
-            this.txtRefunds_CR.IsNumericKeyOnly = true;
-            this.txtRefunds_CR.Name = "txtRefunds_CR";
-            this.txtRefunds_CR.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtRefunds_CR.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtRefunds_CR.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtRefunds_CR.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRefunds_CR.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtRefunds_CR.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_CR.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRefunds_CR.Properties.Mask.EditMask = resources.GetString("efwTextEdit1.Properties.Mask.EditMask");
-            this.txtRefunds_CR.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("efwTextEdit1.Properties.Mask.MaskType")));
-            this.txtRefunds_CR.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txtRefunds_CR.RequireMessage = null;
-            // 
             // frmMM03_Pop01
             // 
             resources.ApplyResources(this, "$this");
@@ -1898,6 +1898,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.s)).EndInit();
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_CR.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_CG.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_AS.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GF.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GM.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_TD.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GD.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_DM.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiscount_Price.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Org_Price.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPs_Oper_Price.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVip_Price.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Delivery_Price.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBasic_Price.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbPrice_Show_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbP_PS_Num.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbP_Discount_Donut3.Properties)).EndInit();
@@ -1920,20 +1934,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rbPC_Use_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPc_Thumbnail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBasic_Price.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Delivery_Price.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVip_Price.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPs_Oper_Price.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Org_Price.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiscount_Price.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_DM.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GD.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_TD.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GM.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GF.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_AS.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_CG.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_CR.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

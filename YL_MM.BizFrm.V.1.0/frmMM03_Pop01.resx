@@ -138,7 +138,7 @@
 </value>
   </data>
   <data name="efwLabel38.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 35</value>
+    <value>273, 35</value>
   </data>
   <data name="efwLabel38.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 14</value>
@@ -200,10 +200,10 @@
     <value>1</value>
   </data>
   <data name="txtPc_Thumbnail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 50</value>
+    <value>131, 50</value>
   </data>
   <data name="txtPc_Thumbnail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtPc_Thumbnail.TabIndex" type="System.Int32, mscorlib">
     <value>89</value>
@@ -221,10 +221,10 @@
     <value>0</value>
   </data>
   <data name="txtPicPath4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 76</value>
+    <value>131, 76</value>
   </data>
   <data name="txtPicPath4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtPicPath4.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -242,10 +242,10 @@
     <value>1</value>
   </data>
   <data name="txtPicPath3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 76</value>
+    <value>91, 76</value>
   </data>
   <data name="txtPicPath3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtPicPath3.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -263,10 +263,10 @@
     <value>2</value>
   </data>
   <data name="txtPicPath2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 76</value>
+    <value>50, 76</value>
   </data>
   <data name="txtPicPath2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtPicPath2.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -284,10 +284,10 @@
     <value>3</value>
   </data>
   <data name="txtPicPath1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 76</value>
+    <value>9, 76</value>
   </data>
   <data name="txtPicPath1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtPicPath1.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -305,10 +305,10 @@
     <value>4</value>
   </data>
   <data name="txtC_Code2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 24</value>
+    <value>50, 24</value>
   </data>
   <data name="txtC_Code2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtC_Code2.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -326,10 +326,10 @@
     <value>5</value>
   </data>
   <data name="txtP_Contents.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 50</value>
+    <value>91, 50</value>
   </data>
   <data name="txtP_Contents.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtP_Contents.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -347,10 +347,10 @@
     <value>6</value>
   </data>
   <data name="txtC_Code1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 24</value>
+    <value>9, 24</value>
   </data>
   <data name="txtC_Code1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtC_Code1.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -368,10 +368,10 @@
     <value>7</value>
   </data>
   <data name="txtP_Img2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 50</value>
+    <value>50, 50</value>
   </data>
   <data name="txtP_Img2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtP_Img2.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -389,10 +389,10 @@
     <value>8</value>
   </data>
   <data name="txtC_Code3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 24</value>
+    <value>91, 24</value>
   </data>
   <data name="txtC_Code3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtC_Code3.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -410,10 +410,10 @@
     <value>9</value>
   </data>
   <data name="txtP_Img.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 50</value>
+    <value>9, 50</value>
   </data>
   <data name="txtP_Img.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtP_Img.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -431,10 +431,10 @@
     <value>10</value>
   </data>
   <data name="txtC_Code4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 24</value>
+    <value>131, 24</value>
   </data>
   <data name="txtC_Code4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="txtC_Code4.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -452,10 +452,10 @@
     <value>11</value>
   </data>
   <data name="efwGroupControl5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 138</value>
+    <value>497, 138</value>
   </data>
   <data name="efwGroupControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 110</value>
+    <value>85, 99</value>
   </data>
   <data name="efwGroupControl5.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -591,7 +591,7 @@
     <value>False</value>
   </data>
   <data name="txtP_Id.Location" type="System.Drawing.Point, System.Drawing">
-    <value>313, 32</value>
+    <value>321, 32</value>
   </data>
   <data name="txtP_Id.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
@@ -765,7 +765,7 @@
     <value>7</value>
   </data>
   <data name="cmbP_EC_Code.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 269</value>
+    <value>115, 269</value>
   </data>
   <assembly alias="DevExpress.Utils.v18.2" name="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="cmbP_EC_Code.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
@@ -790,7 +790,7 @@
     <value>8</value>
   </data>
   <data name="txtP_Max_Send_Num.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 243</value>
+    <value>376, 243</value>
   </data>
   <data name="txtP_Max_Send_Num.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 20</value>
@@ -811,7 +811,7 @@
     <value>9</value>
   </data>
   <data name="efwLabel17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 246</value>
+    <value>273, 246</value>
   </data>
   <data name="efwLabel17.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 14</value>
@@ -859,7 +859,7 @@
     <value>11</value>
   </data>
   <data name="cmbP_Chef_Level.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 243</value>
+    <value>115, 243</value>
   </data>
   <data name="cmbP_Chef_Level.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
     <value>Combo</value>
@@ -883,7 +883,7 @@
     <value>12</value>
   </data>
   <data name="efwLabel16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 220</value>
+    <value>273, 220</value>
   </data>
   <data name="efwLabel16.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 14</value>
@@ -907,7 +907,7 @@
     <value>13</value>
   </data>
   <data name="cmbP_Sell_Type.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 217</value>
+    <value>376, 217</value>
   </data>
   <data name="cmbP_Sell_Type.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
     <value>Combo</value>
@@ -955,7 +955,7 @@
     <value>15</value>
   </data>
   <data name="cmbP_Show_Type.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 217</value>
+    <value>115, 217</value>
   </data>
   <data name="cmbP_Show_Type.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
     <value>Combo</value>
@@ -979,7 +979,7 @@
     <value>16</value>
   </data>
   <data name="txtP_Compare_Text.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 188</value>
+    <value>376, 188</value>
   </data>
   <data name="txtP_Compare_Text.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 20</value>
@@ -1000,7 +1000,7 @@
     <value>17</value>
   </data>
   <data name="rbP_Compare_Type.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 187</value>
+    <value>59, 187</value>
   </data>
   <data name="rbP_Compare_Type.Properties.Items" xml:space="preserve">
     <value>T</value>
@@ -1042,7 +1042,7 @@
     <value />
   </data>
   <data name="txtP_Multi_Discount_Cost.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 134</value>
+    <value>376, 134</value>
   </data>
   <data name="txtP_Multi_Discount_Cost.Properties.Mask.EditMask" xml:space="preserve">
     <value>###,###,##0</value>
@@ -1070,7 +1070,7 @@
     <value>19</value>
   </data>
   <data name="efwLabel14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 138</value>
+    <value>273, 138</value>
   </data>
   <data name="efwLabel14.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 14</value>
@@ -1097,7 +1097,7 @@
     <value />
   </data>
   <data name="txtP_Max_Purchase_Num.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 161</value>
+    <value>115, 161</value>
   </data>
   <data name="txtP_Max_Purchase_Num.Properties.Mask.EditMask" xml:space="preserve">
     <value>###,###,##0</value>
@@ -1148,7 +1148,7 @@
     <value>22</value>
   </data>
   <data name="txtP_Min_Purchase_Num.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 135</value>
+    <value>115, 135</value>
   </data>
   <data name="txtP_Min_Purchase_Num.Properties.Mask.EditMask" xml:space="preserve">
     <value>###,###,##0</value>
@@ -1565,7 +1565,7 @@
     <value>38</value>
   </data>
   <data name="txtP_Code.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 110</value>
+    <value>115, 110</value>
   </data>
   <data name="txtP_Code.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 20</value>
@@ -1634,7 +1634,7 @@
     <value>41</value>
   </data>
   <data name="cmbShops_Type.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 32</value>
+    <value>115, 32</value>
   </data>
   <data name="cmbShops_Type.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
     <value>Combo</value>
@@ -1682,7 +1682,7 @@
     <value>43</value>
   </data>
   <data name="cmbCate_Code4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 84</value>
+    <value>262, 84</value>
   </data>
   <data name="cmbCate_Code4.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
     <value>Combo</value>
@@ -1706,7 +1706,7 @@
     <value>44</value>
   </data>
   <data name="cmbCate_Code3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 84</value>
+    <value>115, 84</value>
   </data>
   <data name="cmbCate_Code3.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
     <value>Combo</value>
@@ -1730,7 +1730,7 @@
     <value>45</value>
   </data>
   <data name="cmbCate_Code2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 58</value>
+    <value>262, 58</value>
   </data>
   <data name="cmbCate_Code2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
     <value>Combo</value>
@@ -1754,7 +1754,7 @@
     <value>46</value>
   </data>
   <data name="cmbCate_Code1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 58</value>
+    <value>115, 58</value>
   </data>
   <data name="cmbCate_Code1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
     <value>Combo</value>
@@ -1843,13 +1843,13 @@
   <data name="txtRefunds_CR.Location" type="System.Drawing.Point, System.Drawing">
     <value>999, 109</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask" xml:space="preserve">
+  <data name="txtRefunds_CR.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtRefunds_CR.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+  <data name="txtRefunds_CR.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtRefunds_CR.Size" type="System.Drawing.Size, System.Drawing">
@@ -1876,13 +1876,13 @@
   <data name="txtRefunds_CG.Location" type="System.Drawing.Point, System.Drawing">
     <value>999, 83</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask1" xml:space="preserve">
+  <data name="txtRefunds_CG.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType1" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtRefunds_CG.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat1" type="System.Boolean, mscorlib">
+  <data name="txtRefunds_CG.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtRefunds_CG.Size" type="System.Drawing.Size, System.Drawing">
@@ -1909,13 +1909,13 @@
   <data name="txtRefunds_AS.Location" type="System.Drawing.Point, System.Drawing">
     <value>999, 57</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask2" xml:space="preserve">
+  <data name="txtRefunds_AS.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType2" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtRefunds_AS.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat2" type="System.Boolean, mscorlib">
+  <data name="txtRefunds_AS.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtRefunds_AS.Size" type="System.Drawing.Size, System.Drawing">
@@ -1942,13 +1942,13 @@
   <data name="txtRefunds_GF.Location" type="System.Drawing.Point, System.Drawing">
     <value>999, 31</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask3" xml:space="preserve">
+  <data name="txtRefunds_GF.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType3" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtRefunds_GF.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat3" type="System.Boolean, mscorlib">
+  <data name="txtRefunds_GF.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtRefunds_GF.Size" type="System.Drawing.Size, System.Drawing">
@@ -1975,13 +1975,13 @@
   <data name="txtRefunds_GM.Location" type="System.Drawing.Point, System.Drawing">
     <value>747, 109</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask4" xml:space="preserve">
+  <data name="txtRefunds_GM.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType4" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtRefunds_GM.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat4" type="System.Boolean, mscorlib">
+  <data name="txtRefunds_GM.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtRefunds_GM.Size" type="System.Drawing.Size, System.Drawing">
@@ -2008,13 +2008,13 @@
   <data name="txtRefunds_TD.Location" type="System.Drawing.Point, System.Drawing">
     <value>747, 83</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask5" xml:space="preserve">
+  <data name="txtRefunds_TD.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType5" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtRefunds_TD.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat5" type="System.Boolean, mscorlib">
+  <data name="txtRefunds_TD.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtRefunds_TD.Size" type="System.Drawing.Size, System.Drawing">
@@ -2041,13 +2041,13 @@
   <data name="txtRefunds_GD.Location" type="System.Drawing.Point, System.Drawing">
     <value>747, 57</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask6" xml:space="preserve">
+  <data name="txtRefunds_GD.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType6" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtRefunds_GD.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat6" type="System.Boolean, mscorlib">
+  <data name="txtRefunds_GD.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtRefunds_GD.Size" type="System.Drawing.Size, System.Drawing">
@@ -2074,13 +2074,13 @@
   <data name="txtRefunds_DM.Location" type="System.Drawing.Point, System.Drawing">
     <value>747, 31</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask7" xml:space="preserve">
+  <data name="txtRefunds_DM.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType7" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtRefunds_DM.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat7" type="System.Boolean, mscorlib">
+  <data name="txtRefunds_DM.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtRefunds_DM.Size" type="System.Drawing.Size, System.Drawing">
@@ -2107,13 +2107,13 @@
   <data name="txtDiscount_Price.Location" type="System.Drawing.Point, System.Drawing">
     <value>498, 83</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask8" xml:space="preserve">
+  <data name="txtDiscount_Price.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType8" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtDiscount_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat8" type="System.Boolean, mscorlib">
+  <data name="txtDiscount_Price.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtDiscount_Price.Size" type="System.Drawing.Size, System.Drawing">
@@ -2140,13 +2140,13 @@
   <data name="txtP_Org_Price.Location" type="System.Drawing.Point, System.Drawing">
     <value>498, 57</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask9" xml:space="preserve">
+  <data name="txtP_Org_Price.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType9" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtP_Org_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat9" type="System.Boolean, mscorlib">
+  <data name="txtP_Org_Price.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtP_Org_Price.Size" type="System.Drawing.Size, System.Drawing">
@@ -2171,15 +2171,15 @@
     <value>0</value>
   </data>
   <data name="txtPs_Oper_Price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 109</value>
+    <value>115, 109</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask10" xml:space="preserve">
+  <data name="txtPs_Oper_Price.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType10" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtPs_Oper_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat10" type="System.Boolean, mscorlib">
+  <data name="txtPs_Oper_Price.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtPs_Oper_Price.Size" type="System.Drawing.Size, System.Drawing">
@@ -2204,15 +2204,15 @@
     <value>0</value>
   </data>
   <data name="txtVip_Price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 83</value>
+    <value>115, 83</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask11" xml:space="preserve">
+  <data name="txtVip_Price.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType11" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtVip_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat11" type="System.Boolean, mscorlib">
+  <data name="txtVip_Price.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtVip_Price.Size" type="System.Drawing.Size, System.Drawing">
@@ -2237,15 +2237,15 @@
     <value>0</value>
   </data>
   <data name="txtP_Delivery_Price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 31</value>
+    <value>115, 31</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.EditMask12" xml:space="preserve">
+  <data name="txtP_Delivery_Price.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.MaskType12" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtP_Delivery_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="efwTextEdit1.Properties.Mask.UseMaskAsDisplayFormat12" type="System.Boolean, mscorlib">
+  <data name="txtP_Delivery_Price.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtP_Delivery_Price.Size" type="System.Drawing.Size, System.Drawing">
@@ -2270,15 +2270,15 @@
     <value>0</value>
   </data>
   <data name="txtBasic_Price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 57</value>
+    <value>115, 57</value>
   </data>
-  <data name="txtO_Total_Cost.Properties.Mask.EditMask" xml:space="preserve">
+  <data name="txtBasic_Price.Properties.Mask.EditMask" xml:space="preserve">
     <value>n0</value>
   </data>
-  <data name="txtO_Total_Cost.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
+  <data name="txtBasic_Price.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v18.2">
     <value>Numeric</value>
   </data>
-  <data name="txtO_Total_Cost.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+  <data name="txtBasic_Price.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtBasic_Price.Size" type="System.Drawing.Size, System.Drawing">
@@ -2333,7 +2333,7 @@
     <value>14</value>
   </data>
   <data name="cmbP_PS_Num.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 135</value>
+    <value>115, 135</value>
   </data>
   <data name="cmbP_PS_Num.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
     <value>Combo</value>
@@ -2672,13 +2672,13 @@
     <value>400, 86</value>
   </data>
   <data name="efwLabel24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 14</value>
+    <value>70, 14</value>
   </data>
   <data name="efwLabel24.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
   <data name="efwLabel24.Text" xml:space="preserve">
-    <value>할인가</value>
+    <value>할인가(회원가)</value>
   </data>
   <data name="&gt;&gt;efwLabel24.Name" xml:space="preserve">
     <value>efwLabel24</value>
@@ -2816,13 +2816,13 @@
     <value>13, 60</value>
   </data>
   <data name="efwLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 14</value>
+    <value>80, 14</value>
   </data>
   <data name="efwLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
   <data name="efwLabel2.Text" xml:space="preserve">
-    <value>소비자가</value>
+    <value>소비자가(시중가)</value>
   </data>
   <data name="&gt;&gt;efwLabel2.Name" xml:space="preserve">
     <value>efwLabel2</value>
@@ -2837,7 +2837,7 @@
     <value>35</value>
   </data>
   <data name="cmbP_Delivery_Type.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 31</value>
+    <value>263, 31</value>
   </data>
   <data name="cmbP_Delivery_Type.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v18.2">
     <value>Combo</value>
@@ -3029,7 +3029,7 @@
     <value>2</value>
   </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
-    <value>공급가</value>
+    <value>소비자가(시중가)</value>
   </data>
   <data name="gridColumn4.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
