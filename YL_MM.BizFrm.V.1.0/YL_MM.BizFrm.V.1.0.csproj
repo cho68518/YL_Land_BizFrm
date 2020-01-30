@@ -118,6 +118,12 @@
     <Compile Include="BizNode.cs" />
     <Compile Include="ConstantLib.cs" />
     <Compile Include="DeptNode.cs" />
+    <Compile Include="Dlg\frmZipNoInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmZipNoInfo.Designer.cs">
+      <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dlg\frmMemberInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     </Compile>
     <Compile Include="Dlg\frmMemberInfo_Dup.Designer.cs">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM15.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM15.Designer.cs">
+      <DependentUpon>frmMM15.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMM14.cs">
       <SubType>UserControl</SubType>
@@ -253,11 +265,17 @@
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
+      <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmMemberInfo.resx">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmMemberInfo_Dup.resx">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM15.resx">
+      <DependentUpon>frmMM15.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM03_Pop02.resx">
       <DependentUpon>frmMM03_Pop02.cs</DependentUpon>

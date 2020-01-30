@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMM03));
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -39,6 +39,8 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbShowType = new Easy.Framework.WinForm.Control.efwRadioGroup();
@@ -52,8 +54,8 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.riPicEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,6 +65,7 @@
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmbQuery = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rbShowType.Properties)).BeginInit();
@@ -72,10 +75,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riPicEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.cmbQuery);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton1);
             this.efwPanelControl1.Controls.Add(this.rbShowType);
             this.efwPanelControl1.Controls.Add(this.txtProdName);
@@ -92,7 +97,7 @@
             // 
             this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
             this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(840, 6);
+            this.efwSimpleButton1.Location = new System.Drawing.Point(1074, 3);
             this.efwSimpleButton1.Name = "efwSimpleButton1";
             this.efwSimpleButton1.Size = new System.Drawing.Size(97, 35);
             this.efwSimpleButton1.TabIndex = 9;
@@ -102,7 +107,7 @@
             // rbShowType
             // 
             this.rbShowType.IsMultiLang = false;
-            this.rbShowType.Location = new System.Drawing.Point(527, 10);
+            this.rbShowType.Location = new System.Drawing.Point(761, 7);
             this.rbShowType.Name = "rbShowType";
             this.rbShowType.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbShowType.Properties.Appearance.Options.UseBackColor = true;
@@ -120,7 +125,7 @@
             // txtProdName
             // 
             this.txtProdName.EditValue2 = null;
-            this.txtProdName.Location = new System.Drawing.Point(305, 14);
+            this.txtProdName.Location = new System.Drawing.Point(492, 14);
             this.txtProdName.Name = "txtProdName";
             this.txtProdName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtProdName.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -133,11 +138,11 @@
             // 
             this.efwLabel2.EraserGroup = null;
             this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(258, 17);
+            this.efwLabel2.Location = new System.Drawing.Point(299, 17);
             this.efwLabel2.Name = "efwLabel2";
             this.efwLabel2.Size = new System.Drawing.Size(30, 14);
             this.efwLabel2.TabIndex = 6;
-            this.efwLabel2.Text = "상품명";
+            this.efwLabel2.Text = "검색어";
             // 
             // efwLabel1
             // 
@@ -151,14 +156,14 @@
             // 
             // cmbSellers
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbSellers.ChildHierarchyInfo = childHierarchy1;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbSellers.ChildHierarchyInfo = childHierarchy2;
             this.cmbSellers.EraserGroup = "CLR1";
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbSellers.HierarchyInfo = hierarchy1;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbSellers.HierarchyInfo = hierarchy2;
             this.cmbSellers.IsMultiLang = false;
             this.cmbSellers.Location = new System.Drawing.Point(69, 14);
             this.cmbSellers.Name = "cmbSellers";
@@ -263,15 +268,6 @@
             this.gridColumn11.VisibleIndex = 1;
             this.gridColumn11.Width = 110;
             // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "상품ID";
-            this.gridColumn1.FieldName = "id";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.ReadOnly = true;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 3;
-            // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "상품코드";
@@ -281,6 +277,15 @@
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
             this.gridColumn2.Width = 110;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "상품ID";
+            this.gridColumn1.FieldName = "id";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 3;
             // 
             // gridColumn3
             // 
@@ -369,6 +374,26 @@
             this.gridColumn15.FieldName = "ImageURL";
             this.gridColumn15.Name = "gridColumn15";
             // 
+            // cmbQuery
+            // 
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbQuery.ChildHierarchyInfo = childHierarchy1;
+            this.cmbQuery.EraserGroup = "CLR1";
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbQuery.HierarchyInfo = hierarchy1;
+            this.cmbQuery.IsMultiLang = false;
+            this.cmbQuery.Location = new System.Drawing.Point(360, 14);
+            this.cmbQuery.Name = "cmbQuery";
+            this.cmbQuery.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cmbQuery.Properties.Appearance.Options.UseBackColor = true;
+            this.cmbQuery.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbQuery.Size = new System.Drawing.Size(126, 20);
+            this.cmbQuery.TabIndex = 10;
+            // 
             // frmMM03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -389,6 +414,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riPicEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,5 +445,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit riPicEdit;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
+        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbQuery;
     }
 }

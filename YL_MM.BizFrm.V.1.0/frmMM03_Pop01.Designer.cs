@@ -1240,6 +1240,7 @@
             this.txtDiscount_Price.Properties.Mask.EditMask = resources.GetString("txtDiscount_Price.Properties.Mask.EditMask");
             this.txtDiscount_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtDiscount_Price.Properties.Mask.MaskType")));
             this.txtDiscount_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtDiscount_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtDiscount_Price.Properties.ReadOnly = true;
             this.txtDiscount_Price.RequireMessage = null;
             // 
             // txtP_Org_Price
@@ -1258,6 +1259,7 @@
             this.txtP_Org_Price.Properties.Mask.EditMask = resources.GetString("txtP_Org_Price.Properties.Mask.EditMask");
             this.txtP_Org_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtP_Org_Price.Properties.Mask.MaskType")));
             this.txtP_Org_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtP_Org_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtP_Org_Price.Properties.ReadOnly = true;
             this.txtP_Org_Price.RequireMessage = null;
             // 
             // txtPs_Oper_Price
@@ -1276,6 +1278,7 @@
             this.txtPs_Oper_Price.Properties.Mask.EditMask = resources.GetString("txtPs_Oper_Price.Properties.Mask.EditMask");
             this.txtPs_Oper_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtPs_Oper_Price.Properties.Mask.MaskType")));
             this.txtPs_Oper_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtPs_Oper_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtPs_Oper_Price.Properties.ReadOnly = true;
             this.txtPs_Oper_Price.RequireMessage = null;
             // 
             // txtVip_Price
@@ -1294,6 +1297,7 @@
             this.txtVip_Price.Properties.Mask.EditMask = resources.GetString("txtVip_Price.Properties.Mask.EditMask");
             this.txtVip_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtVip_Price.Properties.Mask.MaskType")));
             this.txtVip_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtVip_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtVip_Price.Properties.ReadOnly = true;
             this.txtVip_Price.RequireMessage = null;
             // 
             // txtP_Delivery_Price
@@ -1330,6 +1334,7 @@
             this.txtBasic_Price.Properties.Mask.EditMask = resources.GetString("txtBasic_Price.Properties.Mask.EditMask");
             this.txtBasic_Price.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtBasic_Price.Properties.Mask.MaskType")));
             this.txtBasic_Price.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtBasic_Price.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.txtBasic_Price.Properties.ReadOnly = true;
             this.txtBasic_Price.RequireMessage = null;
             // 
             // rbPrice_Show_Type

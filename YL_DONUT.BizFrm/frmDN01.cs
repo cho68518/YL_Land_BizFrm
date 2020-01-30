@@ -90,6 +90,10 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["o_donut_d_cost"].SummaryItem.FieldName = "o_donut_d_cost";
             gridView1.Columns["o_donut_d_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
+            gridView1.Columns["o_donut_s_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["o_donut_s_cost"].SummaryItem.FieldName = "o_donut_s_cost";
+            gridView1.Columns["o_donut_s_cost"].SummaryItem.DisplayFormat = "{0:c}";
+
             gridView1.Columns["o_donut_m_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["o_donut_m_cost"].SummaryItem.FieldName = "o_donut_m_cost";
             gridView1.Columns["o_donut_m_cost"].SummaryItem.DisplayFormat = "{0:c}";

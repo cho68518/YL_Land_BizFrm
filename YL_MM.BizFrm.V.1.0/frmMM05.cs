@@ -375,6 +375,23 @@ namespace YL_MM.BizFrm
                                 cmd.Parameters["i_is_comp_md"].Value = chkIS_COMP_MD.EditValue;
                                 cmd.Parameters["i_is_comp_md"].Direction = ParameterDirection.Input;
 
+                                cmd.Parameters.Add(new MySqlParameter("i_post_no", MySqlDbType.VarChar));
+                                cmd.Parameters["i_post_no"].Value = txtU_ZIP.EditValue;
+                                cmd.Parameters["i_post_no"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_addr", MySqlDbType.VarChar));
+                                cmd.Parameters["i_addr"].Value = txtU_ADDR.EditValue;
+                                cmd.Parameters["i_addr"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_addr_detail", MySqlDbType.VarChar));
+                                cmd.Parameters["i_addr_detail"].Value = txtU_ADDR_DETAIL.EditValue;
+                                cmd.Parameters["i_addr_detail"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_cell_num", MySqlDbType.VarChar));
+                                cmd.Parameters["i_cell_num"].Value = txtU_CELL_NUM.EditValue;
+                                cmd.Parameters["i_cell_num"].Direction = ParameterDirection.Input;
+
+
                                 cmd.ExecuteNonQuery();
                                 con.Close();
                             }
@@ -434,6 +451,10 @@ namespace YL_MM.BizFrm
                                                                 , this.cmbU_CHEF_LEVEL.EditValue
                                                                 , this.cmbDORAMD_TYPE.EditValue
                                                                 , this.chkIS_SUPPORT_TEAM.EditValue
+                                                                , this.txtU_CELL_NUM.EditValue
+                                                                , this.txtU_ZIP.EditValue
+                                                                , this.txtU_ADDR.EditValue
+                                                                , this.txtU_ADDR_DETAIL.EditValue
                                                                 );
 
                         if (ds.Tables.Count > 0)
@@ -818,8 +839,17 @@ namespace YL_MM.BizFrm
 
 
 
+
         #endregion
 
-        
+
+        private void txtU_ZIP_Click(object sender, EventArgs e)
+        {
+            frmZipNoInfo FrmInfo = new frmZipNoInfo() { ParentBtn = txtU_ZIP, ParentAddr1 = txtU_ADDR, ParentAddr2 = txtU_ADDR_DETAIL };
+            FrmInfo.COMPANYCD = "YL01";
+            FrmInfo.COMPANYNAME = "(주)와이엘랜드";
+            FrmInfo.ShowDialog();
+            
+        }
     }
 }

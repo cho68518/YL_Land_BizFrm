@@ -81,7 +81,7 @@ namespace YL_GSHOP.BizFrm
             gridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
             //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "총주문금액: {0:c}";
             gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
-
+            SetCmb();
 
         }
         #region 신규
@@ -94,7 +94,29 @@ namespace YL_GSHOP.BizFrm
         }
         #endregion
 
+        private void SetCmb()
+        {
 
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " select code_id as DCODE, code_nm as DNAME  FROM domaadmin.tb_common_code  where gcode_id = '00031'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbQuery, codeArray);
+            }
+            cmbQuery.EditValue = "0";
+
+        }
         public override void Search()
         {
             try
@@ -115,11 +137,11 @@ namespace YL_GSHOP.BizFrm
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[1].Value = dtE_DATE.EditValue3;
 
-                        cmd.Parameters.Add("i_receive_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[2].Value = txtRECEIVE_NAME.EditValue;
+                        cmd.Parameters.Add("i_Query", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = cmbQuery.EditValue;
 
-                        cmd.Parameters.Add("i_rec_u_name", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[3].Value = txtREC_U_NAME.EditValue;
+                        cmd.Parameters.Add("i_ProdName", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtProdName.EditValue;
 
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
@@ -142,19 +164,7 @@ namespace YL_GSHOP.BizFrm
 
 
 
-        private void txtRECEIVE_NAME_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Search();
-        }
-
-        private void txtREC_U_NAME_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                Search();
-        }
-
-        private void EfwTextEdit2_KeyDown(object sender, KeyEventArgs e)
+        private void txtProdName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 Search();

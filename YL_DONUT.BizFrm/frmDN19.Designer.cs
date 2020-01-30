@@ -37,12 +37,12 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.advBandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -97,11 +97,11 @@
             this.dt1T = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dt1F = new Easy.Framework.WinForm.Control.efwDateEdit();
-            this.cmbWriteYn = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtSearch = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.cmbQ1 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.cmbWriteYn = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
@@ -117,9 +117,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbWriteYn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbQ1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbWriteYn.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGridControl1
@@ -692,13 +692,13 @@
             // 
             // efwGroupControl1
             // 
+            this.efwGroupControl1.Controls.Add(this.cmbWriteYn);
             this.efwGroupControl1.Controls.Add(this.efwLabel3);
             this.efwGroupControl1.Controls.Add(this.cmbStory);
             this.efwGroupControl1.Controls.Add(this.efwLabel2);
             this.efwGroupControl1.Controls.Add(this.dt1T);
             this.efwGroupControl1.Controls.Add(this.efwLabel4);
             this.efwGroupControl1.Controls.Add(this.dt1F);
-            this.efwGroupControl1.Controls.Add(this.cmbWriteYn);
             this.efwGroupControl1.Controls.Add(this.efwLabel1);
             this.efwGroupControl1.Controls.Add(this.txtSearch);
             this.efwGroupControl1.Controls.Add(this.cmbQ1);
@@ -725,15 +725,15 @@
             // 
             // cmbStory
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbStory.ChildHierarchyInfo = childHierarchy1;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbStory.ChildHierarchyInfo = childHierarchy2;
             this.cmbStory.EditValue = null;
             this.cmbStory.FormattingEnabled = true;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbStory.HierarchyInfo = hierarchy1;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbStory.HierarchyInfo = hierarchy2;
             this.cmbStory.IsMultiLang = false;
             this.cmbStory.Location = new System.Drawing.Point(117, 46);
             this.cmbStory.Name = "cmbStory";
@@ -790,24 +790,6 @@
             this.dt1F.Size = new System.Drawing.Size(102, 20);
             this.dt1F.TabIndex = 29;
             // 
-            // cmbWriteYn
-            // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbWriteYn.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbWriteYn.HierarchyInfo = hierarchy2;
-            this.cmbWriteYn.IsMultiLang = false;
-            this.cmbWriteYn.Location = new System.Drawing.Point(598, 43);
-            this.cmbWriteYn.MasterCode = "E03.WRITE_GBN:A";
-            this.cmbWriteYn.Name = "cmbWriteYn";
-            this.cmbWriteYn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbWriteYn.Size = new System.Drawing.Size(102, 20);
-            this.cmbWriteYn.TabIndex = 28;
-            // 
             // efwLabel1
             // 
             this.efwLabel1.EraserGroup = null;
@@ -860,6 +842,23 @@
             this.efwLabel7.TabIndex = 17;
             this.efwLabel7.Text = "작성여부";
             // 
+            // cmbWriteYn
+            // 
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbWriteYn.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbWriteYn.HierarchyInfo = hierarchy1;
+            this.cmbWriteYn.IsMultiLang = false;
+            this.cmbWriteYn.Location = new System.Drawing.Point(598, 46);
+            this.cmbWriteYn.Name = "cmbWriteYn";
+            this.cmbWriteYn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbWriteYn.Size = new System.Drawing.Size(102, 20);
+            this.cmbWriteYn.TabIndex = 39;
+            // 
             // frmDN19
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -886,9 +885,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbWriteYn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbQ1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbWriteYn.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -907,7 +906,6 @@
         private Easy.Framework.WinForm.Control.efwDateEdit dt1T;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
         private Easy.Framework.WinForm.Control.efwDateEdit dt1F;
-        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbWriteYn;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
         private Easy.Framework.WinForm.Control.efwTextEdit txtSearch;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbQ1;
@@ -954,5 +952,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
+        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbWriteYn;
     }
 }

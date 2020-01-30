@@ -2672,13 +2672,13 @@
     <value>400, 86</value>
   </data>
   <data name="efwLabel24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 14</value>
+    <value>30, 14</value>
   </data>
   <data name="efwLabel24.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
   <data name="efwLabel24.Text" xml:space="preserve">
-    <value>할인가(회원가)</value>
+    <value>회원가</value>
   </data>
   <data name="&gt;&gt;efwLabel24.Name" xml:space="preserve">
     <value>efwLabel24</value>
@@ -2696,13 +2696,13 @@
     <value>400, 60</value>
   </data>
   <data name="efwLabel23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 14</value>
+    <value>30, 14</value>
   </data>
   <data name="efwLabel23.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
   <data name="efwLabel23.Text" xml:space="preserve">
-    <value>상품기본판매가</value>
+    <value>공급가</value>
   </data>
   <data name="&gt;&gt;efwLabel23.Name" xml:space="preserve">
     <value>efwLabel23</value>
@@ -3010,6 +3010,9 @@
   <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="gridColumn1.Width" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>색상/규격등</value>
   </data>
@@ -3019,8 +3022,11 @@
   <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="gridColumn2.Width" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
-    <value>판매가</value>
+    <value>소비자가(시중가)</value>
   </data>
   <data name="gridColumn3.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3028,14 +3034,20 @@
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="gridColumn3.Width" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
-    <value>소비자가(시중가)</value>
+    <value>공급가</value>
   </data>
   <data name="gridColumn4.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="gridColumn4.Width" type="System.Int32, mscorlib">
+    <value>83</value>
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>VIP 가격</value>
@@ -3046,6 +3058,9 @@
   <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="gridColumn5.Width" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
   <data name="gridColumn6.Caption" xml:space="preserve">
     <value>PS 운영자가격</value>
   </data>
@@ -3055,14 +3070,20 @@
   <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="gridColumn6.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
   <data name="gridColumn7.Caption" xml:space="preserve">
-    <value>할인가</value>
+    <value>회원가</value>
   </data>
   <data name="gridColumn7.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="gridColumn7.Width" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
   <data name="gridColumn8.Caption" xml:space="preserve">
     <value>MD G메니저정산가</value>
@@ -3073,6 +3094,9 @@
   <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
+  <data name="gridColumn8.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
   <data name="gridColumn9.Caption" xml:space="preserve">
     <value>셰프정산가</value>
   </data>
@@ -3081,6 +3105,9 @@
   </data>
   <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="gridColumn9.Width" type="System.Int32, mscorlib">
+    <value>73</value>
   </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>상품재고</value>
@@ -3091,6 +3118,9 @@
   <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
+  <data name="gridColumn10.Width" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
   <data name="gridColumn11.Caption" xml:space="preserve">
     <value>후기스토리도넛</value>
   </data>
@@ -3099,6 +3129,9 @@
   </data>
   <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
     <value>10</value>
+  </data>
+  <data name="gridColumn11.Width" type="System.Int32, mscorlib">
+    <value>99</value>
   </data>
   <data name="gridColumn12.Caption" xml:space="preserve">
     <value>옵션정보</value>
@@ -3115,6 +3148,9 @@
   <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
+  <data name="gridColumn12.Width" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
   <data name="gridColumn13.Caption" xml:space="preserve">
     <value>도넛사용여부</value>
   </data>
@@ -3129,6 +3165,9 @@
   </data>
   <data name="gridColumn13.VisibleIndex" type="System.Int32, mscorlib">
     <value>12</value>
+  </data>
+  <data name="gridColumn13.Width" type="System.Int32, mscorlib">
+    <value>82</value>
   </data>
   <data name="gridColumn14.Caption" xml:space="preserve">
     <value>삭제</value>
@@ -3188,6 +3227,9 @@
   </data>
   <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
     <value>13</value>
+  </data>
+  <data name="gridColumn14.Width" type="System.Int32, mscorlib">
+    <value>66</value>
   </data>
   <data name="efwGridControl1.PKColumns" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>

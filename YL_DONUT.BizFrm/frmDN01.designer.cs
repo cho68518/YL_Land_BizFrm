@@ -110,6 +110,7 @@
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbG_Prod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkB.Properties)).BeginInit();
@@ -661,6 +662,7 @@
             this.gridColumn19,
             this.gridColumn11,
             this.gridColumn12,
+            this.gridColumn32,
             this.gridColumn13,
             this.gridColumn14,
             this.gridColumn15,
@@ -879,7 +881,7 @@
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.ReadOnly = true;
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 18;
+            this.gridColumn13.VisibleIndex = 19;
             // 
             // gridColumn14
             // 
@@ -890,7 +892,7 @@
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.OptionsColumn.ReadOnly = true;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 19;
+            this.gridColumn14.VisibleIndex = 20;
             // 
             // gridColumn15
             // 
@@ -901,7 +903,7 @@
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.ReadOnly = true;
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 20;
+            this.gridColumn15.VisibleIndex = 21;
             // 
             // gridColumn16
             // 
@@ -912,7 +914,7 @@
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.OptionsColumn.ReadOnly = true;
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 21;
+            this.gridColumn16.VisibleIndex = 22;
             // 
             // gridColumn29
             // 
@@ -923,7 +925,7 @@
             this.gridColumn29.Name = "gridColumn29";
             this.gridColumn29.OptionsColumn.ReadOnly = true;
             this.gridColumn29.Visible = true;
-            this.gridColumn29.VisibleIndex = 22;
+            this.gridColumn29.VisibleIndex = 23;
             // 
             // gridColumn17
             // 
@@ -932,7 +934,7 @@
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.OptionsColumn.ReadOnly = true;
             this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 23;
+            this.gridColumn17.VisibleIndex = 24;
             // 
             // gridColumn18
             // 
@@ -942,7 +944,7 @@
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.OptionsColumn.ReadOnly = true;
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 24;
+            this.gridColumn18.VisibleIndex = 25;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -958,7 +960,7 @@
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.OptionsColumn.ReadOnly = true;
             this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 25;
+            this.gridColumn20.VisibleIndex = 26;
             // 
             // gridColumn21
             // 
@@ -967,7 +969,7 @@
             this.gridColumn21.Name = "gridColumn21";
             this.gridColumn21.OptionsColumn.ReadOnly = true;
             this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 26;
+            this.gridColumn21.VisibleIndex = 27;
             // 
             // gridColumn22
             // 
@@ -976,7 +978,7 @@
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.OptionsColumn.ReadOnly = true;
             this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 27;
+            this.gridColumn22.VisibleIndex = 28;
             // 
             // gridColumn23
             // 
@@ -985,7 +987,7 @@
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.OptionsColumn.ReadOnly = true;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 28;
+            this.gridColumn23.VisibleIndex = 29;
             // 
             // gridColumn24
             // 
@@ -994,7 +996,7 @@
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.OptionsColumn.ReadOnly = true;
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 29;
+            this.gridColumn24.VisibleIndex = 30;
             // 
             // gridColumn30
             // 
@@ -1002,7 +1004,7 @@
             this.gridColumn30.FieldName = "remark";
             this.gridColumn30.Name = "gridColumn30";
             this.gridColumn30.Visible = true;
-            this.gridColumn30.VisibleIndex = 30;
+            this.gridColumn30.VisibleIndex = 31;
             this.gridColumn30.Width = 150;
             // 
             // repositoryItemLookUpEdit1
@@ -1022,6 +1024,16 @@
             // repositoryItemMemoEdit1
             // 
             this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
+            // 
+            // gridColumn32
+            // 
+            this.gridColumn32.Caption = "사용SD머니";
+            this.gridColumn32.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn32.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn32.FieldName = "o_donut_s_cost";
+            this.gridColumn32.Name = "gridColumn32";
+            this.gridColumn32.Visible = true;
+            this.gridColumn32.VisibleIndex = 18;
             // 
             // frmDN01
             // 
@@ -1145,5 +1157,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton7;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
     }
 }

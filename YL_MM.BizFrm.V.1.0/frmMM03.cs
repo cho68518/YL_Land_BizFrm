@@ -120,7 +120,7 @@ namespace YL_MM.BizFrm
             // 공급자구분
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(s_idx,'') as DCODE ,s_company_name as DNAME  FROM domaadmin.tb_sellers_info where s_status = 'Y'   ";
+                con.Query = " select '0' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(s_idx,'') as DCODE ,s_company_name as DNAME  FROM domaadmin.tb_sellers_info where s_status = 'Y'   ";
 
                 DataSet ds = con.selectQueryDataSet();
                 //DataTable retDT = ds.Tables[0];
@@ -135,7 +135,27 @@ namespace YL_MM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbSellers, codeArray);
             }
-            cmbSellers.EditValue = "";
+            cmbSellers.EditValue = "0";
+
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " select code_id as DCODE, code_nm as DNAME  FROM domaadmin.tb_common_code  where gcode_id = '00030'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbQuery, codeArray);
+            }
+            cmbQuery.EditValue = "0";
 
         }
 
@@ -156,16 +176,14 @@ namespace YL_MM.BizFrm
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        if (cmbSellers.EditValue.ToString() != "Y" && cmbSellers.EditValue.ToString() != "N")
-                            sShowType = null;
-                        else
-                            sShowType = cmbSellers.EditValue.ToString();
-
                         cmd.Parameters.Add("i_StoreCode", MySqlDbType.Int32);
-                        cmd.Parameters[0].Value = sShowType;
+                        cmd.Parameters[0].Value = cmbSellers.EditValue;
+
+                        cmd.Parameters.Add("i_Query", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = cmbQuery.EditValue.ToString();
 
                         cmd.Parameters.Add("i_ProdName", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[1].Value = txtProdName.EditValue;
+                        cmd.Parameters[2].Value = txtProdName.EditValue;
 
                         if (rbShowType.EditValue.ToString() != "Y" && rbShowType.EditValue.ToString() != "N")
                             sShow_Type = null;
@@ -173,7 +191,7 @@ namespace YL_MM.BizFrm
                             sShow_Type = rbShowType.EditValue.ToString();
 
                         cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[2].Value = sShow_Type;
+                        cmd.Parameters[3].Value = sShow_Type;
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();

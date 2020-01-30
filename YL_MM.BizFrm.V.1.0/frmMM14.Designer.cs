@@ -30,6 +30,8 @@
         {
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMM14));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -39,8 +41,6 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy4 = new Easy.Framework.WinForm.Control.ChildHierarchy();
@@ -49,10 +49,13 @@
             Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy6 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy6 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy7 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy7 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
-            this.rbShowType = new Easy.Framework.WinForm.Control.efwRadioGroup();
+            this.cmbQuery = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.txtProdName = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.rbShowType = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cmbSellers = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
@@ -99,8 +102,9 @@
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rbShowType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProdName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbShowType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSellers.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -124,9 +128,10 @@
             // 
             // efwPanelControl1
             // 
-            this.efwPanelControl1.Controls.Add(this.rbShowType);
+            this.efwPanelControl1.Controls.Add(this.cmbQuery);
             this.efwPanelControl1.Controls.Add(this.txtProdName);
             this.efwPanelControl1.Controls.Add(this.efwLabel2);
+            this.efwPanelControl1.Controls.Add(this.rbShowType);
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
             this.efwPanelControl1.Controls.Add(this.cmbSellers);
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -135,10 +140,51 @@
             this.efwPanelControl1.Size = new System.Drawing.Size(1227, 46);
             this.efwPanelControl1.TabIndex = 4;
             // 
+            // cmbQuery
+            // 
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbQuery.ChildHierarchyInfo = childHierarchy1;
+            this.cmbQuery.EraserGroup = "CLR1";
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbQuery.HierarchyInfo = hierarchy1;
+            this.cmbQuery.IsMultiLang = false;
+            this.cmbQuery.Location = new System.Drawing.Point(314, 14);
+            this.cmbQuery.Name = "cmbQuery";
+            this.cmbQuery.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cmbQuery.Properties.Appearance.Options.UseBackColor = true;
+            this.cmbQuery.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbQuery.Size = new System.Drawing.Size(126, 20);
+            this.cmbQuery.TabIndex = 13;
+            // 
+            // txtProdName
+            // 
+            this.txtProdName.EditValue2 = null;
+            this.txtProdName.Location = new System.Drawing.Point(446, 14);
+            this.txtProdName.Name = "txtProdName";
+            this.txtProdName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtProdName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtProdName.RequireMessage = null;
+            this.txtProdName.Size = new System.Drawing.Size(182, 20);
+            this.txtProdName.TabIndex = 12;
+            // 
+            // efwLabel2
+            // 
+            this.efwLabel2.EraserGroup = null;
+            this.efwLabel2.IsMultiLang = false;
+            this.efwLabel2.Location = new System.Drawing.Point(253, 17);
+            this.efwLabel2.Name = "efwLabel2";
+            this.efwLabel2.Size = new System.Drawing.Size(30, 14);
+            this.efwLabel2.TabIndex = 11;
+            this.efwLabel2.Text = "검색어";
+            // 
             // rbShowType
             // 
             this.rbShowType.IsMultiLang = false;
-            this.rbShowType.Location = new System.Drawing.Point(527, 10);
+            this.rbShowType.Location = new System.Drawing.Point(646, 10);
             this.rbShowType.Name = "rbShowType";
             this.rbShowType.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbShowType.Properties.Appearance.Options.UseBackColor = true;
@@ -153,28 +199,6 @@
             this.rbShowType.Size = new System.Drawing.Size(200, 30);
             this.rbShowType.TabIndex = 8;
             // 
-            // txtProdName
-            // 
-            this.txtProdName.EditValue2 = null;
-            this.txtProdName.Location = new System.Drawing.Point(305, 14);
-            this.txtProdName.Name = "txtProdName";
-            this.txtProdName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtProdName.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtProdName.RequireMessage = null;
-            this.txtProdName.Size = new System.Drawing.Size(182, 20);
-            this.txtProdName.TabIndex = 7;
-            this.txtProdName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProdName_KeyDown);
-            // 
-            // efwLabel2
-            // 
-            this.efwLabel2.EraserGroup = null;
-            this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(258, 17);
-            this.efwLabel2.Name = "efwLabel2";
-            this.efwLabel2.Size = new System.Drawing.Size(30, 14);
-            this.efwLabel2.TabIndex = 6;
-            this.efwLabel2.Text = "상품명";
-            // 
             // efwLabel1
             // 
             this.efwLabel1.EraserGroup = null;
@@ -187,14 +211,14 @@
             // 
             // cmbSellers
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbSellers.ChildHierarchyInfo = childHierarchy1;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbSellers.ChildHierarchyInfo = childHierarchy2;
             this.cmbSellers.EraserGroup = "CLR1";
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbSellers.HierarchyInfo = hierarchy1;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbSellers.HierarchyInfo = hierarchy2;
             this.cmbSellers.IsMultiLang = false;
             this.cmbSellers.Location = new System.Drawing.Point(69, 14);
             this.cmbSellers.Name = "cmbSellers";
@@ -235,7 +259,7 @@
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDetail,
             this.riPicEdit});
-            this.efwGridControl1.Size = new System.Drawing.Size(1227, 531);
+            this.efwGridControl1.Size = new System.Drawing.Size(1227, 360);
             this.efwGridControl1.TabIndex = 8;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -399,7 +423,7 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 612);
+            this.splitterControl1.Location = new System.Drawing.Point(3, 441);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1227, 5);
             this.splitterControl1.TabIndex = 9;
@@ -434,22 +458,22 @@
             this.product_detail.Controls.Add(this.efwLabel4);
             this.product_detail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.product_detail.IsMultiLang = false;
-            this.product_detail.Location = new System.Drawing.Point(3, 617);
+            this.product_detail.Location = new System.Drawing.Point(3, 446);
             this.product_detail.Name = "product_detail";
-            this.product_detail.Size = new System.Drawing.Size(1227, 31);
+            this.product_detail.Size = new System.Drawing.Size(1227, 202);
             this.product_detail.TabIndex = 10;
             this.product_detail.Text = "품목별 세부할인정보";
             // 
             // cmbGshop_Money
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbGshop_Money.ChildHierarchyInfo = childHierarchy2;
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbGshop_Money.ChildHierarchyInfo = childHierarchy3;
             this.cmbGshop_Money.EraserGroup = "CLR1";
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbGshop_Money.HierarchyInfo = hierarchy2;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbGshop_Money.HierarchyInfo = hierarchy3;
             this.cmbGshop_Money.IsMultiLang = false;
             this.cmbGshop_Money.Location = new System.Drawing.Point(495, 126);
             this.cmbGshop_Money.Name = "cmbGshop_Money";
@@ -462,14 +486,14 @@
             // 
             // cmbMd_Money
             // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbMd_Money.ChildHierarchyInfo = childHierarchy3;
+            childHierarchy4.CodeCtrl = null;
+            childHierarchy4.DbName = null;
+            childHierarchy4.SpName = null;
+            this.cmbMd_Money.ChildHierarchyInfo = childHierarchy4;
             this.cmbMd_Money.EraserGroup = "CLR1";
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbMd_Money.HierarchyInfo = hierarchy3;
+            hierarchy4.DbName = null;
+            hierarchy4.SpName = null;
+            this.cmbMd_Money.HierarchyInfo = hierarchy4;
             this.cmbMd_Money.IsMultiLang = false;
             this.cmbMd_Money.Location = new System.Drawing.Point(495, 100);
             this.cmbMd_Money.Name = "cmbMd_Money";
@@ -482,14 +506,14 @@
             // 
             // cmbChef_Money
             // 
-            childHierarchy4.CodeCtrl = null;
-            childHierarchy4.DbName = null;
-            childHierarchy4.SpName = null;
-            this.cmbChef_Money.ChildHierarchyInfo = childHierarchy4;
+            childHierarchy5.CodeCtrl = null;
+            childHierarchy5.DbName = null;
+            childHierarchy5.SpName = null;
+            this.cmbChef_Money.ChildHierarchyInfo = childHierarchy5;
             this.cmbChef_Money.EraserGroup = "CLR1";
-            hierarchy4.DbName = null;
-            hierarchy4.SpName = null;
-            this.cmbChef_Money.HierarchyInfo = hierarchy4;
+            hierarchy5.DbName = null;
+            hierarchy5.SpName = null;
+            this.cmbChef_Money.HierarchyInfo = hierarchy5;
             this.cmbChef_Money.IsMultiLang = false;
             this.cmbChef_Money.Location = new System.Drawing.Point(215, 153);
             this.cmbChef_Money.Name = "cmbChef_Money";
@@ -502,14 +526,14 @@
             // 
             // cmbVip_Money
             // 
-            childHierarchy5.CodeCtrl = null;
-            childHierarchy5.DbName = null;
-            childHierarchy5.SpName = null;
-            this.cmbVip_Money.ChildHierarchyInfo = childHierarchy5;
+            childHierarchy6.CodeCtrl = null;
+            childHierarchy6.DbName = null;
+            childHierarchy6.SpName = null;
+            this.cmbVip_Money.ChildHierarchyInfo = childHierarchy6;
             this.cmbVip_Money.EraserGroup = "CLR1";
-            hierarchy5.DbName = null;
-            hierarchy5.SpName = null;
-            this.cmbVip_Money.HierarchyInfo = hierarchy5;
+            hierarchy6.DbName = null;
+            hierarchy6.SpName = null;
+            this.cmbVip_Money.HierarchyInfo = hierarchy6;
             this.cmbVip_Money.IsMultiLang = false;
             this.cmbVip_Money.Location = new System.Drawing.Point(215, 126);
             this.cmbVip_Money.Name = "cmbVip_Money";
@@ -522,14 +546,14 @@
             // 
             // cmbDoma_Money
             // 
-            childHierarchy6.CodeCtrl = null;
-            childHierarchy6.DbName = null;
-            childHierarchy6.SpName = null;
-            this.cmbDoma_Money.ChildHierarchyInfo = childHierarchy6;
+            childHierarchy7.CodeCtrl = null;
+            childHierarchy7.DbName = null;
+            childHierarchy7.SpName = null;
+            this.cmbDoma_Money.ChildHierarchyInfo = childHierarchy7;
             this.cmbDoma_Money.EraserGroup = "CLR1";
-            hierarchy6.DbName = null;
-            hierarchy6.SpName = null;
-            this.cmbDoma_Money.HierarchyInfo = hierarchy6;
+            hierarchy7.DbName = null;
+            hierarchy7.SpName = null;
+            this.cmbDoma_Money.HierarchyInfo = hierarchy7;
             this.cmbDoma_Money.IsMultiLang = false;
             this.cmbDoma_Money.Location = new System.Drawing.Point(215, 100);
             this.cmbDoma_Money.Name = "cmbDoma_Money";
@@ -777,8 +801,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rbShowType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProdName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbShowType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSellers.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -807,8 +832,6 @@
 
         private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl1;
         private Easy.Framework.WinForm.Control.efwRadioGroup rbShowType;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtProdName;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbSellers;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
@@ -853,5 +876,8 @@
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbChef_Money;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbVip_Money;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbDoma_Money;
+        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbQuery;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtProdName;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
     }
 }
