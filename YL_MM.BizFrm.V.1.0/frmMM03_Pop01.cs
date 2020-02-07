@@ -1727,8 +1727,6 @@ namespace YL_MM.BizFrm
 
                             MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
 
-
-
                         }
                     }
                 }

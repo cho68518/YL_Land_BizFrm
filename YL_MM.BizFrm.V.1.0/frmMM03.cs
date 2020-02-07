@@ -204,8 +204,6 @@ namespace YL_MM.BizFrm
 
                 }
             }
-
-
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
