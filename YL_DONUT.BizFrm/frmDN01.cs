@@ -208,6 +208,26 @@ namespace YL_DONUT.BizFrm
             }
             cmbChange_type.EditValue = "";
 
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM domaadmin.tb_common_code where gcode_id = '00032'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbOrderDate, codeArray);
+            }
+            cmbOrderDate.EditValue = "1";
+
         }
 
         #region 신규
@@ -253,7 +273,7 @@ namespace YL_DONUT.BizFrm
                         else
                             sP_SHOW_TYPE = rbP_SHOW_TYPE.EditValue.ToString();
 
-                        // efwRadioGroup1.Properties.Items[efwRadioGroup1.SelectedIndex].Value.ToString()
+                        // efwRadioGroup1.Properties.Items[efwRadioGroup1.SelectedIndex].Valuellllll.ToString()
                         cmd.Parameters.Add("i_is_order", MySqlDbType.VarChar, 10);
                         cmd.Parameters[4].Value = sP_SHOW_TYPE;
 
@@ -306,6 +326,10 @@ namespace YL_DONUT.BizFrm
 
                         cmd.Parameters.Add("i_g_prod", MySqlDbType.VarChar, 10);
                         cmd.Parameters[18].Value = cbG_Prod.EditValue;
+                        //cmbOrderDate
+                        cmd.Parameters.Add("i_order_date", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[19].Value = cmbOrderDate.EditValue;
+
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

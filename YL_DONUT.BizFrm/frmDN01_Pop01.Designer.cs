@@ -32,7 +32,6 @@ namespace YL_DONUT.BizFrm
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN01_Pop01));
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtO_Total_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtO_Purchase_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtO_Donut_C_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -86,6 +85,7 @@ namespace YL_DONUT.BizFrm
             this.txtO_Type = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtID = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.efwLabel38 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtP_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -275,17 +275,6 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl1.Size = new System.Drawing.Size(622, 391);
             this.efwGroupControl1.TabIndex = 0;
             this.efwGroupControl1.Text = "주문 수정";
-            // 
-            // efwSimpleButton3
-            // 
-            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
-            this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(516, 30);
-            this.efwSimpleButton3.Name = "efwSimpleButton3";
-            this.efwSimpleButton3.Size = new System.Drawing.Size(152, 47);
-            this.efwSimpleButton3.TabIndex = 65;
-            this.efwSimpleButton3.Text = "주문/품절취소,반품승인";
-            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
             // txtO_Total_Cost
             // 
@@ -968,6 +957,17 @@ namespace YL_DONUT.BizFrm
             this.txtID.RequireMessage = null;
             this.txtID.Size = new System.Drawing.Size(102, 20);
             this.txtID.TabIndex = 0;
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(516, 30);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(152, 47);
+            this.efwSimpleButton3.TabIndex = 65;
+            this.efwSimpleButton3.Text = "주문/품절취소,반품승인";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
             // efwGroupControl2
             // 
@@ -1673,7 +1673,7 @@ namespace YL_DONUT.BizFrm
             this.Name = "frmDN01_Pop01";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "주문정보(프라이빗샵)";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.frmDN01_Pop01_Load);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);

@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN01));
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy5 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtId = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.cbG_Prod = new Easy.Framework.WinForm.Control.efwCheckEdit();
@@ -70,7 +72,6 @@
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -93,6 +94,7 @@
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -110,7 +112,7 @@
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
-            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmbOrderDate = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbG_Prod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkB.Properties)).BeginInit();
@@ -143,6 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbOrderDate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwSimpleButton3
@@ -170,7 +173,7 @@
             // 
             // cbG_Prod
             // 
-            this.cbG_Prod.Location = new System.Drawing.Point(403, 49);
+            this.cbG_Prod.Location = new System.Drawing.Point(502, 51);
             this.cbG_Prod.Name = "cbG_Prod";
             this.cbG_Prod.Properties.Caption = "G 시리즈";
             this.cbG_Prod.Properties.ValueChecked = "1";
@@ -321,20 +324,20 @@
             // 
             // cmbMALL_TYPE
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbMALL_TYPE.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbMALL_TYPE.HierarchyInfo = hierarchy1;
+            childHierarchy5.CodeCtrl = null;
+            childHierarchy5.DbName = null;
+            childHierarchy5.SpName = null;
+            this.cmbMALL_TYPE.ChildHierarchyInfo = childHierarchy5;
+            hierarchy5.DbName = null;
+            hierarchy5.SpName = null;
+            this.cmbMALL_TYPE.HierarchyInfo = hierarchy5;
             this.cmbMALL_TYPE.IsMultiLang = false;
-            this.cmbMALL_TYPE.Location = new System.Drawing.Point(83, 48);
+            this.cmbMALL_TYPE.Location = new System.Drawing.Point(124, 48);
             this.cmbMALL_TYPE.MasterCode = "E03.PAY_GBN";
             this.cmbMALL_TYPE.Name = "cmbMALL_TYPE";
             this.cmbMALL_TYPE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbMALL_TYPE.Size = new System.Drawing.Size(118, 20);
+            this.cmbMALL_TYPE.Size = new System.Drawing.Size(103, 20);
             this.cmbMALL_TYPE.TabIndex = 41;
             // 
             // txtI_SEARCH
@@ -354,7 +357,7 @@
             // 
             this.dtS_DATE.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
             this.dtS_DATE.IsRequire = true;
-            this.dtS_DATE.Location = new System.Drawing.Point(83, 17);
+            this.dtS_DATE.Location = new System.Drawing.Point(124, 17);
             this.dtS_DATE.Name = "dtS_DATE";
             this.dtS_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.dtS_DATE.Properties.Appearance.Options.UseBackColor = true;
@@ -364,14 +367,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtS_DATE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtS_DATE.Size = new System.Drawing.Size(118, 20);
+            this.dtS_DATE.Size = new System.Drawing.Size(103, 20);
             this.dtS_DATE.TabIndex = 5;
             // 
             // dtE_DATE
             // 
             this.dtE_DATE.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
             this.dtE_DATE.IsRequire = true;
-            this.dtE_DATE.Location = new System.Drawing.Point(224, 17);
+            this.dtE_DATE.Location = new System.Drawing.Point(250, 17);
             this.dtE_DATE.Name = "dtE_DATE";
             this.dtE_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.dtE_DATE.Properties.Appearance.Options.UseBackColor = true;
@@ -381,13 +384,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtE_DATE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtE_DATE.Size = new System.Drawing.Size(118, 20);
+            this.dtE_DATE.Size = new System.Drawing.Size(99, 20);
             this.dtE_DATE.TabIndex = 5;
             // 
             // rbP_SHOW_TYPE
             // 
             this.rbP_SHOW_TYPE.IsMultiLang = false;
-            this.rbP_SHOW_TYPE.Location = new System.Drawing.Point(222, 47);
+            this.rbP_SHOW_TYPE.Location = new System.Drawing.Point(250, 49);
             this.rbP_SHOW_TYPE.Name = "rbP_SHOW_TYPE";
             this.rbP_SHOW_TYPE.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbP_SHOW_TYPE.Properties.Appearance.Options.UseBackColor = true;
@@ -400,18 +403,18 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "미발주")});
             this.rbP_SHOW_TYPE.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
             this.rbP_SHOW_TYPE.RequireMessage = null;
-            this.rbP_SHOW_TYPE.Size = new System.Drawing.Size(182, 23);
+            this.rbP_SHOW_TYPE.Size = new System.Drawing.Size(193, 23);
             this.rbP_SHOW_TYPE.TabIndex = 4;
             // 
             // cmbORDER_SEARCH
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbORDER_SEARCH.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbORDER_SEARCH.HierarchyInfo = hierarchy2;
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbORDER_SEARCH.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbORDER_SEARCH.HierarchyInfo = hierarchy1;
             this.cmbORDER_SEARCH.IsMultiLang = false;
             this.cmbORDER_SEARCH.Location = new System.Drawing.Point(470, 17);
             this.cmbORDER_SEARCH.MasterCode = "E03.PAY_GBN";
@@ -446,13 +449,13 @@
             // 
             // cmbChange_type
             // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbChange_type.ChildHierarchyInfo = childHierarchy3;
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbChange_type.HierarchyInfo = hierarchy3;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbChange_type.ChildHierarchyInfo = childHierarchy2;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbChange_type.HierarchyInfo = hierarchy2;
             this.cmbChange_type.IsMultiLang = false;
             this.cmbChange_type.Location = new System.Drawing.Point(342, 113);
             this.cmbChange_type.MasterCode = "E03.PAY_GBN";
@@ -475,6 +478,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.cmbOrderDate);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton8);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton7);
             this.efwPanelControl1.Controls.Add(this.efwLabel5);
@@ -489,7 +493,6 @@
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton3);
             this.efwPanelControl1.Controls.Add(this.cmbMALL_TYPE);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton5);
-            this.efwPanelControl1.Controls.Add(this.efwLabel1);
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Controls.Add(this.chkX);
             this.efwPanelControl1.Controls.Add(this.chkT);
@@ -569,21 +572,11 @@
             // 
             this.efwLabel2.EraserGroup = null;
             this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(208, 19);
+            this.efwLabel2.Location = new System.Drawing.Point(234, 19);
             this.efwLabel2.Name = "efwLabel2";
             this.efwLabel2.Size = new System.Drawing.Size(9, 14);
             this.efwLabel2.TabIndex = 7;
             this.efwLabel2.Text = "~";
-            // 
-            // efwLabel1
-            // 
-            this.efwLabel1.EraserGroup = null;
-            this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(21, 20);
-            this.efwLabel1.Name = "efwLabel1";
-            this.efwLabel1.Size = new System.Drawing.Size(40, 14);
-            this.efwLabel1.TabIndex = 6;
-            this.efwLabel1.Text = "주문일자";
             // 
             // splitterControl1
             // 
@@ -598,19 +591,19 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo1.InstanceName = "";
-            serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = null;
-            serviceInfo1.ProcName = "";
-            serviceInfo1.UserParams = null;
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = null;
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = null;
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo4;
             this.efwGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo2.InstanceName = "";
-            serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = null;
-            serviceInfo2.ProcName = "";
-            serviceInfo2.UserParams = null;
-            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = null;
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = null;
+            this.efwGridControl1.InsertServiceInfo = serviceInfo5;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
@@ -629,12 +622,12 @@
             this.efwGridControl1.Size = new System.Drawing.Size(1212, 466);
             this.efwGridControl1.TabIndex = 41;
             this.efwGridControl1.TableName = "";
-            serviceInfo3.InstanceName = "";
-            serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = null;
-            serviceInfo3.ProcName = "";
-            serviceInfo3.UserParams = null;
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = null;
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = null;
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo6;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.efwGridControl1.EditorKeyDown += new System.Windows.Forms.KeyEventHandler(this.EfwGridControl1_EditorKeyDown);
@@ -872,6 +865,16 @@
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 17;
             // 
+            // gridColumn32
+            // 
+            this.gridColumn32.Caption = "사용SD머니";
+            this.gridColumn32.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn32.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn32.FieldName = "o_donut_s_cost";
+            this.gridColumn32.Name = "gridColumn32";
+            this.gridColumn32.Visible = true;
+            this.gridColumn32.VisibleIndex = 18;
+            // 
             // gridColumn13
             // 
             this.gridColumn13.Caption = "사용M머니";
@@ -1025,15 +1028,23 @@
             // 
             this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
-            // gridColumn32
+            // cmbOrderDate
             // 
-            this.gridColumn32.Caption = "사용SD머니";
-            this.gridColumn32.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn32.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn32.FieldName = "o_donut_s_cost";
-            this.gridColumn32.Name = "gridColumn32";
-            this.gridColumn32.Visible = true;
-            this.gridColumn32.VisibleIndex = 18;
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbOrderDate.ChildHierarchyInfo = childHierarchy3;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbOrderDate.HierarchyInfo = hierarchy3;
+            this.cmbOrderDate.IsMultiLang = false;
+            this.cmbOrderDate.Location = new System.Drawing.Point(21, 17);
+            this.cmbOrderDate.MasterCode = "E03.PAY_GBN";
+            this.cmbOrderDate.Name = "cmbOrderDate";
+            this.cmbOrderDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbOrderDate.Size = new System.Drawing.Size(97, 20);
+            this.cmbOrderDate.TabIndex = 70;
             // 
             // frmDN01
             // 
@@ -1080,6 +1091,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbOrderDate.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1115,7 +1127,6 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
         private DevExpress.XtraEditors.SplitterControl splitterControl1;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -1158,5 +1169,6 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton7;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbOrderDate;
     }
 }

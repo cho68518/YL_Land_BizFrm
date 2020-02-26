@@ -49,6 +49,7 @@
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -81,7 +82,6 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -321,6 +321,14 @@
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 5;
             // 
+            // gridColumn24
+            // 
+            this.gridColumn24.Caption = "아이디";
+            this.gridColumn24.FieldName = "login_id";
+            this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.Visible = true;
+            this.gridColumn24.VisibleIndex = 6;
+            // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "전화번호";
@@ -436,8 +444,8 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "GROUP MD";
-            this.gridColumn13.FieldName = "o_chef_id";
+            this.gridColumn13.Caption = "담당 MD";
+            this.gridColumn13.FieldName = "recommender";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
@@ -635,14 +643,6 @@
             this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // gridColumn24
-            // 
-            this.gridColumn24.Caption = "아이디";
-            this.gridColumn24.FieldName = "login_id";
-            this.gridColumn24.Name = "gridColumn24";
-            this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 6;
             // 
             // frmGSHOP02
             // 

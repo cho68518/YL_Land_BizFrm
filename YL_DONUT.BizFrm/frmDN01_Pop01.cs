@@ -355,6 +355,7 @@ namespace YL_DONUT.BizFrm
             {
                 try
                 {
+
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
                         using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN01_SAVE_03", con))
@@ -362,14 +363,47 @@ namespace YL_DONUT.BizFrm
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_id", MySqlDbType.Int32));
-                            cmd.Parameters["i_id"].Value = Convert.ToInt32(txtID.EditValue);
-                            cmd.Parameters["i_id"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_code"].Value = txtO_Code.EditValue;
+                            cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
 
                             cmd.ExecuteNonQuery();
 
                         }
                     }
+
+                    // MS SQL 머니 차감
+                    //int retVal = ServiceAgent.ExecuteNoneQuery(UserInfo.instance().UserId, "CONIS_IBS", "USP_DN_DN01_SAVE_04"
+                    //             , this.txtO_Code.EditValue
+                    //             );
+                    //if (retVal > 0)-
+                    //{
+                    //    MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                    //}
+
+
+                    DataSet ds = ServiceAgent.ExecuteDataSet(false, "CONIS_IBS", "USP_DN_DN01_SAVE_04"
+                                                            , this.txtO_Code.EditValue
+                                                            );
+
+                    MessageAgent.MessageShow(MessageType.Informational, "주문 취소 되었습니다.");
+
+                    //if (ds.Tables.Count > 0)
+                    //{
+                    //    if (ds.Tables[0].Rows[0]["ERRC"].ToString() == "ERR")
+                    //    {
+                    //        MessageAgent.MessageShow(MessageType.Error, ds.Tables[0].Rows[0]["ERRM"].ToString());
+                    //    }
+                    //    else
+                    //    {
+                    //        MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                    //    }
+                    //}
+
+
+
+
+
                 }
 
                 catch (Exception ex)
