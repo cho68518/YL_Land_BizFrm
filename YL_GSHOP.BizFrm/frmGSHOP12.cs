@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using YL_GSHOP.BizFrm.Dlg;
 using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace YL_GSHOP.BizFrm
 {
@@ -52,38 +53,81 @@ namespace YL_GSHOP.BizFrm
             
             gridView1.OptionsView.ShowFooter = true;
 
+            gridView1.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(gridView1_CustomDrawCell);
+
             rbP_SHOW_TYPE.EditValue = "T";
             SetCmb();
 
+
         }
 
-        void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
         {
-            try
+            //MessageBox.Show(e.Column.Name);
+
+            if (e.Column.FieldName == "gridColumn14")
             {
-                DataRow dr = (e.Row as DataRowView).Row;
-                string url = dr["pic_url1"].ToString();
-                if (iconsCache.ContainsKey(url))
-                {
-                    e.Value = iconsCache[url];
-                    return;
-                }
+                //if(gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns["Hinweise"]).ToString().Length > 0)  
+                //e.Appearance.Image = Properties.Resources.Boss_16;
+
+
+
+                string url = "https://img.jobkorea.co.kr/Images/Logo/106/g/c/gccorp_106.gif";
                 var request = WebRequest.Create(url);
 
                 using (var response = request.GetResponse())
                 {
                     using (var stream = response.GetResponseStream())
                     {
-                        e.Value = Bitmap.FromStream(stream);
-                        iconsCache.Add(url, (Bitmap)e.Value);
+                        //e.Value = Bitmap.FromStream(stream);
+                        //iconsCache.Add(url, (Bitmap)e.Value);
+
+                        e.Appearance.Image = Bitmap.FromStream(stream);
                     }
                 }
 
+
+
+
             }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
+        }
+
+        void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            //try
+            //{
+            //    GridView view = sender as GridView;
+            //    string sname = e.Column.ToString();
+            //    string sname2 = e.Column.Caption.ToString();
+            //    string sname3 = e.Column.Name;
+            //    string sname4 = e.Column.FieldName;
+
+            //    //MessageBox.Show(sname3);
+
+
+            //    DataRow dr = (e.Row as DataRowView).Row;
+            //    string url = dr["pic_url1"].ToString();
+            //    if (iconsCache.ContainsKey(url))
+            //    {
+            //        e.Value = iconsCache[url];
+            //        return;
+            //    }
+            //    var request = WebRequest.Create(url);
+
+            //    using (var response = request.GetResponse())
+            //    {
+            //        using (var stream = response.GetResponseStream())
+            //        {
+            //            e.Value = Bitmap.FromStream(stream);
+            //            iconsCache.Add(url, (Bitmap)e.Value);
+            //        }
+            //    }
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            //}
 
 
 

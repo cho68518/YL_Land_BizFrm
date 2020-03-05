@@ -849,6 +849,10 @@ namespace YL_DONUT.BizFrm
             {
                 BtnHistoryQ4_Click(null, null);
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage6)
+            {
+                btnHistoryQ6_Click(null, null);
+            }
         }
 
         private void EfwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)

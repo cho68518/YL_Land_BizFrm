@@ -59,21 +59,21 @@
             this.riPicEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.riPicEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.nPicEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.nPicEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.nPicEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.riPicEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.nPicEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.nPicEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.nPicEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -372,6 +372,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.RowHeight = 100;
+            this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             // 
             // gridColumn1
             // 
@@ -463,16 +464,12 @@
             // gridColumn10
             // 
             this.gridColumn10.Caption = "이미지2";
-            this.gridColumn10.ColumnEdit = this.riPicEdit2;
+            this.gridColumn10.ColumnEdit = this.riPicEdit1;
             this.gridColumn10.FieldName = "Image";
             this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 10;
-            // 
-            // riPicEdit2
-            // 
-            this.riPicEdit2.Name = "riPicEdit2";
-            this.riPicEdit2.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             // 
             // gridColumn11
             // 
@@ -485,15 +482,12 @@
             // gridColumn12
             // 
             this.gridColumn12.Caption = "이미지3";
-            this.gridColumn12.ColumnEdit = this.nPicEdit3;
+            this.gridColumn12.ColumnEdit = this.riPicEdit1;
             this.gridColumn12.FieldName = "Image";
             this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 12;
-            // 
-            // nPicEdit3
-            // 
-            this.nPicEdit3.Name = "nPicEdit3";
             // 
             // gridColumn13
             // 
@@ -506,15 +500,12 @@
             // gridColumn16
             // 
             this.gridColumn16.Caption = "이미지4";
-            this.gridColumn16.ColumnEdit = this.nPicEdit4;
+            this.gridColumn16.ColumnEdit = this.riPicEdit1;
             this.gridColumn16.FieldName = "Image";
             this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 14;
-            // 
-            // nPicEdit4
-            // 
-            this.nPicEdit4.Name = "nPicEdit4";
             // 
             // gridColumn17
             // 
@@ -527,15 +518,12 @@
             // gridColumn18
             // 
             this.gridColumn18.Caption = "이미지5";
-            this.gridColumn18.ColumnEdit = this.nPicEdit5;
+            this.gridColumn18.ColumnEdit = this.riPicEdit1;
             this.gridColumn18.FieldName = "Image";
             this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 16;
-            // 
-            // nPicEdit5
-            // 
-            this.nPicEdit5.Name = "nPicEdit5";
             // 
             // gridColumn15
             // 
@@ -576,6 +564,23 @@
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.Visible = true;
             this.gridColumn22.VisibleIndex = 21;
+            // 
+            // riPicEdit2
+            // 
+            this.riPicEdit2.Name = "riPicEdit2";
+            this.riPicEdit2.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            // 
+            // nPicEdit3
+            // 
+            this.nPicEdit3.Name = "nPicEdit3";
+            // 
+            // nPicEdit4
+            // 
+            this.nPicEdit4.Name = "nPicEdit4";
+            // 
+            // nPicEdit5
+            // 
+            this.nPicEdit5.Name = "nPicEdit5";
             // 
             // splitterControl1
             // 
