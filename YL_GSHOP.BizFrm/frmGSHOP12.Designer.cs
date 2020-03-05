@@ -56,19 +56,19 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.riPicEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.Image1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.riPicEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.Image2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.nPicEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.Image3 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.nPicEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.Image4 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.nPicEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.Image5 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -124,11 +124,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtI_SEARCH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riPicEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riPicEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPicEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPicEdit4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPicEdit5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -318,6 +318,7 @@
             this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
+            this.efwGridControl1.IsEditable = false;
             this.efwGridControl1.IsMultiLang = false;
             this.efwGridControl1.Location = new System.Drawing.Point(3, 88);
             this.efwGridControl1.MainView = this.gridView1;
@@ -326,11 +327,11 @@
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.riPicEdit1,
-            this.riPicEdit2,
-            this.nPicEdit3,
-            this.nPicEdit4,
-            this.nPicEdit5});
+            this.Image1,
+            this.Image2,
+            this.Image3,
+            this.Image4,
+            this.Image5});
             this.efwGridControl1.Size = new System.Drawing.Size(1021, 345);
             this.efwGridControl1.TabIndex = 45;
             this.efwGridControl1.TableName = "";
@@ -440,17 +441,17 @@
             // gridColumn14
             // 
             this.gridColumn14.Caption = "이미지1";
-            this.gridColumn14.ColumnEdit = this.riPicEdit1;
-            this.gridColumn14.FieldName = "Image";
+            this.gridColumn14.ColumnEdit = this.Image1;
+            this.gridColumn14.FieldName = "Image1";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 8;
             // 
-            // riPicEdit1
+            // Image1
             // 
-            this.riPicEdit1.Name = "riPicEdit1";
-            this.riPicEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.Image1.Name = "Image1";
+            this.Image1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             // 
             // gridColumn9
             // 
@@ -463,16 +464,17 @@
             // gridColumn10
             // 
             this.gridColumn10.Caption = "이미지2";
-            this.gridColumn10.ColumnEdit = this.riPicEdit2;
-            this.gridColumn10.FieldName = "Image";
+            this.gridColumn10.ColumnEdit = this.Image2;
+            this.gridColumn10.FieldName = "Image2";
             this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 10;
             // 
-            // riPicEdit2
+            // Image2
             // 
-            this.riPicEdit2.Name = "riPicEdit2";
-            this.riPicEdit2.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.Image2.Name = "Image2";
+            this.Image2.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             // 
             // gridColumn11
             // 
@@ -485,15 +487,16 @@
             // gridColumn12
             // 
             this.gridColumn12.Caption = "이미지3";
-            this.gridColumn12.ColumnEdit = this.nPicEdit3;
-            this.gridColumn12.FieldName = "Image";
+            this.gridColumn12.ColumnEdit = this.Image3;
+            this.gridColumn12.FieldName = "Image3";
             this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 12;
             // 
-            // nPicEdit3
+            // Image3
             // 
-            this.nPicEdit3.Name = "nPicEdit3";
+            this.Image3.Name = "Image3";
             // 
             // gridColumn13
             // 
@@ -506,15 +509,16 @@
             // gridColumn16
             // 
             this.gridColumn16.Caption = "이미지4";
-            this.gridColumn16.ColumnEdit = this.nPicEdit4;
-            this.gridColumn16.FieldName = "Image";
+            this.gridColumn16.ColumnEdit = this.Image4;
+            this.gridColumn16.FieldName = "Image4";
             this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 14;
             // 
-            // nPicEdit4
+            // Image4
             // 
-            this.nPicEdit4.Name = "nPicEdit4";
+            this.Image4.Name = "Image4";
             // 
             // gridColumn17
             // 
@@ -522,20 +526,21 @@
             this.gridColumn17.FieldName = "best_pic5";
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 15;
+            this.gridColumn17.VisibleIndex = 16;
             // 
             // gridColumn18
             // 
             this.gridColumn18.Caption = "이미지5";
-            this.gridColumn18.ColumnEdit = this.nPicEdit5;
-            this.gridColumn18.FieldName = "Image";
+            this.gridColumn18.ColumnEdit = this.Image5;
+            this.gridColumn18.FieldName = "Image5";
             this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 16;
+            this.gridColumn18.VisibleIndex = 15;
             // 
-            // nPicEdit5
+            // Image5
             // 
-            this.nPicEdit5.Name = "nPicEdit5";
+            this.Image5.Name = "Image5";
             // 
             // gridColumn15
             // 
@@ -1045,6 +1050,7 @@
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmGSHOP12";
             this.Size = new System.Drawing.Size(1027, 576);
+            this.Load += new System.EventHandler(this.frmGSHOP12_Load);
             this.Controls.SetChildIndex(this.efwPanelControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             this.Controls.SetChildIndex(this.splitterControl1, 0);
@@ -1061,11 +1067,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtI_SEARCH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riPicEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riPicEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPicEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPicEdit4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPicEdit5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -1123,7 +1129,7 @@
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit riPicEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraEditors.SplitterControl splitterControl1;
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
@@ -1184,9 +1190,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit riPicEdit2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit nPicEdit3;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit nPicEdit4;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit nPicEdit5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image5;
     }
 }

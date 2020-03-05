@@ -101,27 +101,43 @@ namespace YL_MA.BizFrm
 
                 DataRow[] dr = ds.Tables[0].Select();
 
-                efwArea0.Text  = String.Format("{0:#,##0}", dr[0]["AMT"]);
-                efwArea1.Text  = String.Format("{0:#,##0}", dr[1]["AMT"]);
-                efwArea2.Text  = String.Format("{0:#,##0}", dr[2]["AMT"]);
-                efwArea3.Text  = String.Format("{0:#,##0}", dr[3]["AMT"]);
-                efwArea4.Text  = String.Format("{0:#,##0}", dr[4]["AMT"]);
-                efwArea5.Text  = String.Format("{0:#,##0}", dr[5]["AMT"]);
-                efwArea6.Text  = String.Format("{0:#,##0}", dr[6]["AMT"]);
-                efwArea7.Text  = String.Format("{0:#,##0}", dr[7]["AMT"]);
-                efwArea8.Text  = String.Format("{0:#,##0}", dr[8]["AMT"]);
-                efwArea9.Text  = String.Format("{0:#,##0}", dr[9]["AMT"]);
-                efwArea10.Text = String.Format("{0:#,##0}", dr[10]["AMT"]);
-                efwArea11.Text = String.Format("{0:#,##0}", dr[11]["AMT"]);
-                efwArea12.Text = String.Format("{0:#,##0}", dr[12]["AMT"]);
-                efwArea13.Text = String.Format("{0:#,##0}", dr[13]["AMT"]);
-                efwArea14.Text = String.Format("{0:#,##0}", dr[14]["AMT"]);
-                efwArea15.Text = String.Format("{0:#,##0}", dr[15]["AMT"]);
-                efwArea16.Text = String.Format("{0:#,##0}", dr[16]["AMT"]);
-                efwArea17.Text = String.Format("{0:#,##0}", dr[17]["AMT"]);
-                efwArea18.Text = String.Format("{0:#,##0}", dr[18]["AMT"]);
-                efwArea19.Text = String.Format("{0:#,##0}", dr[19]["AMT"]);
-                efwArea20.Text = String.Format("{0:#,##0}", dr[20]["AMT"]);
+                efwArea0.Text = String.Format("{0:#,##0}", dr[0]["AMT"]);
+                efwArea1.Text = String.Format("{0:#,##0}", dr[1]["AMT"]);
+                efwArea2.Text = String.Format("{0:#,##0}", dr[2]["AMT"]);
+                efwArea3.Text = String.Format("{0:#,##0}", dr[3]["AMT"]);
+
+
+                DataSet ds1 = ServiceAgent.ExecuteDataSet(false, "CONIS_IBS", "USP_MA03_SELECT_01_1"
+                   , dtDATE.EditValue3.Replace("-", "")
+                   );
+                DataRow[] dr1 = ds1.Tables[0].Select();
+
+                efwArea4.Text = String.Format("{0:#,##0}", dr1[0]["AMT"]);
+                efwArea5.Text = String.Format("{0:#,##0}", dr1[1]["AMT"]);
+                efwArea6.Text = String.Format("{0:#,##0}", dr1[2]["AMT"]);
+                efwArea7.Text = String.Format("{0:#,##0}", dr1[3]["AMT"]);
+
+
+                DataSet ds2 = ServiceAgent.ExecuteDataSet(false, "CONIS_IBS", "USP_MA03_SELECT_01_2"
+                   , dtDATE.EditValue3.Replace("-", "")
+                   );
+                DataRow[] dr2 = ds2.Tables[0].Select();
+
+
+
+                efwArea8.Text = String.Format("{0:#,##0}",  dr2[0]["AMT"]);
+                efwArea9.Text = String.Format("{0:#,##0}",  dr2[1]["AMT"]);
+                efwArea10.Text = String.Format("{0:#,##0}", dr2[2]["AMT"]);
+                efwArea11.Text = String.Format("{0:#,##0}", dr2[3]["AMT"]);
+                efwArea12.Text = String.Format("{0:#,##0}", dr2[4]["AMT"]);
+                efwArea13.Text = String.Format("{0:#,##0}", dr2[5]["AMT"]);
+                efwArea14.Text = String.Format("{0:#,##0}", dr2[6]["AMT"]);
+                efwArea15.Text = String.Format("{0:#,##0}", dr2[7]["AMT"]);
+                efwArea16.Text = String.Format("{0:#,##0}", dr2[8]["AMT"]);
+                efwArea17.Text = String.Format("{0:#,##0}", dr2[9]["AMT"]);
+                efwArea18.Text = String.Format("{0:#,##0}", dr2[10]["AMT"]);
+                efwArea19.Text = String.Format("{0:#,##0}", dr2[11]["AMT"]);
+                efwArea20.Text = String.Format("{0:#,##0}", dr2[12]["AMT"]);
 
             }
             catch (Exception ex)

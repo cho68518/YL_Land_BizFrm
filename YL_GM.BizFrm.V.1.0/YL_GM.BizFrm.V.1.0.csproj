@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5B7850A0-A628-4D0B-BC3F-FBCDB66DF433}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_GM.BizFrm</RootNamespace>
     <AssemblyName>YL_GM.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -111,6 +111,18 @@
     <Compile Include="Dlg\frmGM01_Pop01.Designer.cs">
       <DependentUpon>frmGM01_Pop01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dlg\frmMemberInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmMemberInfo.designer.cs">
+      <DependentUpon>frmMemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM06.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM06.Designer.cs">
+      <DependentUpon>frmGM06.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGM05_Pop01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +208,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmGM01_Pop03.resx">
       <DependentUpon>frmGM01_Pop03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\frmMemberInfo.resx">
+      <DependentUpon>frmMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM06.resx">
+      <DependentUpon>frmGM06.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM01.resx">
       <DependentUpon>frmGM01.cs</DependentUpon>

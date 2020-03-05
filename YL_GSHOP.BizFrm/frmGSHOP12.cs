@@ -29,12 +29,16 @@ namespace YL_GSHOP.BizFrm
             //폼명설정
             this.FrmName = "체험 고객선정 등록";
 
-            gridView1.CustomUnboundColumnData += gridView1_CustomUnboundColumnData;
+
+            //    efwGridControl1.DataSource = GetData();
+
+            
 
         }
-        
 
-        public override void FrmLoadEvent()
+
+
+        private void frmGSHOP12_Load(object sender, EventArgs e)
         {
             base.FrmLoadEvent();
             DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
@@ -49,25 +53,78 @@ namespace YL_GSHOP.BizFrm
             this.IsCancel = false;
             this.IsPrint = false;
             this.IsExcel = false;
-            
+
             gridView1.OptionsView.ShowFooter = true;
 
             rbP_SHOW_TYPE.EditValue = "T";
+
+
+
+            //GridColumn images1 = gridView1.Columns.AddField("Image1");
+            //images1.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            //images1.Visible = true;
+            //images1.ColumnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+
+
+            //GridColumn images2 = gridView1.Columns.AddField("Image2");
+            //images2.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            //images2.Visible = true;
+            //images2.ColumnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+
+
+            //GridColumn images3 = gridView1.Columns.AddField("Image3");
+            //images3.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            //images3.Visible = true;
+            //images3.ColumnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+
+
+            //GridColumn images4 = gridView1.Columns.AddField("Image4");
+            //images4.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            //images4.Visible = true;
+            //images4.ColumnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+
+
+            //GridColumn images5 = gridView1.Columns.AddField("Image5");
+            //images5.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            //images5.Visible = true;
+            //images5.ColumnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+
+
             SetCmb();
 
+            gridView1.CustomUnboundColumnData += gridView1_CustomUnboundColumnData;
         }
+        
+        Dictionary<String, Bitmap> iconsCache = new Dictionary<string, Bitmap>();
 
         void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
-            try
+            DataRow dr = (e.Row as DataRowView).Row;
+            string url = string.Empty;
+
+            if (e.Column.FieldName == "Image1")
             {
-                DataRow dr = (e.Row as DataRowView).Row;
-                string url = dr["pic_url1"].ToString();
-                if (iconsCache.ContainsKey(url))
-                {
-                    e.Value = iconsCache[url];
-                    return;
-                }
+                url = dr["pic_url1"].ToString();
+            }
+
+            if (e.Column.FieldName == "Image2")
+            {
+                url = dr["pic_url2"].ToString();
+            }
+            
+            if (e.Column.FieldName == "Image3")
+            {
+                url = dr["pic_url3"].ToString();
+            }
+
+            if (iconsCache.ContainsKey(url))
+            {
+                e.Value = iconsCache[url];
+                return;
+            }
+
+            if (url != "")
+            {
                 var request = WebRequest.Create(url);
 
                 using (var response = request.GetResponse())
@@ -78,14 +135,7 @@ namespace YL_GSHOP.BizFrm
                         iconsCache.Add(url, (Bitmap)e.Value);
                     }
                 }
-
             }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
-
-
 
 
         }
@@ -169,8 +219,6 @@ namespace YL_GSHOP.BizFrm
             }
         }
 
-        Dictionary<String, Bitmap> iconsCache = new Dictionary<string, Bitmap>();
-        
-
+ 
     }
 }

@@ -54,7 +54,7 @@ namespace YL_DONUT.BizFrm
             this.FrmName = "주문 현황";
 
 
-                    }
+        }
 
                 
         #region FrmLoadEvent()
@@ -80,11 +80,18 @@ namespace YL_DONUT.BizFrm
 
             gridView1.OptionsView.ShowFooter = true;
 
+            gridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
+            gridView1.Columns["p_num"].SummaryItem.DisplayFormat = "{0}";
+
             gridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
             //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "총주문금액: {0:c}";
             gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
+            gridView1.Columns["pp_org_price"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["pp_org_price"].SummaryItem.FieldName = "pp_org_price";
+            gridView1.Columns["pp_org_price"].SummaryItem.DisplayFormat = "{0:c}";
 
             gridView1.Columns["o_donut_d_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["o_donut_d_cost"].SummaryItem.FieldName = "o_donut_d_cost";
