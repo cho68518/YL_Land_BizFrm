@@ -370,7 +370,7 @@ namespace YL_MM.BizFrm
                                 cmd.Parameters.Add(new MySqlParameter("i_doramd_type", MySqlDbType.VarChar));
                                 cmd.Parameters["i_doramd_type"].Value = cmbDORAMD_TYPE.EditValue;
                                 cmd.Parameters["i_doramd_type"].Direction = ParameterDirection.Input;
-
+                                
                                 cmd.Parameters.Add(new MySqlParameter("i_is_comp_md", MySqlDbType.VarChar));
                                 cmd.Parameters["i_is_comp_md"].Value = chkIS_COMP_MD.EditValue;
                                 cmd.Parameters["i_is_comp_md"].Direction = ParameterDirection.Input;

@@ -147,7 +147,7 @@ namespace YL_DONUT.BizFrm
             );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
-
+           
 
             setCmb();
 
@@ -188,8 +188,6 @@ namespace YL_DONUT.BizFrm
 
                 CodeAgent.SetLegacyCode(cmbORDER_SEARCH, strQueruy2);
                 cmbORDER_SEARCH.EditValue = "1";
-
-
             }
             catch (Exception ex)
             {
@@ -336,7 +334,6 @@ namespace YL_DONUT.BizFrm
                         //cmbOrderDate
                         cmd.Parameters.Add("i_order_date", MySqlDbType.VarChar, 10);
                         cmd.Parameters[19].Value = cmbOrderDate.EditValue;
-
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

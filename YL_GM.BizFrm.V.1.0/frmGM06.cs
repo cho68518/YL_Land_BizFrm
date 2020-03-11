@@ -144,6 +144,9 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
                         cmd.Parameters[3].Value = txtI_SEARCH.EditValue;
 
+                        cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[4].Value = txtO_CodeQ.EditValue;
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -164,6 +167,11 @@ namespace YL_GM.BizFrm
 
         public void O_Code()
         {
+            if (string.IsNullOrEmpty(this.txtO_Code.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 주문 번호를 선택하세요!");
+                return;
+            }
             try
             {
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
@@ -195,6 +203,12 @@ namespace YL_GM.BizFrm
 
         public void U_Id()
         {
+            if (string.IsNullOrEmpty(this.txtU_Id.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 회원을 선택하세요!");
+                return;
+            }
+
             try
             {
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
@@ -411,76 +425,62 @@ namespace YL_GM.BizFrm
                 return;
             }
 
-            if (sStory == "208" || sStory == "221" || sStory == "232" || sStory == "242" || sStory == "244" || sStory == "229")
-            {
-                if (string.IsNullOrEmpty(this.txtO_Code.Text))
-                {
-                    MessageAgent.MessageShow(MessageType.Warning, " 주문 번호를 선택하세요!");
-                    return;
-                }
-                if (sStory == "208")
-                {  // PS 후기스토리
+            //if (sStory == "208" || sStory == "221" || sStory == "232" || sStory == "242" || sStory == "244" || sStory == "229" || sStory == "245" || sStory == "222")
+
+            // PS 후기스토리   o_code
+            if (sStory == "208")
+                {  
                     sStoryNo = "domabiz.USP_GM_GM06_INSERT_01";
                     O_Code();
                 }
-                else if (sStory == "221")
-                {   // PS 축하스토리
+            // PS 축하스토리   o_code
+            else if (sStory == "221")
+                {   
                     sStoryNo = "domabiz.USP_GM_GM06_INSERT_02";
                     O_Code();
                 }
-                else if (sStory == "232")
-                {   // 알뜰지원스토리
+            // 알뜰지원스토리  o_code
+            else if (sStory == "232")
+                {  
                     sStoryNo = "domabiz.USP_GM_GM06_INSERT_03";
                     O_Code();
                 }
-                else if (sStory == "242")
-                {   // GS 축하스토리
+            // GS 축하스토리   o_code
+            else if (sStory == "242")
+                {   
                     sStoryNo = "domabiz.USP_GM_GM06_INSERT_04";
                     O_Code();
                 }
-                else if (sStory == "244")
-                {   // GR 축하스토리
+            // GR 축하스토리   o_code
+            else if (sStory == "244")
+                {  
                     sStoryNo = "domabiz.USP_GM_GM06_INSERT_05";
                     O_Code();
                 }
-                else if (sStory == "229")
-                {   // PS 감사스토리
+            // PS 감사스토리   o_code
+            else if (sStory == "229")
+                {   
                     sStoryNo = "domabiz.USP_GM_GM06_INSERT_06";
                     O_Code();
                 }
-                else
-                {
-                    MessageAgent.MessageShow(MessageType.Warning, "준비중.. 입니다");
-                    return;
-                }
-
-            }
-
-            if (sStory == "245" || sStory == "222" )
-            {
-                if (string.IsNullOrEmpty(this.txtU_Id.Text))
-                {
-                    MessageAgent.MessageShow(MessageType.Warning, " 회원을 선택하세요!");
-                    return;
-                }
-
-                if (sStory == "245")
-                {  // PS 연장스토리
+            // PS 연장스토리   u_id
+            else if (sStory == "245")
+                {  
                     sStoryNo = "domabiz.USP_GM_GM06_INSERT_001";
                     U_Id();
                 }
-                else if (sStory == "222" )
-                {  // PS 연장스토리
+            // 알뜰 추천스토리 u_id
+            else if (sStory == "222")
+                {  
                     sStoryNo = "domabiz.USP_GM_GM06_INSERT_002";
                     U_Id();
                 }
-                else
-                {
-                    MessageAgent.MessageShow(MessageType.Warning, "준비중.. 입니다");
-                    return;
-                }
-
+            else
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "준비중.. 입니다");
+                return;
             }
+
         }
 
     }
