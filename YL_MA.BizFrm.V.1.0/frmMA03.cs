@@ -105,28 +105,134 @@ namespace YL_MA.BizFrm
                 efwArea1.Text = String.Format("{0:#,##0}", dr[1]["AMT"]);
                 efwArea2.Text = String.Format("{0:#,##0}", dr[2]["AMT"]);
                 efwArea3.Text = String.Format("{0:#,##0}", dr[3]["AMT"]);
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
+            }
+
+            Open1_1();
+        }
 
 
-                DataSet ds1 = ServiceAgent.ExecuteDataSet(false, "CONIS_IBS", "USP_MA03_SELECT_01_1"
-                   , dtDATE.EditValue3.Replace("-", "")
-                   );
-                DataRow[] dr1 = ds1.Tables[0].Select();
+        private void Open1_1()
+        {
+            //try
+            //{
+            //    Cursor.Current = Cursors.WaitCursor;
+            //    base.Search();
 
-                efwArea4.Text = String.Format("{0:#,##0}", dr1[0]["AMT"]);
-                efwArea5.Text = String.Format("{0:#,##0}", dr1[1]["AMT"]);
-                efwArea6.Text = String.Format("{0:#,##0}", dr1[2]["AMT"]);
-                efwArea7.Text = String.Format("{0:#,##0}", dr1[3]["AMT"]);
+
+            //    DataSet ds = ServiceAgent.ExecuteDataSet(false, "CONIS_IBS", "USP_MA03_SELECT_01_1"
+            //       , dtDATE.EditValue3.Replace("-", "")
+            //       );
+            //    DataRow[] dr = ds.Tables[0].Select();
+
+            //    efwArea4.Text = String.Format("{0:#,##0}", dr[0]["AMT"]);
+            //    efwArea5.Text = String.Format("{0:#,##0}", dr[1]["AMT"]);
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            //    Cursor.Current = Cursors.Default;
+            //}
+
+            string sDate = string.Empty;
+            sDate = dtDATE.EditValue3.Substring(0, 4) + "01";
+
+
+            string strQuery = string.Format(@"SELECT isnull(SUM(RECV_AMOUNT),0) AS AMT  FROM  [YEOYOU_MONEY].[dbo].[TB_MILEAGE] WHERE convert(varchar(6), reg_date,112 )  = '" + sDate + "' AND send_d_type != 'AM' AND recv_d_type != 'MM' AND EVENT_ETC  like '%취소%'  ");
+
+            DataSet ds = ServiceAgent.ExecuteDataSetStr("CONIS_IBS", strQuery);
+
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0][0] != DBNull.Value)
+            {
+                //efwArea4.Text = String.Format("{0:#,##0}", ds[0]["AMT"]);
+                efwArea4.Text = String.Format("{0:#,##0}", ds.Tables[0].Rows[0]["AMT"].ToString());
+            }
+
+            string strQuery1 = string.Format(@"SELECT isnull(SUM(RECV_AMOUNT),0) AS AMT  FROM  [YEOYOU_MONEY].[dbo].[TB_MILEAGE] WHERE convert(varchar(6), reg_date,112 )  = '" + sDate + "' AND EVENT_TYPE = 'PR'  ");
+
+            DataSet ds1 = ServiceAgent.ExecuteDataSetStr("CONIS_IBS", strQuery1);
+
+            if (ds1.Tables.Count > 0 && ds1.Tables[0].Rows.Count > 0 && ds1.Tables[0].Rows[0][0] != DBNull.Value)
+            {
+                efwArea5.Text = String.Format("{0:#,##0}", ds1.Tables[0].Rows[0]["AMT"].ToString());
+            }
+
+
+
+            Open1_3();
+        }
+
+        private void Open1_3()
+        {
+            //try
+            //{
+            //    Cursor.Current = Cursors.WaitCursor;
+            //    base.Search();
+
+
+            //    DataSet ds = ServiceAgent.ExecuteDataSet(false, "CONIS_IBS", "USP_MA03_SELECT_01_3"
+            //       , dtDATE.EditValue3.Replace("-", "")
+            //       );
+            //    DataRow[] dr = ds.Tables[0].Select();
+
+            //    efwArea6.Text = String.Format("{0:#,##0}", dr[0]["AMT"]);
+            //    efwArea7.Text = String.Format("{0:#,##0}", dr[1]["AMT"]);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            //    Cursor.Current = Cursors.Default;
+            //}
+
+
+            string sDate = string.Empty;
+            sDate = dtDATE.EditValue3.Substring(0, 4) + "01";
+
+
+            string strQuery = string.Format(@"SELECT isnull(SUM(RECV_AMOUNT),0) AS AMT  FROM  [YEOYOU_MONEY].[dbo].[TB_MILEAGE] WHERE convert(varchar(6), reg_date,112 )  = '" + sDate + "' AND  (EVENT_TYPE ='DonutToc'  AND EVENT_ID = 'DGT' AND  SEND_ID = 'ynkim'  ) OR ( SEND_ID = 'AdminYN' AND  event_type = 'DOMASHOP' ) ");
+
+            DataSet ds = ServiceAgent.ExecuteDataSetStr("CONIS_IBS", strQuery);
+
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0][0] != DBNull.Value)
+            {
+                //efwArea4.Text = String.Format("{0:#,##0}", ds[0]["AMT"]);
+                efwArea6.Text = String.Format("{0:#,##0}", ds.Tables[0].Rows[0]["AMT"].ToString());
+            }
+
+            string strQuery1 = string.Format(@"SELECT isnull(SUM(RECV_AMOUNT),0) AS AMT  FROM  [YEOYOU_MONEY].[dbo].[TB_MILEAGE] WHERE convert(varchar(6), reg_date,112 )  = '" + sDate + "' AND RECV_ID    = 'AdminMovie'   ");
+
+            DataSet ds1 = ServiceAgent.ExecuteDataSetStr("CONIS_IBS", strQuery1);
+
+            if (ds1.Tables.Count > 0 && ds1.Tables[0].Rows.Count > 0 && ds1.Tables[0].Rows[0][0] != DBNull.Value)
+            {
+                efwArea7.Text = String.Format("{0:#,##0}", ds1.Tables[0].Rows[0]["AMT"].ToString());
+            }
+
+
+            Open1_2();
+        }
+
+        private void Open1_2()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                base.Search();
 
 
                 DataSet ds2 = ServiceAgent.ExecuteDataSet(false, "CONIS_IBS", "USP_MA03_SELECT_01_2"
                    , dtDATE.EditValue3.Replace("-", "")
                    );
                 DataRow[] dr2 = ds2.Tables[0].Select();
+                
 
-
-
-                efwArea8.Text = String.Format("{0:#,##0}",  dr2[0]["AMT"]);
-                efwArea9.Text = String.Format("{0:#,##0}",  dr2[1]["AMT"]);
+                efwArea8.Text = String.Format("{0:#,##0}", dr2[0]["AMT"]);
+                efwArea9.Text = String.Format("{0:#,##0}", dr2[1]["AMT"]);
                 efwArea10.Text = String.Format("{0:#,##0}", dr2[2]["AMT"]);
                 efwArea11.Text = String.Format("{0:#,##0}", dr2[3]["AMT"]);
                 efwArea12.Text = String.Format("{0:#,##0}", dr2[4]["AMT"]);

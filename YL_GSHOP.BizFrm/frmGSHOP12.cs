@@ -26,7 +26,7 @@ namespace YL_GSHOP.BizFrm
         {
             InitializeComponent();
             //단축코드 설정 
-            this.QCode = "GSHOP11";
+            this.QCode = "GSHOP12";
             //폼명설정
             this.FrmName = "체험 고객선정 등록";
 

@@ -218,7 +218,7 @@ namespace YL_GM.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
 
-                        cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
+                        cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 50);
                         cmd.Parameters[0].Value = txtU_Id.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
