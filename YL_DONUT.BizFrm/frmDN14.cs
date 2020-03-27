@@ -97,6 +97,8 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("ad_gs_cele_story", txtAD_GS_CELE_STORY)
                     , new ColumnControlSet("p_discount_price", txtP_DISCOUNT_PRICE)
                     , new ColumnControlSet("ad_gr_cele_story", txtAD_GR_CELE_STORY)
+                    , new ColumnControlSet("gs_thank_doma", txtGS_THANK_DOMA)
+                    , new ColumnControlSet("gs_thank_vip", txtGS_THANK_VIP)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -405,6 +407,14 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_p_discount_price"].Value = Convert.ToInt32(txtP_DISCOUNT_PRICE.EditValue);
                             cmd.Parameters["i_p_discount_price"].Direction = ParameterDirection.Input;
 
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gs_thank_doma", MySqlDbType.Int32));
+                            cmd.Parameters["i_gs_thank_doma"].Value = Convert.ToInt32(txtGS_THANK_DOMA.EditValue);
+                            cmd.Parameters["i_gs_thank_doma"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gs_thank_vip", MySqlDbType.Int32));
+                            cmd.Parameters["i_gs_thank_vip"].Value = Convert.ToInt32(txtGS_THANK_VIP.EditValue);
+                            cmd.Parameters["i_gs_thank_vip"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

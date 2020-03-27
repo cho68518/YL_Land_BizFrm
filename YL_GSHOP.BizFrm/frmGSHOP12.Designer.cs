@@ -50,7 +50,7 @@
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.cmbMember_Search = new Easy.Framework.WinForm.Control.efwLookUpEdit();
-            this.txtI_SEARCH = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtQName = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,10 +59,10 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Image0 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Image1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -141,11 +141,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMember_Search.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtI_SEARCH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image2)).BeginInit();
@@ -212,7 +212,7 @@
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Controls.Add(this.dtE_DATE);
             this.efwPanelControl1.Controls.Add(this.cmbMember_Search);
-            this.efwPanelControl1.Controls.Add(this.txtI_SEARCH);
+            this.efwPanelControl1.Controls.Add(this.txtQName);
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
             this.efwPanelControl1.Name = "efwPanelControl1";
@@ -230,6 +230,7 @@
             this.txtPic_Url5.RequireMessage = null;
             this.txtPic_Url5.Size = new System.Drawing.Size(29, 20);
             this.txtPic_Url5.TabIndex = 48;
+            this.txtPic_Url5.Visible = false;
             // 
             // txtPic_Url4
             // 
@@ -242,6 +243,7 @@
             this.txtPic_Url4.RequireMessage = null;
             this.txtPic_Url4.Size = new System.Drawing.Size(29, 20);
             this.txtPic_Url4.TabIndex = 47;
+            this.txtPic_Url4.Visible = false;
             // 
             // txtPic_Url3
             // 
@@ -254,6 +256,7 @@
             this.txtPic_Url3.RequireMessage = null;
             this.txtPic_Url3.Size = new System.Drawing.Size(29, 20);
             this.txtPic_Url3.TabIndex = 46;
+            this.txtPic_Url3.Visible = false;
             // 
             // txtPic_Url2
             // 
@@ -266,6 +269,7 @@
             this.txtPic_Url2.RequireMessage = null;
             this.txtPic_Url2.Size = new System.Drawing.Size(29, 20);
             this.txtPic_Url2.TabIndex = 45;
+            this.txtPic_Url2.Visible = false;
             // 
             // txtPic_Url1
             // 
@@ -278,6 +282,7 @@
             this.txtPic_Url1.RequireMessage = null;
             this.txtPic_Url1.Size = new System.Drawing.Size(29, 20);
             this.txtPic_Url1.TabIndex = 44;
+            this.txtPic_Url1.Visible = false;
             // 
             // txtIdx
             // 
@@ -290,6 +295,7 @@
             this.txtIdx.RequireMessage = null;
             this.txtIdx.Size = new System.Drawing.Size(29, 20);
             this.txtIdx.TabIndex = 43;
+            this.txtIdx.Visible = false;
             // 
             // efwLabel3
             // 
@@ -342,7 +348,7 @@
             // 
             // dtS_DATE
             // 
-            this.dtS_DATE.EditValue = new System.DateTime(2020, 3, 6, 0, 0, 0, 0);
+            this.dtS_DATE.EditValue = new System.DateTime(2020, 3, 26, 0, 0, 0, 0);
             this.dtS_DATE.IsRequire = true;
             this.dtS_DATE.Location = new System.Drawing.Point(87, 16);
             this.dtS_DATE.Name = "dtS_DATE";
@@ -359,7 +365,7 @@
             // 
             // dtE_DATE
             // 
-            this.dtE_DATE.EditValue = new System.DateTime(2020, 3, 6, 0, 0, 0, 0);
+            this.dtE_DATE.EditValue = new System.DateTime(2020, 3, 26, 0, 0, 0, 0);
             this.dtE_DATE.IsRequire = true;
             this.dtE_DATE.Location = new System.Drawing.Point(228, 16);
             this.dtE_DATE.Name = "dtE_DATE";
@@ -391,17 +397,17 @@
             this.cmbMember_Search.Size = new System.Drawing.Size(118, 20);
             this.cmbMember_Search.TabIndex = 41;
             // 
-            // txtI_SEARCH
+            // txtQName
             // 
-            this.txtI_SEARCH.EditValue2 = null;
-            this.txtI_SEARCH.EraserGroup = "CLR1";
-            this.txtI_SEARCH.Location = new System.Drawing.Point(540, 16);
-            this.txtI_SEARCH.Name = "txtI_SEARCH";
-            this.txtI_SEARCH.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtI_SEARCH.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtI_SEARCH.RequireMessage = null;
-            this.txtI_SEARCH.Size = new System.Drawing.Size(142, 20);
-            this.txtI_SEARCH.TabIndex = 6;
+            this.txtQName.EditValue2 = null;
+            this.txtQName.EraserGroup = "CLR1";
+            this.txtQName.Location = new System.Drawing.Point(540, 16);
+            this.txtQName.Name = "txtQName";
+            this.txtQName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtQName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtQName.RequireMessage = null;
+            this.txtQName.Size = new System.Drawing.Size(142, 20);
+            this.txtQName.TabIndex = 6;
             // 
             // efwGridControl1
             // 
@@ -463,8 +469,8 @@
             this.gridColumn4,
             this.gridColumn6,
             this.gridColumn7,
-            this.gridColumn8,
             this.gridColumn23,
+            this.gridColumn8,
             this.gridColumn14,
             this.gridColumn9,
             this.gridColumn10,
@@ -534,22 +540,6 @@
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 5;
             // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "선택1";
-            this.gridColumn8.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.gridColumn8.FieldName = "best_pic1";
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 6;
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            this.repositoryItemCheckEdit1.ValueChecked = "Y";
-            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
-            // 
             // gridColumn23
             // 
             this.gridColumn23.Caption = "프로파일 이미지";
@@ -558,11 +548,27 @@
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 7;
+            this.gridColumn23.VisibleIndex = 6;
             // 
             // Image0
             // 
             this.Image0.Name = "Image0";
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "선택1";
+            this.gridColumn8.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.gridColumn8.FieldName = "best_pic1";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 7;
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.ValueChecked = "Y";
+            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
             // 
             // gridColumn14
             // 
@@ -1248,11 +1254,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMember_Search.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtI_SEARCH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image2)).EndInit();
@@ -1315,7 +1321,7 @@
         private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
         private Easy.Framework.WinForm.Control.efwDateEdit dtE_DATE;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbMember_Search;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtI_SEARCH;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtQName;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;

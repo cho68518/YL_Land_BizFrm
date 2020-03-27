@@ -1627,44 +1627,100 @@ namespace YL_MM.BizFrm
                             cmd.Parameters[0].Value = txtP_Id.EditValue;
 
                             sId = gridView1.GetRowCellValue(i, "id").ToString();
-
                             if (sId == "")
                                 nId = 0;
                             else
                                 nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "id"));
-
                             cmd.Parameters.Add("i_id", MySqlDbType.Int32, 11);
                             cmd.Parameters[1].Value = nId;
+                            //
 
                             cmd.Parameters.Add("i_pp_title", MySqlDbType.VarChar, 255);
-                            cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "pp_title");
+                            cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "i_pp_title");
+                            //
 
+                            
+                            sId = gridView1.GetRowCellValue(i, "pp_price").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_price"));
                             cmd.Parameters.Add("i_pp_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[3].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_price"));
+                            cmd.Parameters[3].Value = nId;
 
+                            //
+                            
+                            sId = gridView1.GetRowCellValue(i, "pp_org_price").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_org_price"));
                             cmd.Parameters.Add("i_pp_org_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[4].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_org_price"));
+                            cmd.Parameters[4].Value = nId;
 
+                            //
+                            
+                            sId = gridView1.GetRowCellValue(i, "pp_vip_price").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_vip_price"));
                             cmd.Parameters.Add("i_pp_vip_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[5].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_vip_price"));
-
+                            cmd.Parameters[5].Value = nId;
+                            //
+                            
+                            sId = gridView1.GetRowCellValue(i, "pp_ps_oper_price").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_ps_oper_price"));
                             cmd.Parameters.Add("i_pp_ps_oper_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[6].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_ps_oper_price"));
-
+                            cmd.Parameters[6].Value = nId;
+                            //
+                            
+                            sId = gridView1.GetRowCellValue(i, "pp_discount_price").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_discount_price"));
                             cmd.Parameters.Add("i_pp_discount_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[7].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_discount_price"));
-
+                            cmd.Parameters[7].Value = nId;
+                            //
+                            
+                            sId = gridView1.GetRowCellValue(i, "pp_md_chef_price").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_md_chef_price"));
                             cmd.Parameters.Add("i_pp_md_chef_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[8].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_md_chef_price"));
+                            cmd.Parameters[8].Value = nId;
 
+                            
+                            sId = gridView1.GetRowCellValue(i, "pp_chef_price").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_chef_price"));
                             cmd.Parameters.Add("i_pp_chef_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[9].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_chef_price"));
+                            cmd.Parameters[9].Value = nId;
 
+                            
+                            sId = gridView1.GetRowCellValue(i, "pp_num").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_num"));
                             cmd.Parameters.Add("i_pp_num", MySqlDbType.Int32, 11);
-                            cmd.Parameters[10].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "pp_num"));
+                            cmd.Parameters[10].Value = nId;
 
+                            
+                            sId = gridView1.GetRowCellValue(i, "refund_donut_cost").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "refund_donut_cost"));
                             cmd.Parameters.Add("i_refund_donut_cost", MySqlDbType.Int32, 11);
-                            cmd.Parameters[11].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "refund_donut_cost"));
+                            cmd.Parameters[11].Value = nId;
 
                             cmd.Parameters.Add("i_is_use", MySqlDbType.VarChar, 1);
                             cmd.Parameters[12].Value = gridView1.GetRowCellValue(i, "is_use");
@@ -1674,6 +1730,7 @@ namespace YL_MM.BizFrm
 
                             cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 100);
                             cmd.Parameters[14].Value = txtP_Name.EditValue;
+
 
                             cmd.Parameters.Add("i_p_delivery_price", MySqlDbType.Int32, 11);
                             cmd.Parameters[15].Value = Convert.ToInt32(txtP_Delivery_Price.EditValue);

@@ -201,7 +201,7 @@ namespace YL_GSHOP.BizFrm
                 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP13_SELECT_02", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP12_SELECT_02", con))
                     {
                         con.Open();
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -218,7 +218,7 @@ namespace YL_GSHOP.BizFrm
 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP13_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP12_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -229,8 +229,11 @@ namespace YL_GSHOP.BizFrm
                         cmd.Parameters[1].Value = dtE_DATE.EditValue3;
 
 
-                        cmd.Parameters.Add("i_Query", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[1].Value = cmbMember_Search.EditValue.ToString();
+                        cmd.Parameters.Add("i_Member_Search", MySqlDbType.VarChar, 2);
+                        cmd.Parameters[2].Value = cmbMember_Search.EditValue.ToString();
+
+                        cmd.Parameters.Add("i_QName", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtQName.EditValue;
 
 
                         if (rbP_SHOW_TYPE.EditValue.ToString() != "Y" && rbP_SHOW_TYPE.EditValue.ToString() != "N")
@@ -239,7 +242,7 @@ namespace YL_GSHOP.BizFrm
                             sShow_Type = rbP_SHOW_TYPE.EditValue.ToString();
 
                         cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[3].Value = sShow_Type;
+                        cmd.Parameters[4].Value = sShow_Type;
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -314,7 +317,7 @@ namespace YL_GSHOP.BizFrm
             {
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP13_SAVE_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP12_SAVE_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
