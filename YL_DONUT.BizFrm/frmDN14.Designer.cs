@@ -87,6 +87,8 @@
             this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -233,8 +235,6 @@
             this.cmbCate_Code3 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.cmbCate_Code2 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.cmbCate_Code1 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
-            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -816,6 +816,26 @@
             this.gridColumn51.VisibleIndex = 23;
             this.gridColumn51.Width = 160;
             // 
+            // gridColumn54
+            // 
+            this.gridColumn54.Caption = "GS 감사스토리_도마";
+            this.gridColumn54.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn54.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn54.FieldName = "gs_thank_doma";
+            this.gridColumn54.Name = "gridColumn54";
+            this.gridColumn54.Visible = true;
+            this.gridColumn54.VisibleIndex = 24;
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.Caption = "GS 감사스토리_VIP";
+            this.gridColumn53.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn53.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn53.FieldName = "gs_thank_vip";
+            this.gridColumn53.Name = "gridColumn53";
+            this.gridColumn53.Visible = true;
+            this.gridColumn53.VisibleIndex = 25;
+            // 
             // gridColumn40
             // 
             this.gridColumn40.Caption = "비고";
@@ -1027,7 +1047,7 @@
             this.efwGridControl3.isAddPrintBtn = true;
             this.efwGridControl3.IsEditable = false;
             this.efwGridControl3.IsMultiLang = false;
-            this.efwGridControl3.Location = new System.Drawing.Point(2, 45);
+            this.efwGridControl3.Location = new System.Drawing.Point(2, 48);
             this.efwGridControl3.MainView = this.gridView3;
             this.efwGridControl3.Name = "efwGridControl3";
             this.efwGridControl3.NowRowHandle = 0;
@@ -1102,7 +1122,7 @@
             this.efwPanelControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl3.Location = new System.Drawing.Point(2, 1);
             this.efwPanelControl3.Name = "efwPanelControl3";
-            this.efwPanelControl3.Size = new System.Drawing.Size(1484, 44);
+            this.efwPanelControl3.Size = new System.Drawing.Size(1484, 47);
             this.efwPanelControl3.TabIndex = 66;
             // 
             // efwSimpleButton3
@@ -2647,26 +2667,6 @@
             this.cmbCate_Code1.Size = new System.Drawing.Size(292, 20);
             this.cmbCate_Code1.TabIndex = 0;
             this.cmbCate_Code1.EditValueChanged += new System.EventHandler(this.cmbCate_Code1_EditValueChanged);
-            // 
-            // gridColumn53
-            // 
-            this.gridColumn53.Caption = "GS 감사스토리_VIP";
-            this.gridColumn53.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn53.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn53.FieldName = "gs_thank_vip";
-            this.gridColumn53.Name = "gridColumn53";
-            this.gridColumn53.Visible = true;
-            this.gridColumn53.VisibleIndex = 25;
-            // 
-            // gridColumn54
-            // 
-            this.gridColumn54.Caption = "GS 감사스토리_도마";
-            this.gridColumn54.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn54.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn54.FieldName = "gs_thank_doma";
-            this.gridColumn54.Name = "gridColumn54";
-            this.gridColumn54.Visible = true;
-            this.gridColumn54.VisibleIndex = 24;
             // 
             // frmDN14
             // 

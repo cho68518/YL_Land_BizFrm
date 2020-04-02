@@ -145,7 +145,5 @@
   <data name="도넛_차액반환_TD머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\도넛_차액반환_TD머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="후기머니관리_UPDATE_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\후기머니관리_UPDATE_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+
 </root>

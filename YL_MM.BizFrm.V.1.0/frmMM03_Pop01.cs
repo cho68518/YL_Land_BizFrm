@@ -945,7 +945,7 @@ namespace YL_MM.BizFrm
 
                 sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
                 sSftp.Close();
-                txtP_Img.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue+"/"+sFileName;
+                txtP_Img.EditValue = "https://media.domalife.net/files/product/domamall/" + txtP_Code.EditValue+"/"+sFileName;
             }
             
         }
@@ -1029,7 +1029,7 @@ namespace YL_MM.BizFrm
 
                 sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
                 sSftp.Close();
-                txtP_Img2.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
+                txtP_Img2.EditValue = "https://media.domalife.net/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
 
 
 
@@ -1115,7 +1115,7 @@ namespace YL_MM.BizFrm
 
                 sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
                 sSftp.Close();
-                txtP_Contents.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
+                txtP_Contents.EditValue = "https://media.domalife.net/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
 
 
 
@@ -1202,7 +1202,7 @@ namespace YL_MM.BizFrm
 
                 sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
                 sSftp.Close();
-                txtPc_Thumbnail.EditValue = "http://media.domalife.net:8080/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
+                txtPc_Thumbnail.EditValue = "https://media.domalife.net/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
 
 
             }

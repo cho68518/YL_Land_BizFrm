@@ -425,7 +425,6 @@ namespace YL_GM.BizFrm
                 return;
             }
 
-            //if (sStory == "208" || sStory == "221" || sStory == "232" || sStory == "242" || sStory == "244" || sStory == "229" || sStory == "245" || sStory == "222")
 
             // PS 후기스토리   o_code
             if (sStory == "208")
