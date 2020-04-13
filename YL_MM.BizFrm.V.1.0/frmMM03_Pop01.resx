@@ -3088,35 +3088,17 @@
   <data name="gridColumn8.Caption" xml:space="preserve">
     <value>MD G메니저정산가</value>
   </data>
-  <data name="gridColumn8.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
   <data name="gridColumn8.Width" type="System.Int32, mscorlib">
     <value>120</value>
   </data>
   <data name="gridColumn9.Caption" xml:space="preserve">
     <value>셰프정산가</value>
   </data>
-  <data name="gridColumn9.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
   <data name="gridColumn9.Width" type="System.Int32, mscorlib">
     <value>73</value>
   </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>상품재고</value>
-  </data>
-  <data name="gridColumn10.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
   </data>
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
     <value>73</value>
@@ -3128,10 +3110,19 @@
     <value>True</value>
   </data>
   <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>7</value>
   </data>
   <data name="gridColumn11.Width" type="System.Int32, mscorlib">
     <value>99</value>
+  </data>
+  <data name="gridColumn18.Caption" xml:space="preserve">
+    <value>TD머니</value>
+  </data>
+  <data name="gridColumn18.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn18.VisibleIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="gridColumn12.Caption" xml:space="preserve">
     <value>옵션정보</value>
@@ -3146,7 +3137,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="gridColumn12.Width" type="System.Int32, mscorlib">
     <value>64</value>
@@ -3164,7 +3155,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn13.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="gridColumn13.Width" type="System.Int32, mscorlib">
     <value>82</value>
@@ -3226,7 +3217,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="gridColumn14.Width" type="System.Int32, mscorlib">
     <value>66</value>
@@ -3733,6 +3724,12 @@
   </data>
   <data name="&gt;&gt;riPicEdit.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit, DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn18.Name" xml:space="preserve">
+    <value>gridColumn18</value>
+  </data>
+  <data name="&gt;&gt;gridColumn18.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMM03_Pop01</value>

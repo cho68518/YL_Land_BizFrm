@@ -70,7 +70,7 @@ namespace YL_DONUT.BizFrm
                       new ColumnControlSet("idx", txtIDX)
                     , new ColumnControlSet("p_id", txtP_ID)
                     , new ColumnControlSet("option_id", txtOPTION_ID)
-                    , new ColumnControlSet("product_name", txtPROD_NM)
+                    , new ColumnControlSet("option_name", txtOPTION_NAME)
                     , new ColumnControlSet("customer_price", txtCUSTOMER_PRICE)
                     , new ColumnControlSet("lowest_price", txtLOWEST_PRICE)
                     , new ColumnControlSet("supply_price", txtSUPPLY_PRICE)
@@ -300,6 +300,10 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_p_id", MySqlDbType.Int32));
                             cmd.Parameters["i_p_id"].Value = Convert.ToInt32(txtP_ID.EditValue);
                             cmd.Parameters["i_p_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_option_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_option_name"].Value = txtOPTION_NAME.EditValue;
+                            cmd.Parameters["i_option_name"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_customer_price", MySqlDbType.Int32));
                             cmd.Parameters["i_customer_price"].Value = Convert.ToInt32(txtCUSTOMER_PRICE.EditValue);

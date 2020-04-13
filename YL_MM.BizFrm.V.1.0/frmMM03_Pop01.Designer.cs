@@ -203,6 +203,7 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).BeginInit();
             this.efwGroupControlProd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).BeginInit();
@@ -1608,6 +1609,7 @@
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11,
+            this.gridColumn18,
             this.gridColumn12,
             this.gridColumn13,
             this.gridColumn14});
@@ -1842,6 +1844,14 @@
             this.picPc_Thumbnail.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
+            // 
+            // gridColumn18
+            // 
+            resources.ApplyResources(this.gridColumn18, "gridColumn18");
+            this.gridColumn18.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn18.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn18.FieldName = "td_donut";
+            this.gridColumn18.Name = "gridColumn18";
             // 
             // frmMM03_Pop01
             // 
@@ -2082,5 +2092,6 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtPs_Oper_Price;
         private Easy.Framework.WinForm.Control.efwTextEdit txtVip_Price;
         private Easy.Framework.WinForm.Control.efwTextEdit txtP_Delivery_Price;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
     }
 }

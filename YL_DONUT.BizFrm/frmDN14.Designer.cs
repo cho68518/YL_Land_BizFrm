@@ -228,7 +228,7 @@
             this.efwLabel9 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel8 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtPROD_NM = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtOPTION_NAME = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cmbCate_Code4 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
@@ -333,7 +333,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtVIP_PRICE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDELIVERY_PRICE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCUSTOMER_PRICE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPROD_NM.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOPTION_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code2.Properties)).BeginInit();
@@ -1002,7 +1002,7 @@
             this.efwGroupControl5.IsMultiLang = false;
             this.efwGroupControl5.Location = new System.Drawing.Point(3, 468);
             this.efwGroupControl5.Name = "efwGroupControl5";
-            this.efwGroupControl5.Size = new System.Drawing.Size(1523, 32);
+            this.efwGroupControl5.Size = new System.Drawing.Size(1523, 85);
             this.efwGroupControl5.TabIndex = 34;
             this.efwGroupControl5.Text = "엑셀 업로드";
             // 
@@ -1013,7 +1013,7 @@
             this.layoutControl6.Location = new System.Drawing.Point(2, 23);
             this.layoutControl6.Name = "layoutControl6";
             this.layoutControl6.Root = this.layoutControlGroup6;
-            this.layoutControl6.Size = new System.Drawing.Size(1519, 7);
+            this.layoutControl6.Size = new System.Drawing.Size(1519, 60);
             this.layoutControl6.TabIndex = 0;
             this.layoutControl6.Text = "layoutControl3";
             // 
@@ -1023,7 +1023,7 @@
             this.efwPanelControl2.Controls.Add(this.efwPanelControl3);
             this.efwPanelControl2.Location = new System.Drawing.Point(7, 7);
             this.efwPanelControl2.Name = "efwPanelControl2";
-            this.efwPanelControl2.Size = new System.Drawing.Size(1488, 1);
+            this.efwPanelControl2.Size = new System.Drawing.Size(1505, 49);
             this.efwPanelControl2.TabIndex = 44;
             // 
             // efwGridControl3
@@ -1047,7 +1047,7 @@
             this.efwGridControl3.isAddPrintBtn = true;
             this.efwGridControl3.IsEditable = false;
             this.efwGridControl3.IsMultiLang = false;
-            this.efwGridControl3.Location = new System.Drawing.Point(2, 48);
+            this.efwGridControl3.Location = new System.Drawing.Point(2, 49);
             this.efwGridControl3.MainView = this.gridView3;
             this.efwGridControl3.Name = "efwGridControl3";
             this.efwGridControl3.NowRowHandle = 0;
@@ -1058,7 +1058,7 @@
             this.repositoryItemMemoExEdit2,
             this.repositoryItemMemoEdit2,
             this.repositoryItemCheckEdit3});
-            this.efwGridControl3.Size = new System.Drawing.Size(1484, 0);
+            this.efwGridControl3.Size = new System.Drawing.Size(1501, 0);
             this.efwGridControl3.TabIndex = 67;
             this.efwGridControl3.TableName = "";
             serviceInfo6.InstanceName = "";
@@ -1120,9 +1120,9 @@
             this.efwPanelControl3.Controls.Add(this.btnExcelSample);
             this.efwPanelControl3.Controls.Add(this.lblCnt);
             this.efwPanelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwPanelControl3.Location = new System.Drawing.Point(2, 1);
+            this.efwPanelControl3.Location = new System.Drawing.Point(2, 2);
             this.efwPanelControl3.Name = "efwPanelControl3";
-            this.efwPanelControl3.Size = new System.Drawing.Size(1484, 47);
+            this.efwPanelControl3.Size = new System.Drawing.Size(1501, 47);
             this.efwPanelControl3.TabIndex = 66;
             // 
             // efwSimpleButton3
@@ -1170,7 +1170,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup6.Name = "Root";
             this.layoutControlGroup6.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup6.Size = new System.Drawing.Size(1502, 12);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(1519, 60);
             this.layoutControlGroup6.TextVisible = false;
             // 
             // layoutControlItem4
@@ -1178,14 +1178,14 @@
             this.layoutControlItem4.Control = this.efwPanelControl2;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1492, 5);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1509, 53);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // splitterControl3
             // 
             this.splitterControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl3.Location = new System.Drawing.Point(3, 500);
+            this.splitterControl3.Location = new System.Drawing.Point(3, 553);
             this.splitterControl3.Name = "splitterControl3";
             this.splitterControl3.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl3.TabIndex = 35;
@@ -1197,7 +1197,7 @@
             this.efwGroupControl3.Controls.Add(this.layoutControl3);
             this.efwGroupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwGroupControl3.IsMultiLang = false;
-            this.efwGroupControl3.Location = new System.Drawing.Point(3, 505);
+            this.efwGroupControl3.Location = new System.Drawing.Point(3, 558);
             this.efwGroupControl3.Name = "efwGroupControl3";
             this.efwGroupControl3.Size = new System.Drawing.Size(1523, 31);
             this.efwGroupControl3.TabIndex = 36;
@@ -1572,7 +1572,7 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 536);
+            this.splitterControl1.Location = new System.Drawing.Point(3, 589);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl1.TabIndex = 37;
@@ -1630,7 +1630,7 @@
             this.efwGroupControl4.Controls.Add(this.efwLabel9);
             this.efwGroupControl4.Controls.Add(this.efwLabel8);
             this.efwGroupControl4.Controls.Add(this.efwLabel6);
-            this.efwGroupControl4.Controls.Add(this.txtPROD_NM);
+            this.efwGroupControl4.Controls.Add(this.txtOPTION_NAME);
             this.efwGroupControl4.Controls.Add(this.efwLabel5);
             this.efwGroupControl4.Controls.Add(this.efwLabel3);
             this.efwGroupControl4.Controls.Add(this.cmbCate_Code4);
@@ -1639,9 +1639,9 @@
             this.efwGroupControl4.Controls.Add(this.cmbCate_Code1);
             this.efwGroupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl4.IsMultiLang = false;
-            this.efwGroupControl4.Location = new System.Drawing.Point(3, 541);
+            this.efwGroupControl4.Location = new System.Drawing.Point(3, 594);
             this.efwGroupControl4.Name = "efwGroupControl4";
-            this.efwGroupControl4.Size = new System.Drawing.Size(1523, 241);
+            this.efwGroupControl4.Size = new System.Drawing.Size(1523, 188);
             this.efwGroupControl4.TabIndex = 66;
             this.efwGroupControl4.Text = "수정";
             // 
@@ -2566,16 +2566,16 @@
             this.efwLabel6.TabIndex = 7;
             this.efwLabel6.Text = "소비자가";
             // 
-            // txtPROD_NM
+            // txtOPTION_NAME
             // 
-            this.txtPROD_NM.EditValue2 = null;
-            this.txtPROD_NM.Location = new System.Drawing.Point(137, 84);
-            this.txtPROD_NM.Name = "txtPROD_NM";
-            this.txtPROD_NM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtPROD_NM.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtPROD_NM.RequireMessage = null;
-            this.txtPROD_NM.Size = new System.Drawing.Size(624, 20);
-            this.txtPROD_NM.TabIndex = 6;
+            this.txtOPTION_NAME.EditValue2 = null;
+            this.txtOPTION_NAME.Location = new System.Drawing.Point(137, 84);
+            this.txtOPTION_NAME.Name = "txtOPTION_NAME";
+            this.txtOPTION_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOPTION_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOPTION_NAME.RequireMessage = null;
+            this.txtOPTION_NAME.Size = new System.Drawing.Size(624, 20);
+            this.txtOPTION_NAME.TabIndex = 6;
             // 
             // efwLabel5
             // 
@@ -2789,7 +2789,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtVIP_PRICE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDELIVERY_PRICE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCUSTOMER_PRICE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPROD_NM.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOPTION_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCate_Code2.Properties)).EndInit();
@@ -2955,7 +2955,7 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel9;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel8;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtPROD_NM;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOPTION_NAME;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbCate_Code4;

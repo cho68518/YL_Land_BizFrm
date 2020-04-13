@@ -110,5 +110,10 @@ namespace YL_MM.BizFrm
             FrmBaseLoad(new frmMM15());
 
         }
+
+        private void efwSimpleButton16_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmMM16());
+        }
     }
 }

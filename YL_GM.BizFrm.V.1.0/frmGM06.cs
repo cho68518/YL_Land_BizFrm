@@ -468,12 +468,12 @@ namespace YL_GM.BizFrm
                     sStoryNo = "domabiz.USP_GM_GM06_INSERT_001";
                     U_Id();
                 }
-            // 알뜰 추천스토리 u_id
-            else if (sStory == "222")
-                {  
-                    sStoryNo = "domabiz.USP_GM_GM06_INSERT_002";
-                    U_Id();
-                }
+            // 도마 오픈스토리 u_id
+            else if (sStory == "224")
+            {
+                sStoryNo = "domabiz.USP_GM_GM06_INSERT_002";
+                U_Id();
+            }
             else
             {
                 MessageAgent.MessageShow(MessageType.Warning, "준비중.. 입니다");
@@ -482,6 +482,10 @@ namespace YL_GM.BizFrm
 
         }
 
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

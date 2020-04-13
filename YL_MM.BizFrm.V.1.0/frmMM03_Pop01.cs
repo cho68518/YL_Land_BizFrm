@@ -1636,7 +1636,7 @@ namespace YL_MM.BizFrm
                             //
 
                             cmd.Parameters.Add("i_pp_title", MySqlDbType.VarChar, 255);
-                            cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "i_pp_title");
+                            cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "pp_title");
                             //
 
                             
@@ -1735,6 +1735,14 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add("i_p_delivery_price", MySqlDbType.Int32, 11);
                             cmd.Parameters[15].Value = Convert.ToInt32(txtP_Delivery_Price.EditValue);
 
+                            sId = gridView1.GetRowCellValue(i, "td_donut").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "td_donut"));
+                            cmd.Parameters.Add("i_td_donut", MySqlDbType.Int32, 11);
+                            cmd.Parameters[16].Value = nId;
+
                             cmd.ExecuteNonQuery();
                             con.Close();
                         }
@@ -1745,7 +1753,6 @@ namespace YL_MM.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -1806,8 +1813,6 @@ namespace YL_MM.BizFrm
             //    popup.pURL = txtP_Contents.Text;
             //else if (Pic1 == "4")
             //    popup.pURL = txtPc_Thumbnail.Text;
-
-
 
         }
 
