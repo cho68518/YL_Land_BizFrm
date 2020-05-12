@@ -67,6 +67,12 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwGroupControlProd = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.chkGShop = new Easy.Framework.WinForm.Control.efwCheckEdit();
+            this.chkChef = new Easy.Framework.WinForm.Control.efwCheckEdit();
+            this.chkVip = new Easy.Framework.WinForm.Control.efwCheckEdit();
+            this.chkMember = new Easy.Framework.WinForm.Control.efwCheckEdit();
+            this.chkAll = new Easy.Framework.WinForm.Control.efwCheckEdit();
+            this.efwLabel39 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel38 = new Easy.Framework.WinForm.Control.efwLabel();
             this.btnSave = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGroupControl5 = new Easy.Framework.WinForm.Control.efwGroupControl();
@@ -82,6 +88,8 @@
             this.txtC_Code3 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtP_Img = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtC_Code4 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtP_Max_Purchase_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel13 = new Easy.Framework.WinForm.Control.efwLabel();
             this.bthNew = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnFileOpen1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtP_Id = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -104,8 +112,6 @@
             this.rbP_Compare_Type = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.txtP_Multi_Discount_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel14 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtP_Max_Purchase_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwLabel13 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtP_Min_Purchase_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel12 = new Easy.Framework.WinForm.Control.efwLabel();
             this.btnFileOpen3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -186,6 +192,7 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -203,9 +210,13 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).BeginInit();
             this.efwGroupControlProd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkGShop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkChef.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkVip.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkMember.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkAll.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).BeginInit();
             this.efwGroupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPc_Thumbnail.Properties)).BeginInit();
@@ -220,6 +231,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Img.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Max_Purchase_Num.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -231,7 +243,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Compare_Text.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbP_Compare_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Multi_Discount_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Max_Purchase_Num.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Min_Purchase_Num.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picP_CONTENTS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picP_IMG2.Properties)).BeginInit();
@@ -288,6 +299,12 @@
             // efwGroupControlProd
             // 
             this.efwGroupControlProd.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControlProd.CaptionImageOptions.Image")));
+            this.efwGroupControlProd.Controls.Add(this.chkGShop);
+            this.efwGroupControlProd.Controls.Add(this.chkChef);
+            this.efwGroupControlProd.Controls.Add(this.chkVip);
+            this.efwGroupControlProd.Controls.Add(this.chkMember);
+            this.efwGroupControlProd.Controls.Add(this.chkAll);
+            this.efwGroupControlProd.Controls.Add(this.efwLabel39);
             this.efwGroupControlProd.Controls.Add(this.efwLabel38);
             this.efwGroupControlProd.Controls.Add(this.btnSave);
             this.efwGroupControlProd.Controls.Add(this.efwGroupControl5);
@@ -309,8 +326,6 @@
             this.efwGroupControlProd.Controls.Add(this.rbP_Compare_Type);
             this.efwGroupControlProd.Controls.Add(this.txtP_Multi_Discount_Cost);
             this.efwGroupControlProd.Controls.Add(this.efwLabel14);
-            this.efwGroupControlProd.Controls.Add(this.txtP_Max_Purchase_Num);
-            this.efwGroupControlProd.Controls.Add(this.efwLabel13);
             this.efwGroupControlProd.Controls.Add(this.txtP_Min_Purchase_Num);
             this.efwGroupControlProd.Controls.Add(this.efwLabel12);
             this.efwGroupControlProd.Controls.Add(this.btnFileOpen3);
@@ -339,6 +354,54 @@
             resources.ApplyResources(this.efwGroupControlProd, "efwGroupControlProd");
             this.efwGroupControlProd.IsMultiLang = false;
             this.efwGroupControlProd.Name = "efwGroupControlProd";
+            // 
+            // chkGShop
+            // 
+            resources.ApplyResources(this.chkGShop, "chkGShop");
+            this.chkGShop.Name = "chkGShop";
+            this.chkGShop.Properties.Caption = resources.GetString("chkGShop.Properties.Caption");
+            this.chkGShop.Properties.ValueChecked = "1";
+            this.chkGShop.Properties.ValueUnchecked = "0";
+            // 
+            // chkChef
+            // 
+            resources.ApplyResources(this.chkChef, "chkChef");
+            this.chkChef.Name = "chkChef";
+            this.chkChef.Properties.Caption = resources.GetString("chkChef.Properties.Caption");
+            this.chkChef.Properties.ValueChecked = "1";
+            this.chkChef.Properties.ValueUnchecked = "0";
+            // 
+            // chkVip
+            // 
+            resources.ApplyResources(this.chkVip, "chkVip");
+            this.chkVip.Name = "chkVip";
+            this.chkVip.Properties.Caption = resources.GetString("chkVip.Properties.Caption");
+            this.chkVip.Properties.ValueChecked = "1";
+            this.chkVip.Properties.ValueUnchecked = "0";
+            // 
+            // chkMember
+            // 
+            resources.ApplyResources(this.chkMember, "chkMember");
+            this.chkMember.Name = "chkMember";
+            this.chkMember.Properties.Caption = resources.GetString("chkMember.Properties.Caption");
+            this.chkMember.Properties.ValueChecked = "1";
+            this.chkMember.Properties.ValueUnchecked = "0";
+            // 
+            // chkAll
+            // 
+            resources.ApplyResources(this.chkAll, "chkAll");
+            this.chkAll.Name = "chkAll";
+            this.chkAll.Properties.Caption = resources.GetString("chkAll.Properties.Caption");
+            this.chkAll.Properties.ValueChecked = "1";
+            this.chkAll.Properties.ValueUnchecked = "0";
+            this.chkAll.CheckedChanged += new System.EventHandler(this.chkAll_CheckedChanged);
+            // 
+            // efwLabel39
+            // 
+            this.efwLabel39.EraserGroup = null;
+            this.efwLabel39.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel39, "efwLabel39");
+            this.efwLabel39.Name = "efwLabel39";
             // 
             // efwLabel38
             // 
@@ -369,6 +432,8 @@
             this.efwGroupControl5.Controls.Add(this.txtC_Code3);
             this.efwGroupControl5.Controls.Add(this.txtP_Img);
             this.efwGroupControl5.Controls.Add(this.txtC_Code4);
+            this.efwGroupControl5.Controls.Add(this.txtP_Max_Purchase_Num);
+            this.efwGroupControl5.Controls.Add(this.efwLabel13);
             this.efwGroupControl5.EraserGroup = "CLR1";
             this.efwGroupControl5.IsMultiLang = false;
             resources.ApplyResources(this.efwGroupControl5, "efwGroupControl5");
@@ -493,6 +558,30 @@
             this.txtC_Code4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtC_Code4.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtC_Code4.RequireMessage = null;
+            // 
+            // txtP_Max_Purchase_Num
+            // 
+            resources.ApplyResources(this.txtP_Max_Purchase_Num, "txtP_Max_Purchase_Num");
+            this.txtP_Max_Purchase_Num.EditValue2 = null;
+            this.txtP_Max_Purchase_Num.EraserGroup = "CLR1";
+            this.txtP_Max_Purchase_Num.Name = "txtP_Max_Purchase_Num";
+            this.txtP_Max_Purchase_Num.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtP_Max_Purchase_Num.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtP_Max_Purchase_Num.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtP_Max_Purchase_Num.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtP_Max_Purchase_Num.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtP_Max_Purchase_Num.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Max_Purchase_Num.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtP_Max_Purchase_Num.Properties.Mask.EditMask = resources.GetString("txtP_Max_Purchase_Num.Properties.Mask.EditMask");
+            this.txtP_Max_Purchase_Num.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtP_Max_Purchase_Num.Properties.Mask.MaskType")));
+            this.txtP_Max_Purchase_Num.RequireMessage = null;
+            // 
+            // efwLabel13
+            // 
+            this.efwLabel13.EraserGroup = null;
+            this.efwLabel13.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel13, "efwLabel13");
+            this.efwLabel13.Name = "efwLabel13";
             // 
             // bthNew
             // 
@@ -744,30 +833,6 @@
             this.efwLabel14.IsMultiLang = false;
             resources.ApplyResources(this.efwLabel14, "efwLabel14");
             this.efwLabel14.Name = "efwLabel14";
-            // 
-            // txtP_Max_Purchase_Num
-            // 
-            resources.ApplyResources(this.txtP_Max_Purchase_Num, "txtP_Max_Purchase_Num");
-            this.txtP_Max_Purchase_Num.EditValue2 = null;
-            this.txtP_Max_Purchase_Num.EraserGroup = "CLR1";
-            this.txtP_Max_Purchase_Num.Name = "txtP_Max_Purchase_Num";
-            this.txtP_Max_Purchase_Num.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtP_Max_Purchase_Num.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtP_Max_Purchase_Num.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtP_Max_Purchase_Num.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtP_Max_Purchase_Num.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtP_Max_Purchase_Num.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtP_Max_Purchase_Num.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtP_Max_Purchase_Num.Properties.Mask.EditMask = resources.GetString("txtP_Max_Purchase_Num.Properties.Mask.EditMask");
-            this.txtP_Max_Purchase_Num.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtP_Max_Purchase_Num.Properties.Mask.MaskType")));
-            this.txtP_Max_Purchase_Num.RequireMessage = null;
-            // 
-            // efwLabel13
-            // 
-            this.efwLabel13.EraserGroup = null;
-            this.efwLabel13.IsMultiLang = false;
-            resources.ApplyResources(this.efwLabel13, "efwLabel13");
-            this.efwLabel13.Name = "efwLabel13";
             // 
             // txtP_Min_Purchase_Num
             // 
@@ -1702,6 +1767,14 @@
             this.gridColumn11.FieldName = "refund_donut_cost";
             this.gridColumn11.Name = "gridColumn11";
             // 
+            // gridColumn18
+            // 
+            resources.ApplyResources(this.gridColumn18, "gridColumn18");
+            this.gridColumn18.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn18.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn18.FieldName = "td_donut";
+            this.gridColumn18.Name = "gridColumn18";
+            // 
             // gridColumn12
             // 
             resources.ApplyResources(this.gridColumn12, "gridColumn12");
@@ -1845,14 +1918,6 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
-            // gridColumn18
-            // 
-            resources.ApplyResources(this.gridColumn18, "gridColumn18");
-            this.gridColumn18.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn18.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn18.FieldName = "td_donut";
-            this.gridColumn18.Name = "gridColumn18";
-            // 
             // frmMM03_Pop01
             // 
             resources.ApplyResources(this, "$this");
@@ -1870,8 +1935,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).EndInit();
             this.efwGroupControlProd.ResumeLayout(false);
             this.efwGroupControlProd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkGShop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkChef.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkVip.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkMember.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkAll.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).EndInit();
             this.efwGroupControl5.ResumeLayout(false);
+            this.efwGroupControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPc_Thumbnail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath3.Properties)).EndInit();
@@ -1884,6 +1955,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Img.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtP_Max_Purchase_Num.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
@@ -1895,7 +1967,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Compare_Text.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbP_Compare_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Multi_Discount_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtP_Max_Purchase_Num.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Min_Purchase_Num.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picP_CONTENTS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picP_IMG2.Properties)).EndInit();
@@ -2093,5 +2164,11 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtVip_Price;
         private Easy.Framework.WinForm.Control.efwTextEdit txtP_Delivery_Price;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel39;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chkGShop;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chkChef;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chkVip;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chkMember;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chkAll;
     }
 }

@@ -136,6 +136,12 @@
     <Compile Include="Dlg\frmMemberInfo_Dup.Designer.cs">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMM17.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM17.Designer.cs">
+      <DependentUpon>frmMM17.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMM16.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -357,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM16.resx">
       <DependentUpon>frmMM16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM17.resx">
+      <DependentUpon>frmMM17.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest01.resx">
       <DependentUpon>frmTest01.cs</DependentUpon>

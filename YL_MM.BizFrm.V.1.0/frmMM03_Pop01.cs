@@ -39,6 +39,13 @@ namespace YL_MM.BizFrm
             cbP_Discount_Donut1.EditValue = null;
             cbP_Discount_Donut2.EditValue = null;
             cbP_Discount_Donut3.EditValue = null;
+
+            chkAll.EditValue = '0';
+            chkMember.EditValue = '0';
+            chkVip.EditValue = '0';
+            chkChef.EditValue = '0';
+            chkGShop.EditValue = '0';
+
             gridView1.OptionsView.ShowFooter = true;
             SetCmb();
             Open1();
@@ -591,6 +598,23 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add(new MySqlParameter("o_shops_type", MySqlDbType.VarChar));
                         cmd.Parameters["o_shops_type"].Direction = ParameterDirection.Output;
+                        //
+                        
+                        cmd.Parameters.Add(new MySqlParameter("o_P_Member_level_All", MySqlDbType.VarChar));
+                        cmd.Parameters["o_P_Member_level_All"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_P_Member_level_Member", MySqlDbType.VarChar));
+                        cmd.Parameters["o_P_Member_level_Member"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_P_Member_level_Vip", MySqlDbType.VarChar));
+                        cmd.Parameters["o_P_Member_level_Vip"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_P_Member_level_Chef", MySqlDbType.VarChar));
+                        cmd.Parameters["o_P_Member_level_Chef"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_P_Member_level_GShop", MySqlDbType.VarChar));
+                        cmd.Parameters["o_P_Member_level_GShop"].Direction = ParameterDirection.Output;
+                        //
 
                         cmd.ExecuteNonQuery();
 
@@ -656,6 +680,27 @@ namespace YL_MM.BizFrm
                         rbPC_Use_Type.EditValue = cmd.Parameters["o_pc_use_type"].Value.ToString();
                         txtPC_Content.EditValue = cmd.Parameters["o_pc_content"].Value.ToString();
                         cmbShops_Type.EditValue = cmd.Parameters["o_shops_type"].Value.ToString();
+
+                        chkAll.EditValue = cmd.Parameters["o_P_Member_level_All"].Value.ToString();
+                        chkMember.EditValue = cmd.Parameters["o_P_Member_level_Member"].Value.ToString();
+                        chkVip.EditValue = cmd.Parameters["o_P_Member_level_Vip"].Value.ToString();
+                        chkChef.EditValue = cmd.Parameters["o_P_Member_level_Chef"].Value.ToString();
+                        chkGShop.EditValue = cmd.Parameters["o_P_Member_level_GShop"].Value.ToString();
+
+                        if (chkAll.EditValue.ToString() == "1")
+                        {
+                            this.chkMember.Enabled = false;
+                            this.chkVip.Enabled = false;
+                            this.chkChef.Enabled = false;
+                            this.chkGShop.Enabled = false;
+                        }
+                        else if (chkAll.EditValue.ToString() == "0")
+                        {
+                            this.chkMember.Enabled = true;
+                            this.chkVip.Enabled = true;
+                            this.chkChef.Enabled = true;
+                            this.chkGShop.Enabled = true;
+                        }
 
                         Open2();
                         // 전사 상거래 상세 내용
@@ -1287,6 +1332,11 @@ namespace YL_MM.BizFrm
             rbPC_Use_Type.EditValue = 'Y';
             txtPC_Content.EditValue = null;
 
+            chkAll.EditValue = '0';
+            chkMember.EditValue = '0';
+            chkVip.EditValue = '0';
+            chkChef.EditValue = '0';
+            chkGShop.EditValue = '0';
 
 
             //gridView1.Columns.Clear();
@@ -1540,6 +1590,26 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_Order_Date", MySqlDbType.DateTime));
                             cmd.Parameters["i_Order_Date"].Value = dtOrder_Date.EditValue;
                             cmd.Parameters["i_Order_Date"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Member_level_All", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Member_level_All"].Value = chkAll.EditValue;
+                            cmd.Parameters["i_P_Member_level_All"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Member_level_Member", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Member_level_Member"].Value = chkMember.EditValue;
+                            cmd.Parameters["i_P_Member_level_Member"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Member_level_Vip", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Member_level_Vip"].Value = chkVip.EditValue;
+                            cmd.Parameters["i_P_Member_level_Vip"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Member_level_Chef", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Member_level_Chef"].Value = chkChef.EditValue;
+                            cmd.Parameters["i_P_Member_level_Chef"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Member_level_GShop", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Member_level_GShop"].Value = chkGShop.EditValue;
+                            cmd.Parameters["i_P_Member_level_GShop"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Result_P_Id", MySqlDbType.VarChar));
                             cmd.Parameters["o_Result_P_Id"].Direction = ParameterDirection.Output;
@@ -1816,6 +1886,31 @@ namespace YL_MM.BizFrm
 
         }
 
+        private void chkAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkAll.EditValue.ToString() == "1")
+            {
+                chkMember.EditValue = '0';
+                chkVip.EditValue = '0';
+                chkChef.EditValue = '0';
+                chkGShop.EditValue = '0';
+                this.chkMember.Enabled = false;
+                this.chkVip.Enabled = false;
+                this.chkChef.Enabled = false;
+                this.chkGShop.Enabled = false;
+            }
+            else if (chkAll.EditValue.ToString() == "0")
+            {
+                chkMember.EditValue = '0';
+                chkVip.EditValue = '0';
+                chkChef.EditValue = '0';
+                chkGShop.EditValue = '0';
+                this.chkMember.Enabled = true;
+                this.chkVip.Enabled = true;
+                this.chkChef.Enabled = true;
+                this.chkGShop.Enabled = true;
+            }
 
+        }
     }
 }

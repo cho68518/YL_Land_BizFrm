@@ -66,12 +66,10 @@
             this.efwLabel16 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea7 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel15 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwArea6 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel80 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea5 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel14 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea4 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwArea2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel13 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwArea1 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -103,6 +101,8 @@
             this.efwLabel38 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel39 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel40 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwArea2 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwArea6 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
@@ -122,6 +122,8 @@
             // efwGroupControl1
             // 
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
+            this.efwGroupControl1.Controls.Add(this.efwArea6);
+            this.efwGroupControl1.Controls.Add(this.efwArea2);
             this.efwGroupControl1.Controls.Add(this.efwPanelControl1);
             this.efwGroupControl1.Controls.Add(this.efwLabel1);
             this.efwGroupControl1.Controls.Add(this.efwArea0);
@@ -155,12 +157,10 @@
             this.efwGroupControl1.Controls.Add(this.efwLabel16);
             this.efwGroupControl1.Controls.Add(this.efwArea7);
             this.efwGroupControl1.Controls.Add(this.efwLabel15);
-            this.efwGroupControl1.Controls.Add(this.efwArea6);
             this.efwGroupControl1.Controls.Add(this.efwLabel80);
             this.efwGroupControl1.Controls.Add(this.efwArea5);
             this.efwGroupControl1.Controls.Add(this.efwLabel14);
             this.efwGroupControl1.Controls.Add(this.efwArea4);
-            this.efwGroupControl1.Controls.Add(this.efwArea2);
             this.efwGroupControl1.Controls.Add(this.efwArea3);
             this.efwGroupControl1.Controls.Add(this.efwLabel13);
             this.efwGroupControl1.Controls.Add(this.efwArea1);
@@ -784,7 +784,7 @@
             this.efwLabel2.Name = "efwLabel2";
             this.efwLabel2.Size = new System.Drawing.Size(143, 30);
             this.efwLabel2.TabIndex = 118;
-            this.efwLabel2.Text = "쇼핑매출액_1";
+            this.efwLabel2.Text = "사용 D,SD 머니";
             // 
             // efwArea8
             // 
@@ -866,26 +866,6 @@
             this.efwLabel15.TabIndex = 133;
             this.efwLabel15.Text = "MD 잔액";
             // 
-            // efwArea6
-            // 
-            this.efwArea6.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.efwArea6.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.efwArea6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.efwArea6.Appearance.Options.UseBackColor = true;
-            this.efwArea6.Appearance.Options.UseFont = true;
-            this.efwArea6.Appearance.Options.UseForeColor = true;
-            this.efwArea6.Appearance.Options.UseTextOptions = true;
-            this.efwArea6.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.efwArea6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efwArea6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.efwArea6.EraserGroup = null;
-            this.efwArea6.IsMultiLang = false;
-            this.efwArea6.Location = new System.Drawing.Point(453, 85);
-            this.efwArea6.Name = "efwArea6";
-            this.efwArea6.Size = new System.Drawing.Size(143, 30);
-            this.efwArea6.TabIndex = 140;
-            this.efwArea6.Text = "0";
-            // 
             // efwLabel80
             // 
             this.efwLabel80.Appearance.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -965,26 +945,6 @@
             this.efwArea4.Size = new System.Drawing.Size(143, 30);
             this.efwArea4.TabIndex = 138;
             this.efwArea4.Text = "0";
-            // 
-            // efwArea2
-            // 
-            this.efwArea2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.efwArea2.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.efwArea2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.efwArea2.Appearance.Options.UseBackColor = true;
-            this.efwArea2.Appearance.Options.UseFont = true;
-            this.efwArea2.Appearance.Options.UseForeColor = true;
-            this.efwArea2.Appearance.Options.UseTextOptions = true;
-            this.efwArea2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.efwArea2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efwArea2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.efwArea2.EraserGroup = null;
-            this.efwArea2.IsMultiLang = false;
-            this.efwArea2.Location = new System.Drawing.Point(163, 169);
-            this.efwArea2.Name = "efwArea2";
-            this.efwArea2.Size = new System.Drawing.Size(143, 30);
-            this.efwArea2.TabIndex = 111;
-            this.efwArea2.Text = "0";
             // 
             // efwArea3
             // 
@@ -1565,6 +1525,46 @@
             this.efwLabel40.Size = new System.Drawing.Size(143, 30);
             this.efwLabel40.TabIndex = 118;
             // 
+            // efwArea2
+            // 
+            this.efwArea2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.efwArea2.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.efwArea2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.efwArea2.Appearance.Options.UseBackColor = true;
+            this.efwArea2.Appearance.Options.UseFont = true;
+            this.efwArea2.Appearance.Options.UseForeColor = true;
+            this.efwArea2.Appearance.Options.UseTextOptions = true;
+            this.efwArea2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.efwArea2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.efwArea2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.efwArea2.EraserGroup = null;
+            this.efwArea2.IsMultiLang = false;
+            this.efwArea2.Location = new System.Drawing.Point(163, 169);
+            this.efwArea2.Name = "efwArea2";
+            this.efwArea2.Size = new System.Drawing.Size(143, 30);
+            this.efwArea2.TabIndex = 159;
+            this.efwArea2.Text = "0";
+            // 
+            // efwArea6
+            // 
+            this.efwArea6.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.efwArea6.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.efwArea6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.efwArea6.Appearance.Options.UseBackColor = true;
+            this.efwArea6.Appearance.Options.UseFont = true;
+            this.efwArea6.Appearance.Options.UseForeColor = true;
+            this.efwArea6.Appearance.Options.UseTextOptions = true;
+            this.efwArea6.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.efwArea6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.efwArea6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.efwArea6.EraserGroup = null;
+            this.efwArea6.IsMultiLang = false;
+            this.efwArea6.Location = new System.Drawing.Point(453, 85);
+            this.efwArea6.Name = "efwArea6";
+            this.efwArea6.Size = new System.Drawing.Size(143, 30);
+            this.efwArea6.TabIndex = 160;
+            this.efwArea6.Text = "0";
+            // 
             // frmMA03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1658,12 +1658,10 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel16;
         private Easy.Framework.WinForm.Control.efwLabel efwArea7;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel15;
-        private Easy.Framework.WinForm.Control.efwLabel efwArea6;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel80;
         private Easy.Framework.WinForm.Control.efwLabel efwArea5;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel14;
         private Easy.Framework.WinForm.Control.efwLabel efwArea4;
-        private Easy.Framework.WinForm.Control.efwLabel efwArea2;
         private Easy.Framework.WinForm.Control.efwLabel efwArea3;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel13;
         private Easy.Framework.WinForm.Control.efwLabel efwArea1;
@@ -1672,5 +1670,7 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton btnDetail;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
+        private Easy.Framework.WinForm.Control.efwLabel efwArea6;
+        private Easy.Framework.WinForm.Control.efwLabel efwArea2;
     }
 }

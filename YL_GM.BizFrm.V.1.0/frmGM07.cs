@@ -36,7 +36,7 @@ namespace YL_GM.BizFrm
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = false;
-            this.IsSave = true;
+            this.IsSave = false;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = false;
@@ -60,14 +60,39 @@ namespace YL_GM.BizFrm
 
                       );
 
-            this.efwGridControl1.Click += efwGridControl1_Click;
+            this.efwGridControl2.BindControlSet(
+                      new ColumnControlSet("seq", txtSeq)
+                    , new ColumnControlSet("gcode_id", txtGcode_Id)
+                    , new ColumnControlSet("code_id", txtCode_Id)
+                    , new ColumnControlSet("code_nm", txtCode_NM)
+                    , new ColumnControlSet("code_memo", txtCode_Memo)
+                      );
+
+            this.efwGridControl2.Click += efwGridControl2_Click;
         }
 
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
         }
-
+        private void efwGridControl2_Click(object sender, EventArgs e)
+        {
+        }
         public override void Search()
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open1();  //스토리 마스터
+            }
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open2();  //스토리 색상코드 마스터
+            }
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                Open3();  //스토리 색상코드 마스터
+            }
+        }
+        public void Open1()
         {
             try
             {
@@ -99,10 +124,75 @@ namespace YL_GM.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
+
+        }
+        public void Open2()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                string sCom = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM07_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = "";
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                          //  this.efwGridControl2.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
         }
 
-        private void efwTextEdit11_EditValueChanged(object sender, EventArgs e)
+        public void Open3()
         {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                string sCom = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM07_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = "";
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl3.DataBind(ds);
+                            //  this.efwGridControl2.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
 
         }
 
@@ -181,7 +271,9 @@ namespace YL_GM.BizFrm
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
+                Open1();
             }
         }
+
     }
 }
