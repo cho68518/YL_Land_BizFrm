@@ -44,6 +44,7 @@
     <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -135,6 +136,30 @@
     </Compile>
     <Compile Include="Dlg\frmMemberInfo_Dup.Designer.cs">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM19_Pop02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMM19_Pop02.Designer.cs">
+      <DependentUpon>frmMM19_Pop02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM19_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMM19_Pop01.Designer.cs">
+      <DependentUpon>frmMM19_Pop01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM19.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM19.Designer.cs">
+      <DependentUpon>frmMM19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM18.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM18.Designer.cs">
+      <DependentUpon>frmMM18.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMM17.cs">
       <SubType>UserControl</SubType>
@@ -298,6 +323,12 @@
     <EmbeddedResource Include="Dlg\frmMemberInfo_Dup.resx">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMM19.resx">
+      <DependentUpon>frmMM19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM18.resx">
+      <DependentUpon>frmMM18.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMM15.resx">
       <DependentUpon>frmMM15.cs</DependentUpon>
     </EmbeddedResource>
@@ -366,6 +397,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM17.resx">
       <DependentUpon>frmMM17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM19_Pop01.resx">
+      <DependentUpon>frmMM19_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM19_Pop02.resx">
+      <DependentUpon>frmMM19_Pop02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest01.resx">
       <DependentUpon>frmTest01.cs</DependentUpon>

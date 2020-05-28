@@ -66,6 +66,7 @@
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnMember_delete = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbLEVEL = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -96,8 +97,10 @@
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnDelete = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGridControl2 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -119,6 +122,7 @@
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
@@ -177,6 +181,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -195,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -579,6 +585,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnMember_delete);
             this.layoutControl1.Controls.Add(this.rbLEVEL);
             this.layoutControl1.Controls.Add(this.efwGridControl1);
             this.layoutControl1.Controls.Add(this.btnREL_SAVE);
@@ -591,13 +598,27 @@
             this.layoutControl1.Controls.Add(this.txtRECV_U_NICKNAME);
             this.layoutControl1.Controls.Add(this.txtREMARK);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(2, 23);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(993, 323);
+            this.layoutControl1.Size = new System.Drawing.Size(997, 348);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnMember_delete
+            // 
+            this.btnMember_delete.ButtonType = Easy.Framework.Util.BtnType.Search;
+            this.btnMember_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMember_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMember_delete.ImageOptions.Image")));
+            this.btnMember_delete.IsMultiLang = false;
+            this.btnMember_delete.Location = new System.Drawing.Point(333, 170);
+            this.btnMember_delete.Name = "btnMember_delete";
+            this.btnMember_delete.Size = new System.Drawing.Size(88, 22);
+            this.btnMember_delete.StyleController = this.layoutControl1;
+            this.btnMember_delete.TabIndex = 58;
+            this.btnMember_delete.Text = "삭제";
+            this.btnMember_delete.Click += new System.EventHandler(this.btnMember_delete_Click);
             // 
             // rbLEVEL
             // 
@@ -609,7 +630,7 @@
             this.rbLEVEL.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "일반"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "VIP"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "G메니저")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "구독관계")});
             this.rbLEVEL.RequireMessage = null;
             this.rbLEVEL.Size = new System.Drawing.Size(324, 28);
             this.rbLEVEL.StyleController = this.layoutControl1;
@@ -641,7 +662,7 @@
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.Size = new System.Drawing.Size(556, 299);
+            this.efwGridControl1.Size = new System.Drawing.Size(560, 324);
             this.efwGridControl1.TabIndex = 56;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -824,7 +845,7 @@
             this.txtRECV_U_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRECV_U_NICKNAME.Properties.ReadOnly = true;
             this.txtRECV_U_NICKNAME.RequireMessage = null;
-            this.txtRECV_U_NICKNAME.Size = new System.Drawing.Size(324, 20);
+            this.txtRECV_U_NICKNAME.Size = new System.Drawing.Size(232, 20);
             this.txtRECV_U_NICKNAME.StyleController = this.layoutControl1;
             this.txtRECV_U_NICKNAME.TabIndex = 4;
             this.txtRECV_U_NICKNAME.TabStop = false;
@@ -857,9 +878,10 @@
             this.layoutControlItem25,
             this.layoutControlItem17,
             this.layoutControlItem2,
-            this.layoutControlItem21});
+            this.layoutControlItem21,
+            this.layoutControlItem33});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(993, 323);
+            this.Root.Size = new System.Drawing.Size(997, 348);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem5
@@ -939,7 +961,7 @@
             this.layoutControlItem18.Control = this.efwGridControl1;
             this.layoutControlItem18.Location = new System.Drawing.Point(413, 0);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(560, 303);
+            this.layoutControlItem18.Size = new System.Drawing.Size(564, 328);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
@@ -949,7 +971,7 @@
             this.layoutControlItem6.CustomizationFormText = "아이디";
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 158);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(413, 27);
+            this.layoutControlItem6.Size = new System.Drawing.Size(321, 27);
             this.layoutControlItem6.Text = "추천인 닉네임";
             this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(80, 23);
@@ -963,7 +985,7 @@
             this.layoutControlItem25.MaxSize = new System.Drawing.Size(413, 118);
             this.layoutControlItem25.MinSize = new System.Drawing.Size(413, 118);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(413, 118);
+            this.layoutControlItem25.Size = new System.Drawing.Size(413, 143);
             this.layoutControlItem25.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem25.Text = "비고";
             this.layoutControlItem25.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
@@ -1006,6 +1028,15 @@
             this.layoutControlItem21.TextSize = new System.Drawing.Size(80, 20);
             this.layoutControlItem21.TextToControlDistance = 5;
             // 
+            // layoutControlItem33
+            // 
+            this.layoutControlItem33.Control = this.btnMember_delete;
+            this.layoutControlItem33.Location = new System.Drawing.Point(321, 158);
+            this.layoutControlItem33.Name = "layoutControlItem33";
+            this.layoutControlItem33.Size = new System.Drawing.Size(92, 27);
+            this.layoutControlItem33.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem33.TextVisible = false;
+            // 
             // efwGroupControl2
             // 
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
@@ -1014,12 +1045,13 @@
             this.efwGroupControl2.IsMultiLang = false;
             this.efwGroupControl2.Location = new System.Drawing.Point(0, 348);
             this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(997, 248);
+            this.efwGroupControl2.Size = new System.Drawing.Size(997, 265);
             this.efwGroupControl2.TabIndex = 3;
             this.efwGroupControl2.Text = "담당이사 추천인( 담당G메니저 )";
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.btnDelete);
             this.layoutControl2.Controls.Add(this.efwGridControl2);
             this.layoutControl2.Controls.Add(this.efwSimpleButton2);
             this.layoutControl2.Controls.Add(this.efwSimpleButton1);
@@ -1032,9 +1064,23 @@
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(993, 223);
+            this.layoutControl2.Size = new System.Drawing.Size(993, 240);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.ButtonType = Easy.Framework.Util.BtnType.Search;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+            this.btnDelete.IsMultiLang = false;
+            this.btnDelete.Location = new System.Drawing.Point(333, 69);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(88, 22);
+            this.btnDelete.StyleController = this.layoutControl2;
+            this.btnDelete.TabIndex = 58;
+            this.btnDelete.Text = "삭제";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // efwGridControl2
             // 
@@ -1061,7 +1107,7 @@
             this.efwGridControl2.NowRowHandle = 0;
             this.efwGridControl2.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl2.PKColumns")));
             this.efwGridControl2.PrevRowHandle = -2147483648;
-            this.efwGridControl2.Size = new System.Drawing.Size(556, 199);
+            this.efwGridControl2.Size = new System.Drawing.Size(556, 216);
             this.efwGridControl2.TabIndex = 57;
             this.efwGridControl2.TableName = "";
             serviceInfo6.InstanceName = "";
@@ -1202,7 +1248,7 @@
             this.txtDOMA_U_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDOMA_U_NICKNAME.Properties.ReadOnly = true;
             this.txtDOMA_U_NICKNAME.RequireMessage = null;
-            this.txtDOMA_U_NICKNAME.Size = new System.Drawing.Size(324, 20);
+            this.txtDOMA_U_NICKNAME.Size = new System.Drawing.Size(232, 20);
             this.txtDOMA_U_NICKNAME.StyleController = this.layoutControl2;
             this.txtDOMA_U_NICKNAME.TabIndex = 4;
             this.txtDOMA_U_NICKNAME.TabStop = false;
@@ -1230,9 +1276,10 @@
             this.layoutControlItem13,
             this.layoutControlItem20,
             this.layoutControlItem16,
-            this.layoutControlItem19});
+            this.layoutControlItem19,
+            this.layoutControlItem32});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(993, 223);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(993, 240);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem12
@@ -1245,7 +1292,7 @@
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(321, 30);
             this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem12.Text = "G메니저 아이디";
+            this.layoutControlItem12.Text = "G메니저아이디";
             this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(80, 14);
             this.layoutControlItem12.TextToControlDistance = 5;
@@ -1268,8 +1315,8 @@
             this.layoutControlItem15.CustomizationFormText = "아이디";
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 57);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(413, 27);
-            this.layoutControlItem15.Text = "G메니저 닉네임";
+            this.layoutControlItem15.Size = new System.Drawing.Size(321, 27);
+            this.layoutControlItem15.Text = "G메니저닉네임";
             this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem15.TextSize = new System.Drawing.Size(80, 23);
             this.layoutControlItem15.TextToControlDistance = 5;
@@ -1291,7 +1338,7 @@
             this.layoutControlItem20.MaxSize = new System.Drawing.Size(413, 118);
             this.layoutControlItem20.MinSize = new System.Drawing.Size(413, 118);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(413, 119);
+            this.layoutControlItem20.Size = new System.Drawing.Size(413, 136);
             this.layoutControlItem20.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem20.Text = "비고";
             this.layoutControlItem20.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
@@ -1313,15 +1360,24 @@
             this.layoutControlItem19.Control = this.efwGridControl2;
             this.layoutControlItem19.Location = new System.Drawing.Point(413, 0);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(560, 203);
+            this.layoutControlItem19.Size = new System.Drawing.Size(560, 220);
             this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem19.TextVisible = false;
+            // 
+            // layoutControlItem32
+            // 
+            this.layoutControlItem32.Control = this.btnDelete;
+            this.layoutControlItem32.Location = new System.Drawing.Point(321, 57);
+            this.layoutControlItem32.Name = "layoutControlItem32";
+            this.layoutControlItem32.Size = new System.Drawing.Size(92, 27);
+            this.layoutControlItem32.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem32.TextVisible = false;
             // 
             // frmMM07_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 596);
+            this.ClientSize = new System.Drawing.Size(997, 613);
             this.Controls.Add(this.efwGroupControl2);
             this.Controls.Add(this.efwGroupControl1);
             this.Name = "frmMM07_Pop01";
@@ -1387,6 +1443,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
@@ -1405,6 +1462,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1495,5 +1553,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnDelete;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem32;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnMember_delete;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem33;
     }
 }

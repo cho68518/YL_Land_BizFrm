@@ -403,5 +403,122 @@ namespace YL_MM.BizFrm
                 txtRECV_U_NICKNAME.EditValue = txtRECV_SHEF_U_NICKNAME.EditValue.ToString();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM07_DELETE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_recv_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_recv_id"].Value = txtIDX.EditValue;
+                            cmd.Parameters["i_recv_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_send_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_send_id"].Value = txtRECV_U_ID.EditValue;
+                            cmd.Parameters["i_send_id"].Direction = ParameterDirection.Input;
+                            //txtDOMA_U_ID
+                            cmd.Parameters.Add(new MySqlParameter("i_level", MySqlDbType.VarChar));
+                            cmd.Parameters["i_level"].Value = rbLEVEL.EditValue;
+                            cmd.Parameters["i_level"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_doma_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_doma_id"].Value = txtDOMA_U_ID.EditValue;
+                            cmd.Parameters["i_doma_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark1"].Value = txtREMARK1.EditValue;
+                            cmd.Parameters["i_remark1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+
+
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                finally
+                {
+                    //EfwSimpleButton1_Click(null, null);
+                }
+                Open2();
+            }
+        }
+
+        private void btnMember_delete_Click(object sender, EventArgs e)
+        {
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM07_DELETE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_recv_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_recv_id"].Value = txtIDX.EditValue;
+                            cmd.Parameters["i_recv_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_send_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_send_id"].Value = txtRECV_U_ID.EditValue;
+                            cmd.Parameters["i_send_id"].Direction = ParameterDirection.Input;
+                            //txtDOMA_U_ID
+                            cmd.Parameters.Add(new MySqlParameter("i_level", MySqlDbType.VarChar));
+                            cmd.Parameters["i_level"].Value = rbLEVEL.EditValue;
+                            cmd.Parameters["i_level"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_doma_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_doma_id"].Value = txtDOMA_U_ID.EditValue;
+                            cmd.Parameters["i_doma_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+
+                            cmd.Parameters.Add(new MySqlParameter("o_return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+
+
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                finally
+                {
+                    //EfwSimpleButton1_Click(null, null);
+                }
+                Open1();
+            }
+        }
     }
 }

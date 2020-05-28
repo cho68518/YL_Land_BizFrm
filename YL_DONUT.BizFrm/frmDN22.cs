@@ -57,7 +57,7 @@ namespace YL_DONUT.BizFrm
              ,new ColumnControlSet("is_use", rbIs_use)
              ,new ColumnControlSet("subject", txtSubject)
              ,new ColumnControlSet("contents", txtContents)
-             ,new ColumnControlSet("story_id", txtStory_id)
+             , new ColumnControlSet("story_id", txtStory_id)
              ,new ColumnControlSet("visit_count", txtVisit_count)
             );
 
@@ -126,7 +126,10 @@ namespace YL_DONUT.BizFrm
             {
                 rbLevel.EditValue = "400";
             }
-
+            else if (rbLevelQ.EditValue.ToString() == "206")
+            {
+                rbLevel.EditValue = "206";
+            }
             Search();
         }
 

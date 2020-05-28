@@ -34,7 +34,7 @@ namespace YL_DONUT.BizFrm
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = false;
-            this.IsSave = false;
+            this.IsSave = true;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = false;
@@ -47,7 +47,33 @@ namespace YL_DONUT.BizFrm
 
             gridView1.OptionsView.ShowFooter = true;
 
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "SELECT d_code as DCODE ,d_name as DNAME  FROM domamall.tb_am_product_delivers order by sort";
+
+                DataSet ds = con.selectQueryDataSet();
+                DataTable retDT = ds.Tables[0];
+
+                repositoryItemLookUpEdit1.DataSource = retDT;
+                //컨트롤 초기화
+                InitCodeControl(repositoryItemLookUpEdit1);
+
+                repositoryItemLookUpEdit1.EndUpdate();
+
+            }
+
         }
+
+        private void InitCodeControl(object cdControl)
+        {
+            string DNAME = string.Empty;
+
+            DNAME = "DNAME";
+
+            CodeAgent.InitCodeControl(cdControl, "코드명", "코드", DNAME, "DCODE", "선택하세요");
+        }
+
+
         public override void Search()
         {
             try
@@ -90,5 +116,47 @@ namespace YL_DONUT.BizFrm
             popup = new frmDN20_Pop01();
             popup.ShowDialog();
         }
+
+        public override void Save()
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+
+                        for (int i = 0; i < gridView1.DataRowCount; i++)
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_SCM_SCM04_SAVE_02", con))
+                            {
+
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add("i_id", MySqlDbType.Int32, 11);
+                                cmd.Parameters[0].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "id"));
+
+
+                                cmd.Parameters.Add("i_delivery_num", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "o_delivery_num");
+
+                                cmd.Parameters.Add("i_delivery_code", MySqlDbType.VarChar, 2);
+                                cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "delivers");
+
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
+
+
     }
 }

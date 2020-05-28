@@ -58,6 +58,7 @@
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtidx = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.cbis_use = new Easy.Framework.WinForm.Control.efwCheckEdit();
@@ -77,7 +78,6 @@
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtpay_code = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPay_NameQ.Properties)).BeginInit();
@@ -115,6 +115,7 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1151, 49);
             this.efwPanelControl1.TabIndex = 41;
+            this.efwPanelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.efwPanelControl1_Paint);
             // 
             // txtPay_NameQ
             // 
@@ -416,9 +417,20 @@
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(3, 494);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(1151, 34);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1151, 124);
             this.efwGroupControl1.TabIndex = 45;
             this.efwGroupControl1.Text = "요금제별 적립금액 저장";
+            // 
+            // efwSimpleButton2
+            // 
+            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
+            this.efwSimpleButton2.IsMultiLang = false;
+            this.efwSimpleButton2.Location = new System.Drawing.Point(836, 30);
+            this.efwSimpleButton2.Name = "efwSimpleButton2";
+            this.efwSimpleButton2.Size = new System.Drawing.Size(100, 23);
+            this.efwSimpleButton2.TabIndex = 21;
+            this.efwSimpleButton2.Text = "삭제";
+            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
             // 
             // efwSimpleButton1
             // 
@@ -434,6 +446,7 @@
             // txtidx
             // 
             this.txtidx.EditValue2 = null;
+            this.txtidx.EraserGroup = "CLR1";
             this.txtidx.Location = new System.Drawing.Point(866, 87);
             this.txtidx.Name = "txtidx";
             this.txtidx.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -441,6 +454,7 @@
             this.txtidx.RequireMessage = null;
             this.txtidx.Size = new System.Drawing.Size(64, 20);
             this.txtidx.TabIndex = 19;
+            this.txtidx.Visible = false;
             // 
             // cbis_use
             // 
@@ -455,6 +469,7 @@
             // txtal_open_donut_count
             // 
             this.txtal_open_donut_count.EditValue2 = null;
+            this.txtal_open_donut_count.EraserGroup = "CLR1";
             this.txtal_open_donut_count.Location = new System.Drawing.Point(730, 87);
             this.txtal_open_donut_count.Name = "txtal_open_donut_count";
             this.txtal_open_donut_count.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -478,6 +493,7 @@
             // txtrecommend_donut_count
             // 
             this.txtrecommend_donut_count.EditValue2 = null;
+            this.txtrecommend_donut_count.EraserGroup = "CLR1";
             this.txtrecommend_donut_count.Location = new System.Drawing.Point(463, 87);
             this.txtrecommend_donut_count.Name = "txtrecommend_donut_count";
             this.txtrecommend_donut_count.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -501,6 +517,7 @@
             // txtperiod_vip_donut_count
             // 
             this.txtperiod_vip_donut_count.EditValue2 = null;
+            this.txtperiod_vip_donut_count.EraserGroup = "CLR1";
             this.txtperiod_vip_donut_count.Location = new System.Drawing.Point(158, 87);
             this.txtperiod_vip_donut_count.Name = "txtperiod_vip_donut_count";
             this.txtperiod_vip_donut_count.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -524,6 +541,7 @@
             // txtperiod_donut_count
             // 
             this.txtperiod_donut_count.EditValue2 = null;
+            this.txtperiod_donut_count.EraserGroup = "CLR1";
             this.txtperiod_donut_count.Location = new System.Drawing.Point(730, 60);
             this.txtperiod_donut_count.Name = "txtperiod_donut_count";
             this.txtperiod_donut_count.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -547,6 +565,7 @@
             // txtvip_donut_count
             // 
             this.txtvip_donut_count.EditValue2 = null;
+            this.txtvip_donut_count.EraserGroup = "CLR1";
             this.txtvip_donut_count.Location = new System.Drawing.Point(463, 60);
             this.txtvip_donut_count.Name = "txtvip_donut_count";
             this.txtvip_donut_count.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -570,6 +589,7 @@
             // txtdonut_count
             // 
             this.txtdonut_count.EditValue2 = null;
+            this.txtdonut_count.EraserGroup = "CLR1";
             this.txtdonut_count.Location = new System.Drawing.Point(158, 60);
             this.txtdonut_count.Name = "txtdonut_count";
             this.txtdonut_count.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -593,6 +613,7 @@
             // txtpay_name
             // 
             this.txtpay_name.EditValue2 = null;
+            this.txtpay_name.EraserGroup = "CLR1";
             this.txtpay_name.Location = new System.Drawing.Point(382, 31);
             this.txtpay_name.Name = "txtpay_name";
             this.txtpay_name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -614,6 +635,7 @@
             // txtpay_code
             // 
             this.txtpay_code.EditValue2 = null;
+            this.txtpay_code.EraserGroup = "CLR1";
             this.txtpay_code.Location = new System.Drawing.Point(158, 31);
             this.txtpay_code.Name = "txtpay_code";
             this.txtpay_code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -632,17 +654,6 @@
             this.efwLabel2.TabIndex = 0;
             this.efwLabel2.Text = "코드";
             // 
-            // efwSimpleButton2
-            // 
-            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
-            this.efwSimpleButton2.IsMultiLang = false;
-            this.efwSimpleButton2.Location = new System.Drawing.Point(836, 30);
-            this.efwSimpleButton2.Name = "efwSimpleButton2";
-            this.efwSimpleButton2.Size = new System.Drawing.Size(100, 23);
-            this.efwSimpleButton2.TabIndex = 21;
-            this.efwSimpleButton2.Text = "삭제";
-            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
-            // 
             // frmTM03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -652,7 +663,7 @@
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmTM03";
-            this.Size = new System.Drawing.Size(1157, 528);
+            this.Size = new System.Drawing.Size(1157, 618);
             this.Controls.SetChildIndex(this.efwPanelControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             this.Controls.SetChildIndex(this.splitterControl1, 0);

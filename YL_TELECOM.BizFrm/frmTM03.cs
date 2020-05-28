@@ -37,7 +37,7 @@ namespace YL_TELECOM.BizFrm
 
             this.IsMenuVw = true;
             this.IsSearch = true;
-            this.IsNewMode = false;
+            this.IsNewMode = true;
             this.IsSave = false;
             this.IsDelete = false;
             this.IsCancel = false;
@@ -59,6 +59,13 @@ namespace YL_TELECOM.BizFrm
             , new ColumnControlSet("al_open_donut_count", txtal_open_donut_count)
             );
             cbis_use.EditValue = "Y";
+        }
+
+        public override void NewMode()
+        {
+            base.NewMode();
+            Eraser.Clear(this, "CLR1");
+            
         }
 
         public override void Search()
@@ -219,6 +226,11 @@ namespace YL_TELECOM.BizFrm
                 }
                 Search();
             }
+        }
+
+        private void efwPanelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
