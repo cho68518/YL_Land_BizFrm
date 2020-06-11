@@ -115,6 +115,7 @@
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbG_Prod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkB.Properties)).BeginInit();
@@ -640,7 +641,7 @@
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2});
             this.efwGridControl1.Size = new System.Drawing.Size(1212, 466);
-            this.efwGridControl1.TabIndex = 41;
+            this.efwGridControl1.TabIndex = 42;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
             serviceInfo3.IsUserIDAdd = true;
@@ -650,7 +651,6 @@
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.efwGridControl1.EditorKeyDown += new System.Windows.Forms.KeyEventHandler(this.EfwGridControl1_EditorKeyDown);
             // 
             // gridView1
             // 
@@ -672,6 +672,7 @@
             this.gridColumn34,
             this.gridColumn4,
             this.gridColumn28,
+            this.gridColumn35,
             this.gridColumn10,
             this.gridColumn19,
             this.gridColumn11,
@@ -706,7 +707,6 @@
             this.gridView1.OptionsView.AllowCellMerge = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
             // gridColumn31
             // 
@@ -877,7 +877,7 @@
             this.gridColumn10.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn10.OptionsColumn.ReadOnly = true;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 15;
+            this.gridColumn10.VisibleIndex = 16;
             // 
             // gridColumn19
             // 
@@ -889,7 +889,7 @@
             this.gridColumn19.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn19.OptionsColumn.ReadOnly = true;
             this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 16;
+            this.gridColumn19.VisibleIndex = 17;
             // 
             // gridColumn11
             // 
@@ -901,7 +901,7 @@
             this.gridColumn11.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 17;
+            this.gridColumn11.VisibleIndex = 18;
             // 
             // gridColumn33
             // 
@@ -913,7 +913,7 @@
             this.gridColumn33.OptionsColumn.AllowEdit = false;
             this.gridColumn33.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn33.Visible = true;
-            this.gridColumn33.VisibleIndex = 18;
+            this.gridColumn33.VisibleIndex = 19;
             // 
             // gridColumn12
             // 
@@ -925,7 +925,7 @@
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 19;
+            this.gridColumn12.VisibleIndex = 20;
             // 
             // gridColumn32
             // 
@@ -937,7 +937,7 @@
             this.gridColumn32.OptionsColumn.AllowEdit = false;
             this.gridColumn32.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn32.Visible = true;
-            this.gridColumn32.VisibleIndex = 20;
+            this.gridColumn32.VisibleIndex = 21;
             // 
             // gridColumn13
             // 
@@ -949,7 +949,7 @@
             this.gridColumn13.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn13.OptionsColumn.ReadOnly = true;
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 21;
+            this.gridColumn13.VisibleIndex = 22;
             // 
             // gridColumn14
             // 
@@ -961,7 +961,7 @@
             this.gridColumn14.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn14.OptionsColumn.ReadOnly = true;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 22;
+            this.gridColumn14.VisibleIndex = 23;
             // 
             // gridColumn15
             // 
@@ -973,7 +973,7 @@
             this.gridColumn15.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn15.OptionsColumn.ReadOnly = true;
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 23;
+            this.gridColumn15.VisibleIndex = 24;
             // 
             // gridColumn16
             // 
@@ -985,7 +985,7 @@
             this.gridColumn16.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn16.OptionsColumn.ReadOnly = true;
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 24;
+            this.gridColumn16.VisibleIndex = 25;
             // 
             // gridColumn29
             // 
@@ -997,7 +997,7 @@
             this.gridColumn29.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn29.OptionsColumn.ReadOnly = true;
             this.gridColumn29.Visible = true;
-            this.gridColumn29.VisibleIndex = 25;
+            this.gridColumn29.VisibleIndex = 26;
             // 
             // gridColumn17
             // 
@@ -1007,7 +1007,7 @@
             this.gridColumn17.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn17.OptionsColumn.ReadOnly = true;
             this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 26;
+            this.gridColumn17.VisibleIndex = 27;
             // 
             // gridColumn18
             // 
@@ -1018,7 +1018,7 @@
             this.gridColumn18.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn18.OptionsColumn.ReadOnly = true;
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 27;
+            this.gridColumn18.VisibleIndex = 28;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -1035,7 +1035,7 @@
             this.gridColumn20.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn20.OptionsColumn.ReadOnly = true;
             this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 28;
+            this.gridColumn20.VisibleIndex = 29;
             // 
             // gridColumn21
             // 
@@ -1045,7 +1045,7 @@
             this.gridColumn21.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn21.OptionsColumn.ReadOnly = true;
             this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 29;
+            this.gridColumn21.VisibleIndex = 30;
             // 
             // gridColumn22
             // 
@@ -1055,7 +1055,7 @@
             this.gridColumn22.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn22.OptionsColumn.ReadOnly = true;
             this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 30;
+            this.gridColumn22.VisibleIndex = 31;
             // 
             // gridColumn23
             // 
@@ -1065,7 +1065,7 @@
             this.gridColumn23.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn23.OptionsColumn.ReadOnly = true;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 31;
+            this.gridColumn23.VisibleIndex = 32;
             // 
             // gridColumn24
             // 
@@ -1075,7 +1075,7 @@
             this.gridColumn24.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn24.OptionsColumn.ReadOnly = true;
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 32;
+            this.gridColumn24.VisibleIndex = 33;
             // 
             // gridColumn30
             // 
@@ -1084,7 +1084,7 @@
             this.gridColumn30.Name = "gridColumn30";
             this.gridColumn30.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn30.Visible = true;
-            this.gridColumn30.VisibleIndex = 33;
+            this.gridColumn30.VisibleIndex = 34;
             this.gridColumn30.Width = 150;
             // 
             // repositoryItemLookUpEdit1
@@ -1104,6 +1104,14 @@
             // repositoryItemMemoEdit1
             // 
             this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
+            // 
+            // gridColumn35
+            // 
+            this.gridColumn35.Caption = "구매등급";
+            this.gridColumn35.FieldName = "p_level";
+            this.gridColumn35.Name = "gridColumn35";
+            this.gridColumn35.Visible = true;
+            this.gridColumn35.VisibleIndex = 15;
             // 
             // frmDN01
             // 
@@ -1187,6 +1195,9 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
         private DevExpress.XtraEditors.SplitterControl splitterControl1;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton7;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton8;
+        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbOrderDate;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
@@ -1202,12 +1213,16 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
@@ -1225,11 +1240,5 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
-        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton7;
-        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton8;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
-        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbOrderDate;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
     }
 }

@@ -29,7 +29,8 @@ namespace YL_MM.BizFrm
         public String sMd_Name { get; set; }
         public String sPic_Send { get; set; }
         public String sLast_Coid_Name { get; set; }
-
+        public String sU_id { get; set; }
+        public String sTot_Cnt { get; set; }
 
         public frmMM19_Pop02()
         {
@@ -141,6 +142,8 @@ namespace YL_MM.BizFrm
             this.sMd_Name = row["md_name"].ToString();
             this.sPic_Send = row["pic_send"].ToString();
             this.sLast_Coid_Name = row["Last_coid_name"].ToString();
+            this.sU_id = row["u_id"].ToString();
+            this.sTot_Cnt = row["tot_cnt"].ToString();
 
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Close();

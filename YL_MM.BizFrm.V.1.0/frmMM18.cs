@@ -30,6 +30,7 @@ namespace YL_MM.BizFrm
     public partial class frmMM18 : FrmBase
     {
         frmMM03_Pop02 popup;
+
         public frmMM18()
         {
             InitializeComponent();
@@ -38,6 +39,8 @@ namespace YL_MM.BizFrm
             //폼명설정
             this.FrmName = "매인 배너관리";
             gridView1.CustomUnboundColumnData += gridView1_CustomUnboundColumnData;
+            gridView2.CustomUnboundColumnData += gridView2_CustomUnboundColumnData;
+            gridView3.CustomUnboundColumnData += gridView3_CustomUnboundColumnData;
         }
 
         private void frmMM18_Load(object sender, EventArgs e)
@@ -61,6 +64,8 @@ namespace YL_MM.BizFrm
             rbStoryType.EditValue = "M";
             rbShowType.EditValue = "Y";
             rbLink.EditValue = "L";
+            txtIs_Use.EditValue = "Y";
+            rbUse_type.EditValue = "Y";
 
             //SetCmb();
             this.efwGridControl1.BindControlSet(
@@ -72,6 +77,31 @@ namespace YL_MM.BizFrm
            , new ColumnControlSet("show_turn", txtShow_Turn)
             );
             this.efwGridControl1.Click += efwGridControl1_Click;
+
+            this.efwGridControl2.BindControlSet(
+             new ColumnControlSet("event_id", txtEvent_Id)
+           , new ColumnControlSet("event_title", txtEvent_Title)
+           , new ColumnControlSet("event_bn_imgurl", txtEvent_bn_imgurl)
+           , new ColumnControlSet("event_ld_imgurl", txtEvent_ld_imgurl)
+           , new ColumnControlSet("event_start_date", dtS_DATE)
+           , new ColumnControlSet("event_end_date", dtE_DATE)
+           , new ColumnControlSet("event_bn_imgname", txtEvent_bn_imgname)
+           , new ColumnControlSet("event_bn_imgpath", txtEvent_bn_imgpath)
+           , new ColumnControlSet("event_ld_imgname", txtEvent_ld_imgname)
+           , new ColumnControlSet("event_ld_imgpath", txtEvent_ld_imgpath)
+           , new ColumnControlSet("is_use", rbIs_Use_S)
+            );
+            this.efwGridControl2.Click += efwGridControl2_Click;
+
+            this.efwGridControl3.BindControlSet(
+             new ColumnControlSet("idx", txtTeb3_Idx)
+           , new ColumnControlSet("subject", txtSubject)
+           , new ColumnControlSet("use_type", rbuse_type_S)
+           , new ColumnControlSet("contents", txtContents)
+           , new ColumnControlSet("ImageURL", txtTab3_imgurl)
+           , new ColumnControlSet("file_name1", txtTab3_imgname)
+            );
+            this.efwGridControl3.Click += efwGridControl3_Click;
             SetCmb();
 
         }
@@ -86,11 +116,24 @@ namespace YL_MM.BizFrm
                 picBanner.LoadAsync(dr["ImageURL"].ToString());
                 picLanding.LoadAsync(dr["img_link"].ToString());
             }
-            //picBest_Pic1.LoadAsync(txtPic_Url1.EditValue.ToString());
-            //picBest_Pic2.LoadAsync(txtPic_Url2.EditValue.ToString());
-            //picBest_Pic3.LoadAsync(txtPic_Url3.EditValue.ToString());
-            //picBest_Pic4.LoadAsync(txtPic_Url4.EditValue.ToString());
-            //picBest_Pic5.LoadAsync(txtPic_Url5.EditValue.ToString());
+        }
+
+        private void efwGridControl2_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl2.GetSelectedRow(0);
+            if (dr != null && dr["event_id"].ToString() != "")
+            {
+                picAddBanner.LoadAsync(dr["event_bn_imgurl"].ToString());
+                picAddLanding.LoadAsync(dr["event_ld_imgurl"].ToString());
+            }
+        }
+        private void efwGridControl3_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl3.GetSelectedRow(0);
+            if (dr != null && dr["idx"].ToString() != "")
+            {
+                picTab3_Banner.LoadAsync(dr["ImageURL"].ToString());
+            }
         }
 
         private void SetCmb()
@@ -145,6 +188,67 @@ namespace YL_MM.BizFrm
 
         }
 
+        void gridView2_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+
+            try
+            {
+                DataRow dr = (e.Row as DataRowView).Row;
+                string url = dr["event_bn_imgurl"].ToString();
+                if (iconsCache.ContainsKey(url))
+                {
+                    e.Value = iconsCache[url];
+                    return;
+                }
+                var request = WebRequest.Create(url);
+
+                using (var response = request.GetResponse())
+                {
+                    using (var stream = response.GetResponseStream())
+                    {
+                        e.Value = Bitmap.FromStream(stream);
+                        iconsCache.Add(url, (Bitmap)e.Value);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
+        }
+
+        void gridView3_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+
+            try
+            {
+                DataRow dr = (e.Row as DataRowView).Row;
+                string url = dr["ImageURL"].ToString();
+                if (iconsCache.ContainsKey(url))
+                {
+                    e.Value = iconsCache[url];
+                    return;
+                }
+                var request = WebRequest.Create(url);
+
+                using (var response = request.GetResponse())
+                {
+                    using (var stream = response.GetResponseStream())
+                    {
+                        e.Value = Bitmap.FromStream(stream);
+                        iconsCache.Add(url, (Bitmap)e.Value);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
+        }
 
 
         Dictionary<String, Bitmap> iconsCache = new Dictionary<string, Bitmap>();
@@ -152,6 +256,22 @@ namespace YL_MM.BizFrm
 
 
         public override void Search()
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open1();  // 문자전송
+            }
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open2();
+            }
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                Open3();
+            }
+
+        }
+        public void Open1()
         {
             try
             {
@@ -169,6 +289,62 @@ namespace YL_MM.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
+                            //  this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+        public void Open2()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM18_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[0].Value = txtIs_Use.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            //  this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+        public void Open3()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM18_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[0].Value = rbUse_type.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl3.DataBind(ds);
                             //  this.efwGridControl1.MyGridView.BestFitColumns();
                         }
                     }
@@ -442,6 +618,20 @@ namespace YL_MM.BizFrm
         {
             OpenDlg("2");
         }
+        private void picAddBanner_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("3");
+        }
+
+        private void picAddLanding_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("4");
+        }
+
+        private void picTab3_Banner_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("5");
+        }
         private void OpenDlg(string s1)
         {
             popup = new frmMM03_Pop02();
@@ -451,7 +641,12 @@ namespace YL_MM.BizFrm
                 popup.pURL = txtimg_url.Text;
             else if (s1 == "2")
                 popup.pURL = txtImg_link.Text;
-
+            else if (s1 == "3")
+                popup.pURL = txtEvent_bn_imgurl.Text;
+            else if (s1 == "4")
+                popup.pURL = txtEvent_ld_imgurl.Text;
+            else if (s1 == "5")
+                popup.pURL = txtTab3_imgurl.Text;
 
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();
@@ -471,7 +666,401 @@ namespace YL_MM.BizFrm
             Eraser.Clear(this, "CLR1");
 
         }
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            base.NewMode();
+
+            Eraser.Clear(this, "CLR3");
+        }
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            string sftpURL = "14.63.165.36";
+            string sUserName = "root";
+            string sPassword = "@dhkdldpf2!";
+            int nPort = 22023;
+            //string sftpDirectory = "/uploadFiles/files/landing/" + Convert.ToString(System.DateTime.Now.ToString("yyyyMMdd"));
+            string sftpDirectory = "/domalifefiles/files/events/banner/";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+                    txtEvent_bn_imgname.EditValue = openFileDialog.SafeFileName;
+                    txtAddPicPath1.EditValue = openFileDialog.FileName;
+                    picAddBanner.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
 
 
+                // 폴더생성
+
+                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+
+                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
+
+                string sOldFile = txtAddPicPath1.EditValue.ToString();
+                //string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                string sFileName = txtEvent_bn_imgname.EditValue.ToString();
+                string sNewFile = "c:\\temp\\" + sFileName;
+                System.IO.File.Delete(sNewFile);
+                System.IO.File.Copy(sOldFile, sNewFile);
+
+
+                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
+
+
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+
+                sSftp.Connect(nPort);
+
+                //저장 경로에 있는지 체크
+                string sFtpPath = "/domalifefiles/files/events/banner/";
+                string sFtpPath2 = "/domalifefiles/files/events/banner/" + sFileName;
+
+                ArrayList ay = sSftp.GetFileList(sFtpPath);
+                bool isdir = false;
+
+                for (int i = 0; i < ay.Count; i++)
+                {
+                    // string sChk = ay[i].ToString();
+                    if (ay[i].ToString() == txtAddPicPath1.EditValue.ToString())
+                    {
+                        isdir = true;
+                    }
+                }
+                //if (isdir == false)
+                //{
+
+                //    sSftp.Mkdir(sFtpPath2);
+                //}
+
+                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
+                sSftp.Close();
+                txtEvent_bn_imgurl.EditValue = "https://media.domalife.net/files/events/banner/" + sFileName;
+                txtEvent_bn_imgpath.EditValue = "/domalifefiles/files/events/banner/" + sFileName;
+            }
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            string sftpURL = "14.63.165.36";
+            string sUserName = "root";
+            string sPassword = "@dhkdldpf2!";
+            int nPort = 22023;
+            //string sftpDirectory = "/uploadFiles/files/landing/" + Convert.ToString(System.DateTime.Now.ToString("yyyyMMdd"));
+            string sftpDirectory = "/domalifefiles/files/events/landing/";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+                    txtEvent_ld_imgname.EditValue = openFileDialog.SafeFileName;
+                    txtAddPicPath2.EditValue = openFileDialog.FileName;
+                    picAddLanding.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+
+
+                // 폴더생성
+
+                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+
+                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
+
+                string sOldFile = txtAddPicPath2.EditValue.ToString();
+                string sFileName = txtEvent_ld_imgname.EditValue.ToString();
+                string sNewFile = "c:\\temp\\" + sFileName;
+                System.IO.File.Delete(sNewFile);
+                System.IO.File.Copy(sOldFile, sNewFile);
+
+
+                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
+
+
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+
+                sSftp.Connect(nPort);
+
+                //저장 경로에 있는지 체크
+
+                ArrayList ay = sSftp.GetFileList(sftpDirectory);
+                bool isdir = false;
+
+                for (int i = 0; i < ay.Count; i++)
+                {
+                    // string sChk = ay[i].ToString();
+                    if (ay[i].ToString() == txtAddPicPath2.EditValue.ToString())
+                    {
+                        isdir = true;
+                    }
+                }
+
+                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
+                sSftp.Close();
+                txtEvent_ld_imgurl.EditValue = "https://media.domalife.net/files/events/landing/" + sFileName;
+                txtEvent_ld_imgpath.EditValue = "/domalifefiles/files/events/landing/" + sFileName;
+            }
+        }
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            base.NewMode();
+
+            Eraser.Clear(this, "CLR2");
+        }
+
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM18_SAVE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Event_Id", MySqlDbType.Int32));
+                            cmd.Parameters["i_Event_Id"].Value = Convert.ToInt32(txtEvent_Id.EditValue);
+                            cmd.Parameters["i_Event_Id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Event_Title", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Event_Title"].Value = txtEvent_Title.EditValue;
+                            cmd.Parameters["i_Event_Title"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Event_start_date", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Event_start_date"].Value = dtS_DATE.EditValue3;
+                            cmd.Parameters["i_Event_start_date"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Event_end_date", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Event_end_date"].Value = dtE_DATE.EditValue3;
+                            cmd.Parameters["i_Event_end_date"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Is_Us", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Is_Us"].Value = rbIs_Use_S.EditValue;
+                            cmd.Parameters["i_Is_Us"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Event_bn_imgurl", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Event_bn_imgurl"].Value = txtEvent_bn_imgurl.EditValue;
+                            cmd.Parameters["i_Event_bn_imgurl"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Event_bn_imgname", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Event_bn_imgname"].Value = txtEvent_bn_imgname.EditValue;
+                            cmd.Parameters["i_Event_bn_imgname"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_AddPicPath1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_AddPicPath1"].Value = txtAddPicPath1.EditValue;
+                            cmd.Parameters["i_AddPicPath1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Event_bn_imgpath", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Event_bn_imgpath"].Value = txtEvent_bn_imgpath.EditValue;
+                            cmd.Parameters["i_Event_bn_imgpath"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Event_ld_imgurl", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Event_ld_imgurl"].Value = txtEvent_ld_imgurl.EditValue;
+                            cmd.Parameters["i_Event_ld_imgurl"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Event_ld_imgname", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Event_ld_imgname"].Value = txtEvent_ld_imgname.EditValue;
+                            cmd.Parameters["i_Event_ld_imgname"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_AddPicPath2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_AddPicPath2"].Value = txtAddPicPath2.EditValue;
+                            cmd.Parameters["i_AddPicPath2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Event_ld_imgpath", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Event_ld_imgpath"].Value = txtEvent_ld_imgpath.EditValue;
+                            cmd.Parameters["i_Event_ld_imgpath"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open2();
+            }
+        }
+
+        private void efwSimpleButton8_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            string sftpURL = "14.63.165.36";
+            string sUserName = "root";
+            string sPassword = "@dhkdldpf2!";
+            int nPort = 22023;
+            //string sftpDirectory = "/uploadFiles/files/landing/" + Convert.ToString(System.DateTime.Now.ToString("yyyyMMdd"));
+            string sftpDirectory = "/domalifefiles/files/board/";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+                    txtTab3_imgname.EditValue = openFileDialog.SafeFileName;
+                    txtTab3_PicPath1.EditValue = openFileDialog.FileName;
+                    picTab3_Banner.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+
+
+                // 폴더생성
+
+                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+
+                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
+
+                string sOldFile = txtTab3_PicPath1.EditValue.ToString();
+                //string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                string sFileName = txtTab3_imgname.EditValue.ToString();
+                string sNewFile = "c:\\temp\\" + sFileName;
+                System.IO.File.Delete(sNewFile);
+                System.IO.File.Copy(sOldFile, sNewFile);
+
+
+                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
+
+
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+
+                sSftp.Connect(nPort);
+
+                //저장 경로에 있는지 체크
+                string sFtpPath = "/domalifefiles/files/board/";
+                string sFtpPath2 = "/domalifefiles/files/board/" + sFileName;
+
+                ArrayList ay = sSftp.GetFileList(sFtpPath);
+                bool isdir = false;
+
+                for (int i = 0; i < ay.Count; i++)
+                {
+                    // string sChk = ay[i].ToString();
+                    if (ay[i].ToString() == txtTab3_PicPath1.EditValue.ToString())
+                    {
+                        isdir = true;
+                    }
+                }
+                //if (isdir == false)
+                //{
+
+                //    sSftp.Mkdir(sFtpPath2);
+                //}
+
+                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
+                sSftp.Close();
+            }
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM18_SAVE_03", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_Idx"].Value = Convert.ToInt32(txtTeb3_Idx.EditValue);
+                            cmd.Parameters["i_Idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Subject", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Subject"].Value = txtSubject.EditValue;
+                            cmd.Parameters["i_Subject"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Use_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Use_type"].Value = rbuse_type_S.EditValue;
+                            cmd.Parameters["i_Use_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_File_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_File_name"].Value = txtTab3_imgname.EditValue;
+                            cmd.Parameters["i_File_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open3();
+            }
+        }
     }
 }

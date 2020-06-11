@@ -32,5 +32,12 @@ namespace YL_MM.BizFrm
         {
             InitializeComponent();
         }
+
+        private void frmMM19_Pop01_Load(object sender, EventArgs e)
+        {
+            string sNavigate;
+            sNavigate = "http://domamall.domalife.net:8000/domamall/product/list.do?u_id=" + u_Id + "&chef_room_id = &mallType =private&my_shop=&m_web=Y&id=7&sortType=N";
+            webBrowser1.Navigate(sNavigate);
+        }
     }
 }

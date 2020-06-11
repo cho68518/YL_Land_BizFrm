@@ -142,7 +142,7 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_birth", MySqlDbType.VarChar));
                             cmd.Parameters["i_birth"].Value = txtBIRTH.EditValue;
                             cmd.Parameters["i_birth"].Direction = ParameterDirection.Input;
-
+                     
                             cmd.Parameters.Add(new MySqlParameter("i_hpno", MySqlDbType.VarChar));
                             cmd.Parameters["i_hpno"].Value = txtHPNO.EditValue;
                             cmd.Parameters["i_hpno"].Direction = ParameterDirection.Input;

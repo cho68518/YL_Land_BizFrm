@@ -69,6 +69,33 @@ namespace YL_GM.BizFrm
                       );
 
             this.efwGridControl2.Click += efwGridControl2_Click;
+
+            gridView1.OptionsView.ShowFooter = true;
+
+            this.efwGridControl4.BindControlSet(
+              new ColumnControlSet("idx", txtidx)
+            , new ColumnControlSet("pay_code", txtpay_code)
+            , new ColumnControlSet("pay_name", txtpay_name)
+            , new ColumnControlSet("donut_count", txtdonut_count)
+            , new ColumnControlSet("vip_donut_count", txtvip_donut_count)
+            , new ColumnControlSet("period_donut_count", txtperiod_donut_count)
+            , new ColumnControlSet("period_vip_donut_count", txtperiod_vip_donut_count)
+            , new ColumnControlSet("recommend_donut_count", txtrecommend_donut_count)
+            , new ColumnControlSet("is_use", cbis_use)
+            , new ColumnControlSet("al_open_donut_count", txtal_open_donut_count)
+            );
+            cbis_use.EditValue = "Y";
+
+            this.efwGridControl5.BindControlSet(
+              new ColumnControlSet("version_code", txtVersion_code)
+            , new ColumnControlSet("version_name", txtVersion_name)
+            , new ColumnControlSet("update_code", txtUpdate_code)
+            , new ColumnControlSet("title", txtTitle)
+            , new ColumnControlSet("message", txtMessage)
+            , new ColumnControlSet("is_published", rbIs_published)
+            );
+            cbis_use.EditValue = "Y";
+            rbIs_published.EditValue = "Y";
         }
 
         private void efwGridControl1_Click(object sender, EventArgs e)
@@ -91,7 +118,16 @@ namespace YL_GM.BizFrm
             {
                 Open3();  //스토리 색상코드 마스터
             }
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                Open4();  //스토리 색상코드 마스터
+            }
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
+            {
+                Open5();  //도라앱 버전
+            }
         }
+        //스토리 마스터
         public void Open1()
         {
             try
@@ -126,6 +162,7 @@ namespace YL_GM.BizFrm
             }
 
         }
+        //스토리별 색상
         public void Open2()
         {
             try
@@ -160,7 +197,7 @@ namespace YL_GM.BizFrm
             }
 
         }
-
+        // MySql 공통코드
         public void Open3()
         {
             try
@@ -194,6 +231,77 @@ namespace YL_GM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
 
+        }
+        // 요금제
+        public void Open4()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_TM_TM03_SELECT_01", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_pay_code", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtPay_CodeQ.EditValue;
+
+                        cmd.Parameters.Add("i_pay_name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtPay_NameQ.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl4.DataBind(ds);
+                            this.efwGridControl1.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+        // 도라앱 버전
+        public void Open5()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM07_SELECT_04", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = "";
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl5.DataBind(ds);
+                            this.efwGridControl1.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
         }
 
         private void efwSimpleButton1_Click(object sender, EventArgs e)
@@ -275,5 +383,219 @@ namespace YL_GM.BizFrm
             }
         }
 
+        private void txtPay_CodeQ_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
+        }
+
+        private void txtPay_NameQ_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_TM_TM03_SAVE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtidx.EditValue);
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_pay_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_pay_code"].Value = txtpay_code.EditValue;
+                            cmd.Parameters["i_pay_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_pay_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_pay_name"].Value = txtpay_name.EditValue;
+                            cmd.Parameters["i_pay_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_donut_count", MySqlDbType.Int32));
+                            cmd.Parameters["i_donut_count"].Value = Convert.ToInt32(txtdonut_count.EditValue);
+                            cmd.Parameters["i_donut_count"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_vip_donut_count", MySqlDbType.Int32));
+                            cmd.Parameters["i_vip_donut_count"].Value = Convert.ToInt32(txtvip_donut_count.EditValue);
+                            cmd.Parameters["i_vip_donut_count"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_period_donut_count", MySqlDbType.Int32));
+                            cmd.Parameters["i_period_donut_count"].Value = Convert.ToInt32(txtperiod_donut_count.EditValue);
+                            cmd.Parameters["i_period_donut_count"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_period_vip_donut_count", MySqlDbType.Int32));
+                            cmd.Parameters["i_period_vip_donut_count"].Value = Convert.ToInt32(txtperiod_vip_donut_count.EditValue);
+                            cmd.Parameters["i_period_vip_donut_count"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_recommend_donut_count", MySqlDbType.Int32));
+                            cmd.Parameters["i_recommend_donut_count"].Value = Convert.ToInt32(txtrecommend_donut_count.EditValue);
+                            cmd.Parameters["i_recommend_donut_count"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_use", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_use"].Value = cbis_use.EditValue;
+                            cmd.Parameters["i_is_use"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_al_open_donut_count", MySqlDbType.Int32));
+                            cmd.Parameters["i_al_open_donut_count"].Value = Convert.ToInt32(txtal_open_donut_count.EditValue);
+                            cmd.Parameters["i_al_open_donut_count"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open4();
+            }
+        }
+
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtidx.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " ID를 선택하세요!");
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_TM_TM03_DELETE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtidx.EditValue);
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open4();
+            }
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM07_SAVE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Version_code", MySqlDbType.Int32));
+                            cmd.Parameters["i_Version_code"].Value = Convert.ToInt32(txtVersion_code.EditValue);
+                            cmd.Parameters["i_Version_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Version_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Version_name"].Value = txtVersion_name.EditValue;
+                            cmd.Parameters["i_Version_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Update_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Update_code"].Value = Convert.ToInt32(txtUpdate_code.EditValue);
+                            cmd.Parameters["i_Update_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Title", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Title"].Value = txtTitle.EditValue;
+                            cmd.Parameters["i_Title"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Message", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Message"].Value = txtMessage.EditValue;
+                            cmd.Parameters["i_Message"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Is_published", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Is_published"].Value = rbIs_published.EditValue;
+                            cmd.Parameters["i_Is_published"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open5();
+            }
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            base.NewMode();
+            Eraser.Clear(this, "CLR5");
+        }
+
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM07_DELETE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Version_code", MySqlDbType.Int32));
+                            cmd.Parameters["i_Version_code"].Value = Convert.ToInt32(txtVersion_code.EditValue);
+                            cmd.Parameters["i_Version_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open5();
+                Eraser.Clear(this, "CLR5");
+            }
+        }
     }
 }

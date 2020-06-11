@@ -45,7 +45,9 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtFildQuery = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFildQuery.Properties)).BeginInit();
@@ -104,7 +106,9 @@
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn10,
-            this.gridColumn11});
+            this.gridColumn11,
+            this.gridColumn12,
+            this.gridColumn13});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -215,6 +219,12 @@
             this.gridColumn11.VisibleIndex = 8;
             this.gridColumn11.Width = 247;
             // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "u_id";
+            this.gridColumn12.FieldName = "u_id";
+            this.gridColumn12.Name = "gridColumn12";
+            // 
             // txtFildQuery
             // 
             this.txtFildQuery.EditValue2 = null;
@@ -227,6 +237,14 @@
             this.txtFildQuery.TabIndex = 1;
             this.txtFildQuery.Visible = false;
             // 
+            // gridColumn13
+            // 
+            this.gridColumn13.Caption = "상담건수";
+            this.gridColumn13.FieldName = "tot_cnt";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 9;
+            // 
             // frmMM19_Pop02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -235,6 +253,7 @@
             this.Controls.Add(this.txtFildQuery);
             this.Controls.Add(this.efwGridControl1);
             this.Name = "frmMM19_Pop02";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "상담 고객 HELP";
             this.Load += new System.EventHandler(this.frmMM19_Pop02_Load);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
@@ -260,5 +279,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private Easy.Framework.WinForm.Control.efwTextEdit txtFildQuery;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
     }
 }

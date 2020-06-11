@@ -610,14 +610,31 @@ namespace YL_GSHOP.BizFrm
                 return;
             }
 
-            if (chkIs_Best.EditValue.ToString() == "Y" )
+            if (chkIs_Best.EditValue.ToString() == "Y")
             {
-                if( txtTEAM_NICKNAME.EditValue.ToString() == "")
+                if (txtTEAM_NICKNAME.EditValue.ToString() == "")
                 {
                     MessageAgent.MessageShow(MessageType.Warning, " 담당 팀장을 선택하세요 ");
                     return;
                 }
             }
+            else
+            {
+                string sGshop_name;
+                using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+                {
+                    sql.Query = "select gshop_name as nCount FROM  domabiz.gshop_master where md_u_id = '" + txtU_ID.EditValue + "' limit 1 ";
+                    DataSet ds = sql.selectQueryDataSet();
+
+                    sGshop_name = sql.selectQueryForSingleValue();
+                }
+                if (sGshop_name.Length > 2)
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, sGshop_name + "에서 배스트 샵으로 등록되어 제외 할수가 없습니다");
+                    return;
+                }
+            }
+
 
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
