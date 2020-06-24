@@ -51,6 +51,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,7 +80,6 @@
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn58 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn59 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
@@ -199,6 +199,7 @@
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtPOSTNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
@@ -464,7 +465,8 @@
             this.gridColumn27,
             this.gridColumn58,
             this.gridColumn56,
-            this.gridColumn59});
+            this.gridColumn59,
+            this.gridColumn61});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "건수 : {0}")});
@@ -487,6 +489,15 @@
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 80;
+            // 
+            // gridColumn57
+            // 
+            this.gridColumn57.Caption = "확정일";
+            this.gridColumn57.FieldName = "o_confirm_date";
+            this.gridColumn57.Name = "gridColumn57";
+            this.gridColumn57.OptionsColumn.AllowEdit = false;
+            this.gridColumn57.Visible = true;
+            this.gridColumn57.VisibleIndex = 1;
             // 
             // gridColumn2
             // 
@@ -721,15 +732,6 @@
             this.gridColumn56.OptionsColumn.AllowEdit = false;
             this.gridColumn56.Visible = true;
             this.gridColumn56.VisibleIndex = 21;
-            // 
-            // gridColumn57
-            // 
-            this.gridColumn57.Caption = "확정일";
-            this.gridColumn57.FieldName = "o_confirm_date";
-            this.gridColumn57.Name = "gridColumn57";
-            this.gridColumn57.OptionsColumn.AllowEdit = false;
-            this.gridColumn57.Visible = true;
-            this.gridColumn57.VisibleIndex = 1;
             // 
             // gridColumn59
             // 
@@ -2169,6 +2171,14 @@
             this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem21.TextVisible = false;
             // 
+            // gridColumn61
+            // 
+            this.gridColumn61.Caption = "베스트샵";
+            this.gridColumn61.FieldName = "best_shop";
+            this.gridColumn61.Name = "gridColumn61";
+            this.gridColumn61.Visible = true;
+            this.gridColumn61.VisibleIndex = 23;
+            // 
             // frmGSHOP04
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2446,5 +2456,6 @@
         private Easy.Framework.WinForm.Control.efwCheckEdit cbCom;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn60;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn61;
     }
 }

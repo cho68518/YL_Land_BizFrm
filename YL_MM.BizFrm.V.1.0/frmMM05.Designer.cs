@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMM05));
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo7 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo8 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy6 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy6 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
@@ -42,9 +40,11 @@
             Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy4 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy4 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy5 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -92,9 +92,6 @@
             this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
-            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.panel2 = new System.Windows.Forms.Panel();
             this.efwGroupControl3 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
@@ -129,9 +126,11 @@
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtU_ADDR_DETAIL = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.chkIS_COMP_MD = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.cmbDORAMD_TYPE = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.btnSave = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.chkIS_GR_MD = new Easy.Framework.WinForm.Control.efwCheckEdit();
@@ -199,6 +198,7 @@
             this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.efwTextEdit2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl2 = new DevExpress.XtraEditors.SplitterControl();
@@ -211,16 +211,10 @@
             this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtU_ADDR_DETAIL = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
             this.efwGroupControl3.SuspendLayout();
@@ -258,6 +252,7 @@
             this.efwGroupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtU_ADDR_DETAIL.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIS_COMP_MD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDORAMD_TYPE.Properties)).BeginInit();
             this.panel3.SuspendLayout();
@@ -326,14 +321,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).BeginInit();
             this.efwGroupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtU_ADDR_DETAIL.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -353,19 +347,19 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo7.InstanceName = "";
-            serviceInfo7.IsUserIDAdd = true;
-            serviceInfo7.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo7.ParamsInfo")));
-            serviceInfo7.ProcName = "";
-            serviceInfo7.UserParams = null;
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo7;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = null;
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
             this.efwGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo8.InstanceName = "";
-            serviceInfo8.IsUserIDAdd = true;
-            serviceInfo8.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo8.ParamsInfo")));
-            serviceInfo8.ProcName = "";
-            serviceInfo8.UserParams = null;
-            this.efwGridControl1.InsertServiceInfo = serviceInfo8;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = null;
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsEditable = false;
@@ -376,19 +370,15 @@
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemLookUpEdit1,
-            this.repositoryItemMemoExEdit1,
-            this.repositoryItemMemoEdit1});
             this.efwGridControl1.Size = new System.Drawing.Size(1324, 387);
             this.efwGridControl1.TabIndex = 5;
             this.efwGridControl1.TableName = "";
-            serviceInfo9.InstanceName = "";
-            serviceInfo9.IsUserIDAdd = true;
-            serviceInfo9.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo9.ParamsInfo")));
-            serviceInfo9.ProcName = "";
-            serviceInfo9.UserParams = null;
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo9;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = null;
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -782,24 +772,6 @@
             this.gridColumn44.Visible = true;
             this.gridColumn44.VisibleIndex = 26;
             // 
-            // repositoryItemLookUpEdit1
-            // 
-            this.repositoryItemLookUpEdit1.AutoHeight = false;
-            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
-            // 
-            // repositoryItemMemoExEdit1
-            // 
-            this.repositoryItemMemoExEdit1.AutoHeight = false;
-            this.repositoryItemMemoExEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemMemoExEdit1.Name = "repositoryItemMemoExEdit1";
-            // 
-            // repositoryItemMemoEdit1
-            // 
-            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.efwGroupControl3);
@@ -940,13 +912,13 @@
             // 
             // cmbQ1
             // 
-            childHierarchy6.CodeCtrl = null;
-            childHierarchy6.DbName = null;
-            childHierarchy6.SpName = null;
-            this.cmbQ1.ChildHierarchyInfo = childHierarchy6;
-            hierarchy6.DbName = null;
-            hierarchy6.SpName = null;
-            this.cmbQ1.HierarchyInfo = hierarchy6;
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbQ1.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbQ1.HierarchyInfo = hierarchy1;
             this.cmbQ1.IsMultiLang = false;
             this.cmbQ1.Location = new System.Drawing.Point(82, 7);
             this.cmbQ1.MasterCode = "E03.MEMBERQ_GBN1";
@@ -961,13 +933,13 @@
             // 
             // cmbQ2
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbQ2.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbQ2.HierarchyInfo = hierarchy1;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbQ2.ChildHierarchyInfo = childHierarchy2;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbQ2.HierarchyInfo = hierarchy2;
             this.cmbQ2.IsMultiLang = false;
             this.cmbQ2.Location = new System.Drawing.Point(633, 7);
             this.cmbQ2.MasterCode = "E03.MEMBERQ_GBN2";
@@ -982,13 +954,13 @@
             // 
             // cmbQ3
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbQ3.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbQ3.HierarchyInfo = hierarchy2;
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbQ3.ChildHierarchyInfo = childHierarchy3;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbQ3.HierarchyInfo = hierarchy3;
             this.cmbQ3.IsMultiLang = false;
             this.cmbQ3.Location = new System.Drawing.Point(82, 33);
             this.cmbQ3.MasterCode = "E03.MEMBERQ_GBN3:A";
@@ -1288,6 +1260,20 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // txtU_ADDR_DETAIL
+            // 
+            this.txtU_ADDR_DETAIL.EditValue2 = null;
+            this.txtU_ADDR_DETAIL.Location = new System.Drawing.Point(455, 158);
+            this.txtU_ADDR_DETAIL.Name = "txtU_ADDR_DETAIL";
+            this.txtU_ADDR_DETAIL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtU_ADDR_DETAIL.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtU_ADDR_DETAIL.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtU_ADDR_DETAIL.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.txtU_ADDR_DETAIL.RequireMessage = null;
+            this.txtU_ADDR_DETAIL.Size = new System.Drawing.Size(157, 20);
+            this.txtU_ADDR_DETAIL.StyleController = this.layoutControl1;
+            this.txtU_ADDR_DETAIL.TabIndex = 30;
+            // 
             // chkIS_COMP_MD
             // 
             this.chkIS_COMP_MD.EraserGroup = "CLR1";
@@ -1302,13 +1288,13 @@
             // 
             // cmbDORAMD_TYPE
             // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbDORAMD_TYPE.ChildHierarchyInfo = childHierarchy3;
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbDORAMD_TYPE.HierarchyInfo = hierarchy3;
+            childHierarchy4.CodeCtrl = null;
+            childHierarchy4.DbName = null;
+            childHierarchy4.SpName = null;
+            this.cmbDORAMD_TYPE.ChildHierarchyInfo = childHierarchy4;
+            hierarchy4.DbName = null;
+            hierarchy4.SpName = null;
+            this.cmbDORAMD_TYPE.HierarchyInfo = hierarchy4;
             this.cmbDORAMD_TYPE.IsMultiLang = false;
             this.cmbDORAMD_TYPE.Location = new System.Drawing.Point(330, 205);
             this.cmbDORAMD_TYPE.MasterCode = "E03.DR_MD_TYPE1";
@@ -1328,6 +1314,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(791, 30);
             this.panel3.TabIndex = 26;
+            // 
+            // efwLabel3
+            // 
+            this.efwLabel3.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.efwLabel3.Appearance.Options.UseForeColor = true;
+            this.efwLabel3.EraserGroup = null;
+            this.efwLabel3.IsMultiLang = false;
+            this.efwLabel3.Location = new System.Drawing.Point(295, 8);
+            this.efwLabel3.Name = "efwLabel3";
+            this.efwLabel3.Size = new System.Drawing.Size(190, 14);
+            this.efwLabel3.TabIndex = 26;
+            this.efwLabel3.Text = "※ 전화 버호 입력시 - 반드시 입력하세요";
             // 
             // efwLabel1
             // 
@@ -1590,14 +1588,14 @@
             // 
             // cmbU_CHEF_LEVEL
             // 
-            childHierarchy4.CodeCtrl = null;
-            childHierarchy4.DbName = null;
-            childHierarchy4.SpName = null;
-            this.cmbU_CHEF_LEVEL.ChildHierarchyInfo = childHierarchy4;
+            childHierarchy5.CodeCtrl = null;
+            childHierarchy5.DbName = null;
+            childHierarchy5.SpName = null;
+            this.cmbU_CHEF_LEVEL.ChildHierarchyInfo = childHierarchy5;
             this.cmbU_CHEF_LEVEL.EraserGroup = "CLR1";
-            hierarchy4.DbName = null;
-            hierarchy4.SpName = null;
-            this.cmbU_CHEF_LEVEL.HierarchyInfo = hierarchy4;
+            hierarchy5.DbName = null;
+            hierarchy5.SpName = null;
+            this.cmbU_CHEF_LEVEL.HierarchyInfo = hierarchy5;
             this.cmbU_CHEF_LEVEL.IsMultiLang = false;
             this.cmbU_CHEF_LEVEL.Location = new System.Drawing.Point(87, 182);
             this.cmbU_CHEF_LEVEL.MasterCode = "E03.MEMBERQ_GBN3";
@@ -2278,6 +2276,15 @@
             this.layoutControlItem44.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem44.TextVisible = false;
             // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.Control = this.txtU_ADDR_DETAIL;
+            this.layoutControlItem19.Location = new System.Drawing.Point(443, 154);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(161, 24);
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem19.TextVisible = false;
+            // 
             // efwTextEdit2
             // 
             this.efwTextEdit2.EditValue2 = null;
@@ -2324,20 +2331,20 @@
             // 
             this.efwGridControl2.BindSet = null;
             this.efwGridControl2.DBName = "";
-            serviceInfo1.InstanceName = "";
-            serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
-            serviceInfo1.ProcName = "";
-            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
-            this.efwGridControl2.DeleteServiceInfo = serviceInfo1;
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
+            this.efwGridControl2.DeleteServiceInfo = serviceInfo4;
             this.efwGridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGridControl2.EraserGroup = "CLR1";
-            serviceInfo2.InstanceName = "";
-            serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
-            serviceInfo2.ProcName = "";
-            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
-            this.efwGridControl2.InsertServiceInfo = serviceInfo2;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
+            this.efwGridControl2.InsertServiceInfo = serviceInfo5;
             this.efwGridControl2.IsAddExcelBtn = true;
             this.efwGridControl2.isAddPrintBtn = true;
             this.efwGridControl2.IsEditable = false;
@@ -2351,12 +2358,12 @@
             this.efwGridControl2.Size = new System.Drawing.Size(500, 265);
             this.efwGridControl2.TabIndex = 0;
             this.efwGridControl2.TableName = "";
-            serviceInfo3.InstanceName = "";
-            serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
-            serviceInfo3.ProcName = "";
-            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
-            this.efwGridControl2.UpdateServiceInfo = serviceInfo3;
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
+            this.efwGridControl2.UpdateServiceInfo = serviceInfo6;
             this.efwGridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -2428,41 +2435,6 @@
             this.gridColumn49.Visible = true;
             this.gridColumn49.VisibleIndex = 5;
             // 
-            // efwLabel3
-            // 
-            this.efwLabel3.Appearance.ForeColor = System.Drawing.Color.Blue;
-            this.efwLabel3.Appearance.Options.UseForeColor = true;
-            this.efwLabel3.EraserGroup = null;
-            this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(295, 8);
-            this.efwLabel3.Name = "efwLabel3";
-            this.efwLabel3.Size = new System.Drawing.Size(190, 14);
-            this.efwLabel3.TabIndex = 26;
-            this.efwLabel3.Text = "※ 전화 버호 입력시 - 반드시 입력하세요";
-            // 
-            // txtU_ADDR_DETAIL
-            // 
-            this.txtU_ADDR_DETAIL.EditValue2 = null;
-            this.txtU_ADDR_DETAIL.Location = new System.Drawing.Point(455, 158);
-            this.txtU_ADDR_DETAIL.Name = "txtU_ADDR_DETAIL";
-            this.txtU_ADDR_DETAIL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtU_ADDR_DETAIL.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtU_ADDR_DETAIL.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtU_ADDR_DETAIL.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.txtU_ADDR_DETAIL.RequireMessage = null;
-            this.txtU_ADDR_DETAIL.Size = new System.Drawing.Size(157, 20);
-            this.txtU_ADDR_DETAIL.StyleController = this.layoutControl1;
-            this.txtU_ADDR_DETAIL.TabIndex = 30;
-            // 
-            // layoutControlItem19
-            // 
-            this.layoutControlItem19.Control = this.txtU_ADDR_DETAIL;
-            this.layoutControlItem19.Location = new System.Drawing.Point(443, 154);
-            this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(161, 24);
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem19.TextVisible = false;
-            // 
             // frmMM05
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2483,9 +2455,6 @@
             this.efwGroupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).EndInit();
             this.efwGroupControl3.ResumeLayout(false);
@@ -2523,6 +2492,7 @@
             this.efwGroupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtU_ADDR_DETAIL.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIS_COMP_MD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDORAMD_TYPE.Properties)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -2592,14 +2562,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).EndInit();
             this.efwGroupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtU_ADDR_DETAIL.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2609,9 +2578,6 @@
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl1;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.SplitterControl splitterControl1;
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;

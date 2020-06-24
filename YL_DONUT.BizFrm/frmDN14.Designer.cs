@@ -87,6 +87,8 @@
             this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -158,6 +160,10 @@
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel28 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtGS_THANK_DOMA = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtGS_THANK_VIP = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel29 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtP_DISCOUNT_PRICE = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel27 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -282,6 +288,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).BeginInit();
             this.efwGroupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGS_THANK_DOMA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGS_THANK_VIP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_DISCOUNT_PRICE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
@@ -539,6 +547,8 @@
             this.gridColumn49,
             this.gridColumn50,
             this.gridColumn51,
+            this.gridColumn54,
+            this.gridColumn53,
             this.gridColumn40,
             this.gridColumn45,
             this.gridColumn46,
@@ -806,13 +816,33 @@
             this.gridColumn51.VisibleIndex = 23;
             this.gridColumn51.Width = 160;
             // 
+            // gridColumn54
+            // 
+            this.gridColumn54.Caption = "GS 감사스토리_도마";
+            this.gridColumn54.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn54.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn54.FieldName = "gs_thank_doma";
+            this.gridColumn54.Name = "gridColumn54";
+            this.gridColumn54.Visible = true;
+            this.gridColumn54.VisibleIndex = 24;
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.Caption = "GS 감사스토리_VIP";
+            this.gridColumn53.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn53.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn53.FieldName = "gs_thank_vip";
+            this.gridColumn53.Name = "gridColumn53";
+            this.gridColumn53.Visible = true;
+            this.gridColumn53.VisibleIndex = 25;
+            // 
             // gridColumn40
             // 
             this.gridColumn40.Caption = "비고";
             this.gridColumn40.FieldName = "remark";
             this.gridColumn40.Name = "gridColumn40";
             this.gridColumn40.Visible = true;
-            this.gridColumn40.VisibleIndex = 24;
+            this.gridColumn40.VisibleIndex = 26;
             this.gridColumn40.Width = 155;
             // 
             // gridColumn45
@@ -1017,7 +1047,7 @@
             this.efwGridControl3.isAddPrintBtn = true;
             this.efwGridControl3.IsEditable = false;
             this.efwGridControl3.IsMultiLang = false;
-            this.efwGridControl3.Location = new System.Drawing.Point(2, 45);
+            this.efwGridControl3.Location = new System.Drawing.Point(2, 48);
             this.efwGridControl3.MainView = this.gridView3;
             this.efwGridControl3.Name = "efwGridControl3";
             this.efwGridControl3.NowRowHandle = 0;
@@ -1092,7 +1122,7 @@
             this.efwPanelControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl3.Location = new System.Drawing.Point(2, 1);
             this.efwPanelControl3.Name = "efwPanelControl3";
-            this.efwPanelControl3.Size = new System.Drawing.Size(1484, 44);
+            this.efwPanelControl3.Size = new System.Drawing.Size(1484, 47);
             this.efwPanelControl3.TabIndex = 66;
             // 
             // efwSimpleButton3
@@ -1551,6 +1581,10 @@
             // efwGroupControl4
             // 
             this.efwGroupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl4.CaptionImageOptions.Image")));
+            this.efwGroupControl4.Controls.Add(this.efwLabel28);
+            this.efwGroupControl4.Controls.Add(this.txtGS_THANK_DOMA);
+            this.efwGroupControl4.Controls.Add(this.txtGS_THANK_VIP);
+            this.efwGroupControl4.Controls.Add(this.efwLabel29);
             this.efwGroupControl4.Controls.Add(this.txtP_DISCOUNT_PRICE);
             this.efwGroupControl4.Controls.Add(this.efwLabel27);
             this.efwGroupControl4.Controls.Add(this.efwSimpleButton2);
@@ -1611,6 +1645,60 @@
             this.efwGroupControl4.TabIndex = 66;
             this.efwGroupControl4.Text = "수정";
             // 
+            // efwLabel28
+            // 
+            this.efwLabel28.EraserGroup = null;
+            this.efwLabel28.IsMultiLang = false;
+            this.efwLabel28.Location = new System.Drawing.Point(774, 116);
+            this.efwLabel28.Name = "efwLabel28";
+            this.efwLabel28.Size = new System.Drawing.Size(106, 14);
+            this.efwLabel28.TabIndex = 67;
+            this.efwLabel28.Text = "GS감사스토리_DOMA";
+            // 
+            // txtGS_THANK_DOMA
+            // 
+            this.txtGS_THANK_DOMA.EditValue = "0";
+            this.txtGS_THANK_DOMA.EditValue2 = null;
+            this.txtGS_THANK_DOMA.Location = new System.Drawing.Point(928, 113);
+            this.txtGS_THANK_DOMA.Name = "txtGS_THANK_DOMA";
+            this.txtGS_THANK_DOMA.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtGS_THANK_DOMA.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtGS_THANK_DOMA.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtGS_THANK_DOMA.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGS_THANK_DOMA.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtGS_THANK_DOMA.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtGS_THANK_DOMA.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtGS_THANK_DOMA.RequireMessage = null;
+            this.txtGS_THANK_DOMA.Size = new System.Drawing.Size(100, 20);
+            this.txtGS_THANK_DOMA.TabIndex = 66;
+            // 
+            // txtGS_THANK_VIP
+            // 
+            this.txtGS_THANK_VIP.EditValue = "0";
+            this.txtGS_THANK_VIP.EditValue2 = null;
+            this.txtGS_THANK_VIP.Location = new System.Drawing.Point(928, 139);
+            this.txtGS_THANK_VIP.Name = "txtGS_THANK_VIP";
+            this.txtGS_THANK_VIP.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtGS_THANK_VIP.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtGS_THANK_VIP.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtGS_THANK_VIP.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGS_THANK_VIP.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtGS_THANK_VIP.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtGS_THANK_VIP.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtGS_THANK_VIP.RequireMessage = null;
+            this.txtGS_THANK_VIP.Size = new System.Drawing.Size(100, 20);
+            this.txtGS_THANK_VIP.TabIndex = 65;
+            // 
+            // efwLabel29
+            // 
+            this.efwLabel29.EraserGroup = null;
+            this.efwLabel29.IsMultiLang = false;
+            this.efwLabel29.Location = new System.Drawing.Point(774, 142);
+            this.efwLabel29.Name = "efwLabel29";
+            this.efwLabel29.Size = new System.Drawing.Size(91, 14);
+            this.efwLabel29.TabIndex = 64;
+            this.efwLabel29.Text = "GS감사스토리_VIP";
+            // 
             // txtP_DISCOUNT_PRICE
             // 
             this.txtP_DISCOUNT_PRICE.EditValue = "0";
@@ -1654,9 +1742,9 @@
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
             this.efwGroupControl2.Controls.Add(this.layoutControl1);
             this.efwGroupControl2.IsMultiLang = false;
-            this.efwGroupControl2.Location = new System.Drawing.Point(886, 35);
+            this.efwGroupControl2.Location = new System.Drawing.Point(774, 34);
             this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(76, 45);
+            this.efwGroupControl2.Size = new System.Drawing.Size(74, 56);
             this.efwGroupControl2.TabIndex = 38;
             this.efwGroupControl2.Text = "key";
             this.efwGroupControl2.Visible = false;
@@ -1675,7 +1763,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(2, 23);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(72, 20);
+            this.layoutControl1.Size = new System.Drawing.Size(70, 31);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -2110,7 +2198,7 @@
             // 
             this.efwLabel14.EraserGroup = null;
             this.efwLabel14.IsMultiLang = false;
-            this.efwLabel14.Location = new System.Drawing.Point(774, 141);
+            this.efwLabel14.Location = new System.Drawing.Point(857, 66);
             this.efwLabel14.Name = "efwLabel14";
             this.efwLabel14.Size = new System.Drawing.Size(95, 14);
             this.efwLabel14.TabIndex = 33;
@@ -2188,7 +2276,7 @@
             // 
             this.txtCASH_GR_CELE_STORY.EditValue = "0";
             this.txtCASH_GR_CELE_STORY.EditValue2 = null;
-            this.txtCASH_GR_CELE_STORY.Location = new System.Drawing.Point(928, 138);
+            this.txtCASH_GR_CELE_STORY.Location = new System.Drawing.Point(969, 64);
             this.txtCASH_GR_CELE_STORY.Name = "txtCASH_GR_CELE_STORY";
             this.txtCASH_GR_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCASH_GR_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2198,7 +2286,7 @@
             this.txtCASH_GR_CELE_STORY.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCASH_GR_CELE_STORY.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCASH_GR_CELE_STORY.RequireMessage = null;
-            this.txtCASH_GR_CELE_STORY.Size = new System.Drawing.Size(100, 20);
+            this.txtCASH_GR_CELE_STORY.Size = new System.Drawing.Size(34, 20);
             this.txtCASH_GR_CELE_STORY.TabIndex = 26;
             this.txtCASH_GR_CELE_STORY.Visible = false;
             // 
@@ -2308,7 +2396,7 @@
             // 
             this.txtD_GS_CELE_STORY.EditValue = "0";
             this.txtD_GS_CELE_STORY.EditValue2 = null;
-            this.txtD_GS_CELE_STORY.Location = new System.Drawing.Point(928, 112);
+            this.txtD_GS_CELE_STORY.Location = new System.Drawing.Point(969, 38);
             this.txtD_GS_CELE_STORY.Name = "txtD_GS_CELE_STORY";
             this.txtD_GS_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtD_GS_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2318,7 +2406,7 @@
             this.txtD_GS_CELE_STORY.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtD_GS_CELE_STORY.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtD_GS_CELE_STORY.RequireMessage = null;
-            this.txtD_GS_CELE_STORY.Size = new System.Drawing.Size(100, 20);
+            this.txtD_GS_CELE_STORY.Size = new System.Drawing.Size(32, 20);
             this.txtD_GS_CELE_STORY.TabIndex = 19;
             this.txtD_GS_CELE_STORY.Visible = false;
             // 
@@ -2421,7 +2509,7 @@
             // 
             this.efwLabel12.EraserGroup = null;
             this.efwLabel12.IsMultiLang = false;
-            this.efwLabel12.Location = new System.Drawing.Point(774, 115);
+            this.efwLabel12.Location = new System.Drawing.Point(857, 40);
             this.efwLabel12.Name = "efwLabel12";
             this.efwLabel12.Size = new System.Drawing.Size(103, 14);
             this.efwLabel12.TabIndex = 12;
@@ -2656,6 +2744,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).EndInit();
             this.efwGroupControl4.ResumeLayout(false);
             this.efwGroupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGS_THANK_DOMA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGS_THANK_VIP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_DISCOUNT_PRICE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
@@ -2890,5 +2980,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
         private Easy.Framework.WinForm.Control.efwTextEdit txtP_DISCOUNT_PRICE;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel27;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel28;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtGS_THANK_DOMA;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtGS_THANK_VIP;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel29;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
     }
 }

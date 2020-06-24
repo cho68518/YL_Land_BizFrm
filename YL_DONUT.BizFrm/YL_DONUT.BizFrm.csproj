@@ -472,7 +472,6 @@
     <None Include="Resources\PS운영자_추천지원금_정산내역_D머니적립_sample.xls" />
     <None Include="Resources\YSMS및개인간거래 AD머니적립_sample.xls" />
     <None Include="Resources\도넛_차액반환_TD머니적립_sample.xls" />
-    <None Include="Resources\후기머니관리_UPDATE_sample.xls" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

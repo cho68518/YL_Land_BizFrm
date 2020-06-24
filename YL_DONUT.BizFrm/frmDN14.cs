@@ -97,6 +97,8 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("ad_gs_cele_story", txtAD_GS_CELE_STORY)
                     , new ColumnControlSet("p_discount_price", txtP_DISCOUNT_PRICE)
                     , new ColumnControlSet("ad_gr_cele_story", txtAD_GR_CELE_STORY)
+                    , new ColumnControlSet("gs_thank_doma", txtGS_THANK_DOMA)
+                    , new ColumnControlSet("gs_thank_vip", txtGS_THANK_VIP)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -406,6 +408,14 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_p_discount_price"].Direction = ParameterDirection.Input;
 
 
+                            cmd.Parameters.Add(new MySqlParameter("i_gs_thank_doma", MySqlDbType.Int32));
+                            cmd.Parameters["i_gs_thank_doma"].Value = Convert.ToInt32(txtGS_THANK_DOMA.EditValue);
+                            cmd.Parameters["i_gs_thank_doma"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gs_thank_vip", MySqlDbType.Int32));
+                            cmd.Parameters["i_gs_thank_vip"].Value = Convert.ToInt32(txtGS_THANK_VIP.EditValue);
+                            cmd.Parameters["i_gs_thank_vip"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -497,7 +507,7 @@ namespace YL_DONUT.BizFrm
                         //this.efwGridControl1.DataSource = ExcelDataBaseHelper.OpenFile(fileName);
 
                         this.efwGridControl3.MyGridView.BestFitColumns();
-                        lblCnt.Text = string.Format("{0:#,###}", gridView1.DataRowCount.ToString());
+                        lblCnt.Text = string.Format("{0:#,###}", gridView3.DataRowCount.ToString());
                     }
                 }
                 catch (Exception ex)
@@ -887,41 +897,43 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add("i_delivery_price", MySqlDbType.Int32, 11);
                             cmd.Parameters[7].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[7]).ToString());
 
-                            cmd.Parameters.Add("i_ps_donut01", MySqlDbType.Int32, 11);
+                            cmd.Parameters.Add("i_p_discount_price", MySqlDbType.Int32, 11);
                             cmd.Parameters[8].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[8]).ToString());
 
-                            cmd.Parameters.Add("i_ps_donut02", MySqlDbType.Int32, 11);
-                            cmd.Parameters[9].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[9]).ToString());
-
                             cmd.Parameters.Add("i_vip_price", MySqlDbType.Int32, 11);
+                            cmd.Parameters[9].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[8]).ToString());
+
+                             cmd.Parameters.Add("i_ps_oper_price", MySqlDbType.Int32, 11);
                             cmd.Parameters[10].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[10]).ToString());
 
-                            cmd.Parameters.Add("i_p_discount_price", MySqlDbType.Int32, 11);
+                            cmd.Parameters.Add("i_ps_donut01", MySqlDbType.Int32, 11);
                             cmd.Parameters[11].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[11]).ToString());
 
-                            cmd.Parameters.Add("i_ps_price", MySqlDbType.Int32, 11);
+                            cmd.Parameters.Add("i_td_donut", MySqlDbType.Int32, 11);
                             cmd.Parameters[12].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[12]).ToString());
 
-                            cmd.Parameters.Add("i_ps_oper_price", MySqlDbType.Int32, 11);
-                            cmd.Parameters[13].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[13]).ToString());
+                            //cmd.Parameters.Add("i_ps_donut02", MySqlDbType.Int32, 11);
+                            //cmd.Parameters[9].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[9]).ToString());
 
-                            cmd.Parameters.Add("i_chef_commission01", MySqlDbType.Int32, 11);
-                            cmd.Parameters[14].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[14]).ToString());
+                            //cmd.Parameters.Add("i_ps_price", MySqlDbType.Int32, 11);
+                            //cmd.Parameters[12].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[12]).ToString());
 
-                            cmd.Parameters.Add("i_chef_commission02", MySqlDbType.Int32, 11);
-                            cmd.Parameters[15].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[15]).ToString());
 
-                            cmd.Parameters.Add("i_td_donut", MySqlDbType.Int32, 11);
-                            cmd.Parameters[16].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[16]).ToString());
+                            //cmd.Parameters.Add("i_chef_commission01", MySqlDbType.Int32, 11);
+                            //cmd.Parameters[14].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[14]).ToString());
 
-                            cmd.Parameters.Add("i_ad_donut", MySqlDbType.Int32, 11);
-                            cmd.Parameters[17].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[17]).ToString());
+                            //cmd.Parameters.Add("i_chef_commission02", MySqlDbType.Int32, 11);
+                            //cmd.Parameters[15].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[15]).ToString());
 
-                            cmd.Parameters.Add("i_reco_donut", MySqlDbType.Int32, 11);
-                            cmd.Parameters[18].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[18]).ToString());
 
-                            cmd.Parameters.Add("i_remark", MySqlDbType.VarChar, 500);
-                            cmd.Parameters[19].Value = gridView3.GetRowCellValue(i, gridView3.Columns[19]).ToString();
+                            //cmd.Parameters.Add("i_ad_donut", MySqlDbType.Int32, 11);
+                            //cmd.Parameters[17].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[17]).ToString());
+
+                            //cmd.Parameters.Add("i_reco_donut", MySqlDbType.Int32, 11);
+                            //cmd.Parameters[18].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[18]).ToString());
+
+                            //cmd.Parameters.Add("i_remark", MySqlDbType.VarChar, 500);
+                            //cmd.Parameters[19].Value = gridView3.GetRowCellValue(i, gridView3.Columns[19]).ToString();
 
                             cmd.ExecuteNonQuery();
                             con.Close();

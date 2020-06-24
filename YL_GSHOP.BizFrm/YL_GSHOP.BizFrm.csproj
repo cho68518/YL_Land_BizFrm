@@ -147,6 +147,18 @@
     <Compile Include="Dlg\frmZipNoInfo.designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGSHOP13.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP13.Designer.cs">
+      <DependentUpon>frmGSHOP13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGSHOP12_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP12_Pop01.Designer.cs">
+      <DependentUpon>frmGSHOP12_Pop01.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGSHOP12.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -261,6 +273,9 @@
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP12_Pop01.resx">
+      <DependentUpon>frmGSHOP12_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP12.resx">
       <DependentUpon>frmGSHOP12.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP11.resx">
       <DependentUpon>frmGSHOP11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP13.resx">
+      <DependentUpon>frmGSHOP13.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

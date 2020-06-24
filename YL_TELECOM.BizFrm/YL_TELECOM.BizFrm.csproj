@@ -36,6 +36,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -76,7 +77,10 @@
       <HintPath>..\..\Easy.Framework.Release\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -89,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstantLib.cs" />
+    <Compile Include="frmTM03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTM03.Designer.cs">
+      <DependentUpon>frmTM03.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTM02.resx">
       <DependentUpon>frmTM02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM03.resx">
+      <DependentUpon>frmTM03.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
