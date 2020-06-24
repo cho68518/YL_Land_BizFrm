@@ -445,5 +445,36 @@ namespace YL_DONUT.BizFrm
             txtGuId.EditValue = sGuId;
             txtImgName.EditValue = "gshop_00000016" + "_" + sGuId + ".";
         }
+
+        private void checkButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            //http://domamall.domalife.net:8000/domamall/product/list.do?u_id=d1c907d4562fbce2144db86ae43ef7f6&chef_room_id=&mallType=private&my_shop=&m_web=Y&id=7&sortType=N
+
+            string url = "http://domamall.domalife.net:8000/domamall/product/list.do";
+            WebRequest request = WebRequest.Create(url);
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+
+            //전달할 파라메타
+            string sendData = "u_id=d1c907d4562fbce2144db86ae43ef7f6&chef_room_id=&mallType=private&my_shop=&m_web=Y&id=7&sortType=N";
+
+            byte[] buffer;
+            buffer = Encoding.Default.GetBytes(sendData);
+            request.ContentLength = buffer.Length;
+            Stream sendStream = request.GetRequestStream();
+            sendStream.Write(buffer, 0, buffer.Length);
+            sendStream.Close();
+
+        }
+
+        private void checkButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://domamall.domalife.net:8000/domamall/product/list.do?u_id=d1c907d4562fbce2144db86ae43ef7f6&chef_room_id=&mallType=private&my_shop=&m_web=Y&id=7&sortType=N");
+        }
+
+        private void checkButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("http://domamall.domalife.net:8000/domamall/product/list.do?u_id=d1c907d4562fbce2144db86ae43ef7f6&chef_room_id=&mallType=private&my_shop=&m_web=Y&id=7&sortType=N");
+        }
     }
 }

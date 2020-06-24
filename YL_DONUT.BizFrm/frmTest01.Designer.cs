@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTest01));
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtImgName = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtGuId = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -61,6 +61,12 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet11 = new YL_DONUT.BizFrm.DataSet1();
+            this.checkButton2 = new DevExpress.XtraEditors.CheckButton();
+            this.checkButton3 = new DevExpress.XtraEditors.CheckButton();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.checkButton4 = new DevExpress.XtraEditors.CheckButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtImgName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGuId.Properties)).BeginInit();
@@ -83,6 +89,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.checkButton4);
+            this.panel2.Controls.Add(this.webBrowser1);
+            this.panel2.Controls.Add(this.checkButton3);
+            this.panel2.Controls.Add(this.checkButton2);
             this.panel2.Controls.Add(this.txtImgName);
             this.panel2.Controls.Add(this.txtGuId);
             this.panel2.Controls.Add(this.btnGuId);
@@ -113,30 +125,30 @@
             // 
             this.txtImgName.EditValue = "";
             this.txtImgName.EditValue2 = null;
-            this.txtImgName.Location = new System.Drawing.Point(488, 590);
+            this.txtImgName.Location = new System.Drawing.Point(198, 632);
             this.txtImgName.Name = "txtImgName";
             this.txtImgName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtImgName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtImgName.RequireMessage = null;
-            this.txtImgName.Size = new System.Drawing.Size(544, 20);
+            this.txtImgName.Size = new System.Drawing.Size(447, 20);
             this.txtImgName.TabIndex = 23;
             // 
             // txtGuId
             // 
             this.txtGuId.EditValue = "";
             this.txtGuId.EditValue2 = null;
-            this.txtGuId.Location = new System.Drawing.Point(488, 541);
+            this.txtGuId.Location = new System.Drawing.Point(198, 583);
             this.txtGuId.Name = "txtGuId";
             this.txtGuId.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtGuId.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtGuId.RequireMessage = null;
-            this.txtGuId.Size = new System.Drawing.Size(544, 20);
+            this.txtGuId.Size = new System.Drawing.Size(447, 20);
             this.txtGuId.TabIndex = 22;
             // 
             // btnGuId
             // 
             this.btnGuId.IsMultiLang = false;
-            this.btnGuId.Location = new System.Drawing.Point(344, 536);
+            this.btnGuId.Location = new System.Drawing.Point(54, 578);
             this.btnGuId.Name = "btnGuId";
             this.btnGuId.Size = new System.Drawing.Size(123, 31);
             this.btnGuId.TabIndex = 21;
@@ -147,7 +159,7 @@
             // 
             this.txtFileName.EditValue = "";
             this.txtFileName.EditValue2 = null;
-            this.txtFileName.Location = new System.Drawing.Point(876, 452);
+            this.txtFileName.Location = new System.Drawing.Point(411, 546);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtFileName.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -158,7 +170,7 @@
             // btnUpload
             // 
             this.btnUpload.IsMultiLang = false;
-            this.btnUpload.Location = new System.Drawing.Point(784, 447);
+            this.btnUpload.Location = new System.Drawing.Point(319, 541);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(86, 31);
             this.btnUpload.TabIndex = 19;
@@ -169,18 +181,18 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo1.InstanceName = "";
-            serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
-            serviceInfo1.ProcName = "";
-            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
-            serviceInfo2.InstanceName = "";
-            serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
-            serviceInfo2.ProcName = "";
-            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
-            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo4;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
+            this.efwGridControl1.InsertServiceInfo = serviceInfo5;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
@@ -193,12 +205,12 @@
             this.efwGridControl1.Size = new System.Drawing.Size(496, 104);
             this.efwGridControl1.TabIndex = 18;
             this.efwGridControl1.TableName = "";
-            serviceInfo3.InstanceName = "";
-            serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
-            serviceInfo3.ProcName = "";
-            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo6;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -243,7 +255,7 @@
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(314, 274);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(428, 204);
+            this.efwGroupControl1.Size = new System.Drawing.Size(336, 204);
             this.efwGroupControl1.TabIndex = 13;
             this.efwGroupControl1.Text = "주소검색";
             // 
@@ -255,7 +267,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(5, 60);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(418, 144);
+            this.dataGridView2.Size = new System.Drawing.Size(326, 144);
             this.dataGridView2.TabIndex = 15;
             // 
             // efwSimpleButton4
@@ -352,7 +364,7 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(366, 593);
+            this.lbl1.Location = new System.Drawing.Point(76, 635);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(101, 14);
             this.lbl1.TabIndex = 2;
@@ -402,6 +414,64 @@
             // 
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // checkButton2
+            // 
+            this.checkButton2.Location = new System.Drawing.Point(128, 156);
+            this.checkButton2.Name = "checkButton2";
+            this.checkButton2.Size = new System.Drawing.Size(115, 55);
+            this.checkButton2.TabIndex = 24;
+            this.checkButton2.Text = "웹폼";
+            this.checkButton2.CheckedChanged += new System.EventHandler(this.checkButton2_CheckedChanged);
+            // 
+            // checkButton3
+            // 
+            this.checkButton3.Location = new System.Drawing.Point(249, 156);
+            this.checkButton3.Name = "checkButton3";
+            this.checkButton3.Size = new System.Drawing.Size(115, 55);
+            this.checkButton3.TabIndex = 25;
+            this.checkButton3.Text = "웹폼(브라우저)";
+            this.checkButton3.CheckedChanged += new System.EventHandler(this.checkButton3_CheckedChanged);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webBrowser1.Location = new System.Drawing.Point(711, 235);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(571, 462);
+            this.webBrowser1.TabIndex = 26;
+            // 
+            // checkButton4
+            // 
+            this.checkButton4.Location = new System.Drawing.Point(711, 194);
+            this.checkButton4.Name = "checkButton4";
+            this.checkButton4.Size = new System.Drawing.Size(139, 35);
+            this.checkButton4.TabIndex = 27;
+            this.checkButton4.Text = "호출";
+            this.checkButton4.CheckedChanged += new System.EventHandler(this.checkButton4_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 11F);
+            this.label1.Location = new System.Drawing.Point(415, 235);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "체험샷SET";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("굴림체", 14F);
+            this.label2.Location = new System.Drawing.Point(508, 235);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 19);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "체험샷SET";
             // 
             // frmTest01
             // 
@@ -463,5 +533,11 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtGuId;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnGuId;
         private Easy.Framework.WinForm.Control.efwTextEdit txtImgName;
+        private DevExpress.XtraEditors.CheckButton checkButton2;
+        private DevExpress.XtraEditors.CheckButton checkButton3;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private DevExpress.XtraEditors.CheckButton checkButton4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
