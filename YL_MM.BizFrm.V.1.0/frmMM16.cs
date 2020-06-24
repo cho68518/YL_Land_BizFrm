@@ -110,6 +110,21 @@ namespace YL_MM.BizFrm
                 return;
             }
 
+            int nCount;
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = "select count(*) as nCount FROM  domalife.member_master where login_id  = '" + txtID.EditValue + "'  ";
+                DataSet ds = sql.selectQueryDataSet();
+
+                nCount = Convert.ToInt32(sql.selectQueryForSingleValue());
+            }
+            if (nCount == 1)
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " domalife.member_master 회원 이력이 존재합니다 ");
+                return;
+            }
+
+
             txtO_U_ID.EditValue = "";
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {

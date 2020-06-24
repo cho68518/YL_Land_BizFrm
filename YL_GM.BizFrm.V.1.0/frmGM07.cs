@@ -57,6 +57,7 @@ namespace YL_GM.BizFrm
                     , new ColumnControlSet("sort_id", nSort_Id)
                     , new ColumnControlSet("comment", txtComment)
                     , new ColumnControlSet("etc", txtEtc)
+                    , new ColumnControlSet("Payment_Type", txtPayment_Type)
 
                       );
 

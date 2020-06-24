@@ -424,7 +424,7 @@
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(3, 509);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(1053, 71);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1053, 139);
             this.efwGroupControl1.TabIndex = 10;
             this.efwGroupControl1.Text = "스와이프 결재등록";
             // 
@@ -665,7 +665,7 @@
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmMM12";
-            this.Size = new System.Drawing.Size(1059, 580);
+            this.Size = new System.Drawing.Size(1059, 648);
             this.Controls.SetChildIndex(this.efwPanelControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             this.Controls.SetChildIndex(this.splitterControl1, 0);

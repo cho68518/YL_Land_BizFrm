@@ -169,6 +169,7 @@ namespace YL_MM.BizFrm
             {
                 this.btnPost_No.EditValue2 = dr["post_no"].ToString();
                 this.btnPost_No.Text = dr["post_no"].ToString();
+                this.txtIdx.Text = dr["idx"].ToString();
             }
         }
         private void efwGridControl4_Click(object sender, EventArgs e)

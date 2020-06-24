@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5747A80A-CBFC-42C3-B170-73495553A80D}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_DONUT.BizFrm</RootNamespace>
     <AssemblyName>YL_DONUT.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -140,6 +140,16 @@
     <Compile Include="Dlg\frmZipNoInfo.Designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDN01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN01.designer.cs" />
+    <Compile Include="frmDN23.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN23.Designer.cs">
+      <DependentUpon>frmDN23.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDN22.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,12 +203,6 @@
     </Compile>
     <Compile Include="frmDN11.Designer.cs">
       <DependentUpon>frmDN11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDN01.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frmDN01.designer.cs">
-      <DependentUpon>frmDN01.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDN02.cs">
       <SubType>UserControl</SubType>
@@ -349,6 +353,7 @@
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDN01.resx" />
     <EmbeddedResource Include="frmDN01_Pop01.resx">
       <DependentUpon>frmDN01_Pop01.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,9 +362,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN20.resx">
       <DependentUpon>frmDN20.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDN01.resx">
-      <DependentUpon>frmDN01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN02.resx">
       <DependentUpon>frmDN02.cs</DependentUpon>
@@ -435,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN22.resx">
       <DependentUpon>frmDN22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN23.resx">
+      <DependentUpon>frmDN23.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
