@@ -18,8 +18,10 @@
 //</history>
 #endregion
 
+using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraTreeList;
 using Easy.Framework.Common;
+using Easy.Framework.Common.PopUp;
 using Easy.Framework.SrvCommon;
 using Easy.Framework.WinForm.Control;
 using MySql.Data.MySqlClient;
@@ -27,12 +29,16 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using YL_MA.BizFrm.Dlg;
+using YL_MA.BizFrm;
+using System.Collections;
+using System.Net.Sockets;
 
 namespace YL_MA.BizFrm
 {
@@ -103,8 +109,8 @@ namespace YL_MA.BizFrm
 
                 efwArea0.Text = String.Format("{0:#,##0}", dr[0]["AMT"]);
                 efwArea1.Text = String.Format("{0:#,##0}", dr[1]["AMT"]);
-                efwArea2.Text = String.Format("{0:#,##0}", dr[2]["AMT"]);
-                efwArea3.Text = String.Format("{0:#,##0}", dr[3]["AMT"]);
+                //efwArea2.Text = String.Format("{0:#,##0}", dr[2]["AMT"]);
+                efwArea3.Text = String.Format("{0:#,##0}", dr[2]["AMT"]);
             }
             catch (Exception ex)
             {
@@ -112,6 +118,23 @@ namespace YL_MA.BizFrm
                 Cursor.Current = Cursors.Default;
             }
 
+            try
+            {
+                using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+                {
+
+                    sql.Query = "select sum(a.o_donut_d_cost + a. o_donut_s_cost) from domamall.tb_am_product_orders a  " +
+                                 " where date_format(a.o_deposit_confirm_date, '%Y%m') =  substr('" + dtDATE.EditValue3.Replace(" - ","") + "',1,6) and a.o_type IN ('E','P')   ";
+                    DataSet ds = sql.selectQueryDataSet();
+
+                    efwArea2.Text = String.Format("{0:#,##0}", Convert.ToInt32(sql.selectQueryForSingleValue()));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
+            }
             Open1_1();
         }
 
@@ -201,7 +224,7 @@ namespace YL_MA.BizFrm
             if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0][0] != DBNull.Value)
             {
                 //efwArea4.Text = String.Format("{0:#,##0}", ds[0]["AMT"]);
-                efwArea6.Text = String.Format("{0:#,##0}", ds.Tables[0].Rows[0]["AMT"].ToString());
+                efwArea6.Text = String.Format("{0:#,##0}", Convert.ToInt32(ds.Tables[0].Rows[0]["AMT"].ToString()));
             }
 
             string strQuery1 = string.Format(@"SELECT isnull(SUM(RECV_AMOUNT),0) AS AMT  FROM  [YEOYOU_MONEY].[dbo].[TB_MILEAGE] WHERE convert(varchar(6), reg_date,112 )  = '" + sDate + "' AND RECV_ID    = 'AdminMovie'   ");

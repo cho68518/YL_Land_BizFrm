@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGM06));
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGM06));
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.txtO_CodeQ = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel9 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -100,10 +102,9 @@
             this.txtU_Id_UPDATE = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtMoney = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwLabel9 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtO_CodeQ = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_CodeQ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -135,7 +136,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMoney_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_Id_UPDATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMoney.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_CodeQ.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl1
@@ -154,6 +154,28 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1302, 49);
             this.efwPanelControl1.TabIndex = 40;
+            // 
+            // txtO_CodeQ
+            // 
+            this.txtO_CodeQ.EditValue2 = null;
+            this.txtO_CodeQ.EraserGroup = "CLR1";
+            this.txtO_CodeQ.Location = new System.Drawing.Point(777, 14);
+            this.txtO_CodeQ.Name = "txtO_CodeQ";
+            this.txtO_CodeQ.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_CodeQ.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_CodeQ.RequireMessage = null;
+            this.txtO_CodeQ.Size = new System.Drawing.Size(211, 20);
+            this.txtO_CodeQ.TabIndex = 45;
+            // 
+            // efwLabel9
+            // 
+            this.efwLabel9.EraserGroup = null;
+            this.efwLabel9.IsMultiLang = false;
+            this.efwLabel9.Location = new System.Drawing.Point(713, 16);
+            this.efwLabel9.Name = "efwLabel9";
+            this.efwLabel9.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel9.TabIndex = 44;
+            this.efwLabel9.Text = "주문번호";
             // 
             // efwLabel1
             // 
@@ -221,13 +243,13 @@
             // 
             // cmbMember_Search
             // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbMember_Search.ChildHierarchyInfo = childHierarchy3;
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbMember_Search.HierarchyInfo = hierarchy3;
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbMember_Search.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbMember_Search.HierarchyInfo = hierarchy1;
             this.cmbMember_Search.IsMultiLang = false;
             this.cmbMember_Search.Location = new System.Drawing.Point(445, 14);
             this.cmbMember_Search.MasterCode = "E03.PAY_GBN";
@@ -253,19 +275,19 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = null;
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = null;
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo4;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = null;
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = null;
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
             this.efwGridControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = null;
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = null;
-            this.efwGridControl1.InsertServiceInfo = serviceInfo5;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = null;
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = null;
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
@@ -284,14 +306,15 @@
             this.efwGridControl1.Size = new System.Drawing.Size(1302, 466);
             this.efwGridControl1.TabIndex = 42;
             this.efwGridControl1.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = null;
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = null;
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo6;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = null;
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = null;
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.efwGridControl1.Click += new System.EventHandler(this.efwGridControl1_Click);
             // 
             // gridView1
             // 
@@ -584,7 +607,7 @@
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(3, 555);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(724, 102);
+            this.efwGroupControl1.Size = new System.Drawing.Size(724, 124);
             this.efwGroupControl1.TabIndex = 46;
             this.efwGroupControl1.Text = "스토리( 생성 / 삭제 )";
             // 
@@ -723,13 +746,13 @@
             // 
             // cmbStory
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbStory.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbStory.HierarchyInfo = hierarchy1;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbStory.ChildHierarchyInfo = childHierarchy2;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbStory.HierarchyInfo = hierarchy2;
             this.cmbStory.IsMultiLang = false;
             this.cmbStory.Location = new System.Drawing.Point(96, 33);
             this.cmbStory.MasterCode = "E03.PAY_GBN";
@@ -773,7 +796,7 @@
             this.efwGroupControl2.IsMultiLang = false;
             this.efwGroupControl2.Location = new System.Drawing.Point(727, 555);
             this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(578, 102);
+            this.efwGroupControl2.Size = new System.Drawing.Size(578, 124);
             this.efwGroupControl2.TabIndex = 47;
             this.efwGroupControl2.Text = "스토리 ( 수정 )";
             // 
@@ -942,28 +965,6 @@
             this.txtMoney.Size = new System.Drawing.Size(61, 20);
             this.txtMoney.TabIndex = 58;
             // 
-            // efwLabel9
-            // 
-            this.efwLabel9.EraserGroup = null;
-            this.efwLabel9.IsMultiLang = false;
-            this.efwLabel9.Location = new System.Drawing.Point(713, 16);
-            this.efwLabel9.Name = "efwLabel9";
-            this.efwLabel9.Size = new System.Drawing.Size(40, 14);
-            this.efwLabel9.TabIndex = 44;
-            this.efwLabel9.Text = "주문번호";
-            // 
-            // txtO_CodeQ
-            // 
-            this.txtO_CodeQ.EditValue2 = null;
-            this.txtO_CodeQ.EraserGroup = "CLR1";
-            this.txtO_CodeQ.Location = new System.Drawing.Point(777, 14);
-            this.txtO_CodeQ.Name = "txtO_CodeQ";
-            this.txtO_CodeQ.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_CodeQ.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_CodeQ.RequireMessage = null;
-            this.txtO_CodeQ.Size = new System.Drawing.Size(211, 20);
-            this.txtO_CodeQ.TabIndex = 45;
-            // 
             // frmGM06
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -974,7 +975,7 @@
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmGM06";
-            this.Size = new System.Drawing.Size(1308, 657);
+            this.Size = new System.Drawing.Size(1308, 679);
             this.Controls.SetChildIndex(this.efwPanelControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             this.Controls.SetChildIndex(this.splitterControl1, 0);
@@ -983,6 +984,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_CodeQ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).EndInit();
@@ -1016,7 +1018,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMoney_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_Id_UPDATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMoney.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_CodeQ.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

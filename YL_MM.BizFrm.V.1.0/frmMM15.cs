@@ -369,7 +369,7 @@ namespace YL_MM.BizFrm
         {
             try
             {
-                if (MessageAgent.MessageShow(MessageType.Confirm, "선택된 품목을 하시겠습니까?") == DialogResult.OK)
+                if (MessageAgent.MessageShow(MessageType.Confirm, "선택된 품목을 제외 하시겠습니까?") == DialogResult.OK)
                 {
                     var saveResult = new SaveTableResultInfo() { IsError = true };
 
@@ -749,6 +749,62 @@ namespace YL_MM.BizFrm
             popup1.pm_name = txtId_Name.EditValue.ToString();
 
             popup1.ShowDialog();
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageAgent.MessageShow(MessageType.Confirm, "선택된 품목의 순서를 변경 하시겠습니까?") == DialogResult.OK)
+                {
+                    var saveResult = new SaveTableResultInfo() { IsError = true };
+
+                    var dt = efwGridControl2.GetChangeDataWithRowState;
+                    //var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+                    for (var i = 0; i < dt.Rows.Count; i++)
+                    {
+                        //string sCHK = string.Empty;
+                        //sCHK = dt.Rows[i]["chk"].ToString();
+
+                        //if (dt.Rows[i]["chk"].ToString() == "Y")
+                        //if (dt.Rows[i][StatusColumn].ToString() == "U")
+                        {
+                            //Console.WriteLine("------------------------------------------------------------");
+                            //Console.WriteLine("[U] " + dt.Rows[i]["o_code"].ToString());
+                            using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                            {
+                                using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM15_SAVE_05", con))
+                                {
+
+                                    con.Open();
+                                    cmd.CommandType = CommandType.StoredProcedure;
+
+                                    cmd.Parameters.Add("i_id", MySqlDbType.Int32, 5);
+                                    cmd.Parameters[0].Value = Convert.ToInt32(dt.Rows[i]["pm_id"]).ToString();
+
+                                    cmd.Parameters.Add("i_pm_prodser", MySqlDbType.Int32, 5);
+                                    cmd.Parameters[1].Value = Convert.ToInt32(dt.Rows[i]["pm_prodser"]).ToString();
+
+                                    cmd.Parameters.Add("i_p_id", MySqlDbType.Int32, 50);
+                                    cmd.Parameters[2].Value = Convert.ToInt32(dt.Rows[i]["p_id"]).ToString();
+
+                                    cmd.Parameters.Add("i_p_order", MySqlDbType.Int32, 50);
+                                    cmd.Parameters[3].Value = Convert.ToInt32(dt.Rows[i]["p_order"]).ToString();
+
+                                    cmd.ExecuteNonQuery();
+                                    con.Close();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            Search();
+            Open1();
         }
     }
 }

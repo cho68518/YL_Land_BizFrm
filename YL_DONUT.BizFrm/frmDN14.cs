@@ -70,7 +70,7 @@ namespace YL_DONUT.BizFrm
                       new ColumnControlSet("idx", txtIDX)
                     , new ColumnControlSet("p_id", txtP_ID)
                     , new ColumnControlSet("option_id", txtOPTION_ID)
-                    , new ColumnControlSet("product_name", txtPROD_NM)
+                    , new ColumnControlSet("option_name", txtOPTION_NAME)
                     , new ColumnControlSet("customer_price", txtCUSTOMER_PRICE)
                     , new ColumnControlSet("lowest_price", txtLOWEST_PRICE)
                     , new ColumnControlSet("supply_price", txtSUPPLY_PRICE)
@@ -99,6 +99,7 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("ad_gr_cele_story", txtAD_GR_CELE_STORY)
                     , new ColumnControlSet("gs_thank_doma", txtGS_THANK_DOMA)
                     , new ColumnControlSet("gs_thank_vip", txtGS_THANK_VIP)
+                    , new ColumnControlSet("gd_gr_cele_story", txtGD_GR_CELE_STORY)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -301,6 +302,10 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_p_id"].Value = Convert.ToInt32(txtP_ID.EditValue);
                             cmd.Parameters["i_p_id"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_option_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_option_name"].Value = txtOPTION_NAME.EditValue;
+                            cmd.Parameters["i_option_name"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("i_customer_price", MySqlDbType.Int32));
                             cmd.Parameters["i_customer_price"].Value = Convert.ToInt32(txtCUSTOMER_PRICE.EditValue);
                             cmd.Parameters["i_customer_price"].Direction = ParameterDirection.Input;
@@ -415,6 +420,10 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_gs_thank_vip", MySqlDbType.Int32));
                             cmd.Parameters["i_gs_thank_vip"].Value = Convert.ToInt32(txtGS_THANK_VIP.EditValue);
                             cmd.Parameters["i_gs_thank_vip"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gd_gr_cele_story", MySqlDbType.Int32));
+                            cmd.Parameters["i_gd_gr_cele_story"].Value = Convert.ToInt32(txtGD_GR_CELE_STORY.EditValue);
+                            cmd.Parameters["i_gd_gr_cele_story"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

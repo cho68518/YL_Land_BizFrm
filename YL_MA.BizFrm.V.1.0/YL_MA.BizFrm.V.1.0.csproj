@@ -176,6 +176,7 @@
     <Compile Include="frmTest01.Designer.cs">
       <DependentUpon>frmTest01.cs</DependentUpon>
     </Compile>
+    <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dlg\frmDeptInfo.resx">

@@ -97,8 +97,11 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_o_donut_d_cost", MySqlDbType.Int32));
                         cmd.Parameters["o_o_donut_d_cost"].Direction = ParameterDirection.Output;
 
-                        cmd.Parameters.Add(new MySqlParameter("o_o_donut_m_cost", MySqlDbType.Int32));
-                        cmd.Parameters["o_o_donut_m_cost"].Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add(new MySqlParameter("o_o_donut_s_cost", MySqlDbType.Int32));
+                        cmd.Parameters["o_o_donut_s_cost"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_o_donut_g_cost", MySqlDbType.Int32));
+                        cmd.Parameters["o_o_donut_g_cost"].Direction = ParameterDirection.Output;
 
                         cmd.Parameters.Add(new MySqlParameter("o_o_donut_c_cost", MySqlDbType.Int32));
                         cmd.Parameters["o_o_donut_c_cost"].Direction = ParameterDirection.Output;
@@ -224,7 +227,8 @@ namespace YL_DONUT.BizFrm
                         txtO_Total_Cost.EditValue = cmd.Parameters["o_o_total_cost"].Value.ToString();
                         txtO_Delivery_Cost.EditValue = cmd.Parameters["o_o_delivery_cost"].Value.ToString();
                         txtO_Donut_D_Cost.EditValue = cmd.Parameters["o_o_donut_d_cost"].Value.ToString();
-                        txtO_Donut_M_Cost.EditValue = cmd.Parameters["o_o_donut_m_cost"].Value.ToString();
+                        txtO_Donut_S_Cost.EditValue = cmd.Parameters["o_o_donut_s_cost"].Value.ToString();
+                        txtO_Donut_G_Cost.EditValue = cmd.Parameters["o_o_donut_g_cost"].Value.ToString();
                         txtO_Donut_C_Cost.EditValue = cmd.Parameters["o_o_donut_c_cost"].Value.ToString();
                         txtO_Purchase_Cost.EditValue = cmd.Parameters["o_o_purchase_cost"].Value.ToString();
                         txtO_Deposit_Confirm_Date.EditValue = cmd.Parameters["o_o_deposit_confirm_date"].Value.ToString();

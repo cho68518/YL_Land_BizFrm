@@ -451,10 +451,13 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "pr_jibun_addr";
+            this.gridColumn13.Caption = "지번주소";
             this.gridColumn13.FieldName = "pr_jibun_addr";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 12;
+            this.gridColumn13.Width = 150;
             // 
             // gridColumn15
             // 

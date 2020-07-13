@@ -101,9 +101,9 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["o_donut_s_cost"].SummaryItem.FieldName = "o_donut_s_cost";
             gridView1.Columns["o_donut_s_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["o_donut_m_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_donut_m_cost"].SummaryItem.FieldName = "o_donut_m_cost";
-            gridView1.Columns["o_donut_m_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            gridView1.Columns["o_donut_g_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["o_donut_g_cost"].SummaryItem.FieldName = "o_donut_g_cost";
+            gridView1.Columns["o_donut_g_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
             gridView1.Columns["o_donut_c_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["o_donut_c_cost"].SummaryItem.FieldName = "o_donut_c_cost";
@@ -145,11 +145,12 @@ namespace YL_DONUT.BizFrm
             this.efwGridControl1.BindControlSet( 
               new ColumnControlSet("id", txtId)
             );
-
             this.efwGridControl1.Click += efwGridControl1_Click;
-           
+
+
 
             setCmb();
+
 
 
         }
@@ -591,5 +592,7 @@ namespace YL_DONUT.BizFrm
             chkB.Checked = false;
             Search();
         }
+
+
     }
 }

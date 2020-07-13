@@ -439,49 +439,58 @@ namespace YL_GM.BizFrm
                     O_Code();
                 }
             // 알뜰지원스토리  o_code
-            else if (sStory == "232")
-                {  
-                    sStoryNo = "domabiz.USP_GM_GM06_INSERT_03";
-                    O_Code();
-                }
+            else NewMethod(sStory);
+
+        }
+
+        private void NewMethod(string sStory)
+        {
+            if (sStory == "232")
+            {
+                sStoryNo = "domabiz.USP_GM_GM06_INSERT_03";
+                O_Code();
+            }
             // GS 축하스토리   o_code
             else if (sStory == "242")
-                {   
-                    sStoryNo = "domabiz.USP_GM_GM06_INSERT_04";
-                    O_Code();
-                }
+            {
+                sStoryNo = "domabiz.USP_GM_GM06_INSERT_04";
+                O_Code();
+            }
             // GR 축하스토리   o_code
             else if (sStory == "244")
-                {  
-                    sStoryNo = "domabiz.USP_GM_GM06_INSERT_05";
-                    O_Code();
-                }
+            {
+                sStoryNo = "domabiz.USP_GM_GM06_INSERT_05";
+                O_Code();
+            }
             // PS 감사스토리   o_code
             else if (sStory == "229")
-                {   
-                    sStoryNo = "domabiz.USP_GM_GM06_INSERT_06";
-                    O_Code();
-                }
+            {
+                sStoryNo = "domabiz.USP_GM_GM06_INSERT_06";
+                O_Code();
+            }
             // PS 연장스토리   u_id
             else if (sStory == "245")
-                {  
-                    sStoryNo = "domabiz.USP_GM_GM06_INSERT_001";
-                    U_Id();
-                }
-            // 알뜰 추천스토리 u_id
-            else if (sStory == "222")
-                {  
-                    sStoryNo = "domabiz.USP_GM_GM06_INSERT_002";
-                    U_Id();
-                }
+            {
+                sStoryNo = "domabiz.USP_GM_GM06_INSERT_001";
+                U_Id();
+            }
+            // 도마 오픈스토리 u_id
+            else if (sStory == "224")
+            {
+                sStoryNo = "domabiz.USP_GM_GM06_INSERT_002";
+                U_Id();
+            }
             else
             {
                 MessageAgent.MessageShow(MessageType.Warning, "준비중.. 입니다");
                 return;
             }
-
         }
 
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

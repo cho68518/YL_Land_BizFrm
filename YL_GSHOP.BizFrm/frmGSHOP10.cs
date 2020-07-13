@@ -111,7 +111,7 @@ namespace YL_GSHOP.BizFrm
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                con.Query = "SELECT d_code as DCODE ,d_name as DNAME  FROM domamall.tb_am_product_delivers ";
+                con.Query = "SELECT d_code as DCODE ,d_name as DNAME  FROM domamall.tb_am_product_delivers  order by sort ";
 
                 DataSet ds = con.selectQueryDataSet();
                 //DataTable retDT = ds.Tables[0];

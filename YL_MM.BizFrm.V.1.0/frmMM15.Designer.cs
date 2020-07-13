@@ -88,6 +88,7 @@
             this.bandedGridColumn24 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn25 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn26 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn23 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn37 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -165,6 +166,7 @@
             this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -523,7 +525,7 @@
             // 
             this.efwSimpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton9.ImageOptions.Image")));
             this.efwSimpleButton9.IsMultiLang = false;
-            this.efwSimpleButton9.Location = new System.Drawing.Point(601, 13);
+            this.efwSimpleButton9.Location = new System.Drawing.Point(662, 13);
             this.efwSimpleButton9.Name = "efwSimpleButton9";
             this.efwSimpleButton9.Size = new System.Drawing.Size(154, 23);
             this.efwSimpleButton9.TabIndex = 7;
@@ -634,7 +636,8 @@
             this.bandedGridColumn35,
             this.bandedGridColumn36,
             this.bandedGridColumn37,
-            this.bandedGridColumn38});
+            this.bandedGridColumn38,
+            this.bandedGridColumn2});
             this.bandedGridView2.GridControl = this.efwGridControl2;
             this.bandedGridView2.Name = "bandedGridView2";
             this.bandedGridView2.OptionsView.ColumnAutoWidth = false;
@@ -653,6 +656,7 @@
             this.gridBand1.Columns.Add(this.bandedGridColumn24);
             this.gridBand1.Columns.Add(this.bandedGridColumn1);
             this.gridBand1.Columns.Add(this.bandedGridColumn25);
+            this.gridBand1.Columns.Add(this.bandedGridColumn2);
             this.gridBand1.Columns.Add(this.bandedGridColumn26);
             this.gridBand1.Columns.Add(this.bandedGridColumn23);
             this.gridBand1.Columns.Add(this.bandedGridColumn37);
@@ -660,7 +664,7 @@
             this.gridBand1.Columns.Add(this.bandedGridColumn20);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 454;
+            this.gridBand1.Width = 529;
             // 
             // bandedGridColumn21
             // 
@@ -719,6 +723,15 @@
             this.bandedGridColumn25.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn25.Visible = true;
             this.bandedGridColumn25.Width = 86;
+            // 
+            // bandedGridColumn2
+            // 
+            this.bandedGridColumn2.Caption = "순서";
+            this.bandedGridColumn2.DisplayFormat.FormatString = "###,###,##0";
+            this.bandedGridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.bandedGridColumn2.FieldName = "p_order";
+            this.bandedGridColumn2.Name = "bandedGridColumn2";
+            this.bandedGridColumn2.Visible = true;
             // 
             // bandedGridColumn26
             // 
@@ -1164,6 +1177,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton5);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton9);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton1);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton4);
@@ -1674,6 +1688,17 @@
             this.efwLabel4.TabIndex = 29;
             this.efwLabel4.Text = "일반 DOMA";
             // 
+            // efwSimpleButton5
+            // 
+            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
+            this.efwSimpleButton5.IsMultiLang = false;
+            this.efwSimpleButton5.Location = new System.Drawing.Point(411, 14);
+            this.efwSimpleButton5.Name = "efwSimpleButton5";
+            this.efwSimpleButton5.Size = new System.Drawing.Size(107, 22);
+            this.efwSimpleButton5.TabIndex = 67;
+            this.efwSimpleButton5.Text = "노출순서변경";
+            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
+            // 
             // frmMM15
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1855,10 +1880,12 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand6;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
     }
 }
