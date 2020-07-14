@@ -1,4 +1,5 @@
-﻿using Easy.Framework.Common;
+﻿using DevExpress.CodeParser;
+using Easy.Framework.Common;
 using Easy.Framework.SrvCommon;
 using Easy.Framework.WinForm.Control;
 using MySql.Data.MySqlClient;
@@ -256,20 +257,7 @@ namespace YL_MM.BizFrm
 
         Dictionary<String, Bitmap> iconsCache = new Dictionary<string, Bitmap>();
         //  그리드 상품구매 클릭 
-        private void BtnDispYes_Click(object sender, EventArgs e)
-        {
-
-            //popup = new frmMM19_Pop01();
-
-            //popup.p_Id = Convert.ToInt32(gridView3.GetFocusedRowCellValue("id").ToString());
-            //popup.u_Id = txtU_Id.Text;
-
-            //popup.FormClosed += popup_FormClosed;
-            //popup.ShowDialog();
-
-            txtP_Id.EditValue = Convert.ToInt32(gridView3.GetFocusedRowCellValue("id").ToString());
-            Product1();
-        }
+ 
 
         private void popup_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -488,6 +476,7 @@ namespace YL_MM.BizFrm
                         LabLast_Name.Text = cmd.Parameters["o_Last_coid_name"].Value.ToString();
                         txtU_Id.EditValue = cmd.Parameters["o_u_id"].Value.ToString();
                         LaTot_Cnt.Text = cmd.Parameters["o_tot_cnt"].Value.ToString();
+                        txtU_Id.EditValue = cmd.Parameters["o_u_id"].Value.ToString();
                     }
                 }
             }
@@ -554,6 +543,7 @@ namespace YL_MM.BizFrm
                 this.txtShop_Name.EditValue = popup1.sShop_Name;
                 this.ckPic_Send.EditValue = popup1.sPic_Send;
                 this.rbAdvice_Type.EditValue = popup1.sAdvice_Type;
+                this.txtU_Id.EditValue = popup1.sU_id;
                 this.btnPost_No.EditValue = popup1.sPost_No;
                 this.txtAddr.EditValue = popup1.sAddr;
                 this.txtAddr_Detail.EditValue = popup1.sAddr_Detail;
@@ -871,7 +861,6 @@ namespace YL_MM.BizFrm
                     return;
                 }
 
-
                 if (MessageAgent.MessageShow(MessageType.Confirm, "도넛 라이프 GUEST 계정을 생성 하시겠습니까?") == DialogResult.OK)
                 {
                     using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
@@ -1025,7 +1014,7 @@ namespace YL_MM.BizFrm
 
                         cmd2.ExecuteNonQuery();
 
-                        MessageBox.Show(cmd2.Parameters["o_Return"].Value.ToString());
+                        //MessageBox.Show(cmd2.Parameters["o_Return"].Value.ToString());
                     }
                 }
             }
@@ -1299,6 +1288,138 @@ namespace YL_MM.BizFrm
                 }
                 Advice_Content();
             }
+        }
+
+
+        private void BtnDispYes_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(this.txtAddr.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 배종지 주소를 입력하세요 !");
+                return;
+            }
+
+            string sNickName = string.Empty;
+
+            if (string.IsNullOrEmpty(this.txtName.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "주문 고객을 선택하세요");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txtHp_No.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "전화번호를 입력하세요");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txtU_Id.Text))
+            {
+                using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+                {
+                    sql.Query = "select u_id as u_id FROM  domalife.member_master where u_name = '" + txtName.EditValue + "' and  u_cell_num = '" + txtHp_No.EditValue + "'  and advice_seq > 0 ";
+                    DataSet ds = sql.selectQueryDataSet();
+                    txtU_Id.EditValue = sql.selectQueryForSingleValue();
+                }
+                if (string.IsNullOrEmpty(this.txtU_Id.Text))
+                {
+                    New_Member();
+                }
+            }
+
+
+            txtP_Id.EditValue = Convert.ToInt32(gridView3.GetFocusedRowCellValue("id").ToString());
+
+            string u_id = txtU_Id.EditValue.ToString();
+            string u_name = txtName.EditValue.ToString();
+            string p_id = gridView3.GetFocusedRowCellValue("id").ToString();
+            string opt_id = gridView3.GetFocusedRowCellValue("opt_id").ToString();
+            string p_name = gridView3.GetFocusedRowCellValue("p_name").ToString();
+            string p_num = txtProdQty.EditValue.ToString();
+            string p_price = gridView3.GetFocusedRowCellValue("p_org_price").ToString();
+            int n_amt = Convert.ToInt32(p_num) * Convert.ToInt32(p_price);
+            string p_amt = n_amt.ToString();
+            string u_email;
+            if (string.IsNullOrEmpty(this.txtE_Mail.Text))
+            {
+                u_email = "";
+            }
+            else
+            {
+                u_email = txtE_Mail.EditValue.ToString();
+            }
+
+            //string u_email = txtE_Mail.EditValue.ToString();
+            string surl = "https://callpay.eyeoyou.com/lgu_pay/pay_crossplatform.aspx?&u_id=" + u_id + "&u_name=" + u_name + "&p_id=" + p_id + "&opt_id=" + opt_id + "&p_name=" + p_name + "&p_num=" + p_num + "&p_amt=" + p_amt + "&p_price=" + p_price + "&u_email=" + u_email + "&pay_code=SC0040" + "&p_type=01";
+
+            System.Diagnostics.Process.Start(surl);
+
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(this.txtAddr.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 배종지 주소를 입력하세요 !");
+                return;
+            }
+
+            string sNickName = string.Empty;
+
+            if (string.IsNullOrEmpty(this.txtName.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "주문 고객을 선택하세요");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txtHp_No.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "전화번호를 입력하세요");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txtU_Id.Text))
+            {
+                using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+                {
+                    sql.Query = "select u_id as u_id FROM  domalife.member_master where u_name = '" + txtName.EditValue + "' and  u_cell_num = '" + txtHp_No.EditValue + "'  and advice_seq > 0 ";
+                    DataSet ds = sql.selectQueryDataSet();
+                    txtU_Id.EditValue = sql.selectQueryForSingleValue();
+                }
+                if (string.IsNullOrEmpty(this.txtU_Id.Text))
+                {
+                    New_Member();
+                }
+            }
+
+
+            txtP_Id.EditValue = Convert.ToInt32(gridView3.GetFocusedRowCellValue("id").ToString());
+
+            string u_id = txtU_Id.EditValue.ToString();
+            string u_name = txtName.EditValue.ToString();
+            string p_id = "0";
+            string opt_id = "0";
+            string p_name = "체헙샵 가입비";
+            string p_num = "1";
+            string p_price = "50000";
+            int n_amt = Convert.ToInt32(p_num) * Convert.ToInt32(p_price);
+            string p_amt = n_amt.ToString();
+            string u_email;
+            if (string.IsNullOrEmpty(this.txtE_Mail.Text))
+            {
+                u_email = "";
+            }
+            else
+            {
+                u_email = txtE_Mail.EditValue.ToString();
+            }
+
+            //string u_email = txtE_Mail.EditValue.ToString();
+            string surl = "https://callpay.eyeoyou.com/lgu_pay/pay_crossplatform.aspx?&u_id=" + u_id + "&u_name=" + u_name + "&p_id=" + p_id + "&opt_id=" + opt_id + "&p_name=" + p_name + "&p_num=" + p_num + "&p_amt=" + p_amt + "&p_price=" + p_price + "&u_email=" + u_email + "&pay_code=SC0040" + "&p_type=02";
+
+            System.Diagnostics.Process.Start(surl);
         }
     }
 }

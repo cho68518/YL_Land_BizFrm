@@ -48,7 +48,7 @@ namespace YL_DONUT.BizFrm
             rbLevelQ.EditValue = "215";
             txtStory_id.EditValue = 0;
             rbIs_use.EditValue = "Y";
-
+            dtReg_date.EditValue = DateTime.Now;
 
             gridView1.OptionsView.ShowFooter = true;
 

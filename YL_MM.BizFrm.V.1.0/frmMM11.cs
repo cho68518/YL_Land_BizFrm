@@ -82,6 +82,10 @@ namespace YL_MM.BizFrm
             {
                 Open3();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                Open4();
+            }
         }
         private void Open1()
         {
@@ -258,6 +262,65 @@ namespace YL_MM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+
+        private void Open4()
+        {
+            try
+            {
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM11_SELECT_04", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_qtype1", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = cmbQ1.EditValue;
+
+                        cmd.Parameters.Add("i_qtype2", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[1].Value = cmbQ2.EditValue;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[2].Value = dt1F.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[3].Value = dt1T.EditValue3;
+
+                        cmd.Parameters.Add("i_txt", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[4].Value = txtSearch.Text;
+
+                        cmd.Parameters.Add("i_o_type1", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[5].Value = chkT.EditValue;
+
+                        cmd.Parameters.Add("i_o_type2", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[6].Value = chkO.EditValue;
+
+                        cmd.Parameters.Add("i_o_type3", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[7].Value = chkI.EditValue;
+
+                        cmd.Parameters.Add("i_o_type4", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[8].Value = chkC.EditValue;
+
+                        cmd.Parameters.Add("i_o_type5", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[9].Value = chkZ.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl4.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                //lbCount.Text = String.Format("{0:#,##0}", Convert.ToInt32(gridView1.RowCount));
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
 
         private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {

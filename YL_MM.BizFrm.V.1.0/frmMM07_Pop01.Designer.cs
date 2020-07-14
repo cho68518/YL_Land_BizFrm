@@ -1047,7 +1047,7 @@
             this.efwGroupControl2.Name = "efwGroupControl2";
             this.efwGroupControl2.Size = new System.Drawing.Size(997, 265);
             this.efwGroupControl2.TabIndex = 3;
-            this.efwGroupControl2.Text = "담당이사 추천인( 담당G메니저 )";
+            this.efwGroupControl2.Text = "담당 BIZ, 담당 DORA_MD";
             // 
             // layoutControl2
             // 
@@ -1292,7 +1292,7 @@
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(321, 30);
             this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem12.Text = "G메니저아이디";
+            this.layoutControlItem12.Text = "BIZ 아이디";
             this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(80, 14);
             this.layoutControlItem12.TextToControlDistance = 5;
@@ -1304,7 +1304,7 @@
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(321, 27);
-            this.layoutControlItem14.Text = "G메니저 이름";
+            this.layoutControlItem14.Text = "BIZ 이름";
             this.layoutControlItem14.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem14.TextSize = new System.Drawing.Size(80, 23);
             this.layoutControlItem14.TextToControlDistance = 5;
@@ -1316,7 +1316,7 @@
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 57);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.Size = new System.Drawing.Size(321, 27);
-            this.layoutControlItem15.Text = "G메니저닉네임";
+            this.layoutControlItem15.Text = "BIZ 닉네임";
             this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem15.TextSize = new System.Drawing.Size(80, 23);
             this.layoutControlItem15.TextToControlDistance = 5;

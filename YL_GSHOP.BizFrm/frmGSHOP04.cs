@@ -97,6 +97,7 @@ namespace YL_GSHOP.BizFrm
                     , new ColumnControlSet("is_best", chkIs_Best)
                     , new ColumnControlSet("team_nickname", txtTEAM_NICKNAME)
                     , new ColumnControlSet("team_leader", txtTEAM_LEADER)
+                    , new ColumnControlSet("experience_shop", chkExperience_Shop)
 
                    ); ;
 
@@ -951,6 +952,178 @@ namespace YL_GSHOP.BizFrm
             }
         }
 
+        private void efwSimpleButton8_Click(object sender, EventArgs e)
+        {
+            popup = new frmMemberInfo
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+                MEMBER_TYPE = "ALL",
+            };
+            popup.FormClosed += popup_FormClosed4;
+            PopUpBizAgent.Show(this, popup);
 
+        }
+
+        private void popup_FormClosed4(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed4;
+            if (popup.DialogResult == DialogResult.OK)
+            {
+                this.txtCEO_NAME.EditValue = popup.U_NAME;
+                this.txtU_NICKNAME.EditValue = popup.U_NICKNAME;
+                this.txtGSHOP_NAME.EditValue = popup.U_NICKNAME;
+                this.txtEMAIL.EditValue = popup.U_EMAIL;
+                this.txtHP_NO.EditValue = popup.U_CELL_NUM;
+                this.btnPOST_NO.EditValue = popup.U_ZIP;
+                this.txtADDRESS1.EditValue = popup.U_ADDR;
+                this.txtADDRESS2.EditValue = popup.U_ADDR_DETAIL;
+                this.txtU_ID.EditValue = popup.U_ID;
+            }
+            popup = null;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtU_ID.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 회원을 선택하세요!");
+                return;
+            }
+
+            if (chkIs_Best.EditValue.ToString() == "Y")
+            {
+                if (txtTEAM_NICKNAME.EditValue.ToString() == "")
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 담당 팀장을 선택하세요 ");
+                    return;
+                }
+            }
+            else
+            {
+                string sGshop_name;
+                using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+                {
+                    sql.Query = "select gshop_name as nCount FROM  domabiz.gshop_master where md_u_id = '" + txtU_ID.EditValue + "' limit 1 ";
+                    DataSet ds = sql.selectQueryDataSet();
+
+                    sGshop_name = sql.selectQueryForSingleValue();
+                }
+                if (sGshop_name.Length > 2)
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, sGshop_name + "에서 배스트 샵으로 등록되어 제외 할수가 없습니다");
+                    return;
+                }
+            }
+
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "체험샵을 등록 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP04_SAVE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gshop_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_gshop_id"].Value = Convert.ToInt32(txtGSHOP_ID.EditValue);
+                            cmd.Parameters["i_gshop_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_ceo_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_ceo_name"].Value = txtCEO_NAME.EditValue;
+                            cmd.Parameters["i_ceo_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gshop_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_gshop_name"].Value = txtGSHOP_NAME.EditValue;
+                            cmd.Parameters["i_gshop_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_u_nickname", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_nickname"].Value = txtU_NICKNAME.EditValue;
+                            cmd.Parameters["i_u_nickname"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_register_no", MySqlDbType.VarChar));
+                            cmd.Parameters["i_register_no"].Value = txtREGISTER_NO.EditValue;
+                            cmd.Parameters["i_register_no"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_email", MySqlDbType.VarChar));
+                            cmd.Parameters["i_email"].Value = txtEMAIL.EditValue;
+                            cmd.Parameters["i_email"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_tel_no", MySqlDbType.VarChar));
+                            cmd.Parameters["i_tel_no"].Value = txtTEL_NO.EditValue;
+                            cmd.Parameters["i_tel_no"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_hp_no", MySqlDbType.VarChar));
+                            cmd.Parameters["i_hp_no"].Value = txtHP_NO.EditValue;
+                            cmd.Parameters["i_hp_no"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_post_no", MySqlDbType.VarChar));
+                            cmd.Parameters["i_post_no"].Value = btnPOST_NO.EditValue;
+                            cmd.Parameters["i_post_no"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_jibun_addr", MySqlDbType.VarChar));
+                            cmd.Parameters["i_jibun_addr"].Value = txtADDRESS1.EditValue;
+                            cmd.Parameters["i_jibun_addr"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_road_addr", MySqlDbType.VarChar));
+                            cmd.Parameters["i_road_addr"].Value = txtADDRESS1.EditValue;
+                            cmd.Parameters["i_road_addr"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_sido", MySqlDbType.VarChar));
+                            cmd.Parameters["i_sido"].Value = cmbTAREA1.EditValue;
+                            cmd.Parameters["i_sido"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gugun", MySqlDbType.VarChar));
+                            cmd.Parameters["i_gugun"].Value = cmbSAREA1.EditValue;
+                            cmd.Parameters["i_gugun"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_recomm_nm", MySqlDbType.VarChar));
+                            cmd.Parameters["i_recomm_nm"].Value = txtRECOMM_NM.EditValue;
+                            cmd.Parameters["i_recomm_nm"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_recomm_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_recomm_u_id"].Value = txtRECOMM_U_ID.EditValue;
+                            cmd.Parameters["i_recomm_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_md_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_md_u_id"].Value = txtMD_U_ID.EditValue;
+                            cmd.Parameters["i_md_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_road_addr2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_road_addr2"].Value = txtADDRESS2.EditValue;
+                            cmd.Parameters["i_road_addr2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_id"].Value = txtU_ID.EditValue;
+                            cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_best", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_best"].Value = chkIs_Best.EditValue;
+                            cmd.Parameters["i_is_best"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_team_leader", MySqlDbType.VarChar));
+                            cmd.Parameters["i_team_leader"].Value = txtTEAM_LEADER.EditValue;
+                            cmd.Parameters["i_team_leader"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+                Open1();
+            }
+        }
     }
 }

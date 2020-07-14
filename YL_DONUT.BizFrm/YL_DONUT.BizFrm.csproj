@@ -143,7 +143,9 @@
     <Compile Include="frmDN01.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="frmDN01.designer.cs" />
+    <Compile Include="frmDN01.designer.cs">
+      <DependentUpon>frmDN01.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDN23.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -353,7 +355,9 @@
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDN01.resx" />
+    <EmbeddedResource Include="frmDN01.resx">
+      <DependentUpon>frmDN01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDN01_Pop01.resx">
       <DependentUpon>frmDN01_Pop01.cs</DependentUpon>
     </EmbeddedResource>
