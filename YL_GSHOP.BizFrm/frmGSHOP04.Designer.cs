@@ -32,15 +32,15 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy4 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy4 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.txtPOSTNO = new Easy.Framework.WinForm.Control.efwButtonEdit();
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
@@ -85,6 +85,7 @@
             this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn59 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn63 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn64 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -193,7 +194,6 @@
             this.txtEMAIL = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtTEL_NO = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtCEO_NAME = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.gridColumn64 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtPOSTNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
@@ -604,7 +604,7 @@
             // 
             // gridColumn11
             // 
-            this.gridColumn11.Caption = "추천인";
+            this.gridColumn11.Caption = "도넛나눔 친구";
             this.gridColumn11.FieldName = "recomm_nicknm";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
@@ -745,6 +745,14 @@
             this.gridColumn63.FieldName = "team_leader";
             this.gridColumn63.Name = "gridColumn63";
             // 
+            // gridColumn64
+            // 
+            this.gridColumn64.Caption = "체첨샵";
+            this.gridColumn64.FieldName = "experience_shop";
+            this.gridColumn64.Name = "gridColumn64";
+            this.gridColumn64.Visible = true;
+            this.gridColumn64.VisibleIndex = 25;
+            // 
             // repositoryItemLookUpEdit1
             // 
             this.repositoryItemLookUpEdit1.AutoHeight = false;
@@ -805,13 +813,13 @@
             // 
             // cmbQ1
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbQ1.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbQ1.HierarchyInfo = hierarchy2;
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbQ1.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbQ1.HierarchyInfo = hierarchy1;
             this.cmbQ1.IsMultiLang = false;
             this.cmbQ1.Location = new System.Drawing.Point(355, 7);
             this.cmbQ1.MasterCode = "E03.GSHOP04_SEARCH1";
@@ -1488,13 +1496,13 @@
             // 
             // cmbTAREA1
             // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbTAREA1.ChildHierarchyInfo = childHierarchy3;
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbTAREA1.HierarchyInfo = hierarchy3;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbTAREA1.ChildHierarchyInfo = childHierarchy2;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbTAREA1.HierarchyInfo = hierarchy2;
             this.cmbTAREA1.IsMultiLang = false;
             this.cmbTAREA1.Location = new System.Drawing.Point(476, 112);
             this.cmbTAREA1.Name = "cmbTAREA1";
@@ -1509,13 +1517,13 @@
             // 
             // cmbSAREA1
             // 
-            childHierarchy4.CodeCtrl = null;
-            childHierarchy4.DbName = null;
-            childHierarchy4.SpName = null;
-            this.cmbSAREA1.ChildHierarchyInfo = childHierarchy4;
-            hierarchy4.DbName = null;
-            hierarchy4.SpName = null;
-            this.cmbSAREA1.HierarchyInfo = hierarchy4;
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbSAREA1.ChildHierarchyInfo = childHierarchy3;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbSAREA1.HierarchyInfo = hierarchy3;
             this.cmbSAREA1.IsMultiLang = false;
             this.cmbSAREA1.Location = new System.Drawing.Point(618, 112);
             this.cmbSAREA1.MasterCode = "E03.MEMBERQ_GBN1";
@@ -1982,14 +1990,6 @@
             this.txtCEO_NAME.RequireMessage = null;
             this.txtCEO_NAME.Size = new System.Drawing.Size(222, 20);
             this.txtCEO_NAME.TabIndex = 0;
-            // 
-            // gridColumn64
-            // 
-            this.gridColumn64.Caption = "체첨샵";
-            this.gridColumn64.FieldName = "experience_shop";
-            this.gridColumn64.Name = "gridColumn64";
-            this.gridColumn64.Visible = true;
-            this.gridColumn64.VisibleIndex = 25;
             // 
             // frmGSHOP04
             // 

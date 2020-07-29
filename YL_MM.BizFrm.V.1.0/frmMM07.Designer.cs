@@ -845,7 +845,7 @@
             this.gridBand2.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.Caption = "일반 추천인";
+            this.gridBand2.Caption = "도넛나눔 친구";
             this.gridBand2.Columns.Add(this.gridColumn5);
             this.gridBand2.Columns.Add(this.gridColumn6);
             this.gridBand2.Columns.Add(this.gridColumn7);

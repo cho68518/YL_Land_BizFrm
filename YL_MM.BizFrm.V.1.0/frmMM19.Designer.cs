@@ -316,9 +316,9 @@
             this.efwSimpleButton6.IsMultiLang = false;
             this.efwSimpleButton6.Location = new System.Drawing.Point(687, 8);
             this.efwSimpleButton6.Name = "efwSimpleButton6";
-            this.efwSimpleButton6.Size = new System.Drawing.Size(189, 34);
+            this.efwSimpleButton6.Size = new System.Drawing.Size(149, 34);
             this.efwSimpleButton6.TabIndex = 170;
-            this.efwSimpleButton6.Text = "체험샵 가상계좌 발급";
+            this.efwSimpleButton6.Text = "체험샵 등록";
             this.efwSimpleButton6.Click += new System.EventHandler(this.efwSimpleButton6_Click);
             // 
             // efwSimpleButton3

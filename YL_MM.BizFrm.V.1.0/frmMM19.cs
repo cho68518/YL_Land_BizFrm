@@ -20,6 +20,7 @@ namespace YL_MM.BizFrm
     {
         frmMM19_Pop01 popup;
         frmMM19_Pop02 popup1;
+        frmMM19_Pop03 popup3;
 
         public frmMM19()
         {
@@ -1356,70 +1357,37 @@ namespace YL_MM.BizFrm
             System.Diagnostics.Process.Start(surl);
 
         }
-
+        // 체험샵 회원 생성
         private void efwSimpleButton6_Click(object sender, EventArgs e)
         {
+            popup3 = new frmMM19_Pop03();
 
-            if (string.IsNullOrEmpty(this.txtAddr.Text))
+            popup3.sName = txtName.Text;
+            popup3.sGshop_name = txtShop_Name.Text;
+            popup3.sEMail = "";
+            popup3.sHpNo = txtHp_No.Text;
+            if (txtHp_No.EditValue == "010-")
             {
-                MessageAgent.MessageShow(MessageType.Warning, " 배종지 주소를 입력하세요 !");
-                return;
+                popup3.sHpNo = "";
             }
+            popup3.sPostNo = btnPost_No.Text;
+            popup3.sAddr = txtAddr.Text;
+            popup3.sAddrDetail = txtAddr_Detail.Text;
+            
 
-            string sNickName = string.Empty;
-
-            if (string.IsNullOrEmpty(this.txtName.Text))
-            {
-                MessageAgent.MessageShow(MessageType.Warning, "주문 고객을 선택하세요");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(this.txtHp_No.Text))
-            {
-                MessageAgent.MessageShow(MessageType.Warning, "전화번호를 입력하세요");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(this.txtU_Id.Text))
-            {
-                using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
-                {
-                    sql.Query = "select u_id as u_id FROM  domalife.member_master where u_name = '" + txtName.EditValue + "' and  u_cell_num = '" + txtHp_No.EditValue + "'  and advice_seq > 0 ";
-                    DataSet ds = sql.selectQueryDataSet();
-                    txtU_Id.EditValue = sql.selectQueryForSingleValue();
-                }
-                if (string.IsNullOrEmpty(this.txtU_Id.Text))
-                {
-                    New_Member();
-                }
-            }
-
-
-            txtP_Id.EditValue = Convert.ToInt32(gridView3.GetFocusedRowCellValue("id").ToString());
-
-            string u_id = txtU_Id.EditValue.ToString();
-            string u_name = txtName.EditValue.ToString();
-            string p_id = "0";
-            string opt_id = "0";
-            string p_name = "체헙샵 가입비";
-            string p_num = "1";
-            string p_price = "50000";
-            int n_amt = Convert.ToInt32(p_num) * Convert.ToInt32(p_price);
-            string p_amt = n_amt.ToString();
-            string u_email;
-            if (string.IsNullOrEmpty(this.txtE_Mail.Text))
-            {
-                u_email = "";
-            }
-            else
-            {
-                u_email = txtE_Mail.EditValue.ToString();
-            }
-
-            //string u_email = txtE_Mail.EditValue.ToString();
-            string surl = "https://callpay.eyeoyou.com/lgu_pay/pay_crossplatform.aspx?&u_id=" + u_id + "&u_name=" + u_name + "&p_id=" + p_id + "&opt_id=" + opt_id + "&p_name=" + p_name + "&p_num=" + p_num + "&p_amt=" + p_amt + "&p_price=" + p_price + "&u_email=" + u_email + "&pay_code=SC0040" + "&p_type=02";
-
-            System.Diagnostics.Process.Start(surl);
+            popup3.FormClosed += popup_FormClosed3;
+            popup3.ShowDialog();
         }
+        private void popup_FormClosed3(object sender, FormClosedEventArgs e)
+        {
+            popup3.FormClosed -= popup_FormClosed3;
+            //if (popup3.DialogResult == DialogResult.OK)
+            //{
+            //    this.txtName.EditValue = popup3.sName;
+            //}
+            popup3 = null;
+        }
+
+
     }
 }
