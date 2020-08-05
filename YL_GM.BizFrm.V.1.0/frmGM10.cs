@@ -41,7 +41,7 @@ namespace YL_GM.BizFrm
             this.IsExcel = false;
 
             dtS_DATE.EditValue = DateTime.Now;
-            rbShop_Type.EditValue = "";
+            rbShop_Type.EditValue = "3";
             rbProd_Type.EditValue = "1";
             rbQtyOrAmt.EditValue = "1";
             //그리드 컬럼에 체크박스 레포지토리아이템 추가

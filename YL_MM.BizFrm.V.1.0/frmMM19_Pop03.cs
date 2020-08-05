@@ -578,6 +578,8 @@ namespace YL_MM.BizFrm
             }
 
             //string u_email = txtE_Mail.EditValue.ToString();
+            //  domabiz.USP_ORDER_CRE
+            //  domabiz.USP_ORDER_UPDT
             string surl = "https://callpay.eyeoyou.com/lgu_pay/pay_crossplatform.aspx?&u_id=" + u_id + "&u_name=" + u_name + "&p_id=" + p_id + "&opt_id=" + opt_id + "&p_name=" + p_name + "&p_num=" + p_num + "&p_amt=" + p_amt + "&p_price=" + p_price + "&u_email=" + u_email + "&pay_code=SC0040" + "&p_type=02";
 
             System.Diagnostics.Process.Start(surl);

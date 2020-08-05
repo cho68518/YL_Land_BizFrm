@@ -1,4 +1,7 @@
-﻿using Easy.Framework.Common;
+﻿using DevExpress.XtraTreeList;
+using Easy.Framework.Common;
+using Easy.Framework.SrvCommon;
+using Easy.Framework.WinForm.Control;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -65,9 +68,28 @@ namespace YL_MM.BizFrm
             gridView3.Columns["lgd_amount"].SummaryItem.FieldName = "lgd_amount";
             gridView3.Columns["lgd_amount"].SummaryItem.DisplayFormat = "{0:c}";
 
+            this.efwGridControl1.BindControlSet(
+                new ColumnControlSet("o_code", txtO_Code)
+              , new ColumnControlSet("u_nickname", txtU_Nickname)
+              , new ColumnControlSet("u_name", txtU_Name)
+              , new ColumnControlSet("login_id", txtLogin_ID)
+              , new ColumnControlSet("o_deposit_confirm_date", txtConfirm_Date)
+       //       , new ColumnControlSet("o_cancel_date", dtO_Cancel_Date)
+            ); 
 
-
+            this.efwGridControl1.Click += efwGridControl1_Click;
         }
+
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+
+            if (dr != null && dr["o_cancel_date"].ToString() != "")
+            {
+                this.dtO_Cancel_Date.EditValue = dr["o_cancel_date"].ToString();
+            }
+        }
+
         public override void Search()
         {
             if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
@@ -336,6 +358,52 @@ namespace YL_MM.BizFrm
         {
             if (e.KeyCode == Keys.Enter)
                 txtSearch.Focus();
+        }
+
+        private void efwSimpleButton7_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.dtO_Cancel_Date.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " ID를 선택하세요!");
+                return;
+            }
+
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "멤버쉽 결제를 취소 하시겠습니다?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM11_SAVE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_code"].Value = txtO_Code.EditValue;
+                            cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_cancel_date", MySqlDbType.DateTime));
+                            cmd.Parameters["i_cancel_date"].Value = dtO_Cancel_Date.EditValue;
+                            cmd.Parameters["i_cancel_date"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+            }
         }
     }
 }

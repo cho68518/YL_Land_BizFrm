@@ -225,6 +225,9 @@
             this.gridColumn4,
             this.gridColumn5});
             this.gridView1.GridControl = this.efwGridControl1;
+            this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_qty", this.gridColumn3, "{0}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_amt", this.gridColumn4, "{0:c}")});
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.AllowCellMerge = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;

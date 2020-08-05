@@ -386,7 +386,7 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "닉네임";
+            this.gridColumn1.Caption = "MD";
             this.gridColumn1.FieldName = "u_nickname";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
