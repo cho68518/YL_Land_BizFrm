@@ -1,4 +1,4 @@
-﻿namespace YL_DONUT.BizFrm
+﻿namespace YL_GM.BizFrm
 {
     partial class Form1
     {

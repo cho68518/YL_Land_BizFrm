@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace YL_DONUT.BizFrm
+namespace YL_GM.BizFrm
 {
     public partial class Form1 : Form
     {

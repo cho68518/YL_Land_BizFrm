@@ -1625,7 +1625,7 @@
             this.efwLabel14.Name = "efwLabel14";
             this.efwLabel14.Size = new System.Drawing.Size(146, 28);
             this.efwLabel14.TabIndex = 15;
-            this.efwLabel14.Text = "     G메니저";
+            this.efwLabel14.Text = "     BIZ";
             // 
             // efwLabel13
             // 
@@ -1641,7 +1641,7 @@
             this.efwLabel13.Name = "efwLabel13";
             this.efwLabel13.Size = new System.Drawing.Size(146, 28);
             this.efwLabel13.TabIndex = 14;
-            this.efwLabel13.Text = "     G메니저이사";
+            this.efwLabel13.Text = "     DORA_MD";
             // 
             // efwLabel12
             // 

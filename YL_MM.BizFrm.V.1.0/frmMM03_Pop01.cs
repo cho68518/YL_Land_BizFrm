@@ -45,7 +45,7 @@ namespace YL_MM.BizFrm
             chkVip.EditValue = '0';
             chkChef.EditValue = '0';
             chkGShop.EditValue = '0';
-
+            ckdora_md.EditValue = '0';
             gridView1.OptionsView.ShowFooter = true;
             SetCmb();
             Open1();
@@ -614,6 +614,9 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add(new MySqlParameter("o_P_Member_level_GShop", MySqlDbType.VarChar));
                         cmd.Parameters["o_P_Member_level_GShop"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_P_Member_level_DoraMd", MySqlDbType.VarChar));
+                        cmd.Parameters["o_P_Member_level_DoraMd"].Direction = ParameterDirection.Output;
                         //
 
                         cmd.ExecuteNonQuery();
@@ -686,13 +689,14 @@ namespace YL_MM.BizFrm
                         chkVip.EditValue = cmd.Parameters["o_P_Member_level_Vip"].Value.ToString();
                         chkChef.EditValue = cmd.Parameters["o_P_Member_level_Chef"].Value.ToString();
                         chkGShop.EditValue = cmd.Parameters["o_P_Member_level_GShop"].Value.ToString();
-
+                        ckdora_md.EditValue = cmd.Parameters["o_P_Member_level_DoraMd"].Value.ToString();
                         if (chkAll.EditValue.ToString() == "1")
                         {
                             this.chkMember.Enabled = false;
                             this.chkVip.Enabled = false;
                             this.chkChef.Enabled = false;
                             this.chkGShop.Enabled = false;
+                            this.ckdora_md.Enabled = false;
                         }
                         else if (chkAll.EditValue.ToString() == "0")
                         {
@@ -700,6 +704,7 @@ namespace YL_MM.BizFrm
                             this.chkVip.Enabled = true;
                             this.chkChef.Enabled = true;
                             this.chkGShop.Enabled = true;
+                            this.ckdora_md.Enabled = true;
                         }
 
                         Open2();
@@ -1337,6 +1342,7 @@ namespace YL_MM.BizFrm
             chkVip.EditValue = '0';
             chkChef.EditValue = '0';
             chkGShop.EditValue = '0';
+            ckdora_md.EditValue = '0';
 
 
             //gridView1.Columns.Clear();
@@ -1610,6 +1616,10 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_P_Member_level_GShop", MySqlDbType.VarChar));
                             cmd.Parameters["i_P_Member_level_GShop"].Value = chkGShop.EditValue;
                             cmd.Parameters["i_P_Member_level_GShop"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Member_level_DoraMd", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Member_level_DoraMd"].Value = ckdora_md.EditValue;
+                            cmd.Parameters["i_P_Member_level_DoraMd"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Result_P_Id", MySqlDbType.VarChar));
                             cmd.Parameters["o_Result_P_Id"].Direction = ParameterDirection.Output;
@@ -1894,10 +1904,12 @@ namespace YL_MM.BizFrm
                 chkVip.EditValue = '0';
                 chkChef.EditValue = '0';
                 chkGShop.EditValue = '0';
+                ckdora_md.EditValue = '0';
                 this.chkMember.Enabled = false;
                 this.chkVip.Enabled = false;
                 this.chkChef.Enabled = false;
                 this.chkGShop.Enabled = false;
+                this.ckdora_md.Enabled = false;
             }
             else if (chkAll.EditValue.ToString() == "0")
             {
@@ -1905,10 +1917,12 @@ namespace YL_MM.BizFrm
                 chkVip.EditValue = '0';
                 chkChef.EditValue = '0';
                 chkGShop.EditValue = '0';
+                ckdora_md.EditValue = '0';
                 this.chkMember.Enabled = true;
                 this.chkVip.Enabled = true;
                 this.chkChef.Enabled = true;
                 this.chkGShop.Enabled = true;
+                this.ckdora_md.Enabled = true;
             }
 
         }

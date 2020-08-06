@@ -120,6 +120,18 @@
     <Compile Include="BizNode.cs" />
     <Compile Include="ConstantLib.cs" />
     <Compile Include="DeptNode.cs" />
+    <Compile Include="Dlg\frmMember_doma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmMember_doma.Designer.cs">
+      <DependentUpon>frmMember_doma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\frmMember_md.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmMember_md.Designer.cs">
+      <DependentUpon>frmMember_md.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dlg\frmZipNoInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,18 @@
     </Compile>
     <Compile Include="Dlg\frmMemberInfo_Dup.Designer.cs">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM20.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM20.Designer.cs">
+      <DependentUpon>frmMM20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM19_Pop03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMM19_Pop03.Designer.cs">
+      <DependentUpon>frmMM19_Pop03.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMM19_Pop02.cs">
       <SubType>Form</SubType>
@@ -315,6 +339,12 @@
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dlg\frmMember_doma.resx">
+      <DependentUpon>frmMember_doma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\frmMember_md.resx">
+      <DependentUpon>frmMember_md.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmMemberInfo_Dup.resx">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM20.resx">
+      <DependentUpon>frmMM20.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM19.resx">
       <DependentUpon>frmMM19.cs</DependentUpon>
@@ -404,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM19_Pop02.resx">
       <DependentUpon>frmMM19_Pop02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM19_Pop03.resx">
+      <DependentUpon>frmMM19_Pop03.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest01.resx">
       <DependentUpon>frmTest01.cs</DependentUpon>

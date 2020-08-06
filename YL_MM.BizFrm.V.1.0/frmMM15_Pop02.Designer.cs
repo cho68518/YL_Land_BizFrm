@@ -283,9 +283,9 @@
             this.efwLabel8.IsMultiLang = false;
             this.efwLabel8.Location = new System.Drawing.Point(334, 99);
             this.efwLabel8.Name = "efwLabel8";
-            this.efwLabel8.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel8.Size = new System.Drawing.Size(56, 14);
             this.efwLabel8.TabIndex = 70;
-            this.efwLabel8.Text = "셰프이사";
+            this.efwLabel8.Text = "DORA_MD";
             // 
             // cmbChef_Money
             // 
@@ -421,9 +421,9 @@
             this.efwLabel5.IsMultiLang = false;
             this.efwLabel5.Location = new System.Drawing.Point(34, 147);
             this.efwLabel5.Name = "efwLabel5";
-            this.efwLabel5.Size = new System.Drawing.Size(42, 14);
+            this.efwLabel5.Size = new System.Drawing.Size(18, 14);
             this.efwLabel5.TabIndex = 60;
-            this.efwLabel5.Text = "G 매니저";
+            this.efwLabel5.Text = "BIZ";
             // 
             // efwLabel4
             // 

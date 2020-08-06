@@ -67,6 +67,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwGroupControlProd = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.ckdora_md = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkGShop = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkChef = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkVip = new Easy.Framework.WinForm.Control.efwCheckEdit();
@@ -212,6 +213,7 @@
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).BeginInit();
             this.efwGroupControlProd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ckdora_md.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkGShop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkChef.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkVip.Properties)).BeginInit();
@@ -299,6 +301,7 @@
             // efwGroupControlProd
             // 
             this.efwGroupControlProd.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControlProd.CaptionImageOptions.Image")));
+            this.efwGroupControlProd.Controls.Add(this.ckdora_md);
             this.efwGroupControlProd.Controls.Add(this.chkGShop);
             this.efwGroupControlProd.Controls.Add(this.chkChef);
             this.efwGroupControlProd.Controls.Add(this.chkVip);
@@ -354,6 +357,14 @@
             resources.ApplyResources(this.efwGroupControlProd, "efwGroupControlProd");
             this.efwGroupControlProd.IsMultiLang = false;
             this.efwGroupControlProd.Name = "efwGroupControlProd";
+            // 
+            // ckdora_md
+            // 
+            resources.ApplyResources(this.ckdora_md, "ckdora_md");
+            this.ckdora_md.Name = "ckdora_md";
+            this.ckdora_md.Properties.Caption = resources.GetString("ckdora_md.Properties.Caption");
+            this.ckdora_md.Properties.ValueChecked = "1";
+            this.ckdora_md.Properties.ValueUnchecked = "0";
             // 
             // chkGShop
             // 
@@ -1935,6 +1946,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).EndInit();
             this.efwGroupControlProd.ResumeLayout(false);
             this.efwGroupControlProd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ckdora_md.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkGShop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkChef.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkVip.Properties)).EndInit();
@@ -2170,5 +2182,6 @@
         private Easy.Framework.WinForm.Control.efwCheckEdit chkVip;
         private Easy.Framework.WinForm.Control.efwCheckEdit chkMember;
         private Easy.Framework.WinForm.Control.efwCheckEdit chkAll;
+        private Easy.Framework.WinForm.Control.efwCheckEdit ckdora_md;
     }
 }

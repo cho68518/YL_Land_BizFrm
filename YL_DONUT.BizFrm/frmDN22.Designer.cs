@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN22));
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.rbLevelQ = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
@@ -95,12 +95,13 @@
             this.rbLevelQ.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.rbLevelQ.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.rbLevelQ.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("215", "도마공지"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("238", "G 메니저 공지"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("215", "일반공지"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("218", "VIP공지"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("238", "BIZ공지"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("400", "G 멀티샵 공지"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("206", "주주공지")});
             this.rbLevelQ.RequireMessage = null;
-            this.rbLevelQ.Size = new System.Drawing.Size(456, 24);
+            this.rbLevelQ.Size = new System.Drawing.Size(478, 24);
             this.rbLevelQ.TabIndex = 0;
             this.rbLevelQ.SelectedIndexChanged += new System.EventHandler(this.rbLevelQ_SelectedIndexChanged);
             // 
@@ -108,19 +109,19 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo4;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
             this.efwGridControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
-            this.efwGridControl1.InsertServiceInfo = serviceInfo5;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
@@ -133,12 +134,12 @@
             this.efwGridControl1.Size = new System.Drawing.Size(1040, 425);
             this.efwGridControl1.TabIndex = 3;
             this.efwGridControl1.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo6;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -281,7 +282,7 @@
             // 
             this.efwLabel5.EraserGroup = null;
             this.efwLabel5.IsMultiLang = false;
-            this.efwLabel5.Location = new System.Drawing.Point(272, 162);
+            this.efwLabel5.Location = new System.Drawing.Point(272, 180);
             this.efwLabel5.Name = "efwLabel5";
             this.efwLabel5.Size = new System.Drawing.Size(46, 14);
             this.efwLabel5.TabIndex = 68;
@@ -293,7 +294,7 @@
             this.txtStory_id.EditValue = "";
             this.txtStory_id.EditValue2 = null;
             this.txtStory_id.EraserGroup = "CLR1";
-            this.txtStory_id.Location = new System.Drawing.Point(335, 159);
+            this.txtStory_id.Location = new System.Drawing.Point(335, 177);
             this.txtStory_id.Name = "txtStory_id";
             this.txtStory_id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtStory_id.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -306,7 +307,7 @@
             // 
             this.efwLabel4.EraserGroup = null;
             this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(27, 134);
+            this.efwLabel4.Location = new System.Drawing.Point(27, 152);
             this.efwLabel4.Name = "efwLabel4";
             this.efwLabel4.Size = new System.Drawing.Size(40, 14);
             this.efwLabel4.TabIndex = 66;
@@ -317,7 +318,7 @@
             this.txtVisit_count.EditValue2 = null;
             this.txtVisit_count.Enabled = false;
             this.txtVisit_count.EraserGroup = "CLR1";
-            this.txtVisit_count.Location = new System.Drawing.Point(85, 131);
+            this.txtVisit_count.Location = new System.Drawing.Point(85, 149);
             this.txtVisit_count.Name = "txtVisit_count";
             this.txtVisit_count.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtVisit_count.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -329,7 +330,7 @@
             // 
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.IsMultiLang = false;
-            this.btnSave.Location = new System.Drawing.Point(335, 130);
+            this.btnSave.Location = new System.Drawing.Point(335, 148);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 63;
@@ -340,7 +341,7 @@
             // 
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
             this.btnDelete.IsMultiLang = false;
-            this.btnDelete.Location = new System.Drawing.Point(254, 130);
+            this.btnDelete.Location = new System.Drawing.Point(254, 148);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 62;
@@ -350,7 +351,7 @@
             // rbIs_use
             // 
             this.rbIs_use.IsMultiLang = false;
-            this.rbIs_use.Location = new System.Drawing.Point(259, 70);
+            this.rbIs_use.Location = new System.Drawing.Point(259, 88);
             this.rbIs_use.Name = "rbIs_use";
             this.rbIs_use.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbIs_use.Properties.Appearance.Options.UseBackColor = true;
@@ -367,7 +368,7 @@
             // 
             this.txtSubject.EditValue2 = null;
             this.txtSubject.EraserGroup = "CLR1";
-            this.txtSubject.Location = new System.Drawing.Point(85, 103);
+            this.txtSubject.Location = new System.Drawing.Point(85, 121);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtSubject.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -379,7 +380,7 @@
             // 
             this.efwLabel3.EraserGroup = null;
             this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(27, 106);
+            this.efwLabel3.Location = new System.Drawing.Point(27, 124);
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(20, 14);
             this.efwLabel3.TabIndex = 7;
@@ -387,9 +388,9 @@
             // 
             // dtReg_date
             // 
-            this.dtReg_date.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
+            this.dtReg_date.EditValue = new System.DateTime(2020, 7, 3, 10, 39, 43, 0);
             this.dtReg_date.IsRequire = true;
-            this.dtReg_date.Location = new System.Drawing.Point(85, 74);
+            this.dtReg_date.Location = new System.Drawing.Point(85, 92);
             this.dtReg_date.Name = "dtReg_date";
             this.dtReg_date.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.dtReg_date.Properties.Appearance.Options.UseBackColor = true;
@@ -406,7 +407,7 @@
             // 
             this.efwLabel2.EraserGroup = null;
             this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(27, 77);
+            this.efwLabel2.Location = new System.Drawing.Point(27, 95);
             this.efwLabel2.Name = "efwLabel2";
             this.efwLabel2.Size = new System.Drawing.Size(30, 14);
             this.efwLabel2.TabIndex = 2;
@@ -422,12 +423,13 @@
             this.rbLevel.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.rbLevel.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.rbLevel.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("215", "도마공지"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("238", "G 메니저 공지"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("400", "G 멀티샵 공지"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("206", "주주공지")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("215", "일반"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("218", "VIP"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("238", "BIZ"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("400", "G 멀티샵"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("206", "주주")});
             this.rbLevel.RequireMessage = null;
-            this.rbLevel.Size = new System.Drawing.Size(387, 24);
+            this.rbLevel.Size = new System.Drawing.Size(387, 34);
             this.rbLevel.TabIndex = 1;
             // 
             // frmDN22

@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN14));
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy4 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy4 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo10 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo11 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo12 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy5 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy6 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy6 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo7 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo8 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy4 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy4 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy5 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
@@ -90,6 +90,9 @@
             this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn58 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -161,6 +164,12 @@
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel33 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtGV_CELE_STORY_BIZ = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel32 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtGD_CELE_STORY = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel31 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtGV_CELE_STORY = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel30 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtGD_GR_CELE_STORY = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel28 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -291,6 +300,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).BeginInit();
             this.efwGroupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGV_CELE_STORY_BIZ.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGD_CELE_STORY.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGV_CELE_STORY.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGD_GR_CELE_STORY.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGS_THANK_DOMA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGS_THANK_VIP.Properties)).BeginInit();
@@ -422,14 +434,14 @@
             // 
             // cmbSellers
             // 
-            childHierarchy4.CodeCtrl = null;
-            childHierarchy4.DbName = null;
-            childHierarchy4.SpName = null;
-            this.cmbSellers.ChildHierarchyInfo = childHierarchy4;
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbSellers.ChildHierarchyInfo = childHierarchy1;
             this.cmbSellers.EraserGroup = "CLR1";
-            hierarchy4.DbName = null;
-            hierarchy4.SpName = null;
-            this.cmbSellers.HierarchyInfo = hierarchy4;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbSellers.HierarchyInfo = hierarchy1;
             this.cmbSellers.IsMultiLang = false;
             this.cmbSellers.Location = new System.Drawing.Point(77, 15);
             this.cmbSellers.Name = "cmbSellers";
@@ -480,25 +492,25 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo10.InstanceName = "";
-            serviceInfo10.IsUserIDAdd = true;
-            serviceInfo10.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo10.ParamsInfo")));
-            serviceInfo10.ProcName = "";
-            serviceInfo10.UserParams = null;
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo10;
-            serviceInfo11.InstanceName = "";
-            serviceInfo11.IsUserIDAdd = true;
-            serviceInfo11.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo11.ParamsInfo")));
-            serviceInfo11.ProcName = "";
-            serviceInfo11.UserParams = null;
-            this.efwGridControl1.InsertServiceInfo = serviceInfo11;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = null;
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = null;
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsEditable = false;
             this.efwGridControl1.IsMultiLang = false;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.efwGridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.efwGridControl1.Location = new System.Drawing.Point(7, 65);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
@@ -513,12 +525,12 @@
             this.efwGridControl1.Size = new System.Drawing.Size(1505, 334);
             this.efwGridControl1.TabIndex = 25;
             this.efwGridControl1.TableName = "";
-            serviceInfo12.InstanceName = "";
-            serviceInfo12.IsUserIDAdd = true;
-            serviceInfo12.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo12.ParamsInfo")));
-            serviceInfo12.ProcName = "";
-            serviceInfo12.UserParams = null;
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo12;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = null;
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -554,6 +566,9 @@
             this.gridColumn54,
             this.gridColumn53,
             this.gridColumn55,
+            this.gridColumn56,
+            this.gridColumn57,
+            this.gridColumn58,
             this.gridColumn40,
             this.gridColumn45,
             this.gridColumn46,
@@ -851,13 +866,37 @@
             this.gridColumn55.Visible = true;
             this.gridColumn55.VisibleIndex = 26;
             // 
+            // gridColumn56
+            // 
+            this.gridColumn56.Caption = "GV축하스토리 금액(VIP)";
+            this.gridColumn56.FieldName = "gv_cele_story";
+            this.gridColumn56.Name = "gridColumn56";
+            this.gridColumn56.Visible = true;
+            this.gridColumn56.VisibleIndex = 27;
+            // 
+            // gridColumn57
+            // 
+            this.gridColumn57.Caption = "GV축하스토리 금액(BIZ)";
+            this.gridColumn57.FieldName = "gv_cele_story_biz";
+            this.gridColumn57.Name = "gridColumn57";
+            this.gridColumn57.Visible = true;
+            this.gridColumn57.VisibleIndex = 29;
+            // 
+            // gridColumn58
+            // 
+            this.gridColumn58.Caption = "GD축하스토리";
+            this.gridColumn58.FieldName = "gd_cele_story";
+            this.gridColumn58.Name = "gridColumn58";
+            this.gridColumn58.Visible = true;
+            this.gridColumn58.VisibleIndex = 30;
+            // 
             // gridColumn40
             // 
             this.gridColumn40.Caption = "비고";
             this.gridColumn40.FieldName = "remark";
             this.gridColumn40.Name = "gridColumn40";
             this.gridColumn40.Visible = true;
-            this.gridColumn40.VisibleIndex = 27;
+            this.gridColumn40.VisibleIndex = 28;
             this.gridColumn40.Width = 155;
             // 
             // gridColumn45
@@ -1017,7 +1056,7 @@
             this.efwGroupControl5.IsMultiLang = false;
             this.efwGroupControl5.Location = new System.Drawing.Point(3, 468);
             this.efwGroupControl5.Name = "efwGroupControl5";
-            this.efwGroupControl5.Size = new System.Drawing.Size(1523, 32);
+            this.efwGroupControl5.Size = new System.Drawing.Size(1523, 31);
             this.efwGroupControl5.TabIndex = 34;
             this.efwGroupControl5.Text = "엑셀 업로드";
             // 
@@ -1028,7 +1067,7 @@
             this.layoutControl6.Location = new System.Drawing.Point(2, 23);
             this.layoutControl6.Name = "layoutControl6";
             this.layoutControl6.Root = this.layoutControlGroup6;
-            this.layoutControl6.Size = new System.Drawing.Size(1519, 7);
+            this.layoutControl6.Size = new System.Drawing.Size(1519, 6);
             this.layoutControl6.TabIndex = 0;
             this.layoutControl6.Text = "layoutControl3";
             // 
@@ -1038,31 +1077,31 @@
             this.efwPanelControl2.Controls.Add(this.efwPanelControl3);
             this.efwPanelControl2.Location = new System.Drawing.Point(7, 7);
             this.efwPanelControl2.Name = "efwPanelControl2";
-            this.efwPanelControl2.Size = new System.Drawing.Size(1505, 65);
+            this.efwPanelControl2.Size = new System.Drawing.Size(1488, 1);
             this.efwPanelControl2.TabIndex = 44;
             // 
             // efwGridControl3
             // 
             this.efwGridControl3.BindSet = null;
             this.efwGridControl3.DBName = "";
-            serviceInfo1.InstanceName = "";
-            serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
-            serviceInfo1.ProcName = "";
-            serviceInfo1.UserParams = null;
-            this.efwGridControl3.DeleteServiceInfo = serviceInfo1;
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = null;
+            this.efwGridControl3.DeleteServiceInfo = serviceInfo4;
             this.efwGridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo2.InstanceName = "";
-            serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
-            serviceInfo2.ProcName = "";
-            serviceInfo2.UserParams = null;
-            this.efwGridControl3.InsertServiceInfo = serviceInfo2;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = null;
+            this.efwGridControl3.InsertServiceInfo = serviceInfo5;
             this.efwGridControl3.IsAddExcelBtn = true;
             this.efwGridControl3.isAddPrintBtn = true;
             this.efwGridControl3.IsEditable = false;
             this.efwGridControl3.IsMultiLang = false;
-            this.efwGridControl3.Location = new System.Drawing.Point(2, 49);
+            this.efwGridControl3.Location = new System.Drawing.Point(2, 48);
             this.efwGridControl3.MainView = this.gridView3;
             this.efwGridControl3.Name = "efwGridControl3";
             this.efwGridControl3.NowRowHandle = 0;
@@ -1073,15 +1112,15 @@
             this.repositoryItemMemoExEdit2,
             this.repositoryItemMemoEdit2,
             this.repositoryItemCheckEdit3});
-            this.efwGridControl3.Size = new System.Drawing.Size(1501, 14);
+            this.efwGridControl3.Size = new System.Drawing.Size(1484, 0);
             this.efwGridControl3.TabIndex = 67;
             this.efwGridControl3.TableName = "";
-            serviceInfo3.InstanceName = "";
-            serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
-            serviceInfo3.ProcName = "";
-            serviceInfo3.UserParams = null;
-            this.efwGridControl3.UpdateServiceInfo = serviceInfo3;
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = null;
+            this.efwGridControl3.UpdateServiceInfo = serviceInfo6;
             this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
@@ -1135,9 +1174,9 @@
             this.efwPanelControl3.Controls.Add(this.btnExcelSample);
             this.efwPanelControl3.Controls.Add(this.lblCnt);
             this.efwPanelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwPanelControl3.Location = new System.Drawing.Point(2, 2);
+            this.efwPanelControl3.Location = new System.Drawing.Point(2, 1);
             this.efwPanelControl3.Name = "efwPanelControl3";
-            this.efwPanelControl3.Size = new System.Drawing.Size(1501, 47);
+            this.efwPanelControl3.Size = new System.Drawing.Size(1484, 47);
             this.efwPanelControl3.TabIndex = 66;
             // 
             // efwSimpleButton3
@@ -1185,7 +1224,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup6.Name = "Root";
             this.layoutControlGroup6.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup6.Size = new System.Drawing.Size(1519, 76);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(1502, 12);
             this.layoutControlGroup6.TextVisible = false;
             // 
             // layoutControlItem4
@@ -1193,14 +1232,14 @@
             this.layoutControlItem4.Control = this.efwPanelControl2;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1509, 69);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1492, 5);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // splitterControl3
             // 
             this.splitterControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl3.Location = new System.Drawing.Point(3, 500);
+            this.splitterControl3.Location = new System.Drawing.Point(3, 499);
             this.splitterControl3.Name = "splitterControl3";
             this.splitterControl3.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl3.TabIndex = 35;
@@ -1212,9 +1251,9 @@
             this.efwGroupControl3.Controls.Add(this.layoutControl3);
             this.efwGroupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwGroupControl3.IsMultiLang = false;
-            this.efwGroupControl3.Location = new System.Drawing.Point(3, 505);
+            this.efwGroupControl3.Location = new System.Drawing.Point(3, 504);
             this.efwGroupControl3.Name = "efwGroupControl3";
-            this.efwGroupControl3.Size = new System.Drawing.Size(1523, 30);
+            this.efwGroupControl3.Size = new System.Drawing.Size(1523, 28);
             this.efwGroupControl3.TabIndex = 36;
             this.efwGroupControl3.Text = "변경 HISTORY";
             // 
@@ -1226,7 +1265,7 @@
             this.layoutControl3.Location = new System.Drawing.Point(2, 23);
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup3;
-            this.layoutControl3.Size = new System.Drawing.Size(1519, 5);
+            this.layoutControl3.Size = new System.Drawing.Size(1519, 3);
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -1234,18 +1273,18 @@
             // 
             this.efwGridControl2.BindSet = null;
             this.efwGridControl2.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = null;
-            this.efwGridControl2.DeleteServiceInfo = serviceInfo4;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = null;
-            this.efwGridControl2.InsertServiceInfo = serviceInfo5;
+            serviceInfo7.InstanceName = "";
+            serviceInfo7.IsUserIDAdd = true;
+            serviceInfo7.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo7.ParamsInfo")));
+            serviceInfo7.ProcName = "";
+            serviceInfo7.UserParams = null;
+            this.efwGridControl2.DeleteServiceInfo = serviceInfo7;
+            serviceInfo8.InstanceName = "";
+            serviceInfo8.IsUserIDAdd = true;
+            serviceInfo8.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo8.ParamsInfo")));
+            serviceInfo8.ProcName = "";
+            serviceInfo8.UserParams = null;
+            this.efwGridControl2.InsertServiceInfo = serviceInfo8;
             this.efwGridControl2.IsAddExcelBtn = true;
             this.efwGridControl2.isAddPrintBtn = true;
             this.efwGridControl2.IsEditable = false;
@@ -1264,12 +1303,12 @@
             this.efwGridControl2.Size = new System.Drawing.Size(1488, 20);
             this.efwGridControl2.TabIndex = 25;
             this.efwGridControl2.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = null;
-            this.efwGridControl2.UpdateServiceInfo = serviceInfo6;
+            serviceInfo9.InstanceName = "";
+            serviceInfo9.IsUserIDAdd = true;
+            serviceInfo9.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo9.ParamsInfo")));
+            serviceInfo9.ProcName = "";
+            serviceInfo9.UserParams = null;
+            this.efwGridControl2.UpdateServiceInfo = serviceInfo9;
             this.efwGridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -1587,7 +1626,7 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 536);
+            this.splitterControl1.Location = new System.Drawing.Point(3, 532);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl1.TabIndex = 37;
@@ -1596,6 +1635,12 @@
             // efwGroupControl4
             // 
             this.efwGroupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl4.CaptionImageOptions.Image")));
+            this.efwGroupControl4.Controls.Add(this.efwLabel33);
+            this.efwGroupControl4.Controls.Add(this.txtGV_CELE_STORY_BIZ);
+            this.efwGroupControl4.Controls.Add(this.efwLabel32);
+            this.efwGroupControl4.Controls.Add(this.txtGD_CELE_STORY);
+            this.efwGroupControl4.Controls.Add(this.efwLabel31);
+            this.efwGroupControl4.Controls.Add(this.txtGV_CELE_STORY);
             this.efwGroupControl4.Controls.Add(this.efwLabel30);
             this.efwGroupControl4.Controls.Add(this.txtGD_GR_CELE_STORY);
             this.efwGroupControl4.Controls.Add(this.efwLabel28);
@@ -1656,27 +1701,108 @@
             this.efwGroupControl4.Controls.Add(this.cmbCate_Code1);
             this.efwGroupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl4.IsMultiLang = false;
-            this.efwGroupControl4.Location = new System.Drawing.Point(3, 541);
+            this.efwGroupControl4.Location = new System.Drawing.Point(3, 537);
             this.efwGroupControl4.Name = "efwGroupControl4";
-            this.efwGroupControl4.Size = new System.Drawing.Size(1523, 241);
+            this.efwGroupControl4.Size = new System.Drawing.Size(1523, 245);
             this.efwGroupControl4.TabIndex = 66;
             this.efwGroupControl4.Text = "수정";
+            // 
+            // efwLabel33
+            // 
+            this.efwLabel33.EraserGroup = null;
+            this.efwLabel33.IsMultiLang = false;
+            this.efwLabel33.Location = new System.Drawing.Point(774, 116);
+            this.efwLabel33.Name = "efwLabel33";
+            this.efwLabel33.Size = new System.Drawing.Size(118, 14);
+            this.efwLabel33.TabIndex = 75;
+            this.efwLabel33.Text = "GV축하스토리 금액(BIZ)";
+            // 
+            // txtGV_CELE_STORY_BIZ
+            // 
+            this.txtGV_CELE_STORY_BIZ.EditValue = "0";
+            this.txtGV_CELE_STORY_BIZ.EditValue2 = null;
+            this.txtGV_CELE_STORY_BIZ.Location = new System.Drawing.Point(928, 113);
+            this.txtGV_CELE_STORY_BIZ.Name = "txtGV_CELE_STORY_BIZ";
+            this.txtGV_CELE_STORY_BIZ.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtGV_CELE_STORY_BIZ.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtGV_CELE_STORY_BIZ.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtGV_CELE_STORY_BIZ.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGV_CELE_STORY_BIZ.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtGV_CELE_STORY_BIZ.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtGV_CELE_STORY_BIZ.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtGV_CELE_STORY_BIZ.RequireMessage = null;
+            this.txtGV_CELE_STORY_BIZ.Size = new System.Drawing.Size(100, 20);
+            this.txtGV_CELE_STORY_BIZ.TabIndex = 74;
+            // 
+            // efwLabel32
+            // 
+            this.efwLabel32.EraserGroup = null;
+            this.efwLabel32.IsMultiLang = false;
+            this.efwLabel32.Location = new System.Drawing.Point(774, 64);
+            this.efwLabel32.Name = "efwLabel32";
+            this.efwLabel32.Size = new System.Drawing.Size(90, 14);
+            this.efwLabel32.TabIndex = 73;
+            this.efwLabel32.Text = "GD축하스토리 금액";
+            // 
+            // txtGD_CELE_STORY
+            // 
+            this.txtGD_CELE_STORY.EditValue = "0";
+            this.txtGD_CELE_STORY.EditValue2 = null;
+            this.txtGD_CELE_STORY.Location = new System.Drawing.Point(928, 61);
+            this.txtGD_CELE_STORY.Name = "txtGD_CELE_STORY";
+            this.txtGD_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtGD_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtGD_CELE_STORY.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtGD_CELE_STORY.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGD_CELE_STORY.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtGD_CELE_STORY.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtGD_CELE_STORY.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtGD_CELE_STORY.RequireMessage = null;
+            this.txtGD_CELE_STORY.Size = new System.Drawing.Size(100, 20);
+            this.txtGD_CELE_STORY.TabIndex = 72;
+            // 
+            // efwLabel31
+            // 
+            this.efwLabel31.EraserGroup = null;
+            this.efwLabel31.IsMultiLang = false;
+            this.efwLabel31.Location = new System.Drawing.Point(774, 90);
+            this.efwLabel31.Name = "efwLabel31";
+            this.efwLabel31.Size = new System.Drawing.Size(119, 14);
+            this.efwLabel31.TabIndex = 71;
+            this.efwLabel31.Text = "GV축하스토리 금액(VIP)";
+            // 
+            // txtGV_CELE_STORY
+            // 
+            this.txtGV_CELE_STORY.EditValue = "0";
+            this.txtGV_CELE_STORY.EditValue2 = null;
+            this.txtGV_CELE_STORY.Location = new System.Drawing.Point(928, 87);
+            this.txtGV_CELE_STORY.Name = "txtGV_CELE_STORY";
+            this.txtGV_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtGV_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtGV_CELE_STORY.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtGV_CELE_STORY.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGV_CELE_STORY.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtGV_CELE_STORY.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtGV_CELE_STORY.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtGV_CELE_STORY.RequireMessage = null;
+            this.txtGV_CELE_STORY.Size = new System.Drawing.Size(100, 20);
+            this.txtGV_CELE_STORY.TabIndex = 70;
             // 
             // efwLabel30
             // 
             this.efwLabel30.EraserGroup = null;
             this.efwLabel30.IsMultiLang = false;
-            this.efwLabel30.Location = new System.Drawing.Point(774, 115);
+            this.efwLabel30.Location = new System.Drawing.Point(774, 168);
             this.efwLabel30.Name = "efwLabel30";
-            this.efwLabel30.Size = new System.Drawing.Size(121, 14);
+            this.efwLabel30.Size = new System.Drawing.Size(123, 14);
             this.efwLabel30.TabIndex = 69;
-            this.efwLabel30.Text = "GR축하스토리GD머니금액";
+            this.efwLabel30.Text = "GM축하스토리GD머니금액";
             // 
             // txtGD_GR_CELE_STORY
             // 
             this.txtGD_GR_CELE_STORY.EditValue = "0";
             this.txtGD_GR_CELE_STORY.EditValue2 = null;
-            this.txtGD_GR_CELE_STORY.Location = new System.Drawing.Point(928, 112);
+            this.txtGD_GR_CELE_STORY.Location = new System.Drawing.Point(928, 165);
             this.txtGD_GR_CELE_STORY.Name = "txtGD_GR_CELE_STORY";
             this.txtGD_GR_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGD_GR_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1693,17 +1819,18 @@
             // 
             this.efwLabel28.EraserGroup = null;
             this.efwLabel28.IsMultiLang = false;
-            this.efwLabel28.Location = new System.Drawing.Point(774, 141);
+            this.efwLabel28.Location = new System.Drawing.Point(1102, 199);
             this.efwLabel28.Name = "efwLabel28";
             this.efwLabel28.Size = new System.Drawing.Size(106, 14);
             this.efwLabel28.TabIndex = 67;
             this.efwLabel28.Text = "GS감사스토리_DOMA";
+            this.efwLabel28.Visible = false;
             // 
             // txtGS_THANK_DOMA
             // 
             this.txtGS_THANK_DOMA.EditValue = "0";
             this.txtGS_THANK_DOMA.EditValue2 = null;
-            this.txtGS_THANK_DOMA.Location = new System.Drawing.Point(928, 138);
+            this.txtGS_THANK_DOMA.Location = new System.Drawing.Point(1218, 199);
             this.txtGS_THANK_DOMA.Name = "txtGS_THANK_DOMA";
             this.txtGS_THANK_DOMA.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGS_THANK_DOMA.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1713,14 +1840,15 @@
             this.txtGS_THANK_DOMA.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtGS_THANK_DOMA.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtGS_THANK_DOMA.RequireMessage = null;
-            this.txtGS_THANK_DOMA.Size = new System.Drawing.Size(100, 20);
+            this.txtGS_THANK_DOMA.Size = new System.Drawing.Size(30, 20);
             this.txtGS_THANK_DOMA.TabIndex = 66;
+            this.txtGS_THANK_DOMA.Visible = false;
             // 
             // txtGS_THANK_VIP
             // 
             this.txtGS_THANK_VIP.EditValue = "0";
             this.txtGS_THANK_VIP.EditValue2 = null;
-            this.txtGS_THANK_VIP.Location = new System.Drawing.Point(928, 164);
+            this.txtGS_THANK_VIP.Location = new System.Drawing.Point(1218, 223);
             this.txtGS_THANK_VIP.Name = "txtGS_THANK_VIP";
             this.txtGS_THANK_VIP.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGS_THANK_VIP.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1730,18 +1858,20 @@
             this.txtGS_THANK_VIP.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtGS_THANK_VIP.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtGS_THANK_VIP.RequireMessage = null;
-            this.txtGS_THANK_VIP.Size = new System.Drawing.Size(100, 20);
+            this.txtGS_THANK_VIP.Size = new System.Drawing.Size(30, 20);
             this.txtGS_THANK_VIP.TabIndex = 65;
+            this.txtGS_THANK_VIP.Visible = false;
             // 
             // efwLabel29
             // 
             this.efwLabel29.EraserGroup = null;
             this.efwLabel29.IsMultiLang = false;
-            this.efwLabel29.Location = new System.Drawing.Point(774, 167);
+            this.efwLabel29.Location = new System.Drawing.Point(1102, 225);
             this.efwLabel29.Name = "efwLabel29";
             this.efwLabel29.Size = new System.Drawing.Size(91, 14);
             this.efwLabel29.TabIndex = 64;
             this.efwLabel29.Text = "GS감사스토리_VIP";
+            this.efwLabel29.Visible = false;
             // 
             // txtP_DISCOUNT_PRICE
             // 
@@ -1786,9 +1916,9 @@
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
             this.efwGroupControl2.Controls.Add(this.layoutControl1);
             this.efwGroupControl2.IsMultiLang = false;
-            this.efwGroupControl2.Location = new System.Drawing.Point(774, 34);
+            this.efwGroupControl2.Location = new System.Drawing.Point(1034, 113);
             this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(77, 50);
+            this.efwGroupControl2.Size = new System.Drawing.Size(55, 26);
             this.efwGroupControl2.TabIndex = 38;
             this.efwGroupControl2.Text = "key";
             this.efwGroupControl2.Visible = false;
@@ -1807,7 +1937,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(2, 23);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(73, 25);
+            this.layoutControl1.Size = new System.Drawing.Size(51, 1);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -2063,11 +2193,11 @@
             // 
             this.txtREMARK.ByteLength = 200;
             this.txtREMARK.EraserGroup = "CLR1";
-            this.txtREMARK.Location = new System.Drawing.Point(1094, 58);
+            this.txtREMARK.Location = new System.Drawing.Point(1093, 58);
             this.txtREMARK.Name = "txtREMARK";
             this.txtREMARK.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtREMARK.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtREMARK.Size = new System.Drawing.Size(443, 177);
+            this.txtREMARK.Size = new System.Drawing.Size(443, 137);
             this.txtREMARK.StyleController = this.layoutControl1;
             this.txtREMARK.TabIndex = 60;
             // 
@@ -2232,17 +2362,17 @@
             // 
             this.efwLabel20.EraserGroup = null;
             this.efwLabel20.IsMultiLang = false;
-            this.efwLabel20.Location = new System.Drawing.Point(774, 89);
+            this.efwLabel20.Location = new System.Drawing.Point(774, 142);
             this.efwLabel20.Name = "efwLabel20";
-            this.efwLabel20.Size = new System.Drawing.Size(121, 14);
+            this.efwLabel20.Size = new System.Drawing.Size(123, 14);
             this.efwLabel20.TabIndex = 34;
-            this.efwLabel20.Text = "GR축하스토리AD머니금액";
+            this.efwLabel20.Text = "GM축하스토리AD머니금액";
             // 
             // efwLabel14
             // 
             this.efwLabel14.EraserGroup = null;
             this.efwLabel14.IsMultiLang = false;
-            this.efwLabel14.Location = new System.Drawing.Point(857, 66);
+            this.efwLabel14.Location = new System.Drawing.Point(1264, 223);
             this.efwLabel14.Name = "efwLabel14";
             this.efwLabel14.Size = new System.Drawing.Size(95, 14);
             this.efwLabel14.TabIndex = 33;
@@ -2303,7 +2433,7 @@
             // 
             this.txtAD_GR_CELE_STORY.EditValue = "0";
             this.txtAD_GR_CELE_STORY.EditValue2 = null;
-            this.txtAD_GR_CELE_STORY.Location = new System.Drawing.Point(928, 86);
+            this.txtAD_GR_CELE_STORY.Location = new System.Drawing.Point(928, 139);
             this.txtAD_GR_CELE_STORY.Name = "txtAD_GR_CELE_STORY";
             this.txtAD_GR_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtAD_GR_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2320,7 +2450,7 @@
             // 
             this.txtCASH_GR_CELE_STORY.EditValue = "0";
             this.txtCASH_GR_CELE_STORY.EditValue2 = null;
-            this.txtCASH_GR_CELE_STORY.Location = new System.Drawing.Point(969, 64);
+            this.txtCASH_GR_CELE_STORY.Location = new System.Drawing.Point(1376, 221);
             this.txtCASH_GR_CELE_STORY.Name = "txtCASH_GR_CELE_STORY";
             this.txtCASH_GR_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCASH_GR_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2330,7 +2460,7 @@
             this.txtCASH_GR_CELE_STORY.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCASH_GR_CELE_STORY.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCASH_GR_CELE_STORY.RequireMessage = null;
-            this.txtCASH_GR_CELE_STORY.Size = new System.Drawing.Size(34, 20);
+            this.txtCASH_GR_CELE_STORY.Size = new System.Drawing.Size(32, 20);
             this.txtCASH_GR_CELE_STORY.TabIndex = 26;
             this.txtCASH_GR_CELE_STORY.Visible = false;
             // 
@@ -2440,7 +2570,7 @@
             // 
             this.txtD_GS_CELE_STORY.EditValue = "0";
             this.txtD_GS_CELE_STORY.EditValue2 = null;
-            this.txtD_GS_CELE_STORY.Location = new System.Drawing.Point(969, 38);
+            this.txtD_GS_CELE_STORY.Location = new System.Drawing.Point(1376, 199);
             this.txtD_GS_CELE_STORY.Name = "txtD_GS_CELE_STORY";
             this.txtD_GS_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtD_GS_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2547,13 +2677,13 @@
             this.efwLabel13.Name = "efwLabel13";
             this.efwLabel13.Size = new System.Drawing.Size(129, 14);
             this.efwLabel13.TabIndex = 13;
-            this.efwLabel13.Text = "GS축하스토리 AD머니 금액";
+            this.efwLabel13.Text = "GB축하스토리 GD머니 금액";
             // 
             // efwLabel12
             // 
             this.efwLabel12.EraserGroup = null;
             this.efwLabel12.IsMultiLang = false;
-            this.efwLabel12.Location = new System.Drawing.Point(857, 40);
+            this.efwLabel12.Location = new System.Drawing.Point(1264, 201);
             this.efwLabel12.Name = "efwLabel12";
             this.efwLabel12.Size = new System.Drawing.Size(103, 14);
             this.efwLabel12.TabIndex = 12;
@@ -2643,13 +2773,13 @@
             // 
             // cmbCate_Code4
             // 
-            childHierarchy5.CodeCtrl = null;
-            childHierarchy5.DbName = null;
-            childHierarchy5.SpName = null;
-            this.cmbCate_Code4.ChildHierarchyInfo = childHierarchy5;
-            hierarchy5.DbName = null;
-            hierarchy5.SpName = null;
-            this.cmbCate_Code4.HierarchyInfo = hierarchy5;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbCate_Code4.ChildHierarchyInfo = childHierarchy2;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbCate_Code4.HierarchyInfo = hierarchy2;
             this.cmbCate_Code4.IsMultiLang = false;
             this.cmbCate_Code4.Location = new System.Drawing.Point(431, 58);
             this.cmbCate_Code4.Name = "cmbCate_Code4";
@@ -2660,13 +2790,13 @@
             // 
             // cmbCate_Code3
             // 
-            childHierarchy6.CodeCtrl = null;
-            childHierarchy6.DbName = null;
-            childHierarchy6.SpName = null;
-            this.cmbCate_Code3.ChildHierarchyInfo = childHierarchy6;
-            hierarchy6.DbName = null;
-            hierarchy6.SpName = null;
-            this.cmbCate_Code3.HierarchyInfo = hierarchy6;
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbCate_Code3.ChildHierarchyInfo = childHierarchy3;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbCate_Code3.HierarchyInfo = hierarchy3;
             this.cmbCate_Code3.IsMultiLang = false;
             this.cmbCate_Code3.Location = new System.Drawing.Point(137, 58);
             this.cmbCate_Code3.Name = "cmbCate_Code3";
@@ -2678,13 +2808,13 @@
             // 
             // cmbCate_Code2
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbCate_Code2.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbCate_Code2.HierarchyInfo = hierarchy1;
+            childHierarchy4.CodeCtrl = null;
+            childHierarchy4.DbName = null;
+            childHierarchy4.SpName = null;
+            this.cmbCate_Code2.ChildHierarchyInfo = childHierarchy4;
+            hierarchy4.DbName = null;
+            hierarchy4.SpName = null;
+            this.cmbCate_Code2.HierarchyInfo = hierarchy4;
             this.cmbCate_Code2.IsMultiLang = false;
             this.cmbCate_Code2.Location = new System.Drawing.Point(432, 32);
             this.cmbCate_Code2.Name = "cmbCate_Code2";
@@ -2696,13 +2826,13 @@
             // 
             // cmbCate_Code1
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbCate_Code1.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbCate_Code1.HierarchyInfo = hierarchy2;
+            childHierarchy5.CodeCtrl = null;
+            childHierarchy5.DbName = null;
+            childHierarchy5.SpName = null;
+            this.cmbCate_Code1.ChildHierarchyInfo = childHierarchy5;
+            hierarchy5.DbName = null;
+            hierarchy5.SpName = null;
+            this.cmbCate_Code1.HierarchyInfo = hierarchy5;
             this.cmbCate_Code1.IsMultiLang = false;
             this.cmbCate_Code1.Location = new System.Drawing.Point(137, 32);
             this.cmbCate_Code1.Name = "cmbCate_Code1";
@@ -2788,6 +2918,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).EndInit();
             this.efwGroupControl4.ResumeLayout(false);
             this.efwGroupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGV_CELE_STORY_BIZ.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGD_CELE_STORY.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGV_CELE_STORY.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGD_GR_CELE_STORY.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGS_THANK_DOMA.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGS_THANK_VIP.Properties)).EndInit();
@@ -3034,5 +3167,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel30;
         private Easy.Framework.WinForm.Control.efwTextEdit txtGD_GR_CELE_STORY;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel31;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtGV_CELE_STORY;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel32;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtGD_CELE_STORY;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel33;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtGV_CELE_STORY_BIZ;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn57;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn58;
     }
 }

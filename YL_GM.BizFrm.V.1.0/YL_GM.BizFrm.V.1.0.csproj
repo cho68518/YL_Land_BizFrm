@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5B7850A0-A628-4D0B-BC3F-FBCDB66DF433}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_GM.BizFrm</RootNamespace>
     <AssemblyName>YL_GM.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -117,6 +117,60 @@
     <Compile Include="Dlg\frmMemberInfo.designer.cs">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM11_Pop05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGM11_Pop05.Designer.cs">
+      <DependentUpon>frmGM11_Pop05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM11_Pop04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGM11_Pop04.Designer.cs">
+      <DependentUpon>frmGM11_Pop04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM11_Pop03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGM11_Pop03.Designer.cs">
+      <DependentUpon>frmGM11_Pop03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM11_Pop02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGM11_Pop02.Designer.cs">
+      <DependentUpon>frmGM11_Pop02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM11_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGM11_Pop01.Designer.cs">
+      <DependentUpon>frmGM11_Pop01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM11.Designer.cs">
+      <DependentUpon>frmGM11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM10.Designer.cs">
+      <DependentUpon>frmGM10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM09.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM09.Designer.cs">
+      <DependentUpon>frmGM09.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGM08.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -224,6 +278,21 @@
     <EmbeddedResource Include="Dlg\frmMemberInfo.resx">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGM11_Pop05.resx">
+      <DependentUpon>frmGM11_Pop05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM11_Pop04.resx">
+      <DependentUpon>frmGM11_Pop04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM11_Pop03.resx">
+      <DependentUpon>frmGM11_Pop03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM11.resx">
+      <DependentUpon>frmGM11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM09.resx">
+      <DependentUpon>frmGM09.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGM08.resx">
       <DependentUpon>frmGM08.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +325,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM05_Pop01.resx">
       <DependentUpon>frmGM05_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM10.resx">
+      <DependentUpon>frmGM10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM11_Pop01.resx">
+      <DependentUpon>frmGM11_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM11_Pop02.resx">
+      <DependentUpon>frmGM11_Pop02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
