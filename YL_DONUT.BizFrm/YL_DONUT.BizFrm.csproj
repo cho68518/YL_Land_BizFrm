@@ -144,6 +144,11 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmDN01.designer.cs" />
+    <Compile Include="frmDN011.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmDN01.resx</DependentUpon>
+    </Compile>
     <Compile Include="frmDN23.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -336,6 +341,18 @@
     <Compile Include="frmTest02.Designer.cs">
       <DependentUpon>frmTest02.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTest03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTest03.Designer.cs">
+      <DependentUpon>frmTest03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTest04.Designer.cs">
+      <DependentUpon>frmTest04.cs</DependentUpon>
+    </Compile>
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -353,7 +370,10 @@
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDN01.resx" />
+    <EmbeddedResource Include="frmDN01.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmDN011.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDN01_Pop01.resx">
       <DependentUpon>frmDN01_Pop01.cs</DependentUpon>
     </EmbeddedResource>
@@ -450,6 +470,12 @@
     <EmbeddedResource Include="frmTest02.resx">
       <DependentUpon>frmTest02.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTest03.resx">
+      <DependentUpon>frmTest03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest04.resx">
+      <DependentUpon>frmTest04.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -530,6 +556,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_cm.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_cm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

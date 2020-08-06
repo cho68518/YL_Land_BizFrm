@@ -60,6 +60,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.efwSimpleButton6 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
             this.LabLast_Name = new Easy.Framework.WinForm.Control.efwLabel();
@@ -156,6 +157,7 @@
             this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.txtAdviceQuery = new Easy.Framework.WinForm.Control.efwMemoEdit();
@@ -196,7 +198,6 @@
             this.efwLabel27 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
-            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).BeginInit();
@@ -279,6 +280,7 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.efwSimpleButton6);
             this.panelControl2.Controls.Add(this.efwSimpleButton3);
             this.panelControl2.Controls.Add(this.efwLabel7);
             this.panelControl2.Controls.Add(this.LabLast_Name);
@@ -298,6 +300,17 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1626, 50);
             this.panelControl2.TabIndex = 76;
+            // 
+            // efwSimpleButton6
+            // 
+            this.efwSimpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton6.ImageOptions.Image")));
+            this.efwSimpleButton6.IsMultiLang = false;
+            this.efwSimpleButton6.Location = new System.Drawing.Point(858, 8);
+            this.efwSimpleButton6.Name = "efwSimpleButton6";
+            this.efwSimpleButton6.Size = new System.Drawing.Size(156, 34);
+            this.efwSimpleButton6.TabIndex = 170;
+            this.efwSimpleButton6.Text = "체험 상품구매(테스트)";
+            this.efwSimpleButton6.Click += new System.EventHandler(this.efwSimpleButton6_Click);
             // 
             // efwSimpleButton3
             // 
@@ -1655,6 +1668,14 @@
             this.gridColumn35.Name = "gridColumn35";
             this.gridColumn35.OptionsColumn.AllowEdit = false;
             // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "옵션ID";
+            this.gridColumn25.FieldName = "opt_id";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 5;
+            // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.efwGroupControl2);
@@ -2130,14 +2151,6 @@
             this.dtE_DATE.Size = new System.Drawing.Size(99, 24);
             this.dtE_DATE.TabIndex = 9;
             // 
-            // gridColumn25
-            // 
-            this.gridColumn25.Caption = "옵션ID";
-            this.gridColumn25.FieldName = "opt_id";
-            this.gridColumn25.Name = "gridColumn25";
-            this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 5;
-            // 
             // frmMM19
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2375,5 +2388,6 @@
         private Easy.Framework.WinForm.Control.efwMemoEdit txtAdvice_Content;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton6;
     }
 }

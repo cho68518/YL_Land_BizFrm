@@ -1287,18 +1287,32 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
 
-
                             MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
                         }
                     }
                 }
-
                 catch (Exception ex)
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
                 Advice_Content();
             }
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            string u_id = "d1c907d4562fbce2144db86ae43ef7f6";
+            string u_name = "조정현";
+            string p_id = "2569";
+            string p_name = "테스트 G제품";
+            string p_num = "1";
+            string p_price = "3000";
+            string p_amt = "100000";
+            string u_email = "finetoday@hanmail.net";
+
+            string surl = "https://callpay.eyeoyou.com/lgu_pay/pay_crossplatform.aspx?&u_id=" + u_id + "&u_name=" + u_name + "&p_id=" + p_id + "&opt_id=" + p_id + "&p_name=" + p_name + "&p_num="+ p_num + "&p_amt="+ p_amt + "&p_price="+ p_price + "&u_email="+ u_email + "&pay_code=SC0040";
+
+            System.Diagnostics.Process.Start(surl);
         }
     }
 }
