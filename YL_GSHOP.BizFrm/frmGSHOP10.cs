@@ -93,7 +93,7 @@ namespace YL_GSHOP.BizFrm
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                con.Query = "SELECT code_id as DCODE ,code_nm  as DNAME  FROM  domaadmin.tb_common_code  where gcode_id = '00010' order by code_id ";
+                con.Query = "SELECT code_id as DCODE ,code_nm  as DNAME  FROM  domaadmin.tb_common_code  where gcode_id = '00010' and use_yn = 'Y' order by code_id ";
 
                 DataSet ds = con.selectQueryDataSet();
                 //DataTable retDT = ds.Tables[0];
