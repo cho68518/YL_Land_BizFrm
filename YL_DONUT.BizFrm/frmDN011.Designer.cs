@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace YL_DONUT.BizFrm.Properties {
+namespace YL_DONUT.BizFrm {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace YL_DONUT.BizFrm.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class frmDN01 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal frmDN01() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace YL_DONUT.BizFrm.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("YL_DONUT.BizFrm.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("YL_DONUT.BizFrm.frmDN01", typeof(frmDN01).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,21 @@ namespace YL_DONUT.BizFrm.Properties {
         }
         
         /// <summary>
+        ///   System.Collections.ArrayList 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Collections.ArrayList efwGridControl1_PKColumns {
+            get {
+                object obj = ResourceManager.GetObject("efwGridControl1.PKColumns", resourceCulture);
+                return ((System.Collections.ArrayList)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Apply_16x16 {
+        internal static System.Drawing.Bitmap efwSimpleButton3_ImageOptions_Image {
             get {
-                object obj = ResourceManager.GetObject("Apply_16x16", resourceCulture);
+                object obj = ResourceManager.GetObject("efwSimpleButton3.ImageOptions.Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +83,9 @@ namespace YL_DONUT.BizFrm.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap bg_cm {
+        internal static System.Drawing.Bitmap efwSimpleButton4_ImageOptions_Image {
             get {
-                object obj = ResourceManager.GetObject("bg_cm", resourceCulture);
+                object obj = ResourceManager.GetObject("efwSimpleButton4.ImageOptions.Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +93,9 @@ namespace YL_DONUT.BizFrm.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap bg_cm1 {
+        internal static System.Drawing.Bitmap efwSimpleButton5_ImageOptions_Image {
             get {
-                object obj = ResourceManager.GetObject("bg_cm1", resourceCulture);
+                object obj = ResourceManager.GetObject("efwSimpleButton5.ImageOptions.Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,80 +103,30 @@ namespace YL_DONUT.BizFrm.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Cancel_16x16 {
+        internal static System.Drawing.Bitmap efwSimpleButton6_ImageOptions_Image {
             get {
-                object obj = ResourceManager.GetObject("Cancel_16x16", resourceCulture);
+                object obj = ResourceManager.GetObject("efwSimpleButton6.ImageOptions.Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static byte[] G_SERIES_UPDATE_sample {
+        internal static System.Drawing.Bitmap efwSimpleButton7_ImageOptions_Image {
             get {
-                object obj = ResourceManager.GetObject("G_SERIES_UPDATE_sample", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("efwSimpleButton7.ImageOptions.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static byte[] GOODS_SERIES_UPDATE_sample {
+        internal static System.Drawing.Bitmap efwSimpleButton8_ImageOptions_Image {
             get {
-                object obj = ResourceManager.GetObject("GOODS_SERIES_UPDATE_sample", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static byte[] PR체험스토리_D머니적립_sample {
-            get {
-                object obj = ResourceManager.GetObject("PR체험스토리_D머니적립_sample", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static byte[] PS운영자_PS수수료_정산내역_D머니적립_sample {
-            get {
-                object obj = ResourceManager.GetObject("PS운영자_PS수수료_정산내역_D머니적립_sample", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static byte[] PS운영자_추천지원금_정산내역_D머니적립_sample {
-            get {
-                object obj = ResourceManager.GetObject("PS운영자_추천지원금_정산내역_D머니적립_sample", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static byte[] YSMS및개인간거래_AD머니적립_sample {
-            get {
-                object obj = ResourceManager.GetObject("YSMS및개인간거래_AD머니적립_sample", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static byte[] 도넛_차액반환_TD머니적립_sample {
-            get {
-                object obj = ResourceManager.GetObject("도넛_차액반환_TD머니적립_sample", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("efwSimpleButton8.ImageOptions.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

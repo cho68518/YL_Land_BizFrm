@@ -37,14 +37,14 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(584, 805);
+            this.webBrowser1.Size = new System.Drawing.Size(540, 408);
             this.webBrowser1.TabIndex = 0;
             // 
             // frmMM19_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 805);
+            this.ClientSize = new System.Drawing.Size(540, 408);
             this.Controls.Add(this.webBrowser1);
             this.Name = "frmMM19_Pop01";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

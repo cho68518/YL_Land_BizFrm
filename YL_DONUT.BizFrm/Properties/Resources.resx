@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Apply_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Apply_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg_cm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg_cm.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cancel_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cancel_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="도넛_차액반환_TD머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\도넛_차액반환_TD머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="GOODS_SERIES_UPDATE_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GOODS_SERIES_UPDATE_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -130,20 +130,25 @@
   <data name="G_SERIES_UPDATE_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\G_SERIES_UPDATE_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="YSMS및개인간거래_AD머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YSMS및개인간거래 AD머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="PR체험스토리_D머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PR체험스토리_D머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="PS운영자_PS수수료_정산내역_D머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PS운영자_PS수수료_정산내역_D머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Cancel_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Apply_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apply_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PS운영자_추천지원금_정산내역_D머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PS운영자_추천지원금_정산내역_D머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="YSMS및개인간거래_AD머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\YSMS및개인간거래 AD머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="bg_cm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg_cm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="도넛_차액반환_TD머니적립_sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\도넛_차액반환_TD머니적립_sample.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-
 </root>
