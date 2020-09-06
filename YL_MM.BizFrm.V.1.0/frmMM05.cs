@@ -316,12 +316,12 @@ namespace YL_MM.BizFrm
 
 
 
-            if (UserInfo.instance().UserId != "0000000024" && UserInfo.instance().UserId != "0000000012" && UserInfo.instance().UserId != "169.254.169.113" && UserInfo.instance().UserId != "0000000027" && UserInfo.instance().UserId != "2020020002" && UserInfo.instance().UserId != "0000000036")
-            {
-                MessageAgent.MessageShow(MessageType.Error, "처리권한이 없습니다!");
-                IsAutoSearch = false;
-                return;
-            }
+            //if (UserInfo.instance().UserId != "0000000024" && UserInfo.instance().UserId != "0000000012" && UserInfo.instance().UserId != "169.254.169.113" && UserInfo.instance().UserId != "0000000027" && UserInfo.instance().UserId != "2020020002" && UserInfo.instance().UserId != "0000000036" && UserInfo.instance().UserId != "0000000036" )
+            //{
+            //    MessageAgent.MessageShow(MessageType.Error, "처리권한이 없습니다!");
+            //    IsAutoSearch = false;
+            //    return;
+            //}
 
             if (string.IsNullOrEmpty(this.txtIDX.Text))
             {
@@ -342,7 +342,7 @@ namespace YL_MM.BizFrm
                         //히스토리 내용 생성
                         using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                         {
-                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM05_SAVE_03", con))
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM05_SAVE_06", con))
                             {
                                 con.Open();
                                 cmd.CommandType = CommandType.StoredProcedure;

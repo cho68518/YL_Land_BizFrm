@@ -1056,7 +1056,7 @@
             this.efwGroupControl5.IsMultiLang = false;
             this.efwGroupControl5.Location = new System.Drawing.Point(3, 468);
             this.efwGroupControl5.Name = "efwGroupControl5";
-            this.efwGroupControl5.Size = new System.Drawing.Size(1523, 31);
+            this.efwGroupControl5.Size = new System.Drawing.Size(1523, 103);
             this.efwGroupControl5.TabIndex = 34;
             this.efwGroupControl5.Text = "엑셀 업로드";
             // 
@@ -1067,7 +1067,7 @@
             this.layoutControl6.Location = new System.Drawing.Point(2, 23);
             this.layoutControl6.Name = "layoutControl6";
             this.layoutControl6.Root = this.layoutControlGroup6;
-            this.layoutControl6.Size = new System.Drawing.Size(1519, 6);
+            this.layoutControl6.Size = new System.Drawing.Size(1519, 78);
             this.layoutControl6.TabIndex = 0;
             this.layoutControl6.Text = "layoutControl3";
             // 
@@ -1077,7 +1077,7 @@
             this.efwPanelControl2.Controls.Add(this.efwPanelControl3);
             this.efwPanelControl2.Location = new System.Drawing.Point(7, 7);
             this.efwPanelControl2.Name = "efwPanelControl2";
-            this.efwPanelControl2.Size = new System.Drawing.Size(1488, 1);
+            this.efwPanelControl2.Size = new System.Drawing.Size(1505, 67);
             this.efwPanelControl2.TabIndex = 44;
             // 
             // efwGridControl3
@@ -1101,7 +1101,7 @@
             this.efwGridControl3.isAddPrintBtn = true;
             this.efwGridControl3.IsEditable = false;
             this.efwGridControl3.IsMultiLang = false;
-            this.efwGridControl3.Location = new System.Drawing.Point(2, 48);
+            this.efwGridControl3.Location = new System.Drawing.Point(2, 49);
             this.efwGridControl3.MainView = this.gridView3;
             this.efwGridControl3.Name = "efwGridControl3";
             this.efwGridControl3.NowRowHandle = 0;
@@ -1112,7 +1112,7 @@
             this.repositoryItemMemoExEdit2,
             this.repositoryItemMemoEdit2,
             this.repositoryItemCheckEdit3});
-            this.efwGridControl3.Size = new System.Drawing.Size(1484, 0);
+            this.efwGridControl3.Size = new System.Drawing.Size(1501, 16);
             this.efwGridControl3.TabIndex = 67;
             this.efwGridControl3.TableName = "";
             serviceInfo6.InstanceName = "";
@@ -1174,9 +1174,9 @@
             this.efwPanelControl3.Controls.Add(this.btnExcelSample);
             this.efwPanelControl3.Controls.Add(this.lblCnt);
             this.efwPanelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwPanelControl3.Location = new System.Drawing.Point(2, 1);
+            this.efwPanelControl3.Location = new System.Drawing.Point(2, 2);
             this.efwPanelControl3.Name = "efwPanelControl3";
-            this.efwPanelControl3.Size = new System.Drawing.Size(1484, 47);
+            this.efwPanelControl3.Size = new System.Drawing.Size(1501, 47);
             this.efwPanelControl3.TabIndex = 66;
             // 
             // efwSimpleButton3
@@ -1224,7 +1224,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup6.Name = "Root";
             this.layoutControlGroup6.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup6.Size = new System.Drawing.Size(1502, 12);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(1519, 78);
             this.layoutControlGroup6.TextVisible = false;
             // 
             // layoutControlItem4
@@ -1232,14 +1232,14 @@
             this.layoutControlItem4.Control = this.efwPanelControl2;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1492, 5);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1509, 71);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // splitterControl3
             // 
             this.splitterControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl3.Location = new System.Drawing.Point(3, 499);
+            this.splitterControl3.Location = new System.Drawing.Point(3, 571);
             this.splitterControl3.Name = "splitterControl3";
             this.splitterControl3.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl3.TabIndex = 35;
@@ -1251,7 +1251,7 @@
             this.efwGroupControl3.Controls.Add(this.layoutControl3);
             this.efwGroupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwGroupControl3.IsMultiLang = false;
-            this.efwGroupControl3.Location = new System.Drawing.Point(3, 504);
+            this.efwGroupControl3.Location = new System.Drawing.Point(3, 576);
             this.efwGroupControl3.Name = "efwGroupControl3";
             this.efwGroupControl3.Size = new System.Drawing.Size(1523, 28);
             this.efwGroupControl3.TabIndex = 36;
@@ -1275,13 +1275,13 @@
             this.efwGridControl2.DBName = "";
             serviceInfo7.InstanceName = "";
             serviceInfo7.IsUserIDAdd = true;
-            serviceInfo7.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo7.ParamsInfo")));
+            serviceInfo7.ParamsInfo = null;
             serviceInfo7.ProcName = "";
             serviceInfo7.UserParams = null;
             this.efwGridControl2.DeleteServiceInfo = serviceInfo7;
             serviceInfo8.InstanceName = "";
             serviceInfo8.IsUserIDAdd = true;
-            serviceInfo8.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo8.ParamsInfo")));
+            serviceInfo8.ParamsInfo = null;
             serviceInfo8.ProcName = "";
             serviceInfo8.UserParams = null;
             this.efwGridControl2.InsertServiceInfo = serviceInfo8;
@@ -1305,7 +1305,7 @@
             this.efwGridControl2.TableName = "";
             serviceInfo9.InstanceName = "";
             serviceInfo9.IsUserIDAdd = true;
-            serviceInfo9.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo9.ParamsInfo")));
+            serviceInfo9.ParamsInfo = null;
             serviceInfo9.ProcName = "";
             serviceInfo9.UserParams = null;
             this.efwGridControl2.UpdateServiceInfo = serviceInfo9;
@@ -1626,7 +1626,7 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 532);
+            this.splitterControl1.Location = new System.Drawing.Point(3, 604);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl1.TabIndex = 37;
@@ -1701,9 +1701,9 @@
             this.efwGroupControl4.Controls.Add(this.cmbCate_Code1);
             this.efwGroupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl4.IsMultiLang = false;
-            this.efwGroupControl4.Location = new System.Drawing.Point(3, 537);
+            this.efwGroupControl4.Location = new System.Drawing.Point(3, 609);
             this.efwGroupControl4.Name = "efwGroupControl4";
-            this.efwGroupControl4.Size = new System.Drawing.Size(1523, 245);
+            this.efwGroupControl4.Size = new System.Drawing.Size(1523, 173);
             this.efwGroupControl4.TabIndex = 66;
             this.efwGroupControl4.Text = "수정";
             // 

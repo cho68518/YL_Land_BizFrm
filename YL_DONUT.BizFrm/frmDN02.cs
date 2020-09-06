@@ -137,6 +137,7 @@ namespace YL_DONUT.BizFrm
                     lblTD.Text = ds.Tables[0].Rows[0]["TD_MONEY"].ToString();
                     lblD.Text = ds.Tables[0].Rows[0]["D_MONEY"].ToString();
                     lblSD.Text = ds.Tables[0].Rows[0]["SD_MONEY"].ToString();
+                    lblGD.Text = ds.Tables[0].Rows[0]["GD_MONEY"].ToString();
                     //lblGM.Text = ds.Tables[0].Rows[0]["GM_MONEY"].ToString();
                     //lblMM.Text = ds.Tables[0].Rows[0]["MM_MONEY"].ToString();
                     //lblAM.Text = ds.Tables[0].Rows[0]["AM_MONEY"].ToString();

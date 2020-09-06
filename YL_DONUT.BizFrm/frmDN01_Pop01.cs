@@ -386,9 +386,9 @@ namespace YL_DONUT.BizFrm
                     //}
 
 
-                    DataSet ds = ServiceAgent.ExecuteDataSet(false, "CONIS_IBS", "USP_DN_DN01_SAVE_04"
-                                                            , this.txtO_Code.EditValue
-                                                            );
+                    //DataSet ds = ServiceAgent.ExecuteDataSet(false, "CONIS_IBS", "USP_DN_DN01_SAVE_04"
+                    //                                        , this.txtO_Code.EditValue
+                    //                                        );
 
                     MessageAgent.MessageShow(MessageType.Informational, "주문 취소 되었습니다.");
 
@@ -418,11 +418,46 @@ namespace YL_DONUT.BizFrm
                 Open1();
             }
 
-
-
         }
 
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            if ( UserInfo.instance().UserId != "0000000027" && UserInfo.instance().UserId != "0000000013" && UserInfo.instance().UserId != "0000000038")
+            {
+                MessageAgent.MessageShow(MessageType.Error, "처리권한이 없습니다!");
+                return;
+            }
 
+            if (MessageAgent.MessageShow(MessageType.Confirm, "페이블루 승인을 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
 
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN01_SAVE_06", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_code"].Value = txtO_Code.EditValue;
+                            cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
+
+                            cmd.ExecuteNonQuery();
+
+                        }
+                    }
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+
+                Open1();
+            }
+        }
     }
 }

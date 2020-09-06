@@ -147,7 +147,7 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "입금일";
+            this.gridColumn2.Caption = "취소일";
             this.gridColumn2.FieldName = "o_deposit_confirm_date";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;

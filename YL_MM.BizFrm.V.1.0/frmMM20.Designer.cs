@@ -37,6 +37,7 @@
             this.efwXtraTabControl1 = new Easy.Framework.WinForm.Control.efwXtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.Grop = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbTest_Grant = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.rbGhop_Manager = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -76,7 +77,6 @@
             this.cmbMember_Search = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtSearch = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).BeginInit();
             this.efwXtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -156,6 +156,17 @@
             this.Grop.Size = new System.Drawing.Size(1114, 163);
             this.Grop.TabIndex = 9;
             this.Grop.Text = "MD별 권한 저장";
+            // 
+            // efwSimpleButton4
+            // 
+            this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
+            this.efwSimpleButton4.IsMultiLang = false;
+            this.efwSimpleButton4.Location = new System.Drawing.Point(880, 33);
+            this.efwSimpleButton4.Name = "efwSimpleButton4";
+            this.efwSimpleButton4.Size = new System.Drawing.Size(85, 29);
+            this.efwSimpleButton4.TabIndex = 72;
+            this.efwSimpleButton4.Text = "삭제";
+            this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
             // 
             // rbTest_Grant
             // 
@@ -510,6 +521,7 @@
             this.gridColumn8.ColumnEdit = this.repositoryItemCheckEdit1;
             this.gridColumn8.FieldName = "ghop_manager";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 4;
             this.gridColumn8.Width = 51;
@@ -527,6 +539,7 @@
             this.gridColumn9.ColumnEdit = this.repositoryItemCheckEdit2;
             this.gridColumn9.FieldName = "test_grant";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 5;
             // 
@@ -632,17 +645,6 @@
             this.txtSearch.RequireMessage = null;
             this.txtSearch.Size = new System.Drawing.Size(190, 20);
             this.txtSearch.TabIndex = 0;
-            // 
-            // efwSimpleButton4
-            // 
-            this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
-            this.efwSimpleButton4.IsMultiLang = false;
-            this.efwSimpleButton4.Location = new System.Drawing.Point(880, 33);
-            this.efwSimpleButton4.Name = "efwSimpleButton4";
-            this.efwSimpleButton4.Size = new System.Drawing.Size(85, 29);
-            this.efwSimpleButton4.TabIndex = 72;
-            this.efwSimpleButton4.Text = "삭제";
-            this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
             // 
             // frmMM20
             // 

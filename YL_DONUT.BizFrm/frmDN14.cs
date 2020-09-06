@@ -33,7 +33,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms;      
+
 using YL_COMM.BizFrm;
 
 namespace YL_DONUT.BizFrm
@@ -380,7 +381,6 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
                             cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
                             cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
-
 
                             cmd.Parameters.Add(new MySqlParameter("i_cate_code1", MySqlDbType.VarChar));
                             cmd.Parameters["i_cate_code1"].Value = cmbCate_Code1.EditValue;

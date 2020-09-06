@@ -69,8 +69,6 @@ namespace YL_GSHOP.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
             
-            dtS_DATE.EditValue = DateTime.Now;
-            dtE_DATE.EditValue = DateTime.Now;
             cmbQ1.EditValue = "0";
             gridView1.OptionsView.ShowFooter = true;
             chkIs_Best.EditValue = "N";
@@ -222,10 +220,10 @@ namespace YL_GSHOP.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+                        cmd.Parameters[0].Value = "";
 
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+                        cmd.Parameters[1].Value = "";
 
                         cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 10);
                         cmd.Parameters[2].Value = cmbQ1.EditValue;
