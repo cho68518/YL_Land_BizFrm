@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSHOP05));
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.cmbQuery = new Easy.Framework.WinForm.Control.efwLookUpEdit();
+            this.txtProdName = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -70,14 +72,14 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cmbQuery = new Easy.Framework.WinForm.Control.efwLookUpEdit();
-            this.txtProdName = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProdName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
@@ -94,8 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProdName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
@@ -126,6 +126,40 @@
             this.layoutControl2.Size = new System.Drawing.Size(1136, 609);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // cmbQuery
+            // 
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbQuery.ChildHierarchyInfo = childHierarchy1;
+            this.cmbQuery.EraserGroup = "CLR1";
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbQuery.HierarchyInfo = hierarchy1;
+            this.cmbQuery.IsMultiLang = false;
+            this.cmbQuery.Location = new System.Drawing.Point(360, 7);
+            this.cmbQuery.Name = "cmbQuery";
+            this.cmbQuery.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cmbQuery.Properties.Appearance.Options.UseBackColor = true;
+            this.cmbQuery.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbQuery.Size = new System.Drawing.Size(129, 20);
+            this.cmbQuery.StyleController = this.layoutControl2;
+            this.cmbQuery.TabIndex = 43;
+            // 
+            // txtProdName
+            // 
+            this.txtProdName.EditValue2 = null;
+            this.txtProdName.Location = new System.Drawing.Point(493, 7);
+            this.txtProdName.Name = "txtProdName";
+            this.txtProdName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtProdName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtProdName.RequireMessage = null;
+            this.txtProdName.Size = new System.Drawing.Size(186, 20);
+            this.txtProdName.StyleController = this.layoutControl2;
+            this.txtProdName.TabIndex = 42;
+            this.txtProdName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProdName_KeyDown);
             // 
             // dtE_DATE
             // 
@@ -283,12 +317,14 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "금액";
+            this.gridColumn6.Caption = "주문금액";
             this.gridColumn6.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "o_total_cost";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 7;
             // 
             // gridColumn7
             // 
@@ -296,7 +332,7 @@
             this.gridColumn7.FieldName = "o_type";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.VisibleIndex = 8;
             // 
             // gridColumn8
             // 
@@ -305,7 +341,7 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 8;
+            this.gridColumn8.VisibleIndex = 9;
             // 
             // gridColumn9
             // 
@@ -313,18 +349,18 @@
             this.gridColumn9.FieldName = "o_deposit_confirm_date";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 9;
+            this.gridColumn9.VisibleIndex = 10;
             // 
             // gridColumn10
             // 
-            this.gridColumn10.Caption = "입금액";
+            this.gridColumn10.Caption = "실입금액";
             this.gridColumn10.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn10.FieldName = "lgd_amount";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 10;
+            this.gridColumn10.VisibleIndex = 11;
             // 
             // gridColumn11
             // 
@@ -332,7 +368,7 @@
             this.gridColumn11.FieldName = "o_delivery_comp_name";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 11;
+            this.gridColumn11.VisibleIndex = 12;
             // 
             // gridColumn12
             // 
@@ -340,7 +376,7 @@
             this.gridColumn12.FieldName = "o_delivery_num";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 12;
+            this.gridColumn12.VisibleIndex = 13;
             // 
             // gridColumn13
             // 
@@ -348,7 +384,7 @@
             this.gridColumn13.FieldName = "o_delivery_start_date";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 13;
+            this.gridColumn13.VisibleIndex = 14;
             // 
             // gridColumn14
             // 
@@ -356,7 +392,7 @@
             this.gridColumn14.FieldName = "o_delivery_end_date";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 14;
+            this.gridColumn14.VisibleIndex = 15;
             // 
             // gridColumn16
             // 
@@ -364,7 +400,7 @@
             this.gridColumn16.FieldName = "rec_u_name";
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 15;
+            this.gridColumn16.VisibleIndex = 16;
             // 
             // gridColumn17
             // 
@@ -372,7 +408,7 @@
             this.gridColumn17.FieldName = "u_region_name";
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 16;
+            this.gridColumn17.VisibleIndex = 17;
             // 
             // gridColumn18
             // 
@@ -380,7 +416,7 @@
             this.gridColumn18.FieldName = "u_region_name2";
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 17;
+            this.gridColumn18.VisibleIndex = 18;
             // 
             // gridColumn19
             // 
@@ -388,7 +424,7 @@
             this.gridColumn19.FieldName = "o_code";
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 18;
+            this.gridColumn19.VisibleIndex = 19;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -503,40 +539,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // cmbQuery
-            // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbQuery.ChildHierarchyInfo = childHierarchy1;
-            this.cmbQuery.EraserGroup = "CLR1";
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbQuery.HierarchyInfo = hierarchy1;
-            this.cmbQuery.IsMultiLang = false;
-            this.cmbQuery.Location = new System.Drawing.Point(360, 7);
-            this.cmbQuery.Name = "cmbQuery";
-            this.cmbQuery.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cmbQuery.Properties.Appearance.Options.UseBackColor = true;
-            this.cmbQuery.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbQuery.Size = new System.Drawing.Size(129, 20);
-            this.cmbQuery.StyleController = this.layoutControl2;
-            this.cmbQuery.TabIndex = 43;
-            // 
-            // txtProdName
-            // 
-            this.txtProdName.EditValue2 = null;
-            this.txtProdName.Location = new System.Drawing.Point(493, 7);
-            this.txtProdName.Name = "txtProdName";
-            this.txtProdName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtProdName.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtProdName.RequireMessage = null;
-            this.txtProdName.Size = new System.Drawing.Size(186, 20);
-            this.txtProdName.StyleController = this.layoutControl2;
-            this.txtProdName.TabIndex = 42;
-            this.txtProdName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProdName_KeyDown);
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cmbQuery;
@@ -572,6 +574,8 @@
             this.efwGroupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProdName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
@@ -588,8 +592,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProdName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);

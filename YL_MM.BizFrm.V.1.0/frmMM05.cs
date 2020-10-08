@@ -342,7 +342,7 @@ namespace YL_MM.BizFrm
                         //히스토리 내용 생성
                         using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                         {
-                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM05_SAVE_06", con))
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM05_SAVE_03", con))
                             {
                                 con.Open();
                                 cmd.CommandType = CommandType.StoredProcedure;

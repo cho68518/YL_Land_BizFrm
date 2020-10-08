@@ -42,6 +42,7 @@ namespace YL_DONUT.BizFrm
 
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
+            rbCompany.EditValue = "1";
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
@@ -62,6 +63,7 @@ namespace YL_DONUT.BizFrm
 
             }
 
+            SetCmb();
         }
 
         private void InitCodeControl(object cdControl)
@@ -71,6 +73,30 @@ namespace YL_DONUT.BizFrm
             DNAME = "DNAME";
 
             CodeAgent.InitCodeControl(cdControl, "코드명", "코드", DNAME, "DCODE", "선택하세요");
+        }
+
+        private void SetCmb()
+        {
+            // 공급자구분
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " select '0' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(s_idx,'') as DCODE ,s_company_name as DNAME  FROM domaadmin.tb_sellers_info where s_status = 'Y'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbSellers, codeArray);
+            }
+            cmbSellers.EditValue = "0";
+
         }
 
 
@@ -94,7 +120,14 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[1].Value = dtE_DATE.EditValue3;
 
-                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        cmd.Parameters.Add("i_StoreCode", MySqlDbType.Int32);
+                        cmd.Parameters[2].Value = cmbSellers.EditValue;
+                        
+                        cmd.Parameters.Add("i_company", MySqlDbType.VarChar);
+                        cmd.Parameters[3].Value = rbCompany.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
                             sda.Fill(ds);

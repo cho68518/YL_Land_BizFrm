@@ -318,7 +318,7 @@
             this.efwSimpleButton6.Name = "efwSimpleButton6";
             this.efwSimpleButton6.Size = new System.Drawing.Size(149, 34);
             this.efwSimpleButton6.TabIndex = 170;
-            this.efwSimpleButton6.Text = "체험샵 등록";
+            this.efwSimpleButton6.Text = "뉴 지멀티샵 등록";
             this.efwSimpleButton6.Click += new System.EventHandler(this.efwSimpleButton6_Click);
             // 
             // efwSimpleButton3

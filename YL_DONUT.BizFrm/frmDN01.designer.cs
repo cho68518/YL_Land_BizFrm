@@ -66,6 +66,9 @@
             this.cmbChange_type = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwSimpleButton6 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.rbG_Prod = new Easy.Framework.WinForm.Control.efwRadioGroup();
+            this.txto_delivery_num = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtDelivery_cd = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.cmbOrderDate = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwSimpleButton8 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton7 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -112,6 +115,8 @@
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -140,6 +145,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbChange_type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbG_Prod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txto_delivery_num.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelivery_cd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbOrderDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -154,15 +162,16 @@
             // 
             this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
             this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(22, 112);
+            this.efwSimpleButton3.Location = new System.Drawing.Point(200, 114);
             this.efwSimpleButton3.Name = "efwSimpleButton3";
-            this.efwSimpleButton3.Size = new System.Drawing.Size(107, 22);
+            this.efwSimpleButton3.Size = new System.Drawing.Size(108, 22);
             this.efwSimpleButton3.TabIndex = 62;
             this.efwSimpleButton3.Text = "전체선택";
             this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
             // txtId
             // 
+            this.txtId.EditValue = "";
             this.txtId.EditValue2 = null;
             this.txtId.Location = new System.Drawing.Point(1043, 16);
             this.txtId.Name = "txtId";
@@ -175,13 +184,14 @@
             // 
             // cbG_Prod
             // 
-            this.cbG_Prod.Location = new System.Drawing.Point(502, 51);
+            this.cbG_Prod.Location = new System.Drawing.Point(921, 53);
             this.cbG_Prod.Name = "cbG_Prod";
             this.cbG_Prod.Properties.Caption = "G 시리즈";
             this.cbG_Prod.Properties.ValueChecked = "1";
             this.cbG_Prod.Properties.ValueUnchecked = "0";
             this.cbG_Prod.Size = new System.Drawing.Size(91, 19);
             this.cbG_Prod.TabIndex = 60;
+            this.cbG_Prod.Visible = false;
             // 
             // chkB
             // 
@@ -431,9 +441,9 @@
             // 
             this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
             this.efwSimpleButton4.IsMultiLang = false;
-            this.efwSimpleButton4.Location = new System.Drawing.Point(135, 112);
+            this.efwSimpleButton4.Location = new System.Drawing.Point(314, 114);
             this.efwSimpleButton4.Name = "efwSimpleButton4";
-            this.efwSimpleButton4.Size = new System.Drawing.Size(107, 22);
+            this.efwSimpleButton4.Size = new System.Drawing.Size(108, 22);
             this.efwSimpleButton4.TabIndex = 63;
             this.efwSimpleButton4.Text = "전체해제";
             this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
@@ -442,11 +452,12 @@
             // 
             this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
             this.efwSimpleButton5.IsMultiLang = false;
-            this.efwSimpleButton5.Location = new System.Drawing.Point(632, 112);
+            this.efwSimpleButton5.Location = new System.Drawing.Point(1030, 50);
             this.efwSimpleButton5.Name = "efwSimpleButton5";
-            this.efwSimpleButton5.Size = new System.Drawing.Size(136, 22);
+            this.efwSimpleButton5.Size = new System.Drawing.Size(98, 22);
             this.efwSimpleButton5.TabIndex = 64;
             this.efwSimpleButton5.Text = "발주처리";
+            this.efwSimpleButton5.Visible = false;
             this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
             // 
             // cmbChange_type
@@ -459,27 +470,30 @@
             hierarchy3.SpName = null;
             this.cmbChange_type.HierarchyInfo = hierarchy3;
             this.cmbChange_type.IsMultiLang = false;
-            this.cmbChange_type.Location = new System.Drawing.Point(342, 113);
+            this.cmbChange_type.Location = new System.Drawing.Point(83, 115);
             this.cmbChange_type.MasterCode = "E03.PAY_GBN";
             this.cmbChange_type.Name = "cmbChange_type";
             this.cmbChange_type.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbChange_type.Size = new System.Drawing.Size(131, 20);
+            this.cmbChange_type.Size = new System.Drawing.Size(93, 20);
             this.cmbChange_type.TabIndex = 41;
             // 
             // efwSimpleButton6
             // 
             this.efwSimpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton6.ImageOptions.Image")));
             this.efwSimpleButton6.IsMultiLang = false;
-            this.efwSimpleButton6.Location = new System.Drawing.Point(479, 112);
+            this.efwSimpleButton6.Location = new System.Drawing.Point(458, 114);
             this.efwSimpleButton6.Name = "efwSimpleButton6";
-            this.efwSimpleButton6.Size = new System.Drawing.Size(117, 22);
+            this.efwSimpleButton6.Size = new System.Drawing.Size(108, 22);
             this.efwSimpleButton6.TabIndex = 65;
             this.efwSimpleButton6.Text = "상태변경";
             this.efwSimpleButton6.Click += new System.EventHandler(this.efwSimpleButton6_Click);
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.rbG_Prod);
+            this.efwPanelControl1.Controls.Add(this.txto_delivery_num);
+            this.efwPanelControl1.Controls.Add(this.txtDelivery_cd);
             this.efwPanelControl1.Controls.Add(this.cmbOrderDate);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton8);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton7);
@@ -515,8 +529,53 @@
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1212, 143);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1212, 147);
             this.efwPanelControl1.TabIndex = 38;
+            // 
+            // rbG_Prod
+            // 
+            this.rbG_Prod.IsMultiLang = false;
+            this.rbG_Prod.Location = new System.Drawing.Point(470, 49);
+            this.rbG_Prod.Name = "rbG_Prod";
+            this.rbG_Prod.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbG_Prod.Properties.Appearance.Options.UseBackColor = true;
+            this.rbG_Prod.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbG_Prod.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbG_Prod.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rbG_Prod.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("T", "전체"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("G", "G 제품"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "일반 상품")});
+            this.rbG_Prod.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.rbG_Prod.RequireMessage = null;
+            this.rbG_Prod.Size = new System.Drawing.Size(217, 23);
+            this.rbG_Prod.TabIndex = 73;
+            // 
+            // txto_delivery_num
+            // 
+            this.txto_delivery_num.EditValue = "";
+            this.txto_delivery_num.EditValue2 = null;
+            this.txto_delivery_num.Location = new System.Drawing.Point(1117, 13);
+            this.txto_delivery_num.Name = "txto_delivery_num";
+            this.txto_delivery_num.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txto_delivery_num.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txto_delivery_num.RequireMessage = null;
+            this.txto_delivery_num.Size = new System.Drawing.Size(31, 20);
+            this.txto_delivery_num.TabIndex = 72;
+            this.txto_delivery_num.Visible = false;
+            // 
+            // txtDelivery_cd
+            // 
+            this.txtDelivery_cd.EditValue = "";
+            this.txtDelivery_cd.EditValue2 = null;
+            this.txtDelivery_cd.Location = new System.Drawing.Point(1080, 18);
+            this.txtDelivery_cd.Name = "txtDelivery_cd";
+            this.txtDelivery_cd.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtDelivery_cd.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDelivery_cd.RequireMessage = null;
+            this.txtDelivery_cd.Size = new System.Drawing.Size(31, 20);
+            this.txtDelivery_cd.TabIndex = 71;
+            this.txtDelivery_cd.Visible = false;
             // 
             // cmbOrderDate
             // 
@@ -572,7 +631,7 @@
             // 
             this.efwLabel4.EraserGroup = null;
             this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(278, 116);
+            this.efwLabel4.Location = new System.Drawing.Point(23, 118);
             this.efwLabel4.Name = "efwLabel4";
             this.efwLabel4.Size = new System.Drawing.Size(40, 14);
             this.efwLabel4.TabIndex = 66;
@@ -601,7 +660,7 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 178);
+            this.splitterControl1.Location = new System.Drawing.Point(3, 182);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1212, 5);
             this.splitterControl1.TabIndex = 40;
@@ -627,7 +686,7 @@
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.Location = new System.Drawing.Point(3, 183);
+            this.efwGridControl1.Location = new System.Drawing.Point(3, 187);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
@@ -639,7 +698,7 @@
             this.repositoryItemMemoEdit1,
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2});
-            this.efwGridControl1.Size = new System.Drawing.Size(1212, 466);
+            this.efwGridControl1.Size = new System.Drawing.Size(1212, 462);
             this.efwGridControl1.TabIndex = 41;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -690,7 +749,9 @@
             this.gridColumn22,
             this.gridColumn23,
             this.gridColumn24,
-            this.gridColumn30});
+            this.gridColumn30,
+            this.gridColumn35,
+            this.gridColumn36});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "(건수 : {0}"),
@@ -706,7 +767,7 @@
             this.gridView1.OptionsView.AllowCellMerge = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // gridColumn31
             // 
@@ -714,7 +775,7 @@
             this.gridColumn31.ColumnEdit = this.repositoryItemCheckEdit2;
             this.gridColumn31.FieldName = "chk";
             this.gridColumn31.Name = "gridColumn31";
-            this.gridColumn31.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn31.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn31.Visible = true;
             this.gridColumn31.VisibleIndex = 0;
             this.gridColumn31.Width = 20;
@@ -741,7 +802,7 @@
             this.gridColumn2.Caption = "주문번호";
             this.gridColumn2.FieldName = "id";
             this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn2.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
@@ -756,6 +817,7 @@
             this.gridColumn3.FieldName = "o_code";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
             // 
@@ -774,7 +836,7 @@
             this.gridColumn9.Caption = "주문일";
             this.gridColumn9.FieldName = "o_date";
             this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn9.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 5;
@@ -784,7 +846,7 @@
             this.gridColumn6.Caption = "주문자명 ";
             this.gridColumn6.FieldName = "o_receive_name";
             this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn6.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 6;
@@ -794,7 +856,7 @@
             this.gridColumn7.Caption = "주문자 닉네임";
             this.gridColumn7.FieldName = "u_nickname";
             this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn7.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 7;
@@ -804,7 +866,7 @@
             this.gridColumn5.Caption = "주문자 ID";
             this.gridColumn5.FieldName = "o_u_id";
             this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn5.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 8;
@@ -1052,6 +1114,7 @@
             this.gridColumn22.Caption = "송장번호";
             this.gridColumn22.FieldName = "o_delivery_num";
             this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.OptionsColumn.AllowEdit = false;
             this.gridColumn22.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn22.OptionsColumn.ReadOnly = true;
             this.gridColumn22.Visible = true;
@@ -1086,6 +1149,20 @@
             this.gridColumn30.Visible = true;
             this.gridColumn30.VisibleIndex = 33;
             this.gridColumn30.Width = 150;
+            // 
+            // gridColumn35
+            // 
+            this.gridColumn35.Caption = "이전옵션명";
+            this.gridColumn35.FieldName = "old_name";
+            this.gridColumn35.Name = "gridColumn35";
+            this.gridColumn35.Visible = true;
+            this.gridColumn35.VisibleIndex = 34;
+            // 
+            // gridColumn36
+            // 
+            this.gridColumn36.Caption = "gridColumn36";
+            this.gridColumn36.FieldNameSortGroup = "o_delivery_comp_code";
+            this.gridColumn36.Name = "gridColumn36";
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -1143,6 +1220,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbG_Prod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txto_delivery_num.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelivery_cd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbOrderDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -1231,5 +1311,10 @@
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbOrderDate;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtDelivery_cd;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
+        private Easy.Framework.WinForm.Control.efwTextEdit txto_delivery_num;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbG_Prod;
     }
 }

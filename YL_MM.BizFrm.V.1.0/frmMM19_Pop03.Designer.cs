@@ -63,6 +63,7 @@
             this.txtTEL_NO = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtNick_yn = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtCnt = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtHP_NO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSHOP_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_NICKNAME.Properties)).BeginInit();
@@ -365,7 +366,7 @@
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
             this.btnAdd.IsMultiLang = false;
-            this.btnAdd.Location = new System.Drawing.Point(323, 90);
+            this.btnAdd.Location = new System.Drawing.Point(323, 64);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(176, 44);
             this.btnAdd.TabIndex = 78;
@@ -378,7 +379,7 @@
             this.efwSimpleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
             this.efwSimpleButton2.IsMultiLang = false;
-            this.efwSimpleButton2.Location = new System.Drawing.Point(323, 43);
+            this.efwSimpleButton2.Location = new System.Drawing.Point(323, 17);
             this.efwSimpleButton2.Name = "efwSimpleButton2";
             this.efwSimpleButton2.Size = new System.Drawing.Size(176, 41);
             this.efwSimpleButton2.TabIndex = 77;
@@ -419,6 +420,7 @@
             this.txtU_Id.RequireMessage = null;
             this.txtU_Id.Size = new System.Drawing.Size(249, 20);
             this.txtU_Id.TabIndex = 82;
+            this.txtU_Id.Visible = false;
             // 
             // lbMessage
             // 
@@ -442,6 +444,7 @@
             this.txtId_yn.RequireMessage = null;
             this.txtId_yn.Size = new System.Drawing.Size(25, 20);
             this.txtId_yn.TabIndex = 84;
+            this.txtId_yn.Visible = false;
             // 
             // txtTEL_NO
             // 
@@ -464,6 +467,7 @@
             this.txtNick_yn.RequireMessage = null;
             this.txtNick_yn.Size = new System.Drawing.Size(25, 20);
             this.txtNick_yn.TabIndex = 87;
+            this.txtNick_yn.Visible = false;
             // 
             // txtCnt
             // 
@@ -475,12 +479,27 @@
             this.txtCnt.RequireMessage = null;
             this.txtCnt.Size = new System.Drawing.Size(25, 20);
             this.txtCnt.TabIndex = 88;
+            this.txtCnt.Visible = false;
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.ButtonType = Easy.Framework.Util.BtnType.Search;
+            this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(323, 117);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(176, 44);
+            this.efwSimpleButton3.TabIndex = 89;
+            this.efwSimpleButton3.Text = "체험샵 회원/계좌 미 발급";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
             // frmMM19_Pop03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 342);
+            this.Controls.Add(this.efwSimpleButton3);
             this.Controls.Add(this.txtCnt);
             this.Controls.Add(this.txtNick_yn);
             this.Controls.Add(this.txtTEL_NO);
@@ -577,5 +596,6 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtTEL_NO;
         private Easy.Framework.WinForm.Control.efwTextEdit txtNick_yn;
         private Easy.Framework.WinForm.Control.efwTextEdit txtCnt;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
     }
 }

@@ -68,7 +68,11 @@ namespace YL_GSHOP.BizFrm
             this.IsCancel = false;
             this.IsPrint = false;
             this.IsExcel = false;
-            
+
+
+            dtS_DATE.EditValue = DateTime.Now;
+            dtE_DATE.EditValue = DateTime.Now;
+
             cmbQ1.EditValue = "0";
             gridView1.OptionsView.ShowFooter = true;
             chkIs_Best.EditValue = "N";
@@ -100,7 +104,7 @@ namespace YL_GSHOP.BizFrm
                    ); ;
 
             this.efwGridControl1.Click += efwGridControl1_Click;
-            cbCom.EditValue = "N";
+            rbCom.EditValue = "T";
             SetCmb();
         }
         private void efwGridControl1_Click(object sender, EventArgs e)
@@ -144,6 +148,26 @@ namespace YL_GSHOP.BizFrm
 
 
             }
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM domaadmin.tb_common_code where gcode_id = '00043'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbOrderDate, codeArray);
+            }
+            cmbOrderDate.EditValue = "1";
+
         }
 
         private void CmbTAREA1_EditValueChanged(object sender, EventArgs e)
@@ -220,10 +244,10 @@ namespace YL_GSHOP.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = "";
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
 
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[1].Value = "";
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
 
                         cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 10);
                         cmd.Parameters[2].Value = cmbQ1.EditValue;
@@ -234,8 +258,11 @@ namespace YL_GSHOP.BizFrm
                         cmd.Parameters.Add("i_road_addr", MySqlDbType.VarChar, 50);
                         cmd.Parameters[4].Value = txtROAD_ADDR.EditValue;
 
-                        cmd.Parameters.Add("i_Com", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[5].Value = cbCom.EditValue;
+                        cmd.Parameters.Add("i_Com", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[5].Value = rbCom.EditValue;
+
+                        cmd.Parameters.Add("i_order_date", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[6].Value = cmbOrderDate.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

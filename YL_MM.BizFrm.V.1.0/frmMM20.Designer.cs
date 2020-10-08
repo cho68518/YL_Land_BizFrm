@@ -37,6 +37,7 @@
             this.efwXtraTabControl1 = new Easy.Framework.WinForm.Control.efwXtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.Grop = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.rbteam_leader = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbTest_Grant = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.rbGhop_Manager = new Easy.Framework.WinForm.Control.efwRadioGroup();
@@ -66,6 +67,8 @@
             this.repositoryItemCheckEdit7 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -82,6 +85,7 @@
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grop)).BeginInit();
             this.Grop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbteam_leader.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbTest_Grant.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbGhop_Manager.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReg_Date.Properties)).BeginInit();
@@ -95,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
@@ -130,6 +135,7 @@
             // Grop
             // 
             this.Grop.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Grop.CaptionImageOptions.Image")));
+            this.Grop.Controls.Add(this.rbteam_leader);
             this.Grop.Controls.Add(this.efwSimpleButton4);
             this.Grop.Controls.Add(this.rbTest_Grant);
             this.Grop.Controls.Add(this.rbGhop_Manager);
@@ -156,6 +162,22 @@
             this.Grop.Size = new System.Drawing.Size(1114, 163);
             this.Grop.TabIndex = 9;
             this.Grop.Text = "MD별 권한 저장";
+            // 
+            // rbteam_leader
+            // 
+            this.rbteam_leader.IsMultiLang = false;
+            this.rbteam_leader.Location = new System.Drawing.Point(365, 101);
+            this.rbteam_leader.Name = "rbteam_leader";
+            this.rbteam_leader.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbteam_leader.Properties.Appearance.Options.UseBackColor = true;
+            this.rbteam_leader.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbteam_leader.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbteam_leader.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "MD (팀장)"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "일반MD")});
+            this.rbteam_leader.RequireMessage = null;
+            this.rbteam_leader.Size = new System.Drawing.Size(205, 26);
+            this.rbteam_leader.TabIndex = 73;
             // 
             // efwSimpleButton4
             // 
@@ -187,7 +209,7 @@
             // rbGhop_Manager
             // 
             this.rbGhop_Manager.IsMultiLang = false;
-            this.rbGhop_Manager.Location = new System.Drawing.Point(365, 101);
+            this.rbGhop_Manager.Location = new System.Drawing.Point(982, 56);
             this.rbGhop_Manager.Name = "rbGhop_Manager";
             this.rbGhop_Manager.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbGhop_Manager.Properties.Appearance.Options.UseBackColor = true;
@@ -197,8 +219,9 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "샵관리자"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "일반MD")});
             this.rbGhop_Manager.RequireMessage = null;
-            this.rbGhop_Manager.Size = new System.Drawing.Size(205, 26);
+            this.rbGhop_Manager.Size = new System.Drawing.Size(127, 26);
             this.rbGhop_Manager.TabIndex = 70;
+            this.rbGhop_Manager.Visible = false;
             // 
             // efwSimpleButton3
             // 
@@ -431,7 +454,8 @@
             this.repositoryItemRadioGroup1,
             this.repositoryItemCheckEdit7,
             this.repositoryItemCheckEdit1,
-            this.repositoryItemCheckEdit2});
+            this.repositoryItemCheckEdit2,
+            this.repositoryItemCheckEdit3});
             this.efwGridControl1.Size = new System.Drawing.Size(1114, 530);
             this.efwGridControl1.TabIndex = 7;
             this.efwGridControl1.TableName = "";
@@ -452,6 +476,7 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn8,
+            this.gridColumn10,
             this.gridColumn9,
             this.gridColumn6,
             this.gridColumn7,
@@ -472,7 +497,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 96;
+            this.gridColumn2.Width = 82;
             // 
             // gridColumn3
             // 
@@ -483,7 +508,7 @@
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 99;
+            this.gridColumn3.Width = 101;
             // 
             // gridColumn4
             // 
@@ -494,7 +519,7 @@
             this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 114;
+            this.gridColumn4.Width = 96;
             // 
             // gridColumn5
             // 
@@ -506,7 +531,7 @@
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 53;
+            this.gridColumn5.Width = 74;
             // 
             // repositoryItemCheckEdit7
             // 
@@ -521,9 +546,8 @@
             this.gridColumn8.ColumnEdit = this.repositoryItemCheckEdit1;
             this.gridColumn8.FieldName = "ghop_manager";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.ReadOnly = true;
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 4;
             this.gridColumn8.Width = 51;
             // 
             // repositoryItemCheckEdit1
@@ -533,15 +557,35 @@
             this.repositoryItemCheckEdit1.ValueChecked = "Y";
             this.repositoryItemCheckEdit1.ValueUnchecked = "N";
             // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "MD(팀장)";
+            this.gridColumn10.ColumnEdit = this.repositoryItemCheckEdit3;
+            this.gridColumn10.FieldName = "team_leader";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.OptionsColumn.AllowEdit = false;
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 4;
+            this.gridColumn10.Width = 87;
+            // 
+            // repositoryItemCheckEdit3
+            // 
+            this.repositoryItemCheckEdit3.AutoHeight = false;
+            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
+            this.repositoryItemCheckEdit3.ValueChecked = "Y";
+            this.repositoryItemCheckEdit3.ValueUnchecked = "N";
+            // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "테스트_권한";
             this.gridColumn9.ColumnEdit = this.repositoryItemCheckEdit2;
             this.gridColumn9.FieldName = "test_grant";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 5;
+            this.gridColumn9.Width = 79;
             // 
             // repositoryItemCheckEdit2
             // 
@@ -559,27 +603,29 @@
             this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 6;
-            this.gridColumn6.Width = 118;
+            this.gridColumn6.Width = 110;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "비고";
             this.gridColumn7.FieldName = "remark";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 7;
-            this.gridColumn7.Width = 565;
+            this.gridColumn7.Width = 370;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "u_id";
             this.gridColumn1.FieldName = "u_id";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 8;
-            this.gridColumn1.Width = 79;
+            this.gridColumn1.Width = 97;
             // 
             // repositoryItemRadioGroup1
             // 
@@ -661,6 +707,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Grop)).EndInit();
             this.Grop.ResumeLayout(false);
             this.Grop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbteam_leader.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbTest_Grant.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbGhop_Manager.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReg_Date.Properties)).EndInit();
@@ -674,6 +721,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
@@ -730,5 +778,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton4;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbteam_leader;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
     }
 }

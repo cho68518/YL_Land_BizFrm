@@ -43,7 +43,6 @@ namespace YL_DONUT.BizFrm
     {
         frmDN01_Pop01 popup;
 
-
         public frmDN01()
         {
             InitializeComponent();
@@ -76,6 +75,7 @@ namespace YL_DONUT.BizFrm
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
             cbG_Prod.EditValue = "0";
+            rbG_Prod.EditValue = "T";
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
             gridView1.OptionsView.ShowFooter = true;
@@ -142,10 +142,12 @@ namespace YL_DONUT.BizFrm
             chkA.Checked = true;
             chkB.Checked = true;
 
-            this.efwGridControl1.BindControlSet( 
+            this.efwGridControl1.BindControlSet(
               new ColumnControlSet("id", txtId)
+             , new ColumnControlSet("o_delivery_comp_code", txtDelivery_cd)
+             , new ColumnControlSet("o_delivery_num", txto_delivery_num)
             );
-            this.efwGridControl1.Click += efwGridControl1_Click;
+            //this.efwGridControl1.Click += efwGridControl1_Click;
 
 
 
@@ -154,11 +156,11 @@ namespace YL_DONUT.BizFrm
 
 
         }
-        private void efwGridControl1_Click(object sender, EventArgs e)
-        {
+        //private void efwGridControl1_Click(object sender, EventArgs e)
+        //{
 
 
-        }
+        //}
 
         private void setCmb()
         {
@@ -331,7 +333,7 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters[17].Value = chkB.EditValue;
 
                         cmd.Parameters.Add("i_g_prod", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[18].Value = cbG_Prod.EditValue;
+                        cmd.Parameters[18].Value = rbG_Prod.EditValue;
                         //cmbOrderDate
                         cmd.Parameters.Add("i_order_date", MySqlDbType.VarChar, 10);
                         cmd.Parameters[19].Value = cmbOrderDate.EditValue;
@@ -441,22 +443,32 @@ namespace YL_DONUT.BizFrm
         }
 
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        //private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        //{
+        //    if (e.RowHandle >= 0)
+        //    {
+        //        DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+        //        int nId = Convert.ToInt32(txtId.EditValue.ToString());
+        //        if (nId != 0)
+        //        {
+        //            this.txtId.EditValue = dr["id"].ToString();
+        //            popup = new frmDN01_Pop01();
+        //            popup.Id = Convert.ToInt32(txtId.EditValue.ToString());
+        //            txtId.EditValue = "0";
+        //            popup.ShowDialog();
+        //        }
+        //    }
+
+        //}
+
+        private void listGridView_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
         {
-            if (e.RowHandle >= 0)
+            if (e.Column.FieldName == "o_code")
             {
-                DataRow dr = this.efwGridControl1.GetSelectedRow(0);
-                int nId = Convert.ToInt32(txtId.EditValue.ToString());
-                if (nId != 0)
-                {
-                    this.txtId.EditValue = dr["id"].ToString();
-                    popup = new frmDN01_Pop01();
-                    popup.Id = Convert.ToInt32(txtId.EditValue.ToString());
-                    txtId.EditValue = "0";
-                    popup.ShowDialog();
-                }
+
             }
         }
+
 
         private void efwSimpleButton3_Click(object sender, EventArgs e)
         {
@@ -593,6 +605,39 @@ namespace YL_DONUT.BizFrm
             Search();
         }
 
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
 
+            var gv = sender as GridView;
+            var rowIndex = gv.FocusedRowHandle;
+            var columnIndex = gv.FocusedColumn.VisibleIndex;
+            if (columnIndex == 3)
+            {
+                DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+                int nId = Convert.ToInt32(txtId.EditValue.ToString());
+                if (nId != 0)
+                {
+                    this.txtId.EditValue = dr["id"].ToString();
+                    popup = new frmDN01_Pop01();
+                    popup.Id = Convert.ToInt32(txtId.EditValue.ToString());
+                    txtId.EditValue = "0";
+                    popup.ShowDialog();
+                }
+            }
+            if (columnIndex == 30)
+            {
+                using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+                { 
+                    string sDelivery_Cd = txtDelivery_cd.EditValue.ToString();
+                    sql.Query = "select d_address from domamall.tb_am_product_delivers " +
+                    "              where d_code  =  '" + sDelivery_Cd + "' " ;
+                    DataSet ds = sql.selectQueryDataSet();
+
+                    string sDelivery_Query = sql.selectQueryForSingleValue() + txto_delivery_num.EditValue;
+                    System.Diagnostics.Process.Start(sDelivery_Query);
+
+                }
+            }
+        }
     }
 }

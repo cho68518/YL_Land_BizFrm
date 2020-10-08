@@ -192,6 +192,8 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
                         cmd.Parameters[3].Value = sShow_Type;
+
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
