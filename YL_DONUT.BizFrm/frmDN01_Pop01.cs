@@ -422,11 +422,11 @@ namespace YL_DONUT.BizFrm
 
         private void efwSimpleButton2_Click(object sender, EventArgs e)
         {
-            if ( UserInfo.instance().UserId != "0000000027" && UserInfo.instance().UserId != "0000000013" && UserInfo.instance().UserId != "0000000038")
-            {
-                MessageAgent.MessageShow(MessageType.Error, "처리권한이 없습니다!");
-                return;
-            }
+            //if ( UserInfo.instance().UserId != "0000000027" && UserInfo.instance().UserId != "0000000013" && UserInfo.instance().UserId != "0000000038")
+            //{
+            //    MessageAgent.MessageShow(MessageType.Error, "처리권한이 없습니다!");
+            //    return;
+            //}
 
             if (MessageAgent.MessageShow(MessageType.Confirm, "페이블루 승인을 하시겠습니까?") == DialogResult.OK)
             {

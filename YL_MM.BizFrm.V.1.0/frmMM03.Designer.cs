@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMM03));
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
@@ -39,9 +41,8 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.cmbQuery = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbShowType = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.txtProdName = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -65,9 +66,9 @@
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cmbQuery = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbShowType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProdName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSellers.Properties)).BeginInit();
@@ -75,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riPicEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl1
@@ -92,6 +92,26 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1288, 46);
             this.efwPanelControl1.TabIndex = 3;
+            // 
+            // cmbQuery
+            // 
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbQuery.ChildHierarchyInfo = childHierarchy1;
+            this.cmbQuery.EraserGroup = "CLR1";
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbQuery.HierarchyInfo = hierarchy1;
+            this.cmbQuery.IsMultiLang = false;
+            this.cmbQuery.Location = new System.Drawing.Point(360, 14);
+            this.cmbQuery.Name = "cmbQuery";
+            this.cmbQuery.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cmbQuery.Properties.Appearance.Options.UseBackColor = true;
+            this.cmbQuery.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbQuery.Size = new System.Drawing.Size(126, 20);
+            this.cmbQuery.TabIndex = 10;
             // 
             // efwSimpleButton1
             // 
@@ -235,13 +255,14 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.RowHeight = 100;
+            this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "종류";
             this.gridColumn6.FieldName = "type";
             this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.OptionsColumn.ReadOnly = true;
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn14
             // 
@@ -249,6 +270,7 @@
             this.gridColumn14.ColumnEdit = this.riPicEdit;
             this.gridColumn14.FieldName = "Image";
             this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 0;
@@ -263,7 +285,7 @@
             this.gridColumn11.Caption = "카테고리";
             this.gridColumn11.FieldName = "p_ct_code";
             this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.OptionsColumn.ReadOnly = true;
+            this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 1;
             this.gridColumn11.Width = 110;
@@ -273,7 +295,7 @@
             this.gridColumn2.Caption = "상품코드";
             this.gridColumn2.FieldName = "p_code";
             this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.ReadOnly = true;
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
             this.gridColumn2.Width = 110;
@@ -283,7 +305,7 @@
             this.gridColumn1.Caption = "상품ID";
             this.gridColumn1.FieldName = "id";
             this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.ReadOnly = true;
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 3;
             // 
@@ -292,7 +314,7 @@
             this.gridColumn3.Caption = "상품명";
             this.gridColumn3.FieldName = "p_name";
             this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.ReadOnly = true;
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 4;
             this.gridColumn3.Width = 300;
@@ -304,7 +326,7 @@
             this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn7.FieldName = "p_org_price";
             this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.ReadOnly = true;
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 5;
             this.gridColumn7.Width = 90;
@@ -314,7 +336,7 @@
             this.gridColumn8.Caption = "상태";
             this.gridColumn8.FieldName = "p_sell_type";
             this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.OptionsColumn.ReadOnly = true;
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 6;
             this.gridColumn8.Width = 90;
@@ -324,7 +346,7 @@
             this.gridColumn9.Caption = "노출여부";
             this.gridColumn9.FieldName = "p_show_type";
             this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.OptionsColumn.ReadOnly = true;
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 7;
             this.gridColumn9.Width = 80;
@@ -334,7 +356,7 @@
             this.gridColumn10.Caption = "등록일";
             this.gridColumn10.FieldName = "create_date";
             this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.OptionsColumn.ReadOnly = true;
+            this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 8;
             this.gridColumn10.Width = 100;
@@ -344,7 +366,7 @@
             this.gridColumn12.Caption = "상품등록업체명";
             this.gridColumn12.FieldName = "company_name";
             this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.OptionsColumn.ReadOnly = true;
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 9;
             this.gridColumn12.Width = 160;
@@ -373,26 +395,7 @@
             this.gridColumn15.Caption = "ImageURL";
             this.gridColumn15.FieldName = "ImageURL";
             this.gridColumn15.Name = "gridColumn15";
-            // 
-            // cmbQuery
-            // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbQuery.ChildHierarchyInfo = childHierarchy1;
-            this.cmbQuery.EraserGroup = "CLR1";
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbQuery.HierarchyInfo = hierarchy1;
-            this.cmbQuery.IsMultiLang = false;
-            this.cmbQuery.Location = new System.Drawing.Point(360, 14);
-            this.cmbQuery.Name = "cmbQuery";
-            this.cmbQuery.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cmbQuery.Properties.Appearance.Options.UseBackColor = true;
-            this.cmbQuery.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbQuery.Size = new System.Drawing.Size(126, 20);
-            this.cmbQuery.TabIndex = 10;
+            this.gridColumn15.OptionsColumn.AllowEdit = false;
             // 
             // frmMM03
             // 
@@ -407,6 +410,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbShowType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProdName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSellers.Properties)).EndInit();
@@ -414,7 +418,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riPicEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbQuery.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

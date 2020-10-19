@@ -639,5 +639,15 @@ namespace YL_DONUT.BizFrm
                 }
             }
         }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(gridView1.GetFocusedDisplayText());
+                e.Handled = true;
+            }
+        }
     }
 }

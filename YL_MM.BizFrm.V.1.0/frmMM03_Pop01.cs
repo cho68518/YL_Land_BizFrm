@@ -65,6 +65,16 @@ namespace YL_MM.BizFrm
                    ); ;
 
             this.efwGridControl3.Click += efwGridControl3_Click;
+
+
+
+            this.efwGridControl1.BindControlSet(
+                      new ColumnControlSet("id", txtOP_ID)
+                      , new ColumnControlSet("pp_title", txtPP_Title)
+                   ); ;
+
+            this.efwGridControl1.Click += efwGridControl1_Click;
+
         }
 
         private void efwGridControl3_Click(object sender, EventArgs e)
@@ -934,7 +944,8 @@ namespace YL_MM.BizFrm
                 popup.pURL = txtP_Contents.Text;
             else if (s1 == "4")
                 popup.pURL = txtPc_Thumbnail.Text;
-
+            else if (s1 == "5")
+                popup.pURL = picOP_IMG.Text;
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();
         }
@@ -1885,6 +1896,11 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add("i_td_donut", MySqlDbType.Int32, 11);
                             cmd.Parameters[16].Value = nId;
 
+
+                            cmd.Parameters.Add("i_op_img", MySqlDbType.VarChar, 255);
+                            cmd.Parameters[17].Value = txtOP_IMG.EditValue;
+
+
                             cmd.ExecuteNonQuery();
                             con.Close();
                         }
@@ -2076,7 +2092,7 @@ namespace YL_MM.BizFrm
             string sUserName = "root";
             string sPassword = "@dhkdldpf2!";
             int nPort = 22023;
-            string sftpDirectory = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
+            string sftpDirectory = "/domalifefiles/files/product/domamall/" + txtOP_ID.EditValue;
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -2123,7 +2139,7 @@ namespace YL_MM.BizFrm
 
                 // 저장 경로에 있는지 체크
                 string sFtpPath = "/domalifefiles/files/product/domamall/";
-                string sFtpPath2 = "/domalifefiles/files/product/domamall/" + txtP_Code.EditValue;
+                string sFtpPath2 = "/domalifefiles/files/product/domamall/" + txtOP_ID.EditValue;
 
                 ArrayList ay = sSftp.GetFileList(sFtpPath);
                 bool isdir = false;
@@ -2131,7 +2147,7 @@ namespace YL_MM.BizFrm
                 for (int i = 0; i < ay.Count; i++)
                 {
                     // string sChk = ay[i].ToString();
-                    if (ay[i].ToString() == txtP_Code.EditValue.ToString())
+                    if (ay[i].ToString() == txtOP_ID.EditValue.ToString())
                     {
                         isdir = true;
                     }
@@ -2144,12 +2160,75 @@ namespace YL_MM.BizFrm
 
                 sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
                 sSftp.Close();
-                txtOP_IMG.EditValue = "https://media.domalife.net/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
+                txtOP_IMG.EditValue = "https://media.domalife.net/files/product/domamall/" + txtOP_ID.EditValue + "/" + sFileName;
 
 
             }
         }
 
 
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+
+            if (dr != null && dr["id"].ToString() != "")
+            {
+                this.txtOP_ID.EditValue = dr["id"].ToString();
+              }
+
+            if (dr != null && dr["op_img"].ToString() != "")
+            {
+                this.txtOP_IMG.EditValue = dr["op_img"].ToString();
+                picOP_IMG.LoadAsync(txtOP_IMG.EditValue.ToString());
+            }
+
+        }
+
+        private void picOP_IMG_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("5");
+        }
+
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+
+
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_05", con))
+                    {
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_p_id", MySqlDbType.Int32, 11);
+                        cmd.Parameters[0].Value = txtP_Id.EditValue;
+
+                        cmd.Parameters.Add("i_id", MySqlDbType.Int32, 11);
+                        cmd.Parameters[1].Value = txtOP_ID.EditValue;
+                            //
+
+                        cmd.Parameters.Add("i_op_img", MySqlDbType.VarChar, 255);
+                        cmd.Parameters[2].Value = txtOP_IMG.EditValue;
+
+
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                    }
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
+            Open2();
+        }
     }
 }

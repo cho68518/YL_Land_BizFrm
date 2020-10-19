@@ -834,7 +834,7 @@
   <data name="&gt;&gt;txtP_Id.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="serviceInfo10.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo1.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -850,7 +850,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo10.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo1.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -859,7 +859,7 @@
         ZW1zBV9zaXplCF92ZXJzaW9uBQAACAgCAAAACQMAAAAAAAAAAAAAABADAAAAAAAAAAs=
 </value>
   </data>
-  <data name="serviceInfo11.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo2.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -875,7 +875,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo11.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo2.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -926,7 +926,7 @@
   <data name="efwGridControl2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="serviceInfo12.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo3.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -942,7 +942,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo12.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo3.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -2038,6 +2038,48 @@
   <data name="&gt;&gt;efwLabel46.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="txtOP_IMG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1258, 79</value>
+  </data>
+  <data name="txtOP_IMG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 20</value>
+  </data>
+  <data name="txtOP_IMG.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="&gt;&gt;txtOP_IMG.Name" xml:space="preserve">
+    <value>txtOP_IMG</value>
+  </data>
+  <data name="&gt;&gt;txtOP_IMG.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtOP_IMG.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtOP_IMG.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtOP_ID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1258, 105</value>
+  </data>
+  <data name="txtOP_ID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 20</value>
+  </data>
+  <data name="txtOP_ID.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="&gt;&gt;txtOP_ID.Name" xml:space="preserve">
+    <value>txtOP_ID</value>
+  </data>
+  <data name="&gt;&gt;txtOP_ID.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtOP_ID.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtOP_ID.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="efwGroupControl1.CaptionImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -2425,7 +2467,7 @@
   <data name="&gt;&gt;txtsale_qty.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="serviceInfo1.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo4.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -2441,7 +2483,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo1.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo4.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -2453,7 +2495,7 @@
   <data name="efwGridControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="serviceInfo2.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo5.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -2469,7 +2511,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo2.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo5.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -2583,7 +2625,7 @@
   <data name="repositoryItemButtonEdit1.Buttons5" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="editorButtonImageOptions3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="editorButtonImageOptions1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAMdEVYdFRpdGxlAFRyYXNoO2SaNW0AAAJbSURBVDhP
@@ -2613,12 +2655,12 @@
     <value>Default</value>
   </data>
   <data name="efwGridControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 132</value>
+    <value>121, 132</value>
   </data>
   <data name="efwGridControl3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="serviceInfo3.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo6.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -2634,7 +2676,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo3.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo6.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -2656,10 +2698,10 @@
     <value>11</value>
   </data>
   <data name="efwGroupControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1021, 138</value>
+    <value>939, 138</value>
   </data>
   <data name="efwGroupControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 19</value>
+    <value>125, 20</value>
   </data>
   <data name="efwGroupControl1.TabIndex" type="System.Int32, mscorlib">
     <value>89</value>
@@ -2680,7 +2722,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwGroupControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="efwLabel45.Location" type="System.Drawing.Point, System.Drawing">
     <value>220, 115</value>
@@ -2707,7 +2749,28 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel45.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
+  </data>
+  <data name="txtPicPath5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1222, 131</value>
+  </data>
+  <data name="txtPicPath5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="txtPicPath5.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="&gt;&gt;txtPicPath5.Name" xml:space="preserve">
+    <value>txtPicPath5</value>
+  </data>
+  <data name="&gt;&gt;txtPicPath5.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtPicPath5.Parent" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="&gt;&gt;txtPicPath5.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="efwLabel43.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 60</value>
@@ -2734,7 +2797,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel43.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="txtRefunds_CR.EditValue" xml:space="preserve">
     <value>0</value>
@@ -2767,7 +2830,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtRefunds_CR.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="txtRefunds_CG.EditValue" xml:space="preserve">
     <value>0</value>
@@ -2800,7 +2863,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtRefunds_CG.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="txtRefunds_AS.EditValue" xml:space="preserve">
     <value>0</value>
@@ -2833,7 +2896,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtRefunds_AS.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="txtRefunds_GF.EditValue" xml:space="preserve">
     <value>0</value>
@@ -2866,7 +2929,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtRefunds_GF.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="txtRefunds_GM.EditValue" xml:space="preserve">
     <value>0</value>
@@ -2899,7 +2962,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtRefunds_GM.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="txtRefunds_TD.EditValue" xml:space="preserve">
     <value>0</value>
@@ -2932,7 +2995,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtRefunds_TD.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="txtRefunds_GD.EditValue" xml:space="preserve">
     <value>0</value>
@@ -2965,7 +3028,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtRefunds_GD.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="txtRefunds_DM.EditValue" xml:space="preserve">
     <value>0</value>
@@ -2998,7 +3061,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtRefunds_DM.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="txtDiscount_Price.EditValue" xml:space="preserve">
     <value>0</value>
@@ -3031,7 +3094,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtDiscount_Price.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="txtP_Org_Price.EditValue" xml:space="preserve">
     <value>0</value>
@@ -3064,7 +3127,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtP_Org_Price.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="txtPs_Oper_Price.EditValue" xml:space="preserve">
     <value>0</value>
@@ -3097,7 +3160,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtPs_Oper_Price.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
   <data name="txtVip_Price.EditValue" xml:space="preserve">
     <value>0</value>
@@ -3133,7 +3196,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtVip_Price.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="txtP_Delivery_Price.EditValue" xml:space="preserve">
     <value>0</value>
@@ -3166,7 +3229,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtP_Delivery_Price.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
   <data name="txtBasic_Price.EditValue" xml:space="preserve">
     <value>0</value>
@@ -3199,7 +3262,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;txtBasic_Price.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="rbPrice_Show_Type.Location" type="System.Drawing.Point, System.Drawing">
     <value>379, 134</value>
@@ -3232,7 +3295,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;rbPrice_Show_Type.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>21</value>
   </data>
   <data name="cmbP_PS_Num.Location" type="System.Drawing.Point, System.Drawing">
     <value>220, 135</value>
@@ -3256,7 +3319,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cmbP_PS_Num.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>22</value>
   </data>
   <data name="efwLabel34.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 138</value>
@@ -3280,7 +3343,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel34.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>23</value>
   </data>
   <data name="efwLabel30.Location" type="System.Drawing.Point, System.Drawing">
     <value>1008, 112</value>
@@ -3304,7 +3367,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel30.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>24</value>
   </data>
   <data name="efwLabel31.Location" type="System.Drawing.Point, System.Drawing">
     <value>1008, 86</value>
@@ -3328,7 +3391,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel31.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>25</value>
   </data>
   <data name="efwLabel32.Location" type="System.Drawing.Point, System.Drawing">
     <value>1008, 60</value>
@@ -3352,7 +3415,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel32.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>26</value>
   </data>
   <data name="efwLabel33.Location" type="System.Drawing.Point, System.Drawing">
     <value>1008, 34</value>
@@ -3376,7 +3439,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel33.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>27</value>
   </data>
   <data name="efwLabel26.Location" type="System.Drawing.Point, System.Drawing">
     <value>765, 112</value>
@@ -3400,7 +3463,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel26.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>28</value>
   </data>
   <data name="efwLabel27.Location" type="System.Drawing.Point, System.Drawing">
     <value>765, 86</value>
@@ -3424,7 +3487,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel27.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>29</value>
   </data>
   <data name="efwLabel28.Location" type="System.Drawing.Point, System.Drawing">
     <value>765, 60</value>
@@ -3448,7 +3511,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel28.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>30</value>
   </data>
   <data name="efwLabel29.Location" type="System.Drawing.Point, System.Drawing">
     <value>765, 34</value>
@@ -3472,7 +3535,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel29.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>31</value>
   </data>
   <data name="efwLabel25.Location" type="System.Drawing.Point, System.Drawing">
     <value>379, 112</value>
@@ -3496,7 +3559,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel25.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>32</value>
   </data>
   <data name="cbP_Discount_Donut3.Location" type="System.Drawing.Point, System.Drawing">
     <value>614, 110</value>
@@ -3520,7 +3583,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cbP_Discount_Donut3.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>33</value>
   </data>
   <data name="cbP_Discount_Donut2.Location" type="System.Drawing.Point, System.Drawing">
     <value>540, 110</value>
@@ -3544,7 +3607,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cbP_Discount_Donut2.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>34</value>
   </data>
   <data name="cbP_Discount_Donut1.Location" type="System.Drawing.Point, System.Drawing">
     <value>467, 110</value>
@@ -3568,7 +3631,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cbP_Discount_Donut1.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>35</value>
   </data>
   <data name="efwLabel23.Location" type="System.Drawing.Point, System.Drawing">
     <value>504, 60</value>
@@ -3592,7 +3655,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel23.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>36</value>
   </data>
   <data name="cmbP_Taxation.Location" type="System.Drawing.Point, System.Drawing">
     <value>566, 28</value>
@@ -3616,7 +3679,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cmbP_Taxation.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>37</value>
   </data>
   <data name="efwLabel22.Location" type="System.Drawing.Point, System.Drawing">
     <value>504, 34</value>
@@ -3640,7 +3703,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel22.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>38</value>
   </data>
   <data name="efwLabel21.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 112</value>
@@ -3664,7 +3727,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel21.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>39</value>
   </data>
   <data name="efwLabel20.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 86</value>
@@ -3688,7 +3751,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel20.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>40</value>
   </data>
   <data name="efwLabel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 60</value>
@@ -3712,7 +3775,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel2.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>41</value>
   </data>
   <data name="cmbP_Delivery_Type.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 31</value>
@@ -3736,7 +3799,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;cmbP_Delivery_Type.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>42</value>
   </data>
   <data name="efwLabel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 34</value>
@@ -3760,7 +3823,7 @@
     <value>s</value>
   </data>
   <data name="&gt;&gt;efwLabel1.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>43</value>
   </data>
   <data name="s.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -3823,46 +3886,57 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="txtOP_IMG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1275, 39</value>
+  <data name="efwSimpleButton4.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAt0RVh0VGl0
+        bGUAU2F2ZTv56PkJAAAAWklEQVQ4T2P4//8/RRhMdEau/k8OxjCAWEDQgIMHD2LFMEDQAEKAoAHYbAdh
+        GCBoACFAOwNIxbQx4B9QAB9GVgsEuA1A56OLgzAQDCIDGpAliMQNcAPIx/8ZAGeAGHrXE6xAAAAAAElF
+        TkSuQmCC
+</value>
   </data>
-  <data name="txtOP_IMG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+  <data name="efwSimpleButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1245, 26</value>
   </data>
-  <data name="txtOP_IMG.TabIndex" type="System.Int32, mscorlib">
-    <value>90</value>
+  <data name="efwSimpleButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 33</value>
   </data>
-  <data name="&gt;&gt;txtOP_IMG.Name" xml:space="preserve">
-    <value>txtOP_IMG</value>
-  </data>
-  <data name="&gt;&gt;txtOP_IMG.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtOP_IMG.Parent" xml:space="preserve">
-    <value>efwGroupControl3</value>
-  </data>
-  <data name="&gt;&gt;txtOP_IMG.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtPicPath5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1222, 38</value>
-  </data>
-  <data name="txtPicPath5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="txtPicPath5.TabIndex" type="System.Int32, mscorlib">
+  <data name="efwSimpleButton4.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
   </data>
-  <data name="&gt;&gt;txtPicPath5.Name" xml:space="preserve">
-    <value>txtPicPath5</value>
+  <data name="efwSimpleButton4.Text" xml:space="preserve">
+    <value>저장</value>
   </data>
-  <data name="&gt;&gt;txtPicPath5.Type" xml:space="preserve">
-    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;efwSimpleButton4.Name" xml:space="preserve">
+    <value>efwSimpleButton4</value>
   </data>
-  <data name="&gt;&gt;txtPicPath5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;efwSimpleButton4.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwSimpleButton, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;efwSimpleButton4.Parent" xml:space="preserve">
     <value>efwGroupControl3</value>
   </data>
-  <data name="&gt;&gt;txtPicPath5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;efwSimpleButton4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtPP_Title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1123, 65</value>
+  </data>
+  <data name="txtPP_Title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 20</value>
+  </data>
+  <data name="txtPP_Title.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="&gt;&gt;txtPP_Title.Name" xml:space="preserve">
+    <value>txtPP_Title</value>
+  </data>
+  <data name="&gt;&gt;txtPP_Title.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwTextEdit, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtPP_Title.Parent" xml:space="preserve">
+    <value>efwGroupControl3</value>
+  </data>
+  <data name="&gt;&gt;txtPP_Title.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="efwSimpleButton3.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -3884,10 +3958,10 @@
 </value>
   </data>
   <data name="efwSimpleButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1120, 37</value>
+    <value>1132, 26</value>
   </data>
   <data name="efwSimpleButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 22</value>
+    <value>88, 33</value>
   </data>
   <data name="efwSimpleButton3.TabIndex" type="System.Int32, mscorlib">
     <value>89</value>
@@ -3908,10 +3982,10 @@
     <value>2</value>
   </data>
   <data name="picOP_IMG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1120, 65</value>
+    <value>1120, 95</value>
   </data>
   <data name="picOP_IMG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 189</value>
+    <value>225, 159</value>
   </data>
   <data name="picOP_IMG.TabIndex" type="System.Int32, mscorlib">
     <value>89</value>
@@ -3928,7 +4002,7 @@
   <data name="&gt;&gt;picOP_IMG.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="serviceInfo4.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo7.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -3944,7 +4018,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo4.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo7.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -3956,7 +4030,7 @@
   <data name="efwGridControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="serviceInfo5.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo8.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -3972,7 +4046,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo5.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo8.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -4161,7 +4235,7 @@
   <data name="btnDelete.Buttons5" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="editorButtonImageOptions4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="editorButtonImageOptions2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAMdEVYdFRpdGxlAFRyYXNoO2SaNW0AAAJbSURBVDhP
@@ -4199,6 +4273,9 @@
   <data name="gridColumn14.Width" type="System.Int32, mscorlib">
     <value>42</value>
   </data>
+  <data name="gridColumn26.Caption" xml:space="preserve">
+    <value>이미지주소</value>
+  </data>
   <data name="efwGridControl1.PKColumns" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAABxTeXN0ZW0uQ29sbGVjdGlvbnMuQXJyYXlMaXN0AwAAAAZfaXRl
@@ -4211,7 +4288,7 @@
   <data name="efwGridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="serviceInfo6.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo9.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -4227,7 +4304,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo6.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo9.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -4776,6 +4853,12 @@
   </data>
   <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit, DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn26.Name" xml:space="preserve">
+    <value>gridColumn26</value>
+  </data>
+  <data name="&gt;&gt;gridColumn26.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;riPicEdit.Name" xml:space="preserve">
     <value>riPicEdit</value>

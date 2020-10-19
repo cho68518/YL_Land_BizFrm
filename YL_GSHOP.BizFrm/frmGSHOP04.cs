@@ -1150,5 +1150,15 @@ namespace YL_GSHOP.BizFrm
                 Open1();
             }
         }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(gridView1.GetFocusedDisplayText());
+                e.Handled = true;
+            }
+        }
     }
 }
