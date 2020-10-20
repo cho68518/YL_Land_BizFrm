@@ -75,6 +75,10 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwGroupControlProd = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel44 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.cbp_represent = new DevExpress.XtraEditors.CheckEdit();
+            this.txtp_explanation = new Easy.Framework.WinForm.Control.efwMemoEdit();
+            this.efwLabel24 = new Easy.Framework.WinForm.Control.efwLabel();
             this.ckdora_md = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkGShop = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkChef = new Easy.Framework.WinForm.Control.efwCheckEdit();
@@ -255,8 +259,11 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.txtp_title = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).BeginInit();
             this.efwGroupControlProd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbp_represent.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtp_explanation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdora_md.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkGShop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkChef.Properties)).BeginInit();
@@ -360,11 +367,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.rbPC_Use_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPc_Thumbnail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtp_title.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControlProd
             // 
             this.efwGroupControlProd.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControlProd.CaptionImageOptions.Image")));
+            this.efwGroupControlProd.Controls.Add(this.txtp_title);
+            this.efwGroupControlProd.Controls.Add(this.efwLabel44);
+            this.efwGroupControlProd.Controls.Add(this.cbp_represent);
+            this.efwGroupControlProd.Controls.Add(this.txtp_explanation);
+            this.efwGroupControlProd.Controls.Add(this.efwLabel24);
             this.efwGroupControlProd.Controls.Add(this.ckdora_md);
             this.efwGroupControlProd.Controls.Add(this.chkGShop);
             this.efwGroupControlProd.Controls.Add(this.chkChef);
@@ -421,6 +434,37 @@
             resources.ApplyResources(this.efwGroupControlProd, "efwGroupControlProd");
             this.efwGroupControlProd.IsMultiLang = false;
             this.efwGroupControlProd.Name = "efwGroupControlProd";
+            // 
+            // efwLabel44
+            // 
+            this.efwLabel44.EraserGroup = null;
+            this.efwLabel44.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel44, "efwLabel44");
+            this.efwLabel44.Name = "efwLabel44";
+            // 
+            // cbp_represent
+            // 
+            resources.ApplyResources(this.cbp_represent, "cbp_represent");
+            this.cbp_represent.Name = "cbp_represent";
+            this.cbp_represent.Properties.Caption = resources.GetString("cbp_represent.Properties.Caption");
+            this.cbp_represent.Properties.ValueChecked = "Y";
+            this.cbp_represent.Properties.ValueUnchecked = "N";
+            // 
+            // txtp_explanation
+            // 
+            this.txtp_explanation.ByteLength = 200;
+            this.txtp_explanation.EraserGroup = "CLR1";
+            resources.ApplyResources(this.txtp_explanation, "txtp_explanation");
+            this.txtp_explanation.Name = "txtp_explanation";
+            this.txtp_explanation.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtp_explanation.Properties.AppearanceFocused.Options.UseBackColor = true;
+            // 
+            // efwLabel24
+            // 
+            this.efwLabel24.EraserGroup = null;
+            this.efwLabel24.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel24, "efwLabel24");
+            this.efwLabel24.Name = "efwLabel24";
             // 
             // ckdora_md
             // 
@@ -2381,6 +2425,15 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
+            // txtp_title
+            // 
+            this.txtp_title.EditValue2 = null;
+            resources.ApplyResources(this.txtp_title, "txtp_title");
+            this.txtp_title.Name = "txtp_title";
+            this.txtp_title.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtp_title.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtp_title.RequireMessage = null;
+            // 
             // frmMM03_Pop01
             // 
             resources.ApplyResources(this, "$this");
@@ -2398,6 +2451,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).EndInit();
             this.efwGroupControlProd.ResumeLayout(false);
             this.efwGroupControlProd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbp_represent.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtp_explanation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdora_md.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkGShop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkChef.Properties)).EndInit();
@@ -2505,6 +2560,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rbPC_Use_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPc_Thumbnail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtp_title.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2692,5 +2748,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
         private Easy.Framework.WinForm.Control.efwTextEdit txtPP_Title;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton4;
+        private Easy.Framework.WinForm.Control.efwMemoEdit txtp_explanation;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel24;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel44;
+        private DevExpress.XtraEditors.CheckEdit cbp_represent;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtp_title;
     }
 }

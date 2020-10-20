@@ -649,6 +649,16 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add(new MySqlParameter("o_P_Member_level_DoraMd", MySqlDbType.VarChar));
                         cmd.Parameters["o_P_Member_level_DoraMd"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_p_explanation", MySqlDbType.Text));
+                        cmd.Parameters["o_p_explanation"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_p_title", MySqlDbType.VarChar));
+                        cmd.Parameters["o_p_title"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_p_represent", MySqlDbType.VarChar));
+                        cmd.Parameters["o_p_represent"].Direction = ParameterDirection.Output;
+
                         //
 
                         cmd.ExecuteNonQuery();
@@ -722,6 +732,11 @@ namespace YL_MM.BizFrm
                         chkChef.EditValue = cmd.Parameters["o_P_Member_level_Chef"].Value.ToString();
                         chkGShop.EditValue = cmd.Parameters["o_P_Member_level_GShop"].Value.ToString();
                         ckdora_md.EditValue = cmd.Parameters["o_P_Member_level_DoraMd"].Value.ToString();
+                        txtp_explanation.EditValue = cmd.Parameters["o_p_explanation"].Value.ToString();
+                        txtp_title.EditValue = cmd.Parameters["o_p_title"].Value.ToString();
+                        cbp_represent.EditValue = cmd.Parameters["o_p_represent"].Value.ToString();
+
+
                         if (chkAll.EditValue.ToString() == "1")
                         {
                             this.chkMember.Enabled = false;
@@ -1407,12 +1422,16 @@ namespace YL_MM.BizFrm
             rbPC_Use_Type.EditValue = 'Y';
             txtPC_Content.EditValue = null;
 
+            txtp_explanation.EditValue = null;
+
             chkAll.EditValue = '0';
             chkMember.EditValue = '0';
             chkVip.EditValue = '0';
             chkChef.EditValue = '0';
             chkGShop.EditValue = '0';
             ckdora_md.EditValue = '0';
+            txtp_title.EditValue = null;
+            cbp_represent.EditValue = "N";
 
 
             //gridView1.Columns.Clear();
@@ -1692,8 +1711,21 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_P_Member_level_DoraMd"].Value = ckdora_md.EditValue;
                             cmd.Parameters["i_P_Member_level_DoraMd"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_p_explanation", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_explanation"].Value = txtp_explanation.EditValue;
+                            cmd.Parameters["i_p_explanation"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_title", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_title"].Value = txtp_title.EditValue;
+                            cmd.Parameters["i_p_title"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_represent", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_represent"].Value = cbp_represent.EditValue;
+                            cmd.Parameters["i_p_represent"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Result_P_Id", MySqlDbType.VarChar));
                             cmd.Parameters["o_Result_P_Id"].Direction = ParameterDirection.Output;
+
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
