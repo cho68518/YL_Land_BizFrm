@@ -33,7 +33,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms;      
+
 using YL_COMM.BizFrm;
 
 namespace YL_DONUT.BizFrm
@@ -103,6 +104,9 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("gv_cele_story", txtGV_CELE_STORY)
                     , new ColumnControlSet("gv_cele_story_biz", txtGV_CELE_STORY_BIZ)
                     , new ColumnControlSet("gd_cele_story", txtGD_CELE_STORY)
+                    , new ColumnControlSet("gb_ad_sele_story", txtGB_AD_CELE_STORY)
+                    , new ColumnControlSet("gm_cash_cele_story", txtGM_CASH_CELE_STORY)
+                    , new ColumnControlSet("ps_donut_ad", txtPS_DONUT_AD)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -381,7 +385,6 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
                             cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
 
-
                             cmd.Parameters.Add(new MySqlParameter("i_cate_code1", MySqlDbType.VarChar));
                             cmd.Parameters["i_cate_code1"].Value = cmbCate_Code1.EditValue;
                             cmd.Parameters["i_cate_code1"].Direction = ParameterDirection.Input;
@@ -439,6 +442,20 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_gd_cele_story", MySqlDbType.Int32));
                             cmd.Parameters["i_gd_cele_story"].Value = Convert.ToInt32(txtGD_CELE_STORY.EditValue);
                             cmd.Parameters["i_gd_cele_story"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gb_ad_sele_story", MySqlDbType.Int32));
+                            cmd.Parameters["i_gb_ad_sele_story"].Value = Convert.ToInt32(txtGB_AD_CELE_STORY.EditValue);
+                            cmd.Parameters["i_gb_ad_sele_story"].Direction = ParameterDirection.Input;
+
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gm_cash_cele_story", MySqlDbType.Int32));
+                            cmd.Parameters["i_gm_cash_cele_story"].Value = Convert.ToInt32(txtGM_CASH_CELE_STORY.EditValue);
+                            cmd.Parameters["i_gm_cash_cele_story"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_ps_donut_ad", MySqlDbType.Int32));
+                            cmd.Parameters["i_ps_donut_ad"].Value = Convert.ToInt32(txtPS_DONUT_AD.EditValue);
+                            cmd.Parameters["i_ps_donut_ad"].Direction = ParameterDirection.Input;
+
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

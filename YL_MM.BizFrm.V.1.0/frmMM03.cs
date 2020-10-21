@@ -192,6 +192,8 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
                         cmd.Parameters[3].Value = sShow_Type;
+
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -244,6 +246,16 @@ namespace YL_MM.BizFrm
 
 
             popup.Id = 0;
+        }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(gridView1.GetFocusedDisplayText());
+                e.Handled = true;
+            }
         }
     }
 }

@@ -93,7 +93,7 @@ namespace YL_GSHOP.BizFrm
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                con.Query = "SELECT code_id as DCODE ,code_nm  as DNAME  FROM  domaadmin.tb_common_code  where gcode_id = '00010' order by code_id ";
+                con.Query = "SELECT code_id as DCODE ,code_nm  as DNAME  FROM  domaadmin.tb_common_code  where gcode_id = '00010' and use_yn = 'Y' order by code_id ";
 
                 DataSet ds = con.selectQueryDataSet();
                 //DataTable retDT = ds.Tables[0];
@@ -377,6 +377,9 @@ namespace YL_GSHOP.BizFrm
                                 cmd.Parameters.Add("i_prod_qty", MySqlDbType.Int32, 10);
                                 cmd.Parameters[7].Value = Convert.ToInt32(dt.Rows[i]["prod_qty"]).ToString();
 
+                                cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[8].Value = dt.Rows[i]["o_code"].ToString();
+
                                 cmd.ExecuteNonQuery();
                                 con.Close();
                             }
@@ -393,10 +396,6 @@ namespace YL_GSHOP.BizFrm
             }
             MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
         }
-
-
-
-
 
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -670,6 +669,12 @@ namespace YL_GSHOP.BizFrm
 
                 txtIssue.EditValue = sql.selectQueryForSingleValue();
             }
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gridView1.RowCount; i++)
+                gridView1.SetRowCellValue(i, gridView1.Columns["order_date"], DateTime.Now);
         }
     }
 }

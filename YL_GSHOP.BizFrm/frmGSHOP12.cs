@@ -28,7 +28,7 @@ namespace YL_GSHOP.BizFrm
             //단축코드 설정 
             this.QCode = "GSHOP12";
             //폼명설정
-            this.FrmName = "체험 고객선정 등록";
+            this.FrmName = "발모 후기현황";
 
 
             //    efwGridControl1.DataSource = GetData();
@@ -53,29 +53,23 @@ namespace YL_GSHOP.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
+            dtS_DATE.EditValue = DateTime.Now;
+            dtE_DATE.EditValue = DateTime.Now;
+
             gridView1.OptionsView.ShowFooter = true;
 
-            rbP_SHOW_TYPE.EditValue = "T";
-
-
-            SetCmb();
             this.efwGridControl1.BindControlSet(
-             new ColumnControlSet("idx", txtIdx)
-           , new ColumnControlSet("age", dtAge)
-           , new ColumnControlSet("name", dtName)
-           , new ColumnControlSet("cust_date", dtCust_Date)
-           , new ColumnControlSet("shop_name", txtShop_Name)
-           , new ColumnControlSet("best_pic1", ckBest_Pic1)
-           , new ColumnControlSet("best_pic2", ckBest_Pic2)
-           , new ColumnControlSet("best_pic3", ckBest_Pic3)
-           , new ColumnControlSet("best_pic4", ckBest_Pic4)
-           , new ColumnControlSet("best_pic5", ckBest_Pic5)
-
-           , new ColumnControlSet("pic_url1", txtPic_Url1)
+           new ColumnControlSet("pic_url1", txtPic_Url1)
            , new ColumnControlSet("pic_url2", txtPic_Url2)
            , new ColumnControlSet("pic_url3", txtPic_Url3)
            , new ColumnControlSet("pic_url4", txtPic_Url4)
            , new ColumnControlSet("pic_url5", txtPic_Url5)
+           , new ColumnControlSet("shooting_date1", txtShooting_Date1)
+           , new ColumnControlSet("shooting_date2", txtShooting_Date2)
+           , new ColumnControlSet("shooting_date3", txtShooting_Date3)
+           , new ColumnControlSet("shooting_date4", txtShooting_Date4)
+           , new ColumnControlSet("shooting_date5", txtShooting_Date5)
+
             );
             this.efwGridControl1.Click += efwGridControl1_Click;
             gridView1.CustomUnboundColumnData += gridView1_CustomUnboundColumnData;
@@ -83,12 +77,19 @@ namespace YL_GSHOP.BizFrm
         // picP_IMG.LoadAsync(cmd.Parameters["o_p_img"].Value.ToString());
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
-            picBest_Pic1.LoadAsync(txtPic_Url1.EditValue.ToString());
-            picBest_Pic2.LoadAsync(txtPic_Url2.EditValue.ToString());
-            picBest_Pic3.LoadAsync(txtPic_Url3.EditValue.ToString());
-            picBest_Pic4.LoadAsync(txtPic_Url4.EditValue.ToString());
-            picBest_Pic5.LoadAsync(txtPic_Url5.EditValue.ToString());
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+            if (dr != null && dr["pic_url1"].ToString() != "")
+            {
+                picBest_Pic1.LoadAsync(txtPic_Url1.EditValue.ToString());
+                picBest_Pic2.LoadAsync(txtPic_Url2.EditValue.ToString());
+                picBest_Pic3.LoadAsync(txtPic_Url3.EditValue.ToString());
+                picBest_Pic4.LoadAsync(txtPic_Url4.EditValue.ToString());
+                picBest_Pic5.LoadAsync(txtPic_Url5.EditValue.ToString());
+            }
+
         }
+
+        
 
         Dictionary<String, Bitmap> iconsCache = new Dictionary<string, Bitmap>();
 
@@ -137,58 +138,7 @@ namespace YL_GSHOP.BizFrm
                     }
                 }
             }
-
-
-        }
-
-
-
-        private void SetCmb()
-        {
-            // 공급자구분
-
-            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
-            {
-                con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00033'  ";
-
-                DataSet ds = con.selectQueryDataSet();
-                //DataTable retDT = ds.Tables[0];
-                DataRow[] dr = ds.Tables[0].Select();
-                CodeData[] codeArray = new CodeData[dr.Length];
-
-                // cmbTAREA1.EditValue = "";
-                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
-
-                for (int i = 0; i < dr.Length; i++)
-                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
-
-                CodeAgent.MakeCodeControl(this.cmbMember_Search, codeArray);
-            }
-
-            cmbMember_Search.EditValue = "00";
-
-            // 공급자구분
-
-            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
-            {
-                con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00035'  ";
-
-                DataSet ds = con.selectQueryDataSet();
-                //DataTable retDT = ds.Tables[0];
-                DataRow[] dr = ds.Tables[0].Select();
-                CodeData[] codeArray = new CodeData[dr.Length];
-
-                // cmbTAREA1.EditValue = "";
-                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
-
-                for (int i = 0; i < dr.Length; i++)
-                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
-
-                CodeAgent.MakeCodeControl(this.cmbPrint_No, codeArray);
-            }
-
-            cmbPrint_No.EditValue = "00";
-
+            Cursor.Current = Cursors.Default;
         }
 
         public override void Search()
@@ -201,23 +151,6 @@ namespace YL_GSHOP.BizFrm
                 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP12_SELECT_02", con))
-                    {
-                        con.Open();
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
-
-                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
-
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-                {
                     using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP12_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -228,28 +161,14 @@ namespace YL_GSHOP.BizFrm
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[1].Value = dtE_DATE.EditValue3;
 
-
-                        cmd.Parameters.Add("i_Member_Search", MySqlDbType.VarChar, 2);
-                        cmd.Parameters[2].Value = cmbMember_Search.EditValue.ToString();
-
-                        cmd.Parameters.Add("i_QName", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[3].Value = txtQName.EditValue;
-
-
-                        if (rbP_SHOW_TYPE.EditValue.ToString() != "Y" && rbP_SHOW_TYPE.EditValue.ToString() != "N")
-                            sShow_Type = null;
-                        else
-                            sShow_Type = rbP_SHOW_TYPE.EditValue.ToString();
-
-                        cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[4].Value = sShow_Type;
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
-                            //  this.efwGridControl1.MyGridView.BestFitColumns();
+                            //this.efwGridControl1.MyGridView.BestFitColumns();
                         }
+                        Cursor.Current = Cursors.Default;
                     }
                 }
             }
@@ -311,56 +230,9 @@ namespace YL_GSHOP.BizFrm
             popup = null;
         }
 
-        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        private void efwGridControl1_MouseMove(object sender, MouseEventArgs e)
         {
-            try
-            {
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-                {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP12_SAVE_01", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("i_idx", MySqlDbType.Int32);
-                        cmd.Parameters[0].Value = Convert.ToInt32(txtIdx.EditValue);
-
-                        cmd.Parameters.Add("i_cust_date", MySqlDbType.DateTime);
-                        cmd.Parameters[1].Value = dtCust_Date.EditValue;
-
-                        cmd.Parameters.Add("i_best_pic1", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[2].Value = ckBest_Pic1.EditValue;
-
-                        cmd.Parameters.Add("i_best_pic2", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[3].Value = ckBest_Pic2.EditValue;
-
-                        cmd.Parameters.Add("i_best_pic3", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[4].Value = ckBest_Pic3.EditValue;
-
-                        cmd.Parameters.Add("i_best_pic4", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[5].Value = ckBest_Pic4.EditValue;
-
-                        cmd.Parameters.Add("i_best_pic5", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[6].Value = ckBest_Pic5.EditValue; 
-                        
-                        cmd.Parameters.Add("i_print_no", MySqlDbType.VarChar, 10);
-                        cmd.Parameters[7].Value = cmbPrint_No.EditValue; 
-
-
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable ds = new DataTable();
-                            sda.Fill(ds);
-                            efwGridControl1.DataBind(ds);
-                            //  this.efwGridControl1.MyGridView.BestFitColumns();
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
+            Cursor.Current = Cursors.Default;
         }
-
     }
 }

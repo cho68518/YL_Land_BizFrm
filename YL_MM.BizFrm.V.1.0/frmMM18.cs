@@ -72,6 +72,9 @@ namespace YL_MM.BizFrm
             rbis_use_q.EditValue = "Y";
             rbcategory_code.EditValue = "62a94474-915c-11e8-987e-02001f5c0016";
 
+            dtQ_SDate.EditValue = DateTime.Now;
+            dtQ_EDate.EditValue = DateTime.Now;
+
             //SetCmb();
             this.efwGridControl1.BindControlSet(
              new ColumnControlSet("idx", txtIdx)
@@ -180,6 +183,27 @@ namespace YL_MM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbCategory_no, codeArray);
             }
+
+            // 추천상품관리 검색일자조건
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM domaadmin.tb_common_code where gcode_id = '00044'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbDate_Type, codeArray);
+            }
+            cmbDate_Type.EditValue = "1";       
+
         }
 
 
@@ -328,7 +352,10 @@ namespace YL_MM.BizFrm
             {
                 Open4();
             }
-
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
+            {
+                Open5();
+            }
         }
         public void Open1()
         {
@@ -445,6 +472,45 @@ namespace YL_MM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+
+
+        public void Open5()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM18_SELECT_05", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_Date_Type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[0].Value = rbCategory_Code_Q.EditValue;
+
+                        cmd.Parameters.Add("i_SDate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtQ_SDate.EditValue3;
+
+                        cmd.Parameters.Add("i_EDate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[2].Value = dtQ_EDate.EditValue3;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl5.DataBind(ds);
+                           // this.efwGridControl5.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+
+
 
         private void rbStoryType_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1301,6 +1367,36 @@ namespace YL_MM.BizFrm
                 }
                 Open4();
             }
+        }
+
+        private void gridView5_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            try
+            {
+                DataRow dr = (e.Row as DataRowView).Row;
+                string url = dr["ImageURL"].ToString();
+                if (iconsCache.ContainsKey(url))
+                {
+                    e.Value = iconsCache[url];
+                    return;
+                }
+                var request = WebRequest.Create(url);
+
+                using (var response = request.GetResponse())
+                {
+                    using (var stream = response.GetResponseStream())
+                    {
+                        e.Value = Bitmap.FromStream(stream);
+                        iconsCache.Add(url, (Bitmap)e.Value);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
         }
     }
 }

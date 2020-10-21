@@ -1325,7 +1325,7 @@
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(190, 14);
             this.efwLabel3.TabIndex = 26;
-            this.efwLabel3.Text = "※ 전화 버호 입력시 - 반드시 입력하세요";
+            this.efwLabel3.Text = "※ 전화 번호 입력시 - 반드시 입력하세요";
             // 
             // efwLabel1
             // 

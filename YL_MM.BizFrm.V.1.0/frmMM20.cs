@@ -47,6 +47,7 @@ namespace YL_MM.BizFrm
             rbIs_Use.EditValue = "Y";
             rbGhop_Manager.EditValue = "N";
             rbTest_Grant.EditValue = "N";
+            rbteam_leader.EditValue = "N";
             gridView1.OptionsView.ShowFooter = true;
             this.efwGridControl1.BindControlSet(
                       new ColumnControlSet("u_id", txtU_Id)
@@ -57,6 +58,7 @@ namespace YL_MM.BizFrm
                     , new ColumnControlSet("ghop_manager", rbGhop_Manager)
                     , new ColumnControlSet("reg_date", txtReg_Date)
                     , new ColumnControlSet("test_grant", rbTest_Grant)
+                    , new ColumnControlSet("team_leader", rbteam_leader)
                     , new ColumnControlSet("Remark", txtRemark));
             SetCmb();
         }
@@ -206,6 +208,12 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_test_grant", MySqlDbType.VarChar));
                             cmd.Parameters["i_test_grant"].Value = rbTest_Grant.EditValue;
                             cmd.Parameters["i_test_grant"].Direction = ParameterDirection.Input;
+
+
+                            cmd.Parameters.Add(new MySqlParameter("i_team_leader", MySqlDbType.VarChar));
+                            cmd.Parameters["i_team_leader"].Value = rbteam_leader.EditValue;
+                            cmd.Parameters["i_team_leader"].Direction = ParameterDirection.Input;
+
 
                             cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
                             cmd.Parameters["i_remark"].Value = txtRemark.EditValue;

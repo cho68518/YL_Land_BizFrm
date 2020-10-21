@@ -303,7 +303,7 @@
             this.repositoryItemMemoEdit1,
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2});
-            this.efwGridControl1.Size = new System.Drawing.Size(1302, 466);
+            this.efwGridControl1.Size = new System.Drawing.Size(1302, 384);
             this.efwGridControl1.TabIndex = 42;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -583,7 +583,7 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 550);
+            this.splitterControl1.Location = new System.Drawing.Point(3, 468);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1302, 5);
             this.splitterControl1.TabIndex = 45;
@@ -605,9 +605,9 @@
             this.efwGroupControl1.Controls.Add(this.txtU_Id);
             this.efwGroupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.efwGroupControl1.IsMultiLang = false;
-            this.efwGroupControl1.Location = new System.Drawing.Point(3, 555);
+            this.efwGroupControl1.Location = new System.Drawing.Point(3, 473);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(724, 124);
+            this.efwGroupControl1.Size = new System.Drawing.Size(724, 206);
             this.efwGroupControl1.TabIndex = 46;
             this.efwGroupControl1.Text = "스토리( 생성 / 삭제 )";
             // 
@@ -794,9 +794,9 @@
             this.efwGroupControl2.Controls.Add(this.txtMoney);
             this.efwGroupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl2.IsMultiLang = false;
-            this.efwGroupControl2.Location = new System.Drawing.Point(727, 555);
+            this.efwGroupControl2.Location = new System.Drawing.Point(727, 473);
             this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(578, 124);
+            this.efwGroupControl2.Size = new System.Drawing.Size(578, 206);
             this.efwGroupControl2.TabIndex = 47;
             this.efwGroupControl2.Text = "스토리 ( 수정 )";
             // 

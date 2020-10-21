@@ -46,17 +46,48 @@ namespace YL_MM.BizFrm
             chkChef.EditValue = '0';
             chkGShop.EditValue = '0';
             ckdora_md.EditValue = '0';
+            rbis_use.EditValue = 'Y';
+            rbshow_level.EditValue = 1;
             gridView1.OptionsView.ShowFooter = true;
             SetCmb();
             Open1();
-
-
-
+            
             if (txtP_Id.EditValue.ToString() == "0")
                 New();
 
+            this.efwGridControl3.BindControlSet(
+                      new ColumnControlSet("idx", txtsale_idx)
+                    , new ColumnControlSet("option_name", txtoption_name)
+                    , new ColumnControlSet("sale_qty", txtsale_qty)
+                    , new ColumnControlSet("sale_amt", txtsale_amt)
+                    , new ColumnControlSet("is_use", rbis_use)
+                    , new ColumnControlSet("show_level", rbshow_level)
+                   ); ;
+
+            this.efwGridControl3.Click += efwGridControl3_Click;
+
+
+
+            this.efwGridControl1.BindControlSet(
+                      new ColumnControlSet("id", txtOP_ID)
+                      , new ColumnControlSet("pp_title", txtPP_Title)
+                   ); ;
+
+            this.efwGridControl1.Click += efwGridControl1_Click;
 
         }
+
+        private void efwGridControl3_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl3.GetSelectedRow(0);
+
+            if (dr != null && dr["idx"].ToString() != "")
+            {
+                this.rbis_use.EditValue = dr["is_use"].ToString();
+                this.rbshow_level.EditValue = dr["show_level"].ToString();
+            }
+        }
+
 
         private void SetCmb()
         {
@@ -447,6 +478,7 @@ namespace YL_MM.BizFrm
         {
             try
             {
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SELECT_02", con))
@@ -617,6 +649,16 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add(new MySqlParameter("o_P_Member_level_DoraMd", MySqlDbType.VarChar));
                         cmd.Parameters["o_P_Member_level_DoraMd"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_p_explanation", MySqlDbType.Text));
+                        cmd.Parameters["o_p_explanation"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_p_title", MySqlDbType.VarChar));
+                        cmd.Parameters["o_p_title"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_p_represent", MySqlDbType.VarChar));
+                        cmd.Parameters["o_p_represent"].Direction = ParameterDirection.Output;
+
                         //
 
                         cmd.ExecuteNonQuery();
@@ -690,6 +732,11 @@ namespace YL_MM.BizFrm
                         chkChef.EditValue = cmd.Parameters["o_P_Member_level_Chef"].Value.ToString();
                         chkGShop.EditValue = cmd.Parameters["o_P_Member_level_GShop"].Value.ToString();
                         ckdora_md.EditValue = cmd.Parameters["o_P_Member_level_DoraMd"].Value.ToString();
+                        txtp_explanation.EditValue = cmd.Parameters["o_p_explanation"].Value.ToString();
+                        txtp_title.EditValue = cmd.Parameters["o_p_title"].Value.ToString();
+                        cbp_represent.EditValue = cmd.Parameters["o_p_represent"].Value.ToString();
+
+
                         if (chkAll.EditValue.ToString() == "1")
                         {
                             this.chkMember.Enabled = false;
@@ -710,6 +757,9 @@ namespace YL_MM.BizFrm
                         Open2();
                         // 전사 상거래 상세 내용
                         Open3();
+                        // 전사 상거래 상세 내용
+                        Open4();
+
 
 
                     }
@@ -725,6 +775,7 @@ namespace YL_MM.BizFrm
         {
             try
             {
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
@@ -755,6 +806,7 @@ namespace YL_MM.BizFrm
         {
             try
             {
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
@@ -774,6 +826,37 @@ namespace YL_MM.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl2.DataBind(ds);
+                            //  this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void Open4()
+        {
+            try
+            {
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SELECT_05", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_p_id", MySqlDbType.Int32);
+                        cmd.Parameters[0].Value = txtP_Id.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl3.DataBind(ds);
                             //  this.efwGridControl1.MyGridView.BestFitColumns();
                         }
                     }
@@ -813,6 +896,7 @@ namespace YL_MM.BizFrm
         {
             try
             {
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
@@ -875,7 +959,8 @@ namespace YL_MM.BizFrm
                 popup.pURL = txtP_Contents.Text;
             else if (s1 == "4")
                 popup.pURL = txtPc_Thumbnail.Text;
-
+            else if (s1 == "5")
+                popup.pURL = picOP_IMG.Text;
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();
         }
@@ -1337,12 +1422,16 @@ namespace YL_MM.BizFrm
             rbPC_Use_Type.EditValue = 'Y';
             txtPC_Content.EditValue = null;
 
+            txtp_explanation.EditValue = null;
+
             chkAll.EditValue = '0';
             chkMember.EditValue = '0';
             chkVip.EditValue = '0';
             chkChef.EditValue = '0';
             chkGShop.EditValue = '0';
             ckdora_md.EditValue = '0';
+            txtp_title.EditValue = null;
+            cbp_represent.EditValue = "N";
 
 
             //gridView1.Columns.Clear();
@@ -1394,6 +1483,7 @@ namespace YL_MM.BizFrm
             {
                 try
                 {
+                    //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
                         using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_01", con))
@@ -1621,8 +1711,21 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_P_Member_level_DoraMd"].Value = ckdora_md.EditValue;
                             cmd.Parameters["i_P_Member_level_DoraMd"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_p_explanation", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_explanation"].Value = txtp_explanation.EditValue;
+                            cmd.Parameters["i_p_explanation"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_title", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_title"].Value = txtp_title.EditValue;
+                            cmd.Parameters["i_p_title"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_represent", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_represent"].Value = cbp_represent.EditValue;
+                            cmd.Parameters["i_p_represent"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Result_P_Id", MySqlDbType.VarChar));
                             cmd.Parameters["o_Result_P_Id"].Direction = ParameterDirection.Output;
+
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
@@ -1653,6 +1756,7 @@ namespace YL_MM.BizFrm
 
             try
             {
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
 
@@ -1692,6 +1796,7 @@ namespace YL_MM.BizFrm
             {
                 int nId = 0;
                 string sId = "";
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
 
@@ -1823,6 +1928,11 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add("i_td_donut", MySqlDbType.Int32, 11);
                             cmd.Parameters[16].Value = nId;
 
+
+                            cmd.Parameters.Add("i_op_img", MySqlDbType.VarChar, 255);
+                            cmd.Parameters[17].Value = txtOP_IMG.EditValue;
+
+
                             cmd.ExecuteNonQuery();
                             con.Close();
                         }
@@ -1850,6 +1960,7 @@ namespace YL_MM.BizFrm
             {
                 try
                 {
+                    //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
                         using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_DELETE_01", con))
@@ -1927,5 +2038,229 @@ namespace YL_MM.BizFrm
 
         }
 
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        { 
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_04", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt64(txtsale_idx.EditValue);
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Id"].Value = txtP_Id.EditValue;
+                            cmd.Parameters["i_P_Id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_show_level", MySqlDbType.Int32));
+                            cmd.Parameters["i_show_level"].Value = rbshow_level.EditValue;
+                            cmd.Parameters["i_show_level"].Direction = ParameterDirection.Input; 
+
+                            cmd.Parameters.Add(new MySqlParameter("i_option_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_option_name"].Value = txtoption_name.EditValue;
+                            cmd.Parameters["i_option_name"].Direction = ParameterDirection.Input; 
+
+                            cmd.Parameters.Add(new MySqlParameter("i_qty", MySqlDbType.VarChar));
+                            cmd.Parameters["i_qty"].Value = Convert.ToInt64(txtsale_qty.EditValue);
+                            cmd.Parameters["i_qty"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_amt", MySqlDbType.VarChar));
+                            cmd.Parameters["i_amt"].Value = Convert.ToInt64(txtsale_amt.EditValue);
+                            cmd.Parameters["i_amt"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_use", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_use"].Value = rbis_use.EditValue;
+                            cmd.Parameters["i_is_use"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_max_idx", MySqlDbType.Int32));
+                            cmd.Parameters["o_max_idx"].Direction = ParameterDirection.Output;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            txtsale_idx.EditValue = cmd.Parameters["o_max_idx"].Value.ToString();
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open4();
+            }
+        }
+
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            txtsale_idx.EditValue = 0;
+            rbshow_level.EditValue = 1;
+            txtsale_qty.EditValue = 0;
+            txtsale_amt.EditValue = 0;
+            rbis_use.EditValue = "Y";
+            rbis_use.EditValue = "Y";
+            txtoption_name.EditValue = "";
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            string sftpURL = "14.63.165.36";
+            string sUserName = "root";
+            string sPassword = "@dhkdldpf2!";
+            int nPort = 22023;
+            string sftpDirectory = "/domalifefiles/files/product/domamall/" + txtOP_ID.EditValue;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    txtPicPath5.EditValue = openFileDialog.FileName;
+                    picOP_IMG.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+
+
+                // 폴더생성
+
+                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+
+                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
+
+                string sOldFile = txtPicPath5.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                string sNewFile = "c:\\temp\\" + sFileName;
+                System.IO.File.Copy(sOldFile, sNewFile);
+
+
+                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
+
+
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+
+                sSftp.Connect(nPort);
+
+                // 저장 경로에 있는지 체크
+                string sFtpPath = "/domalifefiles/files/product/domamall/";
+                string sFtpPath2 = "/domalifefiles/files/product/domamall/" + txtOP_ID.EditValue;
+
+                ArrayList ay = sSftp.GetFileList(sFtpPath);
+                bool isdir = false;
+
+                for (int i = 0; i < ay.Count; i++)
+                {
+                    // string sChk = ay[i].ToString();
+                    if (ay[i].ToString() == txtOP_ID.EditValue.ToString())
+                    {
+                        isdir = true;
+                    }
+                }
+                if (isdir == false)
+                {
+
+                    sSftp.Mkdir(sFtpPath2);
+                }
+
+                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
+                sSftp.Close();
+                txtOP_IMG.EditValue = "https://media.domalife.net/files/product/domamall/" + txtOP_ID.EditValue + "/" + sFileName;
+
+
+            }
+        }
+
+
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+
+            if (dr != null && dr["id"].ToString() != "")
+            {
+                this.txtOP_ID.EditValue = dr["id"].ToString();
+              }
+
+            if (dr != null && dr["op_img"].ToString() != "")
+            {
+                this.txtOP_IMG.EditValue = dr["op_img"].ToString();
+                picOP_IMG.LoadAsync(txtOP_IMG.EditValue.ToString());
+            }
+
+        }
+
+        private void picOP_IMG_DoubleClick(object sender, EventArgs e)
+        {
+            OpenDlg("5");
+        }
+
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+
+
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_05", con))
+                    {
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_p_id", MySqlDbType.Int32, 11);
+                        cmd.Parameters[0].Value = txtP_Id.EditValue;
+
+                        cmd.Parameters.Add("i_id", MySqlDbType.Int32, 11);
+                        cmd.Parameters[1].Value = txtOP_ID.EditValue;
+                            //
+
+                        cmd.Parameters.Add("i_op_img", MySqlDbType.VarChar, 255);
+                        cmd.Parameters[2].Value = txtOP_IMG.EditValue;
+
+
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                    }
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
+            Open2();
+        }
     }
 }

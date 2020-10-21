@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{574A24CB-6C11-4F50-96CC-A188CC30B49E}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_MM.BizFrm</RootNamespace>
     <AssemblyName>YL_MM.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -41,6 +41,7 @@
     <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DemoData.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -56,7 +57,9 @@
     <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Easy.Framework.Common.V.3.1">
       <HintPath>..\..\Easy.Framework.Release\Easy.Framework.Common.V.3.1.dll</HintPath>
     </Reference>
@@ -92,7 +95,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Easy.Framework.Release\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
@@ -102,6 +108,7 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -115,6 +122,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\Ylland\Downloads\SharpSSH-1.1.1.13.bin\SharpSSH-1.1.1.13.bin\Tamir.SharpSSH.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BizNode.cs" />
@@ -149,6 +157,12 @@
     </Compile>
     <Compile Include="Dlg\frmMemberInfo_Dup.Designer.cs">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM17.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM17.Designer.cs">
+      <DependentUpon>frmMM17.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMM20.cs">
       <SubType>UserControl</SubType>
@@ -185,12 +199,6 @@
     </Compile>
     <Compile Include="frmMM18.Designer.cs">
       <DependentUpon>frmMM18.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMM17.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frmMM17.Designer.cs">
-      <DependentUpon>frmMM17.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMM16.cs">
       <SubType>UserControl</SubType>
@@ -354,6 +362,9 @@
     <EmbeddedResource Include="Dlg\frmMemberInfo_Dup.resx">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMM17.resx">
+      <DependentUpon>frmMM17.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMM20.resx">
       <DependentUpon>frmMM20.cs</DependentUpon>
     </EmbeddedResource>
@@ -429,9 +440,6 @@
     <EmbeddedResource Include="frmMM16.resx">
       <DependentUpon>frmMM16.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMM17.resx">
-      <DependentUpon>frmMM17.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMM19_Pop01.resx">
       <DependentUpon>frmMM19_Pop01.cs</DependentUpon>
     </EmbeddedResource>
@@ -471,6 +479,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YL_MA.BizFrm.V.1.0\YL_MA.BizFrm.V.1.0.csproj">
+      <Project>{E75E6209-991A-40F8-8F66-DC89D5AEF850}</Project>
+      <Name>YL_MA.BizFrm.V.1.0</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

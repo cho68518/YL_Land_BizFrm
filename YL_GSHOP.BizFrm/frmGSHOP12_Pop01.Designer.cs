@@ -60,6 +60,7 @@
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "닫기";
             this.btnCancel.ToolTip = "닫기";
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // picImg
             // 
