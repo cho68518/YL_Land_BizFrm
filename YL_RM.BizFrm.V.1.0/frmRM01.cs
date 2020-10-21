@@ -15,6 +15,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace YL_RM.BizFrm
 {
     public partial class frmRM01 : FrmBase
@@ -22,7 +23,7 @@ namespace YL_RM.BizFrm
         public frmRM01()
         {
             InitializeComponent();
-            this.QCode = "GSHOP12";
+            this.QCode = "RM01";
             //폼명설정
             this.FrmName = "발모 후기현황";
         }

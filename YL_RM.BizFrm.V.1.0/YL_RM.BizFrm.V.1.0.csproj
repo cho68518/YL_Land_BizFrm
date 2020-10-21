@@ -71,12 +71,9 @@
       <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\DevExpress.XtraRichEdit.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DiffieHellman">
-      <HintPath>..\YL_MM.BizFrm.V.1.0\bin\Debug\DiffieHellman.dll</HintPath>
-    </Reference>
     <Reference Include="Easy.Framework.Common.V.3.1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\Easy.Framework.Common.V.3.1.dll</HintPath>
+      <HintPath>..\..\Easy.Framework.Release\Easy.Framework.Common.V.3.1.dll</HintPath>
     </Reference>
     <Reference Include="Easy.Framework.ExceptionCom.V.3.1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -143,6 +140,12 @@
     </Compile>
     <Compile Include="frmRM01.Designer.cs">
       <DependentUpon>frmRM01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRM02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmRM02.Designer.cs">
+      <DependentUpon>frmRM02.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTest01.cs">
       <SubType>Form</SubType>
