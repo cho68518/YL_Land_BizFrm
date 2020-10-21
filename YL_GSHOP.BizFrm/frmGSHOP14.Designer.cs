@@ -1,6 +1,6 @@
 ﻿namespace YL_GSHOP.BizFrm
 {
-    partial class frmGSHOP12
+    partial class frmGSHOP14
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSHOP12));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSHOP14));
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.txtPic_Url5 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtPic_Url4 = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -95,6 +96,30 @@
             this.txtShooting_Date1 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtShooting_Date4 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton10 = new DevExpress.XtraEditors.SimpleButton();
+            this.efwPictureEdit1 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwPictureEdit2 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
+            this.efwPictureEdit3 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwPictureEdit4 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.checkEdit3 = new DevExpress.XtraEditors.CheckEdit();
+            this.efwPictureEdit5 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwPictureEdit6 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.checkEdit4 = new DevExpress.XtraEditors.CheckEdit();
+            this.efwPictureEdit7 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwPictureEdit8 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url5.Properties)).BeginInit();
@@ -131,7 +156,46 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit8.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splitContainerControl1
+            // 
+            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.Location = new System.Drawing.Point(3, 35);
+            this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.efwGroupControl2);
+            this.splitContainerControl1.Panel1.Controls.Add(this.splitterControl1);
+            this.splitContainerControl1.Panel1.Controls.Add(this.efwGridControl1);
+            this.splitContainerControl1.Panel1.Controls.Add(this.efwPanelControl1);
+            this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.checkEdit4);
+            this.splitContainerControl1.Panel2.Controls.Add(this.efwPictureEdit7);
+            this.splitContainerControl1.Panel2.Controls.Add(this.efwPictureEdit8);
+            this.splitContainerControl1.Panel2.Controls.Add(this.checkEdit3);
+            this.splitContainerControl1.Panel2.Controls.Add(this.efwPictureEdit5);
+            this.splitContainerControl1.Panel2.Controls.Add(this.efwPictureEdit6);
+            this.splitContainerControl1.Panel2.Controls.Add(this.checkEdit2);
+            this.splitContainerControl1.Panel2.Controls.Add(this.efwPictureEdit3);
+            this.splitContainerControl1.Panel2.Controls.Add(this.efwPictureEdit4);
+            this.splitContainerControl1.Panel2.Controls.Add(this.checkEdit1);
+            this.splitContainerControl1.Panel2.Controls.Add(this.efwPictureEdit2);
+            this.splitContainerControl1.Panel2.Controls.Add(this.efwPictureEdit1);
+            this.splitContainerControl1.Panel2.Text = "Panel2";
+            this.splitContainerControl1.Size = new System.Drawing.Size(1562, 933);
+            this.splitContainerControl1.SplitterPosition = 1054;
+            this.splitContainerControl1.TabIndex = 2;
             // 
             // efwPanelControl1
             // 
@@ -145,10 +209,10 @@
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Controls.Add(this.dtE_DATE);
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
+            this.efwPanelControl1.Location = new System.Drawing.Point(0, 0);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1401, 53);
-            this.efwPanelControl1.TabIndex = 41;
+            this.efwPanelControl1.Size = new System.Drawing.Size(1054, 53);
+            this.efwPanelControl1.TabIndex = 42;
             // 
             // txtPic_Url5
             // 
@@ -290,7 +354,7 @@
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsEditable = false;
             this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.Location = new System.Drawing.Point(3, 88);
+            this.efwGridControl1.Location = new System.Drawing.Point(0, 53);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
@@ -308,8 +372,8 @@
             this.repositoryItemCheckEdit3,
             this.repositoryItemCheckEdit4,
             this.repositoryItemCheckEdit5});
-            this.efwGridControl1.Size = new System.Drawing.Size(1401, 514);
-            this.efwGridControl1.TabIndex = 45;
+            this.efwGridControl1.Size = new System.Drawing.Size(1054, 648);
+            this.efwGridControl1.TabIndex = 46;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
             serviceInfo3.IsUserIDAdd = true;
@@ -319,7 +383,6 @@
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.efwGridControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.efwGridControl1_MouseMove);
             // 
             // gridView1
             // 
@@ -614,15 +677,25 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 602);
+            this.splitterControl1.Location = new System.Drawing.Point(0, 701);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(1401, 5);
-            this.splitterControl1.TabIndex = 46;
+            this.splitterControl1.Size = new System.Drawing.Size(1054, 5);
+            this.splitterControl1.TabIndex = 47;
             this.splitterControl1.TabStop = false;
             // 
             // efwGroupControl2
             // 
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
+            this.efwGroupControl2.Controls.Add(this.simpleButton9);
+            this.efwGroupControl2.Controls.Add(this.simpleButton10);
+            this.efwGroupControl2.Controls.Add(this.simpleButton7);
+            this.efwGroupControl2.Controls.Add(this.simpleButton8);
+            this.efwGroupControl2.Controls.Add(this.simpleButton5);
+            this.efwGroupControl2.Controls.Add(this.simpleButton6);
+            this.efwGroupControl2.Controls.Add(this.simpleButton3);
+            this.efwGroupControl2.Controls.Add(this.simpleButton4);
+            this.efwGroupControl2.Controls.Add(this.simpleButton2);
+            this.efwGroupControl2.Controls.Add(this.simpleButton1);
             this.efwGroupControl2.Controls.Add(this.efwLabel8);
             this.efwGroupControl2.Controls.Add(this.efwLabel7);
             this.efwGroupControl2.Controls.Add(this.efwLabel6);
@@ -640,18 +713,18 @@
             this.efwGroupControl2.Controls.Add(this.txtShooting_Date4);
             this.efwGroupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl2.IsMultiLang = false;
-            this.efwGroupControl2.Location = new System.Drawing.Point(3, 607);
+            this.efwGroupControl2.Location = new System.Drawing.Point(0, 706);
             this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(1401, 115);
-            this.efwGroupControl2.TabIndex = 47;
-            this.efwGroupControl2.Text = "상세 이미지";
+            this.efwGroupControl2.Size = new System.Drawing.Size(1054, 227);
+            this.efwGroupControl2.TabIndex = 48;
+            this.efwGroupControl2.Text = "출고내역";
             this.efwGroupControl2.UseWaitCursor = true;
             // 
             // efwLabel8
             // 
             this.efwLabel8.EraserGroup = null;
             this.efwLabel8.IsMultiLang = false;
-            this.efwLabel8.Location = new System.Drawing.Point(1100, 36);
+            this.efwLabel8.Location = new System.Drawing.Point(873, 33);
             this.efwLabel8.Name = "efwLabel8";
             this.efwLabel8.Size = new System.Drawing.Size(30, 14);
             this.efwLabel8.TabIndex = 69;
@@ -662,7 +735,7 @@
             // 
             this.efwLabel7.EraserGroup = null;
             this.efwLabel7.IsMultiLang = false;
-            this.efwLabel7.Location = new System.Drawing.Point(827, 36);
+            this.efwLabel7.Location = new System.Drawing.Point(679, 33);
             this.efwLabel7.Name = "efwLabel7";
             this.efwLabel7.Size = new System.Drawing.Size(30, 14);
             this.efwLabel7.TabIndex = 68;
@@ -673,7 +746,7 @@
             // 
             this.efwLabel6.EraserGroup = null;
             this.efwLabel6.IsMultiLang = false;
-            this.efwLabel6.Location = new System.Drawing.Point(553, 36);
+            this.efwLabel6.Location = new System.Drawing.Point(481, 33);
             this.efwLabel6.Name = "efwLabel6";
             this.efwLabel6.Size = new System.Drawing.Size(30, 14);
             this.efwLabel6.TabIndex = 67;
@@ -684,7 +757,7 @@
             // 
             this.efwLabel4.EraserGroup = null;
             this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(281, 36);
+            this.efwLabel4.Location = new System.Drawing.Point(287, 33);
             this.efwLabel4.Name = "efwLabel4";
             this.efwLabel4.Size = new System.Drawing.Size(30, 14);
             this.efwLabel4.TabIndex = 66;
@@ -696,7 +769,7 @@
             this.txtShooting_Date5.EditValue2 = null;
             this.txtShooting_Date5.Enabled = false;
             this.txtShooting_Date5.EraserGroup = "CLR1";
-            this.txtShooting_Date5.Location = new System.Drawing.Point(1100, 58);
+            this.txtShooting_Date5.Location = new System.Drawing.Point(932, 30);
             this.txtShooting_Date5.Name = "txtShooting_Date5";
             this.txtShooting_Date5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtShooting_Date5.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -711,7 +784,7 @@
             this.txtShooting_Date3.EditValue2 = null;
             this.txtShooting_Date3.Enabled = false;
             this.txtShooting_Date3.EraserGroup = "CLR1";
-            this.txtShooting_Date3.Location = new System.Drawing.Point(553, 58);
+            this.txtShooting_Date3.Location = new System.Drawing.Point(537, 30);
             this.txtShooting_Date3.Name = "txtShooting_Date3";
             this.txtShooting_Date3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtShooting_Date3.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -726,7 +799,7 @@
             this.txtShooting_Date2.EditValue2 = null;
             this.txtShooting_Date2.Enabled = false;
             this.txtShooting_Date2.EraserGroup = "CLR1";
-            this.txtShooting_Date2.Location = new System.Drawing.Point(281, 58);
+            this.txtShooting_Date2.Location = new System.Drawing.Point(341, 30);
             this.txtShooting_Date2.Name = "txtShooting_Date2";
             this.txtShooting_Date2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtShooting_Date2.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -739,69 +812,69 @@
             // picBest_Pic5
             // 
             this.picBest_Pic5.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBest_Pic5.Location = new System.Drawing.Point(1198, 36);
+            this.picBest_Pic5.Location = new System.Drawing.Point(819, 56);
             this.picBest_Pic5.Name = "picBest_Pic5";
             this.picBest_Pic5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picBest_Pic5.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBest_Pic5.Size = new System.Drawing.Size(155, 117);
+            this.picBest_Pic5.Size = new System.Drawing.Size(190, 138);
             this.picBest_Pic5.TabIndex = 57;
             this.picBest_Pic5.UseWaitCursor = true;
-            this.picBest_Pic5.Click += new System.EventHandler(this.picBest_Pic5_DoubleClick);
+            this.picBest_Pic5.DoubleClick += new System.EventHandler(this.picBest_Pic5_DoubleClick);
             // 
             // picBest_Pic4
             // 
             this.picBest_Pic4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBest_Pic4.Location = new System.Drawing.Point(925, 36);
+            this.picBest_Pic4.Location = new System.Drawing.Point(620, 56);
             this.picBest_Pic4.Name = "picBest_Pic4";
             this.picBest_Pic4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picBest_Pic4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBest_Pic4.Size = new System.Drawing.Size(155, 117);
+            this.picBest_Pic4.Size = new System.Drawing.Size(190, 138);
             this.picBest_Pic4.TabIndex = 56;
             this.picBest_Pic4.UseWaitCursor = true;
-            this.picBest_Pic4.Click += new System.EventHandler(this.picBest_Pic4_DoubleClick);
+            this.picBest_Pic4.DoubleClick += new System.EventHandler(this.picBest_Pic4_DoubleClick);
             // 
             // picBest_Pic3
             // 
             this.picBest_Pic3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBest_Pic3.Location = new System.Drawing.Point(652, 36);
+            this.picBest_Pic3.Location = new System.Drawing.Point(424, 56);
             this.picBest_Pic3.Name = "picBest_Pic3";
             this.picBest_Pic3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picBest_Pic3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBest_Pic3.Size = new System.Drawing.Size(155, 117);
+            this.picBest_Pic3.Size = new System.Drawing.Size(190, 138);
             this.picBest_Pic3.TabIndex = 55;
             this.picBest_Pic3.UseWaitCursor = true;
-            this.picBest_Pic3.Click += new System.EventHandler(this.picBest_Pic3_DoubleClick);
+            this.picBest_Pic3.DoubleClick += new System.EventHandler(this.picBest_Pic3_DoubleClick);
             // 
             // picBest_Pic2
             // 
             this.picBest_Pic2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBest_Pic2.Location = new System.Drawing.Point(380, 36);
+            this.picBest_Pic2.Location = new System.Drawing.Point(228, 56);
             this.picBest_Pic2.Name = "picBest_Pic2";
             this.picBest_Pic2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picBest_Pic2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBest_Pic2.Size = new System.Drawing.Size(155, 117);
+            this.picBest_Pic2.Size = new System.Drawing.Size(190, 138);
             this.picBest_Pic2.TabIndex = 54;
             this.picBest_Pic2.UseWaitCursor = true;
-            this.picBest_Pic2.Click += new System.EventHandler(this.picBest_Pic2_DoubleClick);
+            this.picBest_Pic2.DoubleClick += new System.EventHandler(this.picBest_Pic2_DoubleClick);
             // 
             // picBest_Pic1
             // 
             this.picBest_Pic1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBest_Pic1.Location = new System.Drawing.Point(114, 36);
+            this.picBest_Pic1.Location = new System.Drawing.Point(31, 56);
             this.picBest_Pic1.Name = "picBest_Pic1";
             this.picBest_Pic1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picBest_Pic1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBest_Pic1.Size = new System.Drawing.Size(155, 117);
+            this.picBest_Pic1.Size = new System.Drawing.Size(190, 138);
             this.picBest_Pic1.TabIndex = 53;
             this.picBest_Pic1.UseWaitCursor = true;
-            this.picBest_Pic1.Click += new System.EventHandler(this.picBest_Pic1_DoubleClick);
+            this.picBest_Pic1.DoubleClick += new System.EventHandler(this.picBest_Pic1_DoubleClick);
             // 
             // txtShooting_Date1
             // 
             this.txtShooting_Date1.EditValue2 = null;
             this.txtShooting_Date1.Enabled = false;
             this.txtShooting_Date1.EraserGroup = "CLR1";
-            this.txtShooting_Date1.Location = new System.Drawing.Point(15, 58);
+            this.txtShooting_Date1.Location = new System.Drawing.Point(144, 30);
             this.txtShooting_Date1.Name = "txtShooting_Date1";
             this.txtShooting_Date1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtShooting_Date1.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -815,7 +888,7 @@
             // 
             this.efwLabel5.EraserGroup = null;
             this.efwLabel5.IsMultiLang = false;
-            this.efwLabel5.Location = new System.Drawing.Point(15, 36);
+            this.efwLabel5.Location = new System.Drawing.Point(94, 33);
             this.efwLabel5.Name = "efwLabel5";
             this.efwLabel5.Size = new System.Drawing.Size(30, 14);
             this.efwLabel5.TabIndex = 22;
@@ -827,7 +900,7 @@
             this.txtShooting_Date4.EditValue2 = null;
             this.txtShooting_Date4.Enabled = false;
             this.txtShooting_Date4.EraserGroup = "CLR1";
-            this.txtShooting_Date4.Location = new System.Drawing.Point(827, 58);
+            this.txtShooting_Date4.Location = new System.Drawing.Point(733, 30);
             this.txtShooting_Date4.Name = "txtShooting_Date4";
             this.txtShooting_Date4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtShooting_Date4.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -837,21 +910,227 @@
             this.txtShooting_Date4.TabIndex = 62;
             this.txtShooting_Date4.UseWaitCursor = true;
             // 
-            // frmGSHOP12
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(45, 199);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(79, 23);
+            this.simpleButton1.TabIndex = 70;
+            this.simpleButton1.Text = "Before";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(130, 199);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(79, 23);
+            this.simpleButton2.TabIndex = 71;
+            this.simpleButton2.Text = "After";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(326, 199);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(79, 23);
+            this.simpleButton3.TabIndex = 73;
+            this.simpleButton3.Text = "After";
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(241, 199);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(79, 23);
+            this.simpleButton4.TabIndex = 72;
+            this.simpleButton4.Text = "Before";
+            // 
+            // simpleButton5
+            // 
+            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.simpleButton5.Location = new System.Drawing.Point(520, 199);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(79, 23);
+            this.simpleButton5.TabIndex = 75;
+            this.simpleButton5.Text = "After";
+            // 
+            // simpleButton6
+            // 
+            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.simpleButton6.Location = new System.Drawing.Point(435, 199);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(79, 23);
+            this.simpleButton6.TabIndex = 74;
+            this.simpleButton6.Text = "Before";
+            // 
+            // simpleButton7
+            // 
+            this.simpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.ImageOptions.Image")));
+            this.simpleButton7.Location = new System.Drawing.Point(712, 199);
+            this.simpleButton7.Name = "simpleButton7";
+            this.simpleButton7.Size = new System.Drawing.Size(79, 23);
+            this.simpleButton7.TabIndex = 77;
+            this.simpleButton7.Text = "After";
+            // 
+            // simpleButton8
+            // 
+            this.simpleButton8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
+            this.simpleButton8.Location = new System.Drawing.Point(627, 199);
+            this.simpleButton8.Name = "simpleButton8";
+            this.simpleButton8.Size = new System.Drawing.Size(79, 23);
+            this.simpleButton8.TabIndex = 76;
+            this.simpleButton8.Text = "Before";
+            // 
+            // simpleButton9
+            // 
+            this.simpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton9.ImageOptions.Image")));
+            this.simpleButton9.Location = new System.Drawing.Point(914, 199);
+            this.simpleButton9.Name = "simpleButton9";
+            this.simpleButton9.Size = new System.Drawing.Size(79, 23);
+            this.simpleButton9.TabIndex = 79;
+            this.simpleButton9.Text = "After";
+            // 
+            // simpleButton10
+            // 
+            this.simpleButton10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton10.ImageOptions.Image")));
+            this.simpleButton10.Location = new System.Drawing.Point(829, 199);
+            this.simpleButton10.Name = "simpleButton10";
+            this.simpleButton10.Size = new System.Drawing.Size(79, 23);
+            this.simpleButton10.TabIndex = 78;
+            this.simpleButton10.Text = "Before";
+            // 
+            // efwPictureEdit1
+            // 
+            this.efwPictureEdit1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.efwPictureEdit1.Location = new System.Drawing.Point(65, 64);
+            this.efwPictureEdit1.Name = "efwPictureEdit1";
+            this.efwPictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.efwPictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.efwPictureEdit1.Size = new System.Drawing.Size(208, 182);
+            this.efwPictureEdit1.TabIndex = 80;
+            this.efwPictureEdit1.UseWaitCursor = true;
+            // 
+            // efwPictureEdit2
+            // 
+            this.efwPictureEdit2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.efwPictureEdit2.Location = new System.Drawing.Point(279, 64);
+            this.efwPictureEdit2.Name = "efwPictureEdit2";
+            this.efwPictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.efwPictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.efwPictureEdit2.Size = new System.Drawing.Size(208, 182);
+            this.efwPictureEdit2.TabIndex = 81;
+            this.efwPictureEdit2.UseWaitCursor = true;
+            // 
+            // checkEdit1
+            // 
+            this.checkEdit1.Location = new System.Drawing.Point(33, 146);
+            this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.Caption = "checkEdit1";
+            this.checkEdit1.Size = new System.Drawing.Size(19, 19);
+            this.checkEdit1.TabIndex = 82;
+            // 
+            // checkEdit2
+            // 
+            this.checkEdit2.Location = new System.Drawing.Point(33, 334);
+            this.checkEdit2.Name = "checkEdit2";
+            this.checkEdit2.Properties.Caption = "checkEdit2";
+            this.checkEdit2.Size = new System.Drawing.Size(19, 19);
+            this.checkEdit2.TabIndex = 85;
+            // 
+            // efwPictureEdit3
+            // 
+            this.efwPictureEdit3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.efwPictureEdit3.Location = new System.Drawing.Point(279, 252);
+            this.efwPictureEdit3.Name = "efwPictureEdit3";
+            this.efwPictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.efwPictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.efwPictureEdit3.Size = new System.Drawing.Size(208, 182);
+            this.efwPictureEdit3.TabIndex = 84;
+            this.efwPictureEdit3.UseWaitCursor = true;
+            // 
+            // efwPictureEdit4
+            // 
+            this.efwPictureEdit4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.efwPictureEdit4.Location = new System.Drawing.Point(65, 252);
+            this.efwPictureEdit4.Name = "efwPictureEdit4";
+            this.efwPictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.efwPictureEdit4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.efwPictureEdit4.Size = new System.Drawing.Size(208, 182);
+            this.efwPictureEdit4.TabIndex = 83;
+            this.efwPictureEdit4.UseWaitCursor = true;
+            // 
+            // checkEdit3
+            // 
+            this.checkEdit3.Location = new System.Drawing.Point(33, 522);
+            this.checkEdit3.Name = "checkEdit3";
+            this.checkEdit3.Properties.Caption = "checkEdit3";
+            this.checkEdit3.Size = new System.Drawing.Size(19, 19);
+            this.checkEdit3.TabIndex = 88;
+            // 
+            // efwPictureEdit5
+            // 
+            this.efwPictureEdit5.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.efwPictureEdit5.Location = new System.Drawing.Point(279, 440);
+            this.efwPictureEdit5.Name = "efwPictureEdit5";
+            this.efwPictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.efwPictureEdit5.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.efwPictureEdit5.Size = new System.Drawing.Size(208, 182);
+            this.efwPictureEdit5.TabIndex = 87;
+            this.efwPictureEdit5.UseWaitCursor = true;
+            // 
+            // efwPictureEdit6
+            // 
+            this.efwPictureEdit6.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.efwPictureEdit6.Location = new System.Drawing.Point(65, 440);
+            this.efwPictureEdit6.Name = "efwPictureEdit6";
+            this.efwPictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.efwPictureEdit6.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.efwPictureEdit6.Size = new System.Drawing.Size(208, 182);
+            this.efwPictureEdit6.TabIndex = 86;
+            this.efwPictureEdit6.UseWaitCursor = true;
+            // 
+            // checkEdit4
+            // 
+            this.checkEdit4.Location = new System.Drawing.Point(33, 710);
+            this.checkEdit4.Name = "checkEdit4";
+            this.checkEdit4.Properties.Caption = "checkEdit4";
+            this.checkEdit4.Size = new System.Drawing.Size(19, 19);
+            this.checkEdit4.TabIndex = 91;
+            // 
+            // efwPictureEdit7
+            // 
+            this.efwPictureEdit7.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.efwPictureEdit7.Location = new System.Drawing.Point(279, 628);
+            this.efwPictureEdit7.Name = "efwPictureEdit7";
+            this.efwPictureEdit7.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.efwPictureEdit7.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.efwPictureEdit7.Size = new System.Drawing.Size(208, 182);
+            this.efwPictureEdit7.TabIndex = 90;
+            this.efwPictureEdit7.UseWaitCursor = true;
+            // 
+            // efwPictureEdit8
+            // 
+            this.efwPictureEdit8.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.efwPictureEdit8.Location = new System.Drawing.Point(65, 628);
+            this.efwPictureEdit8.Name = "efwPictureEdit8";
+            this.efwPictureEdit8.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.efwPictureEdit8.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.efwPictureEdit8.Size = new System.Drawing.Size(208, 182);
+            this.efwPictureEdit8.TabIndex = 89;
+            this.efwPictureEdit8.UseWaitCursor = true;
+            // 
+            // frmGSHOP14
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.efwGroupControl2);
-            this.Controls.Add(this.splitterControl1);
-            this.Controls.Add(this.efwGridControl1);
-            this.Controls.Add(this.efwPanelControl1);
-            this.Name = "frmGSHOP12";
-            this.Size = new System.Drawing.Size(1407, 722);
-            this.Load += new System.EventHandler(this.frmGSHOP12_Load);
-            this.Controls.SetChildIndex(this.efwPanelControl1, 0);
-            this.Controls.SetChildIndex(this.efwGridControl1, 0);
-            this.Controls.SetChildIndex(this.splitterControl1, 0);
-            this.Controls.SetChildIndex(this.efwGroupControl2, 0);
+            this.Controls.Add(this.splitContainerControl1);
+            this.Name = "frmGSHOP14";
+            this.Size = new System.Drawing.Size(1568, 968);
+            this.Load += new System.EventHandler(this.frmGSHOP14_Load);
+            this.Controls.SetChildIndex(this.splitContainerControl1, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
+            this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
@@ -890,73 +1169,109 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPictureEdit8.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl1;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
-        private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
-        private Easy.Framework.WinForm.Control.efwDateEdit dtE_DATE;
+
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
+        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton9;
+        private DevExpress.XtraEditors.SimpleButton simpleButton10;
+        private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private DevExpress.XtraEditors.SimpleButton simpleButton8;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel8;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel7;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date5;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date3;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date2;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic5;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic4;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic3;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic2;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date1;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date4;
+        private DevExpress.XtraEditors.SplitterControl splitterControl1;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
-        private DevExpress.XtraEditors.SplitterControl splitterControl1;
-        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image3;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image4;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image0;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url1;
+        private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl1;
         private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url5;
         private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url4;
         private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url3;
         private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date1;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
-        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic5;
-        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic4;
-        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic3;
-        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic2;
-        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic1;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel8;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel7;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date5;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date4;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date3;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date2;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url1;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
+        private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
+        private Easy.Framework.WinForm.Control.efwDateEdit dtE_DATE;
+        private DevExpress.XtraEditors.CheckEdit checkEdit4;
+        private Easy.Framework.WinForm.Control.efwPictureEdit efwPictureEdit7;
+        private Easy.Framework.WinForm.Control.efwPictureEdit efwPictureEdit8;
+        private DevExpress.XtraEditors.CheckEdit checkEdit3;
+        private Easy.Framework.WinForm.Control.efwPictureEdit efwPictureEdit5;
+        private Easy.Framework.WinForm.Control.efwPictureEdit efwPictureEdit6;
+        private DevExpress.XtraEditors.CheckEdit checkEdit2;
+        private Easy.Framework.WinForm.Control.efwPictureEdit efwPictureEdit3;
+        private Easy.Framework.WinForm.Control.efwPictureEdit efwPictureEdit4;
+        private DevExpress.XtraEditors.CheckEdit checkEdit1;
+        private Easy.Framework.WinForm.Control.efwPictureEdit efwPictureEdit2;
+        private Easy.Framework.WinForm.Control.efwPictureEdit efwPictureEdit1;
     }
 }

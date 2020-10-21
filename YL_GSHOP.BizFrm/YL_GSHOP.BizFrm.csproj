@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E1D8686E-D66A-4172-8E0A-E9148D6296F2}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_GSHOP.BizFrm</RootNamespace>
     <AssemblyName>YL_GSHOP.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -147,6 +147,12 @@
     <Compile Include="Dlg\frmZipNoInfo.designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGSHOP14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP14.Designer.cs">
+      <DependentUpon>frmGSHOP14.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGSHOP13.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP14.resx">
+      <DependentUpon>frmGSHOP14.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP12_Pop01.resx">
       <DependentUpon>frmGSHOP12_Pop01.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,5 +393,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
