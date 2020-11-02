@@ -274,39 +274,39 @@
   </data>
   <data name="simpleButton2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
   <data name="simpleButton1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
-  <data name="serviceInfo1.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo4.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -322,7 +322,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo1.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo4.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -331,7 +331,7 @@
         ZW1zBV9zaXplCF92ZXJzaW9uBQAACAgCAAAACQMAAAAAAAAAAAAAABADAAAAAAAAAAs=
 </value>
   </data>
-  <data name="serviceInfo2.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo5.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -347,7 +347,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo2.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo5.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -362,7 +362,7 @@
         bXMFX3NpemUIX3ZlcnNpb24FAAAICAkCAAAAAAAAAAAAAAAQAgAAAAAAAAAL
 </value>
   </data>
-  <data name="serviceInfo3.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo6.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAPcBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLk9iamVjdCwgbXNj
@@ -378,7 +378,7 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
-  <data name="serviceInfo3.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="serviceInfo6.UserParams" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -387,4 +387,7 @@
         ZW1zBV9zaXplCF92ZXJzaW9uBQAACAgCAAAACQMAAAAAAAAAAAAAABADAAAAAAAAAAs=
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

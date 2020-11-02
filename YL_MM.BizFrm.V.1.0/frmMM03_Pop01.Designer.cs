@@ -32,6 +32,14 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
@@ -52,20 +60,6 @@
             Easy.Framework.WinForm.Control.Hierarchy hierarchy9 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy10 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy10 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy11 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy11 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy12 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy12 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy13 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy13 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo7 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo8 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -74,7 +68,49 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy11 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy11 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy12 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy12 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy13 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy13 = new Easy.Framework.WinForm.Control.Hierarchy();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.txtp_show_name = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel48 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel47 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.riPicEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.txtPP_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.picOP_IMG = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGroupControlProd = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtp_title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel44 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cbp_represent = new DevExpress.XtraEditors.CheckEdit();
             this.txtp_explanation = new Easy.Framework.WinForm.Control.efwMemoEdit();
@@ -223,32 +259,6 @@
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.splitterControl2 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl3 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.txtPP_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.picOP_IMG = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.riPicEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.splitterControl3 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.efwLabel37 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -259,9 +269,23 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.txtp_title = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtp_show_name.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riPicEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPP_Title.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOP_IMG.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).BeginInit();
             this.efwGroupControlProd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtp_title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbp_represent.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_explanation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdora_md.Properties)).BeginInit();
@@ -353,22 +377,340 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbP_Delivery_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
             this.efwGroupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPP_Title.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picOP_IMG.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riPicEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).BeginInit();
             this.efwGroupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Content.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbPC_Use_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPc_Thumbnail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtp_title.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splitContainerControl1
+            // 
+            resources.ApplyResources(this.splitContainerControl1, "splitContainerControl1");
+            this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.efwSimpleButton5);
+            this.splitContainerControl1.Panel1.Controls.Add(this.txtp_show_name);
+            this.splitContainerControl1.Panel1.Controls.Add(this.efwLabel48);
+            this.splitContainerControl1.Panel1.Controls.Add(this.efwLabel47);
+            this.splitContainerControl1.Panel1.Controls.Add(this.efwGridControl1);
+            this.splitContainerControl1.Panel1.Controls.Add(this.txtPP_Title);
+            resources.ApplyResources(this.splitContainerControl1.Panel1, "splitContainerControl1.Panel1");
+            this.splitContainerControl1.Panel2.Controls.Add(this.picOP_IMG);
+            this.splitContainerControl1.Panel2.Controls.Add(this.efwSimpleButton4);
+            this.splitContainerControl1.Panel2.Controls.Add(this.efwSimpleButton3);
+            resources.ApplyResources(this.splitContainerControl1.Panel2, "splitContainerControl1.Panel2");
+            this.splitContainerControl1.SplitterPosition = 1106;
+            // 
+            // txtp_show_name
+            // 
+            this.txtp_show_name.EditValue2 = null;
+            resources.ApplyResources(this.txtp_show_name, "txtp_show_name");
+            this.txtp_show_name.Name = "txtp_show_name";
+            this.txtp_show_name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtp_show_name.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtp_show_name.RequireMessage = null;
+            // 
+            // efwLabel48
+            // 
+            this.efwLabel48.EraserGroup = null;
+            this.efwLabel48.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel48, "efwLabel48");
+            this.efwLabel48.Name = "efwLabel48";
+            // 
+            // efwLabel47
+            // 
+            this.efwLabel47.EraserGroup = null;
+            this.efwLabel47.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel47, "efwLabel47");
+            this.efwLabel47.Name = "efwLabel47";
+            // 
+            // efwGridControl1
+            // 
+            this.efwGridControl1.BindSet = null;
+            this.efwGridControl1.DBName = "";
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
+            resources.ApplyResources(this.efwGridControl1, "efwGridControl1");
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
+            this.efwGridControl1.IsAddExcelBtn = true;
+            this.efwGridControl1.isAddPrintBtn = true;
+            this.efwGridControl1.IsMultiLang = false;
+            this.efwGridControl1.MainView = this.gridView1;
+            this.efwGridControl1.Name = "efwGridControl1";
+            this.efwGridControl1.NowRowHandle = 0;
+            this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
+            this.efwGridControl1.PrevRowHandle = -2147483648;
+            this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit1,
+            this.repositoryItemLookUpEdit2,
+            this.btnDelete,
+            this.riPicEdit,
+            this.repositoryItemLookUpEdit5,
+            this.repositoryItemCheckEdit2});
+            this.efwGridControl1.TableName = "";
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
+            this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.efwGridControl1.Click += new System.EventHandler(this.efwGridControl1_Click);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn7,
+            this.gridColumn6,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn18,
+            this.gridColumn12,
+            this.gridColumn13,
+            this.gridColumn27,
+            this.gridColumn28,
+            this.gridColumn29,
+            this.gridColumn14,
+            this.gridColumn26});
+            this.gridView1.GridControl = this.efwGridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            resources.ApplyResources(this.gridColumn1, "gridColumn1");
+            this.gridColumn1.FieldName = "id";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            // 
+            // gridColumn2
+            // 
+            resources.ApplyResources(this.gridColumn2, "gridColumn2");
+            this.gridColumn2.FieldName = "pp_title";
+            this.gridColumn2.Name = "gridColumn2";
+            // 
+            // gridColumn3
+            // 
+            resources.ApplyResources(this.gridColumn3, "gridColumn3");
+            this.gridColumn3.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn3.FieldName = "pp_price";
+            this.gridColumn3.Name = "gridColumn3";
+            // 
+            // gridColumn7
+            // 
+            resources.ApplyResources(this.gridColumn7, "gridColumn7");
+            this.gridColumn7.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn7.FieldName = "pp_discount_price";
+            this.gridColumn7.Name = "gridColumn7";
+            // 
+            // gridColumn6
+            // 
+            resources.ApplyResources(this.gridColumn6, "gridColumn6");
+            this.gridColumn6.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn6.FieldName = "pp_ps_oper_price";
+            this.gridColumn6.Name = "gridColumn6";
+            // 
+            // gridColumn4
+            // 
+            resources.ApplyResources(this.gridColumn4, "gridColumn4");
+            this.gridColumn4.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn4.FieldName = "pp_org_price";
+            this.gridColumn4.Name = "gridColumn4";
+            // 
+            // gridColumn5
+            // 
+            resources.ApplyResources(this.gridColumn5, "gridColumn5");
+            this.gridColumn5.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn5.FieldName = "pp_vip_price";
+            this.gridColumn5.Name = "gridColumn5";
+            // 
+            // gridColumn8
+            // 
+            resources.ApplyResources(this.gridColumn8, "gridColumn8");
+            this.gridColumn8.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn8.FieldName = "pp_md_chef_price";
+            this.gridColumn8.Name = "gridColumn8";
+            // 
+            // gridColumn9
+            // 
+            resources.ApplyResources(this.gridColumn9, "gridColumn9");
+            this.gridColumn9.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn9.FieldName = "pp_chef_price";
+            this.gridColumn9.Name = "gridColumn9";
+            // 
+            // gridColumn10
+            // 
+            resources.ApplyResources(this.gridColumn10, "gridColumn10");
+            this.gridColumn10.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn10.FieldName = "pp_num";
+            this.gridColumn10.Name = "gridColumn10";
+            // 
+            // gridColumn11
+            // 
+            resources.ApplyResources(this.gridColumn11, "gridColumn11");
+            this.gridColumn11.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn11.FieldName = "refund_donut_cost";
+            this.gridColumn11.Name = "gridColumn11";
+            // 
+            // gridColumn18
+            // 
+            resources.ApplyResources(this.gridColumn18, "gridColumn18");
+            this.gridColumn18.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn18.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn18.FieldName = "td_donut";
+            this.gridColumn18.Name = "gridColumn18";
+            // 
+            // gridColumn12
+            // 
+            resources.ApplyResources(this.gridColumn12, "gridColumn12");
+            this.gridColumn12.ColumnEdit = this.repositoryItemLookUpEdit1;
+            this.gridColumn12.FieldName = "is_use";
+            this.gridColumn12.Name = "gridColumn12";
+            // 
+            // repositoryItemLookUpEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit1, "repositoryItemLookUpEdit1");
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit1.Buttons"))))});
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            // 
+            // gridColumn13
+            // 
+            resources.ApplyResources(this.gridColumn13, "gridColumn13");
+            this.gridColumn13.ColumnEdit = this.repositoryItemLookUpEdit2;
+            this.gridColumn13.FieldName = "is_donut";
+            this.gridColumn13.Name = "gridColumn13";
+            // 
+            // repositoryItemLookUpEdit2
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit2, "repositoryItemLookUpEdit2");
+            this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit2.Buttons"))))});
+            this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
+            // 
+            // gridColumn27
+            // 
+            resources.ApplyResources(this.gridColumn27, "gridColumn27");
+            this.gridColumn27.ColumnEdit = this.repositoryItemLookUpEdit5;
+            this.gridColumn27.FieldName = "show_level";
+            this.gridColumn27.Name = "gridColumn27";
+            // 
+            // repositoryItemLookUpEdit5
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit5, "repositoryItemLookUpEdit5");
+            this.repositoryItemLookUpEdit5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit5.Buttons"))))});
+            this.repositoryItemLookUpEdit5.Name = "repositoryItemLookUpEdit5";
+            // 
+            // gridColumn28
+            // 
+            resources.ApplyResources(this.gridColumn28, "gridColumn28");
+            this.gridColumn28.ColumnEdit = this.repositoryItemCheckEdit2;
+            this.gridColumn28.FieldName = "is_basic";
+            this.gridColumn28.Name = "gridColumn28";
+            // 
+            // repositoryItemCheckEdit2
+            // 
+            resources.ApplyResources(this.repositoryItemCheckEdit2, "repositoryItemCheckEdit2");
+            this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
+            this.repositoryItemCheckEdit2.ValueChecked = "Y";
+            this.repositoryItemCheckEdit2.ValueUnchecked = "N";
+            // 
+            // gridColumn29
+            // 
+            resources.ApplyResources(this.gridColumn29, "gridColumn29");
+            this.gridColumn29.FieldName = "p_show_name";
+            this.gridColumn29.Name = "gridColumn29";
+            // 
+            // gridColumn14
+            // 
+            resources.ApplyResources(this.gridColumn14, "gridColumn14");
+            this.gridColumn14.ColumnEdit = this.btnDelete;
+            this.gridColumn14.FieldName = "delete";
+            this.gridColumn14.Name = "gridColumn14";
+            // 
+            // btnDelete
+            // 
+            resources.ApplyResources(this.btnDelete, "btnDelete");
+            resources.ApplyResources(editorButtonImageOptions1, "editorButtonImageOptions1");
+            this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("btnDelete.Buttons"))), resources.GetString("btnDelete.Buttons1"), ((int)(resources.GetObject("btnDelete.Buttons2"))), ((bool)(resources.GetObject("btnDelete.Buttons3"))), ((bool)(resources.GetObject("btnDelete.Buttons4"))), ((bool)(resources.GetObject("btnDelete.Buttons5"))), editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, resources.GetString("btnDelete.Buttons6"), ((object)(resources.GetObject("btnDelete.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("btnDelete.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("btnDelete.Buttons9"))))});
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // gridColumn26
+            // 
+            resources.ApplyResources(this.gridColumn26, "gridColumn26");
+            this.gridColumn26.FieldName = "op_img";
+            this.gridColumn26.Name = "gridColumn26";
+            // 
+            // riPicEdit
+            // 
+            this.riPicEdit.Name = "riPicEdit";
+            this.riPicEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            // 
+            // txtPP_Title
+            // 
+            this.txtPP_Title.EditValue2 = null;
+            resources.ApplyResources(this.txtPP_Title, "txtPP_Title");
+            this.txtPP_Title.Name = "txtPP_Title";
+            this.txtPP_Title.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtPP_Title.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPP_Title.RequireMessage = null;
+            // 
+            // picOP_IMG
+            // 
+            this.picOP_IMG.EraserGroup = "CLR1";
+            resources.ApplyResources(this.picOP_IMG, "picOP_IMG");
+            this.picOP_IMG.Name = "picOP_IMG";
+            this.picOP_IMG.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picOP_IMG.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picOP_IMG.DoubleClick += new System.EventHandler(this.picOP_IMG_DoubleClick);
+            // 
+            // efwSimpleButton4
+            // 
+            this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
+            this.efwSimpleButton4.IsMultiLang = false;
+            resources.ApplyResources(this.efwSimpleButton4, "efwSimpleButton4");
+            this.efwSimpleButton4.Name = "efwSimpleButton4";
+            this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
+            this.efwSimpleButton3.IsMultiLang = false;
+            resources.ApplyResources(this.efwSimpleButton3, "efwSimpleButton3");
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
             // efwGroupControlProd
             // 
@@ -434,6 +776,15 @@
             resources.ApplyResources(this.efwGroupControlProd, "efwGroupControlProd");
             this.efwGroupControlProd.IsMultiLang = false;
             this.efwGroupControlProd.Name = "efwGroupControlProd";
+            // 
+            // txtp_title
+            // 
+            this.txtp_title.EditValue2 = null;
+            resources.ApplyResources(this.txtp_title, "txtp_title");
+            this.txtp_title.Name = "txtp_title";
+            this.txtp_title.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtp_title.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtp_title.RequireMessage = null;
             // 
             // efwLabel44
             // 
@@ -733,18 +1084,18 @@
             // 
             this.efwGridControl2.BindSet = null;
             this.efwGridControl2.DBName = "";
-            serviceInfo1.InstanceName = "";
-            serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
-            serviceInfo1.ProcName = "";
-            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
-            this.efwGridControl2.DeleteServiceInfo = serviceInfo1;
-            serviceInfo2.InstanceName = "";
-            serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
-            serviceInfo2.ProcName = "";
-            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
-            this.efwGridControl2.InsertServiceInfo = serviceInfo2;
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
+            this.efwGridControl2.DeleteServiceInfo = serviceInfo4;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
+            this.efwGridControl2.InsertServiceInfo = serviceInfo5;
             this.efwGridControl2.IsAddExcelBtn = true;
             this.efwGridControl2.isAddPrintBtn = true;
             this.efwGridControl2.IsMultiLang = false;
@@ -755,12 +1106,12 @@
             this.efwGridControl2.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl2.PKColumns")));
             this.efwGridControl2.PrevRowHandle = -2147483648;
             this.efwGridControl2.TableName = "";
-            serviceInfo3.InstanceName = "";
-            serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
-            serviceInfo3.ProcName = "";
-            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
-            this.efwGridControl2.UpdateServiceInfo = serviceInfo3;
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
+            this.efwGridControl2.UpdateServiceInfo = serviceInfo6;
             this.efwGridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -1450,19 +1801,19 @@
             // 
             this.efwGridControl3.BindSet = null;
             this.efwGridControl3.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
-            this.efwGridControl3.DeleteServiceInfo = serviceInfo4;
+            serviceInfo7.InstanceName = "";
+            serviceInfo7.IsUserIDAdd = true;
+            serviceInfo7.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo7.ParamsInfo")));
+            serviceInfo7.ProcName = "";
+            serviceInfo7.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo7.UserParams")));
+            this.efwGridControl3.DeleteServiceInfo = serviceInfo7;
             resources.ApplyResources(this.efwGridControl3, "efwGridControl3");
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
-            this.efwGridControl3.InsertServiceInfo = serviceInfo5;
+            serviceInfo8.InstanceName = "";
+            serviceInfo8.IsUserIDAdd = true;
+            serviceInfo8.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo8.ParamsInfo")));
+            serviceInfo8.ProcName = "";
+            serviceInfo8.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo8.UserParams")));
+            this.efwGridControl3.InsertServiceInfo = serviceInfo8;
             this.efwGridControl3.IsAddExcelBtn = false;
             this.efwGridControl3.isAddPrintBtn = true;
             this.efwGridControl3.IsMultiLang = false;
@@ -1478,12 +1829,12 @@
             this.repositoryItemPictureEdit1,
             this.repositoryItemCheckEdit1});
             this.efwGridControl3.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
-            this.efwGridControl3.UpdateServiceInfo = serviceInfo6;
+            serviceInfo9.InstanceName = "";
+            serviceInfo9.IsUserIDAdd = true;
+            serviceInfo9.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo9.ParamsInfo")));
+            serviceInfo9.ProcName = "";
+            serviceInfo9.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo9.UserParams")));
+            this.efwGridControl3.UpdateServiceInfo = serviceInfo9;
             this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             this.efwGridControl3.Click += new System.EventHandler(this.efwGridControl3_Click);
@@ -1579,9 +1930,9 @@
             // repositoryItemButtonEdit1
             // 
             resources.ApplyResources(this.repositoryItemButtonEdit1, "repositoryItemButtonEdit1");
-            resources.ApplyResources(editorButtonImageOptions1, "editorButtonImageOptions1");
+            resources.ApplyResources(editorButtonImageOptions2, "editorButtonImageOptions2");
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), resources.GetString("repositoryItemButtonEdit1.Buttons1"), ((int)(resources.GetObject("repositoryItemButtonEdit1.Buttons2"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons3"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons4"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons5"))), editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, resources.GetString("repositoryItemButtonEdit1.Buttons6"), ((object)(resources.GetObject("repositoryItemButtonEdit1.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("repositoryItemButtonEdit1.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("repositoryItemButtonEdit1.Buttons9"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), resources.GetString("repositoryItemButtonEdit1.Buttons1"), ((int)(resources.GetObject("repositoryItemButtonEdit1.Buttons2"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons3"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons4"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons5"))), editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, resources.GetString("repositoryItemButtonEdit1.Buttons6"), ((object)(resources.GetObject("repositoryItemButtonEdit1.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("repositoryItemButtonEdit1.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("repositoryItemButtonEdit1.Buttons9"))))});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -2075,262 +2426,10 @@
             // efwGroupControl3
             // 
             this.efwGroupControl3.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl3.CaptionImageOptions.Image")));
-            this.efwGroupControl3.Controls.Add(this.efwSimpleButton4);
-            this.efwGroupControl3.Controls.Add(this.txtPP_Title);
-            this.efwGroupControl3.Controls.Add(this.efwSimpleButton3);
-            this.efwGroupControl3.Controls.Add(this.picOP_IMG);
-            this.efwGroupControl3.Controls.Add(this.efwGridControl1);
+            this.efwGroupControl3.Controls.Add(this.splitContainerControl1);
             resources.ApplyResources(this.efwGroupControl3, "efwGroupControl3");
             this.efwGroupControl3.IsMultiLang = false;
             this.efwGroupControl3.Name = "efwGroupControl3";
-            // 
-            // efwSimpleButton4
-            // 
-            this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
-            this.efwSimpleButton4.IsMultiLang = false;
-            resources.ApplyResources(this.efwSimpleButton4, "efwSimpleButton4");
-            this.efwSimpleButton4.Name = "efwSimpleButton4";
-            this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
-            // 
-            // txtPP_Title
-            // 
-            this.txtPP_Title.EditValue2 = null;
-            resources.ApplyResources(this.txtPP_Title, "txtPP_Title");
-            this.txtPP_Title.Name = "txtPP_Title";
-            this.txtPP_Title.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtPP_Title.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtPP_Title.RequireMessage = null;
-            // 
-            // efwSimpleButton3
-            // 
-            this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
-            this.efwSimpleButton3.IsMultiLang = false;
-            resources.ApplyResources(this.efwSimpleButton3, "efwSimpleButton3");
-            this.efwSimpleButton3.Name = "efwSimpleButton3";
-            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
-            // 
-            // picOP_IMG
-            // 
-            this.picOP_IMG.EraserGroup = "CLR1";
-            resources.ApplyResources(this.picOP_IMG, "picOP_IMG");
-            this.picOP_IMG.Name = "picOP_IMG";
-            this.picOP_IMG.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picOP_IMG.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picOP_IMG.DoubleClick += new System.EventHandler(this.picOP_IMG_DoubleClick);
-            // 
-            // efwGridControl1
-            // 
-            this.efwGridControl1.BindSet = null;
-            this.efwGridControl1.DBName = "";
-            serviceInfo7.InstanceName = "";
-            serviceInfo7.IsUserIDAdd = true;
-            serviceInfo7.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo7.ParamsInfo")));
-            serviceInfo7.ProcName = "";
-            serviceInfo7.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo7.UserParams")));
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo7;
-            resources.ApplyResources(this.efwGridControl1, "efwGridControl1");
-            serviceInfo8.InstanceName = "";
-            serviceInfo8.IsUserIDAdd = true;
-            serviceInfo8.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo8.ParamsInfo")));
-            serviceInfo8.ProcName = "";
-            serviceInfo8.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo8.UserParams")));
-            this.efwGridControl1.InsertServiceInfo = serviceInfo8;
-            this.efwGridControl1.IsAddExcelBtn = true;
-            this.efwGridControl1.isAddPrintBtn = true;
-            this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.MainView = this.gridView1;
-            this.efwGridControl1.Name = "efwGridControl1";
-            this.efwGridControl1.NowRowHandle = 0;
-            this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
-            this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemLookUpEdit1,
-            this.repositoryItemLookUpEdit2,
-            this.btnDelete,
-            this.riPicEdit});
-            this.efwGridControl1.TableName = "";
-            serviceInfo9.InstanceName = "";
-            serviceInfo9.IsUserIDAdd = true;
-            serviceInfo9.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo9.ParamsInfo")));
-            serviceInfo9.ProcName = "";
-            serviceInfo9.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo9.UserParams")));
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo9;
-            this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.efwGridControl1.Click += new System.EventHandler(this.efwGridControl1_Click);
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn7,
-            this.gridColumn6,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn8,
-            this.gridColumn9,
-            this.gridColumn10,
-            this.gridColumn11,
-            this.gridColumn18,
-            this.gridColumn12,
-            this.gridColumn13,
-            this.gridColumn14,
-            this.gridColumn26});
-            this.gridView1.GridControl = this.efwGridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn1
-            // 
-            resources.ApplyResources(this.gridColumn1, "gridColumn1");
-            this.gridColumn1.FieldName = "id";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
-            // 
-            // gridColumn2
-            // 
-            resources.ApplyResources(this.gridColumn2, "gridColumn2");
-            this.gridColumn2.FieldName = "pp_title";
-            this.gridColumn2.Name = "gridColumn2";
-            // 
-            // gridColumn3
-            // 
-            resources.ApplyResources(this.gridColumn3, "gridColumn3");
-            this.gridColumn3.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn3.FieldName = "pp_price";
-            this.gridColumn3.Name = "gridColumn3";
-            // 
-            // gridColumn7
-            // 
-            resources.ApplyResources(this.gridColumn7, "gridColumn7");
-            this.gridColumn7.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn7.FieldName = "pp_discount_price";
-            this.gridColumn7.Name = "gridColumn7";
-            // 
-            // gridColumn6
-            // 
-            resources.ApplyResources(this.gridColumn6, "gridColumn6");
-            this.gridColumn6.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn6.FieldName = "pp_ps_oper_price";
-            this.gridColumn6.Name = "gridColumn6";
-            // 
-            // gridColumn4
-            // 
-            resources.ApplyResources(this.gridColumn4, "gridColumn4");
-            this.gridColumn4.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn4.FieldName = "pp_org_price";
-            this.gridColumn4.Name = "gridColumn4";
-            // 
-            // gridColumn5
-            // 
-            resources.ApplyResources(this.gridColumn5, "gridColumn5");
-            this.gridColumn5.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn5.FieldName = "pp_vip_price";
-            this.gridColumn5.Name = "gridColumn5";
-            // 
-            // gridColumn8
-            // 
-            resources.ApplyResources(this.gridColumn8, "gridColumn8");
-            this.gridColumn8.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn8.FieldName = "pp_md_chef_price";
-            this.gridColumn8.Name = "gridColumn8";
-            // 
-            // gridColumn9
-            // 
-            resources.ApplyResources(this.gridColumn9, "gridColumn9");
-            this.gridColumn9.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn9.FieldName = "pp_chef_price";
-            this.gridColumn9.Name = "gridColumn9";
-            // 
-            // gridColumn10
-            // 
-            resources.ApplyResources(this.gridColumn10, "gridColumn10");
-            this.gridColumn10.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn10.FieldName = "pp_num";
-            this.gridColumn10.Name = "gridColumn10";
-            // 
-            // gridColumn11
-            // 
-            resources.ApplyResources(this.gridColumn11, "gridColumn11");
-            this.gridColumn11.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn11.FieldName = "refund_donut_cost";
-            this.gridColumn11.Name = "gridColumn11";
-            // 
-            // gridColumn18
-            // 
-            resources.ApplyResources(this.gridColumn18, "gridColumn18");
-            this.gridColumn18.DisplayFormat.FormatString = "###,###,##0";
-            this.gridColumn18.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn18.FieldName = "td_donut";
-            this.gridColumn18.Name = "gridColumn18";
-            // 
-            // gridColumn12
-            // 
-            resources.ApplyResources(this.gridColumn12, "gridColumn12");
-            this.gridColumn12.ColumnEdit = this.repositoryItemLookUpEdit1;
-            this.gridColumn12.FieldName = "is_use";
-            this.gridColumn12.Name = "gridColumn12";
-            // 
-            // repositoryItemLookUpEdit1
-            // 
-            resources.ApplyResources(this.repositoryItemLookUpEdit1, "repositoryItemLookUpEdit1");
-            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit1.Buttons"))))});
-            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
-            // 
-            // gridColumn13
-            // 
-            resources.ApplyResources(this.gridColumn13, "gridColumn13");
-            this.gridColumn13.ColumnEdit = this.repositoryItemLookUpEdit2;
-            this.gridColumn13.FieldName = "is_donut";
-            this.gridColumn13.Name = "gridColumn13";
-            // 
-            // repositoryItemLookUpEdit2
-            // 
-            resources.ApplyResources(this.repositoryItemLookUpEdit2, "repositoryItemLookUpEdit2");
-            this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit2.Buttons"))))});
-            this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
-            // 
-            // gridColumn14
-            // 
-            resources.ApplyResources(this.gridColumn14, "gridColumn14");
-            this.gridColumn14.ColumnEdit = this.btnDelete;
-            this.gridColumn14.FieldName = "delete";
-            this.gridColumn14.Name = "gridColumn14";
-            // 
-            // btnDelete
-            // 
-            resources.ApplyResources(this.btnDelete, "btnDelete");
-            resources.ApplyResources(editorButtonImageOptions2, "editorButtonImageOptions2");
-            this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("btnDelete.Buttons"))), resources.GetString("btnDelete.Buttons1"), ((int)(resources.GetObject("btnDelete.Buttons2"))), ((bool)(resources.GetObject("btnDelete.Buttons3"))), ((bool)(resources.GetObject("btnDelete.Buttons4"))), ((bool)(resources.GetObject("btnDelete.Buttons5"))), editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, resources.GetString("btnDelete.Buttons6"), ((object)(resources.GetObject("btnDelete.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("btnDelete.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("btnDelete.Buttons9"))))});
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // gridColumn26
-            // 
-            resources.ApplyResources(this.gridColumn26, "gridColumn26");
-            this.gridColumn26.FieldName = "op_img";
-            this.gridColumn26.Name = "gridColumn26";
-            // 
-            // riPicEdit
-            // 
-            this.riPicEdit.Name = "riPicEdit";
-            this.riPicEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             // 
             // splitterControl3
             // 
@@ -2425,14 +2524,13 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
-            // txtp_title
+            // efwSimpleButton5
             // 
-            this.txtp_title.EditValue2 = null;
-            resources.ApplyResources(this.txtp_title, "txtp_title");
-            this.txtp_title.Name = "txtp_title";
-            this.txtp_title.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtp_title.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtp_title.RequireMessage = null;
+            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
+            this.efwSimpleButton5.IsMultiLang = false;
+            resources.ApplyResources(this.efwSimpleButton5, "efwSimpleButton5");
+            this.efwSimpleButton5.Name = "efwSimpleButton5";
+            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
             // 
             // frmMM03_Pop01
             // 
@@ -2448,9 +2546,23 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmMM03_Pop01";
             this.Load += new System.EventHandler(this.frmMM03_Pop01_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
+            this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtp_show_name.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riPicEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPP_Title.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOP_IMG.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).EndInit();
             this.efwGroupControlProd.ResumeLayout(false);
             this.efwGroupControlProd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtp_title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbp_represent.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_explanation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdora_md.Properties)).EndInit();
@@ -2545,14 +2657,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbP_Delivery_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).EndInit();
             this.efwGroupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtPP_Title.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picOP_IMG.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riPicEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).EndInit();
             this.efwGroupControl4.ResumeLayout(false);
             this.efwGroupControl4.PerformLayout();
@@ -2560,7 +2664,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rbPC_Use_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPc_Thumbnail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtp_title.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2753,5 +2856,15 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel44;
         private DevExpress.XtraEditors.CheckEdit cbp_represent;
         private Easy.Framework.WinForm.Control.efwTextEdit txtp_title;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtp_show_name;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel48;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel47;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
     }
 }

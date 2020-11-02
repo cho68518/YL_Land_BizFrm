@@ -654,11 +654,11 @@ namespace YL_GSHOP.BizFrm
 
                     sGshop_name = sql.selectQueryForSingleValue();
                 }
-                if (sGshop_name.Length > 2)
-                {
-                    MessageAgent.MessageShow(MessageType.Warning, sGshop_name + "에서 배스트 샵으로 등록되어 제외 할수가 없습니다");
-                    return;
-                }
+                //if (sGshop_name.Length > 2)
+                //{
+                //    MessageAgent.MessageShow(MessageType.Warning, sGshop_name + "에서 배스트 샵으로 등록되어 제외 할수가 없습니다");
+                //    return;
+                //}
             }
 
 

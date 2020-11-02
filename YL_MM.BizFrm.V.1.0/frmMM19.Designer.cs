@@ -89,6 +89,7 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.chis_gshop = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.txtCoid_name = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.LaTot_Cnt = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtP_Id = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -185,6 +186,8 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -193,6 +196,7 @@
             this.repositoryItemMemoEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.repositoryItemButtonEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.ckQ_is_gshop = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnType_Query = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -221,6 +225,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).BeginInit();
             this.efwPanelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chis_gshop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCoid_name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLogin_Id.Properties)).BeginInit();
@@ -270,6 +275,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAdviceQuery.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit3)).BeginInit();
@@ -279,6 +285,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ckQ_is_gshop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -716,6 +723,7 @@
             // 
             // efwPanelControl2
             // 
+            this.efwPanelControl2.Controls.Add(this.chis_gshop);
             this.efwPanelControl2.Controls.Add(this.txtCoid_name);
             this.efwPanelControl2.Controls.Add(this.LaTot_Cnt);
             this.efwPanelControl2.Controls.Add(this.txtP_Id);
@@ -752,11 +760,23 @@
             this.efwPanelControl2.Size = new System.Drawing.Size(645, 467);
             this.efwPanelControl2.TabIndex = 76;
             // 
+            // chis_gshop
+            // 
+            this.chis_gshop.Location = new System.Drawing.Point(481, 148);
+            this.chis_gshop.Name = "chis_gshop";
+            this.chis_gshop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.chis_gshop.Properties.Appearance.Options.UseFont = true;
+            this.chis_gshop.Properties.Caption = "멀티샵 전환";
+            this.chis_gshop.Properties.ValueChecked = "Y";
+            this.chis_gshop.Properties.ValueUnchecked = "N";
+            this.chis_gshop.Size = new System.Drawing.Size(140, 23);
+            this.chis_gshop.TabIndex = 175;
+            // 
             // txtCoid_name
             // 
             this.txtCoid_name.EditValue2 = null;
             this.txtCoid_name.EraserGroup = "CLR1";
-            this.txtCoid_name.Location = new System.Drawing.Point(481, 154);
+            this.txtCoid_name.Location = new System.Drawing.Point(554, 46);
             this.txtCoid_name.Name = "txtCoid_name";
             this.txtCoid_name.Properties.Appearance.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtCoid_name.Properties.Appearance.Options.UseFont = true;
@@ -791,7 +811,7 @@
             // 
             this.txtP_Id.EditValue2 = null;
             this.txtP_Id.EraserGroup = "CLR1";
-            this.txtP_Id.Location = new System.Drawing.Point(619, 154);
+            this.txtP_Id.Location = new System.Drawing.Point(583, 74);
             this.txtP_Id.Name = "txtP_Id";
             this.txtP_Id.Properties.Appearance.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtP_Id.Properties.Appearance.Options.UseFont = true;
@@ -806,7 +826,7 @@
             // 
             this.txtLogin_Id.EditValue2 = null;
             this.txtLogin_Id.EraserGroup = "CLR1";
-            this.txtLogin_Id.Location = new System.Drawing.Point(595, 154);
+            this.txtLogin_Id.Location = new System.Drawing.Point(559, 74);
             this.txtLogin_Id.Name = "txtLogin_Id";
             this.txtLogin_Id.Properties.Appearance.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtLogin_Id.Properties.Appearance.Options.UseFont = true;
@@ -821,7 +841,7 @@
             // 
             this.txtMember_chk.EditValue2 = null;
             this.txtMember_chk.EraserGroup = "CLR1";
-            this.txtMember_chk.Location = new System.Drawing.Point(513, 154);
+            this.txtMember_chk.Location = new System.Drawing.Point(586, 46);
             this.txtMember_chk.Name = "txtMember_chk";
             this.txtMember_chk.Properties.Appearance.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtMember_chk.Properties.Appearance.Options.UseFont = true;
@@ -849,7 +869,7 @@
             // 
             this.txtIdx.EditValue2 = null;
             this.txtIdx.EraserGroup = "CLR1";
-            this.txtIdx.Location = new System.Drawing.Point(545, 154);
+            this.txtIdx.Location = new System.Drawing.Point(618, 46);
             this.txtIdx.Name = "txtIdx";
             this.txtIdx.Properties.Appearance.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtIdx.Properties.Appearance.Options.UseFont = true;
@@ -1830,7 +1850,8 @@
             this.repositoryItemButtonEdit2,
             this.repositoryItemMemoExEdit4,
             this.repositoryItemMemoEdit4,
-            this.repositoryItemButtonEdit3});
+            this.repositoryItemButtonEdit3,
+            this.repositoryItemCheckEdit1});
             this.efwGridControl2.Size = new System.Drawing.Size(1620, 479);
             this.efwGridControl2.TabIndex = 41;
             this.efwGridControl2.TableName = "";
@@ -1865,14 +1886,14 @@
             this.gridColumn22,
             this.gridColumn3,
             this.gridColumn7,
-            this.gridColumn8});
+            this.gridColumn8,
+            this.gridColumn32});
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "     (건수: {0:d}"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "donut_count", null, "   합계: {0:c})", "")});
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ColumnAutoWidth = false;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn12
             // 
@@ -2016,6 +2037,22 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             // 
+            // gridColumn32
+            // 
+            this.gridColumn32.Caption = "멀티샵 전환";
+            this.gridColumn32.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.gridColumn32.FieldName = "is_gshop";
+            this.gridColumn32.Name = "gridColumn32";
+            this.gridColumn32.Visible = true;
+            this.gridColumn32.VisibleIndex = 13;
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.ValueChecked = "Y";
+            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
+            // 
             // repositoryItemLookUpEdit1
             // 
             this.repositoryItemLookUpEdit1.AutoHeight = false;
@@ -2066,6 +2103,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.ckQ_is_gshop);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton5);
             this.efwPanelControl1.Controls.Add(this.btnType_Query);
             this.efwPanelControl1.Controls.Add(this.efwLabel2);
@@ -2082,6 +2120,18 @@
             this.efwPanelControl1.Size = new System.Drawing.Size(1620, 44);
             this.efwPanelControl1.TabIndex = 40;
             // 
+            // ckQ_is_gshop
+            // 
+            this.ckQ_is_gshop.Location = new System.Drawing.Point(1237, 11);
+            this.ckQ_is_gshop.Name = "ckQ_is_gshop";
+            this.ckQ_is_gshop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.ckQ_is_gshop.Properties.Appearance.Options.UseFont = true;
+            this.ckQ_is_gshop.Properties.Caption = "멀티샵 전환";
+            this.ckQ_is_gshop.Properties.ValueChecked = "Y";
+            this.ckQ_is_gshop.Properties.ValueUnchecked = "N";
+            this.ckQ_is_gshop.Size = new System.Drawing.Size(140, 23);
+            this.ckQ_is_gshop.TabIndex = 176;
+            // 
             // efwSimpleButton5
             // 
             this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
@@ -2097,9 +2147,9 @@
             // 
             this.btnType_Query.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnType_Query.ImageOptions.Image")));
             this.btnType_Query.IsMultiLang = false;
-            this.btnType_Query.Location = new System.Drawing.Point(1239, 5);
+            this.btnType_Query.Location = new System.Drawing.Point(1383, 5);
             this.btnType_Query.Name = "btnType_Query";
-            this.btnType_Query.Size = new System.Drawing.Size(140, 34);
+            this.btnType_Query.Size = new System.Drawing.Size(124, 34);
             this.btnType_Query.TabIndex = 170;
             this.btnType_Query.Text = "상담 내역조회";
             this.btnType_Query.Click += new System.EventHandler(this.btnType_Query_Click);
@@ -2110,7 +2160,7 @@
             this.efwLabel2.Appearance.Options.UseFont = true;
             this.efwLabel2.EraserGroup = null;
             this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(603, 13);
+            this.efwLabel2.Location = new System.Drawing.Point(573, 12);
             this.efwLabel2.Name = "efwLabel2";
             this.efwLabel2.Size = new System.Drawing.Size(60, 20);
             this.efwLabel2.TabIndex = 78;
@@ -2119,7 +2169,7 @@
             // rbType
             // 
             this.rbType.IsMultiLang = false;
-            this.rbType.Location = new System.Drawing.Point(701, 10);
+            this.rbType.Location = new System.Drawing.Point(671, 9);
             this.rbType.Name = "rbType";
             this.rbType.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbType.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -2258,6 +2308,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).EndInit();
             this.efwPanelControl2.ResumeLayout(false);
             this.efwPanelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chis_gshop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCoid_name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLogin_Id.Properties)).EndInit();
@@ -2309,6 +2360,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAdviceQuery.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit3)).EndInit();
@@ -2319,6 +2371,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ckQ_is_gshop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
@@ -2474,5 +2527,9 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel18;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel17;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton6;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chis_gshop;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private Easy.Framework.WinForm.Control.efwCheckEdit ckQ_is_gshop;
     }
 }

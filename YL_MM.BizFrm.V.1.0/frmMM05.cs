@@ -389,8 +389,12 @@ namespace YL_MM.BizFrm
 
                                 cmd.Parameters.Add(new MySqlParameter("i_cell_num", MySqlDbType.VarChar));
                                 cmd.Parameters["i_cell_num"].Value = txtU_CELL_NUM.EditValue;
-                                cmd.Parameters["i_cell_num"].Direction = ParameterDirection.Input;
+                                cmd.Parameters["i_cell_num"].Direction = ParameterDirection.Input; 
 
+
+                                cmd.Parameters.Add(new MySqlParameter("i_is_stock_friend", MySqlDbType.VarChar));
+                                cmd.Parameters["i_is_stock_friend"].Value = chkIS_STOCK_FRIEND.EditValue;
+                                cmd.Parameters["i_is_stock_friend"].Direction = ParameterDirection.Input; 
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();

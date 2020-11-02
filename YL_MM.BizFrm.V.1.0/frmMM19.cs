@@ -41,12 +41,14 @@ namespace YL_MM.BizFrm
             ckPic_Send.EditValue = "N";
             rbAdvice_Type.EditValue = "01";
             rbType.EditValue = "00";
+            chis_gshop.EditValue = "N";
+            ckQ_is_gshop.EditValue = "N";
             //this.LabName.Appearance.Options.UseFont = true;
             //this.LabName.Appearance.Options.UseForeColor = true;
             //this.LabName.Appearance.Options.UseTextOptions = true;
             //this.LabName.Size = new System.Drawing.Size(200, 40);
 
-            
+
             dtE_DATE.EditValue = DateTime.Now;
 
             this.efwLabel5.Appearance.Font = new System.Drawing.Font("맑은고딕", 11);
@@ -95,6 +97,7 @@ namespace YL_MM.BizFrm
                , new ColumnControlSet("u_id", txtU_Id)
                , new ColumnControlSet("advice_date", dtAdvice_Date)
                , new ColumnControlSet("idx", txtIdx)
+               , new ColumnControlSet("is_gshop", chis_gshop)
               );
 
             this.efwGridControl2.Click += efwGridControl2_Click;
@@ -724,6 +727,10 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_md_name"].Value = txtMd_Name.EditValue;
                             cmd.Parameters["i_md_name"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_is_gshop", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_gshop"].Value = chis_gshop.EditValue;
+                            cmd.Parameters["i_is_gshop"].Direction = ParameterDirection.Input; 
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -765,7 +772,10 @@ namespace YL_MM.BizFrm
                         cmd.Parameters[2].Value = txtSearch.EditValue;
 
                         cmd.Parameters.Add("i_Type", MySqlDbType.VarChar, 2);
-                        cmd.Parameters[3].Value = rbType.EditValue;
+                        cmd.Parameters[3].Value = rbType.EditValue; 
+
+                        cmd.Parameters.Add("i_is_gshop", MySqlDbType.VarChar, 2);
+                        cmd.Parameters[4].Value = ckQ_is_gshop.EditValue; 
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

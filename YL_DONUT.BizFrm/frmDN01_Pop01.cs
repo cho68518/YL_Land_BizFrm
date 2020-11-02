@@ -332,6 +332,16 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_o_receive_message1"].Value = txtO_Receive_Message1.EditValue;
                             cmd.Parameters["i_o_receive_message1"].Direction = ParameterDirection.Input;
 
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtRemark.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Delivery_Num", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Delivery_Num"].Value = txtO_Delivery_Num.EditValue;
+                            cmd.Parameters["i_Delivery_Num"].Direction = ParameterDirection.Input;
+
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();

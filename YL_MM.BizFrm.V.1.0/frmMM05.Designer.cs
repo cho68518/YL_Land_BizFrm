@@ -1562,11 +1562,11 @@
             // 
             // chkIS_STOCK_FRIEND
             // 
+            this.chkIS_STOCK_FRIEND.EditValue = "N";
             this.chkIS_STOCK_FRIEND.EraserGroup = "CLR1";
             this.chkIS_STOCK_FRIEND.Location = new System.Drawing.Point(332, 182);
             this.chkIS_STOCK_FRIEND.Name = "chkIS_STOCK_FRIEND";
             this.chkIS_STOCK_FRIEND.Properties.Caption = "주주";
-            this.chkIS_STOCK_FRIEND.Properties.ReadOnly = true;
             this.chkIS_STOCK_FRIEND.Properties.ValueChecked = "Y";
             this.chkIS_STOCK_FRIEND.Properties.ValueUnchecked = "N";
             this.chkIS_STOCK_FRIEND.Size = new System.Drawing.Size(56, 19);

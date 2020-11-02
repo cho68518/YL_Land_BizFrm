@@ -25,7 +25,7 @@ namespace YL_GSHOP.BizFrm
         public frmGSHOP14()
         {
             InitializeComponent();
-            this.QCode = "GSHOP12";
+            this.QCode = "GSHOP14";
             //폼명설정
             this.FrmName = "발모 후기현황";
         }
@@ -40,7 +40,7 @@ namespace YL_GSHOP.BizFrm
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = false;
-            this.IsSave = false;
+            this.IsSave = true;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = false;
@@ -48,6 +48,16 @@ namespace YL_GSHOP.BizFrm
 
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
+            
+            checkEdit1.EditValue = "Y";
+            checkEdit2.EditValue = "N";
+            checkEdit3.EditValue = "N";
+            checkEdit4.EditValue = "N";
+
+            txtIdx1.EditValue = "1";
+            txtIdx2.EditValue = "2";
+            txtIdx3.EditValue = "3";
+            txtIdx4.EditValue = "4";
 
             gridView1.OptionsView.ShowFooter = true;
 
@@ -66,6 +76,7 @@ namespace YL_GSHOP.BizFrm
             );
             this.efwGridControl1.Click += efwGridControl1_Click;
             gridView1.CustomUnboundColumnData += gridView1_CustomUnboundColumnData;
+            Open1();
         }
 
         private void efwGridControl1_Click(object sender, EventArgs e)
@@ -78,8 +89,9 @@ namespace YL_GSHOP.BizFrm
                 picBest_Pic3.LoadAsync(txtPic_Url3.EditValue.ToString());
                 picBest_Pic4.LoadAsync(txtPic_Url4.EditValue.ToString());
                 picBest_Pic5.LoadAsync(txtPic_Url5.EditValue.ToString());
+                txtStory_id.EditValue = dr["story_id"].ToString();
             }
-
+            Cursor.Current = Cursors.Default;
         }
 
         Dictionary<String, Bitmap> iconsCache = new Dictionary<string, Bitmap>();
@@ -167,7 +179,190 @@ namespace YL_GSHOP.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
+
         }
+
+        public void Open1()
+        {
+            try
+            {
+                using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+                {
+                    con.Query = " select idx, before_url, after_url, sort,  story_id from  domalife.tb_gsite_story  ";
+                    DataSet ds = con.selectQueryDataSet();
+                    DataRow[] dr = ds.Tables[0].Select();
+                    CodeData[] codeArray = new CodeData[dr.Length];
+
+                    for (int i = 0; i < dr.Length; i++)
+                    {
+                        if (dr[i]["idx"].ToString() == "1")
+                        {
+                            txtIdx1.EditValue = dr[i]["idx"].ToString();
+                            txtBChoice_Url1.EditValue = dr[i]["before_url"].ToString();
+                            txtAChoice_Url1.EditValue = dr[i]["after_url"].ToString();
+                            txtStory_id1.EditValue = dr[i]["story_id"].ToString();
+                            txtSort1.EditValue = dr[i]["sort"].ToString();
+                            picBChoice_img1.LoadAsync(txtBChoice_Url1.EditValue.ToString());
+                            picAChoice_img1.LoadAsync(txtAChoice_Url1.EditValue.ToString());
+                        }
+                        if (dr[i]["idx"].ToString() == "2")
+                        {
+                            txtIdx2.EditValue = dr[i]["idx"].ToString();
+                            txtBChoice_Url2.EditValue = dr[i]["before_url"].ToString();
+                            txtAChoice_Url2.EditValue = dr[i]["after_url"].ToString();
+                            txtStory_id2.EditValue = dr[i]["story_id"].ToString();
+                            txtSort2.EditValue = dr[i]["sort"].ToString();
+                            picBChoice_img2.LoadAsync(txtBChoice_Url2.EditValue.ToString());
+                            picAChoice_img2.LoadAsync(txtAChoice_Url2.EditValue.ToString());
+                        }
+                        if (dr[i]["idx"].ToString() == "3")
+                        {
+                            txtIdx3.EditValue = dr[i]["idx"].ToString();
+                            txtBChoice_Url3.EditValue = dr[i]["before_url"].ToString();
+                            txtAChoice_Url3.EditValue = dr[i]["after_url"].ToString();
+                            txtStory_id3.EditValue = dr[i]["story_id"].ToString();
+                            txtSort3.EditValue = dr[i]["sort"].ToString();
+                            picBChoice_img3.LoadAsync(txtBChoice_Url3.EditValue.ToString());
+                            picAChoice_img3.LoadAsync(txtAChoice_Url3.EditValue.ToString());
+                        }
+                        if (dr[i]["idx"].ToString() == "4")
+                        {
+                            txtIdx4.EditValue = dr[i]["idx"].ToString();
+                            txtBChoice_Url4.EditValue = dr[i]["before_url"].ToString();
+                            txtAChoice_Url4.EditValue = dr[i]["after_url"].ToString();
+                            txtStory_id4.EditValue = dr[i]["story_id"].ToString();
+                            txtSort4.EditValue = dr[i]["sort"].ToString();
+                            picBChoice_img4.LoadAsync(txtBChoice_Url4.EditValue.ToString());
+                            picAChoice_img4.LoadAsync(txtAChoice_Url4.EditValue.ToString());
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            Cursor.Current = Cursors.Default;
+        }
+
+
+        public override void Save()
+        {
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP14_SAVE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            // 1 번째
+                            cmd.Parameters.Add(new MySqlParameter("i_idx1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_idx1"].Value = Convert.ToInt32(txtIdx1.EditValue);
+                            cmd.Parameters["i_idx1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_bchoice_Url1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_bchoice_Url1"].Value = txtBChoice_Url1.EditValue;
+                            cmd.Parameters["i_bchoice_Url1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_achoice_Url1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_achoice_Url1"].Value =txtAChoice_Url1.EditValue;
+                            cmd.Parameters["i_achoice_Url1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_story_id1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_story_id1"].Value = Convert.ToInt32(txtStory_id1.EditValue);
+                            cmd.Parameters["i_story_id1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_sort1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_sort1"].Value = Convert.ToInt32(txtSort1.EditValue);
+                            cmd.Parameters["i_sort1"].Direction = ParameterDirection.Input;
+
+                            // 2 번째
+                            cmd.Parameters.Add(new MySqlParameter("i_idx2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_idx2"].Value = Convert.ToInt32(txtIdx2.EditValue);
+                            cmd.Parameters["i_idx2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_bchoice_Url2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_bchoice_Url2"].Value = txtBChoice_Url2.EditValue;
+                            cmd.Parameters["i_bchoice_Url2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_achoice_Url2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_achoice_Url2"].Value = txtAChoice_Url2.EditValue;
+                            cmd.Parameters["i_achoice_Url2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_story_id2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_story_id2"].Value = Convert.ToInt32(txtStory_id2.EditValue);
+                            cmd.Parameters["i_story_id2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_sort2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_sort2"].Value = Convert.ToInt32(txtSort2.EditValue);
+                            cmd.Parameters["i_sort2"].Direction = ParameterDirection.Input;
+
+                            // 3 번째
+                            cmd.Parameters.Add(new MySqlParameter("i_idx3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_idx3"].Value = Convert.ToInt32(txtIdx3.EditValue);
+                            cmd.Parameters["i_idx3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_bchoice_Url3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_bchoice_Url3"].Value = txtBChoice_Url3.EditValue;
+                            cmd.Parameters["i_bchoice_Url3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_achoice_Url3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_achoice_Url3"].Value = txtAChoice_Url3.EditValue;
+                            cmd.Parameters["i_achoice_Url3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_story_id3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_story_id3"].Value = Convert.ToInt32(txtStory_id3.EditValue);
+                            cmd.Parameters["i_story_id3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_sort3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_sort3"].Value = Convert.ToInt32(txtSort3.EditValue);
+                            cmd.Parameters["i_sort3"].Direction = ParameterDirection.Input;
+
+                            // 4 번째
+                            cmd.Parameters.Add(new MySqlParameter("i_idx4", MySqlDbType.VarChar));
+                            cmd.Parameters["i_idx4"].Value = Convert.ToInt32(txtIdx4.EditValue);
+                            cmd.Parameters["i_idx4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_bchoice_Url4", MySqlDbType.VarChar));
+                            cmd.Parameters["i_bchoice_Url4"].Value = txtBChoice_Url4.EditValue;
+                            cmd.Parameters["i_bchoice_Url4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_achoice_Url4", MySqlDbType.VarChar));
+                            cmd.Parameters["i_achoice_Url4"].Value = txtAChoice_Url4.EditValue;
+                            cmd.Parameters["i_achoice_Url4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_story_id4", MySqlDbType.VarChar));
+                            cmd.Parameters["i_story_id4"].Value = Convert.ToInt32(txtStory_id4.EditValue);
+                            cmd.Parameters["i_story_id4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_sort4", MySqlDbType.VarChar));
+                            cmd.Parameters["i_sort4"].Value = Convert.ToInt32(txtSort4.EditValue);
+                            cmd.Parameters["i_sort4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+
+
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+
+
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+           
+            }
+        }
+
 
 
         private void picBest_Pic1_DoubleClick(object sender, EventArgs e)
@@ -226,12 +421,503 @@ namespace YL_GSHOP.BizFrm
         {
             Cursor.Current = Cursors.Default;
 
+        }
 
+        private void checkEdit1_CheckedChanged(object sender, EventArgs e)
+        {
+            checkEdit2.EditValue = "N";
+            checkEdit3.EditValue = "N";
+            checkEdit4.EditValue = "N";
+            efwPanel1.BackColor = Color.Aqua;
+        }
 
+        private void checkEdit2_CheckedChanged(object sender, EventArgs e)
+        {
+            checkEdit1.EditValue = "N";
+            checkEdit3.EditValue = "N";
+            checkEdit4.EditValue = "N";
+            efwPanel2.BackColor = Color.Red;
+        }
 
+        private void checkEdit3_CheckedChanged(object sender, EventArgs e)
+        {
+            checkEdit1.EditValue = "N";
+            checkEdit2.EditValue = "N";
+            checkEdit4.EditValue = "N";
+            efwPanel3.BackColor = Color.Red;
+        }
 
+        private void checkEdit4_CheckedChanged(object sender, EventArgs e)
+        {
+            checkEdit1.EditValue = "N";
+            checkEdit2.EditValue = "N";
+            checkEdit3.EditValue = "N";
+            efwPanel4.BackColor = Color.Red;
+        }
 
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            
+            if (string.IsNullOrEmpty(this.txtPic_Url1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "선택된 이미지가 없습니다!");
+                return;
+            }
+            if (checkEdit1.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url1.EditValue = txtPic_Url1.EditValue.ToString();
 
+                if (txtPic_Url1.EditValue.ToString() != "")
+                {
+                    picBChoice_img1.LoadAsync(txtBChoice_Url1.EditValue.ToString());
+                    txtStory_id1.EditValue = txtStory_id.EditValue.ToString();
+                }
+
+            }
+            else if (checkEdit2.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url2.EditValue = txtPic_Url1.EditValue.ToString();
+
+                if (txtPic_Url1.EditValue.ToString() != "")
+                {
+                    picBChoice_img2.LoadAsync(txtBChoice_Url2.EditValue.ToString());
+                    txtStory_id2.EditValue = txtStory_id.EditValue.ToString();
+                }
+
+            }
+            else if (checkEdit3.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url3.EditValue = txtPic_Url1.EditValue.ToString();
+                if (txtPic_Url1.EditValue.ToString() != "")
+                {
+                    picBChoice_img3.LoadAsync(txtBChoice_Url3.EditValue.ToString());
+                    txtStory_id3.EditValue = txtStory_id.EditValue.ToString();
+                }
+
+            }
+            else if (checkEdit4.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url4.EditValue = txtPic_Url1.EditValue.ToString();
+                if (txtPic_Url1.EditValue.ToString() != "")
+                {
+                    picBChoice_img4.LoadAsync(txtBChoice_Url4.EditValue.ToString());
+                    txtStory_id4.EditValue = txtStory_id.EditValue.ToString();
+                }
+
+            }
+
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(this.txtPic_Url1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "선택된 이미지가 없습니다!");
+                return;
+            }
+            if (checkEdit1.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url1.EditValue = txtPic_Url1.EditValue.ToString();
+
+                if (txtPic_Url1.EditValue.ToString() != "")
+                {
+                    picAChoice_img1.LoadAsync(txtAChoice_Url1.EditValue.ToString());
+                    txtStory_id1.EditValue = txtStory_id.EditValue.ToString();
+                }
+
+            }
+            else if (checkEdit2.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url2.EditValue = txtPic_Url1.EditValue.ToString();
+                if (txtPic_Url1.EditValue.ToString() != "")
+                {
+                    picAChoice_img2.LoadAsync(txtAChoice_Url2.EditValue.ToString());
+                    txtStory_id2.EditValue = txtStory_id.EditValue.ToString();
+                }
+
+            }
+            else if (checkEdit3.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url3.EditValue = txtPic_Url1.EditValue.ToString();
+                if (txtPic_Url1.EditValue.ToString() != "")
+                {
+                    picAChoice_img3.LoadAsync(txtAChoice_Url3.EditValue.ToString());
+                    txtStory_id3.EditValue = txtStory_id.EditValue.ToString();
+                }
+
+            }
+            else if (checkEdit4.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url4.EditValue = txtPic_Url1.EditValue.ToString();
+                if (txtPic_Url1.EditValue.ToString() != "")
+                {
+                    picAChoice_img4.LoadAsync(txtAChoice_Url4.EditValue.ToString());
+                    txtStory_id4.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(this.txtPic_Url2.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "선택된 이미지가 없습니다!");
+                return;
+            }
+            if (checkEdit1.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url1.EditValue = txtPic_Url2.EditValue.ToString();
+                if (txtBChoice_Url1.EditValue.ToString() != "")
+                {
+                    picBChoice_img1.LoadAsync(txtBChoice_Url1.EditValue.ToString());
+                    txtStory_id1.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit2.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url2.EditValue = txtPic_Url2.EditValue.ToString();
+                if (txtBChoice_Url2.EditValue.ToString() != "")
+                {
+                    picBChoice_img2.LoadAsync(txtBChoice_Url2.EditValue.ToString());
+                    txtStory_id2.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit3.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url3.EditValue = txtPic_Url2.EditValue.ToString();
+                if (txtBChoice_Url3.EditValue.ToString() != "")
+                {
+                    picBChoice_img3.LoadAsync(txtBChoice_Url3.EditValue.ToString());
+                    txtStory_id3.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit4.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url4.EditValue = txtPic_Url2.EditValue.ToString();
+                if (txtBChoice_Url4.EditValue.ToString() != "")
+                {
+                    picBChoice_img4.LoadAsync(txtBChoice_Url4.EditValue.ToString());
+                    txtStory_id4.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(this.txtPic_Url2.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "선택된 이미지가 없습니다!");
+                return;
+            }
+            if (checkEdit1.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url1.EditValue = txtPic_Url2.EditValue.ToString();
+                if (txtAChoice_Url1.EditValue.ToString() != "")
+                {
+                    picAChoice_img1.LoadAsync(txtAChoice_Url1.EditValue.ToString());
+                    txtStory_id1.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit2.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url2.EditValue = txtPic_Url2.EditValue.ToString();
+                if (txtAChoice_Url2.EditValue.ToString() != "")
+                {
+                    picAChoice_img2.LoadAsync(txtAChoice_Url2.EditValue.ToString());
+                    txtStory_id2.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit3.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url3.EditValue = txtPic_Url2.EditValue.ToString();
+                if (txtAChoice_Url3.EditValue.ToString() != "")
+                {
+                    picAChoice_img3.LoadAsync(txtAChoice_Url3.EditValue.ToString());
+                    txtStory_id3.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit4.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url4.EditValue = txtPic_Url2.EditValue.ToString();
+                if (txtAChoice_Url4.EditValue.ToString() != "")
+                {
+                    picAChoice_img4.LoadAsync(txtAChoice_Url2.EditValue.ToString());
+                    txtStory_id4.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+        }
+
+        private void simpleButton6_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtPic_Url3.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "선택된 이미지가 없습니다!");
+                return;
+            }
+            if (checkEdit1.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url1.EditValue = txtPic_Url3.EditValue.ToString();
+                if (txtBChoice_Url1.EditValue.ToString() != "")
+                {
+                    picBChoice_img1.LoadAsync(txtBChoice_Url1.EditValue.ToString());
+                    txtStory_id1.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit2.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url2.EditValue = txtPic_Url3.EditValue.ToString();
+                if (txtBChoice_Url2.EditValue.ToString() != "")
+                {
+                    picBChoice_img2.LoadAsync(txtBChoice_Url2.EditValue.ToString());
+                    txtStory_id2.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit3.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url3.EditValue = txtPic_Url3.EditValue.ToString();
+                if (txtBChoice_Url3.EditValue.ToString() != "")
+                {
+                    picBChoice_img3.LoadAsync(txtBChoice_Url3.EditValue.ToString());
+                    txtStory_id3.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit4.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url4.EditValue = txtPic_Url3.EditValue.ToString();
+                if (txtBChoice_Url4.EditValue.ToString() != "")
+                {
+                    picBChoice_img4.LoadAsync(txtBChoice_Url4.EditValue.ToString());
+                    txtStory_id4.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtPic_Url3.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "선택된 이미지가 없습니다!");
+                return;
+            }
+            if (checkEdit1.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url1.EditValue = txtPic_Url3.EditValue.ToString();
+                if (txtAChoice_Url1.EditValue.ToString() != "")
+                {
+                    picAChoice_img1.LoadAsync(txtAChoice_Url1.EditValue.ToString());
+                    txtStory_id1.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit2.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url2.EditValue = txtPic_Url3.EditValue.ToString();
+                if (txtAChoice_Url2.EditValue.ToString() != "")
+                {
+                    picAChoice_img2.LoadAsync(txtAChoice_Url2.EditValue.ToString());
+                    txtStory_id2.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit3.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url3.EditValue = txtPic_Url3.EditValue.ToString();
+                if (txtAChoice_Url3.EditValue.ToString() != "")
+                {
+                    picAChoice_img3.LoadAsync(txtAChoice_Url3.EditValue.ToString());
+                    txtStory_id3.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit4.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url4.EditValue = txtPic_Url3.EditValue.ToString();
+                if (txtAChoice_Url4.EditValue.ToString() != "")
+                {
+                    picAChoice_img4.LoadAsync(txtAChoice_Url4.EditValue.ToString());
+                    txtStory_id4.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+        }
+
+        private void simpleButton8_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtPic_Url4.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "선택된 이미지가 없습니다!");
+                return;
+            }
+            if (checkEdit1.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url1.EditValue = txtPic_Url4.EditValue.ToString();
+                if (txtBChoice_Url1.EditValue.ToString() != "")
+                {
+                    picBChoice_img1.LoadAsync(txtBChoice_Url1.EditValue.ToString());
+                    txtStory_id1.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit2.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url2.EditValue = txtPic_Url4.EditValue.ToString();
+                if (txtBChoice_Url2.EditValue.ToString() != "")
+                {
+                    picBChoice_img2.LoadAsync(txtBChoice_Url2.EditValue.ToString());
+                    txtStory_id2.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit3.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url3.EditValue = txtPic_Url4.EditValue.ToString();
+                if (txtBChoice_Url3.EditValue.ToString() != "")
+                {
+                    picBChoice_img3.LoadAsync(txtBChoice_Url3.EditValue.ToString());
+                    txtStory_id3.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit4.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url4.EditValue = txtPic_Url4.EditValue.ToString();
+                if (txtBChoice_Url4.EditValue.ToString() != "")
+                {
+                    picBChoice_img4.LoadAsync(txtBChoice_Url4.EditValue.ToString());
+                    txtStory_id4.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+        }
+
+        private void simpleButton7_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtPic_Url4.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "선택된 이미지가 없습니다!");
+                return;
+            }
+            if (checkEdit1.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url1.EditValue = txtPic_Url4.EditValue.ToString();
+                if (txtAChoice_Url1.EditValue.ToString() != "")
+                {
+                    picAChoice_img1.LoadAsync(txtAChoice_Url1.EditValue.ToString());
+                    txtStory_id1.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit2.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url2.EditValue = txtPic_Url4.EditValue.ToString();
+                if (txtAChoice_Url2.EditValue.ToString() != "")
+                {
+                    picAChoice_img2.LoadAsync(txtAChoice_Url2.EditValue.ToString());
+                    txtStory_id2.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit3.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url3.EditValue = txtPic_Url4.EditValue.ToString();
+                if (txtAChoice_Url3.EditValue.ToString() != "")
+                {
+                    picAChoice_img3.LoadAsync(txtAChoice_Url3.EditValue.ToString());
+                    txtStory_id3.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit4.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url4.EditValue = txtPic_Url4.EditValue.ToString();
+                if (txtAChoice_Url4.EditValue.ToString() != "")
+                {
+                    picAChoice_img4.LoadAsync(txtAChoice_Url4.EditValue.ToString());
+                    txtStory_id4.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+        }
+
+        private void simpleButton10_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtPic_Url5.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "선택된 이미지가 없습니다!");
+                return;
+            }
+            if (checkEdit1.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url1.EditValue = txtPic_Url5.EditValue.ToString();
+                if (txtBChoice_Url1.EditValue.ToString() != "")
+                {
+                    picAChoice_img1.LoadAsync(txtBChoice_Url1.EditValue.ToString());
+                    txtStory_id1.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit2.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url2.EditValue = txtPic_Url5.EditValue.ToString();
+                if (txtBChoice_Url2.EditValue.ToString() != "")
+                {
+                    picAChoice_img2.LoadAsync(txtBChoice_Url2.EditValue.ToString());
+                    txtStory_id2.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit3.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url3.EditValue = txtPic_Url5.EditValue.ToString();
+                if (txtBChoice_Url3.EditValue.ToString() != "")
+                {
+                    picAChoice_img3.LoadAsync(txtBChoice_Url3.EditValue.ToString());
+                    txtStory_id3.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit4.EditValue.ToString() == "Y")
+            {
+                txtBChoice_Url4.EditValue = txtPic_Url5.EditValue.ToString();
+                if (txtBChoice_Url4.EditValue.ToString() != "")
+                {
+                    picBChoice_img4.LoadAsync(txtBChoice_Url4.EditValue.ToString());
+                    txtStory_id4.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+        }
+
+        private void simpleButton9_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtPic_Url5.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "선택된 이미지가 없습니다!");
+                return;
+            }
+            if (checkEdit1.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url1.EditValue = txtPic_Url5.EditValue.ToString();
+                if (txtAChoice_Url1.EditValue.ToString() != "")
+                {
+                    picAChoice_img1.LoadAsync(txtAChoice_Url1.EditValue.ToString());
+                    txtStory_id1.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit2.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url2.EditValue = txtPic_Url5.EditValue.ToString();
+                if (txtAChoice_Url2.EditValue.ToString() != "")
+                {
+                    picAChoice_img2.LoadAsync(txtAChoice_Url2.EditValue.ToString());
+                    txtStory_id2.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit3.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url3.EditValue = txtPic_Url5.EditValue.ToString();
+                if (txtAChoice_Url3.EditValue.ToString() != "")
+                {
+                    picAChoice_img3.LoadAsync(txtAChoice_Url3.EditValue.ToString());
+                    txtStory_id3.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
+            else if (checkEdit4.EditValue.ToString() == "Y")
+            {
+                txtAChoice_Url4.EditValue = txtPic_Url5.EditValue.ToString();
+                if (txtAChoice_Url4.EditValue.ToString() != "")
+                {
+                    picAChoice_img4.LoadAsync(txtAChoice_Url1.EditValue.ToString());
+                    txtStory_id4.EditValue = txtStory_id.EditValue.ToString();
+                }
+            }
         }
     }
 

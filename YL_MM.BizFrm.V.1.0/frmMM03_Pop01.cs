@@ -71,6 +71,7 @@ namespace YL_MM.BizFrm
             this.efwGridControl1.BindControlSet(
                       new ColumnControlSet("id", txtOP_ID)
                       , new ColumnControlSet("pp_title", txtPP_Title)
+                      , new ColumnControlSet("p_show_name", txtp_show_name)
                    ); ;
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -265,6 +266,21 @@ namespace YL_MM.BizFrm
                 repositoryItemLookUpEdit1.EndUpdate();
             }
 
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "SELECT  code_id as DCODE, code_nm as DNAME FROM domaadmin.tb_common_code " +
+                    "         where gcode_id = '00045' " +
+                    "         group by code_id, code_nm ";
+
+                DataSet ds = con.selectQueryDataSet();
+                DataTable retDT100 = ds.Tables[0];
+
+                repositoryItemLookUpEdit5.DataSource = retDT100;
+                //컨트롤 초기화
+                InitCodeControl(repositoryItemLookUpEdit5);
+
+                repositoryItemLookUpEdit5.EndUpdate();
+            }
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
@@ -1932,6 +1948,19 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add("i_op_img", MySqlDbType.VarChar, 255);
                             cmd.Parameters[17].Value = txtOP_IMG.EditValue;
 
+                            sId = gridView1.GetRowCellValue(i, "show_level").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "show_level"));
+                            cmd.Parameters.Add("i_show_level", MySqlDbType.Int32, 11);
+                            cmd.Parameters[18].Value = nId;
+
+                            cmd.Parameters.Add("i_is_basic", MySqlDbType.VarChar, 1);
+                            cmd.Parameters[19].Value = gridView1.GetRowCellValue(i, "is_basic");
+
+                            //cmd.Parameters.Add("i_p_show_name", MySqlDbType.VarChar, 255);
+                            //cmd.Parameters[20].Value = txtp_show_name.EditValue;
 
                             cmd.ExecuteNonQuery();
                             con.Close();
@@ -2244,7 +2273,57 @@ namespace YL_MM.BizFrm
                             //
 
                         cmd.Parameters.Add("i_op_img", MySqlDbType.VarChar, 255);
+                        cmd.Parameters[2].Value = txtOP_IMG.EditValue; 
+
+
+                        cmd.Parameters.Add("i_p_show_name", MySqlDbType.VarChar, 255);
+                        cmd.Parameters[3].Value = txtp_show_name.EditValue; 
+
+
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                    }
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
+            Open2();
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+
+
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_05", con))
+                    {
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_p_id", MySqlDbType.Int32, 11);
+                        cmd.Parameters[0].Value = txtP_Id.EditValue;
+
+                        cmd.Parameters.Add("i_id", MySqlDbType.Int32, 11);
+                        cmd.Parameters[1].Value = txtOP_ID.EditValue;
+                        //
+
+                        cmd.Parameters.Add("i_op_img", MySqlDbType.VarChar, 255);
                         cmd.Parameters[2].Value = txtOP_IMG.EditValue;
+
+
+                        cmd.Parameters.Add("i_p_show_name", MySqlDbType.VarChar, 255);
+                        cmd.Parameters[3].Value = txtp_show_name.EditValue;
 
 
                         cmd.ExecuteNonQuery();
