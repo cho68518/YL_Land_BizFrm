@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5747A80A-CBFC-42C3-B170-73495553A80D}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_DONUT.BizFrm</RootNamespace>
     <AssemblyName>YL_DONUT.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -344,6 +344,24 @@
     <Compile Include="frmTest02.Designer.cs">
       <DependentUpon>frmTest02.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTest03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTest03.Designer.cs">
+      <DependentUpon>frmTest03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTest04.Designer.cs">
+      <DependentUpon>frmTest04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest100.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTest100.Designer.cs">
+      <DependentUpon>frmTest100.cs</DependentUpon>
+    </Compile>
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -462,6 +480,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest02.resx">
       <DependentUpon>frmTest02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest03.resx">
+      <DependentUpon>frmTest03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest04.resx">
+      <DependentUpon>frmTest04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest100.resx">
+      <DependentUpon>frmTest100.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

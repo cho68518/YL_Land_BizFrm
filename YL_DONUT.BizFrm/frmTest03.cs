@@ -175,6 +175,11 @@ namespace YL_DONUT.BizFrm
                 sql.Query += "                       when 'A' then '반품처리중' ";
                 sql.Query += "                       when 'B' then '반품완료'  ";
                 sql.Query += "        end as 주문상태,  ";
+                sql.Query += "        case t200.membership_buy when '1' then 'VIP(할인)가입' ";
+                sql.Query += "                       when '2' then 'GBIZ가입' ";
+                sql.Query += "                       when '3' then 'G멀티샵가입' ";
+                sql.Query += "                       when '4' then '뉴G멀티샵가입' ";
+                sql.Query += "        end as 구분,  ";
                 sql.Query += "        t1.u_id, t1.u_name, t1.u_nickname, t1.login_id, t1.u_chef_level, ";
                 sql.Query += "        t1.is_biz as G멀티샵, t1.g_prod as G제품, ";
                 sql.Query += "        IFNULL(t100.experience_shop,'N') as 체험샵, ";
@@ -381,6 +386,8 @@ namespace YL_DONUT.BizFrm
             efwGridControl11.DataBind(StoryOpen2(s_o_code, "247")); // GV축하스토리
             efwGridControl10.DataBind(StoryOpen2(s_o_code, "242")); // GB축하스토리
             efwGridControl9.DataBind(StoryOpen2(s_o_code, "244"));  // GM축하스토리
+            efwGridControl13.DataBind(StoryOpen3(s_o_code, "223"));  // PR등록스토리
+            efwGridControl12.DataBind(StoryOpen4(s_o_code, "243"));  // PR추천스토리
 
             this.efwGridControl6.MyGridView.BestFitColumns();
             this.efwGridControl7.MyGridView.BestFitColumns();
@@ -388,6 +395,8 @@ namespace YL_DONUT.BizFrm
             this.efwGridControl11.MyGridView.BestFitColumns();
             this.efwGridControl10.MyGridView.BestFitColumns();
             this.efwGridControl9.MyGridView.BestFitColumns();
+            this.efwGridControl13.MyGridView.BestFitColumns();
+            this.efwGridControl12.MyGridView.BestFitColumns();
         }
 
         private void StoryOpen1(string s_o_code, string story_cd)
@@ -411,17 +420,55 @@ namespace YL_DONUT.BizFrm
         {
             using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                sql.Query = sql.Query = " select o_code, user_nickname, user_name, login_id, is_write, story_id, DATE_FORMAT(write_date,'%Y-%m-%d %H:%i:%S') as write_date, user_id, " +
-                                        "        money_type, money, money_fix " +
-                                        "  FROM domalife.story_donut_banks t1 " +
-                                        " WHERE t1.contents_type = '" + story_cd + "'" +
-                                        "   AND t1.o_code = '" + s_o_code + "'" +
-                                        " Order By reg_date DESC ";
+                sql.Query = " select t1.o_code, t1.user_nickname, t1.user_name, t1.login_id, t1.is_write, t1.story_id, DATE_FORMAT(t1.write_date,'%Y-%m-%d %H:%i:%S') as write_date, t1.user_id, " +
+                            "        t1.money_type, t1.money, money_fix " +
+                            "  FROM domalife.story_donut_banks t1 " +
+                            " WHERE t1.contents_type = '" + story_cd + "'" +
+                            "   AND t1.o_code = '" + s_o_code + "'" +
+                            " Order By t1.reg_date DESC ";
 
                 DataSet ds = sql.selectQueryDataSet();
 
                 return ds;
                 
+            }
+        }
+
+        private DataSet StoryOpen3(string s_o_code, string story_cd)
+        {
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = " select t1.o_code, t1.user_nickname, t1.user_name, t1.login_id, t1.is_write, t1.story_id, DATE_FORMAT(t1.write_date,'%Y-%m-%d %H:%i:%S') as write_date, t1.user_id, " +
+                            "        t1.money_type, t1.money, money_fix, t2.donut_count as 적립 " +
+                            "  FROM domalife.story_donut_banks t1 " +
+                            "   LEFT JOIN domalife.donut_shooting_list t2 ON t1.story_id = t2.contents_id AND t2.donut_code = 6023 " +
+                            " WHERE t1.contents_type = '" + story_cd + "'" +
+                            "   AND t1.o_code = (SELECT o_code FROM domamall.tb_gshop_orders WHERE product_o_code = '" + s_o_code + "')" +
+                            " Order By t1.reg_date DESC ";
+
+                DataSet ds = sql.selectQueryDataSet();
+
+                return ds;
+
+            }
+        }
+
+        private DataSet StoryOpen4(string s_o_code, string story_cd)
+        {
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = " select t1.o_code, t1.user_nickname, t1.user_name, t1.login_id, t1.is_write, t1.story_id, DATE_FORMAT(t1.write_date,'%Y-%m-%d %H:%i:%S') as write_date, t1.user_id, " +
+                            "        t1.money_type, t1.money, money_fix, t2.donut_count as 적립 " +
+                            "  FROM domalife.story_donut_banks t1 " +
+                            "   LEFT JOIN domalife.donut_shooting_list t2 ON t1.story_id = t2.contents_id AND t2.donut_code = 6024 " +
+                            " WHERE t1.contents_type = '" + story_cd + "'" +
+                            "   AND t1.o_code = (SELECT o_code FROM domamall.tb_gshop_orders WHERE product_o_code = '" + s_o_code + "')" +
+                            " Order By t1.reg_date DESC ";
+
+                DataSet ds = sql.selectQueryDataSet();
+
+                return ds;
+
             }
         }
 
@@ -717,6 +764,30 @@ namespace YL_DONUT.BizFrm
         {
             for (int i = 0; i < sView.RowCount;)
                 sView.DeleteRow(i);
+        }
+
+        private void gridView13_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView View = sender as GridView;
+
+            if (e.RowHandle >= 0)
+            {
+                //e.Appearance.BackColor = Color.OrangeRed;
+                e.Appearance.BackColor = Color.GreenYellow;
+                e.Appearance.BackColor2 = Color.SeaShell;
+            }
+        }
+
+        private void gridView12_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView View = sender as GridView;
+
+            if (e.RowHandle >= 0)
+            {
+                //e.Appearance.BackColor = Color.OrangeRed;
+                e.Appearance.BackColor = Color.GreenYellow;
+                e.Appearance.BackColor2 = Color.SeaShell;
+            }
         }
     }
 }

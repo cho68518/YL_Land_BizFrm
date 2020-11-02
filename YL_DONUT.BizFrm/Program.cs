@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Easy.Framework.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,13 @@ namespace YL_DONUT.BizFrm
         [STAThread]
         static void Main()
         {
+            //MessageBox.Show(UserInfo.instance().UserId);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
+
+            
         }
     }
 }
