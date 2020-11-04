@@ -123,6 +123,9 @@
     <Reference Include="Tamir.SharpSSH">
       <HintPath>..\YL_MM.BizFrm.V.1.0\bin\Debug\Tamir.SharpSSH.dll</HintPath>
     </Reference>
+    <Reference Include="WinFormHtmlEditor">
+      <HintPath>..\..\Easy.Framework.Release\WinFormHtmlEditor.dll</HintPath>
+    </Reference>
     <Reference Include="YL_PM.BizFrm.V.1.0">
       <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\YL_PM.BizFrm.V.1.0.dll</HintPath>
     </Reference>
@@ -148,11 +151,12 @@
       <DependentUpon>frmRM02.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTest01.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmTest01.Designer.cs">
       <DependentUpon>frmTest01.cs</DependentUpon>
     </Compile>
+    <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
@@ -161,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRM01.resx">
       <DependentUpon>frmRM01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRM02.resx">
+      <DependentUpon>frmRM02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest01.resx">
       <DependentUpon>frmTest01.cs</DependentUpon>

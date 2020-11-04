@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Easy.Framework.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace YL_RM.BizFrm
 {
-    public partial class frmTest01 : Form
+    public partial class frmTest01 : FrmBase
     {
         public frmTest01()
         {

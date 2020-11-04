@@ -76,7 +76,8 @@
             this.efwSimpleButton2.Name = "efwSimpleButton2";
             this.efwSimpleButton2.Size = new System.Drawing.Size(119, 31);
             this.efwSimpleButton2.TabIndex = 3;
-            this.efwSimpleButton2.Text = "frmTest";
+            this.efwSimpleButton2.Text = "frmTest01";
+            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
             // 
             // btnSI0102
             // 
