@@ -44,7 +44,6 @@ namespace YL_DONUT.BizFrm
             this.efwLabel26 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Return_Reason_Detail = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel25 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtRemark = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel24 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Return_Success_Date = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel22 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -137,6 +136,7 @@ namespace YL_DONUT.BizFrm
             this.efwLabel37 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtLGD_Response_Code = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel52 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Delivery_End_Date = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel53 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -144,8 +144,8 @@ namespace YL_DONUT.BizFrm
             this.txtO_Delivery_Comp_Name = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtO_Delivery_Start_Date = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel55 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtRemark = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtO_Delivery_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_S_Cost.Properties)).BeginInit();
@@ -156,7 +156,6 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_D_Cost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Cost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Reason_Detail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Success_Date.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Success_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Complete_Date.Properties.CalendarTimeProperties)).BeginInit();
@@ -213,12 +212,14 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_End_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
             // 
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
+            this.efwGroupControl1.Controls.Add(this.txtRemark);
             this.efwGroupControl1.Controls.Add(this.txtO_Donut_S_Cost);
             this.efwGroupControl1.Controls.Add(this.efwLabel47);
             this.efwGroupControl1.Controls.Add(this.txtO_Total_Cost);
@@ -231,7 +232,6 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl1.Controls.Add(this.efwLabel26);
             this.efwGroupControl1.Controls.Add(this.txtO_Return_Reason_Detail);
             this.efwGroupControl1.Controls.Add(this.efwLabel25);
-            this.efwGroupControl1.Controls.Add(this.txtRemark);
             this.efwGroupControl1.Controls.Add(this.efwLabel24);
             this.efwGroupControl1.Controls.Add(this.txtO_Return_Success_Date);
             this.efwGroupControl1.Controls.Add(this.efwLabel22);
@@ -278,7 +278,7 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(0, 0);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(622, 391);
+            this.efwGroupControl1.Size = new System.Drawing.Size(622, 427);
             this.efwGroupControl1.TabIndex = 0;
             this.efwGroupControl1.Text = "주문 수정";
             // 
@@ -286,7 +286,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.txtO_Donut_S_Cost.EditValue = "0";
             this.txtO_Donut_S_Cost.EditValue2 = null;
-            this.txtO_Donut_S_Cost.Location = new System.Drawing.Point(111, 263);
+            this.txtO_Donut_S_Cost.Location = new System.Drawing.Point(109, 263);
             this.txtO_Donut_S_Cost.Name = "txtO_Donut_S_Cost";
             this.txtO_Donut_S_Cost.Properties.Appearance.Options.UseTextOptions = true;
             this.txtO_Donut_S_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -318,7 +318,7 @@ namespace YL_DONUT.BizFrm
             this.txtO_Total_Cost.EditValue = "0";
             this.txtO_Total_Cost.EditValue2 = null;
             this.txtO_Total_Cost.IsNumericKeyOnly = true;
-            this.txtO_Total_Cost.Location = new System.Drawing.Point(111, 237);
+            this.txtO_Total_Cost.Location = new System.Drawing.Point(109, 237);
             this.txtO_Total_Cost.Name = "txtO_Total_Cost";
             this.txtO_Total_Cost.Properties.Appearance.Options.UseTextOptions = true;
             this.txtO_Total_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -339,7 +339,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.txtO_Purchase_Cost.EditValue = "0";
             this.txtO_Purchase_Cost.EditValue2 = null;
-            this.txtO_Purchase_Cost.Location = new System.Drawing.Point(108, 289);
+            this.txtO_Purchase_Cost.Location = new System.Drawing.Point(109, 289);
             this.txtO_Purchase_Cost.Name = "txtO_Purchase_Cost";
             this.txtO_Purchase_Cost.Properties.Appearance.Options.UseTextOptions = true;
             this.txtO_Purchase_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -444,9 +444,9 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
             this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(506, 30);
+            this.efwSimpleButton1.Location = new System.Drawing.Point(490, 30);
             this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(102, 23);
+            this.efwSimpleButton1.Size = new System.Drawing.Size(118, 23);
             this.efwSimpleButton1.TabIndex = 58;
             this.efwSimpleButton1.Text = "수정";
             this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
@@ -455,7 +455,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel26.EraserGroup = null;
             this.efwLabel26.IsMultiLang = false;
-            this.efwLabel26.Location = new System.Drawing.Point(17, 370);
+            this.efwLabel26.Location = new System.Drawing.Point(20, 395);
             this.efwLabel26.Name = "efwLabel26";
             this.efwLabel26.Size = new System.Drawing.Size(40, 14);
             this.efwLabel26.TabIndex = 57;
@@ -464,7 +464,7 @@ namespace YL_DONUT.BizFrm
             // txtO_Return_Reason_Detail
             // 
             this.txtO_Return_Reason_Detail.EditValue2 = null;
-            this.txtO_Return_Reason_Detail.Location = new System.Drawing.Point(108, 367);
+            this.txtO_Return_Reason_Detail.Location = new System.Drawing.Point(109, 392);
             this.txtO_Return_Reason_Detail.Name = "txtO_Return_Reason_Detail";
             this.txtO_Return_Reason_Detail.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Return_Reason_Detail.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -477,29 +477,17 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel25.EraserGroup = null;
             this.efwLabel25.IsMultiLang = false;
-            this.efwLabel25.Location = new System.Drawing.Point(17, 344);
+            this.efwLabel25.Location = new System.Drawing.Point(17, 369);
             this.efwLabel25.Name = "efwLabel25";
             this.efwLabel25.Size = new System.Drawing.Size(20, 14);
             this.efwLabel25.TabIndex = 55;
             this.efwLabel25.Text = "비고";
             // 
-            // txtRemark
-            // 
-            this.txtRemark.EditValue2 = null;
-            this.txtRemark.Location = new System.Drawing.Point(108, 341);
-            this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtRemark.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRemark.Properties.ReadOnly = true;
-            this.txtRemark.RequireMessage = null;
-            this.txtRemark.Size = new System.Drawing.Size(499, 20);
-            this.txtRemark.TabIndex = 54;
-            // 
             // efwLabel24
             // 
             this.efwLabel24.EraserGroup = null;
             this.efwLabel24.IsMultiLang = false;
-            this.efwLabel24.Location = new System.Drawing.Point(17, 318);
+            this.efwLabel24.Location = new System.Drawing.Point(17, 344);
             this.efwLabel24.Name = "efwLabel24";
             this.efwLabel24.Size = new System.Drawing.Size(40, 14);
             this.efwLabel24.TabIndex = 53;
@@ -509,7 +497,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.txtO_Return_Success_Date.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
             this.txtO_Return_Success_Date.IsRequire = true;
-            this.txtO_Return_Success_Date.Location = new System.Drawing.Point(108, 315);
+            this.txtO_Return_Success_Date.Location = new System.Drawing.Point(109, 341);
             this.txtO_Return_Success_Date.Name = "txtO_Return_Success_Date";
             this.txtO_Return_Success_Date.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.txtO_Return_Success_Date.Properties.Appearance.Options.UseBackColor = true;
@@ -520,14 +508,14 @@ namespace YL_DONUT.BizFrm
             this.txtO_Return_Success_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtO_Return_Success_Date.Properties.ReadOnly = true;
-            this.txtO_Return_Success_Date.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Return_Success_Date.Size = new System.Drawing.Size(208, 20);
             this.txtO_Return_Success_Date.TabIndex = 50;
             // 
             // efwLabel22
             // 
             this.efwLabel22.EraserGroup = null;
             this.efwLabel22.IsMultiLang = false;
-            this.efwLabel22.Location = new System.Drawing.Point(436, 292);
+            this.efwLabel22.Location = new System.Drawing.Point(369, 344);
             this.efwLabel22.Name = "efwLabel22";
             this.efwLabel22.Size = new System.Drawing.Size(50, 14);
             this.efwLabel22.TabIndex = 49;
@@ -537,7 +525,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.txtO_Complete_Date.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
             this.txtO_Complete_Date.IsRequire = true;
-            this.txtO_Complete_Date.Location = new System.Drawing.Point(506, 289);
+            this.txtO_Complete_Date.Location = new System.Drawing.Point(434, 341);
             this.txtO_Complete_Date.Name = "txtO_Complete_Date";
             this.txtO_Complete_Date.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.txtO_Complete_Date.Properties.Appearance.Options.UseBackColor = true;
@@ -548,14 +536,14 @@ namespace YL_DONUT.BizFrm
             this.txtO_Complete_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtO_Complete_Date.Properties.ReadOnly = true;
-            this.txtO_Complete_Date.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Complete_Date.Size = new System.Drawing.Size(173, 20);
             this.txtO_Complete_Date.TabIndex = 48;
             // 
             // efwLabel21
             // 
             this.efwLabel21.EraserGroup = null;
             this.efwLabel21.IsMultiLang = false;
-            this.efwLabel21.Location = new System.Drawing.Point(239, 318);
+            this.efwLabel21.Location = new System.Drawing.Point(17, 318);
             this.efwLabel21.Name = "efwLabel21";
             this.efwLabel21.Size = new System.Drawing.Size(50, 14);
             this.efwLabel21.TabIndex = 47;
@@ -565,7 +553,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.txtO_Cancel_Date.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
             this.txtO_Cancel_Date.IsRequire = true;
-            this.txtO_Cancel_Date.Location = new System.Drawing.Point(304, 315);
+            this.txtO_Cancel_Date.Location = new System.Drawing.Point(109, 315);
             this.txtO_Cancel_Date.Name = "txtO_Cancel_Date";
             this.txtO_Cancel_Date.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.txtO_Cancel_Date.Properties.Appearance.Options.UseBackColor = true;
@@ -576,14 +564,14 @@ namespace YL_DONUT.BizFrm
             this.txtO_Cancel_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtO_Cancel_Date.Properties.ReadOnly = true;
-            this.txtO_Cancel_Date.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Cancel_Date.Size = new System.Drawing.Size(208, 20);
             this.txtO_Cancel_Date.TabIndex = 46;
             // 
             // efwLabel20
             // 
             this.efwLabel20.EraserGroup = null;
             this.efwLabel20.IsMultiLang = false;
-            this.efwLabel20.Location = new System.Drawing.Point(239, 292);
+            this.efwLabel20.Location = new System.Drawing.Point(369, 318);
             this.efwLabel20.Name = "efwLabel20";
             this.efwLabel20.Size = new System.Drawing.Size(50, 14);
             this.efwLabel20.TabIndex = 45;
@@ -593,7 +581,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.txtO_Deposit_Confirm_Date.EditValue = new System.DateTime(2019, 11, 27, 0, 0, 0, 0);
             this.txtO_Deposit_Confirm_Date.IsRequire = true;
-            this.txtO_Deposit_Confirm_Date.Location = new System.Drawing.Point(304, 289);
+            this.txtO_Deposit_Confirm_Date.Location = new System.Drawing.Point(434, 315);
             this.txtO_Deposit_Confirm_Date.Name = "txtO_Deposit_Confirm_Date";
             this.txtO_Deposit_Confirm_Date.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.txtO_Deposit_Confirm_Date.Properties.Appearance.Options.UseBackColor = true;
@@ -604,7 +592,7 @@ namespace YL_DONUT.BizFrm
             this.txtO_Deposit_Confirm_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtO_Deposit_Confirm_Date.Properties.ReadOnly = true;
-            this.txtO_Deposit_Confirm_Date.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Deposit_Confirm_Date.Size = new System.Drawing.Size(174, 20);
             this.txtO_Deposit_Confirm_Date.TabIndex = 44;
             // 
             // efwLabel19
@@ -893,7 +881,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.dtO_Date.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
             this.dtO_Date.IsRequire = true;
-            this.dtO_Date.Location = new System.Drawing.Point(304, 56);
+            this.dtO_Date.Location = new System.Drawing.Point(301, 56);
             this.dtO_Date.Name = "dtO_Date";
             this.dtO_Date.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.dtO_Date.Properties.Appearance.Options.UseBackColor = true;
@@ -904,7 +892,7 @@ namespace YL_DONUT.BizFrm
             this.dtO_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtO_Date.Properties.ReadOnly = true;
-            this.dtO_Date.Size = new System.Drawing.Size(102, 20);
+            this.dtO_Date.Size = new System.Drawing.Size(174, 20);
             this.dtO_Date.TabIndex = 8;
             // 
             // efwLabel4
@@ -942,35 +930,35 @@ namespace YL_DONUT.BizFrm
             // txtO_Code
             // 
             this.txtO_Code.EditValue2 = null;
-            this.txtO_Code.Location = new System.Drawing.Point(304, 30);
+            this.txtO_Code.Location = new System.Drawing.Point(301, 30);
             this.txtO_Code.Name = "txtO_Code";
             this.txtO_Code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Code.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtO_Code.Properties.ReadOnly = true;
             this.txtO_Code.RequireMessage = null;
-            this.txtO_Code.Size = new System.Drawing.Size(177, 20);
+            this.txtO_Code.Size = new System.Drawing.Size(174, 20);
             this.txtO_Code.TabIndex = 4;
             // 
             // efwLabel2
             // 
             this.efwLabel2.EraserGroup = null;
             this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(441, 59);
+            this.efwLabel2.Location = new System.Drawing.Point(490, 59);
             this.efwLabel2.Name = "efwLabel2";
-            this.efwLabel2.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel2.Size = new System.Drawing.Size(20, 14);
             this.efwLabel2.TabIndex = 3;
-            this.efwLabel2.Text = "주문상태";
+            this.efwLabel2.Text = "상태";
             // 
             // txtO_Type
             // 
             this.txtO_Type.EditValue2 = null;
-            this.txtO_Type.Location = new System.Drawing.Point(506, 56);
+            this.txtO_Type.Location = new System.Drawing.Point(528, 56);
             this.txtO_Type.Name = "txtO_Type";
             this.txtO_Type.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Type.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtO_Type.Properties.ReadOnly = true;
             this.txtO_Type.RequireMessage = null;
-            this.txtO_Type.Size = new System.Drawing.Size(102, 20);
+            this.txtO_Type.Size = new System.Drawing.Size(80, 20);
             this.txtO_Type.TabIndex = 2;
             // 
             // efwLabel1
@@ -999,7 +987,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
             this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(528, 30);
+            this.efwSimpleButton3.Location = new System.Drawing.Point(528, 44);
             this.efwSimpleButton3.Name = "efwSimpleButton3";
             this.efwSimpleButton3.Size = new System.Drawing.Size(152, 47);
             this.efwSimpleButton3.TabIndex = 65;
@@ -1593,6 +1581,7 @@ namespace YL_DONUT.BizFrm
             // efwGroupControl4
             // 
             this.efwGroupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl4.CaptionImageOptions.Image")));
+            this.efwGroupControl4.Controls.Add(this.txtO_Delivery_Num);
             this.efwGroupControl4.Controls.Add(this.efwSimpleButton2);
             this.efwGroupControl4.Controls.Add(this.efwLabel52);
             this.efwGroupControl4.Controls.Add(this.efwSimpleButton3);
@@ -1602,20 +1591,30 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl4.Controls.Add(this.txtO_Delivery_Comp_Name);
             this.efwGroupControl4.Controls.Add(this.txtO_Delivery_Start_Date);
             this.efwGroupControl4.Controls.Add(this.efwLabel55);
-            this.efwGroupControl4.Controls.Add(this.txtO_Delivery_Num);
             this.efwGroupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl4.IsMultiLang = false;
             this.efwGroupControl4.Location = new System.Drawing.Point(622, 306);
             this.efwGroupControl4.Name = "efwGroupControl4";
-            this.efwGroupControl4.Size = new System.Drawing.Size(685, 85);
+            this.efwGroupControl4.Size = new System.Drawing.Size(685, 121);
             this.efwGroupControl4.TabIndex = 70;
             this.efwGroupControl4.Text = "배송정보";
+            // 
+            // efwSimpleButton2
+            // 
+            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
+            this.efwSimpleButton2.IsMultiLang = false;
+            this.efwSimpleButton2.Location = new System.Drawing.Point(391, 44);
+            this.efwSimpleButton2.Name = "efwSimpleButton2";
+            this.efwSimpleButton2.Size = new System.Drawing.Size(132, 47);
+            this.efwSimpleButton2.TabIndex = 66;
+            this.efwSimpleButton2.Text = "페이블루 결재승인";
+            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
             // 
             // efwLabel52
             // 
             this.efwLabel52.EraserGroup = null;
             this.efwLabel52.IsMultiLang = false;
-            this.efwLabel52.Location = new System.Drawing.Point(213, 59);
+            this.efwLabel52.Location = new System.Drawing.Point(19, 86);
             this.efwLabel52.Name = "efwLabel52";
             this.efwLabel52.Size = new System.Drawing.Size(50, 14);
             this.efwLabel52.TabIndex = 63;
@@ -1624,7 +1623,7 @@ namespace YL_DONUT.BizFrm
             // txtO_Delivery_End_Date
             // 
             this.txtO_Delivery_End_Date.EditValue2 = null;
-            this.txtO_Delivery_End_Date.Location = new System.Drawing.Point(278, 56);
+            this.txtO_Delivery_End_Date.Location = new System.Drawing.Point(84, 83);
             this.txtO_Delivery_End_Date.Name = "txtO_Delivery_End_Date";
             this.txtO_Delivery_End_Date.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Delivery_End_Date.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1637,7 +1636,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel53.EraserGroup = null;
             this.efwLabel53.IsMultiLang = false;
-            this.efwLabel53.Location = new System.Drawing.Point(213, 35);
+            this.efwLabel53.Location = new System.Drawing.Point(19, 62);
             this.efwLabel53.Name = "efwLabel53";
             this.efwLabel53.Size = new System.Drawing.Size(40, 14);
             this.efwLabel53.TabIndex = 59;
@@ -1647,7 +1646,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel54.EraserGroup = null;
             this.efwLabel54.IsMultiLang = false;
-            this.efwLabel54.Location = new System.Drawing.Point(17, 63);
+            this.efwLabel54.Location = new System.Drawing.Point(211, 86);
             this.efwLabel54.Name = "efwLabel54";
             this.efwLabel54.Size = new System.Drawing.Size(50, 14);
             this.efwLabel54.TabIndex = 61;
@@ -1656,7 +1655,7 @@ namespace YL_DONUT.BizFrm
             // txtO_Delivery_Comp_Name
             // 
             this.txtO_Delivery_Comp_Name.EditValue2 = null;
-            this.txtO_Delivery_Comp_Name.Location = new System.Drawing.Point(278, 30);
+            this.txtO_Delivery_Comp_Name.Location = new System.Drawing.Point(84, 57);
             this.txtO_Delivery_Comp_Name.Name = "txtO_Delivery_Comp_Name";
             this.txtO_Delivery_Comp_Name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Delivery_Comp_Name.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1668,13 +1667,13 @@ namespace YL_DONUT.BizFrm
             // txtO_Delivery_Start_Date
             // 
             this.txtO_Delivery_Start_Date.EditValue2 = null;
-            this.txtO_Delivery_Start_Date.Location = new System.Drawing.Point(84, 57);
+            this.txtO_Delivery_Start_Date.Location = new System.Drawing.Point(278, 83);
             this.txtO_Delivery_Start_Date.Name = "txtO_Delivery_Start_Date";
             this.txtO_Delivery_Start_Date.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Delivery_Start_Date.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtO_Delivery_Start_Date.Properties.ReadOnly = true;
             this.txtO_Delivery_Start_Date.RequireMessage = null;
-            this.txtO_Delivery_Start_Date.Size = new System.Drawing.Size(107, 20);
+            this.txtO_Delivery_Start_Date.Size = new System.Drawing.Size(93, 20);
             this.txtO_Delivery_Start_Date.TabIndex = 60;
             // 
             // efwLabel55
@@ -1687,6 +1686,17 @@ namespace YL_DONUT.BizFrm
             this.efwLabel55.TabIndex = 59;
             this.efwLabel55.Text = "송장번호";
             // 
+            // txtRemark
+            // 
+            this.txtRemark.EditValue2 = null;
+            this.txtRemark.Location = new System.Drawing.Point(109, 366);
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRemark.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRemark.RequireMessage = null;
+            this.txtRemark.Size = new System.Drawing.Size(499, 20);
+            this.txtRemark.TabIndex = 68;
+            // 
             // txtO_Delivery_Num
             // 
             this.txtO_Delivery_Num.EditValue2 = null;
@@ -1694,27 +1704,15 @@ namespace YL_DONUT.BizFrm
             this.txtO_Delivery_Num.Name = "txtO_Delivery_Num";
             this.txtO_Delivery_Num.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Delivery_Num.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Delivery_Num.Properties.ReadOnly = true;
             this.txtO_Delivery_Num.RequireMessage = null;
-            this.txtO_Delivery_Num.Size = new System.Drawing.Size(107, 20);
-            this.txtO_Delivery_Num.TabIndex = 58;
-            // 
-            // efwSimpleButton2
-            // 
-            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
-            this.efwSimpleButton2.IsMultiLang = false;
-            this.efwSimpleButton2.Location = new System.Drawing.Point(391, 30);
-            this.efwSimpleButton2.Name = "efwSimpleButton2";
-            this.efwSimpleButton2.Size = new System.Drawing.Size(132, 47);
-            this.efwSimpleButton2.TabIndex = 66;
-            this.efwSimpleButton2.Text = "페이블루 결재승인";
-            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
+            this.txtO_Delivery_Num.Size = new System.Drawing.Size(287, 20);
+            this.txtO_Delivery_Num.TabIndex = 69;
             // 
             // frmDN01_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1307, 391);
+            this.ClientSize = new System.Drawing.Size(1307, 427);
             this.Controls.Add(this.efwGroupControl4);
             this.Controls.Add(this.efwGroupControl3);
             this.Controls.Add(this.efwGroupControl2);
@@ -1735,7 +1733,6 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_D_Cost.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Cost.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Reason_Detail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Success_Date.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Return_Success_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Complete_Date.Properties.CalendarTimeProperties)).EndInit();
@@ -1795,6 +1792,7 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_End_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -1816,7 +1814,6 @@ namespace YL_DONUT.BizFrm
         private Easy.Framework.WinForm.Control.efwLabel efwLabel26;
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Return_Reason_Detail;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel25;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtRemark;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel24;
         private Easy.Framework.WinForm.Control.efwDateEdit txtO_Return_Success_Date;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel22;
@@ -1897,7 +1894,6 @@ namespace YL_DONUT.BizFrm
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Delivery_Comp_Name;
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Delivery_Start_Date;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel55;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Delivery_Num;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel23;
         private Easy.Framework.WinForm.Control.efwTextEdit txtLGD_Payer;
         private Easy.Framework.WinForm.Control.efwTextEdit txtLGD_CasFlag;
@@ -1917,6 +1913,8 @@ namespace YL_DONUT.BizFrm
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Donut_S_Cost;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel47;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtRemark;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Delivery_Num;
 
         public SizeGripStyle SizeGripStyle { get; private set; }
         public FormStartPosition StartPosition { get; private set; }
