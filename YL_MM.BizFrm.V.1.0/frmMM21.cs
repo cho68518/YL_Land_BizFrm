@@ -204,7 +204,7 @@ namespace YL_MM.BizFrm
         {
             if (e.Control && e.KeyCode == Keys.C)
             {
-                Clipboard.SetText(gridView1.GetFocusedDisplayText());
+                Clipboard.SetText(gridView2.GetFocusedDisplayText());
                 e.Handled = true;
             }
         }
@@ -213,7 +213,7 @@ namespace YL_MM.BizFrm
         {
             if (e.Control && e.KeyCode == Keys.C)
             {
-                Clipboard.SetText(gridView1.GetFocusedDisplayText());
+                Clipboard.SetText(gridView3.GetFocusedDisplayText());
                 e.Handled = true;
             }
         }

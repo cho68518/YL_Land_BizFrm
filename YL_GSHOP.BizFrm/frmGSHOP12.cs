@@ -69,6 +69,8 @@ namespace YL_GSHOP.BizFrm
            , new ColumnControlSet("shooting_date3", txtShooting_Date3)
            , new ColumnControlSet("shooting_date4", txtShooting_Date4)
            , new ColumnControlSet("shooting_date5", txtShooting_Date5)
+           , new ColumnControlSet("story_id", txtstory_id)
+           , new ColumnControlSet("is_use", chis_use)
 
             );
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -161,6 +163,9 @@ namespace YL_GSHOP.BizFrm
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[1].Value = dtE_DATE.EditValue3;
 
+                        cmd.Parameters.Add("i_gshop_name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = txtgshop_name.EditValue;
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -233,6 +238,50 @@ namespace YL_GSHOP.BizFrm
         private void efwGridControl1_MouseMove(object sender, MouseEventArgs e)
         {
             Cursor.Current = Cursors.Default;
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtstory_id.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 발모후기 스토리를 선택하세요!");
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP12_SAVE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_story_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_story_id"].Value = Convert.ToInt32(txtstory_id.EditValue);
+                            cmd.Parameters["i_story_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_use", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_use"].Value = chis_use.EditValue;
+                            cmd.Parameters["i_is_use"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+            }
         }
     }
 }

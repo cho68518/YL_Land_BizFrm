@@ -94,6 +94,7 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn63 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn64 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGridControl2 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -112,6 +113,7 @@
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn65 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGridControl3 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -150,8 +152,8 @@
             this.gridColumn59 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn60 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn64 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn65 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn66 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn67 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwTopPanelControl1)).BeginInit();
             this.efwTopPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkZ.Properties)).BeginInit();
@@ -787,6 +789,14 @@
             this.gridColumn63.Visible = true;
             this.gridColumn63.VisibleIndex = 14;
             // 
+            // gridColumn64
+            // 
+            this.gridColumn64.Caption = "결재구분";
+            this.gridColumn64.FieldName = "is_extend";
+            this.gridColumn64.Name = "gridColumn64";
+            this.gridColumn64.Visible = true;
+            this.gridColumn64.VisibleIndex = 15;
+            // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.efwGridControl2);
@@ -855,7 +865,8 @@
             this.gridColumn27,
             this.gridColumn28,
             this.gridColumn45,
-            this.gridColumn65});
+            this.gridColumn65,
+            this.gridColumn66});
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ColumnAutoWidth = false;
@@ -984,6 +995,14 @@
             this.gridColumn45.Visible = true;
             this.gridColumn45.VisibleIndex = 13;
             // 
+            // gridColumn65
+            // 
+            this.gridColumn65.Caption = "결재구분";
+            this.gridColumn65.FieldName = "is_extend";
+            this.gridColumn65.Name = "gridColumn65";
+            this.gridColumn65.Visible = true;
+            this.gridColumn65.VisibleIndex = 14;
+            // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Controls.Add(this.efwGridControl3);
@@ -1053,7 +1072,8 @@
             this.gridColumn41,
             this.gridColumn42,
             this.gridColumn46,
-            this.gridColumn62});
+            this.gridColumn62,
+            this.gridColumn67});
             this.gridView3.GridControl = this.efwGridControl3;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ColumnAutoWidth = false;
@@ -1393,21 +1413,21 @@
             this.gridColumn61.Visible = true;
             this.gridColumn61.VisibleIndex = 13;
             // 
-            // gridColumn64
+            // gridColumn66
             // 
-            this.gridColumn64.Caption = "결재구분";
-            this.gridColumn64.FieldName = "is_extend";
-            this.gridColumn64.Name = "gridColumn64";
-            this.gridColumn64.Visible = true;
-            this.gridColumn64.VisibleIndex = 15;
+            this.gridColumn66.Caption = "현재등급";
+            this.gridColumn66.FieldName = "u_chef_level";
+            this.gridColumn66.Name = "gridColumn66";
+            this.gridColumn66.Visible = true;
+            this.gridColumn66.VisibleIndex = 15;
             // 
-            // gridColumn65
+            // gridColumn67
             // 
-            this.gridColumn65.Caption = "결재구분";
-            this.gridColumn65.FieldName = "is_extend";
-            this.gridColumn65.Name = "gridColumn65";
-            this.gridColumn65.Visible = true;
-            this.gridColumn65.VisibleIndex = 14;
+            this.gridColumn67.Caption = "현재등급";
+            this.gridColumn67.FieldName = "u_chef_level";
+            this.gridColumn67.Name = "gridColumn67";
+            this.gridColumn67.Visible = true;
+            this.gridColumn67.VisibleIndex = 16;
             // 
             // frmMM11
             // 
@@ -1571,5 +1591,7 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn64;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn65;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn66;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn67;
     }
 }

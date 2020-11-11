@@ -174,6 +174,7 @@ namespace YL_MM.BizFrm
                       , new ColumnControlSet("doramd_type"       , cmbDORAMD_TYPE)
                       , new ColumnControlSet("is_support_team"   , chkIS_SUPPORT_TEAM)
                       , new ColumnControlSet("is_comp_md"        , chkIS_COMP_MD)
+                      , new ColumnControlSet("is_official"       , ckis_official)
                       );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -394,7 +395,15 @@ namespace YL_MM.BizFrm
 
                                 cmd.Parameters.Add(new MySqlParameter("i_is_stock_friend", MySqlDbType.VarChar));
                                 cmd.Parameters["i_is_stock_friend"].Value = chkIS_STOCK_FRIEND.EditValue;
-                                cmd.Parameters["i_is_stock_friend"].Direction = ParameterDirection.Input; 
+                                cmd.Parameters["i_is_stock_friend"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_u_chef_level", MySqlDbType.VarChar));
+                                cmd.Parameters["i_u_chef_level"].Value = cmbU_CHEF_LEVEL.EditValue;
+                                cmd.Parameters["i_u_chef_level"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_is_official", MySqlDbType.VarChar));
+                                cmd.Parameters["i_is_official"].Value = ckis_official.EditValue;
+                                cmd.Parameters["i_is_official"].Direction = ParameterDirection.Input;
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();
