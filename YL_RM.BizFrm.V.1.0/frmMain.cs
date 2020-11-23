@@ -46,5 +46,10 @@ namespace YL_RM.BizFrm
         {
             FrmBaseLoad(new frmTest01());
         }
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmRM03());
+        }
     }
 }

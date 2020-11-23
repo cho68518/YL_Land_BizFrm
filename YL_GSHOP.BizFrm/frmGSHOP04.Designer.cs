@@ -199,6 +199,7 @@
             this.txtEMAIL = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtTEL_NO = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtCEO_NAME = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.gridColumn66 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtPOSTNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
@@ -457,6 +458,7 @@
             this.gridColumn61,
             this.gridColumn11,
             this.gridColumn24,
+            this.gridColumn66,
             this.gridColumn62,
             this.gridColumn13,
             this.gridColumn14,
@@ -665,8 +667,6 @@
             this.gridColumn62.FieldName = "team_nickname";
             this.gridColumn62.Name = "gridColumn62";
             this.gridColumn62.OptionsColumn.AllowEdit = false;
-            this.gridColumn62.Visible = true;
-            this.gridColumn62.VisibleIndex = 17;
             // 
             // gridColumn13
             // 
@@ -2050,6 +2050,14 @@
             this.txtCEO_NAME.Size = new System.Drawing.Size(222, 20);
             this.txtCEO_NAME.TabIndex = 0;
             // 
+            // gridColumn66
+            // 
+            this.gridColumn66.Caption = "실적MD";
+            this.gridColumn66.FieldName = "last_md";
+            this.gridColumn66.Name = "gridColumn66";
+            this.gridColumn66.Visible = true;
+            this.gridColumn66.VisibleIndex = 17;
+            // 
             // frmGSHOP04
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2302,5 +2310,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private Easy.Framework.WinForm.Control.efwRadioGroup rbCom;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn66;
     }
 }

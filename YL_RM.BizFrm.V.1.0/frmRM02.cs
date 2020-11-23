@@ -51,6 +51,7 @@ namespace YL_RM.BizFrm
 
             //dtS_DATE.EditValue = DateTime.Now;
             //dtE_DATE.EditValue = DateTime.Now;
+            rbis_notice.EditValue = "Y";
 
             //gridView1.OptionsView.ShowFooter = true;
 
@@ -61,8 +62,10 @@ namespace YL_RM.BizFrm
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_comment");
 
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl2, "Y", "N", "is_open");
-            
-
+            picBanner1.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            picBanner2.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            picBanner3.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            txtfile1.EditValue = "";
 
             //그리드로 클릭시 컨트롤 데이터 바인딩
             this.efwGridControl1.BindControlSet(
@@ -195,11 +198,16 @@ namespace YL_RM.BizFrm
         {
             Eraser.Clear(this, "ER2");
             txt_content.BodyHtml = "[[IMG_1]]<br /><br />[[IMG_2]]<br /><br />[[IMG_3]]";
-
+            picBanner1.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            picBanner2.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            picBanner3.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
             //chk_is_use.Checked = true;
             //chk_is_notice.Checked = false;
             //chk_is_file.Checked = false;
             //chk_is_comment.Checked = false;
+            txtimg_url1.EditValue = "";
+            txtimg_url2.EditValue = "";
+            txtimg_url3.EditValue = "";
         }
 
         #endregion
@@ -233,21 +241,50 @@ namespace YL_RM.BizFrm
         private void efwGridControl2_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl2.GetSelectedRow(0);
-
+            txtfile1.EditValue = "";
             if (dr != null && dr["content"].ToString() != "0" && dr["content"].ToString() != "")
+            {
                 this.txt_content.DocumentHtml = dr["content"].ToString();
-            this.rbis_notice.EditValue = dr["is_notice"].ToString();
-            picBanner1.LoadAsync(txtimg_url1.EditValue.ToString());
-            picBanner2.LoadAsync(txtimg_url2.EditValue.ToString());
-            picBanner3.LoadAsync(txtimg_url3.EditValue.ToString());
+                this.txtfile1.EditValue = dr["file1"].ToString();
+                this.rbis_notice.EditValue = dr["is_notice"].ToString();
+                picBanner1.LoadAsync(txtimg_url1.EditValue.ToString());
+                picBanner2.LoadAsync(txtimg_url2.EditValue.ToString());
+                picBanner3.LoadAsync(txtimg_url3.EditValue.ToString());
+            }
+
+            if (string.IsNullOrEmpty(this.txtimg_url1.Text))
+            {
+                picBanner1.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            }
+            if (string.IsNullOrEmpty(this.txtimg_url2.Text))
+            {
+                picBanner2.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            }
+            if (string.IsNullOrEmpty(this.txtimg_url3.Text))
+            {
+                picBanner3.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            }
+
         }
-            private void btn_new1_Click(object sender, EventArgs e)
+        private void btn_new1_Click(object sender, EventArgs e)
         {
             Clear();
         }
 
         private void btn_new2_Click(object sender, EventArgs e)
         {
+            rbis_notice.EditValue = "Y";
+            picBanner1.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            picBanner2.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            picBanner3.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+            txtfile1.EditValue = "";
+            txtsubject.EditValue = "";
+            txt_idx2.EditValue = "";
+            txtimg_url1.EditValue = "";
+            txtimg_url2.EditValue = "";
+            txtimg_url3.EditValue = "";
+            txtsubject.EditValue = "";
+            txtfile1.EditValue = "";
             Clear2();
 
         }
@@ -346,14 +383,14 @@ namespace YL_RM.BizFrm
                 }
             }
         }
-
-        private void btn_save2_Click(object sender, EventArgs e)
+        private void save2()
         {
-            if (string.IsNullOrEmpty(this.txt_idx2.Text))
+            if (string.IsNullOrEmpty(this.txt_board_cd2.Text) ^ txt_board_cd2.EditValue.ToString() == "01")
             {
                 MessageAgent.MessageShow(MessageType.Warning, "게시판 코드를 선택하세요 !");
                 return;
             }
+
             if (string.IsNullOrEmpty(this.txtsubject.Text))
             {
                 MessageAgent.MessageShow(MessageType.Warning, "글 제목을 입력하세요 !");
@@ -426,7 +463,7 @@ namespace YL_RM.BizFrm
                         }
                     }
 
-                    MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
+                    //MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
                     Cursor.Current = Cursors.Default;
                     //Clear();
                     Open2();
@@ -438,6 +475,10 @@ namespace YL_RM.BizFrm
                     Cursor.Current = Cursors.Default;
                 }
             }
+        }
+        private void btn_save2_Click(object sender, EventArgs e)
+        {
+            save2();
         }
 
         private void btn_del2_Click(object sender, EventArgs e)
@@ -474,6 +515,18 @@ namespace YL_RM.BizFrm
                     MessageAgent.MessageShow(MessageType.Informational, "처리 되었습니다.");
                     Cursor.Current = Cursors.Default;
                     //Clear();
+                    rbis_notice.EditValue = "Y";
+                    picBanner1.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+                    picBanner2.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+                    picBanner3.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+                    txtfile1.EditValue = "";
+                    txtsubject.EditValue = "";
+                    txt_idx2.EditValue = "";
+                    txtimg_url1.EditValue = "";
+                    txtimg_url2.EditValue = "";
+                    txtimg_url3.EditValue = "";
+                    Clear2();
+
                     Open2();
                     //SetCmb();
                 }
@@ -492,7 +545,11 @@ namespace YL_RM.BizFrm
                 //MessageBox.Show(cmbBoard.EditValue.ToString());
                 txt_board_cd2.EditValue = cmbBoard.EditValue.ToString();
                 txt_board_name2.EditValue = cmbBoard.Text.ToString();
+                txt_idx2.EditValue = "";
+                txtsubject.EditValue = "";
+                txtfile1.EditValue = "";
                 Open2();
+                Clear2();
             }
         }
 
@@ -537,7 +594,7 @@ namespace YL_RM.BizFrm
         {
             if (string.IsNullOrEmpty(this.txt_idx2.Text))
             {
-                MessageAgent.MessageShow(MessageType.Warning, "게시판 코드를 선택하세요 !");
+                MessageAgent.MessageShow(MessageType.Warning, "내용을 저장후 이미지를 선택하세요 !");
                 return;
             }
 
@@ -620,7 +677,7 @@ namespace YL_RM.BizFrm
                 sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
                 sSftp.Close();
                 txtimg_url1.EditValue = "https://media.domalife.net/files/ghomepage/" + Convert.ToString(txt_idx2.EditValue) + "/" + sFileName;
-
+                save2();
 
             }
 
@@ -630,7 +687,7 @@ namespace YL_RM.BizFrm
         {
             if (string.IsNullOrEmpty(this.txt_idx2.Text))
             {
-                MessageAgent.MessageShow(MessageType.Warning, "게시판 코드를 선택하세요 !");
+                MessageAgent.MessageShow(MessageType.Warning, "내용을 저장후 이미지를 선택하세요 !");
                 return;
             }
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -713,7 +770,7 @@ namespace YL_RM.BizFrm
                 sSftp.Close();
                 txtimg_url2.EditValue = "https://media.domalife.net/files/ghomepage/" + Convert.ToString(txt_idx2.EditValue) + "/" + sFileName;
 
-
+                save2();
             }
 
         }
@@ -723,7 +780,7 @@ namespace YL_RM.BizFrm
 
             if (string.IsNullOrEmpty(this.txt_idx2.Text))
             {
-                MessageAgent.MessageShow(MessageType.Warning, "게시판 코드를 선택하세요 !");
+                MessageAgent.MessageShow(MessageType.Warning, "내용을 저장후 이미지를 선택하세요 !");
                 return;
             }
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -805,7 +862,7 @@ namespace YL_RM.BizFrm
                 sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
                 sSftp.Close();
                 txtimg_url3.EditValue = "https://media.domalife.net/files/ghomepage/" + Convert.ToString(txt_idx2.EditValue) + "/" + sFileName;
-
+                save2();
 
             }
 
@@ -818,13 +875,13 @@ namespace YL_RM.BizFrm
         {
             if (string.IsNullOrEmpty(this.txt_idx2.Text))
             {
-                MessageAgent.MessageShow(MessageType.Warning, "게시판 코드를 선택하세요 !");
+                MessageAgent.MessageShow(MessageType.Warning, "내용을 저장후 이미지를 선택하세요 !");
                 return;
             }
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.DefaultExt = "jpg";
-            openFileDialog.FileName = "*.jpg";
+            openFileDialog.DefaultExt = "pdf";
+            openFileDialog.FileName = "*.*";
             openFileDialog.Filter = "이미지파일|*.jpg";
             openFileDialog.Title = "파일 가져오기";
 
@@ -861,10 +918,21 @@ namespace YL_RM.BizFrm
                     di.Create();
                 }
 
+
+
                 // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
 
                 string sOldFile = txtPicPath1.EditValue.ToString();
                 string sFileName = txtfile1.EditValue.ToString();
+
+
+                // 삭제 - 먼저 삭제할 파일을 FileInfo로 연다.
+                FileInfo fileDel = new FileInfo(@"C:\\temp\\" + sFileName);
+                if (fileDel.Exists) // 삭제할 파일이 있는지
+                {
+                    fileDel.Delete(); // 없어도 에러안남
+                }
+
                 string sNewFile = "c:\\temp\\" + sFileName;
                 System.IO.File.Copy(sOldFile, sNewFile);
 
@@ -897,8 +965,14 @@ namespace YL_RM.BizFrm
                     sSftp.Mkdir(sFtpPath2);
                 }
 
+
+
                 sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
                 sSftp.Close();
+                txtfile1.EditValue = "https://media.domalife.net/files/ghomepage/" + Convert.ToString(txt_idx2.EditValue) + "/" + sFileName;
+
+
+                save2();
             }
         }
     }
