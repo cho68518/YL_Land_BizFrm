@@ -62,7 +62,8 @@ namespace YL_RM.BizFrm
             picP_IMG.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
-
+            rbshow_type.EditValue ="Y";
+            rbDshow_type.EditValue = "Y";
             gridView1.OptionsView.ShowFooter = true;
 
             this.efwGridControl1.BindControlSet(
@@ -101,6 +102,7 @@ namespace YL_RM.BizFrm
             if (dr != null && dr["idx"].ToString() != "0")
             {
                 picP_IMG.LoadAsync(dr["img_url"].ToString());
+                picBest_Pic1.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
                 Open1();
             }
         }
@@ -480,7 +482,16 @@ namespace YL_RM.BizFrm
                 MessageAgent.MessageShow(MessageType.Warning, "G 멀티샵을 선택 또는 기본 정보를 저장하세요 !");
                 return;
             }
+            if (string.IsNullOrEmpty(this.dtS_DATE.Text))
+            {
+                dtS_DATE.EditValue = DateTime.Now;
+            }
+            if (string.IsNullOrEmpty(this.dtE_DATE.Text))
+            {
+                dtE_DATE.EditValue = DateTime.Now;
+            }
 
+            
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
                 try

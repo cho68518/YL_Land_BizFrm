@@ -173,5 +173,6 @@ namespace YL_DONUT.BizFrm
         {
             FrmBaseLoad(new frmDN25());
         }
+
     }
 }

@@ -571,8 +571,6 @@
             this.gridColumn39.Caption = "연령/지역";
             this.gridColumn39.FieldName = "remark";
             this.gridColumn39.Name = "gridColumn39";
-            this.gridColumn39.Visible = true;
-            this.gridColumn39.VisibleIndex = 1;
             this.gridColumn39.Width = 115;
             // 
             // gridColumn35
@@ -581,7 +579,7 @@
             this.gridColumn35.FieldName = "bef_date";
             this.gridColumn35.Name = "gridColumn35";
             this.gridColumn35.Visible = true;
-            this.gridColumn35.VisibleIndex = 2;
+            this.gridColumn35.VisibleIndex = 1;
             this.gridColumn35.Width = 109;
             // 
             // gridColumn37
@@ -612,7 +610,7 @@
             this.gridColumn43.Name = "gridColumn43";
             this.gridColumn43.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn43.Visible = true;
-            this.gridColumn43.VisibleIndex = 3;
+            this.gridColumn43.VisibleIndex = 2;
             this.gridColumn43.Width = 168;
             // 
             // repositoryItemPictureEdit5
@@ -1066,7 +1064,7 @@
             // 
             this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
             this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(340, 112);
+            this.efwSimpleButton3.Location = new System.Drawing.Point(223, 34);
             this.efwSimpleButton3.Name = "efwSimpleButton3";
             this.efwSimpleButton3.Size = new System.Drawing.Size(95, 27);
             this.efwSimpleButton3.TabIndex = 106;
@@ -1077,7 +1075,7 @@
             // 
             this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
             this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(340, 35);
+            this.efwSimpleButton1.Location = new System.Drawing.Point(340, 34);
             this.efwSimpleButton1.Name = "efwSimpleButton1";
             this.efwSimpleButton1.Size = new System.Drawing.Size(95, 27);
             this.efwSimpleButton1.TabIndex = 105;
@@ -1087,7 +1085,7 @@
             // rbDshow_type
             // 
             this.rbDshow_type.IsMultiLang = false;
-            this.rbDshow_type.Location = new System.Drawing.Point(199, 34);
+            this.rbDshow_type.Location = new System.Drawing.Point(11, 34);
             this.rbDshow_type.Name = "rbDshow_type";
             this.rbDshow_type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbDshow_type.Properties.Appearance.Options.UseBackColor = true;
@@ -1099,36 +1097,38 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "미노출")});
             this.rbDshow_type.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
             this.rbDshow_type.RequireMessage = null;
-            this.rbDshow_type.Size = new System.Drawing.Size(119, 27);
+            this.rbDshow_type.Size = new System.Drawing.Size(156, 27);
             this.rbDshow_type.TabIndex = 102;
             // 
             // txtremark
             // 
             this.txtremark.EditValue2 = null;
             this.txtremark.EraserGroup = "CLR2";
-            this.txtremark.Location = new System.Drawing.Point(72, 37);
+            this.txtremark.Location = new System.Drawing.Point(148, 213);
             this.txtremark.Name = "txtremark";
             this.txtremark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtremark.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtremark.RequireMessage = null;
-            this.txtremark.Size = new System.Drawing.Size(117, 20);
+            this.txtremark.Size = new System.Drawing.Size(19, 20);
             this.txtremark.TabIndex = 100;
+            this.txtremark.Visible = false;
             // 
             // efwLabel8
             // 
             this.efwLabel8.EraserGroup = null;
             this.efwLabel8.IsMultiLang = false;
-            this.efwLabel8.Location = new System.Drawing.Point(9, 40);
+            this.efwLabel8.Location = new System.Drawing.Point(85, 216);
             this.efwLabel8.Name = "efwLabel8";
             this.efwLabel8.Size = new System.Drawing.Size(45, 14);
             this.efwLabel8.TabIndex = 100;
             this.efwLabel8.Text = "연령/지역";
+            this.efwLabel8.Visible = false;
             // 
             // dtE_DATE
             // 
             this.dtE_DATE.EditValue = new System.DateTime(2020, 11, 17, 0, 0, 0, 0);
             this.dtE_DATE.IsRequire = true;
-            this.dtE_DATE.Location = new System.Drawing.Point(261, 219);
+            this.dtE_DATE.Location = new System.Drawing.Point(237, 219);
             this.dtE_DATE.Name = "dtE_DATE";
             this.dtE_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.dtE_DATE.Properties.Appearance.Options.UseBackColor = true;
@@ -1144,7 +1144,7 @@
             // 
             // picBest_Pic2
             // 
-            this.picBest_Pic2.Location = new System.Drawing.Point(226, 222);
+            this.picBest_Pic2.Location = new System.Drawing.Point(202, 222);
             this.picBest_Pic2.Name = "picBest_Pic2";
             this.picBest_Pic2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picBest_Pic2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
@@ -1164,7 +1164,7 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(298, 216);
+            this.simpleButton2.Location = new System.Drawing.Point(274, 216);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(10, 27);
             this.simpleButton2.TabIndex = 79;

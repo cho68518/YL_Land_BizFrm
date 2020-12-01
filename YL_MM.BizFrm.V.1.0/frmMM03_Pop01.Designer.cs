@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMM03_Pop01));
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo10 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo11 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo12 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy14 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy14 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
@@ -58,23 +60,22 @@
             Easy.Framework.WinForm.Control.Hierarchy hierarchy8 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy9 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy9 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy10 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy10 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo7 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo8 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy11 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy11 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy12 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy12 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy13 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy13 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtp_show_name = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel48 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel47 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -269,7 +270,8 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwLabel49 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel50 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_show_name.Properties)).BeginInit();
@@ -402,6 +404,14 @@
             resources.ApplyResources(this.splitContainerControl1.Panel2, "splitContainerControl1.Panel2");
             this.splitContainerControl1.SplitterPosition = 1106;
             // 
+            // efwSimpleButton5
+            // 
+            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
+            this.efwSimpleButton5.IsMultiLang = false;
+            resources.ApplyResources(this.efwSimpleButton5, "efwSimpleButton5");
+            this.efwSimpleButton5.Name = "efwSimpleButton5";
+            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
+            // 
             // txtp_show_name
             // 
             this.txtp_show_name.EditValue2 = null;
@@ -429,19 +439,19 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo1.InstanceName = "";
-            serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
-            serviceInfo1.ProcName = "";
-            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
+            serviceInfo10.InstanceName = "";
+            serviceInfo10.IsUserIDAdd = true;
+            serviceInfo10.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo10.ParamsInfo")));
+            serviceInfo10.ProcName = "";
+            serviceInfo10.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo10.UserParams")));
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo10;
             resources.ApplyResources(this.efwGridControl1, "efwGridControl1");
-            serviceInfo2.InstanceName = "";
-            serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
-            serviceInfo2.ProcName = "";
-            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
-            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
+            serviceInfo11.InstanceName = "";
+            serviceInfo11.IsUserIDAdd = true;
+            serviceInfo11.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo11.ParamsInfo")));
+            serviceInfo11.ProcName = "";
+            serviceInfo11.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo11.UserParams")));
+            this.efwGridControl1.InsertServiceInfo = serviceInfo11;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
@@ -458,12 +468,12 @@
             this.repositoryItemLookUpEdit5,
             this.repositoryItemCheckEdit2});
             this.efwGridControl1.TableName = "";
-            serviceInfo3.InstanceName = "";
-            serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
-            serviceInfo3.ProcName = "";
-            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
+            serviceInfo12.InstanceName = "";
+            serviceInfo12.IsUserIDAdd = true;
+            serviceInfo12.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo12.ParamsInfo")));
+            serviceInfo12.ProcName = "";
+            serviceInfo12.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo12.UserParams")));
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo12;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.efwGridControl1.Click += new System.EventHandler(this.efwGridControl1_Click);
@@ -659,9 +669,9 @@
             // btnDelete
             // 
             resources.ApplyResources(this.btnDelete, "btnDelete");
-            resources.ApplyResources(editorButtonImageOptions1, "editorButtonImageOptions1");
+            resources.ApplyResources(editorButtonImageOptions3, "editorButtonImageOptions3");
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("btnDelete.Buttons"))), resources.GetString("btnDelete.Buttons1"), ((int)(resources.GetObject("btnDelete.Buttons2"))), ((bool)(resources.GetObject("btnDelete.Buttons3"))), ((bool)(resources.GetObject("btnDelete.Buttons4"))), ((bool)(resources.GetObject("btnDelete.Buttons5"))), editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, resources.GetString("btnDelete.Buttons6"), ((object)(resources.GetObject("btnDelete.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("btnDelete.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("btnDelete.Buttons9"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("btnDelete.Buttons"))), resources.GetString("btnDelete.Buttons1"), ((int)(resources.GetObject("btnDelete.Buttons2"))), ((bool)(resources.GetObject("btnDelete.Buttons3"))), ((bool)(resources.GetObject("btnDelete.Buttons4"))), ((bool)(resources.GetObject("btnDelete.Buttons5"))), editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, resources.GetString("btnDelete.Buttons6"), ((object)(resources.GetObject("btnDelete.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("btnDelete.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("btnDelete.Buttons9"))))});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -715,6 +725,8 @@
             // efwGroupControlProd
             // 
             this.efwGroupControlProd.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControlProd.CaptionImageOptions.Image")));
+            this.efwGroupControlProd.Controls.Add(this.efwLabel50);
+            this.efwGroupControlProd.Controls.Add(this.efwLabel49);
             this.efwGroupControlProd.Controls.Add(this.txtp_title);
             this.efwGroupControlProd.Controls.Add(this.efwLabel44);
             this.efwGroupControlProd.Controls.Add(this.cbp_represent);
@@ -1084,18 +1096,18 @@
             // 
             this.efwGridControl2.BindSet = null;
             this.efwGridControl2.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
-            this.efwGridControl2.DeleteServiceInfo = serviceInfo4;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
-            this.efwGridControl2.InsertServiceInfo = serviceInfo5;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
+            this.efwGridControl2.DeleteServiceInfo = serviceInfo1;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
+            this.efwGridControl2.InsertServiceInfo = serviceInfo2;
             this.efwGridControl2.IsAddExcelBtn = true;
             this.efwGridControl2.isAddPrintBtn = true;
             this.efwGridControl2.IsMultiLang = false;
@@ -1106,12 +1118,12 @@
             this.efwGridControl2.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl2.PKColumns")));
             this.efwGridControl2.PrevRowHandle = -2147483648;
             this.efwGridControl2.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
-            this.efwGridControl2.UpdateServiceInfo = serviceInfo6;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
+            this.efwGridControl2.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -1153,13 +1165,13 @@
             // 
             // cmbP_EC_Code
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbP_EC_Code.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbP_EC_Code.HierarchyInfo = hierarchy1;
+            childHierarchy14.CodeCtrl = null;
+            childHierarchy14.DbName = null;
+            childHierarchy14.SpName = null;
+            this.cmbP_EC_Code.ChildHierarchyInfo = childHierarchy14;
+            hierarchy14.DbName = null;
+            hierarchy14.SpName = null;
+            this.cmbP_EC_Code.HierarchyInfo = hierarchy14;
             this.cmbP_EC_Code.IsMultiLang = false;
             resources.ApplyResources(this.cmbP_EC_Code, "cmbP_EC_Code");
             this.cmbP_EC_Code.Name = "cmbP_EC_Code";
@@ -1197,13 +1209,13 @@
             // 
             // cmbP_Chef_Level
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbP_Chef_Level.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbP_Chef_Level.HierarchyInfo = hierarchy2;
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbP_Chef_Level.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbP_Chef_Level.HierarchyInfo = hierarchy1;
             this.cmbP_Chef_Level.IsMultiLang = false;
             resources.ApplyResources(this.cmbP_Chef_Level, "cmbP_Chef_Level");
             this.cmbP_Chef_Level.Name = "cmbP_Chef_Level";
@@ -1219,13 +1231,13 @@
             // 
             // cmbP_Sell_Type
             // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbP_Sell_Type.ChildHierarchyInfo = childHierarchy3;
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbP_Sell_Type.HierarchyInfo = hierarchy3;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbP_Sell_Type.ChildHierarchyInfo = childHierarchy2;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbP_Sell_Type.HierarchyInfo = hierarchy2;
             this.cmbP_Sell_Type.IsMultiLang = false;
             resources.ApplyResources(this.cmbP_Sell_Type, "cmbP_Sell_Type");
             this.cmbP_Sell_Type.Name = "cmbP_Sell_Type";
@@ -1241,13 +1253,13 @@
             // 
             // cmbP_Show_Type
             // 
-            childHierarchy4.CodeCtrl = null;
-            childHierarchy4.DbName = null;
-            childHierarchy4.SpName = null;
-            this.cmbP_Show_Type.ChildHierarchyInfo = childHierarchy4;
-            hierarchy4.DbName = null;
-            hierarchy4.SpName = null;
-            this.cmbP_Show_Type.HierarchyInfo = hierarchy4;
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbP_Show_Type.ChildHierarchyInfo = childHierarchy3;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbP_Show_Type.HierarchyInfo = hierarchy3;
             this.cmbP_Show_Type.IsMultiLang = false;
             resources.ApplyResources(this.cmbP_Show_Type, "cmbP_Show_Type");
             this.cmbP_Show_Type.Name = "cmbP_Show_Type";
@@ -1306,9 +1318,9 @@
             // 
             // txtP_Min_Purchase_Num
             // 
+            resources.ApplyResources(this.txtP_Min_Purchase_Num, "txtP_Min_Purchase_Num");
             this.txtP_Min_Purchase_Num.EditValue2 = null;
             this.txtP_Min_Purchase_Num.EraserGroup = "CLR1";
-            resources.ApplyResources(this.txtP_Min_Purchase_Num, "txtP_Min_Purchase_Num");
             this.txtP_Min_Purchase_Num.Name = "txtP_Min_Purchase_Num";
             this.txtP_Min_Purchase_Num.Properties.Appearance.Options.UseTextOptions = true;
             this.txtP_Min_Purchase_Num.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1419,13 +1431,13 @@
             // 
             // cmbP_Seller_Id
             // 
-            childHierarchy5.CodeCtrl = null;
-            childHierarchy5.DbName = null;
-            childHierarchy5.SpName = null;
-            this.cmbP_Seller_Id.ChildHierarchyInfo = childHierarchy5;
-            hierarchy5.DbName = null;
-            hierarchy5.SpName = null;
-            this.cmbP_Seller_Id.HierarchyInfo = hierarchy5;
+            childHierarchy4.CodeCtrl = null;
+            childHierarchy4.DbName = null;
+            childHierarchy4.SpName = null;
+            this.cmbP_Seller_Id.ChildHierarchyInfo = childHierarchy4;
+            hierarchy4.DbName = null;
+            hierarchy4.SpName = null;
+            this.cmbP_Seller_Id.HierarchyInfo = hierarchy4;
             this.cmbP_Seller_Id.IsMultiLang = false;
             resources.ApplyResources(this.cmbP_Seller_Id, "cmbP_Seller_Id");
             this.cmbP_Seller_Id.Name = "cmbP_Seller_Id";
@@ -1480,13 +1492,13 @@
             // 
             // cmbShops_Type
             // 
-            childHierarchy6.CodeCtrl = null;
-            childHierarchy6.DbName = null;
-            childHierarchy6.SpName = null;
-            this.cmbShops_Type.ChildHierarchyInfo = childHierarchy6;
-            hierarchy6.DbName = null;
-            hierarchy6.SpName = null;
-            this.cmbShops_Type.HierarchyInfo = hierarchy6;
+            childHierarchy5.CodeCtrl = null;
+            childHierarchy5.DbName = null;
+            childHierarchy5.SpName = null;
+            this.cmbShops_Type.ChildHierarchyInfo = childHierarchy5;
+            hierarchy5.DbName = null;
+            hierarchy5.SpName = null;
+            this.cmbShops_Type.HierarchyInfo = hierarchy5;
             this.cmbShops_Type.IsMultiLang = false;
             resources.ApplyResources(this.cmbShops_Type, "cmbShops_Type");
             this.cmbShops_Type.Name = "cmbShops_Type";
@@ -1502,13 +1514,13 @@
             // 
             // cmbCate_Code4
             // 
-            childHierarchy7.CodeCtrl = null;
-            childHierarchy7.DbName = null;
-            childHierarchy7.SpName = null;
-            this.cmbCate_Code4.ChildHierarchyInfo = childHierarchy7;
-            hierarchy7.DbName = null;
-            hierarchy7.SpName = null;
-            this.cmbCate_Code4.HierarchyInfo = hierarchy7;
+            childHierarchy6.CodeCtrl = null;
+            childHierarchy6.DbName = null;
+            childHierarchy6.SpName = null;
+            this.cmbCate_Code4.ChildHierarchyInfo = childHierarchy6;
+            hierarchy6.DbName = null;
+            hierarchy6.SpName = null;
+            this.cmbCate_Code4.HierarchyInfo = hierarchy6;
             this.cmbCate_Code4.IsMultiLang = false;
             resources.ApplyResources(this.cmbCate_Code4, "cmbCate_Code4");
             this.cmbCate_Code4.Name = "cmbCate_Code4";
@@ -1517,13 +1529,13 @@
             // 
             // cmbCate_Code3
             // 
-            childHierarchy8.CodeCtrl = null;
-            childHierarchy8.DbName = null;
-            childHierarchy8.SpName = null;
-            this.cmbCate_Code3.ChildHierarchyInfo = childHierarchy8;
-            hierarchy8.DbName = null;
-            hierarchy8.SpName = null;
-            this.cmbCate_Code3.HierarchyInfo = hierarchy8;
+            childHierarchy7.CodeCtrl = null;
+            childHierarchy7.DbName = null;
+            childHierarchy7.SpName = null;
+            this.cmbCate_Code3.ChildHierarchyInfo = childHierarchy7;
+            hierarchy7.DbName = null;
+            hierarchy7.SpName = null;
+            this.cmbCate_Code3.HierarchyInfo = hierarchy7;
             this.cmbCate_Code3.IsMultiLang = false;
             resources.ApplyResources(this.cmbCate_Code3, "cmbCate_Code3");
             this.cmbCate_Code3.Name = "cmbCate_Code3";
@@ -1533,13 +1545,13 @@
             // 
             // cmbCate_Code2
             // 
-            childHierarchy9.CodeCtrl = null;
-            childHierarchy9.DbName = null;
-            childHierarchy9.SpName = null;
-            this.cmbCate_Code2.ChildHierarchyInfo = childHierarchy9;
-            hierarchy9.DbName = null;
-            hierarchy9.SpName = null;
-            this.cmbCate_Code2.HierarchyInfo = hierarchy9;
+            childHierarchy8.CodeCtrl = null;
+            childHierarchy8.DbName = null;
+            childHierarchy8.SpName = null;
+            this.cmbCate_Code2.ChildHierarchyInfo = childHierarchy8;
+            hierarchy8.DbName = null;
+            hierarchy8.SpName = null;
+            this.cmbCate_Code2.HierarchyInfo = hierarchy8;
             this.cmbCate_Code2.IsMultiLang = false;
             resources.ApplyResources(this.cmbCate_Code2, "cmbCate_Code2");
             this.cmbCate_Code2.Name = "cmbCate_Code2";
@@ -1549,13 +1561,13 @@
             // 
             // cmbCate_Code1
             // 
-            childHierarchy10.CodeCtrl = null;
-            childHierarchy10.DbName = null;
-            childHierarchy10.SpName = null;
-            this.cmbCate_Code1.ChildHierarchyInfo = childHierarchy10;
-            hierarchy10.DbName = null;
-            hierarchy10.SpName = null;
-            this.cmbCate_Code1.HierarchyInfo = hierarchy10;
+            childHierarchy9.CodeCtrl = null;
+            childHierarchy9.DbName = null;
+            childHierarchy9.SpName = null;
+            this.cmbCate_Code1.ChildHierarchyInfo = childHierarchy9;
+            hierarchy9.DbName = null;
+            hierarchy9.SpName = null;
+            this.cmbCate_Code1.HierarchyInfo = hierarchy9;
             this.cmbCate_Code1.IsMultiLang = false;
             resources.ApplyResources(this.cmbCate_Code1, "cmbCate_Code1");
             this.cmbCate_Code1.Name = "cmbCate_Code1";
@@ -1801,19 +1813,19 @@
             // 
             this.efwGridControl3.BindSet = null;
             this.efwGridControl3.DBName = "";
-            serviceInfo7.InstanceName = "";
-            serviceInfo7.IsUserIDAdd = true;
-            serviceInfo7.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo7.ParamsInfo")));
-            serviceInfo7.ProcName = "";
-            serviceInfo7.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo7.UserParams")));
-            this.efwGridControl3.DeleteServiceInfo = serviceInfo7;
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
+            this.efwGridControl3.DeleteServiceInfo = serviceInfo4;
             resources.ApplyResources(this.efwGridControl3, "efwGridControl3");
-            serviceInfo8.InstanceName = "";
-            serviceInfo8.IsUserIDAdd = true;
-            serviceInfo8.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo8.ParamsInfo")));
-            serviceInfo8.ProcName = "";
-            serviceInfo8.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo8.UserParams")));
-            this.efwGridControl3.InsertServiceInfo = serviceInfo8;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
+            this.efwGridControl3.InsertServiceInfo = serviceInfo5;
             this.efwGridControl3.IsAddExcelBtn = false;
             this.efwGridControl3.isAddPrintBtn = true;
             this.efwGridControl3.IsMultiLang = false;
@@ -1829,12 +1841,12 @@
             this.repositoryItemPictureEdit1,
             this.repositoryItemCheckEdit1});
             this.efwGridControl3.TableName = "";
-            serviceInfo9.InstanceName = "";
-            serviceInfo9.IsUserIDAdd = true;
-            serviceInfo9.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo9.ParamsInfo")));
-            serviceInfo9.ProcName = "";
-            serviceInfo9.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo9.UserParams")));
-            this.efwGridControl3.UpdateServiceInfo = serviceInfo9;
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
+            this.efwGridControl3.UpdateServiceInfo = serviceInfo6;
             this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             this.efwGridControl3.Click += new System.EventHandler(this.efwGridControl3_Click);
@@ -1930,9 +1942,9 @@
             // repositoryItemButtonEdit1
             // 
             resources.ApplyResources(this.repositoryItemButtonEdit1, "repositoryItemButtonEdit1");
-            resources.ApplyResources(editorButtonImageOptions2, "editorButtonImageOptions2");
+            resources.ApplyResources(editorButtonImageOptions4, "editorButtonImageOptions4");
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), resources.GetString("repositoryItemButtonEdit1.Buttons1"), ((int)(resources.GetObject("repositoryItemButtonEdit1.Buttons2"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons3"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons4"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons5"))), editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, resources.GetString("repositoryItemButtonEdit1.Buttons6"), ((object)(resources.GetObject("repositoryItemButtonEdit1.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("repositoryItemButtonEdit1.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("repositoryItemButtonEdit1.Buttons9"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), resources.GetString("repositoryItemButtonEdit1.Buttons1"), ((int)(resources.GetObject("repositoryItemButtonEdit1.Buttons2"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons3"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons4"))), ((bool)(resources.GetObject("repositoryItemButtonEdit1.Buttons5"))), editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, resources.GetString("repositoryItemButtonEdit1.Buttons6"), ((object)(resources.GetObject("repositoryItemButtonEdit1.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("repositoryItemButtonEdit1.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("repositoryItemButtonEdit1.Buttons9"))))});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -2238,13 +2250,13 @@
             // 
             // cmbP_PS_Num
             // 
-            childHierarchy11.CodeCtrl = null;
-            childHierarchy11.DbName = null;
-            childHierarchy11.SpName = null;
-            this.cmbP_PS_Num.ChildHierarchyInfo = childHierarchy11;
-            hierarchy11.DbName = null;
-            hierarchy11.SpName = null;
-            this.cmbP_PS_Num.HierarchyInfo = hierarchy11;
+            childHierarchy10.CodeCtrl = null;
+            childHierarchy10.DbName = null;
+            childHierarchy10.SpName = null;
+            this.cmbP_PS_Num.ChildHierarchyInfo = childHierarchy10;
+            hierarchy10.DbName = null;
+            hierarchy10.SpName = null;
+            this.cmbP_PS_Num.HierarchyInfo = hierarchy10;
             this.cmbP_PS_Num.IsMultiLang = false;
             resources.ApplyResources(this.cmbP_PS_Num, "cmbP_PS_Num");
             this.cmbP_PS_Num.Name = "cmbP_PS_Num";
@@ -2354,13 +2366,13 @@
             // 
             // cmbP_Taxation
             // 
-            childHierarchy12.CodeCtrl = null;
-            childHierarchy12.DbName = null;
-            childHierarchy12.SpName = null;
-            this.cmbP_Taxation.ChildHierarchyInfo = childHierarchy12;
-            hierarchy12.DbName = null;
-            hierarchy12.SpName = null;
-            this.cmbP_Taxation.HierarchyInfo = hierarchy12;
+            childHierarchy11.CodeCtrl = null;
+            childHierarchy11.DbName = null;
+            childHierarchy11.SpName = null;
+            this.cmbP_Taxation.ChildHierarchyInfo = childHierarchy11;
+            hierarchy11.DbName = null;
+            hierarchy11.SpName = null;
+            this.cmbP_Taxation.HierarchyInfo = hierarchy11;
             this.cmbP_Taxation.IsMultiLang = false;
             resources.ApplyResources(this.cmbP_Taxation, "cmbP_Taxation");
             this.cmbP_Taxation.Name = "cmbP_Taxation";
@@ -2397,13 +2409,13 @@
             // 
             // cmbP_Delivery_Type
             // 
-            childHierarchy13.CodeCtrl = null;
-            childHierarchy13.DbName = null;
-            childHierarchy13.SpName = null;
-            this.cmbP_Delivery_Type.ChildHierarchyInfo = childHierarchy13;
-            hierarchy13.DbName = null;
-            hierarchy13.SpName = null;
-            this.cmbP_Delivery_Type.HierarchyInfo = hierarchy13;
+            childHierarchy12.CodeCtrl = null;
+            childHierarchy12.DbName = null;
+            childHierarchy12.SpName = null;
+            this.cmbP_Delivery_Type.ChildHierarchyInfo = childHierarchy12;
+            hierarchy12.DbName = null;
+            hierarchy12.SpName = null;
+            this.cmbP_Delivery_Type.HierarchyInfo = hierarchy12;
             this.cmbP_Delivery_Type.IsMultiLang = false;
             resources.ApplyResources(this.cmbP_Delivery_Type, "cmbP_Delivery_Type");
             this.cmbP_Delivery_Type.Name = "cmbP_Delivery_Type";
@@ -2524,13 +2536,19 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
-            // efwSimpleButton5
+            // efwLabel49
             // 
-            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
-            this.efwSimpleButton5.IsMultiLang = false;
-            resources.ApplyResources(this.efwSimpleButton5, "efwSimpleButton5");
-            this.efwSimpleButton5.Name = "efwSimpleButton5";
-            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
+            this.efwLabel49.EraserGroup = null;
+            this.efwLabel49.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel49, "efwLabel49");
+            this.efwLabel49.Name = "efwLabel49";
+            // 
+            // efwLabel50
+            // 
+            this.efwLabel50.EraserGroup = null;
+            this.efwLabel50.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel50, "efwLabel50");
+            this.efwLabel50.Name = "efwLabel50";
             // 
             // frmMM03_Pop01
             // 
@@ -2866,5 +2884,7 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel48;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel47;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel50;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel49;
     }
 }

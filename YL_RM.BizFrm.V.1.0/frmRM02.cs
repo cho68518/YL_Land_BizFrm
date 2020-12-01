@@ -95,6 +95,7 @@ namespace YL_RM.BizFrm
                       , new ColumnControlSet("file1", txtfile1)
                       , new ColumnControlSet("subject", txtsubject)
                       , new ColumnControlSet("is_notice", rbis_notice)
+                      , new ColumnControlSet("summury", txtsummury)
                       );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -232,7 +233,7 @@ namespace YL_RM.BizFrm
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
 
-            //if (dr != null && dr["FLR"].ToString() != "0" && dr["FLR"].ToString() != "")
+            //if (dr != null && dr["FLR"].ToString() != "0" && dr["content"].ToString() != "")
             //    this.xtraTabPage3.PageEnabled = true;
             //else
             //    this.xtraTabPage3.PageEnabled = false;
@@ -241,30 +242,8 @@ namespace YL_RM.BizFrm
         private void efwGridControl2_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl2.GetSelectedRow(0);
-            txtfile1.EditValue = "";
             if (dr != null && dr["content"].ToString() != "0" && dr["content"].ToString() != "")
-            {
-                this.txt_content.DocumentHtml = dr["content"].ToString();
-                this.txtfile1.EditValue = dr["file1"].ToString();
-                this.rbis_notice.EditValue = dr["is_notice"].ToString();
-                picBanner1.LoadAsync(txtimg_url1.EditValue.ToString());
-                picBanner2.LoadAsync(txtimg_url2.EditValue.ToString());
-                picBanner3.LoadAsync(txtimg_url3.EditValue.ToString());
-            }
-
-            if (string.IsNullOrEmpty(this.txtimg_url1.Text))
-            {
-                picBanner1.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
-            }
-            if (string.IsNullOrEmpty(this.txtimg_url2.Text))
-            {
-                picBanner2.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
-            }
-            if (string.IsNullOrEmpty(this.txtimg_url3.Text))
-            {
-                picBanner3.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
-            }
-
+                txt_content.BodyHtml = dr["content"].ToString();
         }
         private void btn_new1_Click(object sender, EventArgs e)
         {
@@ -285,6 +264,7 @@ namespace YL_RM.BizFrm
             txtimg_url3.EditValue = "";
             txtsubject.EditValue = "";
             txtfile1.EditValue = "";
+            txtsummury.EditValue = "";
             Clear2();
 
         }
@@ -450,6 +430,9 @@ namespace YL_RM.BizFrm
                             cmd.Parameters["i_is_notice"].Value = rbis_notice.EditValue;
                             cmd.Parameters["i_is_notice"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_summury", MySqlDbType.VarChar));
+                            cmd.Parameters["i_summury"].Value = txtsummury.EditValue;
+                            cmd.Parameters["i_summury"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_idx", MySqlDbType.VarChar));
                             cmd.Parameters["o_idx"].Direction = ParameterDirection.Output;
@@ -975,5 +958,6 @@ namespace YL_RM.BizFrm
                 save2();
             }
         }
+
     }
 }
