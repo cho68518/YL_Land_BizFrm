@@ -107,6 +107,7 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("gb_ad_sele_story", txtGB_AD_CELE_STORY)
                     , new ColumnControlSet("gm_cash_cele_story", txtGM_CASH_CELE_STORY)
                     , new ColumnControlSet("ps_donut_ad", txtPS_DONUT_AD)
+                    , new ColumnControlSet("add_p_name", txtadd_p_name)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -290,6 +291,12 @@ namespace YL_DONUT.BizFrm
                 return;
             }
 
+            if (string.IsNullOrEmpty(this.cmbCate_Code1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 카테고리 대분류를 입력하세요!");
+                return;
+            }
+
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
                 try
@@ -456,6 +463,10 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_ps_donut_ad"].Value = Convert.ToInt32(txtPS_DONUT_AD.EditValue);
                             cmd.Parameters["i_ps_donut_ad"].Direction = ParameterDirection.Input;
 
+
+                            cmd.Parameters.Add(new MySqlParameter("i_add_p_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_add_p_name"].Value = txtadd_p_name.EditValue;
+                            cmd.Parameters["i_add_p_name"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

@@ -40,6 +40,7 @@
     <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\DevExpress.Utils.v18.2.dll</HintPath>
@@ -111,10 +112,14 @@
       <HintPath>..\YL_MM.BizFrm.V.1.0\bin\Debug\Org.Mentalis.Security.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -141,6 +146,12 @@
     </Compile>
     <Compile Include="Dlg\frmGMember_info.designer.cs">
       <DependentUpon>frmGMember_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRM04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmRM04.Designer.cs">
+      <DependentUpon>frmRM04.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRM03.cs">
       <SubType>UserControl</SubType>
@@ -178,6 +189,9 @@
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Dlg\frmGMember_info.resx">
       <DependentUpon>frmGMember_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRM04.resx">
+      <DependentUpon>frmRM04.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRM03.resx">
       <DependentUpon>frmRM03.cs</DependentUpon>

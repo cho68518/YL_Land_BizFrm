@@ -98,6 +98,24 @@ namespace YL_DONUT.BizFrm
             }
             cmbSellers.EditValue = "0";
 
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM domaadmin.tb_common_code where gcode_id = '00025' and code_id in ('O','P')  ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbChange_type, codeArray);
+            }
+            cmbChange_type.EditValue = "P";
         }
 
 
@@ -309,9 +327,61 @@ namespace YL_DONUT.BizFrm
         }
 
 
+        private void efwSimpleButton3_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gridView1.RowCount; i++)
+                gridView1.SetRowCellValue(i, gridView1.Columns["chk"], "Y");
+        }
+
+        private void efwSimpleButton4_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gridView1.RowCount; i++)
+                gridView1.SetRowCellValue(i, gridView1.Columns["chk"], "N");
+        }
+
+        private void efwSimpleButton6_Click_1(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "주문 상태를 변경 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+
+                        for (int i = 0; i < gridView1.DataRowCount; i++)
+                        {
+
+                            if (gridView1.GetRowCellValue(i, "chk").ToString() == "Y"  )
+                            {
+                                using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN01_SAVE_05", con))
+                                {
+                                    // Console.WriteLine("********" + gridView1.GetRowCellValue(i, "is_fix"));
 
 
+                                    con.Open();
+                                    cmd.CommandType = CommandType.StoredProcedure;
 
+                                    cmd.Parameters.Add("i_id", MySqlDbType.Int32, 50);
+                                    cmd.Parameters[0].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "id"));
 
+                                    cmd.Parameters.Add("i_o_type", MySqlDbType.VarChar, 10);
+                                    cmd.Parameters[1].Value = cmbChange_type.EditValue;
+
+                                    cmd.ExecuteNonQuery();
+                                    con.Close();
+                                }
+                            }
+                        }
+                    }
+                    MessageAgent.MessageShow(MessageType.Informational, "주문 상태가 변경 되었습니다.");
+                    Search();
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
     }
 }

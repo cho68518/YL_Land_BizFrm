@@ -1142,8 +1142,8 @@ namespace YL_MM.BizFrm
                 // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
 
                 string sOldFile = txtTab3_PicPath1.EditValue.ToString();
-                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
-                //string sFileName = txtTab3_imgname.EditValue.ToString();
+                //string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                string sFileName = txtTab3_imgname.EditValue.ToString();
                 string sNewFile = "c:\\temp\\" + sFileName;
                 System.IO.File.Delete(sNewFile);
                 System.IO.File.Copy(sOldFile, sNewFile);
