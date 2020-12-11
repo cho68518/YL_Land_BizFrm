@@ -177,7 +177,7 @@
             // 
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(877, 18);
+            this.efwLabel1.Location = new System.Drawing.Point(888, 18);
             this.efwLabel1.Name = "efwLabel1";
             this.efwLabel1.Size = new System.Drawing.Size(40, 14);
             this.efwLabel1.TabIndex = 71;
@@ -226,7 +226,7 @@
             hierarchy1.SpName = null;
             this.cmbChange_type.HierarchyInfo = hierarchy1;
             this.cmbChange_type.IsMultiLang = false;
-            this.cmbChange_type.Location = new System.Drawing.Point(937, 15);
+            this.cmbChange_type.Location = new System.Drawing.Point(948, 15);
             this.cmbChange_type.MasterCode = "E03.PAY_GBN";
             this.cmbChange_type.Name = "cmbChange_type";
             this.cmbChange_type.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -237,7 +237,7 @@
             // rbo_type
             // 
             this.rbo_type.IsMultiLang = false;
-            this.rbo_type.Location = new System.Drawing.Point(509, 14);
+            this.rbo_type.Location = new System.Drawing.Point(491, 14);
             this.rbo_type.Name = "rbo_type";
             this.rbo_type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbo_type.Properties.Appearance.Options.UseBackColor = true;
@@ -245,9 +245,10 @@
             this.rbo_type.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.rbo_type.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("O", "주문완료"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("P", "상품준비중")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("P", "상품준비중"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("D", "배송중")});
             this.rbo_type.RequireMessage = null;
-            this.rbo_type.Size = new System.Drawing.Size(205, 26);
+            this.rbo_type.Size = new System.Drawing.Size(248, 26);
             this.rbo_type.TabIndex = 66;
             // 
             // rbCompany
@@ -263,7 +264,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "와이앤킴(주)"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "일반 상품")});
             this.rbCompany.RequireMessage = null;
-            this.rbCompany.Size = new System.Drawing.Size(205, 26);
+            this.rbCompany.Size = new System.Drawing.Size(187, 26);
             this.rbCompany.TabIndex = 65;
             // 
             // cmbSellers
@@ -291,9 +292,9 @@
             // 
             this.btnExcelUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcelUpdate.ImageOptions.Image")));
             this.btnExcelUpdate.IsMultiLang = false;
-            this.btnExcelUpdate.Location = new System.Drawing.Point(720, 12);
+            this.btnExcelUpdate.Location = new System.Drawing.Point(745, 12);
             this.btnExcelUpdate.Name = "btnExcelUpdate";
-            this.btnExcelUpdate.Size = new System.Drawing.Size(132, 29);
+            this.btnExcelUpdate.Size = new System.Drawing.Size(118, 29);
             this.btnExcelUpdate.TabIndex = 18;
             this.btnExcelUpdate.Text = "EXCEL UPDATE";
             this.btnExcelUpdate.Click += new System.EventHandler(this.btnExcelUpdate_Click);
