@@ -92,6 +92,8 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtevent_duration_title = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel14 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtEvent_ld_imgpath = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtAddPicPath2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtEvent_ld_imgname = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -133,6 +135,7 @@
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.txtIs_Use = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
@@ -244,6 +247,7 @@
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtevent_duration_title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEvent_ld_imgpath.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddPicPath2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEvent_ld_imgname.Properties)).BeginInit();
@@ -861,6 +865,8 @@
             // efwGroupControl1
             // 
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
+            this.efwGroupControl1.Controls.Add(this.txtevent_duration_title);
+            this.efwGroupControl1.Controls.Add(this.efwLabel14);
             this.efwGroupControl1.Controls.Add(this.txtEvent_ld_imgpath);
             this.efwGroupControl1.Controls.Add(this.txtAddPicPath2);
             this.efwGroupControl1.Controls.Add(this.txtEvent_ld_imgname);
@@ -892,6 +898,28 @@
             this.efwGroupControl1.Size = new System.Drawing.Size(1233, 275);
             this.efwGroupControl1.TabIndex = 55;
             this.efwGroupControl1.Text = "배너 저장";
+            // 
+            // txtevent_duration_title
+            // 
+            this.txtevent_duration_title.EditValue2 = null;
+            this.txtevent_duration_title.EraserGroup = "CLR2";
+            this.txtevent_duration_title.Location = new System.Drawing.Point(84, 112);
+            this.txtevent_duration_title.Name = "txtevent_duration_title";
+            this.txtevent_duration_title.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtevent_duration_title.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtevent_duration_title.RequireMessage = null;
+            this.txtevent_duration_title.Size = new System.Drawing.Size(226, 20);
+            this.txtevent_duration_title.TabIndex = 85;
+            // 
+            // efwLabel14
+            // 
+            this.efwLabel14.EraserGroup = null;
+            this.efwLabel14.IsMultiLang = false;
+            this.efwLabel14.Location = new System.Drawing.Point(18, 115);
+            this.efwLabel14.Name = "efwLabel14";
+            this.efwLabel14.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel14.TabIndex = 84;
+            this.efwLabel14.Text = "기간문구";
             // 
             // txtEvent_ld_imgpath
             // 
@@ -1071,7 +1099,7 @@
             this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
             this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(195, 145);
+            this.efwSimpleButton3.Location = new System.Drawing.Point(195, 166);
             this.efwSimpleButton3.Name = "efwSimpleButton3";
             this.efwSimpleButton3.Size = new System.Drawing.Size(115, 22);
             this.efwSimpleButton3.TabIndex = 67;
@@ -1156,7 +1184,7 @@
             this.efwSimpleButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
             this.efwSimpleButton4.IsMultiLang = false;
-            this.efwSimpleButton4.Location = new System.Drawing.Point(195, 117);
+            this.efwSimpleButton4.Location = new System.Drawing.Point(195, 138);
             this.efwSimpleButton4.Name = "efwSimpleButton4";
             this.efwSimpleButton4.Size = new System.Drawing.Size(115, 22);
             this.efwSimpleButton4.TabIndex = 52;
@@ -1177,7 +1205,7 @@
             // rbIs_Use_S
             // 
             this.rbIs_Use_S.IsMultiLang = false;
-            this.rbIs_Use_S.Location = new System.Drawing.Point(18, 117);
+            this.rbIs_Use_S.Location = new System.Drawing.Point(18, 138);
             this.rbIs_Use_S.Name = "rbIs_Use_S";
             this.rbIs_Use_S.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbIs_Use_S.Properties.Appearance.Options.UseBackColor = true;
@@ -1256,7 +1284,8 @@
             this.gridColumn17,
             this.gridColumn19,
             this.gridColumn20,
-            this.gridColumn22});
+            this.gridColumn22,
+            this.gridColumn41});
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ColumnAutoWidth = false;
@@ -1372,6 +1401,15 @@
             this.gridColumn22.Caption = "랜딩 이미지패스";
             this.gridColumn22.FieldName = "event_ld_imgpath";
             this.gridColumn22.Name = "gridColumn22";
+            // 
+            // gridColumn41
+            // 
+            this.gridColumn41.Caption = "기간문구";
+            this.gridColumn41.FieldName = "event_duration_title";
+            this.gridColumn41.Name = "gridColumn41";
+            this.gridColumn41.OptionsColumn.AllowEdit = false;
+            this.gridColumn41.Visible = true;
+            this.gridColumn41.VisibleIndex = 5;
             // 
             // efwPanelControl2
             // 
@@ -2468,6 +2506,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtevent_duration_title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEvent_ld_imgpath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddPicPath2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEvent_ld_imgname.Properties)).EndInit();
@@ -2722,5 +2761,8 @@
         private Easy.Framework.WinForm.Control.efwDateEdit dtQ_SDate;
         private Easy.Framework.WinForm.Control.efwDateEdit dtQ_EDate;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbDate_Type;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtevent_duration_title;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel14;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
     }
 }

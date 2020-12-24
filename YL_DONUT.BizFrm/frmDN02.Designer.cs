@@ -49,6 +49,8 @@
             this.cmbSel = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.efwGroupControl8 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.lblGD = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwGroupControl7 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.lblSD = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwGroupControl6 = new Easy.Framework.WinForm.Control.efwGroupControl();
@@ -66,12 +68,14 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwXtraTabControl1 = new Easy.Framework.WinForm.Control.efwXtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -125,10 +129,6 @@
             this.dt2T = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dt2F = new Easy.Framework.WinForm.Control.efwDateEdit();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.efwGroupControl8 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.lblGD = new Easy.Framework.WinForm.Control.efwLabel();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
             this.efwGroupControl3.SuspendLayout();
@@ -138,6 +138,8 @@
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl8)).BeginInit();
+            this.efwGroupControl8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl7)).BeginInit();
             this.efwGroupControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl6)).BeginInit();
@@ -155,12 +157,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).BeginInit();
             this.efwXtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -187,17 +191,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt2T.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2F.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2F.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl8)).BeginInit();
-            this.efwGroupControl8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.efwGroupControl3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 0);
+            this.panel3.Location = new System.Drawing.Point(3, 35);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.panel3.Size = new System.Drawing.Size(1321, 48);
@@ -277,7 +277,7 @@
             this.efwGroupControl1.Controls.Add(this.layoutControl1);
             this.efwGroupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwGroupControl1.IsMultiLang = false;
-            this.efwGroupControl1.Location = new System.Drawing.Point(3, 48);
+            this.efwGroupControl1.Location = new System.Drawing.Point(3, 83);
             this.efwGroupControl1.Name = "efwGroupControl1";
             this.efwGroupControl1.Size = new System.Drawing.Size(1321, 124);
             this.efwGroupControl1.TabIndex = 6;
@@ -301,6 +301,34 @@
             this.layoutControl1.Size = new System.Drawing.Size(1317, 99);
             this.layoutControl1.TabIndex = 7;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // efwGroupControl8
+            // 
+            this.efwGroupControl8.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl8.CaptionImageOptions.Image")));
+            this.efwGroupControl8.Controls.Add(this.lblGD);
+            this.efwGroupControl8.IsMultiLang = false;
+            this.efwGroupControl8.Location = new System.Drawing.Point(812, 12);
+            this.efwGroupControl8.Name = "efwGroupControl8";
+            this.efwGroupControl8.Size = new System.Drawing.Size(152, 75);
+            this.efwGroupControl8.TabIndex = 8;
+            this.efwGroupControl8.Text = "GD머니";
+            // 
+            // lblGD
+            // 
+            this.lblGD.Appearance.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+            this.lblGD.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lblGD.Appearance.Options.UseFont = true;
+            this.lblGD.Appearance.Options.UseForeColor = true;
+            this.lblGD.Appearance.Options.UseTextOptions = true;
+            this.lblGD.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblGD.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblGD.EraserGroup = "CLR1";
+            this.lblGD.IsMultiLang = false;
+            this.lblGD.Location = new System.Drawing.Point(4, 37);
+            this.lblGD.Name = "lblGD";
+            this.lblGD.Size = new System.Drawing.Size(150, 20);
+            this.lblGD.TabIndex = 1;
+            this.lblGD.Text = "0";
             // 
             // efwGroupControl7
             // 
@@ -545,6 +573,18 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.efwGroupControl7;
+            this.layoutControlItem5.Location = new System.Drawing.Point(640, 0);
+            this.layoutControlItem5.MaxSize = new System.Drawing.Size(160, 0);
+            this.layoutControlItem5.MinSize = new System.Drawing.Size(160, 5);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(160, 79);
+            this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
@@ -577,14 +617,6 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(70, 20);
             this.layoutControlItem6.TextToControlDistance = 5;
             // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(956, 0);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(10, 79);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtU_CHEF_LEVEL;
@@ -611,10 +643,27 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(956, 0);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(10, 79);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.efwGroupControl8;
+            this.layoutControlItem9.Location = new System.Drawing.Point(800, 0);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(156, 79);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
+            // 
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 172);
+            this.splitterControl1.Location = new System.Drawing.Point(3, 207);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1321, 5);
             this.splitterControl1.TabIndex = 7;
@@ -624,10 +673,10 @@
             // 
             this.efwXtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwXtraTabControl1.IsMultiLang = false;
-            this.efwXtraTabControl1.Location = new System.Drawing.Point(3, 177);
+            this.efwXtraTabControl1.Location = new System.Drawing.Point(3, 212);
             this.efwXtraTabControl1.Name = "efwXtraTabControl1";
             this.efwXtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.efwXtraTabControl1.Size = new System.Drawing.Size(1321, 625);
+            this.efwXtraTabControl1.Size = new System.Drawing.Size(1321, 590);
             this.efwXtraTabControl1.TabIndex = 8;
             this.efwXtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -639,7 +688,7 @@
             this.xtraTabPage1.Controls.Add(this.panel2);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Padding = new System.Windows.Forms.Padding(5);
-            this.xtraTabPage1.Size = new System.Drawing.Size(1315, 596);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1315, 561);
             this.xtraTabPage1.Text = "적립 현황";
             // 
             // efwGridControl1
@@ -674,7 +723,7 @@
             this.repositoryItemLookUpEdit1,
             this.repositoryItemMemoExEdit1,
             this.repositoryItemMemoEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1305, 547);
+            this.efwGridControl1.Size = new System.Drawing.Size(1305, 512);
             this.efwGridControl1.TabIndex = 6;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -1194,55 +1243,6 @@
             this.dt2F.Size = new System.Drawing.Size(102, 20);
             this.dt2F.TabIndex = 2;
             // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.efwGroupControl7;
-            this.layoutControlItem5.Location = new System.Drawing.Point(640, 0);
-            this.layoutControlItem5.MaxSize = new System.Drawing.Size(160, 0);
-            this.layoutControlItem5.MinSize = new System.Drawing.Size(160, 5);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(160, 79);
-            this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // efwGroupControl8
-            // 
-            this.efwGroupControl8.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl8.CaptionImageOptions.Image")));
-            this.efwGroupControl8.Controls.Add(this.lblGD);
-            this.efwGroupControl8.IsMultiLang = false;
-            this.efwGroupControl8.Location = new System.Drawing.Point(812, 12);
-            this.efwGroupControl8.Name = "efwGroupControl8";
-            this.efwGroupControl8.Size = new System.Drawing.Size(152, 75);
-            this.efwGroupControl8.TabIndex = 8;
-            this.efwGroupControl8.Text = "GD머니";
-            // 
-            // lblGD
-            // 
-            this.lblGD.Appearance.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.lblGD.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.lblGD.Appearance.Options.UseFont = true;
-            this.lblGD.Appearance.Options.UseForeColor = true;
-            this.lblGD.Appearance.Options.UseTextOptions = true;
-            this.lblGD.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblGD.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblGD.EraserGroup = "CLR1";
-            this.lblGD.IsMultiLang = false;
-            this.lblGD.Location = new System.Drawing.Point(4, 37);
-            this.lblGD.Name = "lblGD";
-            this.lblGD.Size = new System.Drawing.Size(150, 20);
-            this.lblGD.TabIndex = 1;
-            this.lblGD.Text = "0";
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.efwGroupControl8;
-            this.layoutControlItem9.Location = new System.Drawing.Point(800, 0);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(156, 79);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem9.TextVisible = false;
-            // 
             // frmDN02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1267,6 +1267,8 @@
             this.efwGroupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl8)).EndInit();
+            this.efwGroupControl8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl7)).EndInit();
             this.efwGroupControl7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl6)).EndInit();
@@ -1284,12 +1286,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).EndInit();
             this.efwXtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
@@ -1318,10 +1322,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt2T.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2F.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2F.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl8)).EndInit();
-            this.efwGroupControl8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
 
         }

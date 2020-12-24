@@ -74,6 +74,7 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("o_receive_address1", txto_receive_address1)
                     , new ColumnControlSet("o_receive_message1", txto_receive_message1)
                     , new ColumnControlSet("o_delivery_num", txto_delivery_num)
+                    , new ColumnControlSet("add_p_name", txtadd_p_name)
                     , new ColumnControlSet("o_delivery_comp_code", cmbo_delivery_comp_code)
                    ); ;
 

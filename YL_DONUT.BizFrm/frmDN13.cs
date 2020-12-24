@@ -165,7 +165,7 @@ namespace YL_DONUT.BizFrm
 
         private void DtS_DATE_EditValueChanged(object sender, EventArgs e)
         {
-            Search();
+            //Search();
         }
     }
 }

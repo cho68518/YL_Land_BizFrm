@@ -1170,7 +1170,7 @@
             // 
             // gridColumn24
             // 
-            this.gridColumn24.Caption = "주문별제공";
+            this.gridColumn24.Caption = "발주옵션명";
             this.gridColumn24.FieldName = "add_p_name";
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.Visible = true;

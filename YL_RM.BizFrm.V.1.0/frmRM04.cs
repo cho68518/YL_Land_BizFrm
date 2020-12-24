@@ -42,7 +42,7 @@ namespace YL_RM.BizFrm
 
             this.IsMenuVw = true;
             this.IsSearch = true;
-            this.IsNewMode = true;
+            this.IsNewMode = false;
             this.IsSave = false;
             this.IsDelete = false;
             this.IsCancel = false;

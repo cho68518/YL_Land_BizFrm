@@ -63,6 +63,8 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -126,6 +128,8 @@
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.efwCheckEdit1 = new Easy.Framework.WinForm.Control.efwCheckEdit();
+            this.ckis_official = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.txtU_ADDR_DETAIL = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.chkIS_COMP_MD = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.cmbDORAMD_TYPE = new Easy.Framework.WinForm.Control.efwLookUpEdit();
@@ -140,7 +144,6 @@
             this.txtGD = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtAD = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtTD = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.chkIS_BIZ = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkIS_DORAMD = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.txtU_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtU_ZIP = new Easy.Framework.WinForm.Control.efwButtonEdit();
@@ -177,7 +180,6 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -199,6 +201,8 @@
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.chkIS_BIZ = new DevExpress.XtraLayout.LayoutControlItem();
             this.efwTextEdit2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl2 = new DevExpress.XtraEditors.SplitterControl();
@@ -211,14 +215,11 @@
             this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ckis_official = new Easy.Framework.WinForm.Control.efwCheckEdit();
-            this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
             this.efwGroupControl3.SuspendLayout();
@@ -256,6 +257,8 @@
             this.efwGroupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwCheckEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckis_official.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_ADDR_DETAIL.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIS_COMP_MD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDORAMD_TYPE.Properties)).BeginInit();
@@ -267,7 +270,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTD.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkIS_BIZ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIS_DORAMD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_ID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_ZIP.Properties)).BeginInit();
@@ -304,7 +306,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
@@ -326,15 +327,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIS_BIZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).BeginInit();
             this.efwGroupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckis_official.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -569,6 +569,22 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 13;
+            // 
+            // gridColumn51
+            // 
+            this.gridColumn51.Caption = "사무장";
+            this.gridColumn51.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.gridColumn51.FieldName = "is_official";
+            this.gridColumn51.Name = "gridColumn51";
+            this.gridColumn51.Visible = true;
+            this.gridColumn51.VisibleIndex = 14;
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.ValueChecked = "Y";
+            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
             // 
             // gridColumn11
             // 
@@ -1230,6 +1246,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.efwCheckEdit1);
             this.layoutControl1.Controls.Add(this.ckis_official);
             this.layoutControl1.Controls.Add(this.txtU_ADDR_DETAIL);
             this.layoutControl1.Controls.Add(this.chkIS_COMP_MD);
@@ -1242,7 +1259,6 @@
             this.layoutControl1.Controls.Add(this.txtGD);
             this.layoutControl1.Controls.Add(this.txtAD);
             this.layoutControl1.Controls.Add(this.txtTD);
-            this.layoutControl1.Controls.Add(this.chkIS_BIZ);
             this.layoutControl1.Controls.Add(this.chkIS_DORAMD);
             this.layoutControl1.Controls.Add(this.txtU_ID);
             this.layoutControl1.Controls.Add(this.txtU_ZIP);
@@ -1270,6 +1286,30 @@
             this.layoutControl1.Size = new System.Drawing.Size(815, 257);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // efwCheckEdit1
+            // 
+            this.efwCheckEdit1.EraserGroup = "CLR1";
+            this.efwCheckEdit1.Location = new System.Drawing.Point(402, 182);
+            this.efwCheckEdit1.Name = "efwCheckEdit1";
+            this.efwCheckEdit1.Properties.Caption = "미용실(G샵)";
+            this.efwCheckEdit1.Properties.ValueChecked = "Y";
+            this.efwCheckEdit1.Properties.ValueUnchecked = "N";
+            this.efwCheckEdit1.Size = new System.Drawing.Size(86, 19);
+            this.efwCheckEdit1.StyleController = this.layoutControl1;
+            this.efwCheckEdit1.TabIndex = 32;
+            // 
+            // ckis_official
+            // 
+            this.ckis_official.EraserGroup = "CLR1";
+            this.ckis_official.Location = new System.Drawing.Point(626, 182);
+            this.ckis_official.Name = "ckis_official";
+            this.ckis_official.Properties.Caption = "사무장";
+            this.ckis_official.Properties.ValueChecked = "Y";
+            this.ckis_official.Properties.ValueUnchecked = "N";
+            this.ckis_official.Size = new System.Drawing.Size(177, 19);
+            this.ckis_official.StyleController = this.layoutControl1;
+            this.ckis_official.TabIndex = 31;
             // 
             // txtU_ADDR_DETAIL
             // 
@@ -1492,19 +1532,6 @@
             this.txtTD.TabIndex = 18;
             this.txtTD.ToolTip = "텔레콤 요금할인 머니";
             // 
-            // chkIS_BIZ
-            // 
-            this.chkIS_BIZ.EraserGroup = "CLR1";
-            this.chkIS_BIZ.Location = new System.Drawing.Point(392, 182);
-            this.chkIS_BIZ.Name = "chkIS_BIZ";
-            this.chkIS_BIZ.Properties.Caption = "미용실(G샵)";
-            this.chkIS_BIZ.Properties.ReadOnly = true;
-            this.chkIS_BIZ.Properties.ValueChecked = "Y";
-            this.chkIS_BIZ.Properties.ValueUnchecked = "N";
-            this.chkIS_BIZ.Size = new System.Drawing.Size(96, 19);
-            this.chkIS_BIZ.StyleController = this.layoutControl1;
-            this.chkIS_BIZ.TabIndex = 16;
-            // 
             // chkIS_DORAMD
             // 
             this.chkIS_DORAMD.EraserGroup = "CLR1";
@@ -1580,7 +1607,7 @@
             this.chkIS_STOCK_FRIEND.Properties.Caption = "주주";
             this.chkIS_STOCK_FRIEND.Properties.ValueChecked = "Y";
             this.chkIS_STOCK_FRIEND.Properties.ValueUnchecked = "N";
-            this.chkIS_STOCK_FRIEND.Size = new System.Drawing.Size(56, 19);
+            this.chkIS_STOCK_FRIEND.Size = new System.Drawing.Size(66, 19);
             this.chkIS_STOCK_FRIEND.StyleController = this.layoutControl1;
             this.chkIS_STOCK_FRIEND.TabIndex = 11;
             // 
@@ -1855,7 +1882,6 @@
             this.layoutControlItem7,
             this.layoutControlItem21,
             this.layoutControlItem11,
-            this.layoutControlItem31,
             this.layoutControlItem34,
             this.layoutControlItem35,
             this.layoutControlItem36,
@@ -1877,7 +1903,8 @@
             this.layoutControlItem30,
             this.layoutControlItem44,
             this.layoutControlItem19,
-            this.layoutControlItem45});
+            this.layoutControlItem45,
+            this.chkIS_BIZ});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 2, 2);
             this.layoutControlGroup1.Size = new System.Drawing.Size(815, 257);
@@ -2033,7 +2060,7 @@
             this.layoutControlItem7.Control = this.chkIS_STOCK_FRIEND;
             this.layoutControlItem7.Location = new System.Drawing.Point(320, 178);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(60, 23);
+            this.layoutControlItem7.Size = new System.Drawing.Size(70, 23);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -2057,15 +2084,6 @@
             this.layoutControlItem11.Text = "u_id";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(23, 14);
             this.layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // layoutControlItem31
-            // 
-            this.layoutControlItem31.Control = this.chkIS_BIZ;
-            this.layoutControlItem31.Location = new System.Drawing.Point(380, 178);
-            this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(100, 23);
-            this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem31.TextVisible = false;
             // 
             // layoutControlItem34
             // 
@@ -2297,6 +2315,24 @@
             this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem19.TextVisible = false;
             // 
+            // layoutControlItem45
+            // 
+            this.layoutControlItem45.Control = this.ckis_official;
+            this.layoutControlItem45.Location = new System.Drawing.Point(614, 178);
+            this.layoutControlItem45.Name = "layoutControlItem45";
+            this.layoutControlItem45.Size = new System.Drawing.Size(181, 23);
+            this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem45.TextVisible = false;
+            // 
+            // chkIS_BIZ
+            // 
+            this.chkIS_BIZ.Control = this.efwCheckEdit1;
+            this.chkIS_BIZ.Location = new System.Drawing.Point(390, 178);
+            this.chkIS_BIZ.Name = "chkIS_BIZ";
+            this.chkIS_BIZ.Size = new System.Drawing.Size(90, 23);
+            this.chkIS_BIZ.TextSize = new System.Drawing.Size(0, 0);
+            this.chkIS_BIZ.TextVisible = false;
+            // 
             // efwTextEdit2
             // 
             this.efwTextEdit2.EditValue2 = null;
@@ -2447,43 +2483,6 @@
             this.gridColumn49.Visible = true;
             this.gridColumn49.VisibleIndex = 5;
             // 
-            // ckis_official
-            // 
-            this.ckis_official.EraserGroup = "CLR1";
-            this.ckis_official.Location = new System.Drawing.Point(626, 182);
-            this.ckis_official.Name = "ckis_official";
-            this.ckis_official.Properties.Caption = "사무장";
-            this.ckis_official.Properties.ValueChecked = "Y";
-            this.ckis_official.Properties.ValueUnchecked = "N";
-            this.ckis_official.Size = new System.Drawing.Size(177, 19);
-            this.ckis_official.StyleController = this.layoutControl1;
-            this.ckis_official.TabIndex = 31;
-            // 
-            // layoutControlItem45
-            // 
-            this.layoutControlItem45.Control = this.ckis_official;
-            this.layoutControlItem45.Location = new System.Drawing.Point(614, 178);
-            this.layoutControlItem45.Name = "layoutControlItem45";
-            this.layoutControlItem45.Size = new System.Drawing.Size(181, 23);
-            this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem45.TextVisible = false;
-            // 
-            // gridColumn51
-            // 
-            this.gridColumn51.Caption = "사무장";
-            this.gridColumn51.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.gridColumn51.FieldName = "is_official";
-            this.gridColumn51.Name = "gridColumn51";
-            this.gridColumn51.Visible = true;
-            this.gridColumn51.VisibleIndex = 14;
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            this.repositoryItemCheckEdit1.ValueChecked = "Y";
-            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
-            // 
             // frmMM05
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2504,6 +2503,7 @@
             this.efwGroupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).EndInit();
             this.efwGroupControl3.ResumeLayout(false);
@@ -2541,6 +2541,8 @@
             this.efwGroupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwCheckEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckis_official.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_ADDR_DETAIL.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIS_COMP_MD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDORAMD_TYPE.Properties)).EndInit();
@@ -2553,7 +2555,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTD.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkIS_BIZ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIS_DORAMD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_ID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_ZIP.Properties)).EndInit();
@@ -2590,7 +2591,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
@@ -2612,15 +2612,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIS_BIZ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).EndInit();
             this.efwGroupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckis_official.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2732,10 +2731,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
-        private Easy.Framework.WinForm.Control.efwCheckEdit chkIS_BIZ;
         private Easy.Framework.WinForm.Control.efwCheckEdit chkIS_DORAMD;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
         private Easy.Framework.WinForm.Control.efwTextEdit txtCOUPON;
         private Easy.Framework.WinForm.Control.efwTextEdit txtCD;
         private Easy.Framework.WinForm.Control.efwTextEdit txtGD;
@@ -2797,5 +2794,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private Easy.Framework.WinForm.Control.efwCheckEdit ckis_official;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
+        private Easy.Framework.WinForm.Control.efwCheckEdit efwCheckEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem chkIS_BIZ;
     }
 }

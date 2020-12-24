@@ -101,7 +101,7 @@ namespace YL_RM.BizFrm
             this.efwGridControl1.Click += efwGridControl1_Click;
             this.efwGridControl2.Click += efwGridControl2_Click;
 
-            Open1();
+           // Open1();
             Clear();
             SetCmb();
         }
@@ -243,7 +243,39 @@ namespace YL_RM.BizFrm
         {
             DataRow dr = this.efwGridControl2.GetSelectedRow(0);
             if (dr != null && dr["content"].ToString() != "0" && dr["content"].ToString() != "")
+            {
                 txt_content.BodyHtml = dr["content"].ToString();
+                if (dr != null && dr["img_url1"].ToString() != "0" && dr["img_url1"].ToString() != "")
+                {
+                    picBanner1.LoadAsync(dr["img_url1"].ToString());
+                }
+                else
+                {
+                    picBanner1.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+                }
+                if (dr != null && dr["img_url2"].ToString() != "0" && dr["img_url2"].ToString() != "")
+                {
+                    picBanner2.LoadAsync(dr["img_url2"].ToString());
+                }
+                else
+                {
+                    picBanner2.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+                }
+                if (dr != null && dr["img_url3"].ToString() != "0" && dr["img_url3"].ToString() != "")
+                {
+                    picBanner3.LoadAsync(dr["img_url3"].ToString());
+                }
+                else
+                {
+                    picBanner3.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+                }
+
+                if (dr != null && dr["is_notice"].ToString() != "0" && dr["is_notice"].ToString() != "")
+                {
+                    rbis_notice.EditValue = (dr["is_notice"].ToString());
+                }
+
+            }                
         }
         private void btn_new1_Click(object sender, EventArgs e)
         {

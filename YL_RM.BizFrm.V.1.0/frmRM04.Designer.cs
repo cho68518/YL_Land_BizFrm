@@ -360,7 +360,7 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "비고";
+            this.gridColumn5.Caption = "답변내용";
             this.gridColumn5.FieldName = "remark";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -432,7 +432,6 @@
             // txtcontent
             // 
             this.txtcontent.ByteLength = 200;
-            this.txtcontent.Enabled = false;
             this.txtcontent.EraserGroup = "CLR1";
             this.txtcontent.Location = new System.Drawing.Point(67, 92);
             this.txtcontent.Name = "txtcontent";
@@ -440,6 +439,7 @@
             this.txtcontent.Properties.Appearance.Options.UseBackColor = true;
             this.txtcontent.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtcontent.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtcontent.Properties.ReadOnly = true;
             this.txtcontent.Size = new System.Drawing.Size(356, 139);
             this.txtcontent.StyleController = this.dataLayoutControl1;
             this.txtcontent.TabIndex = 91;
@@ -452,8 +452,8 @@
             this.rbis_open.Properties.Appearance.Options.UseBackColor = true;
             this.rbis_open.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rbis_open.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "노출"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "미노출")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "공개"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "미공개")});
             this.rbis_open.Size = new System.Drawing.Size(157, 23);
             this.rbis_open.StyleController = this.dataLayoutControl1;
             this.rbis_open.TabIndex = 60;
@@ -461,13 +461,13 @@
             // txtsubject
             // 
             this.txtsubject.EditValue2 = null;
-            this.txtsubject.Enabled = false;
             this.txtsubject.Location = new System.Drawing.Point(67, 38);
             this.txtsubject.Name = "txtsubject";
             this.txtsubject.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txtsubject.Properties.Appearance.Options.UseBackColor = true;
             this.txtsubject.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtsubject.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtsubject.Properties.ReadOnly = true;
             this.txtsubject.RequireMessage = null;
             this.txtsubject.Size = new System.Drawing.Size(526, 20);
             this.txtsubject.StyleController = this.dataLayoutControl1;
@@ -507,7 +507,7 @@
             this.rbanswer_type.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rbanswer_type.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "접수"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "완료")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "답변완료")});
             this.rbanswer_type.Size = new System.Drawing.Size(157, 23);
             this.rbanswer_type.StyleController = this.dataLayoutControl1;
             this.rbanswer_type.TabIndex = 60;
@@ -515,13 +515,13 @@
             // txtu_name
             // 
             this.txtu_name.EditValue2 = null;
-            this.txtu_name.Enabled = false;
             this.txtu_name.Location = new System.Drawing.Point(67, 62);
             this.txtu_name.Name = "txtu_name";
             this.txtu_name.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txtu_name.Properties.Appearance.Options.UseBackColor = true;
             this.txtu_name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtu_name.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtu_name.Properties.ReadOnly = true;
             this.txtu_name.RequireMessage = null;
             this.txtu_name.Size = new System.Drawing.Size(255, 20);
             this.txtu_name.StyleController = this.dataLayoutControl1;
@@ -530,13 +530,13 @@
             // txttel_no
             // 
             this.txttel_no.EditValue2 = null;
-            this.txttel_no.Enabled = false;
             this.txttel_no.Location = new System.Drawing.Point(381, 62);
             this.txttel_no.Name = "txttel_no";
             this.txttel_no.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txttel_no.Properties.Appearance.Options.UseBackColor = true;
             this.txttel_no.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txttel_no.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txttel_no.Properties.ReadOnly = true;
             this.txttel_no.RequireMessage = null;
             this.txttel_no.Size = new System.Drawing.Size(212, 20);
             this.txttel_no.StyleController = this.dataLayoutControl1;
@@ -580,7 +580,7 @@
             this.layoutControlItem26.Location = new System.Drawing.Point(595, 26);
             this.layoutControlItem26.Name = "layoutControlItem26";
             this.layoutControlItem26.Size = new System.Drawing.Size(204, 27);
-            this.layoutControlItem26.Text = "노출여부";
+            this.layoutControlItem26.Text = "공개여부";
             this.layoutControlItem26.TextSize = new System.Drawing.Size(40, 14);
             // 
             // emptySpaceItem10
@@ -661,7 +661,7 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(595, 53);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(204, 27);
-            this.layoutControlItem2.Text = "완료구분";
+            this.layoutControlItem2.Text = "답변여부";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(40, 14);
             // 
             // layoutControlItem1
@@ -671,7 +671,7 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(415, 80);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(384, 143);
-            this.layoutControlItem1.Text = "비고";
+            this.layoutControlItem1.Text = "답변 내용";
             this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(50, 20);
             this.layoutControlItem1.TextToControlDistance = 5;
