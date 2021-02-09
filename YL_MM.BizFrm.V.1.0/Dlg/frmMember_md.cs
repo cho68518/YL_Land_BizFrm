@@ -96,8 +96,8 @@ namespace YL_MM.BizFrm.Dlg
         }
         public string U_ZIP
         {
-            get;
-            set;
+            get; 
+             set;
         }
         public string U_ADDR
         {

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSHOP14));
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
@@ -67,6 +67,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -98,57 +99,59 @@
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwLabel12 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtgshop_name = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtPic_Url5 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtPic_Url4 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtPic_Url3 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtPic_Url2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtPic_Url1 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtPic_Url4 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtPic_Url2 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtPic_Url3 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtStory_id = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtStory_id4 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtBChoice_Url1 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtBChoice_Url2 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtAChoice_Url1 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtAChoice_Url2 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtBChoice_Url3 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtStory_id2 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtAChoice_Url3 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtBChoice_Url4 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtAChoice_Url4 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtIdx1 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtStory_id3 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtIdx2 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtIdx3 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtStory_id1 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtIdx4 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
-            this.txtStory_id = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwPanel4 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.picBChoice_img4 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.picAChoice_img4 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwPanel3 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.picBChoice_img3 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.picAChoice_img3 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwPanel2 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.picBChoice_img2 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.picAChoice_img2 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwPanel1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.picBChoice_img1 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.picAChoice_img1 = new Easy.Framework.WinForm.Control.efwPictureEdit();
             this.efwLabel11 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel10 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel9 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtSort2 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtStory_id2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtSort4 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtStory_id4 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtSort3 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtStory_id3 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtSort1 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtStory_id1 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtIdx4 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtIdx3 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtIdx2 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtIdx1 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtAChoice_Url4 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtBChoice_Url4 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.checkEdit4 = new DevExpress.XtraEditors.CheckEdit();
-            this.txtAChoice_Url3 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.picAChoice_img4 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.txtBChoice_Url3 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtAChoice_Url2 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.picBChoice_img4 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.txtAChoice_Url1 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtBChoice_Url2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.checkEdit3 = new DevExpress.XtraEditors.CheckEdit();
-            this.picAChoice_img3 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.picBChoice_img3 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.txtBChoice_Url1 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
-            this.picAChoice_img2 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.picBChoice_img2 = new Easy.Framework.WinForm.Control.efwPictureEdit();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.efwPanel2 = new Easy.Framework.WinForm.Control.efwPanelControl();
-            this.efwPanel3 = new Easy.Framework.WinForm.Control.efwPanelControl();
-            this.efwPanel4 = new Easy.Framework.WinForm.Control.efwPanelControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.picAChoice_img1 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.picBChoice_img1 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.efwPanel1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
@@ -178,58 +181,59 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtgshop_name.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdx1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdx2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdx3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdx4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSort2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSort4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSort3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSort1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdx4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdx3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdx2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdx1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanel2)).BeginInit();
-            this.efwPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanel3)).BeginInit();
-            this.efwPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanel4)).BeginInit();
             this.efwPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanel3)).BeginInit();
+            this.efwPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanel2)).BeginInit();
+            this.efwPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanel1)).BeginInit();
             this.efwPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSort2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSort4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSort3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSort1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -613,19 +617,19 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo4;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
             this.efwGridControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
-            this.efwGridControl1.InsertServiceInfo = serviceInfo5;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsEditable = false;
@@ -651,12 +655,12 @@
             this.efwGridControl1.Size = new System.Drawing.Size(1124, 472);
             this.efwGridControl1.TabIndex = 46;
             this.efwGridControl1.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo6;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.efwGridControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.efwGridControl1_MouseMove);
@@ -669,6 +673,7 @@
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn2,
+            this.gridColumn25,
             this.gridColumn3,
             this.gridColumn7,
             this.gridColumn14,
@@ -732,11 +737,19 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "멀티샵명";
-            this.gridColumn2.FieldName = "shop_name";
+            this.gridColumn2.FieldName = "gshop_name";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 4;
+            // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "제보자";
+            this.gridColumn25.FieldName = "informant";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 5;
             // 
             // gridColumn3
             // 
@@ -745,7 +758,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 5;
+            this.gridColumn3.VisibleIndex = 6;
             // 
             // gridColumn7
             // 
@@ -754,7 +767,7 @@
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.VisibleIndex = 7;
             // 
             // gridColumn14
             // 
@@ -765,7 +778,7 @@
             this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 7;
+            this.gridColumn14.VisibleIndex = 8;
             // 
             // Image1
             // 
@@ -781,7 +794,7 @@
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 8;
+            this.gridColumn10.VisibleIndex = 9;
             // 
             // Image2
             // 
@@ -797,7 +810,7 @@
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 9;
+            this.gridColumn12.VisibleIndex = 10;
             // 
             // Image3
             // 
@@ -812,7 +825,7 @@
             this.gridColumn16.OptionsColumn.AllowEdit = false;
             this.gridColumn16.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 10;
+            this.gridColumn16.VisibleIndex = 11;
             // 
             // Image4
             // 
@@ -827,7 +840,7 @@
             this.gridColumn18.OptionsColumn.AllowEdit = false;
             this.gridColumn18.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 11;
+            this.gridColumn18.VisibleIndex = 12;
             // 
             // Image5
             // 
@@ -840,7 +853,7 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 12;
+            this.gridColumn8.VisibleIndex = 13;
             this.gridColumn8.Width = 452;
             // 
             // gridColumn15
@@ -919,7 +932,7 @@
             this.gridColumn24.FieldName = "story_id";
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 13;
+            this.gridColumn24.VisibleIndex = 14;
             // 
             // Image0
             // 
@@ -962,6 +975,8 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwLabel12);
+            this.efwPanelControl1.Controls.Add(this.txtgshop_name);
             this.efwPanelControl1.Controls.Add(this.groupControl1);
             this.efwPanelControl1.Controls.Add(this.efwLabel2);
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
@@ -972,6 +987,59 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1124, 53);
             this.efwPanelControl1.TabIndex = 42;
+            // 
+            // efwLabel12
+            // 
+            this.efwLabel12.EraserGroup = null;
+            this.efwLabel12.IsMultiLang = false;
+            this.efwLabel12.Location = new System.Drawing.Point(424, 18);
+            this.efwLabel12.Name = "efwLabel12";
+            this.efwLabel12.Size = new System.Drawing.Size(79, 14);
+            this.efwLabel12.TabIndex = 52;
+            this.efwLabel12.Text = "제보자 or 작성자";
+            // 
+            // txtgshop_name
+            // 
+            this.txtgshop_name.EditValue2 = null;
+            this.txtgshop_name.EraserGroup = "CLR1";
+            this.txtgshop_name.Location = new System.Drawing.Point(530, 16);
+            this.txtgshop_name.Name = "txtgshop_name";
+            this.txtgshop_name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtgshop_name.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtgshop_name.RequireMessage = null;
+            this.txtgshop_name.Size = new System.Drawing.Size(171, 20);
+            this.txtgshop_name.TabIndex = 51;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.txtPic_Url5);
+            this.groupControl1.Controls.Add(this.txtPic_Url1);
+            this.groupControl1.Controls.Add(this.txtPic_Url4);
+            this.groupControl1.Controls.Add(this.txtPic_Url2);
+            this.groupControl1.Controls.Add(this.txtPic_Url3);
+            this.groupControl1.Controls.Add(this.txtStory_id);
+            this.groupControl1.Controls.Add(this.txtStory_id4);
+            this.groupControl1.Controls.Add(this.txtBChoice_Url1);
+            this.groupControl1.Controls.Add(this.txtBChoice_Url2);
+            this.groupControl1.Controls.Add(this.txtAChoice_Url1);
+            this.groupControl1.Controls.Add(this.txtAChoice_Url2);
+            this.groupControl1.Controls.Add(this.txtBChoice_Url3);
+            this.groupControl1.Controls.Add(this.txtStory_id2);
+            this.groupControl1.Controls.Add(this.txtAChoice_Url3);
+            this.groupControl1.Controls.Add(this.txtBChoice_Url4);
+            this.groupControl1.Controls.Add(this.txtAChoice_Url4);
+            this.groupControl1.Controls.Add(this.txtIdx1);
+            this.groupControl1.Controls.Add(this.txtStory_id3);
+            this.groupControl1.Controls.Add(this.txtIdx2);
+            this.groupControl1.Controls.Add(this.txtIdx3);
+            this.groupControl1.Controls.Add(this.txtStory_id1);
+            this.groupControl1.Controls.Add(this.txtIdx4);
+            this.groupControl1.Location = new System.Drawing.Point(960, 23);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(89, 24);
+            this.groupControl1.TabIndex = 49;
+            this.groupControl1.Text = "숨긴항목";
+            this.groupControl1.Visible = false;
             // 
             // txtPic_Url5
             // 
@@ -986,6 +1054,19 @@
             this.txtPic_Url5.TabIndex = 48;
             this.txtPic_Url5.Visible = false;
             // 
+            // txtPic_Url1
+            // 
+            this.txtPic_Url1.EditValue2 = null;
+            this.txtPic_Url1.EraserGroup = "CLR1";
+            this.txtPic_Url1.Location = new System.Drawing.Point(61, 24);
+            this.txtPic_Url1.Name = "txtPic_Url1";
+            this.txtPic_Url1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtPic_Url1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPic_Url1.RequireMessage = null;
+            this.txtPic_Url1.Size = new System.Drawing.Size(29, 20);
+            this.txtPic_Url1.TabIndex = 44;
+            this.txtPic_Url1.Visible = false;
+            // 
             // txtPic_Url4
             // 
             this.txtPic_Url4.EditValue2 = null;
@@ -998,19 +1079,6 @@
             this.txtPic_Url4.Size = new System.Drawing.Size(29, 20);
             this.txtPic_Url4.TabIndex = 47;
             this.txtPic_Url4.Visible = false;
-            // 
-            // txtPic_Url3
-            // 
-            this.txtPic_Url3.EditValue2 = null;
-            this.txtPic_Url3.EraserGroup = "CLR1";
-            this.txtPic_Url3.Location = new System.Drawing.Point(24, 46);
-            this.txtPic_Url3.Name = "txtPic_Url3";
-            this.txtPic_Url3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtPic_Url3.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtPic_Url3.RequireMessage = null;
-            this.txtPic_Url3.Size = new System.Drawing.Size(29, 20);
-            this.txtPic_Url3.TabIndex = 46;
-            this.txtPic_Url3.Visible = false;
             // 
             // txtPic_Url2
             // 
@@ -1025,18 +1093,222 @@
             this.txtPic_Url2.TabIndex = 45;
             this.txtPic_Url2.Visible = false;
             // 
-            // txtPic_Url1
+            // txtPic_Url3
             // 
-            this.txtPic_Url1.EditValue2 = null;
-            this.txtPic_Url1.EraserGroup = "CLR1";
-            this.txtPic_Url1.Location = new System.Drawing.Point(61, 24);
-            this.txtPic_Url1.Name = "txtPic_Url1";
-            this.txtPic_Url1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtPic_Url1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtPic_Url1.RequireMessage = null;
-            this.txtPic_Url1.Size = new System.Drawing.Size(29, 20);
-            this.txtPic_Url1.TabIndex = 44;
-            this.txtPic_Url1.Visible = false;
+            this.txtPic_Url3.EditValue2 = null;
+            this.txtPic_Url3.EraserGroup = "CLR1";
+            this.txtPic_Url3.Location = new System.Drawing.Point(24, 46);
+            this.txtPic_Url3.Name = "txtPic_Url3";
+            this.txtPic_Url3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtPic_Url3.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPic_Url3.RequireMessage = null;
+            this.txtPic_Url3.Size = new System.Drawing.Size(29, 20);
+            this.txtPic_Url3.TabIndex = 46;
+            this.txtPic_Url3.Visible = false;
+            // 
+            // txtStory_id
+            // 
+            this.txtStory_id.EditValue2 = null;
+            this.txtStory_id.EraserGroup = "CLR1";
+            this.txtStory_id.Location = new System.Drawing.Point(10, 88);
+            this.txtStory_id.Name = "txtStory_id";
+            this.txtStory_id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtStory_id.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtStory_id.RequireMessage = null;
+            this.txtStory_id.Size = new System.Drawing.Size(45, 20);
+            this.txtStory_id.TabIndex = 107;
+            // 
+            // txtStory_id4
+            // 
+            this.txtStory_id4.EditValue2 = null;
+            this.txtStory_id4.EraserGroup = "CLR1";
+            this.txtStory_id4.Location = new System.Drawing.Point(404, 110);
+            this.txtStory_id4.Name = "txtStory_id4";
+            this.txtStory_id4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtStory_id4.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtStory_id4.RequireMessage = null;
+            this.txtStory_id4.Size = new System.Drawing.Size(60, 20);
+            this.txtStory_id4.TabIndex = 100;
+            // 
+            // txtBChoice_Url1
+            // 
+            this.txtBChoice_Url1.EditValue2 = null;
+            this.txtBChoice_Url1.EraserGroup = "CLR1";
+            this.txtBChoice_Url1.Location = new System.Drawing.Point(61, 88);
+            this.txtBChoice_Url1.Name = "txtBChoice_Url1";
+            this.txtBChoice_Url1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtBChoice_Url1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtBChoice_Url1.RequireMessage = null;
+            this.txtBChoice_Url1.Size = new System.Drawing.Size(29, 20);
+            this.txtBChoice_Url1.TabIndex = 49;
+            // 
+            // txtBChoice_Url2
+            // 
+            this.txtBChoice_Url2.EditValue2 = null;
+            this.txtBChoice_Url2.EraserGroup = "CLR1";
+            this.txtBChoice_Url2.Location = new System.Drawing.Point(163, 88);
+            this.txtBChoice_Url2.Name = "txtBChoice_Url2";
+            this.txtBChoice_Url2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtBChoice_Url2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtBChoice_Url2.RequireMessage = null;
+            this.txtBChoice_Url2.Size = new System.Drawing.Size(29, 20);
+            this.txtBChoice_Url2.TabIndex = 50;
+            // 
+            // txtAChoice_Url1
+            // 
+            this.txtAChoice_Url1.EditValue2 = null;
+            this.txtAChoice_Url1.EraserGroup = "CLR1";
+            this.txtAChoice_Url1.Location = new System.Drawing.Point(61, 110);
+            this.txtAChoice_Url1.Name = "txtAChoice_Url1";
+            this.txtAChoice_Url1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtAChoice_Url1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAChoice_Url1.RequireMessage = null;
+            this.txtAChoice_Url1.Size = new System.Drawing.Size(29, 20);
+            this.txtAChoice_Url1.TabIndex = 53;
+            // 
+            // txtAChoice_Url2
+            // 
+            this.txtAChoice_Url2.EditValue2 = null;
+            this.txtAChoice_Url2.EraserGroup = "CLR1";
+            this.txtAChoice_Url2.Location = new System.Drawing.Point(163, 110);
+            this.txtAChoice_Url2.Name = "txtAChoice_Url2";
+            this.txtAChoice_Url2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtAChoice_Url2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAChoice_Url2.RequireMessage = null;
+            this.txtAChoice_Url2.Size = new System.Drawing.Size(29, 20);
+            this.txtAChoice_Url2.TabIndex = 54;
+            // 
+            // txtBChoice_Url3
+            // 
+            this.txtBChoice_Url3.EditValue2 = null;
+            this.txtBChoice_Url3.EraserGroup = "CLR1";
+            this.txtBChoice_Url3.Location = new System.Drawing.Point(271, 88);
+            this.txtBChoice_Url3.Name = "txtBChoice_Url3";
+            this.txtBChoice_Url3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtBChoice_Url3.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtBChoice_Url3.RequireMessage = null;
+            this.txtBChoice_Url3.Size = new System.Drawing.Size(29, 20);
+            this.txtBChoice_Url3.TabIndex = 51;
+            // 
+            // txtStory_id2
+            // 
+            this.txtStory_id2.EditValue2 = null;
+            this.txtStory_id2.EraserGroup = "CLR1";
+            this.txtStory_id2.Location = new System.Drawing.Point(198, 110);
+            this.txtStory_id2.Name = "txtStory_id2";
+            this.txtStory_id2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtStory_id2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtStory_id2.RequireMessage = null;
+            this.txtStory_id2.Size = new System.Drawing.Size(67, 20);
+            this.txtStory_id2.TabIndex = 102;
+            // 
+            // txtAChoice_Url3
+            // 
+            this.txtAChoice_Url3.EditValue2 = null;
+            this.txtAChoice_Url3.EraserGroup = "CLR1";
+            this.txtAChoice_Url3.Location = new System.Drawing.Point(271, 110);
+            this.txtAChoice_Url3.Name = "txtAChoice_Url3";
+            this.txtAChoice_Url3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtAChoice_Url3.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAChoice_Url3.RequireMessage = null;
+            this.txtAChoice_Url3.Size = new System.Drawing.Size(29, 20);
+            this.txtAChoice_Url3.TabIndex = 55;
+            // 
+            // txtBChoice_Url4
+            // 
+            this.txtBChoice_Url4.EditValue2 = null;
+            this.txtBChoice_Url4.EraserGroup = "CLR1";
+            this.txtBChoice_Url4.Location = new System.Drawing.Point(369, 88);
+            this.txtBChoice_Url4.Name = "txtBChoice_Url4";
+            this.txtBChoice_Url4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtBChoice_Url4.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtBChoice_Url4.RequireMessage = null;
+            this.txtBChoice_Url4.Size = new System.Drawing.Size(29, 20);
+            this.txtBChoice_Url4.TabIndex = 52;
+            // 
+            // txtAChoice_Url4
+            // 
+            this.txtAChoice_Url4.EditValue2 = null;
+            this.txtAChoice_Url4.EraserGroup = "CLR1";
+            this.txtAChoice_Url4.Location = new System.Drawing.Point(369, 110);
+            this.txtAChoice_Url4.Name = "txtAChoice_Url4";
+            this.txtAChoice_Url4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtAChoice_Url4.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAChoice_Url4.RequireMessage = null;
+            this.txtAChoice_Url4.Size = new System.Drawing.Size(29, 20);
+            this.txtAChoice_Url4.TabIndex = 56;
+            // 
+            // txtIdx1
+            // 
+            this.txtIdx1.EditValue2 = null;
+            this.txtIdx1.EraserGroup = "CLR1";
+            this.txtIdx1.Location = new System.Drawing.Point(96, 88);
+            this.txtIdx1.Name = "txtIdx1";
+            this.txtIdx1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtIdx1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtIdx1.RequireMessage = null;
+            this.txtIdx1.Size = new System.Drawing.Size(29, 20);
+            this.txtIdx1.TabIndex = 92;
+            // 
+            // txtStory_id3
+            // 
+            this.txtStory_id3.EditValue2 = null;
+            this.txtStory_id3.EraserGroup = "CLR1";
+            this.txtStory_id3.Location = new System.Drawing.Point(306, 110);
+            this.txtStory_id3.Name = "txtStory_id3";
+            this.txtStory_id3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtStory_id3.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtStory_id3.RequireMessage = null;
+            this.txtStory_id3.Size = new System.Drawing.Size(57, 20);
+            this.txtStory_id3.TabIndex = 98;
+            // 
+            // txtIdx2
+            // 
+            this.txtIdx2.EditValue2 = null;
+            this.txtIdx2.EraserGroup = "CLR1";
+            this.txtIdx2.Location = new System.Drawing.Point(198, 88);
+            this.txtIdx2.Name = "txtIdx2";
+            this.txtIdx2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtIdx2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtIdx2.RequireMessage = null;
+            this.txtIdx2.Size = new System.Drawing.Size(29, 20);
+            this.txtIdx2.TabIndex = 93;
+            // 
+            // txtIdx3
+            // 
+            this.txtIdx3.EditValue2 = null;
+            this.txtIdx3.EraserGroup = "CLR1";
+            this.txtIdx3.Location = new System.Drawing.Point(306, 88);
+            this.txtIdx3.Name = "txtIdx3";
+            this.txtIdx3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtIdx3.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtIdx3.RequireMessage = null;
+            this.txtIdx3.Size = new System.Drawing.Size(29, 20);
+            this.txtIdx3.TabIndex = 94;
+            // 
+            // txtStory_id1
+            // 
+            this.txtStory_id1.EditValue2 = null;
+            this.txtStory_id1.EraserGroup = "CLR1";
+            this.txtStory_id1.Location = new System.Drawing.Point(96, 110);
+            this.txtStory_id1.Name = "txtStory_id1";
+            this.txtStory_id1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtStory_id1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtStory_id1.RequireMessage = null;
+            this.txtStory_id1.Size = new System.Drawing.Size(61, 20);
+            this.txtStory_id1.TabIndex = 96;
+            // 
+            // txtIdx4
+            // 
+            this.txtIdx4.EditValue2 = null;
+            this.txtIdx4.EraserGroup = "CLR1";
+            this.txtIdx4.Location = new System.Drawing.Point(404, 88);
+            this.txtIdx4.Name = "txtIdx4";
+            this.txtIdx4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtIdx4.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtIdx4.RequireMessage = null;
+            this.txtIdx4.Size = new System.Drawing.Size(29, 20);
+            this.txtIdx4.TabIndex = 95;
             // 
             // efwLabel2
             // 
@@ -1092,17 +1364,131 @@
             this.dtE_DATE.Size = new System.Drawing.Size(118, 20);
             this.dtE_DATE.TabIndex = 5;
             // 
-            // txtStory_id
+            // efwPanel4
             // 
-            this.txtStory_id.EditValue2 = null;
-            this.txtStory_id.EraserGroup = "CLR1";
-            this.txtStory_id.Location = new System.Drawing.Point(10, 88);
-            this.txtStory_id.Name = "txtStory_id";
-            this.txtStory_id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtStory_id.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtStory_id.RequireMessage = null;
-            this.txtStory_id.Size = new System.Drawing.Size(45, 20);
-            this.txtStory_id.TabIndex = 107;
+            this.efwPanel4.Controls.Add(this.picBChoice_img4);
+            this.efwPanel4.Controls.Add(this.picAChoice_img4);
+            this.efwPanel4.Location = new System.Drawing.Point(65, 583);
+            this.efwPanel4.Name = "efwPanel4";
+            this.efwPanel4.Size = new System.Drawing.Size(413, 187);
+            this.efwPanel4.TabIndex = 88;
+            // 
+            // picBChoice_img4
+            // 
+            this.picBChoice_img4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picBChoice_img4.Location = new System.Drawing.Point(5, 5);
+            this.picBChoice_img4.Name = "picBChoice_img4";
+            this.picBChoice_img4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picBChoice_img4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picBChoice_img4.Size = new System.Drawing.Size(199, 177);
+            this.picBChoice_img4.TabIndex = 89;
+            this.picBChoice_img4.UseWaitCursor = true;
+            // 
+            // picAChoice_img4
+            // 
+            this.picAChoice_img4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picAChoice_img4.Location = new System.Drawing.Point(210, 5);
+            this.picAChoice_img4.Name = "picAChoice_img4";
+            this.picAChoice_img4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picAChoice_img4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picAChoice_img4.Size = new System.Drawing.Size(199, 177);
+            this.picAChoice_img4.TabIndex = 90;
+            this.picAChoice_img4.UseWaitCursor = true;
+            // 
+            // efwPanel3
+            // 
+            this.efwPanel3.Controls.Add(this.picBChoice_img3);
+            this.efwPanel3.Controls.Add(this.picAChoice_img3);
+            this.efwPanel3.Location = new System.Drawing.Point(65, 390);
+            this.efwPanel3.Name = "efwPanel3";
+            this.efwPanel3.Size = new System.Drawing.Size(413, 187);
+            this.efwPanel3.TabIndex = 85;
+            // 
+            // picBChoice_img3
+            // 
+            this.picBChoice_img3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picBChoice_img3.Location = new System.Drawing.Point(5, 5);
+            this.picBChoice_img3.Name = "picBChoice_img3";
+            this.picBChoice_img3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picBChoice_img3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picBChoice_img3.Size = new System.Drawing.Size(199, 177);
+            this.picBChoice_img3.TabIndex = 86;
+            this.picBChoice_img3.UseWaitCursor = true;
+            // 
+            // picAChoice_img3
+            // 
+            this.picAChoice_img3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picAChoice_img3.Location = new System.Drawing.Point(210, 5);
+            this.picAChoice_img3.Name = "picAChoice_img3";
+            this.picAChoice_img3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picAChoice_img3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picAChoice_img3.Size = new System.Drawing.Size(199, 177);
+            this.picAChoice_img3.TabIndex = 87;
+            this.picAChoice_img3.UseWaitCursor = true;
+            // 
+            // efwPanel2
+            // 
+            this.efwPanel2.Controls.Add(this.picBChoice_img2);
+            this.efwPanel2.Controls.Add(this.picAChoice_img2);
+            this.efwPanel2.Location = new System.Drawing.Point(65, 197);
+            this.efwPanel2.Name = "efwPanel2";
+            this.efwPanel2.Size = new System.Drawing.Size(413, 187);
+            this.efwPanel2.TabIndex = 82;
+            // 
+            // picBChoice_img2
+            // 
+            this.picBChoice_img2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picBChoice_img2.Location = new System.Drawing.Point(5, 3);
+            this.picBChoice_img2.Name = "picBChoice_img2";
+            this.picBChoice_img2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picBChoice_img2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picBChoice_img2.Size = new System.Drawing.Size(199, 177);
+            this.picBChoice_img2.TabIndex = 83;
+            this.picBChoice_img2.UseWaitCursor = true;
+            // 
+            // picAChoice_img2
+            // 
+            this.picAChoice_img2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picAChoice_img2.Location = new System.Drawing.Point(210, 3);
+            this.picAChoice_img2.Name = "picAChoice_img2";
+            this.picAChoice_img2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picAChoice_img2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picAChoice_img2.Size = new System.Drawing.Size(199, 177);
+            this.picAChoice_img2.TabIndex = 84;
+            this.picAChoice_img2.UseWaitCursor = true;
+            // 
+            // efwPanel1
+            // 
+            this.efwPanel1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.efwPanel1.Appearance.Options.UseBackColor = true;
+            this.efwPanel1.Controls.Add(this.picBChoice_img1);
+            this.efwPanel1.Controls.Add(this.picAChoice_img1);
+            this.efwPanel1.Location = new System.Drawing.Point(65, 7);
+            this.efwPanel1.Name = "efwPanel1";
+            this.efwPanel1.Size = new System.Drawing.Size(413, 187);
+            this.efwPanel1.TabIndex = 49;
+            // 
+            // picBChoice_img1
+            // 
+            this.picBChoice_img1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picBChoice_img1.Location = new System.Drawing.Point(4, 5);
+            this.picBChoice_img1.Name = "picBChoice_img1";
+            this.picBChoice_img1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picBChoice_img1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picBChoice_img1.Size = new System.Drawing.Size(199, 177);
+            this.picBChoice_img1.TabIndex = 80;
+            this.picBChoice_img1.UseWaitCursor = true;
+            // 
+            // picAChoice_img1
+            // 
+            this.picAChoice_img1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picAChoice_img1.Location = new System.Drawing.Point(209, 5);
+            this.picAChoice_img1.Name = "picAChoice_img1";
+            this.picAChoice_img1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picAChoice_img1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picAChoice_img1.Size = new System.Drawing.Size(199, 177);
+            this.picAChoice_img1.TabIndex = 81;
+            this.picAChoice_img1.UseWaitCursor = true;
             // 
             // efwLabel11
             // 
@@ -1160,18 +1546,6 @@
             this.txtSort2.Size = new System.Drawing.Size(44, 20);
             this.txtSort2.TabIndex = 103;
             // 
-            // txtStory_id2
-            // 
-            this.txtStory_id2.EditValue2 = null;
-            this.txtStory_id2.EraserGroup = "CLR1";
-            this.txtStory_id2.Location = new System.Drawing.Point(198, 110);
-            this.txtStory_id2.Name = "txtStory_id2";
-            this.txtStory_id2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtStory_id2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtStory_id2.RequireMessage = null;
-            this.txtStory_id2.Size = new System.Drawing.Size(67, 20);
-            this.txtStory_id2.TabIndex = 102;
-            // 
             // txtSort4
             // 
             this.txtSort4.EditValue2 = null;
@@ -1183,18 +1557,6 @@
             this.txtSort4.RequireMessage = null;
             this.txtSort4.Size = new System.Drawing.Size(44, 20);
             this.txtSort4.TabIndex = 101;
-            // 
-            // txtStory_id4
-            // 
-            this.txtStory_id4.EditValue2 = null;
-            this.txtStory_id4.EraserGroup = "CLR1";
-            this.txtStory_id4.Location = new System.Drawing.Point(404, 110);
-            this.txtStory_id4.Name = "txtStory_id4";
-            this.txtStory_id4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtStory_id4.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtStory_id4.RequireMessage = null;
-            this.txtStory_id4.Size = new System.Drawing.Size(60, 20);
-            this.txtStory_id4.TabIndex = 100;
             // 
             // txtSort3
             // 
@@ -1208,18 +1570,6 @@
             this.txtSort3.Size = new System.Drawing.Size(44, 20);
             this.txtSort3.TabIndex = 99;
             // 
-            // txtStory_id3
-            // 
-            this.txtStory_id3.EditValue2 = null;
-            this.txtStory_id3.EraserGroup = "CLR1";
-            this.txtStory_id3.Location = new System.Drawing.Point(306, 110);
-            this.txtStory_id3.Name = "txtStory_id3";
-            this.txtStory_id3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtStory_id3.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtStory_id3.RequireMessage = null;
-            this.txtStory_id3.Size = new System.Drawing.Size(57, 20);
-            this.txtStory_id3.TabIndex = 98;
-            // 
             // txtSort1
             // 
             this.txtSort1.EditValue2 = null;
@@ -1232,90 +1582,6 @@
             this.txtSort1.Size = new System.Drawing.Size(44, 20);
             this.txtSort1.TabIndex = 97;
             // 
-            // txtStory_id1
-            // 
-            this.txtStory_id1.EditValue2 = null;
-            this.txtStory_id1.EraserGroup = "CLR1";
-            this.txtStory_id1.Location = new System.Drawing.Point(96, 110);
-            this.txtStory_id1.Name = "txtStory_id1";
-            this.txtStory_id1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtStory_id1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtStory_id1.RequireMessage = null;
-            this.txtStory_id1.Size = new System.Drawing.Size(61, 20);
-            this.txtStory_id1.TabIndex = 96;
-            // 
-            // txtIdx4
-            // 
-            this.txtIdx4.EditValue2 = null;
-            this.txtIdx4.EraserGroup = "CLR1";
-            this.txtIdx4.Location = new System.Drawing.Point(404, 88);
-            this.txtIdx4.Name = "txtIdx4";
-            this.txtIdx4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtIdx4.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtIdx4.RequireMessage = null;
-            this.txtIdx4.Size = new System.Drawing.Size(29, 20);
-            this.txtIdx4.TabIndex = 95;
-            // 
-            // txtIdx3
-            // 
-            this.txtIdx3.EditValue2 = null;
-            this.txtIdx3.EraserGroup = "CLR1";
-            this.txtIdx3.Location = new System.Drawing.Point(306, 88);
-            this.txtIdx3.Name = "txtIdx3";
-            this.txtIdx3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtIdx3.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtIdx3.RequireMessage = null;
-            this.txtIdx3.Size = new System.Drawing.Size(29, 20);
-            this.txtIdx3.TabIndex = 94;
-            // 
-            // txtIdx2
-            // 
-            this.txtIdx2.EditValue2 = null;
-            this.txtIdx2.EraserGroup = "CLR1";
-            this.txtIdx2.Location = new System.Drawing.Point(198, 88);
-            this.txtIdx2.Name = "txtIdx2";
-            this.txtIdx2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtIdx2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtIdx2.RequireMessage = null;
-            this.txtIdx2.Size = new System.Drawing.Size(29, 20);
-            this.txtIdx2.TabIndex = 93;
-            // 
-            // txtIdx1
-            // 
-            this.txtIdx1.EditValue2 = null;
-            this.txtIdx1.EraserGroup = "CLR1";
-            this.txtIdx1.Location = new System.Drawing.Point(96, 88);
-            this.txtIdx1.Name = "txtIdx1";
-            this.txtIdx1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtIdx1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtIdx1.RequireMessage = null;
-            this.txtIdx1.Size = new System.Drawing.Size(29, 20);
-            this.txtIdx1.TabIndex = 92;
-            // 
-            // txtAChoice_Url4
-            // 
-            this.txtAChoice_Url4.EditValue2 = null;
-            this.txtAChoice_Url4.EraserGroup = "CLR1";
-            this.txtAChoice_Url4.Location = new System.Drawing.Point(369, 110);
-            this.txtAChoice_Url4.Name = "txtAChoice_Url4";
-            this.txtAChoice_Url4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtAChoice_Url4.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAChoice_Url4.RequireMessage = null;
-            this.txtAChoice_Url4.Size = new System.Drawing.Size(29, 20);
-            this.txtAChoice_Url4.TabIndex = 56;
-            // 
-            // txtBChoice_Url4
-            // 
-            this.txtBChoice_Url4.EditValue2 = null;
-            this.txtBChoice_Url4.EraserGroup = "CLR1";
-            this.txtBChoice_Url4.Location = new System.Drawing.Point(369, 88);
-            this.txtBChoice_Url4.Name = "txtBChoice_Url4";
-            this.txtBChoice_Url4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtBChoice_Url4.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtBChoice_Url4.RequireMessage = null;
-            this.txtBChoice_Url4.Size = new System.Drawing.Size(29, 20);
-            this.txtBChoice_Url4.TabIndex = 52;
-            // 
             // checkEdit4
             // 
             this.checkEdit4.Location = new System.Drawing.Point(33, 658);
@@ -1326,88 +1592,6 @@
             this.checkEdit4.Size = new System.Drawing.Size(19, 19);
             this.checkEdit4.TabIndex = 91;
             this.checkEdit4.CheckedChanged += new System.EventHandler(this.checkEdit4_CheckedChanged);
-            // 
-            // txtAChoice_Url3
-            // 
-            this.txtAChoice_Url3.EditValue2 = null;
-            this.txtAChoice_Url3.EraserGroup = "CLR1";
-            this.txtAChoice_Url3.Location = new System.Drawing.Point(271, 110);
-            this.txtAChoice_Url3.Name = "txtAChoice_Url3";
-            this.txtAChoice_Url3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtAChoice_Url3.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAChoice_Url3.RequireMessage = null;
-            this.txtAChoice_Url3.Size = new System.Drawing.Size(29, 20);
-            this.txtAChoice_Url3.TabIndex = 55;
-            // 
-            // picAChoice_img4
-            // 
-            this.picAChoice_img4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picAChoice_img4.Location = new System.Drawing.Point(210, 5);
-            this.picAChoice_img4.Name = "picAChoice_img4";
-            this.picAChoice_img4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picAChoice_img4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picAChoice_img4.Size = new System.Drawing.Size(199, 177);
-            this.picAChoice_img4.TabIndex = 90;
-            this.picAChoice_img4.UseWaitCursor = true;
-            // 
-            // txtBChoice_Url3
-            // 
-            this.txtBChoice_Url3.EditValue2 = null;
-            this.txtBChoice_Url3.EraserGroup = "CLR1";
-            this.txtBChoice_Url3.Location = new System.Drawing.Point(271, 88);
-            this.txtBChoice_Url3.Name = "txtBChoice_Url3";
-            this.txtBChoice_Url3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtBChoice_Url3.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtBChoice_Url3.RequireMessage = null;
-            this.txtBChoice_Url3.Size = new System.Drawing.Size(29, 20);
-            this.txtBChoice_Url3.TabIndex = 51;
-            // 
-            // txtAChoice_Url2
-            // 
-            this.txtAChoice_Url2.EditValue2 = null;
-            this.txtAChoice_Url2.EraserGroup = "CLR1";
-            this.txtAChoice_Url2.Location = new System.Drawing.Point(163, 110);
-            this.txtAChoice_Url2.Name = "txtAChoice_Url2";
-            this.txtAChoice_Url2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtAChoice_Url2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAChoice_Url2.RequireMessage = null;
-            this.txtAChoice_Url2.Size = new System.Drawing.Size(29, 20);
-            this.txtAChoice_Url2.TabIndex = 54;
-            // 
-            // picBChoice_img4
-            // 
-            this.picBChoice_img4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBChoice_img4.Location = new System.Drawing.Point(5, 5);
-            this.picBChoice_img4.Name = "picBChoice_img4";
-            this.picBChoice_img4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picBChoice_img4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBChoice_img4.Size = new System.Drawing.Size(199, 177);
-            this.picBChoice_img4.TabIndex = 89;
-            this.picBChoice_img4.UseWaitCursor = true;
-            // 
-            // txtAChoice_Url1
-            // 
-            this.txtAChoice_Url1.EditValue2 = null;
-            this.txtAChoice_Url1.EraserGroup = "CLR1";
-            this.txtAChoice_Url1.Location = new System.Drawing.Point(61, 110);
-            this.txtAChoice_Url1.Name = "txtAChoice_Url1";
-            this.txtAChoice_Url1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtAChoice_Url1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAChoice_Url1.RequireMessage = null;
-            this.txtAChoice_Url1.Size = new System.Drawing.Size(29, 20);
-            this.txtAChoice_Url1.TabIndex = 53;
-            // 
-            // txtBChoice_Url2
-            // 
-            this.txtBChoice_Url2.EditValue2 = null;
-            this.txtBChoice_Url2.EraserGroup = "CLR1";
-            this.txtBChoice_Url2.Location = new System.Drawing.Point(163, 88);
-            this.txtBChoice_Url2.Name = "txtBChoice_Url2";
-            this.txtBChoice_Url2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtBChoice_Url2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtBChoice_Url2.RequireMessage = null;
-            this.txtBChoice_Url2.Size = new System.Drawing.Size(29, 20);
-            this.txtBChoice_Url2.TabIndex = 50;
             // 
             // checkEdit3
             // 
@@ -1420,40 +1604,6 @@
             this.checkEdit3.TabIndex = 88;
             this.checkEdit3.CheckedChanged += new System.EventHandler(this.checkEdit3_CheckedChanged);
             // 
-            // picAChoice_img3
-            // 
-            this.picAChoice_img3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picAChoice_img3.Location = new System.Drawing.Point(210, 5);
-            this.picAChoice_img3.Name = "picAChoice_img3";
-            this.picAChoice_img3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picAChoice_img3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picAChoice_img3.Size = new System.Drawing.Size(199, 177);
-            this.picAChoice_img3.TabIndex = 87;
-            this.picAChoice_img3.UseWaitCursor = true;
-            // 
-            // picBChoice_img3
-            // 
-            this.picBChoice_img3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBChoice_img3.Location = new System.Drawing.Point(5, 5);
-            this.picBChoice_img3.Name = "picBChoice_img3";
-            this.picBChoice_img3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picBChoice_img3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBChoice_img3.Size = new System.Drawing.Size(199, 177);
-            this.picBChoice_img3.TabIndex = 86;
-            this.picBChoice_img3.UseWaitCursor = true;
-            // 
-            // txtBChoice_Url1
-            // 
-            this.txtBChoice_Url1.EditValue2 = null;
-            this.txtBChoice_Url1.EraserGroup = "CLR1";
-            this.txtBChoice_Url1.Location = new System.Drawing.Point(61, 88);
-            this.txtBChoice_Url1.Name = "txtBChoice_Url1";
-            this.txtBChoice_Url1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtBChoice_Url1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtBChoice_Url1.RequireMessage = null;
-            this.txtBChoice_Url1.Size = new System.Drawing.Size(29, 20);
-            this.txtBChoice_Url1.TabIndex = 49;
-            // 
             // checkEdit2
             // 
             this.checkEdit2.Location = new System.Drawing.Point(33, 282);
@@ -1465,28 +1615,6 @@
             this.checkEdit2.TabIndex = 85;
             this.checkEdit2.CheckedChanged += new System.EventHandler(this.checkEdit2_CheckedChanged);
             // 
-            // picAChoice_img2
-            // 
-            this.picAChoice_img2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picAChoice_img2.Location = new System.Drawing.Point(210, 3);
-            this.picAChoice_img2.Name = "picAChoice_img2";
-            this.picAChoice_img2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picAChoice_img2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picAChoice_img2.Size = new System.Drawing.Size(199, 177);
-            this.picAChoice_img2.TabIndex = 84;
-            this.picAChoice_img2.UseWaitCursor = true;
-            // 
-            // picBChoice_img2
-            // 
-            this.picBChoice_img2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBChoice_img2.Location = new System.Drawing.Point(5, 3);
-            this.picBChoice_img2.Name = "picBChoice_img2";
-            this.picBChoice_img2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picBChoice_img2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBChoice_img2.Size = new System.Drawing.Size(199, 177);
-            this.picBChoice_img2.TabIndex = 83;
-            this.picBChoice_img2.UseWaitCursor = true;
-            // 
             // checkEdit1
             // 
             this.checkEdit1.Location = new System.Drawing.Point(33, 94);
@@ -1497,97 +1625,6 @@
             this.checkEdit1.Size = new System.Drawing.Size(19, 19);
             this.checkEdit1.TabIndex = 82;
             this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
-            // 
-            // efwPanel2
-            // 
-            this.efwPanel2.Controls.Add(this.picBChoice_img2);
-            this.efwPanel2.Controls.Add(this.picAChoice_img2);
-            this.efwPanel2.Location = new System.Drawing.Point(65, 197);
-            this.efwPanel2.Name = "efwPanel2";
-            this.efwPanel2.Size = new System.Drawing.Size(413, 187);
-            this.efwPanel2.TabIndex = 82;
-            // 
-            // efwPanel3
-            // 
-            this.efwPanel3.Controls.Add(this.picBChoice_img3);
-            this.efwPanel3.Controls.Add(this.picAChoice_img3);
-            this.efwPanel3.Location = new System.Drawing.Point(65, 390);
-            this.efwPanel3.Name = "efwPanel3";
-            this.efwPanel3.Size = new System.Drawing.Size(413, 187);
-            this.efwPanel3.TabIndex = 85;
-            // 
-            // efwPanel4
-            // 
-            this.efwPanel4.Controls.Add(this.picBChoice_img4);
-            this.efwPanel4.Controls.Add(this.picAChoice_img4);
-            this.efwPanel4.Location = new System.Drawing.Point(65, 583);
-            this.efwPanel4.Name = "efwPanel4";
-            this.efwPanel4.Size = new System.Drawing.Size(413, 187);
-            this.efwPanel4.TabIndex = 88;
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.txtPic_Url5);
-            this.groupControl1.Controls.Add(this.txtPic_Url1);
-            this.groupControl1.Controls.Add(this.txtPic_Url4);
-            this.groupControl1.Controls.Add(this.txtPic_Url2);
-            this.groupControl1.Controls.Add(this.txtPic_Url3);
-            this.groupControl1.Controls.Add(this.txtStory_id);
-            this.groupControl1.Controls.Add(this.txtStory_id4);
-            this.groupControl1.Controls.Add(this.txtBChoice_Url1);
-            this.groupControl1.Controls.Add(this.txtBChoice_Url2);
-            this.groupControl1.Controls.Add(this.txtAChoice_Url1);
-            this.groupControl1.Controls.Add(this.txtAChoice_Url2);
-            this.groupControl1.Controls.Add(this.txtBChoice_Url3);
-            this.groupControl1.Controls.Add(this.txtStory_id2);
-            this.groupControl1.Controls.Add(this.txtAChoice_Url3);
-            this.groupControl1.Controls.Add(this.txtBChoice_Url4);
-            this.groupControl1.Controls.Add(this.txtAChoice_Url4);
-            this.groupControl1.Controls.Add(this.txtIdx1);
-            this.groupControl1.Controls.Add(this.txtStory_id3);
-            this.groupControl1.Controls.Add(this.txtIdx2);
-            this.groupControl1.Controls.Add(this.txtIdx3);
-            this.groupControl1.Controls.Add(this.txtStory_id1);
-            this.groupControl1.Controls.Add(this.txtIdx4);
-            this.groupControl1.Location = new System.Drawing.Point(960, 23);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(89, 24);
-            this.groupControl1.TabIndex = 49;
-            this.groupControl1.Text = "숨긴항목";
-            this.groupControl1.Visible = false;
-            // 
-            // picAChoice_img1
-            // 
-            this.picAChoice_img1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picAChoice_img1.Location = new System.Drawing.Point(209, 5);
-            this.picAChoice_img1.Name = "picAChoice_img1";
-            this.picAChoice_img1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picAChoice_img1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picAChoice_img1.Size = new System.Drawing.Size(199, 177);
-            this.picAChoice_img1.TabIndex = 81;
-            this.picAChoice_img1.UseWaitCursor = true;
-            // 
-            // picBChoice_img1
-            // 
-            this.picBChoice_img1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBChoice_img1.Location = new System.Drawing.Point(4, 5);
-            this.picBChoice_img1.Name = "picBChoice_img1";
-            this.picBChoice_img1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picBChoice_img1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBChoice_img1.Size = new System.Drawing.Size(199, 177);
-            this.picBChoice_img1.TabIndex = 80;
-            this.picBChoice_img1.UseWaitCursor = true;
-            // 
-            // efwPanel1
-            // 
-            this.efwPanel1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.efwPanel1.Appearance.Options.UseBackColor = true;
-            this.efwPanel1.Controls.Add(this.picBChoice_img1);
-            this.efwPanel1.Controls.Add(this.picAChoice_img1);
-            this.efwPanel1.Location = new System.Drawing.Point(65, 7);
-            this.efwPanel1.Name = "efwPanel1";
-            this.efwPanel1.Size = new System.Drawing.Size(413, 187);
-            this.efwPanel1.TabIndex = 49;
             // 
             // frmGSHOP14
             // 
@@ -1629,58 +1666,59 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtgshop_name.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdx1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdx2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdx3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdx4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSort2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSort4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSort3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSort1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStory_id1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdx4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdx3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdx2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdx1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAChoice_Url1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBChoice_Url1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanel2)).EndInit();
-            this.efwPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.efwPanel3)).EndInit();
-            this.efwPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanel4)).EndInit();
             this.efwPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanel3)).EndInit();
+            this.efwPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanel2)).EndInit();
+            this.efwPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanel1)).EndInit();
             this.efwPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBChoice_img1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAChoice_img1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSort2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSort4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSort3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSort1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1804,5 +1842,8 @@
         private Easy.Framework.WinForm.Control.efwPanelControl efwPanel1;
         private Easy.Framework.WinForm.Control.efwPictureEdit picBChoice_img1;
         private Easy.Framework.WinForm.Control.efwPictureEdit picAChoice_img1;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel12;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtgshop_name;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
     }
 }

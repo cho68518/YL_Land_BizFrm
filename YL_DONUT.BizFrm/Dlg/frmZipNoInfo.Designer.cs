@@ -78,7 +78,7 @@
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsEditable = false;
             this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.Location = new System.Drawing.Point(0, 42);
+            this.efwGridControl1.Location = new System.Drawing.Point(0, 49);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
@@ -89,7 +89,7 @@
             this.repositoryItemMemoExEdit1,
             this.repositoryItemMemoEdit1,
             this.repositoryItemMemoEdit2});
-            this.efwGridControl1.Size = new System.Drawing.Size(430, 408);
+            this.efwGridControl1.Size = new System.Drawing.Size(430, 476);
             this.efwGridControl1.TabIndex = 10;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -100,12 +100,14 @@
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.efwGridControl1.DoubleClick += new System.EventHandler(this.EfwGridControl1_DoubleClick);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2});
+            this.gridView1.DetailHeight = 408;
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -161,7 +163,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 42);
+            this.panel1.Size = new System.Drawing.Size(430, 49);
             this.panel1.TabIndex = 9;
             // 
             // btnSearch
@@ -171,16 +173,17 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
             this.btnSearch.IsMultiLang = false;
-            this.btnSearch.Location = new System.Drawing.Point(264, 9);
+            this.btnSearch.Location = new System.Drawing.Point(264, 10);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(75, 27);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "검색";
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // txtSch
             // 
             this.txtSch.EditValue2 = null;
-            this.txtSch.Location = new System.Drawing.Point(86, 11);
+            this.txtSch.Location = new System.Drawing.Point(86, 13);
             this.txtSch.Name = "txtSch";
             this.txtSch.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtSch.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -192,7 +195,7 @@
             // 
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(44, 14);
+            this.efwLabel1.Location = new System.Drawing.Point(44, 16);
             this.efwLabel1.Name = "efwLabel1";
             this.efwLabel1.Size = new System.Drawing.Size(30, 14);
             this.efwLabel1.TabIndex = 4;
@@ -202,7 +205,7 @@
             // 
             this.txtCOMPANYCD.EditValue2 = null;
             this.txtCOMPANYCD.Enabled = false;
-            this.txtCOMPANYCD.Location = new System.Drawing.Point(254, 12);
+            this.txtCOMPANYCD.Location = new System.Drawing.Point(254, 14);
             this.txtCOMPANYCD.Name = "txtCOMPANYCD";
             this.txtCOMPANYCD.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtCOMPANYCD.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -218,21 +221,23 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
             this.btnClose.IsMultiLang = false;
-            this.btnClose.Location = new System.Drawing.Point(344, 9);
+            this.btnClose.Location = new System.Drawing.Point(344, 10);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(75, 27);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "취소";
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // Form1
+            // frmZipNoInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 450);
+            this.ClientSize = new System.Drawing.Size(430, 525);
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmZipNoInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "우편번호검색";
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();

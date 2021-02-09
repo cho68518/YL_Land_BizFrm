@@ -79,24 +79,28 @@ namespace YL_DONUT.BizFrm
 
                     for (int i = 0; i < gridView1.DataRowCount; i++)
                     {
-                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_SCM_SCM04_SAVE_02", con))
+                        if (gridView1.GetRowCellValue(i, gridView1.Columns[0]).ToString().Length > 2)
                         {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_SCM_SCM04_SAVE_02", con))
+                            {
 
-                            con.Open();
-                            cmd.CommandType = CommandType.StoredProcedure;
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
 
-                            cmd.Parameters.Add("i_id", MySqlDbType.Int32, 11);
-                            cmd.Parameters[0].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[0]).ToString());
+                                cmd.Parameters.Add("i_id", MySqlDbType.Int32, 11);
+                                cmd.Parameters[0].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[0]).ToString());
 
-                            cmd.Parameters.Add("i_delivery_num", MySqlDbType.VarChar, 10);
-                            cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, gridView1.Columns[1]).ToString();
+                                cmd.Parameters.Add("i_delivery_num", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, gridView1.Columns[1]).ToString();
 
-                            cmd.Parameters.Add("i_delivery_code", MySqlDbType.VarChar, 500);
-                            cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, gridView1.Columns[2]).ToString();
+                                cmd.Parameters.Add("i_delivery_code", MySqlDbType.VarChar, 500);
+                                cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, gridView1.Columns[2]).ToString();
 
-                            cmd.ExecuteNonQuery();
-                            con.Close();
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
                         }
+                        
                     }
                 }
             }

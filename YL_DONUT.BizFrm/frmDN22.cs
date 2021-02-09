@@ -130,7 +130,7 @@ namespace YL_DONUT.BizFrm
             {
                 rbLevel.EditValue = "206";
             }
-            Search();
+         //  Search();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

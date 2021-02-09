@@ -158,6 +158,24 @@
     <Compile Include="Dlg\frmMemberInfo_Dup.Designer.cs">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMM24.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM24.Designer.cs">
+      <DependentUpon>frmMM24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM23.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM23.Designer.cs">
+      <DependentUpon>frmMM23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM22.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM22.Designer.cs">
+      <DependentUpon>frmMM22.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMM17.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -332,6 +350,10 @@
     <Compile Include="frmMM10.Designer.cs">
       <DependentUpon>frmMM10.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMM21.cs" />
+    <Compile Include="frmMM21.designer.cs">
+      <DependentUpon>frmMM21.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTest01.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -361,6 +383,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmMemberInfo_Dup.resx">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM24.resx">
+      <DependentUpon>frmMM24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM23.resx">
+      <DependentUpon>frmMM23.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM17.resx">
       <DependentUpon>frmMM17.cs</DependentUpon>
@@ -449,6 +477,12 @@
     <EmbeddedResource Include="frmMM19_Pop03.resx">
       <DependentUpon>frmMM19_Pop03.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMM21.resx">
+      <DependentUpon>frmMM21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM22.resx">
+      <DependentUpon>frmMM22.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTest01.resx">
       <DependentUpon>frmTest01.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -481,6 +515,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YL_GM.BizFrm.V.1.0\YL_GM.BizFrm.V.1.0.csproj">
+      <Project>{5B7850A0-A628-4D0B-BC3F-FBCDB66DF433}</Project>
+      <Name>YL_GM.BizFrm.V.1.0</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YL_MA.BizFrm.V.1.0\YL_MA.BizFrm.V.1.0.csproj">
       <Project>{E75E6209-991A-40F8-8F66-DC89D5AEF850}</Project>
       <Name>YL_MA.BizFrm.V.1.0</Name>

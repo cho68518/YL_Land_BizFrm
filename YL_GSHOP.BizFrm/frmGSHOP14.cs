@@ -154,7 +154,7 @@ namespace YL_GSHOP.BizFrm
 
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP12_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP14_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -163,6 +163,10 @@ namespace YL_GSHOP.BizFrm
 
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_gshop_name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = txtgshop_name.EditValue;
+
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

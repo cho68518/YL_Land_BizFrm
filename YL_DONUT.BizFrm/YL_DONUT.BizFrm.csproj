@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5747A80A-CBFC-42C3-B170-73495553A80D}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_DONUT.BizFrm</RootNamespace>
     <AssemblyName>YL_DONUT.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -134,11 +134,23 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Dlg\frmMember_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmMember_info.Designer.cs">
+      <DependentUpon>frmMember_info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dlg\frmZipNoInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dlg\frmZipNoInfo.Designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDN25.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN25.Designer.cs">
+      <DependentUpon>frmDN25.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDN24.cs">
       <SubType>UserControl</SubType>
@@ -376,8 +388,14 @@
     <Compile Include="XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dlg\frmMember_info.resx">
+      <DependentUpon>frmMember_info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN25.resx">
+      <DependentUpon>frmDN25.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN01.resx">
       <DependentUpon>frmDN01.cs</DependentUpon>

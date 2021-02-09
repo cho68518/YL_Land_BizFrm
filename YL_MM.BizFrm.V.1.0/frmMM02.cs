@@ -111,7 +111,7 @@ namespace YL_MM.BizFrm
             this.efwGridControl1.Click += efwGridControl1_Click;
             chkUSEYN.Checked = true;
 
-            Open1();
+           // Open1();
         }
 
         private void setCmb()

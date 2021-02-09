@@ -71,11 +71,16 @@
             this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemRadioGroup1 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwLabel8 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.dt1T = new Easy.Framework.WinForm.Control.efwDateEdit();
+            this.efwLabel9 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.dt1F = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cmbMember_Search = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -104,6 +109,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMember_Search.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             this.SuspendLayout();
@@ -478,6 +487,7 @@
             this.gridColumn8,
             this.gridColumn10,
             this.gridColumn9,
+            this.gridColumn11,
             this.gridColumn6,
             this.gridColumn7,
             this.gridColumn1});
@@ -497,7 +507,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 82;
+            this.gridColumn2.Width = 93;
             // 
             // gridColumn3
             // 
@@ -508,7 +518,7 @@
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 101;
+            this.gridColumn3.Width = 115;
             // 
             // gridColumn4
             // 
@@ -519,7 +529,7 @@
             this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 96;
+            this.gridColumn4.Width = 108;
             // 
             // gridColumn5
             // 
@@ -531,7 +541,7 @@
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 74;
+            this.gridColumn5.Width = 113;
             // 
             // repositoryItemCheckEdit7
             // 
@@ -566,7 +576,7 @@
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 4;
-            this.gridColumn10.Width = 87;
+            this.gridColumn10.Width = 95;
             // 
             // repositoryItemCheckEdit3
             // 
@@ -585,7 +595,7 @@
             this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 5;
-            this.gridColumn9.Width = 79;
+            this.gridColumn9.Width = 112;
             // 
             // repositoryItemCheckEdit2
             // 
@@ -593,6 +603,16 @@
             this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
             this.repositoryItemCheckEdit2.ValueChecked = "Y";
             this.repositoryItemCheckEdit2.ValueUnchecked = "N";
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "PR추천스토리 건수";
+            this.gridColumn11.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn11.FieldName = "pr_cnt";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.AllowEdit = false;
+            this.gridColumn11.Width = 115;
             // 
             // gridColumn6
             // 
@@ -603,7 +623,7 @@
             this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 6;
-            this.gridColumn6.Width = 110;
+            this.gridColumn6.Width = 109;
             // 
             // gridColumn7
             // 
@@ -614,7 +634,7 @@
             this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 7;
-            this.gridColumn7.Width = 370;
+            this.gridColumn7.Width = 236;
             // 
             // gridColumn1
             // 
@@ -623,9 +643,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.ReadOnly = true;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 8;
-            this.gridColumn1.Width = 97;
+            this.gridColumn1.Width = 201;
             // 
             // repositoryItemRadioGroup1
             // 
@@ -633,6 +651,10 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwLabel8);
+            this.efwPanelControl1.Controls.Add(this.dt1T);
+            this.efwPanelControl1.Controls.Add(this.efwLabel9);
+            this.efwPanelControl1.Controls.Add(this.dt1F);
             this.efwPanelControl1.Controls.Add(this.efwLabel7);
             this.efwPanelControl1.Controls.Add(this.cmbMember_Search);
             this.efwPanelControl1.Controls.Add(this.efwLabel4);
@@ -642,6 +664,56 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1114, 50);
             this.efwPanelControl1.TabIndex = 6;
+            // 
+            // efwLabel8
+            // 
+            this.efwLabel8.EraserGroup = null;
+            this.efwLabel8.IsMultiLang = false;
+            this.efwLabel8.Location = new System.Drawing.Point(936, 17);
+            this.efwLabel8.Name = "efwLabel8";
+            this.efwLabel8.Size = new System.Drawing.Size(9, 14);
+            this.efwLabel8.TabIndex = 47;
+            this.efwLabel8.Text = "~";
+            // 
+            // dt1T
+            // 
+            this.dt1T.EditValue = null;
+            this.dt1T.EraserGroup = "CLR1";
+            this.dt1T.Location = new System.Drawing.Point(952, 15);
+            this.dt1T.Name = "dt1T";
+            this.dt1T.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.dt1T.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.dt1T.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dt1T.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dt1T.Size = new System.Drawing.Size(102, 20);
+            this.dt1T.TabIndex = 46;
+            // 
+            // efwLabel9
+            // 
+            this.efwLabel9.EraserGroup = null;
+            this.efwLabel9.IsMultiLang = false;
+            this.efwLabel9.Location = new System.Drawing.Point(687, 18);
+            this.efwLabel9.Name = "efwLabel9";
+            this.efwLabel9.Size = new System.Drawing.Size(112, 14);
+            this.efwLabel9.TabIndex = 45;
+            this.efwLabel9.Text = "PR 추천스토리 작성기간";
+            // 
+            // dt1F
+            // 
+            this.dt1F.EditValue = null;
+            this.dt1F.EraserGroup = "CLR1";
+            this.dt1F.Location = new System.Drawing.Point(826, 15);
+            this.dt1F.Name = "dt1F";
+            this.dt1F.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.dt1F.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.dt1F.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dt1F.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dt1F.Size = new System.Drawing.Size(102, 20);
+            this.dt1F.TabIndex = 44;
             // 
             // efwLabel7
             // 
@@ -727,6 +799,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt1F.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMember_Search.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -781,5 +857,10 @@
         private Easy.Framework.WinForm.Control.efwRadioGroup rbteam_leader;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel8;
+        private Easy.Framework.WinForm.Control.efwDateEdit dt1T;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel9;
+        private Easy.Framework.WinForm.Control.efwDateEdit dt1F;
     }
 }

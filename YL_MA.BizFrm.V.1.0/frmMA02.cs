@@ -148,7 +148,7 @@ namespace YL_MA.BizFrm
             cmbBIZCDQ.ItemIndex = 0;
             cmbBIZCDQ.EditValue = "";
 
-            Open3();
+          //  Open3();
         }
 
         #region 콤보세팅

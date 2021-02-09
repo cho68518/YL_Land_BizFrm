@@ -72,6 +72,9 @@ namespace YL_MM.BizFrm
             rbis_use_q.EditValue = "Y";
             rbcategory_code.EditValue = "62a94474-915c-11e8-987e-02001f5c0016";
 
+            chkApp.EditValue = "Y";
+            chkHomePage.EditValue = "N";
+
             dtQ_SDate.EditValue = DateTime.Now;
             dtQ_EDate.EditValue = DateTime.Now;
 
@@ -98,6 +101,9 @@ namespace YL_MM.BizFrm
            , new ColumnControlSet("event_ld_imgname", txtEvent_ld_imgname)
            , new ColumnControlSet("event_ld_imgpath", txtEvent_ld_imgpath)
            , new ColumnControlSet("is_use", rbIs_Use_S)
+           , new ColumnControlSet("event_duration_title", txtevent_duration_title)
+           , new ColumnControlSet("is_app", chkApp)
+           , new ColumnControlSet("is_homepage", chkHomePage)
             );
             this.efwGridControl2.Click += efwGridControl2_Click;
 
@@ -121,7 +127,6 @@ namespace YL_MM.BizFrm
            , new ColumnControlSet("Tab4_imgname", txtTab4_imgname)
             );
             this.efwGridControl4.Click += efwGridControl4_Click;
-
 
             SetCmb();
 
@@ -516,7 +521,7 @@ namespace YL_MM.BizFrm
         {
             base.NewMode();
             Eraser.Clear(this, "CLR1");
-            Search();
+          //  Search();
         }
 
         private void btnFileOpen4_Click(object sender, EventArgs e)
@@ -531,7 +536,7 @@ namespace YL_MM.BizFrm
             string sUserName = "root";
             string sPassword = "@dhkdldpf2!";
             int nPort = 22023;
-            //string sftpDirectory = "/uploadFiles/files/landing/" + Convert.ToString(System.DateTime.Now.ToString("yyyyMMdd"));
+            //string sftpDirectory = "/domalifefiles/files/events/banner/" + Convert.ToString(System.DateTime.Now.ToString("yyyyMMdd"));
             string sftpDirectory = "/domalifefiles/files/events/banner/" ;
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -565,8 +570,8 @@ namespace YL_MM.BizFrm
                 // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
 
                 string sOldFile = txtPicPath1.EditValue.ToString();
-                //string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
-                string sFileName = txtOrg_FileName.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                //string sFileName = txtOrg_FileName.EditValue.ToString();
                 string sNewFile = "c:\\temp\\" + sFileName;
                 System.IO.File.Delete(sNewFile);
                 System.IO.File.Copy(sOldFile, sNewFile);
@@ -652,7 +657,8 @@ namespace YL_MM.BizFrm
                 // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
 
                 string sOldFile = txtPicPath1.EditValue.ToString();
-                string sFileName = txtOrg_FileName.EditValue.ToString();
+                //string sFileName = txtOrg_FileName.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
                 string sNewFile = "c:\\temp\\" + sFileName;
                 System.IO.File.Delete(sNewFile);
                 System.IO.File.Copy(sOldFile, sNewFile);
@@ -882,8 +888,8 @@ namespace YL_MM.BizFrm
                 // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
 
                 string sOldFile = txtAddPicPath1.EditValue.ToString();
-                //string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
-                string sFileName = txtEvent_bn_imgname.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                //string sFileName = txtEvent_bn_imgname.EditValue.ToString();
                 string sNewFile = "c:\\temp\\" + sFileName;
                 System.IO.File.Delete(sNewFile);
                 System.IO.File.Copy(sOldFile, sNewFile);
@@ -970,7 +976,8 @@ namespace YL_MM.BizFrm
                 // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
 
                 string sOldFile = txtAddPicPath2.EditValue.ToString();
-                string sFileName = txtEvent_ld_imgname.EditValue.ToString();
+                //string sFileName = txtEvent_ld_imgname.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
                 string sNewFile = "c:\\temp\\" + sFileName;
                 System.IO.File.Delete(sNewFile);
                 System.IO.File.Copy(sOldFile, sNewFile);
@@ -1008,7 +1015,10 @@ namespace YL_MM.BizFrm
         {
             base.NewMode();
 
+            chkApp.EditValue = "Y";
+            chkHomePage.EditValue = "N";
             Eraser.Clear(this, "CLR2");
+
         }
 
         private void efwSimpleButton2_Click(object sender, EventArgs e)
@@ -1075,6 +1085,19 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_Event_ld_imgpath", MySqlDbType.VarChar));
                             cmd.Parameters["i_Event_ld_imgpath"].Value = txtEvent_ld_imgpath.EditValue;
                             cmd.Parameters["i_Event_ld_imgpath"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_event_duration_title", MySqlDbType.VarChar));
+                            cmd.Parameters["i_event_duration_title"].Value = txtevent_duration_title.EditValue;
+                            cmd.Parameters["i_event_duration_title"].Direction = ParameterDirection.Input; 
+
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_app", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_app"].Value = chkApp.EditValue;
+                            cmd.Parameters["i_is_app"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_homepage", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_homepage"].Value = chkHomePage.EditValue;
+                            cmd.Parameters["i_is_homepage"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN01));
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy5 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy4 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy4 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtId = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.cbG_Prod = new Easy.Framework.WinForm.Control.efwCheckEdit();
@@ -83,6 +83,8 @@
             this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -185,7 +187,7 @@
             // 
             // cbG_Prod
             // 
-            this.cbG_Prod.Location = new System.Drawing.Point(921, 53);
+            this.cbG_Prod.Location = new System.Drawing.Point(700, 51);
             this.cbG_Prod.Name = "cbG_Prod";
             this.cbG_Prod.Properties.Caption = "G 시리즈";
             this.cbG_Prod.Properties.ValueChecked = "1";
@@ -337,13 +339,13 @@
             // 
             // cmbMALL_TYPE
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbMALL_TYPE.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbMALL_TYPE.HierarchyInfo = hierarchy1;
+            childHierarchy5.CodeCtrl = null;
+            childHierarchy5.DbName = null;
+            childHierarchy5.SpName = null;
+            this.cmbMALL_TYPE.ChildHierarchyInfo = childHierarchy5;
+            hierarchy5.DbName = null;
+            hierarchy5.SpName = null;
+            this.cmbMALL_TYPE.HierarchyInfo = hierarchy5;
             this.cmbMALL_TYPE.IsMultiLang = false;
             this.cmbMALL_TYPE.Location = new System.Drawing.Point(124, 48);
             this.cmbMALL_TYPE.MasterCode = "E03.PAY_GBN";
@@ -421,13 +423,13 @@
             // 
             // cmbORDER_SEARCH
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbORDER_SEARCH.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbORDER_SEARCH.HierarchyInfo = hierarchy2;
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbORDER_SEARCH.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbORDER_SEARCH.HierarchyInfo = hierarchy1;
             this.cmbORDER_SEARCH.IsMultiLang = false;
             this.cmbORDER_SEARCH.Location = new System.Drawing.Point(470, 17);
             this.cmbORDER_SEARCH.MasterCode = "E03.PAY_GBN";
@@ -463,13 +465,13 @@
             // 
             // cmbChange_type
             // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbChange_type.ChildHierarchyInfo = childHierarchy3;
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbChange_type.HierarchyInfo = hierarchy3;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbChange_type.ChildHierarchyInfo = childHierarchy2;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbChange_type.HierarchyInfo = hierarchy2;
             this.cmbChange_type.IsMultiLang = false;
             this.cmbChange_type.Location = new System.Drawing.Point(83, 115);
             this.cmbChange_type.MasterCode = "E03.PAY_GBN";
@@ -569,7 +571,7 @@
             // 
             this.txto_delivery_num.EditValue = "";
             this.txto_delivery_num.EditValue2 = null;
-            this.txto_delivery_num.Location = new System.Drawing.Point(1117, 13);
+            this.txto_delivery_num.Location = new System.Drawing.Point(1117, 16);
             this.txto_delivery_num.Name = "txto_delivery_num";
             this.txto_delivery_num.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txto_delivery_num.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -582,7 +584,7 @@
             // 
             this.txtDelivery_cd.EditValue = "";
             this.txtDelivery_cd.EditValue2 = null;
-            this.txtDelivery_cd.Location = new System.Drawing.Point(1080, 18);
+            this.txtDelivery_cd.Location = new System.Drawing.Point(1080, 16);
             this.txtDelivery_cd.Name = "txtDelivery_cd";
             this.txtDelivery_cd.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtDelivery_cd.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -593,13 +595,13 @@
             // 
             // cmbOrderDate
             // 
-            childHierarchy4.CodeCtrl = null;
-            childHierarchy4.DbName = null;
-            childHierarchy4.SpName = null;
-            this.cmbOrderDate.ChildHierarchyInfo = childHierarchy4;
-            hierarchy4.DbName = null;
-            hierarchy4.SpName = null;
-            this.cmbOrderDate.HierarchyInfo = hierarchy4;
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbOrderDate.ChildHierarchyInfo = childHierarchy3;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbOrderDate.HierarchyInfo = hierarchy3;
             this.cmbOrderDate.IsMultiLang = false;
             this.cmbOrderDate.Location = new System.Drawing.Point(21, 17);
             this.cmbOrderDate.MasterCode = "E03.PAY_GBN";
@@ -684,19 +686,19 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo1.InstanceName = "";
-            serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = null;
-            serviceInfo1.ProcName = "";
-            serviceInfo1.UserParams = null;
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = null;
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = null;
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo4;
             this.efwGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo2.InstanceName = "";
-            serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = null;
-            serviceInfo2.ProcName = "";
-            serviceInfo2.UserParams = null;
-            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = null;
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = null;
+            this.efwGridControl1.InsertServiceInfo = serviceInfo5;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
@@ -715,12 +717,12 @@
             this.efwGridControl1.Size = new System.Drawing.Size(1212, 462);
             this.efwGridControl1.TabIndex = 41;
             this.efwGridControl1.TableName = "";
-            serviceInfo3.InstanceName = "";
-            serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = null;
-            serviceInfo3.ProcName = "";
-            serviceInfo3.UserParams = null;
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = null;
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = null;
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo6;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.efwGridControl1.EditorKeyDown += new System.Windows.Forms.KeyEventHandler(this.EfwGridControl1_EditorKeyDown);
@@ -732,6 +734,8 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn31,
             this.gridColumn1,
+            this.gridColumn38,
+            this.gridColumn37,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn8,
@@ -812,6 +816,23 @@
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
             // 
+            // gridColumn38
+            // 
+            this.gridColumn38.Caption = "구매경로";
+            this.gridColumn38.FieldName = "is_gepashop";
+            this.gridColumn38.Name = "gridColumn38";
+            this.gridColumn38.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn38.Visible = true;
+            this.gridColumn38.VisibleIndex = 2;
+            // 
+            // gridColumn37
+            // 
+            this.gridColumn37.Caption = "묶음번호";
+            this.gridColumn37.FieldName = "o_mcode";
+            this.gridColumn37.Name = "gridColumn37";
+            this.gridColumn37.Visible = true;
+            this.gridColumn37.VisibleIndex = 3;
+            // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "주문번호";
@@ -820,7 +841,7 @@
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.VisibleIndex = 4;
             // 
             // gridColumn3
             // 
@@ -834,7 +855,7 @@
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.VisibleIndex = 5;
             // 
             // gridColumn8
             // 
@@ -844,7 +865,7 @@
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 4;
+            this.gridColumn8.VisibleIndex = 6;
             // 
             // gridColumn9
             // 
@@ -854,7 +875,7 @@
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 5;
+            this.gridColumn9.VisibleIndex = 7;
             // 
             // gridColumn6
             // 
@@ -864,7 +885,7 @@
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 6;
+            this.gridColumn6.VisibleIndex = 8;
             // 
             // gridColumn7
             // 
@@ -874,7 +895,7 @@
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.VisibleIndex = 9;
             // 
             // gridColumn5
             // 
@@ -884,7 +905,7 @@
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 8;
+            this.gridColumn5.VisibleIndex = 10;
             // 
             // gridColumn25
             // 
@@ -894,7 +915,7 @@
             this.gridColumn25.OptionsColumn.AllowEdit = false;
             this.gridColumn25.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 9;
+            this.gridColumn25.VisibleIndex = 11;
             // 
             // gridColumn26
             // 
@@ -904,7 +925,7 @@
             this.gridColumn26.OptionsColumn.AllowEdit = false;
             this.gridColumn26.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 10;
+            this.gridColumn26.VisibleIndex = 12;
             // 
             // gridColumn27
             // 
@@ -914,7 +935,7 @@
             this.gridColumn27.OptionsColumn.AllowEdit = false;
             this.gridColumn27.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn27.Visible = true;
-            this.gridColumn27.VisibleIndex = 11;
+            this.gridColumn27.VisibleIndex = 13;
             // 
             // gridColumn34
             // 
@@ -924,7 +945,7 @@
             this.gridColumn34.OptionsColumn.AllowEdit = false;
             this.gridColumn34.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn34.Visible = true;
-            this.gridColumn34.VisibleIndex = 12;
+            this.gridColumn34.VisibleIndex = 14;
             // 
             // gridColumn4
             // 
@@ -934,7 +955,7 @@
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 13;
+            this.gridColumn4.VisibleIndex = 15;
             // 
             // gridColumn28
             // 
@@ -944,7 +965,7 @@
             this.gridColumn28.OptionsColumn.AllowEdit = false;
             this.gridColumn28.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn28.Visible = true;
-            this.gridColumn28.VisibleIndex = 14;
+            this.gridColumn28.VisibleIndex = 16;
             // 
             // gridColumn10
             // 
@@ -954,7 +975,7 @@
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 15;
+            this.gridColumn10.VisibleIndex = 17;
             // 
             // gridColumn19
             // 
@@ -966,7 +987,7 @@
             this.gridColumn19.OptionsColumn.AllowEdit = false;
             this.gridColumn19.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 16;
+            this.gridColumn19.VisibleIndex = 18;
             // 
             // gridColumn11
             // 
@@ -978,7 +999,7 @@
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 17;
+            this.gridColumn11.VisibleIndex = 19;
             // 
             // gridColumn33
             // 
@@ -990,7 +1011,7 @@
             this.gridColumn33.OptionsColumn.AllowEdit = false;
             this.gridColumn33.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn33.Visible = true;
-            this.gridColumn33.VisibleIndex = 18;
+            this.gridColumn33.VisibleIndex = 20;
             // 
             // gridColumn12
             // 
@@ -1002,7 +1023,7 @@
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 19;
+            this.gridColumn12.VisibleIndex = 21;
             // 
             // gridColumn32
             // 
@@ -1014,7 +1035,7 @@
             this.gridColumn32.OptionsColumn.AllowEdit = false;
             this.gridColumn32.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn32.Visible = true;
-            this.gridColumn32.VisibleIndex = 20;
+            this.gridColumn32.VisibleIndex = 22;
             // 
             // gridColumn13
             // 
@@ -1026,7 +1047,7 @@
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 21;
+            this.gridColumn13.VisibleIndex = 23;
             // 
             // gridColumn14
             // 
@@ -1038,7 +1059,7 @@
             this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 22;
+            this.gridColumn14.VisibleIndex = 24;
             // 
             // gridColumn15
             // 
@@ -1050,7 +1071,7 @@
             this.gridColumn15.OptionsColumn.AllowEdit = false;
             this.gridColumn15.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 23;
+            this.gridColumn15.VisibleIndex = 25;
             // 
             // gridColumn16
             // 
@@ -1062,7 +1083,7 @@
             this.gridColumn16.OptionsColumn.AllowEdit = false;
             this.gridColumn16.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 24;
+            this.gridColumn16.VisibleIndex = 26;
             // 
             // gridColumn29
             // 
@@ -1074,7 +1095,7 @@
             this.gridColumn29.OptionsColumn.AllowEdit = false;
             this.gridColumn29.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn29.Visible = true;
-            this.gridColumn29.VisibleIndex = 25;
+            this.gridColumn29.VisibleIndex = 27;
             // 
             // gridColumn17
             // 
@@ -1084,7 +1105,7 @@
             this.gridColumn17.OptionsColumn.AllowEdit = false;
             this.gridColumn17.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 26;
+            this.gridColumn17.VisibleIndex = 28;
             // 
             // gridColumn18
             // 
@@ -1095,7 +1116,7 @@
             this.gridColumn18.OptionsColumn.AllowEdit = false;
             this.gridColumn18.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 27;
+            this.gridColumn18.VisibleIndex = 29;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -1112,7 +1133,7 @@
             this.gridColumn20.OptionsColumn.AllowEdit = false;
             this.gridColumn20.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 28;
+            this.gridColumn20.VisibleIndex = 30;
             // 
             // gridColumn21
             // 
@@ -1122,7 +1143,7 @@
             this.gridColumn21.OptionsColumn.AllowEdit = false;
             this.gridColumn21.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 29;
+            this.gridColumn21.VisibleIndex = 31;
             // 
             // gridColumn22
             // 
@@ -1134,7 +1155,7 @@
             this.gridColumn22.OptionsColumn.AllowEdit = false;
             this.gridColumn22.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 30;
+            this.gridColumn22.VisibleIndex = 32;
             // 
             // gridColumn23
             // 
@@ -1144,7 +1165,7 @@
             this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 31;
+            this.gridColumn23.VisibleIndex = 33;
             // 
             // gridColumn24
             // 
@@ -1154,7 +1175,7 @@
             this.gridColumn24.OptionsColumn.AllowEdit = false;
             this.gridColumn24.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 32;
+            this.gridColumn24.VisibleIndex = 34;
             // 
             // gridColumn30
             // 
@@ -1162,9 +1183,9 @@
             this.gridColumn30.FieldName = "remark";
             this.gridColumn30.Name = "gridColumn30";
             this.gridColumn30.OptionsColumn.AllowEdit = false;
-            this.gridColumn30.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn30.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn30.Visible = true;
-            this.gridColumn30.VisibleIndex = 33;
+            this.gridColumn30.VisibleIndex = 35;
             this.gridColumn30.Width = 150;
             // 
             // gridColumn35
@@ -1173,15 +1194,17 @@
             this.gridColumn35.FieldName = "old_name";
             this.gridColumn35.Name = "gridColumn35";
             this.gridColumn35.OptionsColumn.AllowEdit = false;
+            this.gridColumn35.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn35.Visible = true;
-            this.gridColumn35.VisibleIndex = 34;
+            this.gridColumn35.VisibleIndex = 36;
             // 
             // gridColumn36
             // 
-            this.gridColumn36.Caption = "gridColumn36";
+            this.gridColumn36.Caption = "배송회사코드";
             this.gridColumn36.FieldNameSortGroup = "o_delivery_comp_code";
             this.gridColumn36.Name = "gridColumn36";
             this.gridColumn36.OptionsColumn.AllowEdit = false;
+            this.gridColumn36.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -1336,5 +1359,7 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txto_delivery_num;
         private Easy.Framework.WinForm.Control.efwRadioGroup rbG_Prod;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
     }
 }

@@ -48,6 +48,11 @@ namespace YL_MM.BizFrm
             rbGhop_Manager.EditValue = "N";
             rbTest_Grant.EditValue = "N";
             rbteam_leader.EditValue = "N";
+
+
+            dt1F.EditValue = DateTime.Now;
+            dt1T.EditValue = DateTime.Now;
+
             gridView1.OptionsView.ShowFooter = true;
             this.efwGridControl1.BindControlSet(
                       new ColumnControlSet("u_id", txtU_Id)
@@ -122,6 +127,12 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_code_id", MySqlDbType.Int32, 10);
                         cmd.Parameters[1].Value = Convert.ToInt32(cmbMember_Search.EditValue);
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[2].Value = this.dt1F.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[3].Value = this.dt1T.EditValue3;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

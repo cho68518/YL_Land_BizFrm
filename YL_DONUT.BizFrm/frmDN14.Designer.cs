@@ -101,6 +101,7 @@
             this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn62 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -167,6 +168,8 @@
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtadd_p_name = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel36 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtPS_DONUT_AD = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -308,6 +311,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).BeginInit();
             this.efwGroupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtadd_p_name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPS_DONUT_AD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGM_CASH_CELE_STORY.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGB_AD_CELE_STORY.Properties)).BeginInit();
@@ -375,7 +379,7 @@
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(3, 35);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(1523, 428);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1523, 395);
             this.efwGroupControl1.TabIndex = 21;
             this.efwGroupControl1.Text = "후기 머니관리";
             // 
@@ -387,7 +391,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(2, 23);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(1519, 403);
+            this.layoutControl2.Size = new System.Drawing.Size(1519, 370);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -402,7 +406,7 @@
             this.efwPanelControl1.Controls.Add(this.txtFileName);
             this.efwPanelControl1.Location = new System.Drawing.Point(7, 7);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1505, 54);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1505, 49);
             this.efwPanelControl1.TabIndex = 60;
             // 
             // rbShowType
@@ -522,7 +526,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.efwGridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.efwGridControl1.Location = new System.Drawing.Point(7, 65);
+            this.efwGridControl1.Location = new System.Drawing.Point(7, 60);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
@@ -533,7 +537,7 @@
             this.repositoryItemMemoExEdit4,
             this.repositoryItemMemoEdit4,
             this.repositoryItemCheckEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1505, 334);
+            this.efwGridControl1.Size = new System.Drawing.Size(1505, 306);
             this.efwGridControl1.TabIndex = 25;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -587,7 +591,8 @@
             this.gridColumn46,
             this.gridColumn47,
             this.gridColumn48,
-            this.gridColumn61});
+            this.gridColumn61,
+            this.gridColumn62});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -961,6 +966,14 @@
             this.gridColumn61.Visible = true;
             this.gridColumn61.VisibleIndex = 33;
             // 
+            // gridColumn62
+            // 
+            this.gridColumn62.Caption = "추가지급품목";
+            this.gridColumn62.FieldName = "add_p_name";
+            this.gridColumn62.Name = "gridColumn62";
+            this.gridColumn62.Visible = true;
+            this.gridColumn62.VisibleIndex = 34;
+            // 
             // repositoryItemLookUpEdit1
             // 
             this.repositoryItemLookUpEdit1.AutoHeight = false;
@@ -995,15 +1008,15 @@
             this.layoutControlItem39});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1519, 403);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1519, 370);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.efwGridControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 58);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 53);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1509, 338);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1509, 310);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -1012,7 +1025,7 @@
             this.layoutControlItem39.Control = this.efwPanelControl1;
             this.layoutControlItem39.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem39.Name = "layoutControlItem39";
-            this.layoutControlItem39.Size = new System.Drawing.Size(1509, 58);
+            this.layoutControlItem39.Size = new System.Drawing.Size(1509, 53);
             this.layoutControlItem39.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem39.TextVisible = false;
             // 
@@ -1080,7 +1093,7 @@
             // splitterControl2
             // 
             this.splitterControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl2.Location = new System.Drawing.Point(3, 463);
+            this.splitterControl2.Location = new System.Drawing.Point(3, 430);
             this.splitterControl2.Name = "splitterControl2";
             this.splitterControl2.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl2.TabIndex = 33;
@@ -1092,7 +1105,7 @@
             this.efwGroupControl5.Controls.Add(this.layoutControl6);
             this.efwGroupControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwGroupControl5.IsMultiLang = false;
-            this.efwGroupControl5.Location = new System.Drawing.Point(3, 468);
+            this.efwGroupControl5.Location = new System.Drawing.Point(3, 435);
             this.efwGroupControl5.Name = "efwGroupControl5";
             this.efwGroupControl5.Size = new System.Drawing.Size(1523, 28);
             this.efwGroupControl5.TabIndex = 34;
@@ -1277,7 +1290,7 @@
             // splitterControl3
             // 
             this.splitterControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl3.Location = new System.Drawing.Point(3, 496);
+            this.splitterControl3.Location = new System.Drawing.Point(3, 463);
             this.splitterControl3.Name = "splitterControl3";
             this.splitterControl3.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl3.TabIndex = 35;
@@ -1289,7 +1302,7 @@
             this.efwGroupControl3.Controls.Add(this.layoutControl3);
             this.efwGroupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwGroupControl3.IsMultiLang = false;
-            this.efwGroupControl3.Location = new System.Drawing.Point(3, 501);
+            this.efwGroupControl3.Location = new System.Drawing.Point(3, 468);
             this.efwGroupControl3.Name = "efwGroupControl3";
             this.efwGroupControl3.Size = new System.Drawing.Size(1523, 28);
             this.efwGroupControl3.TabIndex = 36;
@@ -1664,7 +1677,7 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 529);
+            this.splitterControl1.Location = new System.Drawing.Point(3, 496);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1523, 5);
             this.splitterControl1.TabIndex = 37;
@@ -1673,6 +1686,8 @@
             // efwGroupControl4
             // 
             this.efwGroupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl4.CaptionImageOptions.Image")));
+            this.efwGroupControl4.Controls.Add(this.txtadd_p_name);
+            this.efwGroupControl4.Controls.Add(this.efwLabel36);
             this.efwGroupControl4.Controls.Add(this.efwLabel35);
             this.efwGroupControl4.Controls.Add(this.txtPS_DONUT_AD);
             this.efwGroupControl4.Controls.Add(this.efwLabel7);
@@ -1744,17 +1759,38 @@
             this.efwGroupControl4.Controls.Add(this.cmbCate_Code1);
             this.efwGroupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl4.IsMultiLang = false;
-            this.efwGroupControl4.Location = new System.Drawing.Point(3, 534);
+            this.efwGroupControl4.Location = new System.Drawing.Point(3, 501);
             this.efwGroupControl4.Name = "efwGroupControl4";
-            this.efwGroupControl4.Size = new System.Drawing.Size(1523, 248);
+            this.efwGroupControl4.Size = new System.Drawing.Size(1523, 281);
             this.efwGroupControl4.TabIndex = 66;
             this.efwGroupControl4.Text = "수정";
+            // 
+            // txtadd_p_name
+            // 
+            this.txtadd_p_name.EditValue2 = null;
+            this.txtadd_p_name.Location = new System.Drawing.Point(137, 109);
+            this.txtadd_p_name.Name = "txtadd_p_name";
+            this.txtadd_p_name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtadd_p_name.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtadd_p_name.RequireMessage = null;
+            this.txtadd_p_name.Size = new System.Drawing.Size(624, 20);
+            this.txtadd_p_name.TabIndex = 83;
+            // 
+            // efwLabel36
+            // 
+            this.efwLabel36.EraserGroup = null;
+            this.efwLabel36.IsMultiLang = false;
+            this.efwLabel36.Location = new System.Drawing.Point(19, 112);
+            this.efwLabel36.Name = "efwLabel36";
+            this.efwLabel36.Size = new System.Drawing.Size(54, 14);
+            this.efwLabel36.TabIndex = 82;
+            this.efwLabel36.Text = "발주 옵션명";
             // 
             // efwLabel35
             // 
             this.efwLabel35.EraserGroup = null;
             this.efwLabel35.IsMultiLang = false;
-            this.efwLabel35.Location = new System.Drawing.Point(525, 192);
+            this.efwLabel35.Location = new System.Drawing.Point(525, 217);
             this.efwLabel35.Name = "efwLabel35";
             this.efwLabel35.Size = new System.Drawing.Size(76, 14);
             this.efwLabel35.TabIndex = 81;
@@ -1764,7 +1800,7 @@
             // 
             this.txtPS_DONUT_AD.EditValue = "0";
             this.txtPS_DONUT_AD.EditValue2 = null;
-            this.txtPS_DONUT_AD.Location = new System.Drawing.Point(661, 189);
+            this.txtPS_DONUT_AD.Location = new System.Drawing.Point(661, 214);
             this.txtPS_DONUT_AD.Name = "txtPS_DONUT_AD";
             this.txtPS_DONUT_AD.Properties.Appearance.Options.UseTextOptions = true;
             this.txtPS_DONUT_AD.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2339,7 +2375,7 @@
             // 
             this.efwLabel21.EraserGroup = null;
             this.efwLabel21.IsMultiLang = false;
-            this.efwLabel21.Location = new System.Drawing.Point(525, 218);
+            this.efwLabel21.Location = new System.Drawing.Point(525, 243);
             this.efwLabel21.Name = "efwLabel21";
             this.efwLabel21.Size = new System.Drawing.Size(62, 14);
             this.efwLabel21.TabIndex = 44;
@@ -2349,7 +2385,7 @@
             // 
             this.efwLabel22.EraserGroup = null;
             this.efwLabel22.IsMultiLang = false;
-            this.efwLabel22.Location = new System.Drawing.Point(525, 165);
+            this.efwLabel22.Location = new System.Drawing.Point(525, 190);
             this.efwLabel22.Name = "efwLabel22";
             this.efwLabel22.Size = new System.Drawing.Size(58, 14);
             this.efwLabel22.TabIndex = 43;
@@ -2359,7 +2395,7 @@
             // 
             this.efwLabel23.EraserGroup = null;
             this.efwLabel23.IsMultiLang = false;
-            this.efwLabel23.Location = new System.Drawing.Point(525, 139);
+            this.efwLabel23.Location = new System.Drawing.Point(525, 164);
             this.efwLabel23.Name = "efwLabel23";
             this.efwLabel23.Size = new System.Drawing.Size(68, 14);
             this.efwLabel23.TabIndex = 42;
@@ -2379,7 +2415,7 @@
             // 
             this.efwLabel25.EraserGroup = null;
             this.efwLabel25.IsMultiLang = false;
-            this.efwLabel25.Location = new System.Drawing.Point(525, 113);
+            this.efwLabel25.Location = new System.Drawing.Point(525, 138);
             this.efwLabel25.Name = "efwLabel25";
             this.efwLabel25.Size = new System.Drawing.Size(30, 14);
             this.efwLabel25.TabIndex = 40;
@@ -2389,7 +2425,7 @@
             // 
             this.txtGSHOP_PRICE.EditValue = "0";
             this.txtGSHOP_PRICE.EditValue2 = null;
-            this.txtGSHOP_PRICE.Location = new System.Drawing.Point(661, 215);
+            this.txtGSHOP_PRICE.Location = new System.Drawing.Point(661, 240);
             this.txtGSHOP_PRICE.Name = "txtGSHOP_PRICE";
             this.txtGSHOP_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGSHOP_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2406,7 +2442,7 @@
             // 
             this.txtRECO_DONUT.EditValue = "0";
             this.txtRECO_DONUT.EditValue2 = null;
-            this.txtRECO_DONUT.Location = new System.Drawing.Point(661, 162);
+            this.txtRECO_DONUT.Location = new System.Drawing.Point(661, 187);
             this.txtRECO_DONUT.Name = "txtRECO_DONUT";
             this.txtRECO_DONUT.Properties.Appearance.Options.UseTextOptions = true;
             this.txtRECO_DONUT.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2423,7 +2459,7 @@
             // 
             this.txtPS_OPER_PRICE.EditValue = "0";
             this.txtPS_OPER_PRICE.EditValue2 = null;
-            this.txtPS_OPER_PRICE.Location = new System.Drawing.Point(661, 136);
+            this.txtPS_OPER_PRICE.Location = new System.Drawing.Point(661, 161);
             this.txtPS_OPER_PRICE.Name = "txtPS_OPER_PRICE";
             this.txtPS_OPER_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtPS_OPER_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2457,7 +2493,7 @@
             // 
             this.txtSUPPLY_PRICE.EditValue = "0";
             this.txtSUPPLY_PRICE.EditValue2 = null;
-            this.txtSUPPLY_PRICE.Location = new System.Drawing.Point(661, 110);
+            this.txtSUPPLY_PRICE.Location = new System.Drawing.Point(661, 135);
             this.txtSUPPLY_PRICE.Name = "txtSUPPLY_PRICE";
             this.txtSUPPLY_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtSUPPLY_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2495,7 +2531,7 @@
             // 
             this.efwLabel15.EraserGroup = null;
             this.efwLabel15.IsMultiLang = false;
-            this.efwLabel15.Location = new System.Drawing.Point(249, 218);
+            this.efwLabel15.Location = new System.Drawing.Point(249, 243);
             this.efwLabel15.Name = "efwLabel15";
             this.efwLabel15.Size = new System.Drawing.Size(116, 14);
             this.efwLabel15.TabIndex = 32;
@@ -2505,7 +2541,7 @@
             // 
             this.efwLabel16.EraserGroup = null;
             this.efwLabel16.IsMultiLang = false;
-            this.efwLabel16.Location = new System.Drawing.Point(249, 192);
+            this.efwLabel16.Location = new System.Drawing.Point(249, 217);
             this.efwLabel16.Name = "efwLabel16";
             this.efwLabel16.Size = new System.Drawing.Size(86, 14);
             this.efwLabel16.TabIndex = 31;
@@ -2515,7 +2551,7 @@
             // 
             this.efwLabel17.EraserGroup = null;
             this.efwLabel17.IsMultiLang = false;
-            this.efwLabel17.Location = new System.Drawing.Point(249, 165);
+            this.efwLabel17.Location = new System.Drawing.Point(249, 190);
             this.efwLabel17.Name = "efwLabel17";
             this.efwLabel17.Size = new System.Drawing.Size(30, 14);
             this.efwLabel17.TabIndex = 30;
@@ -2525,7 +2561,7 @@
             // 
             this.efwLabel18.EraserGroup = null;
             this.efwLabel18.IsMultiLang = false;
-            this.efwLabel18.Location = new System.Drawing.Point(249, 139);
+            this.efwLabel18.Location = new System.Drawing.Point(249, 164);
             this.efwLabel18.Name = "efwLabel18";
             this.efwLabel18.Size = new System.Drawing.Size(56, 14);
             this.efwLabel18.TabIndex = 29;
@@ -2535,7 +2571,7 @@
             // 
             this.efwLabel19.EraserGroup = null;
             this.efwLabel19.IsMultiLang = false;
-            this.efwLabel19.Location = new System.Drawing.Point(249, 113);
+            this.efwLabel19.Location = new System.Drawing.Point(249, 138);
             this.efwLabel19.Name = "efwLabel19";
             this.efwLabel19.Size = new System.Drawing.Size(30, 14);
             this.efwLabel19.TabIndex = 28;
@@ -2580,7 +2616,7 @@
             // 
             this.txtTD_DONUT.EditValue = "0";
             this.txtTD_DONUT.EditValue2 = null;
-            this.txtTD_DONUT.Location = new System.Drawing.Point(406, 215);
+            this.txtTD_DONUT.Location = new System.Drawing.Point(406, 240);
             this.txtTD_DONUT.Name = "txtTD_DONUT";
             this.txtTD_DONUT.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTD_DONUT.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2597,7 +2633,7 @@
             // 
             this.txtCHEF_COMMISSION02.EditValue = "0";
             this.txtCHEF_COMMISSION02.EditValue2 = null;
-            this.txtCHEF_COMMISSION02.Location = new System.Drawing.Point(406, 189);
+            this.txtCHEF_COMMISSION02.Location = new System.Drawing.Point(406, 214);
             this.txtCHEF_COMMISSION02.Name = "txtCHEF_COMMISSION02";
             this.txtCHEF_COMMISSION02.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCHEF_COMMISSION02.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2614,7 +2650,7 @@
             // 
             this.txtPS_PRICE.EditValue = "0";
             this.txtPS_PRICE.EditValue2 = null;
-            this.txtPS_PRICE.Location = new System.Drawing.Point(406, 162);
+            this.txtPS_PRICE.Location = new System.Drawing.Point(406, 187);
             this.txtPS_PRICE.Name = "txtPS_PRICE";
             this.txtPS_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtPS_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2631,7 +2667,7 @@
             // 
             this.txtPS_DONUT01.EditValue = "0";
             this.txtPS_DONUT01.EditValue2 = null;
-            this.txtPS_DONUT01.Location = new System.Drawing.Point(406, 136);
+            this.txtPS_DONUT01.Location = new System.Drawing.Point(406, 161);
             this.txtPS_DONUT01.Name = "txtPS_DONUT01";
             this.txtPS_DONUT01.Properties.Appearance.Options.UseTextOptions = true;
             this.txtPS_DONUT01.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2648,7 +2684,7 @@
             // 
             this.txtLOWEST_PRICE.EditValue = "0";
             this.txtLOWEST_PRICE.EditValue2 = null;
-            this.txtLOWEST_PRICE.Location = new System.Drawing.Point(406, 110);
+            this.txtLOWEST_PRICE.Location = new System.Drawing.Point(406, 135);
             this.txtLOWEST_PRICE.Name = "txtLOWEST_PRICE";
             this.txtLOWEST_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtLOWEST_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2700,7 +2736,7 @@
             // 
             this.txtAD_DONUT.EditValue = "0";
             this.txtAD_DONUT.EditValue2 = null;
-            this.txtAD_DONUT.Location = new System.Drawing.Point(137, 215);
+            this.txtAD_DONUT.Location = new System.Drawing.Point(137, 240);
             this.txtAD_DONUT.Name = "txtAD_DONUT";
             this.txtAD_DONUT.Properties.Appearance.Options.UseTextOptions = true;
             this.txtAD_DONUT.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2717,7 +2753,7 @@
             // 
             this.txtCHEF_COMMISSION01.EditValue = "0";
             this.txtCHEF_COMMISSION01.EditValue2 = null;
-            this.txtCHEF_COMMISSION01.Location = new System.Drawing.Point(137, 189);
+            this.txtCHEF_COMMISSION01.Location = new System.Drawing.Point(137, 214);
             this.txtCHEF_COMMISSION01.Name = "txtCHEF_COMMISSION01";
             this.txtCHEF_COMMISSION01.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCHEF_COMMISSION01.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2734,7 +2770,7 @@
             // 
             this.txtVIP_PRICE.EditValue = "0";
             this.txtVIP_PRICE.EditValue2 = null;
-            this.txtVIP_PRICE.Location = new System.Drawing.Point(137, 162);
+            this.txtVIP_PRICE.Location = new System.Drawing.Point(137, 187);
             this.txtVIP_PRICE.Name = "txtVIP_PRICE";
             this.txtVIP_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtVIP_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2751,7 +2787,7 @@
             // 
             this.txtDELIVERY_PRICE.EditValue = "0";
             this.txtDELIVERY_PRICE.EditValue2 = null;
-            this.txtDELIVERY_PRICE.Location = new System.Drawing.Point(137, 136);
+            this.txtDELIVERY_PRICE.Location = new System.Drawing.Point(137, 161);
             this.txtDELIVERY_PRICE.Name = "txtDELIVERY_PRICE";
             this.txtDELIVERY_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtDELIVERY_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2768,7 +2804,7 @@
             // 
             this.txtCUSTOMER_PRICE.EditValue = "0";
             this.txtCUSTOMER_PRICE.EditValue2 = null;
-            this.txtCUSTOMER_PRICE.Location = new System.Drawing.Point(137, 110);
+            this.txtCUSTOMER_PRICE.Location = new System.Drawing.Point(137, 135);
             this.txtCUSTOMER_PRICE.Name = "txtCUSTOMER_PRICE";
             this.txtCUSTOMER_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCUSTOMER_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2806,7 +2842,7 @@
             // 
             this.efwLabel11.EraserGroup = null;
             this.efwLabel11.IsMultiLang = false;
-            this.efwLabel11.Location = new System.Drawing.Point(19, 220);
+            this.efwLabel11.Location = new System.Drawing.Point(19, 245);
             this.efwLabel11.Name = "efwLabel11";
             this.efwLabel11.Size = new System.Drawing.Size(88, 14);
             this.efwLabel11.TabIndex = 11;
@@ -2816,7 +2852,7 @@
             // 
             this.efwLabel10.EraserGroup = null;
             this.efwLabel10.IsMultiLang = false;
-            this.efwLabel10.Location = new System.Drawing.Point(19, 194);
+            this.efwLabel10.Location = new System.Drawing.Point(19, 219);
             this.efwLabel10.Name = "efwLabel10";
             this.efwLabel10.Size = new System.Drawing.Size(87, 14);
             this.efwLabel10.TabIndex = 10;
@@ -2826,7 +2862,7 @@
             // 
             this.efwLabel9.EraserGroup = null;
             this.efwLabel9.IsMultiLang = false;
-            this.efwLabel9.Location = new System.Drawing.Point(19, 167);
+            this.efwLabel9.Location = new System.Drawing.Point(19, 192);
             this.efwLabel9.Name = "efwLabel9";
             this.efwLabel9.Size = new System.Drawing.Size(39, 14);
             this.efwLabel9.TabIndex = 9;
@@ -2836,7 +2872,7 @@
             // 
             this.efwLabel8.EraserGroup = null;
             this.efwLabel8.IsMultiLang = false;
-            this.efwLabel8.Location = new System.Drawing.Point(19, 141);
+            this.efwLabel8.Location = new System.Drawing.Point(19, 166);
             this.efwLabel8.Name = "efwLabel8";
             this.efwLabel8.Size = new System.Drawing.Size(30, 14);
             this.efwLabel8.TabIndex = 8;
@@ -2846,7 +2882,7 @@
             // 
             this.efwLabel6.EraserGroup = null;
             this.efwLabel6.IsMultiLang = false;
-            this.efwLabel6.Location = new System.Drawing.Point(19, 115);
+            this.efwLabel6.Location = new System.Drawing.Point(19, 140);
             this.efwLabel6.Name = "efwLabel6";
             this.efwLabel6.Size = new System.Drawing.Size(40, 14);
             this.efwLabel6.TabIndex = 7;
@@ -2867,7 +2903,7 @@
             // 
             this.efwLabel5.EraserGroup = null;
             this.efwLabel5.IsMultiLang = false;
-            this.efwLabel5.Location = new System.Drawing.Point(19, 89);
+            this.efwLabel5.Location = new System.Drawing.Point(19, 87);
             this.efwLabel5.Name = "efwLabel5";
             this.efwLabel5.Size = new System.Drawing.Size(30, 14);
             this.efwLabel5.TabIndex = 5;
@@ -3030,6 +3066,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).EndInit();
             this.efwGroupControl4.ResumeLayout(false);
             this.efwGroupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtadd_p_name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPS_DONUT_AD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGM_CASH_CELE_STORY.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGB_AD_CELE_STORY.Properties)).EndInit();
@@ -3299,5 +3336,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn61;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel35;
         private Easy.Framework.WinForm.Control.efwTextEdit txtPS_DONUT_AD;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtadd_p_name;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel36;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn62;
     }
 }

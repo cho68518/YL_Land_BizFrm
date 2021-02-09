@@ -75,6 +75,7 @@
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy13 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy13 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtp_show_name = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel48 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel47 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -110,6 +111,8 @@
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGroupControlProd = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel50 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel49 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtp_title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel44 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cbp_represent = new DevExpress.XtraEditors.CheckEdit();
@@ -269,7 +272,6 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_show_name.Properties)).BeginInit();
@@ -401,6 +403,14 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.efwSimpleButton3);
             resources.ApplyResources(this.splitContainerControl1.Panel2, "splitContainerControl1.Panel2");
             this.splitContainerControl1.SplitterPosition = 1106;
+            // 
+            // efwSimpleButton5
+            // 
+            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
+            this.efwSimpleButton5.IsMultiLang = false;
+            resources.ApplyResources(this.efwSimpleButton5, "efwSimpleButton5");
+            this.efwSimpleButton5.Name = "efwSimpleButton5";
+            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
             // 
             // txtp_show_name
             // 
@@ -715,6 +725,8 @@
             // efwGroupControlProd
             // 
             this.efwGroupControlProd.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControlProd.CaptionImageOptions.Image")));
+            this.efwGroupControlProd.Controls.Add(this.efwLabel50);
+            this.efwGroupControlProd.Controls.Add(this.efwLabel49);
             this.efwGroupControlProd.Controls.Add(this.txtp_title);
             this.efwGroupControlProd.Controls.Add(this.efwLabel44);
             this.efwGroupControlProd.Controls.Add(this.cbp_represent);
@@ -776,6 +788,20 @@
             resources.ApplyResources(this.efwGroupControlProd, "efwGroupControlProd");
             this.efwGroupControlProd.IsMultiLang = false;
             this.efwGroupControlProd.Name = "efwGroupControlProd";
+            // 
+            // efwLabel50
+            // 
+            this.efwLabel50.EraserGroup = null;
+            this.efwLabel50.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel50, "efwLabel50");
+            this.efwLabel50.Name = "efwLabel50";
+            // 
+            // efwLabel49
+            // 
+            this.efwLabel49.EraserGroup = null;
+            this.efwLabel49.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel49, "efwLabel49");
+            this.efwLabel49.Name = "efwLabel49";
             // 
             // txtp_title
             // 
@@ -1130,7 +1156,7 @@
             resources.ApplyResources(this.gridColumn16, "gridColumn16");
             this.gridColumn16.FieldName = "c_name";
             this.gridColumn16.Name = "gridColumn16";
-            this.gridColumn16.OptionsColumn.ReadOnly = true;
+            this.gridColumn16.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn17
             // 
@@ -1306,9 +1332,9 @@
             // 
             // txtP_Min_Purchase_Num
             // 
+            resources.ApplyResources(this.txtP_Min_Purchase_Num, "txtP_Min_Purchase_Num");
             this.txtP_Min_Purchase_Num.EditValue2 = null;
             this.txtP_Min_Purchase_Num.EraserGroup = "CLR1";
-            resources.ApplyResources(this.txtP_Min_Purchase_Num, "txtP_Min_Purchase_Num");
             this.txtP_Min_Purchase_Num.Name = "txtP_Min_Purchase_Num";
             this.txtP_Min_Purchase_Num.Properties.Appearance.Options.UseTextOptions = true;
             this.txtP_Min_Purchase_Num.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2524,14 +2550,6 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
-            // efwSimpleButton5
-            // 
-            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
-            this.efwSimpleButton5.IsMultiLang = false;
-            resources.ApplyResources(this.efwSimpleButton5, "efwSimpleButton5");
-            this.efwSimpleButton5.Name = "efwSimpleButton5";
-            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
-            // 
             // frmMM03_Pop01
             // 
             resources.ApplyResources(this, "$this");
@@ -2866,5 +2884,7 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel48;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel47;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel50;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel49;
     }
 }

@@ -124,7 +124,7 @@
             // rbQtyOrAmt
             // 
             this.rbQtyOrAmt.IsMultiLang = false;
-            this.rbQtyOrAmt.Location = new System.Drawing.Point(748, 11);
+            this.rbQtyOrAmt.Location = new System.Drawing.Point(478, 11);
             this.rbQtyOrAmt.Name = "rbQtyOrAmt";
             this.rbQtyOrAmt.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbQtyOrAmt.Properties.Appearance.Options.UseBackColor = true;
@@ -141,7 +141,7 @@
             // rbProd_Type
             // 
             this.rbProd_Type.IsMultiLang = false;
-            this.rbProd_Type.Location = new System.Drawing.Point(466, 11);
+            this.rbProd_Type.Location = new System.Drawing.Point(196, 11);
             this.rbProd_Type.Name = "rbProd_Type";
             this.rbProd_Type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbProd_Type.Properties.Appearance.Options.UseBackColor = true;
@@ -159,7 +159,7 @@
             // rbShop_Type
             // 
             this.rbShop_Type.IsMultiLang = false;
-            this.rbShop_Type.Location = new System.Drawing.Point(216, 11);
+            this.rbShop_Type.Location = new System.Drawing.Point(710, 14);
             this.rbShop_Type.Name = "rbShop_Type";
             this.rbShop_Type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbShop_Type.Properties.Appearance.Options.UseBackColor = true;
@@ -173,6 +173,7 @@
             this.rbShop_Type.RequireMessage = null;
             this.rbShop_Type.Size = new System.Drawing.Size(244, 30);
             this.rbShop_Type.TabIndex = 8;
+            this.rbShop_Type.Visible = false;
             // 
             // efwLabel1
             // 

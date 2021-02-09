@@ -628,8 +628,8 @@
             this.rbLEVEL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.rbLEVEL.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.rbLEVEL.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "일반"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "VIP"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "도넛나눔 친구"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "VIP 추천인"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "구독관계")});
             this.rbLEVEL.RequireMessage = null;
             this.rbLEVEL.Size = new System.Drawing.Size(324, 28);
