@@ -42,7 +42,7 @@ namespace YL_GM.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
-            dtS_DATE.EditValue = DateTime.Now;
+       //     dtS_DATE.EditValue = DateTime.Now;
 
         }
 
@@ -60,11 +60,11 @@ namespace YL_GM.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("i_year", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 4);
+                  //      cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 4);
+                  //
 
-
-                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[1].Value = rbYearType.EditValue;
+                //        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 1);
+                //        cmd.Parameters[1].Value = rbYearType.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -75,7 +75,7 @@ namespace YL_GM.BizFrm
                             {
                                 DataRow[] rows = dt.Select();
                                 // 지역별 COUNT
-                                efwArea1.Text = String.Format("{0:#,##0}", rows[0]["Area1"]);
+                    //            efwArea1.Text = String.Format("{0:#,##0}", rows[0]["Area1"]);
 
                             }
                         }
