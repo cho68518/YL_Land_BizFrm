@@ -92,6 +92,9 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel15 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.chkHomePage = new Easy.Framework.WinForm.Control.efwCheckEdit();
+            this.chkApp = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.txtevent_duration_title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel14 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtEvent_ld_imgpath = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -136,6 +139,10 @@
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit7 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.txtIs_Use = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
@@ -247,6 +254,8 @@
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkHomePage.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkApp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtevent_duration_title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEvent_ld_imgpath.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddPicPath2.Properties)).BeginInit();
@@ -269,6 +278,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).BeginInit();
             this.efwPanelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtIs_Use.Properties)).BeginInit();
@@ -380,7 +391,7 @@
             this.xtraTabPage1.Controls.Add(this.efwPanelControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1233, 800);
-            this.xtraTabPage1.Text = "매인배너";
+            this.xtraTabPage1.Text = "매인배너(앱)";
             // 
             // rbLinkType
             // 
@@ -860,11 +871,14 @@
             this.xtraTabPage2.Controls.Add(this.efwPanelControl2);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1233, 800);
-            this.xtraTabPage2.Text = "더보기 이벤트 배너";
+            this.xtraTabPage2.Text = "더보기 이벤트 배너(앱 + 홈페이지)";
             // 
             // efwGroupControl1
             // 
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
+            this.efwGroupControl1.Controls.Add(this.efwLabel15);
+            this.efwGroupControl1.Controls.Add(this.chkHomePage);
+            this.efwGroupControl1.Controls.Add(this.chkApp);
             this.efwGroupControl1.Controls.Add(this.txtevent_duration_title);
             this.efwGroupControl1.Controls.Add(this.efwLabel14);
             this.efwGroupControl1.Controls.Add(this.txtEvent_ld_imgpath);
@@ -898,6 +912,40 @@
             this.efwGroupControl1.Size = new System.Drawing.Size(1233, 275);
             this.efwGroupControl1.TabIndex = 55;
             this.efwGroupControl1.Text = "배너 저장";
+            // 
+            // efwLabel15
+            // 
+            this.efwLabel15.EraserGroup = null;
+            this.efwLabel15.IsMultiLang = false;
+            this.efwLabel15.Location = new System.Drawing.Point(18, 36);
+            this.efwLabel15.Name = "efwLabel15";
+            this.efwLabel15.Size = new System.Drawing.Size(44, 14);
+            this.efwLabel15.TabIndex = 88;
+            this.efwLabel15.Text = "적용 범위";
+            // 
+            // chkHomePage
+            // 
+            this.chkHomePage.EditValue = "Y";
+            this.chkHomePage.EraserGroup = "CLR1";
+            this.chkHomePage.Location = new System.Drawing.Point(170, 32);
+            this.chkHomePage.Name = "chkHomePage";
+            this.chkHomePage.Properties.Caption = "홈페이지";
+            this.chkHomePage.Properties.ValueChecked = "Y";
+            this.chkHomePage.Properties.ValueUnchecked = "N";
+            this.chkHomePage.Size = new System.Drawing.Size(93, 19);
+            this.chkHomePage.TabIndex = 87;
+            // 
+            // chkApp
+            // 
+            this.chkApp.EditValue = "Y";
+            this.chkApp.EraserGroup = "CLR1";
+            this.chkApp.Location = new System.Drawing.Point(83, 32);
+            this.chkApp.Name = "chkApp";
+            this.chkApp.Properties.Caption = "앱";
+            this.chkApp.Properties.ValueChecked = "Y";
+            this.chkApp.Properties.ValueUnchecked = "N";
+            this.chkApp.Size = new System.Drawing.Size(74, 19);
+            this.chkApp.TabIndex = 86;
             // 
             // txtevent_duration_title
             // 
@@ -1257,7 +1305,9 @@
             this.efwGridControl2.PrevRowHandle = -2147483648;
             this.efwGridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemPictureEdit1,
-            this.repositoryItemCheckEdit2});
+            this.repositoryItemCheckEdit2,
+            this.repositoryItemCheckEdit7,
+            this.repositoryItemCheckEdit8});
             this.efwGridControl2.Size = new System.Drawing.Size(1233, 471);
             this.efwGridControl2.TabIndex = 53;
             this.efwGridControl2.TableName = "";
@@ -1285,7 +1335,9 @@
             this.gridColumn19,
             this.gridColumn20,
             this.gridColumn22,
-            this.gridColumn41});
+            this.gridColumn41,
+            this.gridColumn42,
+            this.gridColumn44});
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ColumnAutoWidth = false;
@@ -1411,6 +1463,41 @@
             this.gridColumn41.Visible = true;
             this.gridColumn41.VisibleIndex = 5;
             // 
+            // gridColumn42
+            // 
+            this.gridColumn42.Caption = "앱 사용";
+            this.gridColumn42.ColumnEdit = this.repositoryItemCheckEdit7;
+            this.gridColumn42.FieldName = "is_app";
+            this.gridColumn42.Name = "gridColumn42";
+            this.gridColumn42.OptionsColumn.AllowEdit = false;
+            this.gridColumn42.Visible = true;
+            this.gridColumn42.VisibleIndex = 6;
+            // 
+            // repositoryItemCheckEdit7
+            // 
+            this.repositoryItemCheckEdit7.AutoHeight = false;
+            this.repositoryItemCheckEdit7.Name = "repositoryItemCheckEdit7";
+            this.repositoryItemCheckEdit7.ValueChecked = "Y";
+            this.repositoryItemCheckEdit7.ValueUnchecked = "N";
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.Caption = "홈페이지 사용";
+            this.gridColumn44.ColumnEdit = this.repositoryItemCheckEdit8;
+            this.gridColumn44.FieldName = "is_homepage";
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.OptionsColumn.AllowEdit = false;
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 7;
+            this.gridColumn44.Width = 80;
+            // 
+            // repositoryItemCheckEdit8
+            // 
+            this.repositoryItemCheckEdit8.AutoHeight = false;
+            this.repositoryItemCheckEdit8.Name = "repositoryItemCheckEdit8";
+            this.repositoryItemCheckEdit8.ValueChecked = "Y";
+            this.repositoryItemCheckEdit8.ValueUnchecked = "N";
+            // 
             // efwPanelControl2
             // 
             this.efwPanelControl2.Controls.Add(this.txtIs_Use);
@@ -1446,7 +1533,7 @@
             this.xtraTabPage3.Controls.Add(this.efwPanelControl3);
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1233, 800);
-            this.xtraTabPage3.Text = "이용 안내";
+            this.xtraTabPage3.Text = "이용 안내(앱)";
             // 
             // efwGroupControl2
             // 
@@ -1807,7 +1894,7 @@
             this.xtraTabPage4.Controls.Add(this.efwPanelControl4);
             this.xtraTabPage4.Name = "xtraTabPage4";
             this.xtraTabPage4.Size = new System.Drawing.Size(1233, 800);
-            this.xtraTabPage4.Text = "자료실";
+            this.xtraTabPage4.Text = "자료실(앱)";
             // 
             // efwGroupControl4
             // 
@@ -2218,7 +2305,7 @@
             this.xtraTabPage5.Controls.Add(this.efwPanelControl5);
             this.xtraTabPage5.Name = "xtraTabPage5";
             this.xtraTabPage5.Size = new System.Drawing.Size(1233, 800);
-            this.xtraTabPage5.Text = "추천 상품관리";
+            this.xtraTabPage5.Text = "추천 상품관리(앱)";
             // 
             // efwGridControl5
             // 
@@ -2506,6 +2593,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkHomePage.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkApp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtevent_duration_title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEvent_ld_imgpath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddPicPath2.Properties)).EndInit();
@@ -2528,6 +2617,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).EndInit();
             this.efwPanelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtIs_Use.Properties)).EndInit();
@@ -2764,5 +2855,12 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtevent_duration_title;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel15;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chkHomePage;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chkApp;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit8;
     }
 }

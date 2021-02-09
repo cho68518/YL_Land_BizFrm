@@ -128,7 +128,7 @@
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.efwCheckEdit1 = new Easy.Framework.WinForm.Control.efwCheckEdit();
+            this.chkIS_BIZ = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.ckis_official = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.txtU_ADDR_DETAIL = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.chkIS_COMP_MD = new Easy.Framework.WinForm.Control.efwCheckEdit();
@@ -202,7 +202,7 @@
             this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.chkIS_BIZ = new DevExpress.XtraLayout.LayoutControlItem();
+            this.LayOut = new DevExpress.XtraLayout.LayoutControlItem();
             this.efwTextEdit2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl2 = new DevExpress.XtraEditors.SplitterControl();
@@ -257,7 +257,7 @@
             this.efwGroupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efwCheckEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIS_BIZ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckis_official.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_ADDR_DETAIL.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIS_COMP_MD.Properties)).BeginInit();
@@ -328,7 +328,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkIS_BIZ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LayOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).BeginInit();
@@ -1246,7 +1246,7 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.efwCheckEdit1);
+            this.layoutControl1.Controls.Add(this.chkIS_BIZ);
             this.layoutControl1.Controls.Add(this.ckis_official);
             this.layoutControl1.Controls.Add(this.txtU_ADDR_DETAIL);
             this.layoutControl1.Controls.Add(this.chkIS_COMP_MD);
@@ -1287,17 +1287,17 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // efwCheckEdit1
+            // chkIS_BIZ
             // 
-            this.efwCheckEdit1.EraserGroup = "CLR1";
-            this.efwCheckEdit1.Location = new System.Drawing.Point(402, 182);
-            this.efwCheckEdit1.Name = "efwCheckEdit1";
-            this.efwCheckEdit1.Properties.Caption = "미용실(G샵)";
-            this.efwCheckEdit1.Properties.ValueChecked = "Y";
-            this.efwCheckEdit1.Properties.ValueUnchecked = "N";
-            this.efwCheckEdit1.Size = new System.Drawing.Size(86, 19);
-            this.efwCheckEdit1.StyleController = this.layoutControl1;
-            this.efwCheckEdit1.TabIndex = 32;
+            this.chkIS_BIZ.EraserGroup = "CLR1";
+            this.chkIS_BIZ.Location = new System.Drawing.Point(402, 182);
+            this.chkIS_BIZ.Name = "chkIS_BIZ";
+            this.chkIS_BIZ.Properties.Caption = "미용실(G샵)";
+            this.chkIS_BIZ.Properties.ValueChecked = "Y";
+            this.chkIS_BIZ.Properties.ValueUnchecked = "N";
+            this.chkIS_BIZ.Size = new System.Drawing.Size(86, 19);
+            this.chkIS_BIZ.StyleController = this.layoutControl1;
+            this.chkIS_BIZ.TabIndex = 32;
             // 
             // ckis_official
             // 
@@ -1904,7 +1904,7 @@
             this.layoutControlItem44,
             this.layoutControlItem19,
             this.layoutControlItem45,
-            this.chkIS_BIZ});
+            this.LayOut});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 2, 2);
             this.layoutControlGroup1.Size = new System.Drawing.Size(815, 257);
@@ -2324,14 +2324,14 @@
             this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem45.TextVisible = false;
             // 
-            // chkIS_BIZ
+            // LayOut
             // 
-            this.chkIS_BIZ.Control = this.efwCheckEdit1;
-            this.chkIS_BIZ.Location = new System.Drawing.Point(390, 178);
-            this.chkIS_BIZ.Name = "chkIS_BIZ";
-            this.chkIS_BIZ.Size = new System.Drawing.Size(90, 23);
-            this.chkIS_BIZ.TextSize = new System.Drawing.Size(0, 0);
-            this.chkIS_BIZ.TextVisible = false;
+            this.LayOut.Control = this.chkIS_BIZ;
+            this.LayOut.Location = new System.Drawing.Point(390, 178);
+            this.LayOut.Name = "LayOut";
+            this.LayOut.Size = new System.Drawing.Size(90, 23);
+            this.LayOut.TextSize = new System.Drawing.Size(0, 0);
+            this.LayOut.TextVisible = false;
             // 
             // efwTextEdit2
             // 
@@ -2541,7 +2541,7 @@
             this.efwGroupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.efwCheckEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIS_BIZ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckis_official.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU_ADDR_DETAIL.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIS_COMP_MD.Properties)).EndInit();
@@ -2613,7 +2613,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkIS_BIZ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LayOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwTextEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).EndInit();
@@ -2794,7 +2794,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private Easy.Framework.WinForm.Control.efwCheckEdit ckis_official;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
-        private Easy.Framework.WinForm.Control.efwCheckEdit efwCheckEdit1;
-        private DevExpress.XtraLayout.LayoutControlItem chkIS_BIZ;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chkIS_BIZ;
+        private DevExpress.XtraLayout.LayoutControlItem LayOut;
     }
 }

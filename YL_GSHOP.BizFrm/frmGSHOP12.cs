@@ -88,6 +88,7 @@ namespace YL_GSHOP.BizFrm
                 picBest_Pic4.LoadAsync(txtPic_Url4.EditValue.ToString());
                 picBest_Pic5.LoadAsync(txtPic_Url5.EditValue.ToString());
             }
+            Cursor.Current = Cursors.Arrow;
 
         }
 
@@ -173,7 +174,7 @@ namespace YL_GSHOP.BizFrm
                             efwGridControl1.DataBind(ds);
                             //this.efwGridControl1.MyGridView.BestFitColumns();
                         }
-                        Cursor.Current = Cursors.Default;
+                        Cursor.Current = Cursors.Arrow;
                     }
                 }
             }
@@ -266,6 +267,26 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_is_use", MySqlDbType.VarChar));
                             cmd.Parameters["i_is_use"].Value = chis_use.EditValue;
                             cmd.Parameters["i_is_use"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Shooting_Date1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Shooting_Date1"].Value = txtShooting_Date1.EditValue;
+                            cmd.Parameters["i_Shooting_Date1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Shooting_Date2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Shooting_Date2"].Value = txtShooting_Date2.EditValue;
+                            cmd.Parameters["i_Shooting_Date2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Shooting_Date3", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Shooting_Date3"].Value = txtShooting_Date3.EditValue;
+                            cmd.Parameters["i_Shooting_Date3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Shooting_Date4", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Shooting_Date4"].Value = txtShooting_Date4.EditValue;
+                            cmd.Parameters["i_Shooting_Date4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Shooting_Date5", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Shooting_Date5"].Value = txtShooting_Date5.EditValue;
+                            cmd.Parameters["i_Shooting_Date5"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

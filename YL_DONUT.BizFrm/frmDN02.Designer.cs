@@ -119,6 +119,9 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -129,6 +132,9 @@
             this.dt2T = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dt2F = new Easy.Framework.WinForm.Control.efwDateEdit();
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
             this.efwGroupControl3.SuspendLayout();
@@ -749,7 +755,10 @@
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn7,
-            this.gridColumn8});
+            this.gridColumn8,
+            this.gridColumn29,
+            this.gridColumn30,
+            this.gridColumn31});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -1026,7 +1035,10 @@
             this.gridColumn13,
             this.gridColumn14,
             this.gridColumn15,
-            this.gridColumn16});
+            this.gridColumn16,
+            this.gridColumn26,
+            this.gridColumn27,
+            this.gridColumn28});
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ColumnAutoWidth = false;
@@ -1127,6 +1139,35 @@
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 6;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "소멸일";
+            this.gridColumn26.FieldName = "EXPIRY_DATE";
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.OptionsColumn.AllowEdit = false;
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 7;
+            // 
+            // gridColumn27
+            // 
+            this.gridColumn27.Caption = "소멸금액";
+            this.gridColumn27.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn27.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn27.FieldName = "EXPIRY_AMT";
+            this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.OptionsColumn.AllowEdit = false;
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 8;
+            // 
+            // gridColumn28
+            // 
+            this.gridColumn28.Caption = "비고";
+            this.gridColumn28.FieldName = "REMARK";
+            this.gridColumn28.Name = "gridColumn28";
+            this.gridColumn28.OptionsColumn.AllowEdit = false;
+            this.gridColumn28.Visible = true;
+            this.gridColumn28.VisibleIndex = 9;
             // 
             // repositoryItemLookUpEdit2
             // 
@@ -1242,6 +1283,30 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dt2F.Size = new System.Drawing.Size(102, 20);
             this.dt2F.TabIndex = 2;
+            // 
+            // gridColumn29
+            // 
+            this.gridColumn29.Caption = "소멸일";
+            this.gridColumn29.FieldName = "EXPIRY_DATE";
+            this.gridColumn29.Name = "gridColumn29";
+            this.gridColumn29.Visible = true;
+            this.gridColumn29.VisibleIndex = 7;
+            // 
+            // gridColumn30
+            // 
+            this.gridColumn30.Caption = "소멸금액";
+            this.gridColumn30.FieldName = "EXPIRY_AMT";
+            this.gridColumn30.Name = "gridColumn30";
+            this.gridColumn30.Visible = true;
+            this.gridColumn30.VisibleIndex = 8;
+            // 
+            // gridColumn31
+            // 
+            this.gridColumn31.Caption = "비고";
+            this.gridColumn31.FieldName = "REMARK";
+            this.gridColumn31.Name = "gridColumn31";
+            this.gridColumn31.Visible = true;
+            this.gridColumn31.VisibleIndex = 9;
             // 
             // frmDN02
             // 
@@ -1416,5 +1481,11 @@
         private Easy.Framework.WinForm.Control.efwLabel lblGD;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
     }
 }

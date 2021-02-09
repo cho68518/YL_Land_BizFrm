@@ -117,6 +117,18 @@
     <Compile Include="Dlg\frmMemberInfo.designer.cs">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGM15.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM15.Designer.cs">
+      <DependentUpon>frmGM15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM14.Designer.cs">
+      <DependentUpon>frmGM14.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGM12_Pop01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +302,9 @@
     <EmbeddedResource Include="Dlg\frmMemberInfo.resx">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGM15.resx">
+      <DependentUpon>frmGM15.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGM12_Pop01.resx">
       <DependentUpon>frmGM12_Pop01.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM11_Pop02.resx">
       <DependentUpon>frmGM11_Pop02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM14.resx">
+      <DependentUpon>frmGM14.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

@@ -611,7 +611,7 @@ namespace YL_DONUT.BizFrm
             var gv = sender as GridView;
             var rowIndex = gv.FocusedRowHandle;
             var columnIndex = gv.FocusedColumn.VisibleIndex;
-            if (columnIndex == 3)
+            if (columnIndex == 5)
             {
                 DataRow dr = this.efwGridControl1.GetSelectedRow(0);
                 int nId = Convert.ToInt32(txtId.EditValue.ToString());
@@ -624,7 +624,7 @@ namespace YL_DONUT.BizFrm
                     popup.ShowDialog();
                 }
             }
-            if (columnIndex == 30)
+            if (columnIndex == 32)
             {
                 using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
                 { 

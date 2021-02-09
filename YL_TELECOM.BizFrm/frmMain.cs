@@ -43,5 +43,10 @@ namespace YL_TELECOM.BizFrm
             FrmBaseLoad(new frmTM03());
 
         }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmTM04());
+        }
     }
 }

@@ -93,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstantLib.cs" />
+    <Compile Include="frmTM04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTM04.Designer.cs">
+      <DependentUpon>frmTM04.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTM03.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmTM04.resx">
+      <DependentUpon>frmTM04.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>

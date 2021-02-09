@@ -76,6 +76,7 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("o_delivery_num", txto_delivery_num)
                     , new ColumnControlSet("add_p_name", txtadd_p_name)
                     , new ColumnControlSet("o_delivery_comp_code", cmbo_delivery_comp_code)
+                    , new ColumnControlSet("event_name", txtevent_name)
                    ); ;
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -279,6 +280,10 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_o_receive_message1"].Value = txto_receive_message1.EditValue;
                             cmd.Parameters["i_o_receive_message1"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_event_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_event_name"].Value = txtevent_name.EditValue;
+                            cmd.Parameters["i_event_name"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -397,6 +402,10 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_o_receive_message1", MySqlDbType.VarChar));
                             cmd.Parameters["i_o_receive_message1"].Value = txto_receive_message1.EditValue;
                             cmd.Parameters["i_o_receive_message1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_event_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_event_name"].Value = txtevent_name.EditValue;
+                            cmd.Parameters["i_event_name"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

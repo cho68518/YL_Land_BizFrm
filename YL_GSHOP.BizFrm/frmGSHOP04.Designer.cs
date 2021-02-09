@@ -726,6 +726,8 @@
             this.gridColumn66.Caption = "실적MD";
             this.gridColumn66.FieldName = "last_md";
             this.gridColumn66.Name = "gridColumn66";
+            this.gridColumn66.Visible = true;
+            this.gridColumn66.VisibleIndex = 17;
             // 
             // gridColumn67
             // 
@@ -766,7 +768,7 @@
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.AllowEdit = false;
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 17;
+            this.gridColumn15.VisibleIndex = 18;
             // 
             // gridColumn17
             // 
@@ -782,7 +784,7 @@
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.OptionsColumn.AllowEdit = false;
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 18;
+            this.gridColumn18.VisibleIndex = 19;
             // 
             // gridColumn19
             // 
@@ -798,7 +800,7 @@
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.OptionsColumn.AllowEdit = false;
             this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 19;
+            this.gridColumn20.VisibleIndex = 20;
             // 
             // gridColumn22
             // 
@@ -814,7 +816,7 @@
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 20;
+            this.gridColumn23.VisibleIndex = 21;
             // 
             // gridColumn26
             // 
@@ -837,7 +839,7 @@
             this.gridColumn58.Name = "gridColumn58";
             this.gridColumn58.OptionsColumn.AllowEdit = false;
             this.gridColumn58.Visible = true;
-            this.gridColumn58.VisibleIndex = 21;
+            this.gridColumn58.VisibleIndex = 22;
             // 
             // gridColumn56
             // 
@@ -846,7 +848,7 @@
             this.gridColumn56.Name = "gridColumn56";
             this.gridColumn56.OptionsColumn.AllowEdit = false;
             this.gridColumn56.Visible = true;
-            this.gridColumn56.VisibleIndex = 22;
+            this.gridColumn56.VisibleIndex = 23;
             // 
             // gridColumn59
             // 
@@ -855,7 +857,7 @@
             this.gridColumn59.Name = "gridColumn59";
             this.gridColumn59.OptionsColumn.AllowEdit = false;
             this.gridColumn59.Visible = true;
-            this.gridColumn59.VisibleIndex = 23;
+            this.gridColumn59.VisibleIndex = 24;
             // 
             // gridColumn63
             // 
@@ -871,7 +873,7 @@
             this.gridColumn64.Name = "gridColumn64";
             this.gridColumn64.OptionsColumn.AllowEdit = false;
             this.gridColumn64.Visible = true;
-            this.gridColumn64.VisibleIndex = 24;
+            this.gridColumn64.VisibleIndex = 25;
             // 
             // gridColumn65
             // 
@@ -880,7 +882,7 @@
             this.gridColumn65.Name = "gridColumn65";
             this.gridColumn65.OptionsColumn.AllowEdit = false;
             this.gridColumn65.Visible = true;
-            this.gridColumn65.VisibleIndex = 25;
+            this.gridColumn65.VisibleIndex = 26;
             // 
             // repositoryItemLookUpEdit1
             // 

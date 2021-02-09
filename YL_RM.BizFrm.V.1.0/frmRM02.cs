@@ -96,6 +96,8 @@ namespace YL_RM.BizFrm
                       , new ColumnControlSet("subject", txtsubject)
                       , new ColumnControlSet("is_notice", rbis_notice)
                       , new ColumnControlSet("summury", txtsummury)
+                      , new ColumnControlSet("board_type", rbboard_type)
+                      , new ColumnControlSet("is_file", chkis_file)
                       );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -274,7 +276,10 @@ namespace YL_RM.BizFrm
                 {
                     rbis_notice.EditValue = (dr["is_notice"].ToString());
                 }
-
+                if (dr != null && dr["board_type"].ToString() != "0" && dr["board_type"].ToString() != "")
+                {
+                    rbboard_type.EditValue = (dr["board_type"].ToString());
+                }
             }                
         }
         private void btn_new1_Click(object sender, EventArgs e)
@@ -466,6 +471,14 @@ namespace YL_RM.BizFrm
                             cmd.Parameters["i_summury"].Value = txtsummury.EditValue;
                             cmd.Parameters["i_summury"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_board_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_board_type"].Value = rbboard_type.EditValue;
+                            cmd.Parameters["i_board_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_file", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_file"].Value = chkis_file.EditValue;
+                            cmd.Parameters["i_is_file"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_idx", MySqlDbType.VarChar));
                             cmd.Parameters["o_idx"].Direction = ParameterDirection.Output;
 
@@ -563,6 +576,29 @@ namespace YL_RM.BizFrm
                 txt_idx2.EditValue = "";
                 txtsubject.EditValue = "";
                 txtfile1.EditValue = "";
+
+                //if (cmbBoard.EditValue.ToString() == "2")
+                //    rbboard_type.Enabled = true;
+                //else
+                //    rbboard_type.Enabled = false;
+
+                if (cmbBoard.EditValue.ToString() == "2")
+                    rbboard_type_hid.Enabled  = true;
+                else
+                    rbboard_type_hid.Enabled = false;
+
+
+                if (cmbBoard.EditValue.ToString() == "3")
+                    chkis_file.Enabled = true;
+                else
+                    chkis_file.Enabled = false;
+
+                if (cmbBoard.EditValue.ToString() == "2")
+                    chkis_file.EditValue = "Y";
+                else
+                    chkis_file.EditValue = "N";
+
+
                 Open2();
                 Clear2();
             }
@@ -991,5 +1027,22 @@ namespace YL_RM.BizFrm
             }
         }
 
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            txtimg_url1.EditValue = "";
+            picBanner1.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            txtimg_url2.EditValue = "";
+            picBanner2.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            txtimg_url3.EditValue = "";
+            picBanner3.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+        }
     }
 }
