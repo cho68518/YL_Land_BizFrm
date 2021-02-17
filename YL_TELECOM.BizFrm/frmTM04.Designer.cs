@@ -60,6 +60,7 @@
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -192,6 +193,7 @@
             this.txtCoidNo.RequireMessage = null;
             this.txtCoidNo.Size = new System.Drawing.Size(90, 20);
             this.txtCoidNo.TabIndex = 55;
+            this.txtCoidNo.Visible = false;
             // 
             // txt_idx
             // 
@@ -204,6 +206,7 @@
             this.txt_idx.RequireMessage = null;
             this.txt_idx.Size = new System.Drawing.Size(66, 20);
             this.txt_idx.TabIndex = 49;
+            this.txt_idx.Visible = false;
             // 
             // txt_search
             // 
@@ -352,7 +355,8 @@
             this.gridColumn12,
             this.gridColumn13,
             this.gridColumn14,
-            this.gridColumn15});
+            this.gridColumn15,
+            this.gridColumn16});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "건수 : {0}")});
@@ -407,7 +411,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "상담구분";
-            this.gridColumn6.FieldName = "advice_type";
+            this.gridColumn6.FieldName = "advice_type_nm";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
@@ -490,6 +494,12 @@
             this.gridColumn15.FieldName = "modify_date";
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.AllowEdit = false;
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.Caption = "영업상담코드";
+            this.gridColumn16.FieldName = "advice_type_cd";
+            this.gridColumn16.Name = "gridColumn16";
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -581,6 +591,7 @@
             this.txt_content.Size = new System.Drawing.Size(629, 72);
             this.txt_content.StyleController = this.layoutControl3;
             this.txt_content.TabIndex = 11;
+            this.txt_content.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_content_KeyDown);
             // 
             // efwSimpleButton7
             // 
@@ -644,6 +655,7 @@
             this.cmb_advice_type.Size = new System.Drawing.Size(164, 20);
             this.cmb_advice_type.StyleController = this.layoutControl3;
             this.cmb_advice_type.TabIndex = 5;
+            this.cmb_advice_type.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_advice_type_KeyDown);
             // 
             // txt_tel_no
             // 
@@ -657,6 +669,7 @@
             this.txt_tel_no.Size = new System.Drawing.Size(164, 20);
             this.txt_tel_no.StyleController = this.layoutControl3;
             this.txt_tel_no.TabIndex = 7;
+            this.txt_tel_no.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_tel_no_KeyDown);
             // 
             // txt_hp_no
             // 
@@ -670,6 +683,7 @@
             this.txt_hp_no.Size = new System.Drawing.Size(170, 20);
             this.txt_hp_no.StyleController = this.layoutControl3;
             this.txt_hp_no.TabIndex = 4;
+            this.txt_hp_no.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_hp_no_KeyDown);
             // 
             // txt_e_mail
             // 
@@ -683,6 +697,7 @@
             this.txt_e_mail.Size = new System.Drawing.Size(170, 20);
             this.txt_e_mail.StyleController = this.layoutControl3;
             this.txt_e_mail.TabIndex = 8;
+            this.txt_e_mail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_e_mail_KeyDown);
             // 
             // txt_person
             // 
@@ -696,6 +711,7 @@
             this.txt_person.Size = new System.Drawing.Size(164, 20);
             this.txt_person.StyleController = this.layoutControl3;
             this.txt_person.TabIndex = 3;
+            this.txt_person.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_person_KeyDown);
             // 
             // txt_agency_name
             // 
@@ -709,6 +725,7 @@
             this.txt_agency_name.Size = new System.Drawing.Size(433, 20);
             this.txt_agency_name.StyleController = this.layoutControl3;
             this.txt_agency_name.TabIndex = 2;
+            this.txt_agency_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_agency_name_KeyDown);
             // 
             // txt_work_man
             // 
@@ -722,6 +739,7 @@
             this.txt_work_man.Size = new System.Drawing.Size(170, 20);
             this.txt_work_man.StyleController = this.layoutControl3;
             this.txt_work_man.TabIndex = 1;
+            this.txt_work_man.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_work_man_KeyDown);
             // 
             // dt_plan_date
             // 
@@ -740,6 +758,7 @@
             this.dt_plan_date.Size = new System.Drawing.Size(170, 20);
             this.dt_plan_date.StyleController = this.layoutControl3;
             this.dt_plan_date.TabIndex = 6;
+            this.dt_plan_date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dt_plan_date_KeyDown);
             // 
             // txt_visit_area
             // 
@@ -753,6 +772,7 @@
             this.txt_visit_area.Size = new System.Drawing.Size(164, 20);
             this.txt_visit_area.StyleController = this.layoutControl3;
             this.txt_visit_area.TabIndex = 9;
+            this.txt_visit_area.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_visit_area_KeyDown);
             // 
             // txt_visit_distant
             // 
@@ -766,6 +786,7 @@
             this.txt_visit_distant.Size = new System.Drawing.Size(170, 20);
             this.txt_visit_distant.StyleController = this.layoutControl3;
             this.txt_visit_distant.TabIndex = 10;
+            this.txt_visit_distant.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_visit_distant_KeyDown);
             // 
             // txt_remark
             // 
@@ -778,6 +799,7 @@
             this.txt_remark.Size = new System.Drawing.Size(629, 38);
             this.txt_remark.StyleController = this.layoutControl3;
             this.txt_remark.TabIndex = 12;
+            this.txt_remark.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_remark_KeyDown);
             // 
             // layoutControlGroup3
             // 
@@ -1180,5 +1202,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private Easy.Framework.WinForm.Control.efwMemoEdit txt_remark;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
     }
 }

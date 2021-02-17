@@ -18,6 +18,7 @@ namespace YL_DONUT.BizFrm
     public partial class frmDN20 : FrmBase
     {
         frmDN20_Pop01 popup;
+        frmDN20_Pop02 popup2;
         public frmDN20()
         {
             InitializeComponent();
@@ -382,6 +383,12 @@ namespace YL_DONUT.BizFrm
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
             }
+        }
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            popup2 = new frmDN20_Pop02();
+            popup2.ShowDialog();
         }
     }
 }

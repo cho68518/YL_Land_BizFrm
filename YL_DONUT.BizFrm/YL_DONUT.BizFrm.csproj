@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5747A80A-CBFC-42C3-B170-73495553A80D}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_DONUT.BizFrm</RootNamespace>
     <AssemblyName>YL_DONUT.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -134,6 +134,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="DataSet3.cs">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dlg\frmMember_info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +153,12 @@
     </Compile>
     <Compile Include="Dlg\frmZipNoInfo.Designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDN20_Pop02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDN20_Pop02.Designer.cs">
+      <DependentUpon>frmDN20_Pop02.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDN25.cs">
       <SubType>UserControl</SubType>
@@ -388,11 +402,20 @@
     <Compile Include="XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDN20_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmDN20_Report.Designer.cs">
+      <DependentUpon>frmDN20_Report.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dlg\frmMember_info.resx">
       <DependentUpon>frmMember_info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN20_Pop02.resx">
+      <DependentUpon>frmDN20_Pop02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN25.resx">
       <DependentUpon>frmDN25.cs</DependentUpon>
@@ -517,6 +540,9 @@
     <EmbeddedResource Include="XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDN20_Report.resx">
+      <DependentUpon>frmDN20_Report.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -527,6 +553,17 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

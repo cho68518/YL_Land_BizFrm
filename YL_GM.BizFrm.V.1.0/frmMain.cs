@@ -103,5 +103,10 @@ namespace YL_GM.BizFrm
         {
             FrmBaseLoad(new frmGM14());
         }
+
+        private void efwSimpleButton15_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmGM15());
+        }
     }
 }

@@ -63,9 +63,13 @@
             this.TEL_NO = new DevExpress.XtraReports.Parameters.Parameter();
             this.MEMBER_TYPE = new DevExpress.XtraReports.Parameters.Parameter();
             this.U_NAME = new DevExpress.XtraReports.Parameters.Parameter();
+            this.dataSet12 = new YL_DONUT.BizFrm.DataSet1();
+            this.dataSet13 = new YL_DONUT.BizFrm.DataSet1();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
@@ -337,6 +341,8 @@
             // 
             this.DetailReport.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail1});
+            this.DetailReport.DataMember = "DataTable1";
+            this.DetailReport.DataSource = this.dataSet12;
             this.DetailReport.Level = 0;
             this.DetailReport.Name = "DetailReport";
             // 
@@ -479,6 +485,16 @@
             this.U_NAME.Name = "U_NAME";
             this.U_NAME.Visible = false;
             // 
+            // dataSet12
+            // 
+            this.dataSet12.DataSetName = "DataSet1";
+            this.dataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataSet13
+            // 
+            this.dataSet13.DataSetName = "DataSet1";
+            this.dataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // GSHOP03_RPT
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -488,7 +504,9 @@
             this.DetailReport,
             this.PageFooter});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.dataSet11});
+            this.dataSet11,
+            this.dataSet12,
+            this.dataSet13});
             this.DataMember = "DataTable1";
             this.DataSource = this.dataSet11;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
@@ -505,6 +523,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -546,5 +566,7 @@
         private DevExpress.XtraReports.Parameters.Parameter TEL_NO;
         private DevExpress.XtraReports.Parameters.Parameter MEMBER_TYPE;
         private DevExpress.XtraReports.Parameters.Parameter U_NAME;
+        private YL_DONUT.BizFrm.DataSet1 dataSet12;
+        private YL_DONUT.BizFrm.DataSet1 dataSet13;
     }
 }

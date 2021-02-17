@@ -64,7 +64,7 @@ namespace YL_TELECOM.BizFrm
             , new ColumnControlSet("work_man", txt_work_man)
             , new ColumnControlSet("agency_name", txt_agency_name)
             , new ColumnControlSet("person", txt_person)
-            , new ColumnControlSet("advice_type", ly_advice_type)
+            , new ColumnControlSet("advice_type_cd", cmb_advice_type)
             , new ColumnControlSet("plan_date", dt_plan_date)
             , new ColumnControlSet("hp_no", txt_hp_no)
             , new ColumnControlSet("tel_no", txt_tel_no)
@@ -367,5 +367,76 @@ namespace YL_TELECOM.BizFrm
                 Search();
         }
 
+        private void txt_work_man_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_agency_name.Focus();
+        }
+
+        private void txt_agency_name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_person.Focus();
+        }
+
+        private void txt_person_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_hp_no.Focus();
+        }
+
+        private void txt_hp_no_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                cmb_advice_type.Focus();
+        }
+
+        private void cmb_advice_type_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                dt_plan_date.Focus();
+        }
+
+        private void dt_plan_date_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_tel_no.Focus();
+        }
+
+        private void txt_tel_no_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_e_mail.Focus();
+        }
+
+        private void txt_e_mail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_visit_area.Focus();
+        }
+
+        private void txt_visit_area_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_visit_distant.Focus();
+        }
+
+        private void txt_content_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_remark.Focus();
+        }
+
+        private void txt_remark_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                efwSimpleButton6.Focus();
+        }
+
+        private void txt_visit_distant_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_content.Focus();
+        }
     }
 }

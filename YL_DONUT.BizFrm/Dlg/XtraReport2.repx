@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="18.2.7.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="XtraReport2" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="18.2" DataMember="DataTable1" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Bands>
+    <Item1 Ref="2" ControlType="TopMarginBand" Name="TopMargin" />
+    <Item2 Ref="3" ControlType="BottomMarginBand" Name="BottomMargin" />
+    <Item3 Ref="4" ControlType="VerticalDetailBand" Name="VerticalDetail" />
+    <Item4 Ref="5" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="6" ControlType="DetailBand" Name="Detail" />
+      </Bands>
+    </Item4>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="7" />
+    <Item2 Ref="8" />
+    <Item3 Ref="9" />
+    <Item4 Ref="10" />
+    <Item5 Ref="11" />
+    <Item6 Ref="12" />
+    <Item7 Ref="13" />
+    <Item8 Ref="14" />
+    <Item9 Ref="15" />
+    <Item10 Ref="16" />
+    <Item11 Ref="17" />
+    <Item12 Ref="18" />
+    <Item13 Ref="19" />
+    <Item14 Ref="20" />
+    <Item15 Ref="21" />
+    <Item16 Ref="22" />
+    <Item17 Ref="23" />
+    <Item18 Ref="24" />
+    <Item19 Ref="25" />
+    <Item20 Ref="26" />
+    <Item21 Ref="27" />
+    <Item22 Ref="28" />
+    <Item23 Ref="29" />
+    <Item24 Ref="0" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

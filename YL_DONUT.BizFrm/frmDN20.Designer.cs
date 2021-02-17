@@ -113,6 +113,7 @@
             this.efwXtraTabControl1 = new Easy.Framework.WinForm.Control.efwXtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
@@ -154,6 +155,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton1);
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton4);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton6);
@@ -177,7 +179,7 @@
             // 
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(888, 18);
+            this.efwLabel1.Location = new System.Drawing.Point(930, 18);
             this.efwLabel1.Name = "efwLabel1";
             this.efwLabel1.Size = new System.Drawing.Size(40, 14);
             this.efwLabel1.TabIndex = 71;
@@ -187,9 +189,9 @@
             // 
             this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
             this.efwSimpleButton4.IsMultiLang = false;
-            this.efwSimpleButton4.Location = new System.Drawing.Point(1149, 14);
+            this.efwSimpleButton4.Location = new System.Drawing.Point(1178, 14);
             this.efwSimpleButton4.Name = "efwSimpleButton4";
-            this.efwSimpleButton4.Size = new System.Drawing.Size(94, 22);
+            this.efwSimpleButton4.Size = new System.Drawing.Size(82, 22);
             this.efwSimpleButton4.TabIndex = 69;
             this.efwSimpleButton4.Text = "전체해제";
             this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click_1);
@@ -209,9 +211,9 @@
             // 
             this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
             this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(1054, 14);
+            this.efwSimpleButton3.Location = new System.Drawing.Point(1096, 14);
             this.efwSimpleButton3.Name = "efwSimpleButton3";
-            this.efwSimpleButton3.Size = new System.Drawing.Size(92, 22);
+            this.efwSimpleButton3.Size = new System.Drawing.Size(76, 22);
             this.efwSimpleButton3.TabIndex = 68;
             this.efwSimpleButton3.Text = "전체선택";
             this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click_1);
@@ -226,7 +228,7 @@
             hierarchy1.SpName = null;
             this.cmbChange_type.HierarchyInfo = hierarchy1;
             this.cmbChange_type.IsMultiLang = false;
-            this.cmbChange_type.Location = new System.Drawing.Point(948, 15);
+            this.cmbChange_type.Location = new System.Drawing.Point(990, 15);
             this.cmbChange_type.MasterCode = "E03.PAY_GBN";
             this.cmbChange_type.Name = "cmbChange_type";
             this.cmbChange_type.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1021,6 +1023,17 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(1388, 426);
             this.xtraTabPage2.Text = "업체 전송양식";
             // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(869, 12);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(34, 29);
+            this.efwSimpleButton1.TabIndex = 72;
+            this.efwSimpleButton1.Text = "EXCEL UPDATE";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
+            // 
             // frmDN20
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1137,5 +1150,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
     }
 }
