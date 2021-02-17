@@ -321,10 +321,10 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
+                                
 
 
                             MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
-
 
                         }
                     }

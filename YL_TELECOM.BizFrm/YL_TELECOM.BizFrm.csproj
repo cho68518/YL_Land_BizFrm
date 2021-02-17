@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5651763C-17DD-410C-AC3A-3F1A5018632C}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_TELECOM.BizFrm</RootNamespace>
     <AssemblyName>YL_TELECOM.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -123,6 +123,12 @@
     <Compile Include="frmTM02.Designer.cs">
       <DependentUpon>frmTM02.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTM05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTM05.Designer.cs">
+      <DependentUpon>frmTM05.cs</DependentUpon>
+    </Compile>
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTM03.resx">
       <DependentUpon>frmTM03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM05.resx">
+      <DependentUpon>frmTM05.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
