@@ -267,6 +267,26 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_lbl609", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl609"].Direction = ParameterDirection.Output;
 
+
+                        // 스마트스토어
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl701", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl701"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl703", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl703"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl704", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl704"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl706", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl706"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl707", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl707"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl709", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl709"].Direction = ParameterDirection.Output;
+
                         //
 
                         cmd.ExecuteNonQuery();
@@ -342,7 +362,13 @@ namespace YL_GM.BizFrm
                         lbl606.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl606"].Value);
                         lbl607.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl607"].Value);
                         lbl609.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl609"].Value);
-
+                        //스마트스토어
+                        lbl701.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl701"].Value);
+                        lbl703.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl703"].Value);
+                        lbl704.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl704"].Value);
+                        lbl706.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl706"].Value);
+                        lbl707.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl707"].Value);
+                        lbl709.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl709"].Value);
 
                     }
                 }
@@ -351,10 +377,138 @@ namespace YL_GM.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
-
+            Open3();
         }
 
 
+        private void Open3()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+                int n1 = 0; int n2 = 0; int n3 = 0; int n4 = 0; int n3_1 = 0; int n3_2 = 0;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("telecom.USP_GM_GM15_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = DateTime.Now.ToString("yyyyMMdd");
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = DateTime.Now.ToString("yyyyMMdd");
+
+                        //Console.WriteLine(" i_sdate           ---> [" + cmd.Parameters[0].Value + "]");
+                        //Console.WriteLine(" i_edate           ---> [" + cmd.Parameters[1].Value + "]");
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(dt);
+
+                            if (dt.Rows.Count > 0)
+                            {
+                                DataRow[] rows = dt.Select();
+
+                                //-----------------------------------------------------------------------------------
+                                //텔레콤 정보현황
+                                //-----------------------------------------------------------------------------------
+
+
+                                //총누적
+                                lblTel1.Text = String.Format("{0:#,##0}", rows[0]["tel1"]);
+                                lblTel2.Text = String.Format("{0:#,##0}", rows[0]["tel2"]);
+                                lblTel3.Text = String.Format("{0:#,##0}", rows[0]["tel3"]);
+                                lblTel3_1.Text = String.Format("{0:#,##0}", rows[0]["tel3_1"]);
+                                lblTel3_2.Text = String.Format("{0:#,##0}", rows[0]["tel3_2"]);
+                                lblTel5.Text = String.Format("{0:#,##0}", rows[0]["tel5"]);
+
+
+                                //당일개통
+                                lblTel17.Text = String.Format("{0:#,##0}", rows[0]["teld17"]);
+                                lblTel18.Text = String.Format("{0:#,##0}", rows[0]["teld18"]);
+                                lblTel19.Text = String.Format("{0:#,##0}", rows[0]["teld19"]);
+                                lblTel19_1.Text = String.Format("{0:#,##0}", rows[0]["teld19_1"]);
+                                lblTel19_2.Text = String.Format("{0:#,##0}", rows[0]["teld19_2"]);
+                                lblTel21.Text = String.Format("{0:#,##0}", rows[0]["teld21"]);
+
+                                //당일해지
+                                lblTel25.Text = String.Format("{0:#,##0}", rows[0]["teld25"]);
+                                lblTel26.Text = String.Format("{0:#,##0}", rows[0]["teld26"]);
+                                lblTel27.Text = String.Format("{0:#,##0}", rows[0]["teld27"]);
+                                lblTel27_1.Text = String.Format("{0:#,##0}", rows[0]["teld27_1"]);
+                                lblTel27_2.Text = String.Format("{0:#,##0}", rows[0]["teld27_2"]);
+                                lblTel29.Text = String.Format("{0:#,##0}", rows[0]["teld29"]);
+
+                                //월누적개통
+                                lblTel41.Text = String.Format("{0:#,##0}", rows[0]["teld41"]);
+                                lblTel42.Text = String.Format("{0:#,##0}", rows[0]["teld42"]);
+                                lblTel43.Text = String.Format("{0:#,##0}", rows[0]["teld43"]);
+                                lblTel43_1.Text = String.Format("{0:#,##0}", rows[0]["teld43_1"]);
+                                lblTel43_2.Text = String.Format("{0:#,##0}", rows[0]["teld43_2"]);
+                                lblTel45.Text = String.Format("{0:#,##0}", rows[0]["teld45"]);
+
+                                //월누적해지
+                                lblTel49.Text = String.Format("{0:#,##0}", rows[0]["teld49"]);
+                                lblTel50.Text = String.Format("{0:#,##0}", rows[0]["teld50"]);
+                                lblTel51.Text = String.Format("{0:#,##0}", rows[0]["teld51"]);
+                                lblTel51_1.Text = String.Format("{0:#,##0}", rows[0]["teld51_1"]);
+                                lblTel51_2.Text = String.Format("{0:#,##0}", rows[0]["teld51_2"]);
+                                lblTel53.Text = String.Format("{0:#,##0}", rows[0]["teld53"]);
+
+                                //일증감수
+                                n1 = Convert.ToInt32(rows[0]["teld17"]) - Convert.ToInt32(rows[0]["teld25"]);
+                                n2 = Convert.ToInt32(rows[0]["teld18"]) - Convert.ToInt32(rows[0]["teld26"]);
+                                n3 = Convert.ToInt32(rows[0]["teld19"]) - Convert.ToInt32(rows[0]["teld27"]);
+                                n3_1 = Convert.ToInt32(rows[0]["teld19_1"]) - Convert.ToInt32(rows[0]["teld27_1"]);
+                                n3_2 = Convert.ToInt32(rows[0]["teld19_2"]) - Convert.ToInt32(rows[0]["teld27_2"]);
+                                n4 = Convert.ToInt32(rows[0]["teld21"]) - Convert.ToInt32(rows[0]["teld29"]);
+                                lblTel33.Text = String.Format("{0:#,##0}", n1);
+                                lblTel34.Text = String.Format("{0:#,##0}", n2);
+                                lblTel35.Text = String.Format("{0:#,##0}", n3);
+                                lblTel35_1.Text = String.Format("{0:#,##0}", n3_1);
+                                lblTel35_2.Text = String.Format("{0:#,##0}", n3_2);
+                                lblTel37.Text = String.Format("{0:#,##0}", n4);
+
+                                //월증감수
+                                n1 = Convert.ToInt32(rows[0]["teld41"]) - Convert.ToInt32(rows[0]["teld49"]);
+                                n2 = Convert.ToInt32(rows[0]["teld42"]) - Convert.ToInt32(rows[0]["teld50"]);
+                                n3 = Convert.ToInt32(rows[0]["teld43"]) - Convert.ToInt32(rows[0]["teld51"]);
+                                n3_1 = Convert.ToInt32(rows[0]["teld43_1"]) - Convert.ToInt32(rows[0]["teld51_1"]);
+                                n3_2 = Convert.ToInt32(rows[0]["teld43_2"]) - Convert.ToInt32(rows[0]["teld51_2"]);
+                                n4 = Convert.ToInt32(rows[0]["teld45"]) - Convert.ToInt32(rows[0]["teld53"]);
+                                lblTel57.Text = String.Format("{0:#,##0}", n1);
+                                lblTel58.Text = String.Format("{0:#,##0}", n2);
+                                lblTel59.Text = String.Format("{0:#,##0}", n3);
+                                lblTel59_1.Text = String.Format("{0:#,##0}", n3_1);
+                                lblTel59_2.Text = String.Format("{0:#,##0}", n3_2);
+                                lblTel61.Text = String.Format("{0:#,##0}", n4);
+
+                                //총 합계
+                                lblTel8.Text  = String.Format("{0:#,##0}", Convert.ToInt32(lblTel1.Text.Replace(",", "")) + Convert.ToInt32(lblTel2.Text.Replace(",", "")) + Convert.ToInt32(lblTel3.Text.Replace(",", "")) + Convert.ToInt32(lblTel3_1.Text.Replace(",", "")) + Convert.ToInt32(lblTel3_2.Text.Replace(",", "")) + Convert.ToInt32(lblTel5.Text.Replace(",", "")) );
+                                lblTel24.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel17.Text.Replace(",", "")) + Convert.ToInt32(lblTel18.Text.Replace(",", "")) + Convert.ToInt32(lblTel19.Text.Replace(",", "")) + Convert.ToInt32(lblTel19_1.Text.Replace(",", "")) + Convert.ToInt32(lblTel19_2.Text.Replace(",", "")) + Convert.ToInt32(lblTel21.Text.Replace(",", "")));
+                                lblTel32.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel25.Text.Replace(",", "")) + Convert.ToInt32(lblTel26.Text.Replace(",", "")) + Convert.ToInt32(lblTel27.Text.Replace(",", "")) + Convert.ToInt32(lblTel27_1.Text.Replace(",", "")) + Convert.ToInt32(lblTel27_2.Text.Replace(",", "")) + Convert.ToInt32(lblTel29.Text.Replace(",", "")));
+                                lblTel48.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel24.Text.Replace(",", "")) + Convert.ToInt32(lblTel32.Text.Replace(",", "")) + Convert.ToInt32(lblTel43.Text.Replace(",", "")) + Convert.ToInt32(lblTel43_1.Text.Replace(",", "")) + Convert.ToInt32(lblTel43_2.Text.Replace(",", "")) + Convert.ToInt32(lblTel45.Text.Replace(",", "")));
+                                lblTel56.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel49.Text.Replace(",", "")) + Convert.ToInt32(lblTel50.Text.Replace(",", "")) + Convert.ToInt32(lblTel51.Text.Replace(",", "")) + Convert.ToInt32(lblTel51_1.Text.Replace(",", "")) + Convert.ToInt32(lblTel51_2.Text.Replace(",", "")) + Convert.ToInt32(lblTel53.Text.Replace(",", "")));
+                                lblTel40.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel24.Text.Replace(",", "")) - Convert.ToInt32(lblTel32.Text.Replace(",", "")));
+                                lblTel64.Text = String.Format("{0:#,##0}", Convert.ToInt32(lblTel48.Text.Replace(",", "")) - Convert.ToInt32(lblTel56.Text.Replace(",", "")) );
+                            }
+                        }
+                    }
+
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
  
     }
 }

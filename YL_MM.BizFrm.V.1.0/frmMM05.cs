@@ -175,6 +175,7 @@ namespace YL_MM.BizFrm
                       , new ColumnControlSet("is_support_team"   , chkIS_SUPPORT_TEAM)
                       , new ColumnControlSet("is_comp_md"        , chkIS_COMP_MD)
                       , new ColumnControlSet("is_official"       , ckis_official)
+                      , new ColumnControlSet("is_vvip"           , cbis_vvip)
                       );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -404,6 +405,10 @@ namespace YL_MM.BizFrm
                                 cmd.Parameters.Add(new MySqlParameter("i_is_official", MySqlDbType.VarChar));
                                 cmd.Parameters["i_is_official"].Value = ckis_official.EditValue;
                                 cmd.Parameters["i_is_official"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_is_vvip", MySqlDbType.VarChar));
+                                cmd.Parameters["i_is_vvip"].Value = cbis_vvip.EditValue;
+                                cmd.Parameters["i_is_vvip"].Direction = ParameterDirection.Input;
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();
@@ -689,8 +694,11 @@ namespace YL_MM.BizFrm
             if (dr != null && dr["doramd_type"].ToString() != "")
                 this.cmbDORAMD_TYPE.EditValue = dr["doramd_type"].ToString();
 
-             
-            
+            if (dr != null && dr["is_vvip"].ToString() != "")
+                this.cbis_vvip.EditValue = dr["is_vvip"].ToString();
+
+
+
 
             Open1();
         }

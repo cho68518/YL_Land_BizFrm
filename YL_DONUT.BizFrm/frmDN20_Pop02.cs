@@ -41,8 +41,7 @@ namespace YL_DONUT.BizFrm
                 //            "  order by a.p_name, b.idx ";
 
 
-                con.Query = "select join_code " +
-                            "  from domabiz.table8  ";
+                con.Query = "select join_code  from domabiz.table8  ";
 
                 ds = con.selectQueryDataSet();
             }
