@@ -32,6 +32,8 @@ namespace YL_TELECOM.BizFrm
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTM05));
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -53,17 +55,20 @@ namespace YL_TELECOM.BizFrm
             this.dt_plan_date = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.txt_visit_area = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txt_visit_distant = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txt_remark = new Easy.Framework.WinForm.Control.efwMemoEdit();
+            this.cmb_move_type = new Easy.Framework.WinForm.Control.efwLookUpEdit();
+            this.txt_car_mileage = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txt_oil_price = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txt_packing_price = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txt_gate_price = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txt_sales_price = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txt_remark = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ly_advice_type = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.item1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -75,6 +80,15 @@ namespace YL_TELECOM.BizFrm
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ly_advice_type1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.item4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.item7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.item8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.item9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
@@ -95,6 +109,12 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -130,6 +150,12 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.dt_plan_date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_visit_area.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_visit_distant.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmb_move_type.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_car_mileage.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_oil_price.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_packing_price.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_gate_price.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_sales_price.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_remark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -137,10 +163,7 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ly_advice_type)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
@@ -152,6 +175,15 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ly_advice_type1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
@@ -206,10 +238,17 @@ namespace YL_TELECOM.BizFrm
             this.layoutControl3.Controls.Add(this.dt_plan_date);
             this.layoutControl3.Controls.Add(this.txt_visit_area);
             this.layoutControl3.Controls.Add(this.txt_visit_distant);
+            this.layoutControl3.Controls.Add(this.cmb_move_type);
+            this.layoutControl3.Controls.Add(this.txt_car_mileage);
+            this.layoutControl3.Controls.Add(this.txt_oil_price);
+            this.layoutControl3.Controls.Add(this.txt_packing_price);
+            this.layoutControl3.Controls.Add(this.txt_gate_price);
+            this.layoutControl3.Controls.Add(this.txt_sales_price);
             this.layoutControl3.Controls.Add(this.txt_remark);
             this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl3.Location = new System.Drawing.Point(9, 23);
             this.layoutControl3.Name = "layoutControl3";
+            this.layoutControl3.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(3075, 525, 650, 400);
             this.layoutControl3.Root = this.layoutControlGroup3;
             this.layoutControl3.Size = new System.Drawing.Size(889, 759);
             this.layoutControl3.TabIndex = 0;
@@ -234,7 +273,7 @@ namespace YL_TELECOM.BizFrm
             this.efwLabel1.Appearance.Options.UseFont = true;
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(368, 7);
+            this.efwLabel1.Location = new System.Drawing.Point(359, 7);
             this.efwLabel1.Name = "efwLabel1";
             this.efwLabel1.Size = new System.Drawing.Size(153, 41);
             this.efwLabel1.StyleController = this.layoutControl3;
@@ -245,12 +284,12 @@ namespace YL_TELECOM.BizFrm
             // 
             this.txt_content.ByteLength = 200;
             this.txt_content.EraserGroup = "CLR1";
-            this.txt_content.Location = new System.Drawing.Point(132, 436);
+            this.txt_content.Location = new System.Drawing.Point(132, 538);
             this.txt_content.Name = "txt_content";
             this.txt_content.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txt_content.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txt_content.Properties.NullText = "(상담내용) 상세하게 작성해주세요!";
-            this.txt_content.Size = new System.Drawing.Size(750, 296);
+            this.txt_content.Size = new System.Drawing.Size(733, 296);
             this.txt_content.StyleController = this.layoutControl3;
             this.txt_content.TabIndex = 11;
             this.txt_content.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_content_KeyDown);
@@ -259,7 +298,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.efwSimpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton7.ImageOptions.Image")));
             this.efwSimpleButton7.IsMultiLang = false;
-            this.efwSimpleButton7.Location = new System.Drawing.Point(786, 62);
+            this.efwSimpleButton7.Location = new System.Drawing.Point(769, 62);
             this.efwSimpleButton7.Name = "efwSimpleButton7";
             this.efwSimpleButton7.Size = new System.Drawing.Size(96, 30);
             this.efwSimpleButton7.StyleController = this.layoutControl3;
@@ -271,7 +310,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.efwSimpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton6.ImageOptions.Image")));
             this.efwSimpleButton6.IsMultiLang = false;
-            this.efwSimpleButton6.Location = new System.Drawing.Point(686, 62);
+            this.efwSimpleButton6.Location = new System.Drawing.Point(669, 62);
             this.efwSimpleButton6.Name = "efwSimpleButton6";
             this.efwSimpleButton6.Size = new System.Drawing.Size(96, 30);
             this.efwSimpleButton6.StyleController = this.layoutControl3;
@@ -307,7 +346,7 @@ namespace YL_TELECOM.BizFrm
             hierarchy1.SpName = null;
             this.cmb_advice_type.HierarchyInfo = hierarchy1;
             this.cmb_advice_type.IsMultiLang = false;
-            this.cmb_advice_type.Location = new System.Drawing.Point(132, 339);
+            this.cmb_advice_type.Location = new System.Drawing.Point(132, 441);
             this.cmb_advice_type.Name = "cmb_advice_type";
             this.cmb_advice_type.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.cmb_advice_type.Properties.Appearance.Options.UseBackColor = true;
@@ -323,12 +362,12 @@ namespace YL_TELECOM.BizFrm
             // 
             this.txt_tel_no.EditValue2 = null;
             this.txt_tel_no.EraserGroup = "CLR1";
-            this.txt_tel_no.Location = new System.Drawing.Point(132, 373);
+            this.txt_tel_no.Location = new System.Drawing.Point(132, 475);
             this.txt_tel_no.Name = "txt_tel_no";
             this.txt_tel_no.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txt_tel_no.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txt_tel_no.RequireMessage = null;
-            this.txt_tel_no.Size = new System.Drawing.Size(750, 20);
+            this.txt_tel_no.Size = new System.Drawing.Size(733, 20);
             this.txt_tel_no.StyleController = this.layoutControl3;
             this.txt_tel_no.TabIndex = 7;
             this.txt_tel_no.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_tel_no_KeyDown);
@@ -427,42 +466,187 @@ namespace YL_TELECOM.BizFrm
             // 
             this.txt_visit_area.EditValue2 = null;
             this.txt_visit_area.EraserGroup = "CLR1";
-            this.txt_visit_area.Location = new System.Drawing.Point(132, 407);
+            this.txt_visit_area.Location = new System.Drawing.Point(132, 305);
             this.txt_visit_area.Name = "txt_visit_area";
             this.txt_visit_area.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txt_visit_area.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txt_visit_area.RequireMessage = null;
-            this.txt_visit_area.Size = new System.Drawing.Size(750, 20);
+            this.txt_visit_area.Size = new System.Drawing.Size(271, 20);
             this.txt_visit_area.StyleController = this.layoutControl3;
             this.txt_visit_area.TabIndex = 9;
             this.txt_visit_area.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_visit_area_KeyDown);
             // 
             // txt_visit_distant
             // 
+            this.txt_visit_distant.EditValue = "0";
             this.txt_visit_distant.EditValue2 = null;
             this.txt_visit_distant.EraserGroup = "CLR1";
-            this.txt_visit_distant.Location = new System.Drawing.Point(132, 305);
+            this.txt_visit_distant.Location = new System.Drawing.Point(132, 339);
             this.txt_visit_distant.Name = "txt_visit_distant";
+            this.txt_visit_distant.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txt_visit_distant.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txt_visit_distant.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txt_visit_distant.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txt_visit_distant.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_visit_distant.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_visit_distant.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txt_visit_distant.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txt_visit_distant.RequireMessage = null;
             this.txt_visit_distant.Size = new System.Drawing.Size(271, 20);
             this.txt_visit_distant.StyleController = this.layoutControl3;
             this.txt_visit_distant.TabIndex = 10;
             this.txt_visit_distant.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_visit_distant_KeyDown);
             // 
+            // cmb_move_type
+            // 
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmb_move_type.ChildHierarchyInfo = childHierarchy2;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmb_move_type.HierarchyInfo = hierarchy2;
+            this.cmb_move_type.IsMultiLang = false;
+            this.cmb_move_type.Location = new System.Drawing.Point(532, 305);
+            this.cmb_move_type.Name = "cmb_move_type";
+            this.cmb_move_type.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
+            this.cmb_move_type.Properties.Appearance.Options.UseBackColor = true;
+            this.cmb_move_type.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmb_move_type.Properties.NullText = "";
+            this.cmb_move_type.Size = new System.Drawing.Size(271, 20);
+            this.cmb_move_type.StyleController = this.layoutControl3;
+            this.cmb_move_type.TabIndex = 5;
+            this.cmb_move_type.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_move_type_KeyDown);
+            // 
+            // txt_car_mileage
+            // 
+            this.txt_car_mileage.EditValue = "0";
+            this.txt_car_mileage.EditValue2 = null;
+            this.txt_car_mileage.EraserGroup = "CLR1";
+            this.txt_car_mileage.Location = new System.Drawing.Point(532, 339);
+            this.txt_car_mileage.Name = "txt_car_mileage";
+            this.txt_car_mileage.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txt_car_mileage.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txt_car_mileage.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txt_car_mileage.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txt_car_mileage.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_car_mileage.Properties.EditFormat.FormatString = "###,###,##0";
+            this.txt_car_mileage.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_car_mileage.Properties.Mask.EditMask = "###,###,##0";
+            this.txt_car_mileage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txt_car_mileage.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txt_car_mileage.RequireMessage = null;
+            this.txt_car_mileage.Size = new System.Drawing.Size(271, 20);
+            this.txt_car_mileage.StyleController = this.layoutControl3;
+            this.txt_car_mileage.TabIndex = 9;
+            this.txt_car_mileage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_car_mileage_KeyDown);
+            // 
+            // txt_oil_price
+            // 
+            this.txt_oil_price.EditValue = "0";
+            this.txt_oil_price.EditValue2 = null;
+            this.txt_oil_price.EraserGroup = "CLR1";
+            this.txt_oil_price.Location = new System.Drawing.Point(132, 373);
+            this.txt_oil_price.Name = "txt_oil_price";
+            this.txt_oil_price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txt_oil_price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txt_oil_price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txt_oil_price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txt_oil_price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_oil_price.Properties.EditFormat.FormatString = "###,###,##0";
+            this.txt_oil_price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_oil_price.Properties.Mask.EditMask = "###,###,##0";
+            this.txt_oil_price.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txt_oil_price.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txt_oil_price.RequireMessage = null;
+            this.txt_oil_price.Size = new System.Drawing.Size(271, 20);
+            this.txt_oil_price.StyleController = this.layoutControl3;
+            this.txt_oil_price.TabIndex = 10;
+            this.txt_oil_price.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_oil_price_KeyDown);
+            // 
+            // txt_packing_price
+            // 
+            this.txt_packing_price.EditValue = "0";
+            this.txt_packing_price.EditValue2 = null;
+            this.txt_packing_price.EraserGroup = "CLR1";
+            this.txt_packing_price.Location = new System.Drawing.Point(532, 373);
+            this.txt_packing_price.Name = "txt_packing_price";
+            this.txt_packing_price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txt_packing_price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txt_packing_price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txt_packing_price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txt_packing_price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_packing_price.Properties.EditFormat.FormatString = "###,###,##0";
+            this.txt_packing_price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_packing_price.Properties.Mask.EditMask = "###,###,##0";
+            this.txt_packing_price.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txt_packing_price.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txt_packing_price.RequireMessage = null;
+            this.txt_packing_price.Size = new System.Drawing.Size(271, 20);
+            this.txt_packing_price.StyleController = this.layoutControl3;
+            this.txt_packing_price.TabIndex = 10;
+            this.txt_packing_price.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_packing_price_KeyDown);
+            // 
+            // txt_gate_price
+            // 
+            this.txt_gate_price.EditValue = "0";
+            this.txt_gate_price.EditValue2 = null;
+            this.txt_gate_price.EraserGroup = "CLR1";
+            this.txt_gate_price.Location = new System.Drawing.Point(132, 407);
+            this.txt_gate_price.Name = "txt_gate_price";
+            this.txt_gate_price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txt_gate_price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txt_gate_price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txt_gate_price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txt_gate_price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_gate_price.Properties.EditFormat.FormatString = "###,###,##0";
+            this.txt_gate_price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_gate_price.Properties.Mask.EditMask = "###,###,##0";
+            this.txt_gate_price.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txt_gate_price.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txt_gate_price.RequireMessage = null;
+            this.txt_gate_price.Size = new System.Drawing.Size(271, 20);
+            this.txt_gate_price.StyleController = this.layoutControl3;
+            this.txt_gate_price.TabIndex = 10;
+            this.txt_gate_price.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_gate_price_KeyDown);
+            // 
+            // txt_sales_price
+            // 
+            this.txt_sales_price.EditValue = "0";
+            this.txt_sales_price.EditValue2 = null;
+            this.txt_sales_price.EraserGroup = "CLR1";
+            this.txt_sales_price.Location = new System.Drawing.Point(532, 407);
+            this.txt_sales_price.Name = "txt_sales_price";
+            this.txt_sales_price.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txt_sales_price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txt_sales_price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txt_sales_price.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txt_sales_price.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_sales_price.Properties.EditFormat.FormatString = "###,###,##0";
+            this.txt_sales_price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_sales_price.Properties.Mask.EditMask = "###,###,##0";
+            this.txt_sales_price.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txt_sales_price.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txt_sales_price.RequireMessage = null;
+            this.txt_sales_price.Size = new System.Drawing.Size(271, 20);
+            this.txt_sales_price.StyleController = this.layoutControl3;
+            this.txt_sales_price.TabIndex = 10;
+            this.txt_sales_price.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_sales_price_KeyDown);
+            // 
             // txt_remark
             // 
-            this.txt_remark.ByteLength = 200;
+            this.txt_remark.EditValue2 = null;
             this.txt_remark.EraserGroup = "CLR1";
-            this.txt_remark.Location = new System.Drawing.Point(132, 736);
+            this.txt_remark.Location = new System.Drawing.Point(132, 509);
             this.txt_remark.Name = "txt_remark";
             this.txt_remark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txt_remark.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txt_remark.Size = new System.Drawing.Size(750, 19);
+            this.txt_remark.RequireMessage = null;
+            this.txt_remark.Size = new System.Drawing.Size(733, 20);
             this.txt_remark.StyleController = this.layoutControl3;
-            this.txt_remark.TabIndex = 12;
-            this.txt_remark.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_remark_KeyDown);
+            this.txt_remark.TabIndex = 7;
+            this.txt_remark.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_remark_KeyDown_1);
             // 
             // layoutControlGroup3
             // 
@@ -474,10 +658,7 @@ namespace YL_TELECOM.BizFrm
             this.layoutControlItem9,
             this.ly_advice_type,
             this.layoutControlItem11,
-            this.layoutControlItem2,
             this.emptySpaceItem2,
-            this.layoutControlItem12,
-            this.layoutControlItem4,
             this.layoutControlItem10,
             this.item1,
             this.layoutControlItem19,
@@ -488,10 +669,19 @@ namespace YL_TELECOM.BizFrm
             this.emptySpaceItem1,
             this.layoutControlItem5,
             this.layoutControlItem7,
-            this.layoutControlItem14});
+            this.layoutControlItem14,
+            this.layoutControlItem2,
+            this.ly_advice_type1,
+            this.layoutControlItem15,
+            this.item4,
+            this.layoutControlItem12,
+            this.item7,
+            this.item8,
+            this.item9,
+            this.layoutControlItem4});
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(889, 759);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(872, 838);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem1
@@ -538,7 +728,7 @@ namespace YL_TELECOM.BizFrm
             this.layoutControlItem9.MinSize = new System.Drawing.Size(400, 34);
             this.layoutControlItem9.Name = "layoutControlItem4";
             this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
-            this.layoutControlItem9.Size = new System.Drawing.Size(879, 34);
+            this.layoutControlItem9.Size = new System.Drawing.Size(862, 34);
             this.layoutControlItem9.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem9.Text = "4. 업체 담당자";
             this.layoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
@@ -550,14 +740,14 @@ namespace YL_TELECOM.BizFrm
             this.ly_advice_type.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.ly_advice_type.AppearanceItemCaption.Options.UseFont = true;
             this.ly_advice_type.Control = this.cmb_advice_type;
-            this.ly_advice_type.Location = new System.Drawing.Point(0, 327);
+            this.ly_advice_type.Location = new System.Drawing.Point(0, 429);
             this.ly_advice_type.MaxSize = new System.Drawing.Size(400, 34);
             this.ly_advice_type.MinSize = new System.Drawing.Size(400, 34);
             this.ly_advice_type.Name = "ly_advice_type";
             this.ly_advice_type.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
-            this.ly_advice_type.Size = new System.Drawing.Size(879, 34);
+            this.ly_advice_type.Size = new System.Drawing.Size(862, 34);
             this.ly_advice_type.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.ly_advice_type.Text = "9. 상담구분";
+            this.ly_advice_type.Text = "16. 상담구분";
             this.ly_advice_type.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.ly_advice_type.TextSize = new System.Drawing.Size(120, 20);
             this.ly_advice_type.TextToControlDistance = 5;
@@ -567,35 +757,17 @@ namespace YL_TELECOM.BizFrm
             this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem11.Control = this.txt_tel_no;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 361);
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 463);
             this.layoutControlItem11.MaxSize = new System.Drawing.Size(0, 34);
             this.layoutControlItem11.MinSize = new System.Drawing.Size(179, 34);
             this.layoutControlItem11.Name = "layoutControlItem7";
             this.layoutControlItem11.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
-            this.layoutControlItem11.Size = new System.Drawing.Size(879, 34);
+            this.layoutControlItem11.Size = new System.Drawing.Size(862, 34);
             this.layoutControlItem11.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem11.Text = "10. 전화번호";
+            this.layoutControlItem11.Text = "17. 전화번호";
             this.layoutControlItem11.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem11.TextSize = new System.Drawing.Size(120, 20);
             this.layoutControlItem11.TextToControlDistance = 5;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem2.Control = this.txt_visit_area;
-            this.layoutControlItem2.CustomizationFormText = "전화번호";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 395);
-            this.layoutControlItem2.MaxSize = new System.Drawing.Size(0, 34);
-            this.layoutControlItem2.MinSize = new System.Drawing.Size(179, 34);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
-            this.layoutControlItem2.Size = new System.Drawing.Size(879, 34);
-            this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem2.Text = "11. 운행구간(지역)";
-            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(120, 20);
-            this.layoutControlItem2.TextToControlDistance = 5;
             // 
             // emptySpaceItem2
             // 
@@ -603,41 +775,9 @@ namespace YL_TELECOM.BizFrm
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem2.Location = new System.Drawing.Point(230, 55);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(449, 34);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(432, 34);
             this.emptySpaceItem2.Text = "emptySpaceItem1";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem12.Control = this.txt_content;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 429);
-            this.layoutControlItem12.MaxSize = new System.Drawing.Size(0, 300);
-            this.layoutControlItem12.MinSize = new System.Drawing.Size(139, 300);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(879, 300);
-            this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem12.Text = "12. 상담내역";
-            this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(120, 14);
-            this.layoutControlItem12.TextToControlDistance = 5;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem4.Control = this.txt_remark;
-            this.layoutControlItem4.CustomizationFormText = "비고";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 729);
-            this.layoutControlItem4.MinSize = new System.Drawing.Size(57, 20);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(879, 23);
-            this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem4.Text = "비고";
-            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(120, 14);
-            this.layoutControlItem4.TextToControlDistance = 5;
             // 
             // layoutControlItem10
             // 
@@ -650,7 +790,7 @@ namespace YL_TELECOM.BizFrm
             this.layoutControlItem10.MinSize = new System.Drawing.Size(400, 34);
             this.layoutControlItem10.Name = "layoutControlItem6";
             this.layoutControlItem10.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
-            this.layoutControlItem10.Size = new System.Drawing.Size(879, 34);
+            this.layoutControlItem10.Size = new System.Drawing.Size(862, 34);
             this.layoutControlItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem10.Text = "5. 휴대폰번호";
             this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
@@ -667,7 +807,7 @@ namespace YL_TELECOM.BizFrm
             this.item1.Location = new System.Drawing.Point(0, 225);
             this.item1.MaxSize = new System.Drawing.Size(230, 34);
             this.item1.MinSize = new System.Drawing.Size(230, 34);
-            this.item1.Name = "item1";
+            this.item1.Name = "item2";
             this.item1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
             this.item1.Size = new System.Drawing.Size(230, 34);
             this.item1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
@@ -686,7 +826,7 @@ namespace YL_TELECOM.BizFrm
             this.layoutControlItem19.MinSize = new System.Drawing.Size(400, 34);
             this.layoutControlItem19.Name = "layoutControlItem5";
             this.layoutControlItem19.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
-            this.layoutControlItem19.Size = new System.Drawing.Size(879, 34);
+            this.layoutControlItem19.Size = new System.Drawing.Size(862, 34);
             this.layoutControlItem19.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem19.Text = "7. 이메일";
             this.layoutControlItem19.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
@@ -699,14 +839,14 @@ namespace YL_TELECOM.BizFrm
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.txt_visit_distant;
             this.layoutControlItem3.CustomizationFormText = "전화번호";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 293);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 327);
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(400, 34);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(400, 34);
-            this.layoutControlItem3.Name = "item2";
+            this.layoutControlItem3.Name = "item3";
             this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
-            this.layoutControlItem3.Size = new System.Drawing.Size(879, 34);
+            this.layoutControlItem3.Size = new System.Drawing.Size(400, 34);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem3.Text = "8. 운행거리(Km)";
+            this.layoutControlItem3.Text = "10. 운행거리(Km)";
             this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(120, 20);
             this.layoutControlItem3.TextToControlDistance = 5;
@@ -722,7 +862,7 @@ namespace YL_TELECOM.BizFrm
             this.layoutControlItem6.MinSize = new System.Drawing.Size(400, 34);
             this.layoutControlItem6.Name = "layoutControlItem1";
             this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
-            this.layoutControlItem6.Size = new System.Drawing.Size(879, 34);
+            this.layoutControlItem6.Size = new System.Drawing.Size(862, 34);
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.Text = "2. 담당자";
             this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
@@ -734,7 +874,7 @@ namespace YL_TELECOM.BizFrm
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(230, 225);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(649, 34);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(632, 34);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem13
@@ -743,7 +883,7 @@ namespace YL_TELECOM.BizFrm
             this.layoutControlItem13.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(879, 45);
+            this.layoutControlItem13.Size = new System.Drawing.Size(862, 45);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
@@ -752,14 +892,14 @@ namespace YL_TELECOM.BizFrm
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 45);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(879, 10);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(862, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.efwSimpleButton6;
             this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.layoutControlItem5.Location = new System.Drawing.Point(679, 55);
+            this.layoutControlItem5.Location = new System.Drawing.Point(662, 55);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(100, 34);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(100, 34);
             this.layoutControlItem5.Name = "item5";
@@ -772,7 +912,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.layoutControlItem7.Control = this.efwSimpleButton7;
             this.layoutControlItem7.ControlAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.layoutControlItem7.Location = new System.Drawing.Point(779, 55);
+            this.layoutControlItem7.Location = new System.Drawing.Point(762, 55);
             this.layoutControlItem7.MaxSize = new System.Drawing.Size(100, 34);
             this.layoutControlItem7.MinSize = new System.Drawing.Size(100, 34);
             this.layoutControlItem7.Name = "item6";
@@ -787,9 +927,155 @@ namespace YL_TELECOM.BizFrm
             this.layoutControlItem14.Location = new System.Drawing.Point(400, 123);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 9, 2);
-            this.layoutControlItem14.Size = new System.Drawing.Size(479, 34);
+            this.layoutControlItem14.Size = new System.Drawing.Size(462, 34);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem2.Control = this.txt_visit_area;
+            this.layoutControlItem2.CustomizationFormText = "전화번호";
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 293);
+            this.layoutControlItem2.MaxSize = new System.Drawing.Size(400, 34);
+            this.layoutControlItem2.MinSize = new System.Drawing.Size(400, 34);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
+            this.layoutControlItem2.Size = new System.Drawing.Size(400, 34);
+            this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem2.Text = "8. 운행구간(지역)";
+            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(120, 20);
+            this.layoutControlItem2.TextToControlDistance = 5;
+            // 
+            // ly_advice_type1
+            // 
+            this.ly_advice_type1.Control = this.cmb_move_type;
+            this.ly_advice_type1.CustomizationFormText = "10. 상담구분";
+            this.ly_advice_type1.Location = new System.Drawing.Point(400, 293);
+            this.ly_advice_type1.MaxSize = new System.Drawing.Size(400, 34);
+            this.ly_advice_type1.MinSize = new System.Drawing.Size(400, 34);
+            this.ly_advice_type1.Name = "ly_advice_type1";
+            this.ly_advice_type1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
+            this.ly_advice_type1.Size = new System.Drawing.Size(462, 34);
+            this.ly_advice_type1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.ly_advice_type1.Text = "9.  이동수단";
+            this.ly_advice_type1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.ly_advice_type1.TextSize = new System.Drawing.Size(120, 20);
+            this.ly_advice_type1.TextToControlDistance = 5;
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.txt_car_mileage;
+            this.layoutControlItem15.CustomizationFormText = "전화번호";
+            this.layoutControlItem15.Location = new System.Drawing.Point(400, 327);
+            this.layoutControlItem15.MaxSize = new System.Drawing.Size(400, 34);
+            this.layoutControlItem15.MinSize = new System.Drawing.Size(400, 34);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
+            this.layoutControlItem15.Size = new System.Drawing.Size(462, 34);
+            this.layoutControlItem15.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem15.Text = "11. 차량연비";
+            this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(120, 20);
+            this.layoutControlItem15.TextToControlDistance = 5;
+            // 
+            // item4
+            // 
+            this.item4.Control = this.txt_oil_price;
+            this.item4.CustomizationFormText = "전화번호";
+            this.item4.Location = new System.Drawing.Point(0, 361);
+            this.item4.MaxSize = new System.Drawing.Size(400, 34);
+            this.item4.MinSize = new System.Drawing.Size(400, 34);
+            this.item4.Name = "item4";
+            this.item4.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
+            this.item4.Size = new System.Drawing.Size(400, 34);
+            this.item4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.item4.Text = "12. 유류평균가격";
+            this.item4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.item4.TextSize = new System.Drawing.Size(120, 20);
+            this.item4.TextToControlDistance = 5;
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem12.Control = this.txt_content;
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 531);
+            this.layoutControlItem12.MaxSize = new System.Drawing.Size(0, 300);
+            this.layoutControlItem12.MinSize = new System.Drawing.Size(139, 300);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(862, 300);
+            this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem12.Text = "19. 상담내역";
+            this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(120, 14);
+            this.layoutControlItem12.TextToControlDistance = 5;
+            // 
+            // item7
+            // 
+            this.item7.Control = this.txt_packing_price;
+            this.item7.CustomizationFormText = "전화번호";
+            this.item7.Location = new System.Drawing.Point(400, 361);
+            this.item7.MaxSize = new System.Drawing.Size(400, 34);
+            this.item7.MinSize = new System.Drawing.Size(400, 34);
+            this.item7.Name = "item7";
+            this.item7.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
+            this.item7.Size = new System.Drawing.Size(462, 34);
+            this.item7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.item7.Text = "13. 주차비";
+            this.item7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.item7.TextSize = new System.Drawing.Size(120, 20);
+            this.item7.TextToControlDistance = 5;
+            // 
+            // item8
+            // 
+            this.item8.Control = this.txt_gate_price;
+            this.item8.CustomizationFormText = "전화번호";
+            this.item8.Location = new System.Drawing.Point(0, 395);
+            this.item8.MaxSize = new System.Drawing.Size(400, 34);
+            this.item8.MinSize = new System.Drawing.Size(400, 34);
+            this.item8.Name = "item8";
+            this.item8.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
+            this.item8.Size = new System.Drawing.Size(400, 34);
+            this.item8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.item8.Text = "14. 톨게이트비";
+            this.item8.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.item8.TextSize = new System.Drawing.Size(120, 20);
+            this.item8.TextToControlDistance = 5;
+            // 
+            // item9
+            // 
+            this.item9.Control = this.txt_sales_price;
+            this.item9.CustomizationFormText = "전화번호";
+            this.item9.Location = new System.Drawing.Point(400, 395);
+            this.item9.MaxSize = new System.Drawing.Size(400, 34);
+            this.item9.MinSize = new System.Drawing.Size(400, 34);
+            this.item9.Name = "item9";
+            this.item9.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
+            this.item9.Size = new System.Drawing.Size(462, 34);
+            this.item9.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.item9.Text = "15. 접대비";
+            this.item9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.item9.TextSize = new System.Drawing.Size(120, 20);
+            this.item9.TextToControlDistance = 5;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.txt_remark;
+            this.layoutControlItem4.CustomizationFormText = "비고";
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 497);
+            this.layoutControlItem4.MaxSize = new System.Drawing.Size(0, 34);
+            this.layoutControlItem4.MinSize = new System.Drawing.Size(179, 34);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 7, 2);
+            this.layoutControlItem4.Size = new System.Drawing.Size(862, 34);
+            this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem4.Text = "18. 비고";
+            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(120, 20);
+            this.layoutControlItem4.TextToControlDistance = 5;
             // 
             // splitterControl1
             // 
@@ -875,7 +1161,13 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn13,
             this.gridColumn14,
             this.gridColumn15,
-            this.gridColumn16});
+            this.gridColumn16,
+            this.gridColumn17,
+            this.gridColumn18,
+            this.gridColumn19,
+            this.gridColumn20,
+            this.gridColumn21,
+            this.gridColumn22});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "건수 : {0}")});
@@ -1019,6 +1311,60 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn16.Caption = "영업상담코드";
             this.gridColumn16.FieldName = "advice_type_cd";
             this.gridColumn16.Name = "gridColumn16";
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "이동수단";
+            this.gridColumn17.FieldName = "move_type";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.OptionsColumn.AllowEdit = false;
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 12;
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.Caption = "연비";
+            this.gridColumn18.FieldName = "car_mileage";
+            this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.OptionsColumn.AllowEdit = false;
+            this.gridColumn18.Visible = true;
+            this.gridColumn18.VisibleIndex = 13;
+            // 
+            // gridColumn19
+            // 
+            this.gridColumn19.Caption = "유류단가";
+            this.gridColumn19.FieldName = "oil_price";
+            this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.OptionsColumn.AllowEdit = false;
+            this.gridColumn19.Visible = true;
+            this.gridColumn19.VisibleIndex = 14;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.Caption = "주차비";
+            this.gridColumn20.FieldName = "packing_price";
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.OptionsColumn.AllowEdit = false;
+            this.gridColumn20.Visible = true;
+            this.gridColumn20.VisibleIndex = 15;
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "톨게이트비";
+            this.gridColumn21.FieldName = "gate_price";
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.OptionsColumn.AllowEdit = false;
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 16;
+            // 
+            // gridColumn22
+            // 
+            this.gridColumn22.Caption = "접대비";
+            this.gridColumn22.FieldName = "sales_price";
+            this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.OptionsColumn.AllowEdit = false;
+            this.gridColumn22.Visible = true;
+            this.gridColumn22.VisibleIndex = 17;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -1252,6 +1598,12 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.dt_plan_date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_visit_area.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_visit_distant.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmb_move_type.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_car_mileage.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_oil_price.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_packing_price.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_gate_price.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_sales_price.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_remark.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -1259,10 +1611,7 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ly_advice_type)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
@@ -1274,6 +1623,15 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ly_advice_type1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
@@ -1318,7 +1676,6 @@ namespace YL_TELECOM.BizFrm
         private Easy.Framework.WinForm.Control.efwDateEdit dt_plan_date;
         private Easy.Framework.WinForm.Control.efwTextEdit txt_visit_area;
         private Easy.Framework.WinForm.Control.efwTextEdit txt_visit_distant;
-        private Easy.Framework.WinForm.Control.efwMemoEdit txt_remark;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
@@ -1330,7 +1687,6 @@ namespace YL_TELECOM.BizFrm
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem item1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
@@ -1379,5 +1735,25 @@ namespace YL_TELECOM.BizFrm
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
         private Easy.Framework.WinForm.Control.efwTextEdit efwTextEdit1;
         private Easy.Framework.WinForm.Control.efwTextEdit efwTextEdit2;
+        private Easy.Framework.WinForm.Control.efwLookUpEdit cmb_move_type;
+        private DevExpress.XtraLayout.LayoutControlItem ly_advice_type1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txt_car_mileage;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private Easy.Framework.WinForm.Control.efwTextEdit txt_oil_price;
+        private DevExpress.XtraLayout.LayoutControlItem item4;
+        private Easy.Framework.WinForm.Control.efwTextEdit txt_packing_price;
+        private DevExpress.XtraLayout.LayoutControlItem item7;
+        private Easy.Framework.WinForm.Control.efwTextEdit txt_gate_price;
+        private DevExpress.XtraLayout.LayoutControlItem item8;
+        private Easy.Framework.WinForm.Control.efwTextEdit txt_sales_price;
+        private DevExpress.XtraLayout.LayoutControlItem item9;
+        private Easy.Framework.WinForm.Control.efwTextEdit txt_remark;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
     }
 }

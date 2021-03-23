@@ -66,6 +66,12 @@ namespace YL_TELECOM.BizFrm
             , new ColumnControlSet("visit_distant", txt_visit_distant)
             , new ColumnControlSet("content", txt_content)
             , new ColumnControlSet("remark", txt_remark)
+            , new ColumnControlSet("move_type", cmb_move_type)
+            , new ColumnControlSet("car_mileage", txt_car_mileage)
+            , new ColumnControlSet("oil_price", txt_oil_price)
+            , new ColumnControlSet("packing_price", txt_packing_price)
+            , new ColumnControlSet("gate_price", txt_gate_price)
+            , new ColumnControlSet("sales_price", txt_remark)
             );
             rb_date_type.EditValue = "V";
             dt_s_date.EditValue = DateTime.Now.ToString("yyyy-MM") + "-01";
@@ -100,6 +106,24 @@ namespace YL_TELECOM.BizFrm
             }
             cmb_advice_type.EditValue = "1";
 
+            using (MySQLConn con = new MySQLConn(ConstantLib.TelConn_Real))
+            {
+                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM erp.tb_common_code where gcode_id = '00002'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmb_move_type, codeArray);
+            }
+           // cmb_move_type.EditValue = "1";
 
         }
 
@@ -243,6 +267,30 @@ namespace YL_TELECOM.BizFrm
                             cmd.Parameters["i_remark"].Value = txt_remark.EditValue;
                             cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_move_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_move_type"].Value = cmb_move_type.EditValue;
+                            cmd.Parameters["i_move_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_car_mileage", MySqlDbType.VarChar));
+                            cmd.Parameters["i_car_mileage"].Value = txt_car_mileage.EditValue;
+                            cmd.Parameters["i_car_mileage"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_oil_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_oil_price"].Value = Convert.ToInt32(txt_oil_price.EditValue);
+                            cmd.Parameters["i_oil_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_packing_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_packing_price"].Value = Convert.ToInt32(txt_packing_price.EditValue);
+                            cmd.Parameters["i_packing_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gate_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_gate_price"].Value = Convert.ToInt32(txt_gate_price.EditValue);
+                            cmd.Parameters["i_gate_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_sales_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_sales_price"].Value = Convert.ToInt32(txt_sales_price.EditValue);
+                            cmd.Parameters["i_sales_price"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -338,6 +386,31 @@ namespace YL_TELECOM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
                             cmd.Parameters["i_remark"].Value = txt_remark.EditValue;
                             cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_move_type", MySqlDbType.VarChar));
+
+
+                            cmd.Parameters["i_move_type"].Value = cmb_move_type.EditValue;
+                            cmd.Parameters["i_move_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_car_mileage", MySqlDbType.VarChar));
+                            cmd.Parameters["i_car_mileage"].Value = txt_car_mileage.EditValue;
+                            cmd.Parameters["i_car_mileage"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_oil_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_oil_price"].Value = Convert.ToInt32(txt_remark.EditValue);
+                            cmd.Parameters["i_oil_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_packing_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_packing_price"].Value = Convert.ToInt32(txt_packing_price.EditValue);
+                            cmd.Parameters["i_packing_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gate_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_gate_price"].Value = Convert.ToInt32(txt_remark.EditValue);
+                            cmd.Parameters["i_gate_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_sales_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_sales_price"].Value = Convert.ToInt32(txt_remark.EditValue);
+                            cmd.Parameters["i_sales_price"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
@@ -401,19 +474,19 @@ namespace YL_TELECOM.BizFrm
         private void txt_tel_no_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                txt_visit_area.Focus();
+                txt_remark.Focus();
         }
 
         private void txt_e_mail_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                txt_visit_distant.Focus();
+                txt_visit_area.Focus();
         }
 
         private void txt_visit_area_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                txt_content.Focus();
+                cmb_move_type.Focus();
         }
 
         private void txt_content_KeyDown(object sender, KeyEventArgs e)
@@ -431,12 +504,54 @@ namespace YL_TELECOM.BizFrm
         private void txt_visit_distant_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                cmb_advice_type.Focus();
+                txt_car_mileage.Focus();
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
             Open1();
+        }
+
+        private void cmb_move_type_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_visit_distant.Focus();
+        }
+
+        private void txt_car_mileage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_oil_price.Focus();
+        }
+
+        private void txt_oil_price_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_packing_price.Focus();
+        }
+
+        private void txt_packing_price_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_gate_price.Focus();
+        }
+
+        private void txt_gate_price_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_sales_price.Focus();
+        }
+
+        private void txt_sales_price_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                cmb_advice_type.Focus();
+        }
+
+        private void txt_remark_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txt_content.Focus();
         }
     }
 }

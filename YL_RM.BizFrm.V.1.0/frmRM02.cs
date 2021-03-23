@@ -598,6 +598,10 @@ namespace YL_RM.BizFrm
                 else
                     chkis_file.EditValue = "N";
 
+                if (cmbBoard.EditValue.ToString() == "5")
+                    efwSimpleButton7.Enabled = true;
+                else
+                    efwSimpleButton7.Enabled = false;
 
                 Open2();
                 Clear2();
@@ -1043,6 +1047,112 @@ namespace YL_RM.BizFrm
         {
             txtimg_url3.EditValue = "";
             picBanner3.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
+        }
+
+        private void efwSimpleButton7_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txt_idx2.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "내용을 저장후 이미지를 선택하세요 !");
+                return;
+            }
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "pdf";
+            openFileDialog.FileName = "*.*";
+            openFileDialog.Filter = "이미지파일|*.jpg";
+            openFileDialog.Title = "파일 가져오기";
+
+            string sftpURL = "14.63.165.36";
+            string sUserName = "root";
+            string sPassword = "@dhkdldpf2!";
+            int nPort = 22023;
+            string sftpDirectory = "/domalifefiles/files/ghomepage/" + Convert.ToString(txt_idx2.EditValue);
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+                    txtfile1.EditValue = openFileDialog.SafeFileName;
+                    txtPicPath1.EditValue = openFileDialog.FileName;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+
+
+                // 폴더생성
+
+                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+
+
+
+                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
+
+                string sOldFile = txtPicPath1.EditValue.ToString();
+                //string sFileName = txtfile1.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+
+                // 삭제 - 먼저 삭제할 파일을 FileInfo로 연다.
+
+                FileInfo fileDel = new FileInfo(@"C:\\temp\\" + sFileName);
+                if (fileDel.Exists) // 삭제할 파일이 있는지
+                {
+                    fileDel.Delete(); // 없어도 에러안남
+                }
+
+                string sNewFile = "c:\\temp\\" + sFileName;
+                System.IO.File.Copy(sOldFile, sNewFile);
+
+
+                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
+
+
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+
+                sSftp.Connect(nPort);
+
+                // 저장 경로에 있는지 체크
+                string sFtpPath = "/domalifefiles/files/ghomepage/";
+                string sFtpPath2 = "/domalifefiles/files/ghomepage/" + Convert.ToString(txt_idx2.EditValue);
+
+                ArrayList ay = sSftp.GetFileList(sFtpPath);
+                bool isdir = false;
+
+                for (int i = 0; i < ay.Count; i++)
+                {
+                    // string sChk = ay[i].ToString();
+                    if (ay[i].ToString() == Convert.ToString(txt_idx2.EditValue).ToString())
+                    {
+                        isdir = true;
+                    }
+                }
+                if (isdir == false)
+                {
+
+                    sSftp.Mkdir(sFtpPath2);
+                }
+
+
+
+                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
+                sSftp.Close();
+                txtsummury.EditValue = "https://media.domalife.net/files/ghomepage/" + Convert.ToString(txt_idx2.EditValue) + "/" + sFileName;
+
+
+                save2();
+            }
         }
     }
 }

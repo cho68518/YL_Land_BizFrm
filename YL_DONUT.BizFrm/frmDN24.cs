@@ -265,7 +265,7 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_o_receive_name1"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_o_receive_contact1", MySqlDbType.VarChar));
-                            cmd.Parameters["i_o_receive_contact1"].Value = txto_receive_contact.EditValue;
+                            cmd.Parameters["i_o_receive_contact1"].Value = txto_receive_contact1.EditValue;
                             cmd.Parameters["i_o_receive_contact1"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_o_receive_zipcode1", MySqlDbType.VarChar));

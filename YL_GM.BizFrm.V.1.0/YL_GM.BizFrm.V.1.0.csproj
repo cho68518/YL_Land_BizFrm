@@ -117,6 +117,18 @@
     <Compile Include="Dlg\frmMemberInfo.designer.cs">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGM17.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM17.Designer.cs">
+      <DependentUpon>frmGM17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM16.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM16.Designer.cs">
+      <DependentUpon>frmGM16.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGM15.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -373,6 +385,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM14.resx">
       <DependentUpon>frmGM14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM16.resx">
+      <DependentUpon>frmGM16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM17.resx">
+      <DependentUpon>frmGM17.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

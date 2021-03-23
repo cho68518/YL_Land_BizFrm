@@ -101,7 +101,7 @@ namespace YL_DONUT.BizFrm
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM domaadmin.tb_common_code where gcode_id = '00025' and code_id in ('O','P')  ";
+                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM domaadmin.tb_common_code where gcode_id = '00025' and code_id in ('O','P','D')  ";
 
                 DataSet ds = con.selectQueryDataSet();
                 //DataTable retDT = ds.Tables[0];
@@ -389,6 +389,11 @@ namespace YL_DONUT.BizFrm
         {
             popup2 = new frmDN20_Pop02();
             popup2.ShowDialog();
+        }
+
+        private void efwXtraTabControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

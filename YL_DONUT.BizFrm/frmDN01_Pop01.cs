@@ -208,6 +208,12 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_p_id", MySqlDbType.VarChar));
                         cmd.Parameters["o_p_id"].Direction = ParameterDirection.Output;
 
+                        cmd.Parameters.Add(new MySqlParameter("o_chk_type", MySqlDbType.VarChar));
+                        cmd.Parameters["o_chk_type"].Direction = ParameterDirection.Output; 
+
+                        cmd.Parameters.Add(new MySqlParameter("o_o_mcode", MySqlDbType.VarChar));
+                        cmd.Parameters["o_o_mcode"].Direction = ParameterDirection.Output; 
+
                         cmd.ExecuteNonQuery();
 
                         txtO_Type.EditValue = cmd.Parameters["o_o_type"].Value.ToString();
@@ -264,6 +270,8 @@ namespace YL_DONUT.BizFrm
                         txtO_Delivery_Start_Date.EditValue = cmd.Parameters["o_o_delivery_start_date"].Value.ToString();
                         txtO_Delivery_End_Date.EditValue = cmd.Parameters["o_o_delivery_end_date"].Value.ToString();
                         txtP_ID.EditValue = cmd.Parameters["o_p_id"].Value.ToString();
+                        txtchk_type.EditValue = cmd.Parameters["o_chk_type"].Value.ToString();
+                        txto_mcode.EditValue = cmd.Parameters["o_o_mcode"].Value.ToString();
                     }
                 }
             }
@@ -364,6 +372,36 @@ namespace YL_DONUT.BizFrm
 
         private void Cancel()
         {
+            if (txtchk_type.EditValue.ToString() == "F")
+            {
+                MessageAgent.MessageShow(MessageType.Confirm, "배송완료된 주문 번호입니다.");
+                return;
+            }
+            if (txtchk_type.EditValue.ToString() == "D")
+            {
+                MessageAgent.MessageShow(MessageType.Confirm, "배송중인 주문 번호입니다.");
+                return;
+            }
+            if (txtchk_type.EditValue.ToString() == "E")
+            {
+                MessageAgent.MessageShow(MessageType.Confirm, "구매완료된 주문 번호입니다.");
+                return;
+            }
+         //   if (txtchk_type.EditValue.ToString() == "C")
+         //   {
+         //       MessageAgent.MessageShow(MessageType.Confirm, "취소 처리된 주문 번호입니다.");
+        //        return;
+        //    }
+            if (txtchk_type.EditValue.ToString() == "B")
+            {
+                MessageAgent.MessageShow(MessageType.Confirm, "반품완료된 주문 번호입니다.");
+                return;
+            }
+            if (txtchk_type.EditValue.ToString() == "Z")
+            {
+                MessageAgent.MessageShow(MessageType.Confirm, "품절취소된 주문 번호입니다.");
+                return;
+            }
 
             if (MessageAgent.MessageShow(MessageType.Confirm, "취소/반품 승인을 하시겠습니까?") == DialogResult.OK)
             {
@@ -378,7 +416,7 @@ namespace YL_DONUT.BizFrm
                             cmd.CommandType = CommandType.StoredProcedure;
 
                             cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
-                            cmd.Parameters["i_o_code"].Value = txtO_Code.EditValue;
+                            cmd.Parameters["i_o_code"].Value = txto_mcode.EditValue;
                             cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
 
                             cmd.ExecuteNonQuery();

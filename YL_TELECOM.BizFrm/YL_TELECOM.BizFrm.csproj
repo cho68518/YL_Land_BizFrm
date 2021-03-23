@@ -93,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstantLib.cs" />
+    <Compile Include="frmTM06.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTM06.Designer.cs">
+      <DependentUpon>frmTM06.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTM04.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTM05.resx">
       <DependentUpon>frmTM05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM06.resx">
+      <DependentUpon>frmTM06.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

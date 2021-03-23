@@ -30,11 +30,12 @@
         {
             this.efwPnlBody = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnSI0102 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwPnlBody)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton5);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton4);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton1);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton3);
@@ -60,6 +62,17 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(123, 820);
             this.efwPanelControl1.TabIndex = 8;
+            // 
+            // efwSimpleButton4
+            // 
+            this.efwSimpleButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwSimpleButton4.IsMultiLang = false;
+            this.efwSimpleButton4.Location = new System.Drawing.Point(2, 131);
+            this.efwSimpleButton4.Name = "efwSimpleButton4";
+            this.efwSimpleButton4.Size = new System.Drawing.Size(119, 43);
+            this.efwSimpleButton4.TabIndex = 6;
+            this.efwSimpleButton4.Text = "frmRM04";
+            this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
             // 
             // efwSimpleButton1
             // 
@@ -105,16 +118,16 @@
             this.btnSI0102.Text = "frmRM01";
             this.btnSI0102.Click += new System.EventHandler(this.btnSI0102_Click);
             // 
-            // efwSimpleButton4
+            // efwSimpleButton5
             // 
-            this.efwSimpleButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwSimpleButton4.IsMultiLang = false;
-            this.efwSimpleButton4.Location = new System.Drawing.Point(2, 131);
-            this.efwSimpleButton4.Name = "efwSimpleButton4";
-            this.efwSimpleButton4.Size = new System.Drawing.Size(119, 43);
-            this.efwSimpleButton4.TabIndex = 6;
-            this.efwSimpleButton4.Text = "frmRM04";
-            this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
+            this.efwSimpleButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwSimpleButton5.IsMultiLang = false;
+            this.efwSimpleButton5.Location = new System.Drawing.Point(2, 174);
+            this.efwSimpleButton5.Name = "efwSimpleButton5";
+            this.efwSimpleButton5.Size = new System.Drawing.Size(119, 43);
+            this.efwSimpleButton5.TabIndex = 7;
+            this.efwSimpleButton5.Text = "frmRM05";
+            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
             // 
             // frmMain
             // 
@@ -141,5 +154,6 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton btnSI0102;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton4;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
     }
 }

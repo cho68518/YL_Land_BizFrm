@@ -46,7 +46,9 @@ namespace YL_GSHOP.BizFrm
 
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
-            
+            rbP_SHOW_TYPE.EditValue = "1";
+
+
             gridView2.OptionsView.ShowFooter = true;
 
             this.efwGridControl2.BindControlSet(
@@ -258,6 +260,9 @@ namespace YL_GSHOP.BizFrm
 
                         cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
                         cmd.Parameters[2].Value = txtProdNameQ.EditValue;
+
+                        cmd.Parameters.Add("i_date_type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[3].Value = rbP_SHOW_TYPE.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

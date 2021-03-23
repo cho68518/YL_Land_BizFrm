@@ -105,6 +105,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Easy.Framework.Release\Easy.Framework.WinForm.Control.V.3.1.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
@@ -141,11 +146,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstantLib.cs" />
+    <Compile Include="DataSet3.cs">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Dlg\frmGMember_info.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dlg\frmGMember_info.designer.cs">
       <DependentUpon>frmGMember_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRM05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmRM05.Designer.cs">
+      <DependentUpon>frmRM05.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRM04.cs">
       <SubType>UserControl</SubType>
@@ -190,6 +209,9 @@
     <EmbeddedResource Include="Dlg\frmGMember_info.resx">
       <DependentUpon>frmGMember_info.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRM05.resx">
+      <DependentUpon>frmRM05.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRM04.resx">
       <DependentUpon>frmRM04.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +241,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

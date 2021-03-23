@@ -358,13 +358,12 @@
             this.rbStoryType.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.rbStoryType.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rbStoryType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("M", "매인 배너     "),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("T", "알뜰 스토리  "),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("H", "홈페이지 매인베너"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("F", "프라이빗샵 매인배너")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("M", "매인 배너(앱)   "),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("F", "프라이빗샵 매인배너"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("T", "알뜰 스토리  ")});
             this.rbStoryType.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
             this.rbStoryType.RequireMessage = null;
-            this.rbStoryType.Size = new System.Drawing.Size(514, 29);
+            this.rbStoryType.Size = new System.Drawing.Size(357, 29);
             this.rbStoryType.TabIndex = 4;
             this.rbStoryType.SelectedIndexChanged += new System.EventHandler(this.rbStoryType_SelectedIndexChanged);
             // 

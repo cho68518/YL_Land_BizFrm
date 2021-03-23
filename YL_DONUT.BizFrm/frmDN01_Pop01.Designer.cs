@@ -32,6 +32,7 @@ namespace YL_DONUT.BizFrm
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN01_Pop01));
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtRemark = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtO_Donut_S_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel47 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Total_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -136,6 +137,7 @@ namespace YL_DONUT.BizFrm
             this.efwLabel37 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtLGD_Response_Code = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtO_Delivery_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel52 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtO_Delivery_End_Date = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -144,10 +146,12 @@ namespace YL_DONUT.BizFrm
             this.txtO_Delivery_Comp_Name = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtO_Delivery_Start_Date = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel55 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtRemark = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtO_Delivery_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtchk_type = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel50 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txto_mcode = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_S_Cost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Purchase_Cost.Properties)).BeginInit();
@@ -209,16 +213,19 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.txtLGD_Response_Code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).BeginInit();
             this.efwGroupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_End_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtchk_type.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txto_mcode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
             // 
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
+            this.efwGroupControl1.Controls.Add(this.efwLabel50);
+            this.efwGroupControl1.Controls.Add(this.txto_mcode);
             this.efwGroupControl1.Controls.Add(this.txtRemark);
             this.efwGroupControl1.Controls.Add(this.txtO_Donut_S_Cost);
             this.efwGroupControl1.Controls.Add(this.efwLabel47);
@@ -278,9 +285,20 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl1.IsMultiLang = false;
             this.efwGroupControl1.Location = new System.Drawing.Point(0, 0);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(622, 427);
+            this.efwGroupControl1.Size = new System.Drawing.Size(622, 417);
             this.efwGroupControl1.TabIndex = 0;
             this.efwGroupControl1.Text = "주문 수정";
+            // 
+            // txtRemark
+            // 
+            this.txtRemark.EditValue2 = null;
+            this.txtRemark.Location = new System.Drawing.Point(109, 366);
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRemark.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRemark.RequireMessage = null;
+            this.txtRemark.Size = new System.Drawing.Size(499, 20);
+            this.txtRemark.TabIndex = 68;
             // 
             // txtO_Donut_S_Cost
             // 
@@ -790,7 +808,7 @@ namespace YL_DONUT.BizFrm
             this.efwLabel8.Appearance.Options.UseForeColor = true;
             this.efwLabel8.EraserGroup = null;
             this.efwLabel8.IsMultiLang = false;
-            this.efwLabel8.Location = new System.Drawing.Point(239, 111);
+            this.efwLabel8.Location = new System.Drawing.Point(239, 84);
             this.efwLabel8.Name = "efwLabel8";
             this.efwLabel8.Size = new System.Drawing.Size(30, 14);
             this.efwLabel8.TabIndex = 20;
@@ -799,7 +817,7 @@ namespace YL_DONUT.BizFrm
             // txtO_Receive_Contact
             // 
             this.txtO_Receive_Contact.EditValue2 = null;
-            this.txtO_Receive_Contact.Location = new System.Drawing.Point(304, 108);
+            this.txtO_Receive_Contact.Location = new System.Drawing.Point(301, 81);
             this.txtO_Receive_Contact.Name = "txtO_Receive_Contact";
             this.txtO_Receive_Contact.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Receive_Contact.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -813,7 +831,7 @@ namespace YL_DONUT.BizFrm
             this.efwLabel7.Appearance.Options.UseForeColor = true;
             this.efwLabel7.EraserGroup = null;
             this.efwLabel7.IsMultiLang = false;
-            this.efwLabel7.Location = new System.Drawing.Point(17, 111);
+            this.efwLabel7.Location = new System.Drawing.Point(14, 84);
             this.efwLabel7.Name = "efwLabel7";
             this.efwLabel7.Size = new System.Drawing.Size(30, 14);
             this.efwLabel7.TabIndex = 18;
@@ -822,7 +840,7 @@ namespace YL_DONUT.BizFrm
             // txtO_Receive_Name
             // 
             this.txtO_Receive_Name.EditValue2 = null;
-            this.txtO_Receive_Name.Location = new System.Drawing.Point(108, 108);
+            this.txtO_Receive_Name.Location = new System.Drawing.Point(105, 81);
             this.txtO_Receive_Name.Name = "txtO_Receive_Name";
             this.txtO_Receive_Name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Receive_Name.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -836,7 +854,7 @@ namespace YL_DONUT.BizFrm
             this.efwLabel6.Appearance.Options.UseForeColor = true;
             this.efwLabel6.EraserGroup = null;
             this.efwLabel6.IsMultiLang = false;
-            this.efwLabel6.Location = new System.Drawing.Point(17, 85);
+            this.efwLabel6.Location = new System.Drawing.Point(17, 111);
             this.efwLabel6.Name = "efwLabel6";
             this.efwLabel6.Size = new System.Drawing.Size(30, 14);
             this.efwLabel6.TabIndex = 16;
@@ -847,7 +865,7 @@ namespace YL_DONUT.BizFrm
             this.txtO_Receive_ZipCode.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtO_Receive_ZipCode.EditValue2 = null;
             this.txtO_Receive_ZipCode.EraserGroup = "CLR1";
-            this.txtO_Receive_ZipCode.Location = new System.Drawing.Point(109, 82);
+            this.txtO_Receive_ZipCode.Location = new System.Drawing.Point(109, 108);
             this.txtO_Receive_ZipCode.Name = "txtO_Receive_ZipCode";
             this.txtO_Receive_ZipCode.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Receive_ZipCode.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -859,7 +877,7 @@ namespace YL_DONUT.BizFrm
             // txtO_Receive_Address
             // 
             this.txtO_Receive_Address.EditValue2 = null;
-            this.txtO_Receive_Address.Location = new System.Drawing.Point(214, 82);
+            this.txtO_Receive_Address.Location = new System.Drawing.Point(214, 108);
             this.txtO_Receive_Address.Name = "txtO_Receive_Address";
             this.txtO_Receive_Address.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtO_Receive_Address.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -871,7 +889,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.efwLabel5.EraserGroup = null;
             this.efwLabel5.IsMultiLang = false;
-            this.efwLabel5.Location = new System.Drawing.Point(239, 59);
+            this.efwLabel5.Location = new System.Drawing.Point(469, 87);
             this.efwLabel5.Name = "efwLabel5";
             this.efwLabel5.Size = new System.Drawing.Size(30, 14);
             this.efwLabel5.TabIndex = 9;
@@ -881,7 +899,7 @@ namespace YL_DONUT.BizFrm
             // 
             this.dtO_Date.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
             this.dtO_Date.IsRequire = true;
-            this.dtO_Date.Location = new System.Drawing.Point(301, 56);
+            this.dtO_Date.Location = new System.Drawing.Point(505, 82);
             this.dtO_Date.Name = "dtO_Date";
             this.dtO_Date.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.dtO_Date.Properties.Appearance.Options.UseBackColor = true;
@@ -892,7 +910,7 @@ namespace YL_DONUT.BizFrm
             this.dtO_Date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtO_Date.Properties.ReadOnly = true;
-            this.dtO_Date.Size = new System.Drawing.Size(174, 20);
+            this.dtO_Date.Size = new System.Drawing.Size(102, 20);
             this.dtO_Date.TabIndex = 8;
             // 
             // efwLabel4
@@ -1581,6 +1599,7 @@ namespace YL_DONUT.BizFrm
             // efwGroupControl4
             // 
             this.efwGroupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl4.CaptionImageOptions.Image")));
+            this.efwGroupControl4.Controls.Add(this.txtchk_type);
             this.efwGroupControl4.Controls.Add(this.txtO_Delivery_Num);
             this.efwGroupControl4.Controls.Add(this.efwSimpleButton2);
             this.efwGroupControl4.Controls.Add(this.efwLabel52);
@@ -1595,9 +1614,20 @@ namespace YL_DONUT.BizFrm
             this.efwGroupControl4.IsMultiLang = false;
             this.efwGroupControl4.Location = new System.Drawing.Point(622, 306);
             this.efwGroupControl4.Name = "efwGroupControl4";
-            this.efwGroupControl4.Size = new System.Drawing.Size(685, 121);
+            this.efwGroupControl4.Size = new System.Drawing.Size(685, 111);
             this.efwGroupControl4.TabIndex = 70;
             this.efwGroupControl4.Text = "배송정보";
+            // 
+            // txtO_Delivery_Num
+            // 
+            this.txtO_Delivery_Num.EditValue2 = null;
+            this.txtO_Delivery_Num.Location = new System.Drawing.Point(84, 31);
+            this.txtO_Delivery_Num.Name = "txtO_Delivery_Num";
+            this.txtO_Delivery_Num.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Delivery_Num.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Delivery_Num.RequireMessage = null;
+            this.txtO_Delivery_Num.Size = new System.Drawing.Size(287, 20);
+            this.txtO_Delivery_Num.TabIndex = 69;
             // 
             // efwSimpleButton2
             // 
@@ -1686,33 +1716,45 @@ namespace YL_DONUT.BizFrm
             this.efwLabel55.TabIndex = 59;
             this.efwLabel55.Text = "송장번호";
             // 
-            // txtRemark
+            // txtchk_type
             // 
-            this.txtRemark.EditValue2 = null;
-            this.txtRemark.Location = new System.Drawing.Point(109, 366);
-            this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtRemark.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRemark.RequireMessage = null;
-            this.txtRemark.Size = new System.Drawing.Size(499, 20);
-            this.txtRemark.TabIndex = 68;
+            this.txtchk_type.EditValue2 = null;
+            this.txtchk_type.Location = new System.Drawing.Point(345, 60);
+            this.txtchk_type.Name = "txtchk_type";
+            this.txtchk_type.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtchk_type.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtchk_type.Properties.ReadOnly = true;
+            this.txtchk_type.RequireMessage = null;
+            this.txtchk_type.Size = new System.Drawing.Size(26, 20);
+            this.txtchk_type.TabIndex = 69;
             // 
-            // txtO_Delivery_Num
+            // efwLabel50
             // 
-            this.txtO_Delivery_Num.EditValue2 = null;
-            this.txtO_Delivery_Num.Location = new System.Drawing.Point(84, 31);
-            this.txtO_Delivery_Num.Name = "txtO_Delivery_Num";
-            this.txtO_Delivery_Num.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtO_Delivery_Num.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtO_Delivery_Num.RequireMessage = null;
-            this.txtO_Delivery_Num.Size = new System.Drawing.Size(287, 20);
-            this.txtO_Delivery_Num.TabIndex = 69;
+            this.efwLabel50.EraserGroup = null;
+            this.efwLabel50.IsMultiLang = false;
+            this.efwLabel50.Location = new System.Drawing.Point(239, 61);
+            this.efwLabel50.Name = "efwLabel50";
+            this.efwLabel50.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel50.TabIndex = 70;
+            this.efwLabel50.Text = "묶음번호";
+            // 
+            // txto_mcode
+            // 
+            this.txto_mcode.EditValue2 = null;
+            this.txto_mcode.Location = new System.Drawing.Point(301, 55);
+            this.txto_mcode.Name = "txto_mcode";
+            this.txto_mcode.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txto_mcode.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txto_mcode.Properties.ReadOnly = true;
+            this.txto_mcode.RequireMessage = null;
+            this.txto_mcode.Size = new System.Drawing.Size(174, 20);
+            this.txto_mcode.TabIndex = 69;
             // 
             // frmDN01_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1307, 427);
+            this.ClientSize = new System.Drawing.Size(1307, 417);
             this.Controls.Add(this.efwGroupControl4);
             this.Controls.Add(this.efwGroupControl3);
             this.Controls.Add(this.efwGroupControl2);
@@ -1725,6 +1767,7 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Donut_S_Cost.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Total_Cost.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Purchase_Cost.Properties)).EndInit();
@@ -1789,11 +1832,12 @@ namespace YL_DONUT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).EndInit();
             this.efwGroupControl4.ResumeLayout(false);
             this.efwGroupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_End_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Comp_Name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Start_Date.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtO_Delivery_Num.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtchk_type.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txto_mcode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1915,6 +1959,9 @@ namespace YL_DONUT.BizFrm
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
         private Easy.Framework.WinForm.Control.efwTextEdit txtRemark;
         private Easy.Framework.WinForm.Control.efwTextEdit txtO_Delivery_Num;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtchk_type;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel50;
+        private Easy.Framework.WinForm.Control.efwTextEdit txto_mcode;
 
         public SizeGripStyle SizeGripStyle { get; private set; }
         public FormStartPosition StartPosition { get; private set; }

@@ -41,6 +41,7 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton6 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -113,7 +114,6 @@
             this.efwXtraTabControl1 = new Easy.Framework.WinForm.Control.efwXtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
@@ -174,6 +174,18 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1390, 50);
             this.efwPanelControl1.TabIndex = 0;
+            // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(1096, 31);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(143, 21);
+            this.efwSimpleButton1.TabIndex = 72;
+            this.efwSimpleButton1.Text = "라벨발행 SAMPLE";
+            this.efwSimpleButton1.Visible = false;
+            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
             // 
             // efwLabel1
             // 
@@ -1004,6 +1016,7 @@
             this.efwXtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2});
+            this.efwXtraTabControl1.Click += new System.EventHandler(this.efwXtraTabControl1_Click);
             // 
             // xtraTabPage1
             // 
@@ -1022,17 +1035,6 @@
             this.xtraTabPage2.Padding = new System.Windows.Forms.Padding(5);
             this.xtraTabPage2.Size = new System.Drawing.Size(1388, 426);
             this.xtraTabPage2.Text = "업체 전송양식";
-            // 
-            // efwSimpleButton1
-            // 
-            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
-            this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(869, 12);
-            this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(34, 29);
-            this.efwSimpleButton1.TabIndex = 72;
-            this.efwSimpleButton1.Text = "EXCEL UPDATE";
-            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
             // 
             // frmDN20
             // 
