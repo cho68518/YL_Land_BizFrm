@@ -34,15 +34,14 @@ namespace YL_GM.BizFrm
             base.FrmLoadEvent();
             DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
             dtS_DATE.EditValue = DateTime.Now;
-            rbG_New.EditValue = "3";
-            rbProd_Type.EditValue = "1";
+
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
             advBandedGridView1.OptionsView.ShowFooter = true;
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = false;
-            this.IsSave = true;
+            this.IsSave = false;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = false;
@@ -61,8 +60,17 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt1"].SummaryItem.FieldName = "amt1";
             advBandedGridView1.Columns["amt1"].SummaryItem.DisplayFormat = "{0:c}";
 
+            advBandedGridView1.Columns["amt_1"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_1"].SummaryItem.FieldName = "amt_1";
+            advBandedGridView1.Columns["amt_1"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot1"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot1"].SummaryItem.FieldName = "tot1";
+            advBandedGridView1.Columns["tot1"].SummaryItem.DisplayFormat = "{0:c}";
+
+
             advBandedGridView1.Columns["input2"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            advBandedGridView1.Columns["input2"].SummaryItem.FieldName = "input1";
+            advBandedGridView1.Columns["input2"].SummaryItem.FieldName = "input2";
             advBandedGridView1.Columns["input2"].SummaryItem.DisplayFormat = "{0}";
 
             advBandedGridView1.Columns["qty2"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
@@ -72,6 +80,14 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt2"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["amt2"].SummaryItem.FieldName = "amt2";
             advBandedGridView1.Columns["amt2"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["amt_2"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_2"].SummaryItem.FieldName = "amt_2";
+            advBandedGridView1.Columns["amt_2"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot2"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot2"].SummaryItem.FieldName = "tot2";
+            advBandedGridView1.Columns["tot2"].SummaryItem.DisplayFormat = "{0:c}";
 
 
             advBandedGridView1.Columns["input3"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
@@ -86,6 +102,14 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt3"].SummaryItem.FieldName = "amt3";
             advBandedGridView1.Columns["amt3"].SummaryItem.DisplayFormat = "{0:c}";
 
+            advBandedGridView1.Columns["amt_3"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_3"].SummaryItem.FieldName = "amt_3";
+            advBandedGridView1.Columns["amt_3"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot3"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot3"].SummaryItem.FieldName = "tot3";
+            advBandedGridView1.Columns["tot3"].SummaryItem.DisplayFormat = "{0:c}";
+
 
             advBandedGridView1.Columns["input4"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["input4"].SummaryItem.FieldName = "input4";
@@ -99,6 +123,13 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt4"].SummaryItem.FieldName = "amt4";
             advBandedGridView1.Columns["amt4"].SummaryItem.DisplayFormat = "{0:c}";
 
+            advBandedGridView1.Columns["amt_4"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_4"].SummaryItem.FieldName = "amt_4";
+            advBandedGridView1.Columns["amt_4"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot4"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot4"].SummaryItem.FieldName = "tot4";
+            advBandedGridView1.Columns["tot4"].SummaryItem.DisplayFormat = "{0:c}";
 
             advBandedGridView1.Columns["input5"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["input5"].SummaryItem.FieldName = "input5";
@@ -112,6 +143,13 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt5"].SummaryItem.FieldName = "amt5";
             advBandedGridView1.Columns["amt5"].SummaryItem.DisplayFormat = "{0:c}";
 
+            advBandedGridView1.Columns["amt_5"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_5"].SummaryItem.FieldName = "amt_5";
+            advBandedGridView1.Columns["amt_5"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot5"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot5"].SummaryItem.FieldName = "tot5";
+            advBandedGridView1.Columns["tot5"].SummaryItem.DisplayFormat = "{0:c}";
 
             advBandedGridView1.Columns["input6"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["input6"].SummaryItem.FieldName = "input6";
@@ -125,6 +163,14 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt6"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["amt6"].SummaryItem.FieldName = "amt6";
             advBandedGridView1.Columns["amt6"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["amt_6"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_6"].SummaryItem.FieldName = "amt_6";
+            advBandedGridView1.Columns["amt_6"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot6"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot6"].SummaryItem.FieldName = "tot6";
+            advBandedGridView1.Columns["tot6"].SummaryItem.DisplayFormat = "{0:c}";
 
 
             advBandedGridView1.Columns["input7"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
@@ -140,6 +186,15 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt7"].SummaryItem.DisplayFormat = "{0:c}";
 
 
+            advBandedGridView1.Columns["amt_7"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_7"].SummaryItem.FieldName = "amt_7";
+            advBandedGridView1.Columns["amt_7"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot7"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot7"].SummaryItem.FieldName = "tot7";
+            advBandedGridView1.Columns["tot7"].SummaryItem.DisplayFormat = "{0:c}";
+
+
             advBandedGridView1.Columns["input8"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["input8"].SummaryItem.FieldName = "input8";
             advBandedGridView1.Columns["input8"].SummaryItem.DisplayFormat = "{0}";
@@ -151,6 +206,16 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt8"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["amt8"].SummaryItem.FieldName = "amt8";
             advBandedGridView1.Columns["amt8"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["amt_8"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_8"].SummaryItem.FieldName = "amt_8";
+            advBandedGridView1.Columns["amt_8"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot8"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot8"].SummaryItem.FieldName = "tot8";
+            advBandedGridView1.Columns["tot8"].SummaryItem.DisplayFormat = "{0:c}";
+
+
 
             advBandedGridView1.Columns["input9"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["input9"].SummaryItem.FieldName = "input9";
@@ -164,6 +229,16 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt9"].SummaryItem.FieldName = "amt9";
             advBandedGridView1.Columns["amt9"].SummaryItem.DisplayFormat = "{0:c}";
 
+            advBandedGridView1.Columns["amt_9"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_9"].SummaryItem.FieldName = "amt_9";
+            advBandedGridView1.Columns["amt_9"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot9"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot9"].SummaryItem.FieldName = "tot9";
+            advBandedGridView1.Columns["tot9"].SummaryItem.DisplayFormat = "{0:c}";
+
+
+
             advBandedGridView1.Columns["input10"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["input10"].SummaryItem.FieldName = "input10";
             advBandedGridView1.Columns["input10"].SummaryItem.DisplayFormat = "{0}";
@@ -175,6 +250,14 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt10"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["amt10"].SummaryItem.FieldName = "amt10";
             advBandedGridView1.Columns["amt10"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["amt_10"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_10"].SummaryItem.FieldName = "amt_10";
+            advBandedGridView1.Columns["amt_10"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot10"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot10"].SummaryItem.FieldName = "tot10";
+            advBandedGridView1.Columns["tot10"].SummaryItem.DisplayFormat = "{0:c}";
 
             advBandedGridView1.Columns["input11"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["input11"].SummaryItem.FieldName = "input11";
@@ -189,6 +272,17 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt11"].SummaryItem.FieldName = "amt11";
             advBandedGridView1.Columns["amt11"].SummaryItem.DisplayFormat = "{0:c}";
 
+            advBandedGridView1.Columns["amt_11"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_11"].SummaryItem.FieldName = "amt_11";
+            advBandedGridView1.Columns["amt_11"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["tot11"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot11"].SummaryItem.FieldName = "tot11";
+            advBandedGridView1.Columns["tot11"].SummaryItem.DisplayFormat = "{0:c}";
+
+
+
+
             advBandedGridView1.Columns["input12"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["input12"].SummaryItem.FieldName = "input12";
             advBandedGridView1.Columns["input12"].SummaryItem.DisplayFormat = "{0}";
@@ -202,17 +296,39 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["amt12"].SummaryItem.FieldName = "amt12";
             advBandedGridView1.Columns["amt12"].SummaryItem.DisplayFormat = "{0:c}";
 
-            advBandedGridView1.Columns["input_tot"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            advBandedGridView1.Columns["input_tot"].SummaryItem.FieldName = "input_tot";
-            advBandedGridView1.Columns["input_tot"].SummaryItem.DisplayFormat = "{0}";
+            advBandedGridView1.Columns["amt_12"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["amt_12"].SummaryItem.FieldName = "amt_11";
+            advBandedGridView1.Columns["amt_12"].SummaryItem.DisplayFormat = "{0:c}";
 
-            advBandedGridView1.Columns["qty_tot"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            advBandedGridView1.Columns["qty_tot"].SummaryItem.FieldName = "qty_tot";
-            advBandedGridView1.Columns["qty_tot"].SummaryItem.DisplayFormat = "{0}";
+            advBandedGridView1.Columns["tot12"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["tot12"].SummaryItem.FieldName = "tot12";
+            advBandedGridView1.Columns["tot12"].SummaryItem.DisplayFormat = "{0:c}";
 
-            advBandedGridView1.Columns["amt_tot"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            advBandedGridView1.Columns["amt_tot"].SummaryItem.FieldName = "amt_tot";
-            advBandedGridView1.Columns["amt_tot"].SummaryItem.DisplayFormat = "{0:c}";
+            advBandedGridView1.Columns["input12"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["input12"].SummaryItem.FieldName = "input12";
+            advBandedGridView1.Columns["input12"].SummaryItem.DisplayFormat = "{0}";
+
+
+            advBandedGridView1.Columns["total1"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["total1"].SummaryItem.FieldName = "total1";
+            advBandedGridView1.Columns["total1"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["total2"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["total2"].SummaryItem.FieldName = "total2";
+            advBandedGridView1.Columns["total2"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["total3"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["total3"].SummaryItem.FieldName = "total3";
+            advBandedGridView1.Columns["total3"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["total4"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["total4"].SummaryItem.FieldName = "total4";
+            advBandedGridView1.Columns["total4"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView1.Columns["totamt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["totamt"].SummaryItem.FieldName = "totamt";
+            advBandedGridView1.Columns["totamt"].SummaryItem.DisplayFormat = "{0:c}";
+
         }
 
         public override void Search()
@@ -231,13 +347,6 @@ namespace YL_GM.BizFrm
 
                         cmd.Parameters.Add("i_year", MySqlDbType.VarChar, 4);
                         cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 4);
-
-
-                        cmd.Parameters.Add("i_shop_type", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[1].Value = rbG_New.EditValue;
-
-                        cmd.Parameters.Add("i_prod_type", MySqlDbType.VarChar, 1);
-                        cmd.Parameters[2].Value = rbProd_Type.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -261,8 +370,8 @@ namespace YL_GM.BizFrm
         {
             popup1 = new frmGM12_Pop01();
 
-            popup1.md_u_id = advBandedGridView1.GetFocusedRowCellValue("md_u_id").ToString();
-            popup1.u_nickname = advBandedGridView1.GetFocusedRowCellValue("md_niclname").ToString();
+            popup1.md_u_id = advBandedGridView1.GetFocusedRowCellValue("registrant_uid").ToString();
+            popup1.u_nickname = advBandedGridView1.GetFocusedRowCellValue("u_nickname").ToString();
             popup1.year = Convert.ToDateTime(dtS_DATE.EditValue);
             popup1.FormClosed += popup1_FormClosed;
             popup1.ShowDialog();

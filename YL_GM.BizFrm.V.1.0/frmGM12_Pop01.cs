@@ -21,6 +21,7 @@ namespace YL_GM.BizFrm
         public string md_u_id { get; set; }
         public string u_nickname { get; set; }
         public DateTime year { get; set; }
+        public string prod_type { get; set; }
         public frmGM12_Pop01() 
         {
             InitializeComponent();
@@ -34,32 +35,33 @@ namespace YL_GM.BizFrm
             txtmd_u_id.Text = md_u_id;
             txtu_nickanme.EditValue = u_nickname;
             dtS_DATE.EditValue = year;
+            txtprod_type.EditValue = prod_type;
 
 
             gridView1.OptionsView.ShowFooter = true;
-            gridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
-            gridView1.Columns["p_num"].SummaryItem.DisplayFormat = "{0}";
+            //gridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView1.Columns["p_num"].SummaryItem.FieldName = "p_num";
+            //gridView1.Columns["p_num"].SummaryItem.DisplayFormat = "{0}";
 
-            gridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
-            gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
+            //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["use_money"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["use_money"].SummaryItem.FieldName = "use_money";
-            gridView1.Columns["use_money"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView1.Columns["use_money"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView1.Columns["use_money"].SummaryItem.FieldName = "use_money";
+            //gridView1.Columns["use_money"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["o_delivery_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_delivery_cost"].SummaryItem.FieldName = "o_delivery_cost";
-            gridView1.Columns["o_delivery_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView1.Columns["o_delivery_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView1.Columns["o_delivery_cost"].SummaryItem.FieldName = "o_delivery_cost";
+            //gridView1.Columns["o_delivery_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["o_pay_type"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_pay_type"].SummaryItem.FieldName = "o_pay_type";
-            gridView1.Columns["o_pay_type"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView1.Columns["o_pay_type"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView1.Columns["o_pay_type"].SummaryItem.FieldName = "o_pay_type";
+            //gridView1.Columns["o_pay_type"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["totamt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["totamt"].SummaryItem.FieldName = "totamt";
-            gridView1.Columns["totamt"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView1.Columns["totamt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView1.Columns["totamt"].SummaryItem.FieldName = "totamt";
+            //gridView1.Columns["totamt"].SummaryItem.DisplayFormat = "{0:c}";
             Open1();
         }
         private void Open1()

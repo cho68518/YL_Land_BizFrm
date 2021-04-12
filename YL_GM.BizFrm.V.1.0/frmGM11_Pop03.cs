@@ -85,6 +85,9 @@ namespace YL_GM.BizFrm
             Open1();
         }
 
+        private void bthNew_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

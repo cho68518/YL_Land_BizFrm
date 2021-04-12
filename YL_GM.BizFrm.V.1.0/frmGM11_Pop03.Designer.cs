@@ -272,6 +272,7 @@
             this.bthNew.Size = new System.Drawing.Size(83, 37);
             this.bthNew.TabIndex = 0;
             this.bthNew.Text = "조회";
+            this.bthNew.Click += new System.EventHandler(this.bthNew_Click_1);
             // 
             // efwLabel2
             // 

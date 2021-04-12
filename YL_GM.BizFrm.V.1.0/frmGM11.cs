@@ -195,6 +195,14 @@ namespace YL_GM.BizFrm
             bandedGridView1.Columns["back_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             bandedGridView1.Columns["back_amt"].SummaryItem.FieldName = "back_amt";
             bandedGridView1.Columns["back_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView1.Columns["naver_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["naver_qty"].SummaryItem.FieldName = "naver_qty";
+            bandedGridView1.Columns["naver_qty"].SummaryItem.DisplayFormat = "{0}";
+            bandedGridView1.Columns["naver_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["naver_amt"].SummaryItem.FieldName = "naver_amt";
+            bandedGridView1.Columns["naver_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
         }
 
         public override void Search()

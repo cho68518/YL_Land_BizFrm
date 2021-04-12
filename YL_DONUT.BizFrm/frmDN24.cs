@@ -53,6 +53,17 @@ namespace YL_DONUT.BizFrm
             rbp_bunch_delivery.EditValue = "N";
 
             gridView1.OptionsView.ShowFooter = true;
+
+            gridView1.Columns["o_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["o_qty"].SummaryItem.FieldName = "o_qty";
+            //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "총주문금액: {0:c}";
+            gridView1.Columns["o_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView1.Columns["o_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["o_amt"].SummaryItem.FieldName = "o_amt";
+            //gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "총주문금액: {0:c}";
+            gridView1.Columns["o_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
             //      cmbTAREA1.EditValue = "00";
             this.efwGridControl1.BindControlSet(
                       new ColumnControlSet("idx", txtIdx)
@@ -162,7 +173,7 @@ namespace YL_DONUT.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
-                            //    this.efwGridControl1.MyGridView.BestFitColumns();
+                           // this.efwGridControl1.MyGridView.BestFitColumns();
 
                         }
                     }

@@ -98,6 +98,7 @@ namespace YL_RM.BizFrm
                       , new ColumnControlSet("summury", txtsummury)
                       , new ColumnControlSet("board_type", rbboard_type)
                       , new ColumnControlSet("is_file", chkis_file)
+                      , new ColumnControlSet("notice_seq", cknotice_seq)
                       );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -276,6 +277,11 @@ namespace YL_RM.BizFrm
                 {
                     rbis_notice.EditValue = (dr["is_notice"].ToString());
                 }
+                if (dr != null )
+                {
+                    cknotice_seq.EditValue = (dr["notice_seq"].ToString());
+                }
+
                 if (dr != null && dr["board_type"].ToString() != "0" && dr["board_type"].ToString() != "")
                 {
                     rbboard_type.EditValue = (dr["board_type"].ToString());
@@ -479,6 +485,10 @@ namespace YL_RM.BizFrm
                             cmd.Parameters["i_is_file"].Value = chkis_file.EditValue;
                             cmd.Parameters["i_is_file"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_notice_seq", MySqlDbType.VarChar));
+                            cmd.Parameters["i_notice_seq"].Value = cknotice_seq.EditValue;
+                            cmd.Parameters["i_notice_seq"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_idx", MySqlDbType.VarChar));
                             cmd.Parameters["o_idx"].Direction = ParameterDirection.Output;
 
@@ -599,9 +609,26 @@ namespace YL_RM.BizFrm
                     chkis_file.EditValue = "N";
 
                 if (cmbBoard.EditValue.ToString() == "5")
-                    efwSimpleButton7.Enabled = true;
-                else
+                {
                     efwSimpleButton7.Enabled = false;
+                    efwSimpleButton7.Enabled = true;
+                }
+                else
+                {
+                    efwSimpleButton7.Enabled = false;
+                }
+                   
+
+                if (cmbBoard.EditValue.ToString() == "5")
+                {
+                    cknotice_seq.Enabled = false;
+                    cknotice_seq.Enabled = true;
+                }    
+                else
+                {
+                    cknotice_seq.Enabled = false;
+                }
+                    
 
                 Open2();
                 Clear2();
