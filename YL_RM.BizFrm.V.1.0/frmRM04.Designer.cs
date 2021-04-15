@@ -328,7 +328,7 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "성함";
+            this.gridColumn1.Caption = "이름";
             this.gridColumn1.FieldName = "u_name";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
@@ -637,7 +637,7 @@
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(314, 30);
-            this.layoutControlItem4.Text = "성함               ";
+            this.layoutControlItem4.Text = "이름               ";
             this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(50, 20);
             this.layoutControlItem4.TextToControlDistance = 5;

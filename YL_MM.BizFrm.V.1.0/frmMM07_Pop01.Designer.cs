@@ -520,7 +520,7 @@
             this.layoutControlItem24.Location = new System.Drawing.Point(292, 48);
             this.layoutControlItem24.Name = "layoutControlItem24";
             this.layoutControlItem24.Size = new System.Drawing.Size(146, 24);
-            this.layoutControlItem24.Text = "일반_성명";
+            this.layoutControlItem24.Text = "일반_이름";
             this.layoutControlItem24.TextSize = new System.Drawing.Size(89, 14);
             // 
             // layoutControlItem26
@@ -550,7 +550,7 @@
             this.layoutControlItem28.Location = new System.Drawing.Point(292, 72);
             this.layoutControlItem28.Name = "layoutControlItem28";
             this.layoutControlItem28.Size = new System.Drawing.Size(146, 24);
-            this.layoutControlItem28.Text = "VIP_성명";
+            this.layoutControlItem28.Text = "VIP_이름";
             this.layoutControlItem28.TextSize = new System.Drawing.Size(89, 14);
             // 
             // layoutControlItem29
@@ -580,7 +580,7 @@
             this.layoutControlItem31.Location = new System.Drawing.Point(292, 96);
             this.layoutControlItem31.Name = "layoutControlItem31";
             this.layoutControlItem31.Size = new System.Drawing.Size(146, 24);
-            this.layoutControlItem31.Text = "SHEF_성명";
+            this.layoutControlItem31.Text = "SHEF_이름";
             this.layoutControlItem31.TextSize = new System.Drawing.Size(89, 14);
             // 
             // layoutControl1

@@ -443,7 +443,7 @@
             this.efwLabel6.Name = "efwLabel6";
             this.efwLabel6.Size = new System.Drawing.Size(20, 14);
             this.efwLabel6.TabIndex = 69;
-            this.efwLabel6.Text = "성함";
+            this.efwLabel6.Text = "이름";
             // 
             // dtO_Cancel_Date
             // 

@@ -228,7 +228,7 @@
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(160, 14);
             this.efwLabel3.TabIndex = 51;
-            this.efwLabel3.Text = "검색명 ( 닉네임, 성함, 로그인ID )";
+            this.efwLabel3.Text = "검색명 ( 닉네임, 이름, 로그인ID )";
             // 
             // txtI_SEARCH
             // 
@@ -357,7 +357,7 @@
             // 
             // gridColumn10
             // 
-            this.gridColumn10.Caption = "성함";
+            this.gridColumn10.Caption = "이름";
             this.gridColumn10.FieldName = "u_name";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.ReadOnly = true;

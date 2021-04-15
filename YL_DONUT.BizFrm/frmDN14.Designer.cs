@@ -1653,7 +1653,7 @@
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.efwTextEdit1;
-            this.layoutControlItem20.CustomizationFormText = "성명";
+            this.layoutControlItem20.CustomizationFormText = "이름";
             this.layoutControlItem20.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem20.MaxSize = new System.Drawing.Size(320, 24);
             this.layoutControlItem20.MinSize = new System.Drawing.Size(320, 24);

@@ -426,7 +426,7 @@
             // 
             // bandedGridColumn5
             // 
-            this.bandedGridColumn5.Caption = "성함";
+            this.bandedGridColumn5.Caption = "이름";
             this.bandedGridColumn5.FieldName = "s_u_name";
             this.bandedGridColumn5.Name = "bandedGridColumn5";
             this.bandedGridColumn5.OptionsColumn.AllowEdit = false;
@@ -466,7 +466,7 @@
             // 
             // bandedGridColumn8
             // 
-            this.bandedGridColumn8.Caption = "성함";
+            this.bandedGridColumn8.Caption = "이름";
             this.bandedGridColumn8.FieldName = "r_u_name";
             this.bandedGridColumn8.Name = "bandedGridColumn8";
             this.bandedGridColumn8.OptionsColumn.AllowEdit = false;
@@ -563,7 +563,7 @@
             // 
             // bandedGridColumn13
             // 
-            this.bandedGridColumn13.Caption = "성함";
+            this.bandedGridColumn13.Caption = "이름";
             this.bandedGridColumn13.FieldName = "i_u_name";
             this.bandedGridColumn13.Name = "bandedGridColumn13";
             this.bandedGridColumn13.OptionsColumn.AllowEdit = false;
@@ -657,7 +657,7 @@
             // 
             // gridColumn14
             // 
-            this.gridColumn14.Caption = "보낸성함";
+            this.gridColumn14.Caption = "보낸이름";
             this.gridColumn14.FieldName = "s_u_name";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
@@ -683,7 +683,7 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "성함";
+            this.gridColumn4.Caption = "이름";
             this.gridColumn4.FieldName = "r_u_name";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -728,7 +728,7 @@
             // 
             // gridColumn10
             // 
-            this.gridColumn10.Caption = "등록자성함";
+            this.gridColumn10.Caption = "등록자이름";
             this.gridColumn10.FieldName = "i_u_name";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
@@ -1003,7 +1003,7 @@
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(20, 14);
             this.efwLabel3.TabIndex = 68;
-            this.efwLabel3.Text = "성함";
+            this.efwLabel3.Text = "이름";
             // 
             // txtU_Nickname
             // 
@@ -1162,7 +1162,7 @@
             this.efwLabel11.Name = "efwLabel11";
             this.efwLabel11.Size = new System.Drawing.Size(20, 14);
             this.efwLabel11.TabIndex = 83;
-            this.efwLabel11.Text = "성함";
+            this.efwLabel11.Text = "이름";
             // 
             // txtsend_message_b
             // 

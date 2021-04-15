@@ -507,7 +507,7 @@
             this.layoutControlItem5.Location = new System.Drawing.Point(156, 24);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(189, 24);
-            this.layoutControlItem5.Text = "성명";
+            this.layoutControlItem5.Text = "이름";
             this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(70, 20);
             this.layoutControlItem5.TextToControlDistance = 5;
@@ -926,13 +926,13 @@
             // 
             // gridColumn48
             // 
-            this.gridColumn48.Caption = "성명(한자)";
+            this.gridColumn48.Caption = "이름(한자)";
             this.gridColumn48.FieldName = "CHINESENAME";
             this.gridColumn48.Name = "gridColumn48";
             // 
             // gridColumn49
             // 
-            this.gridColumn49.Caption = "성명(영문)";
+            this.gridColumn49.Caption = "이름(영문)";
             this.gridColumn49.FieldName = "ENGLISHNAME";
             this.gridColumn49.Name = "gridColumn49";
             // 

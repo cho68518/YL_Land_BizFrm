@@ -581,7 +581,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "성명";
+            this.gridColumn3.Caption = "이름";
             this.gridColumn3.FieldName = "ceo_name";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -1279,7 +1279,7 @@
             // 
             // gridColumn31
             // 
-            this.gridColumn31.Caption = "성명";
+            this.gridColumn31.Caption = "이름";
             this.gridColumn31.FieldName = "ceo_name";
             this.gridColumn31.Name = "gridColumn31";
             this.gridColumn31.OptionsColumn.AllowEdit = false;

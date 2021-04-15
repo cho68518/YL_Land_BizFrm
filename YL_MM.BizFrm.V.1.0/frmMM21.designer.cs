@@ -318,7 +318,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "성명";
+            this.gridColumn3.Caption = "이름";
             this.gridColumn3.FieldName = "u_name";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -489,7 +489,7 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "성명";
+            this.gridColumn13.Caption = "이름";
             this.gridColumn13.FieldName = "u_name";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
@@ -634,7 +634,7 @@
             // 
             // gridColumn23
             // 
-            this.gridColumn23.Caption = "성명";
+            this.gridColumn23.Caption = "이름";
             this.gridColumn23.FieldName = "u_name";
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.Visible = true;

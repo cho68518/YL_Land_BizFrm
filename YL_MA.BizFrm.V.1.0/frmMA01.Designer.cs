@@ -867,13 +867,13 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "성명(한자)";
+            this.gridColumn3.Caption = "이름(한자)";
             this.gridColumn3.FieldName = "CHINESENAME";
             this.gridColumn3.Name = "gridColumn3";
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "성명(영문)";
+            this.gridColumn6.Caption = "이름(영문)";
             this.gridColumn6.FieldName = "ENGLISHNAME";
             this.gridColumn6.Name = "gridColumn6";
             // 
@@ -1194,7 +1194,7 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(297, 29);
-            this.layoutControlItem3.Text = "성명";
+            this.layoutControlItem3.Text = "이름";
             this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem3.TextToControlDistance = 5;
@@ -1405,7 +1405,7 @@
             this.txtNAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtNAME.RequireGroup = "R1";
-            this.txtNAME.RequireMessage = "한글 성명을 입력하세요!";
+            this.txtNAME.RequireMessage = "한글 이름을 입력하세요!";
             this.txtNAME.Size = new System.Drawing.Size(164, 20);
             this.txtNAME.StyleController = this.layoutControl2;
             this.txtNAME.TabIndex = 2;
@@ -1590,7 +1590,7 @@
             this.layoutControlItem5.Location = new System.Drawing.Point(164, 42);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(263, 24);
-            this.layoutControlItem5.Text = "성명(한글)";
+            this.layoutControlItem5.Text = "이름(한글)";
             this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(90, 20);
             this.layoutControlItem5.TextToControlDistance = 5;
@@ -1598,11 +1598,11 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.txtCHINESENAME;
-            this.layoutControlItem6.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem6.CustomizationFormText = "이름(한글)";
             this.layoutControlItem6.Location = new System.Drawing.Point(164, 66);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(263, 24);
-            this.layoutControlItem6.Text = "성명(한자)";
+            this.layoutControlItem6.Text = "이름(한자)";
             this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(90, 20);
             this.layoutControlItem6.TextToControlDistance = 5;
@@ -1610,11 +1610,11 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtENGLISHNAME;
-            this.layoutControlItem7.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem7.CustomizationFormText = "이름(한글)";
             this.layoutControlItem7.Location = new System.Drawing.Point(164, 90);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(263, 24);
-            this.layoutControlItem7.Text = "성명(영문)";
+            this.layoutControlItem7.Text = "이름(영문)";
             this.layoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(90, 20);
             this.layoutControlItem7.TextToControlDistance = 5;
@@ -1622,7 +1622,7 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.txtIDCARDNO;
-            this.layoutControlItem8.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem8.CustomizationFormText = "이름(한글)";
             this.layoutControlItem8.Location = new System.Drawing.Point(164, 114);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(263, 24);
@@ -1669,7 +1669,7 @@
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.txtVISANO;
-            this.layoutControlItem12.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem12.CustomizationFormText = "이름(한글)";
             this.layoutControlItem12.Location = new System.Drawing.Point(164, 210);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(263, 24);
@@ -1681,7 +1681,7 @@
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.txtMIDCARDNO;
-            this.layoutControlItem13.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem13.CustomizationFormText = "이름(한글)";
             this.layoutControlItem13.Location = new System.Drawing.Point(164, 234);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(263, 24);
@@ -1821,7 +1821,7 @@
             this.layoutControlItem19.AppearanceItemCaption.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
             this.layoutControlItem19.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem19.Control = this.txtCOIDNO;
-            this.layoutControlItem19.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem19.CustomizationFormText = "이름(한글)";
             this.layoutControlItem19.Location = new System.Drawing.Point(164, 0);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Size = new System.Drawing.Size(263, 24);
@@ -3315,7 +3315,7 @@
             // layoutControlItem45
             // 
             this.layoutControlItem45.Control = this.txtLEFTSIGHT;
-            this.layoutControlItem45.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem45.CustomizationFormText = "이름(한글)";
             this.layoutControlItem45.Location = new System.Drawing.Point(289, 28);
             this.layoutControlItem45.MaxSize = new System.Drawing.Size(156, 24);
             this.layoutControlItem45.MinSize = new System.Drawing.Size(156, 24);
@@ -3330,7 +3330,7 @@
             // layoutControlItem46
             // 
             this.layoutControlItem46.Control = this.txtRIGHTSIGHT;
-            this.layoutControlItem46.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem46.CustomizationFormText = "이름(한글)";
             this.layoutControlItem46.Location = new System.Drawing.Point(445, 28);
             this.layoutControlItem46.MaxSize = new System.Drawing.Size(62, 24);
             this.layoutControlItem46.MinSize = new System.Drawing.Size(62, 24);
@@ -3361,7 +3361,7 @@
             // layoutControlItem48
             // 
             this.layoutControlItem48.Control = this.txtHEIGHT;
-            this.layoutControlItem48.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem48.CustomizationFormText = "이름(한글)";
             this.layoutControlItem48.Location = new System.Drawing.Point(289, 76);
             this.layoutControlItem48.Name = "layoutControlItem48";
             this.layoutControlItem48.Size = new System.Drawing.Size(240, 24);
@@ -3373,7 +3373,7 @@
             // layoutControlItem49
             // 
             this.layoutControlItem49.Control = this.txtWEIGHT;
-            this.layoutControlItem49.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem49.CustomizationFormText = "이름(한글)";
             this.layoutControlItem49.Location = new System.Drawing.Point(289, 100);
             this.layoutControlItem49.Name = "layoutControlItem49";
             this.layoutControlItem49.Size = new System.Drawing.Size(240, 24);
@@ -3385,7 +3385,7 @@
             // layoutControlItem50
             // 
             this.layoutControlItem50.Control = this.txtHOUSEHOLDER;
-            this.layoutControlItem50.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem50.CustomizationFormText = "이름(한글)";
             this.layoutControlItem50.Location = new System.Drawing.Point(543, 28);
             this.layoutControlItem50.MaxSize = new System.Drawing.Size(275, 24);
             this.layoutControlItem50.MinSize = new System.Drawing.Size(275, 24);
@@ -3400,7 +3400,7 @@
             // layoutControlItem52
             // 
             this.layoutControlItem52.Control = this.txtRELATION;
-            this.layoutControlItem52.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem52.CustomizationFormText = "이름(한글)";
             this.layoutControlItem52.Location = new System.Drawing.Point(543, 52);
             this.layoutControlItem52.Name = "layoutControlItem52";
             this.layoutControlItem52.Size = new System.Drawing.Size(275, 24);
@@ -3423,7 +3423,7 @@
             // layoutControlItem43
             // 
             this.layoutControlItem43.Control = this.txtCARNO;
-            this.layoutControlItem43.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem43.CustomizationFormText = "이름(한글)";
             this.layoutControlItem43.Location = new System.Drawing.Point(0, 124);
             this.layoutControlItem43.Name = "layoutControlItem43";
             this.layoutControlItem43.Size = new System.Drawing.Size(275, 24);
@@ -3435,7 +3435,7 @@
             // layoutControlItem44
             // 
             this.layoutControlItem44.Control = this.txtRELIGION;
-            this.layoutControlItem44.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem44.CustomizationFormText = "이름(한글)";
             this.layoutControlItem44.Location = new System.Drawing.Point(0, 148);
             this.layoutControlItem44.Name = "layoutControlItem44";
             this.layoutControlItem44.Size = new System.Drawing.Size(275, 24);
@@ -3455,7 +3455,7 @@
             // layoutControlItem53
             // 
             this.layoutControlItem53.Control = this.txtHOBBY;
-            this.layoutControlItem53.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem53.CustomizationFormText = "이름(한글)";
             this.layoutControlItem53.Location = new System.Drawing.Point(543, 76);
             this.layoutControlItem53.Name = "layoutControlItem53";
             this.layoutControlItem53.Size = new System.Drawing.Size(275, 24);
@@ -3467,7 +3467,7 @@
             // layoutControlItem54
             // 
             this.layoutControlItem54.Control = this.txtSPECIALABILITY;
-            this.layoutControlItem54.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem54.CustomizationFormText = "이름(한글)";
             this.layoutControlItem54.Location = new System.Drawing.Point(543, 100);
             this.layoutControlItem54.Name = "layoutControlItem54";
             this.layoutControlItem54.Size = new System.Drawing.Size(275, 24);
@@ -3853,11 +3853,11 @@
             // layoutControlItem61
             // 
             this.layoutControlItem61.Control = this.txtNAME2;
-            this.layoutControlItem61.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem61.CustomizationFormText = "이름(한글)";
             this.layoutControlItem61.Location = new System.Drawing.Point(0, 60);
             this.layoutControlItem61.Name = "layoutControlItem61";
             this.layoutControlItem61.Size = new System.Drawing.Size(298, 24);
-            this.layoutControlItem61.Text = "성명";
+            this.layoutControlItem61.Text = "이름";
             this.layoutControlItem61.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem61.TextSize = new System.Drawing.Size(90, 20);
             this.layoutControlItem61.TextToControlDistance = 5;
@@ -3865,7 +3865,7 @@
             // layoutControlItem62
             // 
             this.layoutControlItem62.Control = this.txtIDCARDNO2;
-            this.layoutControlItem62.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem62.CustomizationFormText = "이름(한글)";
             this.layoutControlItem62.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem62.Name = "layoutControlItem62";
             this.layoutControlItem62.Size = new System.Drawing.Size(298, 24);
@@ -3889,7 +3889,7 @@
             // layoutControlItem64
             // 
             this.layoutControlItem64.Control = this.txtJOB;
-            this.layoutControlItem64.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem64.CustomizationFormText = "이름(한글)";
             this.layoutControlItem64.Location = new System.Drawing.Point(0, 132);
             this.layoutControlItem64.Name = "layoutControlItem64";
             this.layoutControlItem64.Size = new System.Drawing.Size(298, 24);
@@ -4049,7 +4049,7 @@
             // 
             // gridColumn41
             // 
-            this.gridColumn41.Caption = "성명";
+            this.gridColumn41.Caption = "이름";
             this.gridColumn41.FieldName = "NAME";
             this.gridColumn41.Name = "gridColumn41";
             this.gridColumn41.Visible = true;
@@ -4739,7 +4739,7 @@
             // layoutControlItem51
             // 
             this.layoutControlItem51.Control = this.efwTextEdit8;
-            this.layoutControlItem51.CustomizationFormText = "성명(한글)";
+            this.layoutControlItem51.CustomizationFormText = "이름(한글)";
             this.layoutControlItem51.Location = new System.Drawing.Point(352, 48);
             this.layoutControlItem51.Name = "layoutControlItem51";
             this.layoutControlItem51.Size = new System.Drawing.Size(653, 24);

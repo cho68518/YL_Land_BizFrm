@@ -916,7 +916,7 @@
             // 
             this.bandedGridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.bandedGridColumn4.AppearanceHeader.Options.UseBackColor = true;
-            this.bandedGridColumn4.Caption = "G매니저 성명";
+            this.bandedGridColumn4.Caption = "G매니저 이름";
             this.bandedGridColumn4.FieldName = "p_chef_name";
             this.bandedGridColumn4.Name = "bandedGridColumn4";
             this.bandedGridColumn4.OptionsColumn.AllowEdit = false;

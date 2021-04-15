@@ -398,7 +398,7 @@
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(106, 14);
             this.efwLabel3.TabIndex = 53;
-            this.efwLabel3.Text = "성함 / 닉네임 / 아이디";
+            this.efwLabel3.Text = "이름 / 닉네임 / 아이디";
             // 
             // efwLabel4
             // 

@@ -150,7 +150,7 @@ namespace YL_MM.BizFrm
 
             if (string.IsNullOrEmpty(this.txtCEO_NAME.Text))
             {
-                MessageAgent.MessageShow(MessageType.Warning, " 성명을 입력하세요!");
+                MessageAgent.MessageShow(MessageType.Warning, " 이름을 입력하세요!");
                 return;
             }
 

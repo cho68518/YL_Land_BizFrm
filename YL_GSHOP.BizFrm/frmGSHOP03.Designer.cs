@@ -599,7 +599,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtID;
-            this.layoutControlItem3.CustomizationFormText = "성명";
+            this.layoutControlItem3.CustomizationFormText = "이름";
             this.layoutControlItem3.Location = new System.Drawing.Point(558, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(69, 24);
@@ -610,7 +610,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtSETCODE;
-            this.layoutControlItem5.CustomizationFormText = "성명";
+            this.layoutControlItem5.CustomizationFormText = "이름";
             this.layoutControlItem5.Location = new System.Drawing.Point(627, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(119, 24);
@@ -944,7 +944,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txtU_NAME;
-            this.layoutControlItem4.CustomizationFormText = "성명";
+            this.layoutControlItem4.CustomizationFormText = "이름";
             this.layoutControlItem4.Location = new System.Drawing.Point(160, 0);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(215, 24);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(215, 24);
@@ -960,7 +960,7 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtU_CELL_NUM;
-            this.layoutControlItem7.CustomizationFormText = "성명";
+            this.layoutControlItem7.CustomizationFormText = "이름";
             this.layoutControlItem7.Location = new System.Drawing.Point(385, 0);
             this.layoutControlItem7.MaxSize = new System.Drawing.Size(180, 24);
             this.layoutControlItem7.MinSize = new System.Drawing.Size(180, 24);
@@ -1000,7 +1000,7 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txtU_ADDR;
-            this.layoutControlItem9.CustomizationFormText = "성명";
+            this.layoutControlItem9.CustomizationFormText = "이름";
             this.layoutControlItem9.Location = new System.Drawing.Point(575, 0);
             this.layoutControlItem9.MaxSize = new System.Drawing.Size(410, 24);
             this.layoutControlItem9.MinSize = new System.Drawing.Size(410, 24);

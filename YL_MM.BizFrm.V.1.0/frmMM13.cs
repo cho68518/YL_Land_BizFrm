@@ -66,7 +66,7 @@ namespace YL_MM.BizFrm
 
                 if (string.IsNullOrEmpty(this.txtSearch.Text))
                 {
-                    MessageAgent.MessageShow(MessageType.Warning, " 성명 또는 닉네임을 입력하세요 ");
+                    MessageAgent.MessageShow(MessageType.Warning, " 이름 또는 닉네임을 입력하세요 ");
                     return;
                 }
 
