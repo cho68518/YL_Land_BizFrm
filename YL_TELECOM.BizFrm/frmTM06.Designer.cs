@@ -710,6 +710,7 @@
             this.advBandedGridView2.Name = "advBandedGridView2";
             this.advBandedGridView2.OptionsView.ShowFooter = true;
             this.advBandedGridView2.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.advBandedGridView1_RowCellStyle);
+            this.advBandedGridView2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.advBandedGridView2_KeyDown);
             // 
             // gridBand1
             // 

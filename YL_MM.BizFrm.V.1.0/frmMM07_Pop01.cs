@@ -49,6 +49,11 @@ namespace YL_MM.BizFrm
         public string pDOMA_U_NICKNAME { get; set; }
 
 
+        public string pmd_leader_id { get; set; }
+        public string pmd_leader_name { get; set; }
+        public string pmd_leader_nickname { get; set; }
+        public string pmd_leader { get; set; }
+
 
         public frmMM07_Pop01()
         {
@@ -75,14 +80,24 @@ namespace YL_MM.BizFrm
             txtRECV_SHEF_ID.EditValue = pRECV_SHEF_ID;
             txtRECV_SHEF_U_NAME.EditValue = pRECV_SHEF_U_NAME;
             txtRECV_SHEF_U_NICKNAME.EditValue = pRECV_SHEF_U_NICKNAME;
-            
+
             txtDOMA_ID.EditValue = pDOMA_ID;
             txtDOMA_U_NAME.EditValue = pDOMA_U_NAME;
             txtDOMA_U_NICKNAME.EditValue = pDOMA_U_NICKNAME;
+
+            txtCHEF_ID.EditValue = pDOMA_ID;
+            txtCHEF_NAME.EditValue = pDOMA_U_NAME;
+            txtCHEF_NICKNAME.EditValue = pDOMA_U_NICKNAME;
+
+
+            txtmd_leader_id.EditValue = pmd_leader_id;
+            txtmd_leader_name.EditValue = pmd_leader_name;
+            txtmd_leader_nickname.EditValue = pmd_leader_nickname;
+
             //txtRECV_U_ID.EditValue = "1";
 
             rbLEVEL.EditValue = pLEVEL;
-
+            rbMd.EditValue = "0";
 
             gridView1.OptionsView.ShowFooter = true;
 
@@ -139,8 +154,6 @@ namespace YL_MM.BizFrm
                 this.txtRECV_U_NAME.EditValue = popup.U_NAME;
                 this.txtRECV_U_NICKNAME.EditValue = popup.U_NICKNAME;
                 this.txtRECV_U_ID.EditValue = popup.U_ID;
-
-
             }
             popup = null;
         }
@@ -250,11 +263,11 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_recv_id"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_send_id", MySqlDbType.VarChar));
-                            cmd.Parameters["i_send_id"].Value = txtRECV_U_ID.EditValue;
+                            cmd.Parameters["i_send_id"].Value = txtDOMA_U_ID.EditValue;
                             cmd.Parameters["i_send_id"].Direction = ParameterDirection.Input;
                             //txtDOMA_U_ID
                             cmd.Parameters.Add(new MySqlParameter("i_level", MySqlDbType.VarChar));
-                            cmd.Parameters["i_level"].Value = rbLEVEL.EditValue;
+                            cmd.Parameters["i_level"].Value = rbMd.EditValue;
                             cmd.Parameters["i_level"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_doma_id", MySqlDbType.VarChar));
@@ -307,10 +320,14 @@ namespace YL_MM.BizFrm
             popup.FormClosed -= popup_FormClosed1;
             if (popup.DialogResult == DialogResult.OK)
             {
-                this.txtDOMA_ID.EditValue = popup.USER_ID;
-                this.txtDOMA_U_NAME.EditValue = popup.U_NAME;
-                this.txtDOMA_U_NICKNAME.EditValue = popup.U_NICKNAME;
-                this.txtDOMA_U_ID.EditValue = popup.U_ID;
+                if (popup.DialogResult == DialogResult.OK)
+                {
+                    this.txtDOMA_ID.EditValue = popup.USER_ID;
+                    this.txtDOMA_U_NAME.EditValue = popup.U_NAME;
+                    this.txtDOMA_U_NICKNAME.EditValue = popup.U_NICKNAME;
+                    this.txtDOMA_U_ID.EditValue = popup.U_ID;
+
+                }
 
             }
             popup = null;
@@ -465,7 +482,7 @@ namespace YL_MM.BizFrm
         private void btnMember_delete_Click(object sender, EventArgs e)
         {
 
-            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
             {
                 try
                 {
@@ -518,6 +535,26 @@ namespace YL_MM.BizFrm
                     //EfwSimpleButton1_Click(null, null);
                 }
                 Open1();
+            }
+        }
+
+        private void efwRadioGroup1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (rbMd.EditValue.ToString() == "0")
+            {
+
+                txtDOMA_ID.EditValue = txtCHEF_ID.EditValue.ToString();
+                txtDOMA_U_NAME.EditValue = txtCHEF_NAME.EditValue.ToString();
+                txtDOMA_U_NICKNAME.EditValue = txtCHEF_NICKNAME.EditValue.ToString();
+
+            }
+
+            if (rbMd.EditValue.ToString() == "1")
+            {
+
+                txtDOMA_ID.EditValue = txtmd_leader_id.EditValue.ToString();
+                txtDOMA_U_NAME.EditValue = txtmd_leader_nickname.EditValue.ToString();
+                txtDOMA_U_NICKNAME.EditValue = txtmd_leader_nickname.EditValue.ToString();
             }
         }
     }

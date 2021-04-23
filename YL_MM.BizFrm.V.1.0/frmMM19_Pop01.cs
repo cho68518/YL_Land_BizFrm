@@ -17,7 +17,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YL_MM.BizFrm;
-using Tamir.SharpSsh;
 using System.Collections;
 using System.Net.Sockets;
 using System.Web;
