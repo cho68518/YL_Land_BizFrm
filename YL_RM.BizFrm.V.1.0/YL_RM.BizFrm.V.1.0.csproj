@@ -137,8 +137,7 @@
     <Reference Include="Tamir.SharpSSH">
       <HintPath>..\YL_MM.BizFrm.V.1.0\bin\Debug\Tamir.SharpSSH.dll</HintPath>
     </Reference>
-    <Reference Include="WinFormHtmlEditor, Version=7.4.11.0, Culture=neutral, PublicKeyToken=8cd3285c24067f7f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="WinFormHtmlEditor">
       <HintPath>..\..\WinFormHtmlEditor.dll</HintPath>
     </Reference>
     <Reference Include="YL_PM.BizFrm.V.1.0">

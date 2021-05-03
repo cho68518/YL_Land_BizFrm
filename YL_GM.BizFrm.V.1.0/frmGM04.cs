@@ -62,6 +62,7 @@ namespace YL_GM.BizFrm
             this.IsExcel = false;
 
             dtS_DATE.EditValue = DateTime.Now;
+            dfDate.EditValue = DateTime.Now;
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
