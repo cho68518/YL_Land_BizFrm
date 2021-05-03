@@ -20,6 +20,7 @@ namespace YL_DONUT.BizFrm
 {
     public partial class frmDN26 : FrmBase
     {
+        frmDN26_Pop01 popup;
         public frmDN26()
         {
             InitializeComponent();
@@ -185,6 +186,24 @@ namespace YL_DONUT.BizFrm
         {
             if (e.KeyCode == Keys.Enter)
                 Search();
+        }
+
+        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
+        {
+            popup = new frmDN26_Pop01();
+
+            popup.pU_ID = gridView1.GetFocusedRowCellValue("p_ct_cd").ToString();
+            popup.pMD_U_ID = gridView1.GetFocusedRowCellValue("p_ct_nm").ToString();
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            popup = null;
         }
     }
 }
