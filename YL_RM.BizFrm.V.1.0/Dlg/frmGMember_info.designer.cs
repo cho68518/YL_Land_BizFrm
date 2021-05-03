@@ -227,7 +227,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "성함";
+            this.gridColumn3.Caption = "이름";
             this.gridColumn3.FieldName = "u_name";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;

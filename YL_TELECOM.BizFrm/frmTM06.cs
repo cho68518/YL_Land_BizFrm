@@ -203,5 +203,13 @@ namespace YL_TELECOM.BizFrm
 
         }
 
+        private void advBandedGridView2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(advBandedGridView2.GetFocusedDisplayText());
+                e.Handled = true;
+            }
+        }
     }
 }

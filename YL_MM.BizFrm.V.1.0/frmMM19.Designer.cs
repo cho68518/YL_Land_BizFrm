@@ -954,7 +954,7 @@
             this.efwLabel8.Name = "efwLabel8";
             this.efwLabel8.Size = new System.Drawing.Size(32, 15);
             this.efwLabel8.TabIndex = 21;
-            this.efwLabel8.Text = "성명";
+            this.efwLabel8.Text = "이름";
             // 
             // rbAdvice_Type
             // 
@@ -1926,7 +1926,7 @@
             // 
             // gridColumn15
             // 
-            this.gridColumn15.Caption = "성명";
+            this.gridColumn15.Caption = "이름";
             this.gridColumn15.FieldName = "name";
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.AllowEdit = false;

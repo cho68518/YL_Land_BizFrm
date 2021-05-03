@@ -120,7 +120,7 @@ namespace YL_MM.BizFrm
             string sLevel = string.Empty;
             sLevel = advBandedGridView1.GetFocusedRowCellValue("u_chef_level_cd").ToString();
 
-            if (Convert.ToInt16(sLevel.ToString()) >= 3 )
+            if (Convert.ToInt16(sLevel.ToString()) >= 3)
             {
                 MessageAgent.MessageShow(MessageType.Warning, " 변경할수 없는 등급의 추천인 입니다!");
                 return;
@@ -161,6 +161,11 @@ namespace YL_MM.BizFrm
             popup.pDOMA_ID = advBandedGridView1.GetFocusedRowCellValue("res_doma_u_id").ToString();
             popup.pDOMA_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_doma_u_name").ToString();
             popup.pDOMA_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_doma_u_nickname").ToString();
+
+            popup.pmd_leader_id = advBandedGridView1.GetFocusedRowCellValue("md_leader_id").ToString();
+            popup.pmd_leader_name = advBandedGridView1.GetFocusedRowCellValue("md_leader_name").ToString();
+            popup.pmd_leader_nickname = advBandedGridView1.GetFocusedRowCellValue("md_leader_nickname").ToString();
+            popup.pmd_leader = advBandedGridView1.GetFocusedRowCellValue("md_leader").ToString();
 
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();

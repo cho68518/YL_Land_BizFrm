@@ -318,7 +318,7 @@
             // 
             // gridColumn23
             // 
-            this.gridColumn23.Caption = "결재자 성명";
+            this.gridColumn23.Caption = "결재자 이름";
             this.gridColumn23.FieldName = "u_member_name";
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.Visible = true;

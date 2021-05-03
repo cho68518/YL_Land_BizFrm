@@ -750,7 +750,7 @@
             this.efwLabel28.Name = "efwLabel28";
             this.efwLabel28.Size = new System.Drawing.Size(20, 14);
             this.efwLabel28.TabIndex = 53;
-            this.efwLabel28.Text = "성명";
+            this.efwLabel28.Text = "이름";
             // 
             // btnMember
             // 
@@ -935,7 +935,7 @@
             // 
             // gridColumn35
             // 
-            this.gridColumn35.Caption = "성명";
+            this.gridColumn35.Caption = "이름";
             this.gridColumn35.FieldName = "ceo_name";
             this.gridColumn35.Name = "gridColumn35";
             this.gridColumn35.OptionsColumn.AllowEdit = false;
@@ -1338,7 +1338,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "성명";
+            this.gridColumn3.Caption = "이름";
             this.gridColumn3.FieldName = "ceo_name";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.ReadOnly = true;

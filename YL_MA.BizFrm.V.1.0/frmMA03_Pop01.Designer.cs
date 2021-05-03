@@ -220,7 +220,7 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "주문자 성명";
+            this.gridColumn4.Caption = "주문자 이름";
             this.gridColumn4.FieldName = "OrderName";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -334,7 +334,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtSDate;
-            this.layoutControlItem5.CustomizationFormText = "성명";
+            this.layoutControlItem5.CustomizationFormText = "이름";
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(157, 29);
@@ -347,7 +347,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtEDate;
-            this.layoutControlItem2.CustomizationFormText = "성명";
+            this.layoutControlItem2.CustomizationFormText = "이름";
             this.layoutControlItem2.Location = new System.Drawing.Point(157, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(117, 29);

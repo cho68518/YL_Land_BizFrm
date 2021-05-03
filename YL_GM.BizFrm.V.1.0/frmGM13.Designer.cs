@@ -435,7 +435,7 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "From 성명";
+            this.gridColumn6.Caption = "From 이름";
             this.gridColumn6.FieldName = "user_name";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
@@ -502,7 +502,7 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "To 성명";
+            this.gridColumn13.Caption = "To 이름";
             this.gridColumn13.FieldName = "recomender_u_name";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
@@ -785,7 +785,7 @@
             // 
             // gridColumn24
             // 
-            this.gridColumn24.Caption = "성함";
+            this.gridColumn24.Caption = "이름";
             this.gridColumn24.FieldName = "u_name";
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.OptionsColumn.ReadOnly = true;

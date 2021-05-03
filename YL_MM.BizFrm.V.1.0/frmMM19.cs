@@ -489,7 +489,7 @@ namespace YL_MM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
-        // 성명으로 
+        // 이름으로 
         private void txtName_KeyDown(object sender, KeyEventArgs e)
         {
             // 이름으로 검색
@@ -648,7 +648,7 @@ namespace YL_MM.BizFrm
                     txtMd_Name.Focus();
             }
         }
-        // 제품 성명, 대응방안
+        // 제품 이름, 대응방안
 
         private void txtAddr_Detail_KeyDown(object sender, KeyEventArgs e)
         {
@@ -862,7 +862,7 @@ namespace YL_MM.BizFrm
             {
                 if (txtName.EditValue == null)
                 {
-                    MessageAgent.MessageShow(MessageType.Warning, " 성명을 입력하세요!");
+                    MessageAgent.MessageShow(MessageType.Warning, " 이름을 입력하세요!");
                     return;
                 }
 

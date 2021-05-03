@@ -79,7 +79,7 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add("i_year", MySqlDbType.VarChar, 4);
                         cmd.Parameters[0].Value = txtYEAR.EditValue;
 
-                        cmd.Parameters.Add("i_ct_cd", MySqlDbType.VarChar, 7);
+                        cmd.Parameters.Add("i_ct_cd", MySqlDbType.VarChar, 50);
                         cmd.Parameters[1].Value = txtCT_CD.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))

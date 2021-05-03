@@ -446,7 +446,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtCUSTID;
-            this.layoutControlItem3.CustomizationFormText = "성명";
+            this.layoutControlItem3.CustomizationFormText = "이름";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(214, 24);
@@ -470,7 +470,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtCUSTPASS;
-            this.layoutControlItem2.CustomizationFormText = "성명";
+            this.layoutControlItem2.CustomizationFormText = "이름";
             this.layoutControlItem2.Location = new System.Drawing.Point(224, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(209, 24);
@@ -502,7 +502,7 @@
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.txtBOSSHPNO;
-            this.layoutControlItem19.CustomizationFormText = "성명";
+            this.layoutControlItem19.CustomizationFormText = "이름";
             this.layoutControlItem19.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Size = new System.Drawing.Size(214, 24);
@@ -913,7 +913,7 @@
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.txtFAXNO;
-            this.layoutControlItem18.CustomizationFormText = "성명";
+            this.layoutControlItem18.CustomizationFormText = "이름";
             this.layoutControlItem18.Location = new System.Drawing.Point(229, 144);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.Size = new System.Drawing.Size(205, 25);
@@ -944,7 +944,7 @@
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.txtEMAILADD;
-            this.layoutControlItem16.CustomizationFormText = "성명";
+            this.layoutControlItem16.CustomizationFormText = "이름";
             this.layoutControlItem16.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.Size = new System.Drawing.Size(216, 25);
@@ -956,7 +956,7 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtSERVICETYPE;
-            this.layoutControlItem7.CustomizationFormText = "성명";
+            this.layoutControlItem7.CustomizationFormText = "이름";
             this.layoutControlItem7.Location = new System.Drawing.Point(229, 72);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(205, 24);
@@ -1001,11 +1001,11 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.txtPERSONNAME;
-            this.layoutControlItem8.CustomizationFormText = "성명";
+            this.layoutControlItem8.CustomizationFormText = "이름";
             this.layoutControlItem8.Location = new System.Drawing.Point(229, 48);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(205, 24);
-            this.layoutControlItem8.Text = "대표자성명";
+            this.layoutControlItem8.Text = "대표자이름";
             this.layoutControlItem8.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem8.TextToControlDistance = 5;
@@ -1028,11 +1028,11 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txtCHARGENAME;
-            this.layoutControlItem9.CustomizationFormText = "성명";
+            this.layoutControlItem9.CustomizationFormText = "이름";
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(216, 24);
-            this.layoutControlItem9.Text = "담당자성명";
+            this.layoutControlItem9.Text = "담당자이름";
             this.layoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem9.TextToControlDistance = 5;
@@ -1040,7 +1040,7 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.txtHANDPHONE;
-            this.layoutControlItem10.CustomizationFormText = "성명";
+            this.layoutControlItem10.CustomizationFormText = "이름";
             this.layoutControlItem10.Location = new System.Drawing.Point(229, 120);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(205, 24);
@@ -1052,7 +1052,7 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txtSERVICENAME;
-            this.layoutControlItem1.CustomizationFormText = "성명";
+            this.layoutControlItem1.CustomizationFormText = "이름";
             this.layoutControlItem1.Location = new System.Drawing.Point(229, 96);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(205, 24);
@@ -1064,7 +1064,7 @@
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.txtTELNO;
-            this.layoutControlItem17.CustomizationFormText = "성명";
+            this.layoutControlItem17.CustomizationFormText = "이름";
             this.layoutControlItem17.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem17.Name = "layoutControlItem17";
             this.layoutControlItem17.Size = new System.Drawing.Size(216, 24);

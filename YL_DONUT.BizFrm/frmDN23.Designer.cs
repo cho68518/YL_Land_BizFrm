@@ -338,7 +338,7 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "성명";
+            this.gridColumn4.Caption = "이름";
             this.gridColumn4.FieldName = "u_name";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;

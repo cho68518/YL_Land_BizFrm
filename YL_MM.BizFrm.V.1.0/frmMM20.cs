@@ -304,6 +304,12 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_test_grant"].Value = rbTest_Grant.EditValue;
                             cmd.Parameters["i_test_grant"].Direction = ParameterDirection.Input;
 
+
+                            cmd.Parameters.Add(new MySqlParameter("i_team_leader", MySqlDbType.VarChar));
+                            cmd.Parameters["i_team_leader"].Value = rbteam_leader.EditValue;
+                            cmd.Parameters["i_team_leader"].Direction = ParameterDirection.Input;
+
+
                             cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
                             cmd.Parameters["i_remark"].Value = txtRemark.EditValue;
                             cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;

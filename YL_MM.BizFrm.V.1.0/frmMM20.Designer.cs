@@ -374,7 +374,7 @@
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(20, 14);
             this.efwLabel3.TabIndex = 4;
-            this.efwLabel3.Text = "성함";
+            this.efwLabel3.Text = "이름";
             // 
             // txtU_Nickname
             // 
@@ -511,7 +511,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "성함";
+            this.gridColumn3.Caption = "이름";
             this.gridColumn3.FieldName = "u_name";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;

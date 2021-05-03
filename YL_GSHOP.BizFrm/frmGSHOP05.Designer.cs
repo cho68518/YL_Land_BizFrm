@@ -272,7 +272,7 @@
             // 
             // gridColumn15
             // 
-            this.gridColumn15.Caption = "성명";
+            this.gridColumn15.Caption = "이름";
             this.gridColumn15.FieldName = "ceo_name";
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.Visible = true;

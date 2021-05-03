@@ -414,7 +414,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtCT_NAME;
-            this.layoutControlItem5.CustomizationFormText = "성명";
+            this.layoutControlItem5.CustomizationFormText = "이름";
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(339, 24);
@@ -434,7 +434,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtCT_CD;
-            this.layoutControlItem2.CustomizationFormText = "성명";
+            this.layoutControlItem2.CustomizationFormText = "이름";
             this.layoutControlItem2.Location = new System.Drawing.Point(339, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(141, 24);
@@ -446,7 +446,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtYEAR;
-            this.layoutControlItem3.CustomizationFormText = "성명";
+            this.layoutControlItem3.CustomizationFormText = "이름";
             this.layoutControlItem3.Location = new System.Drawing.Point(480, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(337, 24);
