@@ -104,7 +104,7 @@
             this.panelTop.Location = new System.Drawing.Point(3, 35);
             this.panelTop.Name = "panelTop";
             this.panelTop.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panelTop.Size = new System.Drawing.Size(1164, 87);
+            this.panelTop.Size = new System.Drawing.Size(1026, 87);
             this.panelTop.TabIndex = 10;
             // 
             // efwGroupControl1
@@ -124,7 +124,7 @@
             this.efwGroupControl1.Name = "efwGroupControl1";
             this.efwGroupControl1.Padding = new System.Windows.Forms.Padding(5);
             this.efwGroupControl1.ShowCaption = false;
-            this.efwGroupControl1.Size = new System.Drawing.Size(1164, 77);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1026, 77);
             this.efwGroupControl1.TabIndex = 9;
             this.efwGroupControl1.Text = "efwGroupControl1";
             // 
@@ -274,7 +274,7 @@
             this.btnDispYes,
             this.repositoryItemMemoExEdit1,
             this.repositoryItemMemoEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1164, 692);
+            this.efwGridControl1.Size = new System.Drawing.Size(1026, 423);
             this.efwGridControl1.TabIndex = 12;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -446,10 +446,12 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "pr_jibun_addr";
+            this.gridColumn13.Caption = "지번주소";
             this.gridColumn13.FieldName = "pr_jibun_addr";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 11;
             // 
             // gridColumn15
             // 
@@ -519,7 +521,7 @@
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.panelTop);
             this.Name = "frmGSHOP08";
-            this.Size = new System.Drawing.Size(1170, 814);
+            this.Size = new System.Drawing.Size(1032, 545);
             this.Controls.SetChildIndex(this.panelTop, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             this.panelTop.ResumeLayout(false);

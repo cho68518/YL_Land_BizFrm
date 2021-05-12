@@ -528,6 +528,9 @@
     <EmbeddedResource Include="frmDN24.resx">
       <DependentUpon>frmDN24.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDN26_Pop01.resx">
+      <DependentUpon>frmDN26_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>

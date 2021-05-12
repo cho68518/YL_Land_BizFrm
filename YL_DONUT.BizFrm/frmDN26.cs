@@ -128,49 +128,50 @@ namespace YL_DONUT.BizFrm
 
         public override void Save()
         {
-            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            try
             {
-                try
-                {
-                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+                { 
+                    for (var i = 0; i < gridView1.DataRowCount; i++)
                     {
-                        var saveResult = new SaveTableResultInfo() { IsError = true };
-                        var dt = efwGridControl1.GetChangeDataWithRowState;
-                        var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
-
-                        for (var i = 0; i < dt.Rows.Count; i++)
+                        if (gridView1.GetRowCellValue(i, "md_leader").ToString().Length > 10)
                         {
-                            if (dt.Rows[i][StatusColumn].ToString() == "U")
+                            using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                             {
                                 using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SAVE_02", con))
                                 {
-
                                     con.Open();
                                     cmd.CommandType = CommandType.StoredProcedure;
 
                                     cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
                                     cmd.Parameters[0].Value = gridView1.GetRowCellValue(i, "o_code");
 
+                                    cmd.Parameters.Add("i_o_u_id", MySqlDbType.VarChar, 50);
+                                    cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "o_u_id");
+
                                     cmd.Parameters.Add("i_remark1", MySqlDbType.VarChar, 255);
-                                    cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "remark1");
+                                    cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "remark1");
 
-                                    cmd.Parameters.Add("i_remark2", MySqlDbType.VarChar, 255);
-                                    cmd.Parameters[2].Value = gridView1.GetRowCellValue(i, "remark2");
+                                    cmd.Parameters.Add("i_md_leader", MySqlDbType.VarChar, 255);
+                                    cmd.Parameters[3].Value = gridView1.GetRowCellValue(i, "md_leader");
 
+                                    cmd.Parameters.Add("i_Proc", MySqlDbType.VarChar, 255);
+                                    cmd.Parameters[4].Value = "P";
 
                                     cmd.ExecuteNonQuery();
                                     con.Close();
                                 }
                             }
-
                         }
+
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-                }
             }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            Search();
         }
 
         private void gridView1_KeyDown(object sender, KeyEventArgs e)
@@ -188,22 +189,77 @@ namespace YL_DONUT.BizFrm
                 Search();
         }
 
-        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
+        private void repositoryItemButtonEdit2_Click(object sender, EventArgs e)
         {
             popup = new frmDN26_Pop01();
 
-            popup.pU_ID = gridView1.GetFocusedRowCellValue("p_ct_cd").ToString();
-            popup.pMD_U_ID = gridView1.GetFocusedRowCellValue("p_ct_nm").ToString();
+            popup.pU_NICKNAME = gridView1.GetFocusedRowCellValue("u_nickname").ToString();
+            popup.pU_ID = gridView1.GetFocusedRowCellValue("o_u_id").ToString();
+            popup.pMD_U_ID = gridView1.GetFocusedRowCellValue("md_leader").ToString();
+            popup.pMD_U_NICKNAME = "";
 
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();
         }
 
+
         private void popup_FormClosed(object sender, FormClosedEventArgs e)
         {
             popup.FormClosed -= popup_FormClosed;
+            if (popup.DialogResult == DialogResult.OK)
+            {
 
+                this.gridView1.SetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.FocusedColumn, popup.pMD_U_NICKNAME);
+                this.gridView1.SetRowCellValue(this.gridView1.FocusedRowHandle, gridView1.Columns["md_leader"], popup.pMD_U_ID);
+
+            }
             popup = null;
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                string sO_CODE = gridView1.GetFocusedRowCellValue("o_code").ToString();
+                string sO_U_ID = gridView1.GetFocusedRowCellValue("o_u_id").ToString();
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SAVE_02", con))
+                        {
+
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
+                            cmd.Parameters[0].Value = sO_CODE;
+
+                            cmd.Parameters.Add("i_o_u_id", MySqlDbType.VarChar, 50);
+                            cmd.Parameters[1].Value = sO_U_ID;
+
+                            cmd.Parameters.Add("i_remark1", MySqlDbType.VarChar, 255);
+                            cmd.Parameters[2].Value = "";
+
+                            cmd.Parameters.Add("i_md_leader", MySqlDbType.VarChar, 255);
+                            cmd.Parameters[3].Value = "";
+
+                            cmd.Parameters.Add("i_Proc", MySqlDbType.VarChar, 255);
+                            cmd.Parameters[4].Value = "D";
+
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+            }
         }
     }
 }
