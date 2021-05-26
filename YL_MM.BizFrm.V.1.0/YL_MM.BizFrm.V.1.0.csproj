@@ -91,9 +91,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Easy.Framework.Release\Easy.Framework.WinForm.Control.V.3.1.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+    <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Easy.Framework.Release\MySql.Data.dll</HintPath>
+      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -156,6 +156,18 @@
     </Compile>
     <Compile Include="Dlg\frmMemberInfo_Dup.Designer.cs">
       <DependentUpon>frmMemberInfo_Dup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM27.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM27.Designer.cs">
+      <DependentUpon>frmMM27.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMM26.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMM26.Designer.cs">
+      <DependentUpon>frmMM26.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMM25.cs">
       <SubType>UserControl</SubType>
@@ -492,6 +504,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMM25.resx">
       <DependentUpon>frmMM25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM26.resx">
+      <DependentUpon>frmMM26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMM27.resx">
+      <DependentUpon>frmMM27.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest01.resx">
       <DependentUpon>frmTest01.cs</DependentUpon>

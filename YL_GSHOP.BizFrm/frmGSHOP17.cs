@@ -21,6 +21,7 @@ namespace YL_GSHOP.BizFrm
 {
     public partial class frmGSHOP17 : FrmBase
     {
+        frmMemberInfo popup;
         public frmGSHOP17()
         {
             InitializeComponent();
@@ -46,7 +47,7 @@ namespace YL_GSHOP.BizFrm
 
             this.efwGridControl1.BindControlSet(
               new ColumnControlSet("id", txtID)
-            , new ColumnControlSet("Login_ID", txtUserName)
+            , new ColumnControlSet("username", txtUserName)
             , new ColumnControlSet("u_name", txtU_Name)
             , new ColumnControlSet("u_cell", txtU_Cell)
             , new ColumnControlSet("u_email", txtU_Email)
@@ -113,7 +114,133 @@ namespace YL_GSHOP.BizFrm
 
         }
 
-        private void CmbTAREA1_EditValueChanged(object sender, EventArgs e)
+        public override void NewMode()
+        {
+            base.NewMode();
+
+            Eraser.Clear(this, "CLR1");
+            cmbRegion.EditValue = "00";
+            cmbRegion_Area.EditValue = "00";
+        }
+
+        public override void Search()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                string sP_SHOW_TYPE = string.Empty;
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.Dev_Conn))
+               // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP17_SELECT_01", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[0].Value = this.cmbQuery.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = this.txtSearch.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                            //this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            {
+                if (string.IsNullOrEmpty(this.txtUserName.Text))
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " ID를 입력하세요");
+                    return;
+                }
+
+                if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+                {
+                    try
+                    {
+                        // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.Dev_Conn))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP17_SAVE_01", con))
+                            {
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_id", MySqlDbType.Int32));
+                                cmd.Parameters["i_id"].Value = Convert.ToInt32(txtID.EditValue);
+                                cmd.Parameters["i_id"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_username", MySqlDbType.VarChar));
+                                cmd.Parameters["i_username"].Value = txtUserName.EditValue;
+                                cmd.Parameters["i_username"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_u_name", MySqlDbType.VarChar));
+                                cmd.Parameters["i_u_name"].Value = txtU_Name.EditValue;
+                                cmd.Parameters["i_u_name"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_u_cell", MySqlDbType.VarChar));
+                                cmd.Parameters["i_u_cell"].Value = txtU_Cell.EditValue;
+                                cmd.Parameters["i_u_cell"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_u_email", MySqlDbType.VarChar));
+                                cmd.Parameters["i_u_email"].Value = txtU_Email.EditValue;
+                                cmd.Parameters["i_u_email"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_region", MySqlDbType.VarChar));
+                                cmd.Parameters["i_region"].Value = cmbRegion.EditValue;
+                                cmd.Parameters["i_region"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_region_area", MySqlDbType.VarChar));
+                                cmd.Parameters["i_region_area"].Value = cmbRegion_Area.EditValue;
+                                cmd.Parameters["i_region_area"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_enabled", MySqlDbType.VarChar));
+                                cmd.Parameters["i_enabled"].Value = chkEnabled.EditValue;
+                                cmd.Parameters["i_enabled"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
+                                cmd.Parameters["i_u_id"].Value = txtU_ID.EditValue;
+                                cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
+
+
+                                cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                                cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                                cmd.ExecuteNonQuery();
+
+
+                                MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                    }
+                    Search();
+                }
+            }
+        }
+
+        private void cmbRegion_EditValueChanged(object sender, EventArgs e)
         {
             string sCSIDO = string.Empty;
 
@@ -149,88 +276,28 @@ namespace YL_GSHOP.BizFrm
 
             }
         }
-        public override void NewMode()
-        {
-            base.NewMode();
 
-            Eraser.Clear(this, "CLR1");
-            cmbRegion.EditValue = "00";
-            cmbRegion_Area.EditValue = "00";
-        }
-        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
         {
+            popup = new frmMemberInfo
             {
-                if (string.IsNullOrEmpty(this.txtUserName.Text))
-                {
-                    MessageAgent.MessageShow(MessageType.Warning, " ID를 입력하세요");
-                    return;
-                }
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+                MEMBER_TYPE = "ALL",
+            };
+            popup.FormClosed += popup_FormClosed2;
+            PopUpBizAgent.Show(this, popup);
+        }
 
-                if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
-                {
-                    try
-                    {
-                       // using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
-                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-                        {
-                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP17_SAVE_01", con))
-                            {
-                                con.Open();
-                                cmd.CommandType = CommandType.StoredProcedure;
-
-                                cmd.Parameters.Add(new MySqlParameter("i_id", MySqlDbType.Int32));
-                                cmd.Parameters["i_id"].Value = Convert.ToInt32(txtID.EditValue);
-                                cmd.Parameters["i_id"].Direction = ParameterDirection.Input;
-
-                                cmd.Parameters.Add(new MySqlParameter("i_username", MySqlDbType.VarChar));
-                                cmd.Parameters["i_username"].Value = txtUserName.EditValue;
-                                cmd.Parameters["i_username"].Direction = ParameterDirection.Input;
-
-                                cmd.Parameters.Add(new MySqlParameter("i_u_name", MySqlDbType.VarChar));
-                                cmd.Parameters["i_u_name"].Value = txtU_Name.EditValue;
-                                cmd.Parameters["i_u_name"].Direction = ParameterDirection.Input;
-
-                                cmd.Parameters.Add(new MySqlParameter("i_u_cell", MySqlDbType.VarChar));
-                                cmd.Parameters["i_u_cell"].Value = txtU_Cell.EditValue;
-                                cmd.Parameters["i_u_cell"].Direction = ParameterDirection.Input;
-
-                                cmd.Parameters.Add(new MySqlParameter("i_u_email", MySqlDbType.VarChar));
-                                cmd.Parameters["i_u_email"].Value = txtU_Email.EditValue;
-                                cmd.Parameters["i_u_email"].Direction = ParameterDirection.Input;
-
-                                cmd.Parameters.Add(new MySqlParameter("i_region", MySqlDbType.VarChar));
-                                cmd.Parameters["i_region"].Value = cmbRegion.EditValue;
-                                cmd.Parameters["i_region"].Direction = ParameterDirection.Input;
-
-                                cmd.Parameters.Add(new MySqlParameter("i_region_area", MySqlDbType.VarChar));
-                                cmd.Parameters["i_region_area"].Value = cmbRegion_Area.EditValue;
-                                cmd.Parameters["i_region_area"].Direction = ParameterDirection.Input;
-
-                                cmd.Parameters.Add(new MySqlParameter("i_enabled", MySqlDbType.Bit));
-                                cmd.Parameters["i_enabled"].Value = chkEnabled.EditValue;
-                                cmd.Parameters["i_enabled"].Direction = ParameterDirection.Input;
-
-                                cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
-                                cmd.Parameters["i_u_id"].Value = txtU_ID.EditValue;
-                                cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
-
-
-                                cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
-                                cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
-                                cmd.ExecuteNonQuery();
-
-
-                                MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-                    }
-                    Search();
-                }
+        private void popup_FormClosed2(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed2;
+            if (popup.DialogResult == DialogResult.OK)
+            {
+                this.txtU_ID.EditValue = popup.U_ID;
+                this.txtU_Nickname.EditValue = popup.U_NICKNAME;
             }
+            popup = null;
         }
     }
 }

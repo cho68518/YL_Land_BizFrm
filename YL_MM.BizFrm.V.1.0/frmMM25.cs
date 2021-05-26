@@ -20,7 +20,7 @@ namespace YL_MM.BizFrm
         {
             InitializeComponent();
             //단축코드 설정 
-            this.QCode = "MM26";
+            this.QCode = "MM25";
             //폼명설정
             this.FrmName = "G멀티샵 강등 및 예정현황";
         }

@@ -63,6 +63,7 @@ namespace YL_GM.BizFrm
 
             dtS_DATE.EditValue = DateTime.Now;
             dfDate.EditValue = DateTime.Now;
+            rbq_type.EditValue = "1";
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
@@ -191,25 +192,52 @@ namespace YL_GM.BizFrm
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM04_SELECT_01", con))
+                    if (rbq_type.EditValue == "1")
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("i_year", MySqlDbType.VarChar, 4);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 4);
-
-                        cmd.Parameters.Add("i_date", MySqlDbType.VarChar, 2);
-                        cmd.Parameters[1].Value = dfDate.EditValue3.Substring(6, 2);
-
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM04_SELECT_01", con))
                         {
-                            DataTable ds = new DataTable();
-                            sda.Fill(ds);
-                            efwGridControl1.DataBind(ds);
-                        //    this.efwGridControl1.MyGridView.BestFitColumns();
+                            cmd.CommandType = CommandType.StoredProcedure;
 
+                            cmd.Parameters.Add("i_year", MySqlDbType.VarChar, 4);
+                            cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 4);
+
+                            cmd.Parameters.Add("i_date", MySqlDbType.VarChar, 2);
+                            cmd.Parameters[1].Value = dfDate.EditValue3.Substring(6, 2);
+
+                            using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                            {
+                                DataTable ds = new DataTable();
+                                sda.Fill(ds);
+                                efwGridControl1.DataBind(ds);
+                                //    this.efwGridControl1.MyGridView.BestFitColumns();
+
+                            }
                         }
                     }
+                    else
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM04_SELECT_03", con))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add("i_year", MySqlDbType.VarChar, 4);
+                            cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 4);
+
+                            cmd.Parameters.Add("i_date", MySqlDbType.VarChar, 2);
+                            cmd.Parameters[1].Value = dfDate.EditValue3.Substring(6, 2);
+
+                            using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                            {
+                                DataTable ds = new DataTable();
+                                sda.Fill(ds);
+                                efwGridControl1.DataBind(ds);
+                                //    this.efwGridControl1.MyGridView.BestFitColumns();
+
+                            }
+                        }
+
+                    }
+
                 }
                 ChartCreat1();
             }

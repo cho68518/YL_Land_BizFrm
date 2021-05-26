@@ -149,18 +149,18 @@
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
+            this.efwPanelControl1.Location = new System.Drawing.Point(3, 37);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1192, 58);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1192, 62);
             this.efwPanelControl1.TabIndex = 43;
             // 
             // efwLabel1
             // 
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(22, 22);
+            this.efwLabel1.Location = new System.Drawing.Point(22, 24);
             this.efwLabel1.Name = "efwLabel1";
-            this.efwLabel1.Size = new System.Drawing.Size(20, 14);
+            this.efwLabel1.Size = new System.Drawing.Size(24, 15);
             this.efwLabel1.TabIndex = 7;
             this.efwLabel1.Text = "년도";
             // 
@@ -168,7 +168,7 @@
             // 
             this.dtS_DATE.EditValue = new System.DateTime(2020, 7, 22, 0, 0, 0, 0);
             this.dtS_DATE.IsRequire = true;
-            this.dtS_DATE.Location = new System.Drawing.Point(67, 19);
+            this.dtS_DATE.Location = new System.Drawing.Point(67, 20);
             this.dtS_DATE.Name = "dtS_DATE";
             this.dtS_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.dtS_DATE.Properties.Appearance.Options.UseBackColor = true;
@@ -181,7 +181,7 @@
             this.dtS_DATE.Properties.Mask.EditMask = "yyyy";
             this.dtS_DATE.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dtS_DATE.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearsGroupView;
-            this.dtS_DATE.Size = new System.Drawing.Size(106, 20);
+            this.dtS_DATE.Size = new System.Drawing.Size(106, 22);
             this.dtS_DATE.TabIndex = 6;
             // 
             // efwGridControl1
@@ -204,7 +204,7 @@
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.Location = new System.Drawing.Point(3, 93);
+            this.efwGridControl1.Location = new System.Drawing.Point(3, 99);
             this.efwGridControl1.MainView = this.advBandedGridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
@@ -213,7 +213,7 @@
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDetail,
             this.btnDetail1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1192, 471);
+            this.efwGridControl1.Size = new System.Drawing.Size(1192, 505);
             this.efwGridControl1.TabIndex = 44;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -318,7 +318,7 @@
             this.bandedGridColumn41,
             this.bandedGridColumn42,
             this.bandedGridColumn43});
-            this.advBandedGridView1.DetailHeight = 408;
+            this.advBandedGridView1.DetailHeight = 437;
             this.advBandedGridView1.GridControl = this.efwGridControl1;
             this.advBandedGridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "(건수 : {0}"),
@@ -362,10 +362,7 @@
             // 
             this.bandedGridColumn15.Caption = "상세현황";
             this.bandedGridColumn15.ColumnEdit = this.btnDetail1;
-            this.bandedGridColumn15.DisplayFormat.FormatString = "###,###,##0";
-            this.bandedGridColumn15.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn15.Name = "bandedGridColumn15";
-            this.bandedGridColumn15.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn15.Visible = true;
             // 
             // btnDetail1
@@ -1297,12 +1294,12 @@
             // 
             // frmGM12
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmGM12";
-            this.Size = new System.Drawing.Size(1198, 564);
+            this.Size = new System.Drawing.Size(1198, 604);
             this.Load += new System.EventHandler(this.frmGM12_Load);
             this.Controls.SetChildIndex(this.efwPanelControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);

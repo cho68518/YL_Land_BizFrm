@@ -55,6 +55,7 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtgshop_name.Properties)).BeginInit();
@@ -210,6 +211,7 @@
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn2,
+            this.gridColumn9,
             this.gridColumn26,
             this.gridColumn25,
             this.gridColumn27,
@@ -284,7 +286,7 @@
             this.gridColumn26.FieldName = "informant";
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 6;
+            this.gridColumn26.VisibleIndex = 7;
             // 
             // gridColumn25
             // 
@@ -293,7 +295,7 @@
             this.gridColumn25.FieldName = "is_use";
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 7;
+            this.gridColumn25.VisibleIndex = 8;
             // 
             // repositoryItemCheckEdit6
             // 
@@ -308,7 +310,7 @@
             this.gridColumn27.FieldName = "write_count";
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.Visible = true;
-            this.gridColumn27.VisibleIndex = 8;
+            this.gridColumn27.VisibleIndex = 9;
             // 
             // gridColumn3
             // 
@@ -317,7 +319,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 9;
+            this.gridColumn3.VisibleIndex = 10;
             // 
             // gridColumn7
             // 
@@ -326,7 +328,7 @@
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 10;
+            this.gridColumn7.VisibleIndex = 11;
             // 
             // gridColumn8
             // 
@@ -335,8 +337,16 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 11;
+            this.gridColumn8.VisibleIndex = 12;
             this.gridColumn8.Width = 452;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "MD 팀장";
+            this.gridColumn9.FieldName = "md_nickname";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 6;
             // 
             // frmGSHOP15
             // 
@@ -387,5 +397,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
     }
 }
