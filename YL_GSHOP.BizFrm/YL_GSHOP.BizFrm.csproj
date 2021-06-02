@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E1D8686E-D66A-4172-8E0A-E9148D6296F2}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_GSHOP.BizFrm</RootNamespace>
     <AssemblyName>YL_GSHOP.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -151,6 +151,18 @@
     <Compile Include="Dlg\frmZipNoInfo.designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGSHOP18.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP18.Designer.cs">
+      <DependentUpon>frmGSHOP18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGSHOP19.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP19.Designer.cs">
+      <DependentUpon>frmGSHOP19.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGSHOP17.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -271,10 +283,6 @@
     <Compile Include="frmGSHOP08_Pop02.Designer.cs">
       <DependentUpon>frmGSHOP08_Pop02.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGSHOP18.cs" />
-    <Compile Include="frmGSHOP18.designer.cs">
-      <DependentUpon>frmGSHOP18.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +319,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP18.resx">
+      <DependentUpon>frmGSHOP18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP19.resx">
+      <DependentUpon>frmGSHOP19.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP16.resx">
       <DependentUpon>frmGSHOP16.cs</DependentUpon>
@@ -371,9 +385,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP17.resx">
       <DependentUpon>frmGSHOP17.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGSHOP18.resx">
-      <DependentUpon>frmGSHOP18.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

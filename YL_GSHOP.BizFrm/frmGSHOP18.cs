@@ -30,7 +30,7 @@ namespace YL_GSHOP.BizFrm
         }
 
 
-        public override void FrmLoadEvent()
+        private void frmGSHOP18_Load(object sender, EventArgs e)
         {
             base.FrmLoadEvent();
             DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
@@ -49,6 +49,10 @@ namespace YL_GSHOP.BizFrm
 
             gridView2.OptionsView.ShowFooter = true;
 
+            gridView2.Columns["cnt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView2.Columns["cnt"].SummaryItem.FieldName = "cnt";
+            gridView2.Columns["cnt"].SummaryItem.DisplayFormat = "방문수: {0}";
+
             this.efwGridControl2.BindControlSet(
                new ColumnControlSet("u_nickname", lb1)
              , new ColumnControlSet("cnt", lb2)
@@ -59,6 +63,7 @@ namespace YL_GSHOP.BizFrm
 
             Search();
         }
+
         private void efwGridControl2_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl2.GetSelectedRow(0);
@@ -206,7 +211,6 @@ namespace YL_GSHOP.BizFrm
                 Cursor.Current = Cursors.Default;
             }
         }
-
 
     }
 }

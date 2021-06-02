@@ -30,6 +30,7 @@
         {
             this.efwPnlBody = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwSimpleButton14 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton13 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton12 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton11 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -49,7 +50,7 @@
             this.btnGSHOP02 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnGSHOP01 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton14 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton15 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.efwPnlBody)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
@@ -60,11 +61,12 @@
             this.efwPnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwPnlBody.Location = new System.Drawing.Point(123, 0);
             this.efwPnlBody.Name = "efwPnlBody";
-            this.efwPnlBody.Size = new System.Drawing.Size(1136, 783);
+            this.efwPnlBody.Size = new System.Drawing.Size(1136, 731);
             this.efwPnlBody.TabIndex = 9;
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton15);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton14);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton13);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton12);
@@ -88,16 +90,27 @@
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.efwPanelControl1.Location = new System.Drawing.Point(0, 0);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(123, 783);
+            this.efwPanelControl1.Size = new System.Drawing.Size(123, 731);
             this.efwPanelControl1.TabIndex = 8;
+            // 
+            // efwSimpleButton14
+            // 
+            this.efwSimpleButton14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwSimpleButton14.IsMultiLang = false;
+            this.efwSimpleButton14.Location = new System.Drawing.Point(2, 563);
+            this.efwSimpleButton14.Name = "efwSimpleButton14";
+            this.efwSimpleButton14.Size = new System.Drawing.Size(119, 33);
+            this.efwSimpleButton14.TabIndex = 21;
+            this.efwSimpleButton14.Text = "frmGSHOP18";
+            this.efwSimpleButton14.Click += new System.EventHandler(this.efwSimpleButton14_Click);
             // 
             // efwSimpleButton13
             // 
             this.efwSimpleButton13.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton13.IsMultiLang = false;
-            this.efwSimpleButton13.Location = new System.Drawing.Point(2, 562);
+            this.efwSimpleButton13.Location = new System.Drawing.Point(2, 530);
             this.efwSimpleButton13.Name = "efwSimpleButton13";
-            this.efwSimpleButton13.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton13.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton13.TabIndex = 20;
             this.efwSimpleButton13.Text = "frmGSHOP17";
             this.efwSimpleButton13.Click += new System.EventHandler(this.efwSimpleButton13_Click);
@@ -106,9 +119,9 @@
             // 
             this.efwSimpleButton12.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.efwSimpleButton12.IsMultiLang = false;
-            this.efwSimpleButton12.Location = new System.Drawing.Point(2, 723);
+            this.efwSimpleButton12.Location = new System.Drawing.Point(2, 675);
             this.efwSimpleButton12.Name = "efwSimpleButton12";
-            this.efwSimpleButton12.Size = new System.Drawing.Size(119, 29);
+            this.efwSimpleButton12.Size = new System.Drawing.Size(119, 27);
             this.efwSimpleButton12.TabIndex = 19;
             this.efwSimpleButton12.Text = "frmTest01";
             this.efwSimpleButton12.Click += new System.EventHandler(this.efwSimpleButton12_Click);
@@ -117,9 +130,9 @@
             // 
             this.efwSimpleButton11.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton11.IsMultiLang = false;
-            this.efwSimpleButton11.Location = new System.Drawing.Point(2, 527);
+            this.efwSimpleButton11.Location = new System.Drawing.Point(2, 497);
             this.efwSimpleButton11.Name = "efwSimpleButton11";
-            this.efwSimpleButton11.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton11.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton11.TabIndex = 18;
             this.efwSimpleButton11.Text = "frmGSHOP16";
             this.efwSimpleButton11.Click += new System.EventHandler(this.efwSimpleButton11_Click);
@@ -128,9 +141,9 @@
             // 
             this.efwSimpleButton10.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton10.IsMultiLang = false;
-            this.efwSimpleButton10.Location = new System.Drawing.Point(2, 492);
+            this.efwSimpleButton10.Location = new System.Drawing.Point(2, 464);
             this.efwSimpleButton10.Name = "efwSimpleButton10";
-            this.efwSimpleButton10.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton10.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton10.TabIndex = 17;
             this.efwSimpleButton10.Text = "frmGSHOP15";
             this.efwSimpleButton10.Click += new System.EventHandler(this.efwSimpleButton10_Click);
@@ -139,9 +152,9 @@
             // 
             this.efwSimpleButton9.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton9.IsMultiLang = false;
-            this.efwSimpleButton9.Location = new System.Drawing.Point(2, 457);
+            this.efwSimpleButton9.Location = new System.Drawing.Point(2, 431);
             this.efwSimpleButton9.Name = "efwSimpleButton9";
-            this.efwSimpleButton9.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton9.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton9.TabIndex = 16;
             this.efwSimpleButton9.Text = "frmGSHOP14";
             this.efwSimpleButton9.Click += new System.EventHandler(this.efwSimpleButton9_Click);
@@ -150,9 +163,9 @@
             // 
             this.efwSimpleButton8.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton8.IsMultiLang = false;
-            this.efwSimpleButton8.Location = new System.Drawing.Point(2, 422);
+            this.efwSimpleButton8.Location = new System.Drawing.Point(2, 398);
             this.efwSimpleButton8.Name = "efwSimpleButton8";
-            this.efwSimpleButton8.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton8.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton8.TabIndex = 15;
             this.efwSimpleButton8.Text = "frmGSHOP13";
             this.efwSimpleButton8.Click += new System.EventHandler(this.efwSimpleButton8_Click);
@@ -161,9 +174,9 @@
             // 
             this.efwSimpleButton7.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton7.IsMultiLang = false;
-            this.efwSimpleButton7.Location = new System.Drawing.Point(2, 387);
+            this.efwSimpleButton7.Location = new System.Drawing.Point(2, 365);
             this.efwSimpleButton7.Name = "efwSimpleButton7";
-            this.efwSimpleButton7.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton7.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton7.TabIndex = 14;
             this.efwSimpleButton7.Text = "frmGSHOP12";
             this.efwSimpleButton7.Click += new System.EventHandler(this.efwSimpleButton7_Click);
@@ -172,9 +185,9 @@
             // 
             this.efwSimpleButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton6.IsMultiLang = false;
-            this.efwSimpleButton6.Location = new System.Drawing.Point(2, 352);
+            this.efwSimpleButton6.Location = new System.Drawing.Point(2, 332);
             this.efwSimpleButton6.Name = "efwSimpleButton6";
-            this.efwSimpleButton6.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton6.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton6.TabIndex = 13;
             this.efwSimpleButton6.Text = "frmGSHOP11";
             this.efwSimpleButton6.Click += new System.EventHandler(this.efwSimpleButton6_Click);
@@ -183,9 +196,9 @@
             // 
             this.efwSimpleButton5.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton5.IsMultiLang = false;
-            this.efwSimpleButton5.Location = new System.Drawing.Point(2, 317);
+            this.efwSimpleButton5.Location = new System.Drawing.Point(2, 299);
             this.efwSimpleButton5.Name = "efwSimpleButton5";
-            this.efwSimpleButton5.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton5.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton5.TabIndex = 12;
             this.efwSimpleButton5.Text = "frmGSHOP10";
             this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
@@ -194,9 +207,9 @@
             // 
             this.efwSimpleButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton4.IsMultiLang = false;
-            this.efwSimpleButton4.Location = new System.Drawing.Point(2, 282);
+            this.efwSimpleButton4.Location = new System.Drawing.Point(2, 266);
             this.efwSimpleButton4.Name = "efwSimpleButton4";
-            this.efwSimpleButton4.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton4.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton4.TabIndex = 11;
             this.efwSimpleButton4.Text = "frmGSHOP09";
             this.efwSimpleButton4.Click += new System.EventHandler(this.EfwSimpleButton4_Click);
@@ -205,9 +218,9 @@
             // 
             this.efwSimpleButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(2, 247);
+            this.efwSimpleButton3.Location = new System.Drawing.Point(2, 233);
             this.efwSimpleButton3.Name = "efwSimpleButton3";
-            this.efwSimpleButton3.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton3.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton3.TabIndex = 10;
             this.efwSimpleButton3.Text = "frmGSHOP08";
             this.efwSimpleButton3.Click += new System.EventHandler(this.EfwSimpleButton3_Click);
@@ -216,9 +229,9 @@
             // 
             this.efwSimpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(2, 212);
+            this.efwSimpleButton1.Location = new System.Drawing.Point(2, 200);
             this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(119, 35);
+            this.efwSimpleButton1.Size = new System.Drawing.Size(119, 33);
             this.efwSimpleButton1.TabIndex = 9;
             this.efwSimpleButton1.Text = "frmGSHOP07";
             this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
@@ -227,9 +240,9 @@
             // 
             this.btnGSHOP06.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnGSHOP06.IsMultiLang = false;
-            this.btnGSHOP06.Location = new System.Drawing.Point(2, 177);
+            this.btnGSHOP06.Location = new System.Drawing.Point(2, 167);
             this.btnGSHOP06.Name = "btnGSHOP06";
-            this.btnGSHOP06.Size = new System.Drawing.Size(119, 35);
+            this.btnGSHOP06.Size = new System.Drawing.Size(119, 33);
             this.btnGSHOP06.TabIndex = 8;
             this.btnGSHOP06.Text = "frmGSHOP06";
             this.btnGSHOP06.Click += new System.EventHandler(this.BtnGSHOP06_Click);
@@ -238,9 +251,9 @@
             // 
             this.btnGSHOP05.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnGSHOP05.IsMultiLang = false;
-            this.btnGSHOP05.Location = new System.Drawing.Point(2, 142);
+            this.btnGSHOP05.Location = new System.Drawing.Point(2, 134);
             this.btnGSHOP05.Name = "btnGSHOP05";
-            this.btnGSHOP05.Size = new System.Drawing.Size(119, 35);
+            this.btnGSHOP05.Size = new System.Drawing.Size(119, 33);
             this.btnGSHOP05.TabIndex = 7;
             this.btnGSHOP05.Text = "frmGSHOP05";
             this.btnGSHOP05.Click += new System.EventHandler(this.BtnGSHOP05_Click);
@@ -249,9 +262,9 @@
             // 
             this.btnGSHOP04.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnGSHOP04.IsMultiLang = false;
-            this.btnGSHOP04.Location = new System.Drawing.Point(2, 107);
+            this.btnGSHOP04.Location = new System.Drawing.Point(2, 101);
             this.btnGSHOP04.Name = "btnGSHOP04";
-            this.btnGSHOP04.Size = new System.Drawing.Size(119, 35);
+            this.btnGSHOP04.Size = new System.Drawing.Size(119, 33);
             this.btnGSHOP04.TabIndex = 6;
             this.btnGSHOP04.Text = "frmGSHOP04";
             this.btnGSHOP04.Click += new System.EventHandler(this.BtnGSHOP04_Click);
@@ -260,9 +273,9 @@
             // 
             this.btnGSHOP03.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnGSHOP03.IsMultiLang = false;
-            this.btnGSHOP03.Location = new System.Drawing.Point(2, 72);
+            this.btnGSHOP03.Location = new System.Drawing.Point(2, 68);
             this.btnGSHOP03.Name = "btnGSHOP03";
-            this.btnGSHOP03.Size = new System.Drawing.Size(119, 35);
+            this.btnGSHOP03.Size = new System.Drawing.Size(119, 33);
             this.btnGSHOP03.TabIndex = 5;
             this.btnGSHOP03.Text = "frmGSHOP03";
             this.btnGSHOP03.Click += new System.EventHandler(this.BtnGSHOP03_Click);
@@ -271,9 +284,9 @@
             // 
             this.btnGSHOP02.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnGSHOP02.IsMultiLang = false;
-            this.btnGSHOP02.Location = new System.Drawing.Point(2, 37);
+            this.btnGSHOP02.Location = new System.Drawing.Point(2, 35);
             this.btnGSHOP02.Name = "btnGSHOP02";
-            this.btnGSHOP02.Size = new System.Drawing.Size(119, 35);
+            this.btnGSHOP02.Size = new System.Drawing.Size(119, 33);
             this.btnGSHOP02.TabIndex = 4;
             this.btnGSHOP02.Text = "frmGSHOP02";
             this.btnGSHOP02.Click += new System.EventHandler(this.BtnGSHOP02_Click);
@@ -282,9 +295,9 @@
             // 
             this.efwSimpleButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.efwSimpleButton2.IsMultiLang = false;
-            this.efwSimpleButton2.Location = new System.Drawing.Point(2, 752);
+            this.efwSimpleButton2.Location = new System.Drawing.Point(2, 702);
             this.efwSimpleButton2.Name = "efwSimpleButton2";
-            this.efwSimpleButton2.Size = new System.Drawing.Size(119, 29);
+            this.efwSimpleButton2.Size = new System.Drawing.Size(119, 27);
             this.efwSimpleButton2.TabIndex = 3;
             this.efwSimpleButton2.Text = "frmTest02";
             this.efwSimpleButton2.Click += new System.EventHandler(this.EfwSimpleButton2_Click);
@@ -295,27 +308,27 @@
             this.btnGSHOP01.IsMultiLang = false;
             this.btnGSHOP01.Location = new System.Drawing.Point(2, 2);
             this.btnGSHOP01.Name = "btnGSHOP01";
-            this.btnGSHOP01.Size = new System.Drawing.Size(119, 35);
+            this.btnGSHOP01.Size = new System.Drawing.Size(119, 33);
             this.btnGSHOP01.TabIndex = 0;
             this.btnGSHOP01.Text = "frmGSHOP01";
             this.btnGSHOP01.Click += new System.EventHandler(this.BtnGSHOP01_Click);
             // 
-            // efwSimpleButton14
+            // efwSimpleButton15
             // 
-            this.efwSimpleButton14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwSimpleButton14.IsMultiLang = false;
-            this.efwSimpleButton14.Location = new System.Drawing.Point(2, 597);
-            this.efwSimpleButton14.Name = "efwSimpleButton14";
-            this.efwSimpleButton14.Size = new System.Drawing.Size(119, 35);
-            this.efwSimpleButton14.TabIndex = 21;
-            this.efwSimpleButton14.Text = "frmGSHOP18";
-            this.efwSimpleButton14.Click += new System.EventHandler(this.efwSimpleButton14_Click);
+            this.efwSimpleButton15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwSimpleButton15.IsMultiLang = false;
+            this.efwSimpleButton15.Location = new System.Drawing.Point(2, 596);
+            this.efwSimpleButton15.Name = "efwSimpleButton15";
+            this.efwSimpleButton15.Size = new System.Drawing.Size(119, 33);
+            this.efwSimpleButton15.TabIndex = 22;
+            this.efwSimpleButton15.Text = "frmGSHOP19";
+            this.efwSimpleButton15.Click += new System.EventHandler(this.efwSimpleButton15_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 783);
+            this.ClientSize = new System.Drawing.Size(1259, 731);
             this.Controls.Add(this.efwPnlBody);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmMain";
@@ -351,5 +364,6 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton12;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton13;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton14;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton15;
     }
 }
