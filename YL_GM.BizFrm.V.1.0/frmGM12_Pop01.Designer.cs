@@ -33,6 +33,7 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.txtis_biz = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtprod_type = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtmd_u_id = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -64,6 +65,7 @@
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtis_biz.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtprod_type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmd_u_id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -79,6 +81,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.txtis_biz);
             this.efwPanelControl1.Controls.Add(this.txtprod_type);
             this.efwPanelControl1.Controls.Add(this.txtmd_u_id);
             this.efwPanelControl1.Controls.Add(this.efwLabel2);
@@ -90,6 +93,18 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1296, 50);
             this.efwPanelControl1.TabIndex = 45;
+            // 
+            // txtis_biz
+            // 
+            this.txtis_biz.EditValue2 = null;
+            this.txtis_biz.Location = new System.Drawing.Point(950, 15);
+            this.txtis_biz.Name = "txtis_biz";
+            this.txtis_biz.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtis_biz.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtis_biz.RequireMessage = null;
+            this.txtis_biz.Size = new System.Drawing.Size(136, 20);
+            this.txtis_biz.TabIndex = 17;
+            this.txtis_biz.Visible = false;
             // 
             // txtprod_type
             // 
@@ -451,6 +466,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtis_biz.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtprod_type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmd_u_id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
@@ -498,5 +514,6 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtprod_type;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtis_biz;
     }
 }

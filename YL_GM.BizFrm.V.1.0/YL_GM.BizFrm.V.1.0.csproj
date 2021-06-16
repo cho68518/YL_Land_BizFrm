@@ -117,6 +117,18 @@
     <Compile Include="Dlg\frmMemberInfo.designer.cs">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGM20.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM20.Designer.cs">
+      <DependentUpon>frmGM20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM19.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM19.Designer.cs">
+      <DependentUpon>frmGM19.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGM18.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -320,6 +332,9 @@
     <EmbeddedResource Include="Dlg\frmMemberInfo.resx">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGM19.resx">
+      <DependentUpon>frmGM19.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGM15.resx">
       <DependentUpon>frmGM15.cs</DependentUpon>
     </EmbeddedResource>
@@ -400,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM18.resx">
       <DependentUpon>frmGM18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM20.resx">
+      <DependentUpon>frmGM20.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

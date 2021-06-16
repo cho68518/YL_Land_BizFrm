@@ -22,6 +22,7 @@ namespace YL_GM.BizFrm
         public string u_nickname { get; set; }
         public DateTime year { get; set; }
         public string prod_type { get; set; }
+        public string is_biz { get; set; }
         public frmGM12_Pop01() 
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace YL_GM.BizFrm
             txtu_nickanme.EditValue = u_nickname;
             dtS_DATE.EditValue = year;
             txtprod_type.EditValue = prod_type;
+            txtis_biz.EditValue = is_biz;
 
 
             gridView1.OptionsView.ShowFooter = true;
@@ -83,6 +85,9 @@ namespace YL_GM.BizFrm
 
                         cmd.Parameters.Add("i_md_u_id", MySqlDbType.VarChar, 50);
                         cmd.Parameters[1].Value = txtmd_u_id.EditValue;
+
+                        cmd.Parameters.Add("i_is_biz", MySqlDbType.VarChar,1);
+                        cmd.Parameters[2].Value = txtis_biz.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

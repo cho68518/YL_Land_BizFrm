@@ -47,6 +47,7 @@ namespace YL_GM.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
+            rbis_biz.EditValue = "0";
 
             advBandedGridView1.Columns["input1"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["input1"].SummaryItem.FieldName = "input1";
@@ -348,6 +349,9 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add("i_year", MySqlDbType.VarChar, 4);
                         cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 4);
 
+                        cmd.Parameters.Add("i_is_biz", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[1].Value = rbis_biz.EditValue;
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -373,6 +377,7 @@ namespace YL_GM.BizFrm
             popup1.md_u_id = advBandedGridView1.GetFocusedRowCellValue("registrant_uid").ToString();
             popup1.u_nickname = advBandedGridView1.GetFocusedRowCellValue("u_nickname").ToString();
             popup1.year = Convert.ToDateTime(dtS_DATE.EditValue);
+            popup1.is_biz = rbis_biz.EditValue.ToString();
             popup1.FormClosed += popup1_FormClosed;
             popup1.ShowDialog();
         }
@@ -381,6 +386,11 @@ namespace YL_GM.BizFrm
             popup1.FormClosed -= popup1_FormClosed;
 
             popup1 = null;
+        }
+
+        private void rbis_biz_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Search();
         }
     }
 }

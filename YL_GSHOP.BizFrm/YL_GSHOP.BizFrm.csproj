@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E1D8686E-D66A-4172-8E0A-E9148D6296F2}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_GSHOP.BizFrm</RootNamespace>
     <AssemblyName>YL_GSHOP.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -150,6 +150,12 @@
     </Compile>
     <Compile Include="Dlg\frmZipNoInfo.designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGSHOP20.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGSHOP20.Designer.cs">
+      <DependentUpon>frmGSHOP20.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGSHOP18.cs">
       <SubType>UserControl</SubType>
@@ -385,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP17.resx">
       <DependentUpon>frmGSHOP17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP20.resx">
+      <DependentUpon>frmGSHOP20.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

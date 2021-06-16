@@ -45,11 +45,27 @@ namespace YL_GSHOP.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
+
+            dtReg_Date.EditValue = DateTime.Now;
             gridView2.OptionsView.ShowFooter = true;
 
             this.efwGridControl2.BindControlSet(
               new ColumnControlSet("gshop_id", txtGShop_ID)
              ,new ColumnControlSet("gshop_name", dfGShop_name)
+            );
+            this.efwGridControl2.Click += efwGridControl2_Click;
+
+
+            gridView3.OptionsView.ShowFooter = true;
+
+            this.efwGridControl3.BindControlSet(
+               new ColumnControlSet("gshop_id", txtGShop_ID)
+             , new ColumnControlSet("reg_date", dtReg_Date)
+             , new ColumnControlSet("banner", chkBanner)
+             , new ColumnControlSet("x_banner", chkX_Banner)
+             , new ColumnControlSet("remark", txtRemark)
+             , new ColumnControlSet("rank1", txtRank1)
+             , new ColumnControlSet("rank2", txtRank2)
             );
             this.efwGridControl2.Click += efwGridControl2_Click;
 
@@ -77,7 +93,18 @@ namespace YL_GSHOP.BizFrm
 
                         cmd.Parameters.Add("i_Query", MySqlDbType.VarChar, 50);
                         cmd.Parameters[0].Value = txtQuery.EditValue;
-
+                        if (string.IsNullOrEmpty(this.txtQRank1.Text))
+                        {
+                            txtRank1.EditValue = "0";
+                        }
+                        cmd.Parameters.Add("i_QRank1", MySqlDbType.Int32);
+                        cmd.Parameters[1].Value = Convert.ToInt32(txtQRank1.EditValue);
+                        if (string.IsNullOrEmpty(this.txtQRank2.Text))
+                        {
+                            txtRank1.EditValue = "0";
+                        }
+                        cmd.Parameters.Add("i_QRank2", MySqlDbType.Int32);
+                        cmd.Parameters[2].Value = Convert.ToInt32(txtQRank2.EditValue);
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -161,6 +188,67 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_Remark", MySqlDbType.VarChar));
                             cmd.Parameters["i_Remark"].Value = txtRemark.EditValue;
                             cmd.Parameters["i_Remark"].Direction = ParameterDirection.Input;
+
+                            if (string.IsNullOrEmpty(this.txtRank1.Text))
+                            {
+                                txtRank1.EditValue = "0";
+                            }
+                            cmd.Parameters.Add(new MySqlParameter("i_rank1", MySqlDbType.Int32));
+                            cmd.Parameters["i_rank1"].Value = Convert.ToInt32(txtRank1.EditValue);
+                            cmd.Parameters["i_rank1"].Direction = ParameterDirection.Input;
+
+                            if (string.IsNullOrEmpty(this.txtRank2.Text))
+                            {
+                                txtRank1.EditValue = "0";
+                            }
+                            cmd.Parameters.Add(new MySqlParameter("i_rank2", MySqlDbType.Int32));
+                            cmd.Parameters["i_rank2"].Value = Convert.ToInt32(txtRank2.EditValue);
+                            cmd.Parameters["i_rank2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+                Open1();
+            }
+        }
+
+        private void txtQuery_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
+        }
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP19_DELETE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gshop_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_gshop_id"].Value = Convert.ToInt32(txtGShop_ID.EditValue);
+                            cmd.Parameters["i_gshop_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Reg_Date", MySqlDbType.DateTime));
+                            cmd.Parameters["i_Reg_Date"].Value = dtReg_Date.EditValue;
+                            cmd.Parameters["i_Reg_Date"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

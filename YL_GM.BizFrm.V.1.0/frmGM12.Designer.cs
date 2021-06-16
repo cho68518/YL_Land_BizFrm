@@ -43,6 +43,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.rbis_biz = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
@@ -136,6 +137,7 @@
             this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbis_biz.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
@@ -146,21 +148,40 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.rbis_biz);
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwPanelControl1.Location = new System.Drawing.Point(3, 37);
+            this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1192, 62);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1192, 58);
             this.efwPanelControl1.TabIndex = 43;
+            // 
+            // rbis_biz
+            // 
+            this.rbis_biz.IsMultiLang = false;
+            this.rbis_biz.Location = new System.Drawing.Point(223, 17);
+            this.rbis_biz.Name = "rbis_biz";
+            this.rbis_biz.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbis_biz.Properties.Appearance.Options.UseBackColor = true;
+            this.rbis_biz.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbis_biz.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbis_biz.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "전체"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "G멀티샵"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "일반")});
+            this.rbis_biz.RequireMessage = null;
+            this.rbis_biz.Size = new System.Drawing.Size(270, 26);
+            this.rbis_biz.TabIndex = 67;
+            this.rbis_biz.SelectedIndexChanged += new System.EventHandler(this.rbis_biz_SelectedIndexChanged);
             // 
             // efwLabel1
             // 
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(22, 24);
+            this.efwLabel1.Location = new System.Drawing.Point(22, 22);
             this.efwLabel1.Name = "efwLabel1";
-            this.efwLabel1.Size = new System.Drawing.Size(24, 15);
+            this.efwLabel1.Size = new System.Drawing.Size(20, 14);
             this.efwLabel1.TabIndex = 7;
             this.efwLabel1.Text = "년도";
             // 
@@ -168,7 +189,7 @@
             // 
             this.dtS_DATE.EditValue = new System.DateTime(2020, 7, 22, 0, 0, 0, 0);
             this.dtS_DATE.IsRequire = true;
-            this.dtS_DATE.Location = new System.Drawing.Point(67, 20);
+            this.dtS_DATE.Location = new System.Drawing.Point(67, 19);
             this.dtS_DATE.Name = "dtS_DATE";
             this.dtS_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.dtS_DATE.Properties.Appearance.Options.UseBackColor = true;
@@ -181,7 +202,7 @@
             this.dtS_DATE.Properties.Mask.EditMask = "yyyy";
             this.dtS_DATE.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dtS_DATE.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearsGroupView;
-            this.dtS_DATE.Size = new System.Drawing.Size(106, 22);
+            this.dtS_DATE.Size = new System.Drawing.Size(106, 20);
             this.dtS_DATE.TabIndex = 6;
             // 
             // efwGridControl1
@@ -204,7 +225,7 @@
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.Location = new System.Drawing.Point(3, 99);
+            this.efwGridControl1.Location = new System.Drawing.Point(3, 93);
             this.efwGridControl1.MainView = this.advBandedGridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
@@ -213,7 +234,7 @@
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDetail,
             this.btnDetail1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1192, 505);
+            this.efwGridControl1.Size = new System.Drawing.Size(1192, 471);
             this.efwGridControl1.TabIndex = 44;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -318,7 +339,7 @@
             this.bandedGridColumn41,
             this.bandedGridColumn42,
             this.bandedGridColumn43});
-            this.advBandedGridView1.DetailHeight = 437;
+            this.advBandedGridView1.DetailHeight = 408;
             this.advBandedGridView1.GridControl = this.efwGridControl1;
             this.advBandedGridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "(건수 : {0}"),
@@ -326,6 +347,7 @@
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "d_tot", null, "도넛 사용금액 : {0} "),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "chramt", null, "순매출액 : {0} )")});
             this.advBandedGridView1.Name = "advBandedGridView1";
+            this.advBandedGridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridBand1
             // 
@@ -412,7 +434,7 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "수량";
+            this.gridColumn6.Caption = "주문";
             this.gridColumn6.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "qty1";
@@ -480,7 +502,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "수량";
+            this.gridColumn3.Caption = "주문";
             this.gridColumn3.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn3.FieldName = "qty2";
@@ -548,7 +570,7 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "수량";
+            this.gridColumn4.Caption = "주문";
             this.gridColumn4.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "qty3";
@@ -616,7 +638,7 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "수량";
+            this.gridColumn5.Caption = "주문";
             this.gridColumn5.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn5.FieldName = "qty4";
@@ -684,7 +706,7 @@
             // 
             // gridColumn7
             // 
-            this.gridColumn7.Caption = "수량";
+            this.gridColumn7.Caption = "주문";
             this.gridColumn7.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn7.FieldName = "qty5";
@@ -752,7 +774,7 @@
             // 
             // gridColumn8
             // 
-            this.gridColumn8.Caption = "수량";
+            this.gridColumn8.Caption = "주문";
             this.gridColumn8.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn8.FieldName = "qty6";
@@ -820,7 +842,7 @@
             // 
             // gridColumn9
             // 
-            this.gridColumn9.Caption = "수량";
+            this.gridColumn9.Caption = "주문";
             this.gridColumn9.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn9.FieldName = "qty7";
@@ -888,7 +910,7 @@
             // 
             // gridColumn10
             // 
-            this.gridColumn10.Caption = "수량";
+            this.gridColumn10.Caption = "주문";
             this.gridColumn10.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn10.FieldName = "qty8";
@@ -956,7 +978,7 @@
             // 
             // gridColumn11
             // 
-            this.gridColumn11.Caption = "수량";
+            this.gridColumn11.Caption = "주문";
             this.gridColumn11.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn11.FieldName = "qty9";
@@ -1024,7 +1046,7 @@
             // 
             // gridColumn12
             // 
-            this.gridColumn12.Caption = "수량";
+            this.gridColumn12.Caption = "주문";
             this.gridColumn12.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn12.FieldName = "qty10";
@@ -1092,7 +1114,7 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "수량";
+            this.gridColumn13.Caption = "주문";
             this.gridColumn13.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn13.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn13.FieldName = "qty11";
@@ -1160,7 +1182,7 @@
             // 
             // gridColumn14
             // 
-            this.gridColumn14.Caption = "수량";
+            this.gridColumn14.Caption = "주문";
             this.gridColumn14.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn14.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn14.FieldName = "qty12";
@@ -1229,7 +1251,7 @@
             // 
             // gridColumn15
             // 
-            this.gridColumn15.Caption = "수량합계";
+            this.gridColumn15.Caption = "주문합계";
             this.gridColumn15.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn15.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn15.FieldName = "total2";
@@ -1294,18 +1316,19 @@
             // 
             // frmGM12
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmGM12";
-            this.Size = new System.Drawing.Size(1198, 604);
+            this.Size = new System.Drawing.Size(1198, 564);
             this.Load += new System.EventHandler(this.frmGM12_Load);
             this.Controls.SetChildIndex(this.efwPanelControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbis_biz.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
@@ -1410,5 +1433,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand14;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand15;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn43;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbis_biz;
     }
 }
