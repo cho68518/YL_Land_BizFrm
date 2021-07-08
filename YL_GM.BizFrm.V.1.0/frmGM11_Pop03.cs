@@ -80,14 +80,9 @@ namespace YL_GM.BizFrm
         }
 
 
-        private void bthNew_Click(object sender, EventArgs e)
-        {
-            Open1();
-        }
-
         private void bthNew_Click_1(object sender, EventArgs e)
         {
-
+            Open1();
         }
     }
 }

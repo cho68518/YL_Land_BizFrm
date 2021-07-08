@@ -74,6 +74,10 @@ namespace YL_TELECOM.BizFrm
             {
                 Open2();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                Open3();
+            }
         }
 
         private void Open1()
@@ -157,6 +161,48 @@ namespace YL_TELECOM.BizFrm
             }
         }
 
+
+        private void Open3()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("telecom.USP_TM_TM06_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dt_s_date.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dt_e_date.EditValue3;
+
+                        cmd.Parameters.Add("i_Search_type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[2].Value = rb_Search_type.EditValue;
+
+                        cmd.Parameters.Add("i_cust_name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtSearch.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl3.DataBind(ds);
+                            this.efwGridControl3.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
+        }
+
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -209,6 +255,24 @@ namespace YL_TELECOM.BizFrm
             {
                 Clipboard.SetText(advBandedGridView2.GetFocusedDisplayText());
                 e.Handled = true;
+            }
+        }
+
+        private void advBandedGridView3_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (view == null)
+                return;
+
+            if (e.RowHandle != view.FocusedRowHandle)
+            {
+                DevExpress.XtraGrid.Views.Grid.GridView View = sender as GridView;
+                string err = View.GetRowCellDisplayText(e.RowHandle, View.Columns["check_memo"]);
+                if (err != "Y")//Cell의 값이 APPLE인 경우 Cell색 변경
+                {
+                    e.Appearance.BackColor = Color.YellowGreen;
+                    e.Appearance.BackColor2 = Color.White; //그라데이션 처리
+                }
             }
         }
     }

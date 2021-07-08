@@ -57,6 +57,8 @@ namespace YL_TELECOM.BizFrm
             , new ColumnControlSet("recommend_donut_count", txtrecommend_donut_count)
             , new ColumnControlSet("is_use", cbis_use)
             , new ColumnControlSet("al_open_donut_count", txtal_open_donut_count)
+            , new ColumnControlSet("basic_price", txtBasic_Price)
+            , new ColumnControlSet("Is_Prepaid", rbIs_Prepaid)
             );
             cbis_use.EditValue = "Y";
         }
@@ -170,6 +172,14 @@ namespace YL_TELECOM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_al_open_donut_count", MySqlDbType.Int32));
                             cmd.Parameters["i_al_open_donut_count"].Value = Convert.ToInt32(txtal_open_donut_count.EditValue);
                             cmd.Parameters["i_al_open_donut_count"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_basic_price", MySqlDbType.Int32));
+                            cmd.Parameters["i_basic_price"].Value = Convert.ToInt32(txtBasic_Price.EditValue);
+                            cmd.Parameters["i_basic_price"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_prepaid", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_prepaid"].Value = rbIs_Prepaid.EditValue;
+                            cmd.Parameters["i_is_prepaid"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

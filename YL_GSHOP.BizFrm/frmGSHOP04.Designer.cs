@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSHOP04));
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy5 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo7 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo8 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -36,13 +41,8 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy4 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy4 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.txtPOSTNO = new Easy.Framework.WinForm.Control.efwButtonEdit();
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
@@ -154,7 +154,6 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl2 = new DevExpress.XtraEditors.SplitterControl();
-            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
             this.btnMemberSch = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -167,10 +166,7 @@
             this.chkExperience_Shop = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.efwSimpleButton7 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton6 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtTEAM_NICKNAME = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtMD_NICKNAME = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.cmbSAREA1 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.cmbTAREA1 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
@@ -200,9 +196,7 @@
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -219,8 +213,6 @@
             this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.efwGroupControl5 = new Easy.Framework.WinForm.Control.efwGroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtPOSTNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
@@ -308,9 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
@@ -327,8 +317,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).BeginInit();
             this.efwGroupControl5.SuspendLayout();
             this.SuspendLayout();
@@ -416,13 +404,13 @@
             // 
             // cmbOrderDate
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbOrderDate.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbOrderDate.HierarchyInfo = hierarchy1;
+            childHierarchy5.CodeCtrl = null;
+            childHierarchy5.DbName = null;
+            childHierarchy5.SpName = null;
+            this.cmbOrderDate.ChildHierarchyInfo = childHierarchy5;
+            hierarchy5.DbName = null;
+            hierarchy5.SpName = null;
+            this.cmbOrderDate.HierarchyInfo = hierarchy5;
             this.cmbOrderDate.IsMultiLang = false;
             this.cmbOrderDate.Location = new System.Drawing.Point(18, 7);
             this.cmbOrderDate.MasterCode = "E03.PAY_GBN";
@@ -455,18 +443,18 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo1.InstanceName = "";
-            serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
-            serviceInfo1.ProcName = "";
-            serviceInfo1.UserParams = null;
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
-            serviceInfo2.InstanceName = "";
-            serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
-            serviceInfo2.ProcName = "";
-            serviceInfo2.UserParams = null;
-            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
+            serviceInfo7.InstanceName = "";
+            serviceInfo7.IsUserIDAdd = true;
+            serviceInfo7.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo7.ParamsInfo")));
+            serviceInfo7.ProcName = "";
+            serviceInfo7.UserParams = null;
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo7;
+            serviceInfo8.InstanceName = "";
+            serviceInfo8.IsUserIDAdd = true;
+            serviceInfo8.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo8.ParamsInfo")));
+            serviceInfo8.ProcName = "";
+            serviceInfo8.UserParams = null;
+            this.efwGridControl1.InsertServiceInfo = serviceInfo8;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
@@ -485,12 +473,12 @@
             this.efwGridControl1.Size = new System.Drawing.Size(1482, 369);
             this.efwGridControl1.TabIndex = 7;
             this.efwGridControl1.TableName = "";
-            serviceInfo3.InstanceName = "";
-            serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
-            serviceInfo3.ProcName = "";
-            serviceInfo3.UserParams = null;
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
+            serviceInfo9.InstanceName = "";
+            serviceInfo9.IsUserIDAdd = true;
+            serviceInfo9.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo9.ParamsInfo")));
+            serviceInfo9.ProcName = "";
+            serviceInfo9.UserParams = null;
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo9;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -926,13 +914,13 @@
             // 
             // cmbQ1
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbQ1.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbQ1.HierarchyInfo = hierarchy2;
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbQ1.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbQ1.HierarchyInfo = hierarchy1;
             this.cmbQ1.IsMultiLang = false;
             this.cmbQ1.Location = new System.Drawing.Point(422, 7);
             this.cmbQ1.MasterCode = "E03.GSHOP04_SEARCH1";
@@ -1167,18 +1155,18 @@
             // 
             this.efwGridControl2.BindSet = null;
             this.efwGridControl2.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = null;
-            this.efwGridControl2.DeleteServiceInfo = serviceInfo4;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = null;
-            this.efwGridControl2.InsertServiceInfo = serviceInfo5;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = null;
+            this.efwGridControl2.DeleteServiceInfo = serviceInfo1;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = null;
+            this.efwGridControl2.InsertServiceInfo = serviceInfo2;
             this.efwGridControl2.IsAddExcelBtn = true;
             this.efwGridControl2.isAddPrintBtn = true;
             this.efwGridControl2.IsEditable = false;
@@ -1197,12 +1185,12 @@
             this.efwGridControl2.Size = new System.Drawing.Size(1482, 101);
             this.efwGridControl2.TabIndex = 38;
             this.efwGridControl2.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = null;
-            this.efwGridControl2.UpdateServiceInfo = serviceInfo6;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = null;
+            this.efwGridControl2.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -1512,20 +1500,6 @@
             this.splitterControl2.TabIndex = 29;
             this.splitterControl2.TabStop = false;
             // 
-            // efwSimpleButton1
-            // 
-            this.efwSimpleButton1.ButtonType = Easy.Framework.Util.BtnType.Search;
-            this.efwSimpleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
-            this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(661, 105);
-            this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(186, 22);
-            this.efwSimpleButton1.StyleController = this.layoutControl3;
-            this.efwSimpleButton1.TabIndex = 50;
-            this.efwSimpleButton1.Text = "회원검색";
-            this.efwSimpleButton1.Click += new System.EventHandler(this.EfwSimpleButton1_Click);
-            // 
             // layoutControl3
             // 
             this.layoutControl3.Controls.Add(this.btnMemberSch);
@@ -1539,11 +1513,7 @@
             this.layoutControl3.Controls.Add(this.chkExperience_Shop);
             this.layoutControl3.Controls.Add(this.efwSimpleButton7);
             this.layoutControl3.Controls.Add(this.efwSimpleButton6);
-            this.layoutControl3.Controls.Add(this.efwSimpleButton5);
-            this.layoutControl3.Controls.Add(this.efwSimpleButton4);
             this.layoutControl3.Controls.Add(this.txtTEAM_NICKNAME);
-            this.layoutControl3.Controls.Add(this.efwSimpleButton1);
-            this.layoutControl3.Controls.Add(this.efwSimpleButton3);
             this.layoutControl3.Controls.Add(this.txtMD_NICKNAME);
             this.layoutControl3.Controls.Add(this.cmbSAREA1);
             this.layoutControl3.Controls.Add(this.cmbTAREA1);
@@ -1703,34 +1673,6 @@
             this.efwSimpleButton6.Text = "저장";
             this.efwSimpleButton6.Click += new System.EventHandler(this.efwSimpleButton6_Click);
             // 
-            // efwSimpleButton5
-            // 
-            this.efwSimpleButton5.ButtonType = Easy.Framework.Util.BtnType.Search;
-            this.efwSimpleButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
-            this.efwSimpleButton5.IsMultiLang = false;
-            this.efwSimpleButton5.Location = new System.Drawing.Point(661, 131);
-            this.efwSimpleButton5.Name = "efwSimpleButton5";
-            this.efwSimpleButton5.Size = new System.Drawing.Size(186, 22);
-            this.efwSimpleButton5.StyleController = this.layoutControl3;
-            this.efwSimpleButton5.TabIndex = 59;
-            this.efwSimpleButton5.Text = "회원검색";
-            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
-            // 
-            // efwSimpleButton4
-            // 
-            this.efwSimpleButton4.ButtonType = Easy.Framework.Util.BtnType.Search;
-            this.efwSimpleButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
-            this.efwSimpleButton4.IsMultiLang = false;
-            this.efwSimpleButton4.Location = new System.Drawing.Point(633, 131);
-            this.efwSimpleButton4.Name = "efwSimpleButton4";
-            this.efwSimpleButton4.Size = new System.Drawing.Size(24, 22);
-            this.efwSimpleButton4.StyleController = this.layoutControl3;
-            this.efwSimpleButton4.TabIndex = 54;
-            this.efwSimpleButton4.Visible = false;
-            this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
-            // 
             // txtTEAM_NICKNAME
             // 
             this.txtTEAM_NICKNAME.ByteLength = 100;
@@ -1745,19 +1687,6 @@
             this.txtTEAM_NICKNAME.Size = new System.Drawing.Size(192, 20);
             this.txtTEAM_NICKNAME.StyleController = this.layoutControl3;
             this.txtTEAM_NICKNAME.TabIndex = 2;
-            // 
-            // efwSimpleButton3
-            // 
-            this.efwSimpleButton3.ButtonType = Easy.Framework.Util.BtnType.Search;
-            this.efwSimpleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
-            this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(633, 105);
-            this.efwSimpleButton3.Name = "efwSimpleButton3";
-            this.efwSimpleButton3.Size = new System.Drawing.Size(24, 22);
-            this.efwSimpleButton3.StyleController = this.layoutControl3;
-            this.efwSimpleButton3.TabIndex = 52;
-            this.efwSimpleButton3.Click += new System.EventHandler(this.EfwSimpleButton3_Click);
             // 
             // txtMD_NICKNAME
             // 
@@ -1776,13 +1705,13 @@
             // 
             // cmbSAREA1
             // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbSAREA1.ChildHierarchyInfo = childHierarchy3;
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbSAREA1.HierarchyInfo = hierarchy3;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbSAREA1.ChildHierarchyInfo = childHierarchy2;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbSAREA1.HierarchyInfo = hierarchy2;
             this.cmbSAREA1.IsMultiLang = false;
             this.cmbSAREA1.Location = new System.Drawing.Point(623, 81);
             this.cmbSAREA1.MasterCode = "E03.MEMBERQ_GBN1";
@@ -1798,13 +1727,13 @@
             // 
             // cmbTAREA1
             // 
-            childHierarchy4.CodeCtrl = null;
-            childHierarchy4.DbName = null;
-            childHierarchy4.SpName = null;
-            this.cmbTAREA1.ChildHierarchyInfo = childHierarchy4;
-            hierarchy4.DbName = null;
-            hierarchy4.SpName = null;
-            this.cmbTAREA1.HierarchyInfo = hierarchy4;
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbTAREA1.ChildHierarchyInfo = childHierarchy3;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbTAREA1.HierarchyInfo = hierarchy3;
             this.cmbTAREA1.IsMultiLang = false;
             this.cmbTAREA1.Location = new System.Drawing.Point(427, 81);
             this.cmbTAREA1.Name = "cmbTAREA1";
@@ -1979,9 +1908,7 @@
             this.layoutControlItem18,
             this.layoutControlItem19,
             this.layoutControlItem20,
-            this.layoutControlItem23,
             this.layoutControlItem24,
-            this.layoutControlItem25,
             this.layoutControlItem26,
             this.layoutControlItem27,
             this.layoutControlItem28,
@@ -1989,9 +1916,7 @@
             this.layoutControlItem31,
             this.layoutControlGroup4,
             this.emptySpaceItem8,
-            this.emptySpaceItem7,
-            this.layoutControlItem21,
-            this.layoutControlItem30});
+            this.emptySpaceItem7});
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
             this.layoutControlGroup3.Size = new System.Drawing.Size(1496, 178);
@@ -2147,15 +2072,6 @@
             this.layoutControlItem20.TextSize = new System.Drawing.Size(100, 20);
             this.layoutControlItem20.TextToControlDistance = 5;
             // 
-            // layoutControlItem23
-            // 
-            this.layoutControlItem23.Control = this.efwSimpleButton1;
-            this.layoutControlItem23.Location = new System.Drawing.Point(654, 98);
-            this.layoutControlItem23.Name = "layoutControlItem16";
-            this.layoutControlItem23.Size = new System.Drawing.Size(190, 26);
-            this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem23.TextVisible = false;
-            // 
             // layoutControlItem24
             // 
             this.layoutControlItem24.Control = this.txtTEAM_NICKNAME;
@@ -2166,15 +2082,6 @@
             this.layoutControlItem24.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem24.TextSize = new System.Drawing.Size(100, 20);
             this.layoutControlItem24.TextToControlDistance = 5;
-            // 
-            // layoutControlItem25
-            // 
-            this.layoutControlItem25.Control = this.efwSimpleButton5;
-            this.layoutControlItem25.Location = new System.Drawing.Point(654, 124);
-            this.layoutControlItem25.Name = "layoutControlItem19";
-            this.layoutControlItem25.Size = new System.Drawing.Size(190, 47);
-            this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem25.TextVisible = false;
             // 
             // layoutControlItem26
             // 
@@ -2326,26 +2233,8 @@
             this.emptySpaceItem7.Location = new System.Drawing.Point(616, 98);
             this.emptySpaceItem7.Name = "emptySpaceItem4";
             this.emptySpaceItem7.ShowInCustomizationForm = false;
-            this.emptySpaceItem7.Size = new System.Drawing.Size(10, 73);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(228, 73);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem21
-            // 
-            this.layoutControlItem21.Control = this.efwSimpleButton3;
-            this.layoutControlItem21.Location = new System.Drawing.Point(626, 98);
-            this.layoutControlItem21.Name = "layoutControlItem15";
-            this.layoutControlItem21.Size = new System.Drawing.Size(28, 26);
-            this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem21.TextVisible = false;
-            // 
-            // layoutControlItem30
-            // 
-            this.layoutControlItem30.Control = this.efwSimpleButton4;
-            this.layoutControlItem30.Location = new System.Drawing.Point(626, 124);
-            this.layoutControlItem30.Name = "layoutControlItem18";
-            this.layoutControlItem30.Size = new System.Drawing.Size(28, 47);
-            this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem30.TextVisible = false;
             // 
             // efwGroupControl5
             // 
@@ -2461,9 +2350,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
@@ -2480,8 +2367,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl5)).EndInit();
             this.efwGroupControl5.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -2576,8 +2461,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
         private DevExpress.XtraEditors.SplitterControl splitterControl2;
-        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
-        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
         private Easy.Framework.WinForm.Control.efwButtonEdit btnPOST_NO;
         private Easy.Framework.WinForm.Control.efwTextEdit txtADDRESS1;
         private Easy.Framework.WinForm.Control.efwTextEdit txtADDRESS2;
@@ -2596,9 +2479,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn62;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn63;
-        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton4;
         private Easy.Framework.WinForm.Control.efwTextEdit txtTEAM_NICKNAME;
-        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
         private Easy.Framework.WinForm.Control.efwTextEdit txtHP_NO;
         private Easy.Framework.WinForm.Control.efwTextEdit txtGSHOP_NAME;
         private Easy.Framework.WinForm.Control.efwTextEdit txtU_NICKNAME;
@@ -2638,16 +2519,12 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem27;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
         private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl5;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnMemberSch;
