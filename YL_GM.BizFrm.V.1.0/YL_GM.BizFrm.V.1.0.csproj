@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5B7850A0-A628-4D0B-BC3F-FBCDB66DF433}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_GM.BizFrm</RootNamespace>
     <AssemblyName>YL_GM.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -116,6 +116,12 @@
     </Compile>
     <Compile Include="Dlg\frmMemberInfo.designer.cs">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM21.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM21.Designer.cs">
+      <DependentUpon>frmGM21.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGM20.cs">
       <SubType>UserControl</SubType>
@@ -418,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM20.resx">
       <DependentUpon>frmGM20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM21.resx">
+      <DependentUpon>frmGM21.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

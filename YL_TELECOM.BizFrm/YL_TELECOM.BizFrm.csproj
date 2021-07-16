@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5651763C-17DD-410C-AC3A-3F1A5018632C}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_TELECOM.BizFrm</RootNamespace>
     <AssemblyName>YL_TELECOM.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -93,6 +93,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstantLib.cs" />
+    <Compile Include="Dlg\frmZipNoInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmZipNoInfo.Designer.cs">
+      <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTM08_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTM08_Pop01.Designer.cs">
+      <DependentUpon>frmTM08_Pop01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTM08.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTM08.Designer.cs">
+      <DependentUpon>frmTM08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTM07.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTM07.Designer.cs">
+      <DependentUpon>frmTM07.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTM06.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,6 +162,12 @@
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
+      <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM07.resx">
+      <DependentUpon>frmTM07.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTM04.resx">
       <DependentUpon>frmTM04.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +188,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTM06.resx">
       <DependentUpon>frmTM06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM08.resx">
+      <DependentUpon>frmTM08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM08_Pop01.resx">
+      <DependentUpon>frmTM08_Pop01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -181,6 +217,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YL_COMM.BizFrm\YL_COMM.BizFrm.csproj">
+      <Project>{F299A712-3812-4968-AB49-8085B111090B}</Project>
+      <Name>YL_COMM.BizFrm</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
