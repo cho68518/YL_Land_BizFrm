@@ -19,22 +19,21 @@ using YL_TELECOM.BizFrm.Dlg;
 
 namespace YL_TELECOM.BizFrm
 {
-    public partial class frmTM08 : FrmBase
+    public partial class frmTM10 : FrmBase
     {
-        frmTM08_Pop01 popup;
-        public frmTM08()
+        frmTM10_Pop01 popup;
+        public frmTM10()
         {
             InitializeComponent();
-            //단축코드 설정 
-            this.QCode = "TM08";
+            this.QCode = "TM10";
             //폼명설정
-            this.FrmName = "기초재고 등록";
+            this.FrmName = "상품입고 등록";
         }
 
-        private void frmTM08_Load(object sender, EventArgs e)
+        private void frmTM10_Load(object sender, EventArgs e)
         {
             this.efwGridControl1.BindControlSet(
-            new ColumnControlSet("ser_no", txtser_no)
+               new ColumnControlSet("ser_no", txtser_no)
             );
             this.efwGridControl1.Click += efwGridControl1_Click;
         }
@@ -59,15 +58,18 @@ namespace YL_TELECOM.BizFrm
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM08_SELECT_01", con))
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM10_SELECT_01", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
-                        
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 8);
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3.Substring(0, 8);
+
                         cmd.Parameters.Add("i_Search", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[1].Value = txtSearch.EditValue;
+                        cmd.Parameters[2].Value = txtSearch.EditValue;
 
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
@@ -75,7 +77,7 @@ namespace YL_TELECOM.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
-                      //      this.efwGridControl1.MyGridView.BestFitColumns();
+                            //      this.efwGridControl1.MyGridView.BestFitColumns();
 
                         }
                     }
@@ -85,12 +87,6 @@ namespace YL_TELECOM.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
-        }
-
-        private void btnExcelUpdate_Click(object sender, EventArgs e)
-        {
-            popup = new frmTM08_Pop01();
-            popup.ShowDialog();
         }
 
         private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
@@ -104,7 +100,7 @@ namespace YL_TELECOM.BizFrm
                 {
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
                     {
-                        using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM08_DELETE_01", con))
+                        using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM10_DELETE_01", con))
                         {
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;
@@ -130,6 +126,12 @@ namespace YL_TELECOM.BizFrm
                 txtser_no.EditValue = "";
                 Search();
             }
+        }
+
+        private void btnExcelUpdate_Click(object sender, EventArgs e)
+        {
+            popup = new frmTM10_Pop01();
+            popup.ShowDialog();
         }
     }
 }

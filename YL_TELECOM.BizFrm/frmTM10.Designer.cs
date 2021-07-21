@@ -1,6 +1,7 @@
-﻿namespace YL_TELECOM.BizFrm
+﻿
+namespace YL_TELECOM.BizFrm
 {
-    partial class frmTM08
+    partial class frmTM10
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTM08));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTM10));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -38,17 +39,23 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
+            this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.txtser_no = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.btnExcelUpdate = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtSearch = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,10 +74,12 @@
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtser_no.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtser_no.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).BeginInit();
@@ -86,23 +95,69 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwLabel2);
+            this.efwPanelControl1.Controls.Add(this.dtS_DATE);
+            this.efwPanelControl1.Controls.Add(this.dtE_DATE);
             this.efwPanelControl1.Controls.Add(this.txtser_no);
             this.efwPanelControl1.Controls.Add(this.btnExcelUpdate);
             this.efwPanelControl1.Controls.Add(this.efwLabel3);
             this.efwPanelControl1.Controls.Add(this.txtSearch);
-            this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1222, 49);
-            this.efwPanelControl1.TabIndex = 44;
+            this.efwPanelControl1.Size = new System.Drawing.Size(1336, 49);
+            this.efwPanelControl1.TabIndex = 45;
+            // 
+            // efwLabel2
+            // 
+            this.efwLabel2.EraserGroup = null;
+            this.efwLabel2.IsMultiLang = false;
+            this.efwLabel2.Location = new System.Drawing.Point(194, 17);
+            this.efwLabel2.Name = "efwLabel2";
+            this.efwLabel2.Size = new System.Drawing.Size(9, 14);
+            this.efwLabel2.TabIndex = 72;
+            this.efwLabel2.Text = "~";
+            // 
+            // dtS_DATE
+            // 
+            this.dtS_DATE.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
+            this.dtS_DATE.IsRequire = true;
+            this.dtS_DATE.Location = new System.Drawing.Point(84, 15);
+            this.dtS_DATE.Name = "dtS_DATE";
+            this.dtS_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
+            this.dtS_DATE.Properties.Appearance.Options.UseBackColor = true;
+            this.dtS_DATE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.dtS_DATE.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.dtS_DATE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtS_DATE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtS_DATE.Size = new System.Drawing.Size(103, 20);
+            this.dtS_DATE.TabIndex = 70;
+            // 
+            // dtE_DATE
+            // 
+            this.dtE_DATE.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
+            this.dtE_DATE.IsRequire = true;
+            this.dtE_DATE.Location = new System.Drawing.Point(210, 15);
+            this.dtE_DATE.Name = "dtE_DATE";
+            this.dtE_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
+            this.dtE_DATE.Properties.Appearance.Options.UseBackColor = true;
+            this.dtE_DATE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.dtE_DATE.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.dtE_DATE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtE_DATE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtE_DATE.Size = new System.Drawing.Size(99, 20);
+            this.dtE_DATE.TabIndex = 71;
             // 
             // txtser_no
             // 
             this.txtser_no.EditValue2 = null;
             this.txtser_no.EraserGroup = "CLR1";
-            this.txtser_no.Location = new System.Drawing.Point(838, 15);
+            this.txtser_no.Location = new System.Drawing.Point(977, 15);
             this.txtser_no.Name = "txtser_no";
             this.txtser_no.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtser_no.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -115,7 +170,7 @@
             // 
             this.btnExcelUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcelUpdate.ImageOptions.Image")));
             this.btnExcelUpdate.IsMultiLang = false;
-            this.btnExcelUpdate.Location = new System.Drawing.Point(702, 11);
+            this.btnExcelUpdate.Location = new System.Drawing.Point(833, 11);
             this.btnExcelUpdate.Name = "btnExcelUpdate";
             this.btnExcelUpdate.Size = new System.Drawing.Size(118, 29);
             this.btnExcelUpdate.TabIndex = 68;
@@ -126,17 +181,17 @@
             // 
             this.efwLabel3.EraserGroup = null;
             this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(267, 18);
+            this.efwLabel3.Location = new System.Drawing.Point(353, 18);
             this.efwLabel3.Name = "efwLabel3";
-            this.efwLabel3.Size = new System.Drawing.Size(158, 14);
+            this.efwLabel3.Size = new System.Drawing.Size(207, 14);
             this.efwLabel3.TabIndex = 67;
-            this.efwLabel3.Text = "검색명 ( 코드 / 품명 / Ser_No )";
+            this.efwLabel3.Text = "검색명 ( 거래처명/ 코드 / 품명 / Ser_No )";
             // 
             // txtSearch
             // 
             this.txtSearch.EditValue2 = null;
             this.txtSearch.EraserGroup = "CLR1";
-            this.txtSearch.Location = new System.Drawing.Point(444, 15);
+            this.txtSearch.Location = new System.Drawing.Point(577, 15);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtSearch.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -144,37 +199,15 @@
             this.txtSearch.Size = new System.Drawing.Size(176, 20);
             this.txtSearch.TabIndex = 64;
             // 
-            // dtS_DATE
-            // 
-            this.dtS_DATE.EditValue = new System.DateTime(2019, 7, 1, 0, 0, 0, 0);
-            this.dtS_DATE.IsRequire = true;
-            this.dtS_DATE.Location = new System.Drawing.Point(89, 15);
-            this.dtS_DATE.MaximumSize = new System.Drawing.Size(121, 0);
-            this.dtS_DATE.MinimumSize = new System.Drawing.Size(121, 0);
-            this.dtS_DATE.Name = "dtS_DATE";
-            this.dtS_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
-            this.dtS_DATE.Properties.Appearance.Options.UseBackColor = true;
-            this.dtS_DATE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.dtS_DATE.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.dtS_DATE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtS_DATE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtS_DATE.Properties.Mask.EditMask = "yyyy-MM";
-            this.dtS_DATE.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dtS_DATE.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
-            this.dtS_DATE.Size = new System.Drawing.Size(121, 20);
-            this.dtS_DATE.TabIndex = 57;
-            // 
             // efwLabel1
             // 
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
             this.efwLabel1.Location = new System.Drawing.Point(26, 18);
             this.efwLabel1.Name = "efwLabel1";
-            this.efwLabel1.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel1.Size = new System.Drawing.Size(30, 14);
             this.efwLabel1.TabIndex = 56;
-            this.efwLabel1.Text = "재고년월";
+            this.efwLabel1.Text = "입고일";
             // 
             // efwGridControl1
             // 
@@ -212,8 +245,8 @@
             this.repositoryItemCheckEdit4,
             this.repositoryItemCheckEdit5,
             this.repositoryItemButtonEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1222, 486);
-            this.efwGridControl1.TabIndex = 45;
+            this.efwGridControl1.Size = new System.Drawing.Size(1336, 421);
+            this.efwGridControl1.TabIndex = 46;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
             serviceInfo3.IsUserIDAdd = true;
@@ -231,6 +264,10 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn5,
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn13,
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn12,
@@ -267,6 +304,38 @@
             this.repositoryItemCheckEdit5.ValueChecked = "Y";
             this.repositoryItemCheckEdit5.ValueUnchecked = "N";
             // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "입고일";
+            this.gridColumn8.FieldName = "input_date";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 0;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "거래처코드";
+            this.gridColumn9.FieldName = "agency_code";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 1;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "거래처명";
+            this.gridColumn10.FieldName = "s_company_name";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 2;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.Caption = "입고창고";
+            this.gridColumn13.FieldName = "is_factory";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 3;
+            // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "코드";
@@ -274,7 +343,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 0;
+            this.gridColumn3.VisibleIndex = 4;
             this.gridColumn3.Width = 94;
             // 
             // gridColumn4
@@ -284,7 +353,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 1;
+            this.gridColumn4.VisibleIndex = 5;
             this.gridColumn4.Width = 182;
             // 
             // gridColumn12
@@ -294,7 +363,7 @@
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 2;
+            this.gridColumn12.VisibleIndex = 6;
             this.gridColumn12.Width = 176;
             // 
             // gridColumn11
@@ -306,7 +375,7 @@
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 3;
+            this.gridColumn11.VisibleIndex = 7;
             this.gridColumn11.Width = 102;
             // 
             // gridColumn22
@@ -318,7 +387,7 @@
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.OptionsColumn.AllowEdit = false;
             this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 4;
+            this.gridColumn22.VisibleIndex = 8;
             this.gridColumn22.Width = 114;
             // 
             // gridColumn2
@@ -330,7 +399,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 5;
+            this.gridColumn2.VisibleIndex = 9;
             this.gridColumn2.Width = 111;
             // 
             // gridColumn6
@@ -346,7 +415,7 @@
             this.gridColumn7.FieldName = "delete";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.VisibleIndex = 10;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -404,24 +473,26 @@
             this.repositoryItemCheckEdit4.ValueChecked = "Y";
             this.repositoryItemCheckEdit4.ValueUnchecked = "N";
             // 
-            // frmTM08
+            // frmTM10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
-            this.Name = "frmTM08";
-            this.Size = new System.Drawing.Size(1228, 570);
-            this.Load += new System.EventHandler(this.frmTM08_Load);
+            this.Name = "frmTM10";
+            this.Size = new System.Drawing.Size(1342, 505);
+            this.Load += new System.EventHandler(this.frmTM10_Load);
             this.Controls.SetChildIndex(this.efwPanelControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtser_no.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtser_no.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).EndInit();
@@ -440,32 +511,38 @@
         #endregion
 
         private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtser_no;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnExcelUpdate;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtSearch;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
+        private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
+        private Easy.Framework.WinForm.Control.efwDateEdit dtE_DATE;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
-        private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btnExcelUpdate;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtSearch;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtser_no;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
     }
 }
