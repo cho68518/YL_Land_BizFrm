@@ -1122,6 +1122,7 @@
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_qty", this.gridColumn3, "{0}"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_amt", this.gridColumn4, "{0:c}")});
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsCustomization.AllowGroup = false;
             this.gridView1.OptionsView.AllowCellMerge = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowFooter = true;
@@ -1132,6 +1133,7 @@
             this.gridColumn1.FieldName = "idx";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             // 
             // gridColumn6
             // 
@@ -1139,12 +1141,14 @@
             this.gridColumn6.FieldName = "o_company";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
+            this.gridColumn6.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "오픈마켓코드";
             this.gridColumn9.FieldName = "o_sub_company";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             // 
             // gridColumn2
             // 
@@ -1154,6 +1158,7 @@
             this.gridColumn2.FieldName = "o_date";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
             // 
@@ -1162,6 +1167,7 @@
             this.gridColumn23.Caption = "입금일";
             this.gridColumn23.FieldName = "o_deposit_confirm_date";
             this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 1;
             // 
@@ -1171,6 +1177,7 @@
             this.gridColumn7.FieldName = "o_company_nm";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
+            this.gridColumn7.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 2;
             this.gridColumn7.Width = 74;
@@ -1180,6 +1187,7 @@
             this.gridColumn8.Caption = "오픈마켓";
             this.gridColumn8.FieldName = "o_sub_company_nm";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 3;
             this.gridColumn8.Width = 82;
@@ -1189,6 +1197,7 @@
             this.gridColumn10.Caption = "품명";
             this.gridColumn10.FieldName = "p_name";
             this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 4;
             this.gridColumn10.Width = 104;
@@ -1198,6 +1207,7 @@
             this.gridColumn11.Caption = "옵션명";
             this.gridColumn11.FieldName = "option_name";
             this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 5;
             this.gridColumn11.Width = 132;
@@ -1207,6 +1217,7 @@
             this.gridColumn24.Caption = "발주옵션명";
             this.gridColumn24.FieldName = "add_p_name";
             this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn24.Visible = true;
             this.gridColumn24.VisibleIndex = 6;
             this.gridColumn24.Width = 106;
@@ -1216,6 +1227,7 @@
             this.gridColumn26.Caption = "이벤트명";
             this.gridColumn26.FieldName = "event_name";
             this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn26.Visible = true;
             this.gridColumn26.VisibleIndex = 7;
             // 
@@ -1224,6 +1236,7 @@
             this.gridColumn12.Caption = "포장단위";
             this.gridColumn12.FieldName = "p_bunch_delivery";
             this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 8;
             // 
@@ -1235,6 +1248,7 @@
             this.gridColumn3.FieldName = "o_qty";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 9;
             // 
@@ -1246,6 +1260,7 @@
             this.gridColumn4.FieldName = "o_amt";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
+            this.gridColumn4.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 10;
             this.gridColumn4.Width = 109;
@@ -1255,6 +1270,7 @@
             this.gridColumn13.Caption = "주문자";
             this.gridColumn13.FieldName = "o_receive_name";
             this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 11;
             // 
@@ -1263,6 +1279,7 @@
             this.gridColumn14.Caption = "주문자 연락처";
             this.gridColumn14.FieldName = "o_receive_contact";
             this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 12;
             // 
@@ -1271,6 +1288,7 @@
             this.gridColumn15.Caption = "수령자";
             this.gridColumn15.FieldName = "o_receive_name1";
             this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 13;
             // 
@@ -1279,6 +1297,7 @@
             this.gridColumn16.Caption = "수령자 연락처";
             this.gridColumn16.FieldName = "o_receive_contact1";
             this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 14;
             // 
@@ -1287,6 +1306,7 @@
             this.gridColumn17.Caption = "우편번호";
             this.gridColumn17.FieldName = "o_receive_zipcode1";
             this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 15;
             // 
@@ -1295,6 +1315,7 @@
             this.gridColumn18.Caption = "주소";
             this.gridColumn18.FieldName = "o_receive_address1";
             this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 16;
             // 
@@ -1303,6 +1324,7 @@
             this.gridColumn19.Caption = "배송 메세지";
             this.gridColumn19.FieldName = "o_receive_message1";
             this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn19.Visible = true;
             this.gridColumn19.VisibleIndex = 17;
             // 
@@ -1311,6 +1333,7 @@
             this.gridColumn20.Caption = "송장번호";
             this.gridColumn20.FieldName = "o_delivery_num";
             this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 18;
             // 
@@ -1319,6 +1342,7 @@
             this.gridColumn21.Caption = "업체명";
             this.gridColumn21.FieldName = "s_company_name";
             this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn21.Visible = true;
             this.gridColumn21.VisibleIndex = 19;
             // 
@@ -1327,6 +1351,7 @@
             this.gridColumn22.Caption = "배송업체코드";
             this.gridColumn22.FieldName = "o_delivery_comp_code";
             this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn22.Visible = true;
             this.gridColumn22.VisibleIndex = 20;
             // 
@@ -1336,6 +1361,7 @@
             this.gridColumn5.FieldName = "remark";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 21;
             this.gridColumn5.Width = 100;
@@ -1345,6 +1371,7 @@
             this.gridColumn25.Caption = "주분구분";
             this.gridColumn25.FieldName = "o_type";
             this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn25.Visible = true;
             this.gridColumn25.VisibleIndex = 22;
             // 

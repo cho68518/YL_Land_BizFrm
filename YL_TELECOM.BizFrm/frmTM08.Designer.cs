@@ -38,6 +38,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtser_no = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.btnExcelUpdate = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -86,6 +87,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton2);
             this.efwPanelControl1.Controls.Add(this.txtser_no);
             this.efwPanelControl1.Controls.Add(this.btnExcelUpdate);
             this.efwPanelControl1.Controls.Add(this.efwLabel3);
@@ -98,11 +100,22 @@
             this.efwPanelControl1.Size = new System.Drawing.Size(1222, 49);
             this.efwPanelControl1.TabIndex = 44;
             // 
+            // efwSimpleButton2
+            // 
+            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
+            this.efwSimpleButton2.IsMultiLang = false;
+            this.efwSimpleButton2.Location = new System.Drawing.Point(874, 11);
+            this.efwSimpleButton2.Name = "efwSimpleButton2";
+            this.efwSimpleButton2.Size = new System.Drawing.Size(153, 29);
+            this.efwSimpleButton2.TabIndex = 80;
+            this.efwSimpleButton2.Text = "기말 재고로 이관";
+            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
+            // 
             // txtser_no
             // 
             this.txtser_no.EditValue2 = null;
             this.txtser_no.EraserGroup = "CLR1";
-            this.txtser_no.Location = new System.Drawing.Point(838, 15);
+            this.txtser_no.Location = new System.Drawing.Point(1119, 19);
             this.txtser_no.Name = "txtser_no";
             this.txtser_no.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtser_no.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -117,7 +130,7 @@
             this.btnExcelUpdate.IsMultiLang = false;
             this.btnExcelUpdate.Location = new System.Drawing.Point(702, 11);
             this.btnExcelUpdate.Name = "btnExcelUpdate";
-            this.btnExcelUpdate.Size = new System.Drawing.Size(118, 29);
+            this.btnExcelUpdate.Size = new System.Drawing.Size(153, 29);
             this.btnExcelUpdate.TabIndex = 68;
             this.btnExcelUpdate.Text = "EXCEL UPDATE";
             this.btnExcelUpdate.Click += new System.EventHandler(this.btnExcelUpdate_Click);
@@ -143,6 +156,7 @@
             this.txtSearch.RequireMessage = null;
             this.txtSearch.Size = new System.Drawing.Size(176, 20);
             this.txtSearch.TabIndex = 64;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // dtS_DATE
             // 
@@ -259,6 +273,7 @@
             this.gridColumn5.ColumnEdit = this.repositoryItemCheckEdit5;
             this.gridColumn5.FieldName = "chk";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
             // 
             // repositoryItemCheckEdit5
             // 
@@ -338,6 +353,7 @@
             this.gridColumn6.Caption = "등급";
             this.gridColumn6.FieldName = "is_grade";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn7
             // 
@@ -345,6 +361,7 @@
             this.gridColumn7.ColumnEdit = this.repositoryItemButtonEdit1;
             this.gridColumn7.FieldName = "delete";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
             // 
@@ -467,5 +484,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private Easy.Framework.WinForm.Control.efwTextEdit txtser_no;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
     }
 }

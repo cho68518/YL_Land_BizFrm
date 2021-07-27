@@ -32,6 +32,32 @@ namespace YL_TELECOM.BizFrm
 
         private void frmTM10_Load(object sender, EventArgs e)
         {
+
+            base.FrmLoadEvent();
+            DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
+
+            this.IsMenuVw = true;
+            this.IsSearch = true;
+            this.IsNewMode = false;
+            this.IsSave = false;
+            this.IsDelete = false;
+            this.IsCancel = false;
+            this.IsPrint = false;
+            this.IsExcel = true;
+
+            dtS_DATE.EditValue = DateTime.Now;
+            dtE_DATE.EditValue = DateTime.Now;
+
+            gridView1.OptionsView.ShowFooter = true;
+
+            gridView1.Columns["qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["qty"].SummaryItem.FieldName = "qty";
+            gridView1.Columns["qty"].SummaryItem.DisplayFormat = "수량: {0}";
+
+            gridView1.Columns["amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["amt"].SummaryItem.FieldName = "amt";
+            gridView1.Columns["amt"].SummaryItem.DisplayFormat = "금액: {0:c}";
+
             this.efwGridControl1.BindControlSet(
                new ColumnControlSet("ser_no", txtser_no)
             );
@@ -77,7 +103,7 @@ namespace YL_TELECOM.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
-                            //      this.efwGridControl1.MyGridView.BestFitColumns();
+                            this.efwGridControl1.MyGridView.BestFitColumns();
 
                         }
                     }
@@ -132,6 +158,12 @@ namespace YL_TELECOM.BizFrm
         {
             popup = new frmTM10_Pop01();
             popup.ShowDialog();
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
         }
     }
 }

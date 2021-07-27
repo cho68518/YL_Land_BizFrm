@@ -33,6 +33,32 @@ namespace YL_TELECOM.BizFrm
 
         private void frmTM08_Load(object sender, EventArgs e)
         {
+
+            base.FrmLoadEvent();
+            DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
+
+            this.IsMenuVw = true;
+            this.IsSearch = true;
+            this.IsNewMode = false;
+            this.IsSave = false;
+            this.IsDelete = false;
+            this.IsCancel = false;
+            this.IsPrint = false;
+            this.IsExcel = true;
+
+            dtS_DATE.EditValue = DateTime.Now;
+
+            gridView1.OptionsView.ShowFooter = true;
+
+            gridView1.Columns["qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["qty"].SummaryItem.FieldName = "qty";
+            gridView1.Columns["qty"].SummaryItem.DisplayFormat = "수량: {0}";
+
+            gridView1.Columns["amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["amt"].SummaryItem.FieldName = "amt";
+            gridView1.Columns["amt"].SummaryItem.DisplayFormat = "금액: {0:c}";
+
+
             this.efwGridControl1.BindControlSet(
             new ColumnControlSet("ser_no", txtser_no)
             );
@@ -75,7 +101,7 @@ namespace YL_TELECOM.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
-                      //      this.efwGridControl1.MyGridView.BestFitColumns();
+                            this.efwGridControl1.MyGridView.BestFitColumns();
 
                         }
                     }
@@ -104,7 +130,7 @@ namespace YL_TELECOM.BizFrm
                 {
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
                     {
-                        using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM08_DELETE_01", con))
+                        using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM10_DELETE_01", con))
                         {
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;
@@ -130,6 +156,41 @@ namespace YL_TELECOM.BizFrm
                 txtser_no.EditValue = "";
                 Search();
             }
+        }
+
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM08_SAVE_02", con))
+                    {
+
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_YearMonth", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
+
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            MessageAgent.MessageShow(MessageType.Informational, "수량 금액을 기말 재고로 적용 하였습니다.");
+            Search();
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
         }
     }
 }

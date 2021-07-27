@@ -34,13 +34,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRM04));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.rbanswer_Q = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cmbBoard_Type = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.txt_idx2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txt_sch2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,6 +59,7 @@
             this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.txtcontent = new Easy.Framework.WinForm.Control.efwMemoEdit();
@@ -81,12 +82,12 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rbanswer_Q.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbBoard_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_idx2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_sch2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
+            this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
@@ -120,24 +121,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.rbanswer_Q);
-            this.panel4.Controls.Add(this.efwLabel1);
-            this.panel4.Controls.Add(this.cmbBoard_Type);
-            this.panel4.Controls.Add(this.txt_idx2);
-            this.panel4.Controls.Add(this.txt_sch2);
-            this.panel4.Controls.Add(this.efwLabel2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(3, 35);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1124, 45);
-            this.panel4.TabIndex = 8;
-            // 
             // rbanswer_Q
             // 
             this.rbanswer_Q.IsMultiLang = false;
-            this.rbanswer_Q.Location = new System.Drawing.Point(249, 10);
+            this.rbanswer_Q.Location = new System.Drawing.Point(249, 16);
             this.rbanswer_Q.Name = "rbanswer_Q";
             this.rbanswer_Q.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbanswer_Q.Properties.Appearance.Options.UseBackColor = true;
@@ -155,7 +142,7 @@
             // 
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(22, 16);
+            this.efwLabel1.Location = new System.Drawing.Point(22, 22);
             this.efwLabel1.Name = "efwLabel1";
             this.efwLabel1.Size = new System.Drawing.Size(44, 14);
             this.efwLabel1.TabIndex = 8;
@@ -171,7 +158,7 @@
             hierarchy1.SpName = null;
             this.cmbBoard_Type.HierarchyInfo = hierarchy1;
             this.cmbBoard_Type.IsMultiLang = false;
-            this.cmbBoard_Type.Location = new System.Drawing.Point(84, 13);
+            this.cmbBoard_Type.Location = new System.Drawing.Point(84, 19);
             this.cmbBoard_Type.Name = "cmbBoard_Type";
             this.cmbBoard_Type.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cmbBoard_Type.Properties.Appearance.Options.UseBackColor = true;
@@ -183,7 +170,7 @@
             // txt_idx2
             // 
             this.txt_idx2.EditValue2 = null;
-            this.txt_idx2.Location = new System.Drawing.Point(801, 12);
+            this.txt_idx2.Location = new System.Drawing.Point(801, 18);
             this.txt_idx2.Name = "txt_idx2";
             this.txt_idx2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txt_idx2.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -195,7 +182,7 @@
             // txt_sch2
             // 
             this.txt_sch2.EditValue2 = null;
-            this.txt_sch2.Location = new System.Drawing.Point(550, 13);
+            this.txt_sch2.Location = new System.Drawing.Point(550, 19);
             this.txt_sch2.Name = "txt_sch2";
             this.txt_sch2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txt_sch2.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -208,11 +195,25 @@
             // 
             this.efwLabel2.EraserGroup = null;
             this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(502, 16);
+            this.efwLabel2.Location = new System.Drawing.Point(502, 22);
             this.efwLabel2.Name = "efwLabel2";
             this.efwLabel2.Size = new System.Drawing.Size(30, 14);
             this.efwLabel2.TabIndex = 8;
             this.efwLabel2.Text = "검색명";
+            // 
+            // efwPanelControl1
+            // 
+            this.efwPanelControl1.Controls.Add(this.txt_idx2);
+            this.efwPanelControl1.Controls.Add(this.rbanswer_Q);
+            this.efwPanelControl1.Controls.Add(this.efwLabel2);
+            this.efwPanelControl1.Controls.Add(this.txt_sch2);
+            this.efwPanelControl1.Controls.Add(this.efwLabel1);
+            this.efwPanelControl1.Controls.Add(this.cmbBoard_Type);
+            this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
+            this.efwPanelControl1.Name = "efwPanelControl1";
+            this.efwPanelControl1.Size = new System.Drawing.Size(1124, 57);
+            this.efwPanelControl1.TabIndex = 67;
             // 
             // efwGridControl1
             // 
@@ -236,7 +237,7 @@
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsEditable = false;
             this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.Location = new System.Drawing.Point(3, 80);
+            this.efwGridControl1.Location = new System.Drawing.Point(3, 92);
             this.efwGridControl1.MainView = this.gridView2;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
@@ -249,8 +250,8 @@
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2,
             this.repositoryItemCheckEdit3});
-            this.efwGridControl1.Size = new System.Drawing.Size(1124, 350);
-            this.efwGridControl1.TabIndex = 39;
+            this.efwGridControl1.Size = new System.Drawing.Size(1124, 310);
+            this.efwGridControl1.TabIndex = 68;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
             serviceInfo3.IsUserIDAdd = true;
@@ -399,16 +400,25 @@
             this.repositoryItemCheckEdit1.ValueChecked = "Y";
             this.repositoryItemCheckEdit1.ValueUnchecked = "N";
             // 
+            // splitterControl1
+            // 
+            this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitterControl1.Location = new System.Drawing.Point(3, 402);
+            this.splitterControl1.Name = "splitterControl1";
+            this.splitterControl1.Size = new System.Drawing.Size(1124, 5);
+            this.splitterControl1.TabIndex = 69;
+            this.splitterControl1.TabStop = false;
+            // 
             // efwGroupControl4
             // 
             this.efwGroupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl4.CaptionImageOptions.Image")));
             this.efwGroupControl4.Controls.Add(this.dataLayoutControl1);
             this.efwGroupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl4.IsMultiLang = false;
-            this.efwGroupControl4.Location = new System.Drawing.Point(3, 430);
+            this.efwGroupControl4.Location = new System.Drawing.Point(3, 407);
             this.efwGroupControl4.Name = "efwGroupControl4";
-            this.efwGroupControl4.Size = new System.Drawing.Size(1124, 268);
-            this.efwGroupControl4.TabIndex = 41;
+            this.efwGroupControl4.Size = new System.Drawing.Size(1124, 291);
+            this.efwGroupControl4.TabIndex = 70;
             this.efwGroupControl4.Text = "글 등록";
             // 
             // dataLayoutControl1
@@ -425,7 +435,7 @@
             this.dataLayoutControl1.Location = new System.Drawing.Point(2, 23);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup2;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1120, 243);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1120, 266);
             this.dataLayoutControl1.TabIndex = 1;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
@@ -440,7 +450,7 @@
             this.txtcontent.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtcontent.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtcontent.Properties.ReadOnly = true;
-            this.txtcontent.Size = new System.Drawing.Size(356, 139);
+            this.txtcontent.Size = new System.Drawing.Size(356, 162);
             this.txtcontent.StyleController = this.dataLayoutControl1;
             this.txtcontent.TabIndex = 91;
             // 
@@ -484,7 +494,6 @@
             this.btn_save2.StyleController = this.dataLayoutControl1;
             this.btn_save2.TabIndex = 15;
             this.btn_save2.Text = "저장";
-            this.btn_save2.Click += new System.EventHandler(this.btn_save2_Click);
             // 
             // txtremark
             // 
@@ -494,7 +503,7 @@
             this.txtremark.Name = "txtremark";
             this.txtremark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtremark.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtremark.Size = new System.Drawing.Size(325, 139);
+            this.txtremark.Size = new System.Drawing.Size(325, 162);
             this.txtremark.StyleController = this.dataLayoutControl1;
             this.txtremark.TabIndex = 91;
             // 
@@ -559,7 +568,7 @@
             this.layoutControlItem2,
             this.layoutControlItem1});
             this.layoutControlGroup2.Name = "Root";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1120, 243);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1120, 266);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem25
@@ -596,7 +605,7 @@
             this.layoutControlItem27.Control = this.txtcontent;
             this.layoutControlItem27.Location = new System.Drawing.Point(0, 80);
             this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(415, 143);
+            this.layoutControlItem27.Size = new System.Drawing.Size(415, 166);
             this.layoutControlItem27.Text = "내용";
             this.layoutControlItem27.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem27.TextSize = new System.Drawing.Size(50, 20);
@@ -627,7 +636,7 @@
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(799, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(301, 223);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(301, 246);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
@@ -670,42 +679,34 @@
             this.layoutControlItem1.CustomizationFormText = "요약";
             this.layoutControlItem1.Location = new System.Drawing.Point(415, 80);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(384, 143);
+            this.layoutControlItem1.Size = new System.Drawing.Size(384, 166);
             this.layoutControlItem1.Text = "답변 내용";
             this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(50, 20);
             this.layoutControlItem1.TextToControlDistance = 5;
             // 
-            // splitterControl1
-            // 
-            this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 430);
-            this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(1124, 5);
-            this.splitterControl1.TabIndex = 42;
-            this.splitterControl1.TabStop = false;
-            // 
             // frmRM04
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.splitterControl1);
             this.Controls.Add(this.efwGroupControl4);
+            this.Controls.Add(this.splitterControl1);
             this.Controls.Add(this.efwGridControl1);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmRM04";
             this.Size = new System.Drawing.Size(1130, 698);
             this.Load += new System.EventHandler(this.frmRM04_Load);
-            this.Controls.SetChildIndex(this.panel4, 0);
+            this.Controls.SetChildIndex(this.efwPanelControl1, 0);
             this.Controls.SetChildIndex(this.efwGridControl1, 0);
-            this.Controls.SetChildIndex(this.efwGroupControl4, 0);
             this.Controls.SetChildIndex(this.splitterControl1, 0);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.Controls.SetChildIndex(this.efwGroupControl4, 0);
             ((System.ComponentModel.ISupportInitialize)(this.rbanswer_Q.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbBoard_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_idx2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_sch2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
+            this.efwPanelControl1.ResumeLayout(false);
+            this.efwPanelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
@@ -742,39 +743,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel4;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbBoard_Type;
         private Easy.Framework.WinForm.Control.efwTextEdit txt_idx2;
         private Easy.Framework.WinForm.Control.efwTextEdit txt_sch2;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbanswer_Q;
+        private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl1;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit2;
-        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl4;
-        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
-        private Easy.Framework.WinForm.Control.efwMemoEdit txtcontent;
-        private DevExpress.XtraEditors.RadioGroup rbis_open;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtsubject;
-        private Easy.Framework.WinForm.Control.efwSimpleButton btn_save2;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem27;
-        private Easy.Framework.WinForm.Control.efwMemoEdit txtremark;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraEditors.RadioGroup rbanswer_type;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private Easy.Framework.WinForm.Control.efwRadioGroup rbanswer_Q;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
@@ -785,11 +764,32 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraEditors.SplitterControl splitterControl1;
+        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl4;
+        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
+        private Easy.Framework.WinForm.Control.efwMemoEdit txtcontent;
+        private DevExpress.XtraEditors.RadioGroup rbis_open;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtsubject;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btn_save2;
+        private Easy.Framework.WinForm.Control.efwMemoEdit txtremark;
+        private DevExpress.XtraEditors.RadioGroup rbanswer_type;
         private Easy.Framework.WinForm.Control.efwTextEdit txtu_name;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private Easy.Framework.WinForm.Control.efwTextEdit txttel_no;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem27;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

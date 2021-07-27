@@ -157,7 +157,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.txtser_no.EditValue2 = null;
             this.txtser_no.EraserGroup = "CLR1";
-            this.txtser_no.Location = new System.Drawing.Point(977, 15);
+            this.txtser_no.Location = new System.Drawing.Point(994, 15);
             this.txtser_no.Name = "txtser_no";
             this.txtser_no.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtser_no.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -172,7 +172,7 @@ namespace YL_TELECOM.BizFrm
             this.btnExcelUpdate.IsMultiLang = false;
             this.btnExcelUpdate.Location = new System.Drawing.Point(833, 11);
             this.btnExcelUpdate.Name = "btnExcelUpdate";
-            this.btnExcelUpdate.Size = new System.Drawing.Size(118, 29);
+            this.btnExcelUpdate.Size = new System.Drawing.Size(138, 29);
             this.btnExcelUpdate.TabIndex = 68;
             this.btnExcelUpdate.Text = "EXCEL UPDATE";
             this.btnExcelUpdate.Click += new System.EventHandler(this.btnExcelUpdate_Click);
@@ -198,6 +198,7 @@ namespace YL_TELECOM.BizFrm
             this.txtSearch.RequireMessage = null;
             this.txtSearch.Size = new System.Drawing.Size(176, 20);
             this.txtSearch.TabIndex = 64;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // efwLabel1
             // 
@@ -256,6 +257,7 @@ namespace YL_TELECOM.BizFrm
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.efwGridControl1.Click += new System.EventHandler(this.efwGridControl1_Click);
             // 
             // gridView1
             // 

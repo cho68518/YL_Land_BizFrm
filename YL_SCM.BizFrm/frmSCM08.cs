@@ -41,8 +41,8 @@ namespace YL_SCM.BizFrm
         {
             base.FrmLoadEvent();
             DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Skin;
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Black");
+            //DevExpress.LookAndFeel.UserLookAndFeel.Default.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Skin;
+            //DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Black");
 
             this.IsMenuVw = true;
             this.IsSearch = true;

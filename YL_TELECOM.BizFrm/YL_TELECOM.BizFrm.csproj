@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5651763C-17DD-410C-AC3A-3F1A5018632C}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_TELECOM.BizFrm</RootNamespace>
     <AssemblyName>YL_TELECOM.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -99,6 +99,30 @@
     <Compile Include="Dlg\frmZipNoInfo.Designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTM09.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTM09.Designer.cs">
+      <DependentUpon>frmTM09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTM12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTM12.Designer.cs">
+      <DependentUpon>frmTM12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTM11_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTM11_Pop01.Designer.cs">
+      <DependentUpon>frmTM11_Pop01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTM11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTM11.Designer.cs">
+      <DependentUpon>frmTM11.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTM10_Pop01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +200,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM12.resx">
+      <DependentUpon>frmTM12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM11_Pop01.resx">
+      <DependentUpon>frmTM11_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM11.resx">
+      <DependentUpon>frmTM11.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTM07.resx">
       <DependentUpon>frmTM07.cs</DependentUpon>

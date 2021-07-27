@@ -41,11 +41,166 @@ namespace YL_GM.BizFrm
             this.IsExcel = false;
 
             dtS_DATE.EditValue = DateTime.Now;
+            rbq_type.EditValue = "2";
+
 
             advBandedGridView1.OptionsView.ShowFooter = true;
-            //advBandedGridView1.Columns["1_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            //advBandedGridView1.Columns["1_bef"].SummaryItem.FieldName = "1_bef";
-            //advBandedGridView1.Columns["1_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["1_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["1_bef"].SummaryItem.FieldName = "1_bef";
+            advBandedGridView1.Columns["1_bef"].SummaryItem.DisplayFormat = "{0}"; 
+
+            advBandedGridView1.Columns["1_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["1_month"].SummaryItem.FieldName = "1_month";
+            advBandedGridView1.Columns["1_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["1_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["1_rate"].SummaryItem.FieldName = "1_rate";
+            //advBandedGridView1.Columns["1_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["2_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["2_bef"].SummaryItem.FieldName = "2_bef";
+            advBandedGridView1.Columns["2_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["2_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["2_month"].SummaryItem.FieldName = "2_month";
+            advBandedGridView1.Columns["2_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["2_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["2_rate"].SummaryItem.FieldName = "2_rate";
+            //advBandedGridView1.Columns["2_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["3_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["3_bef"].SummaryItem.FieldName = "3_bef";
+            advBandedGridView1.Columns["3_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["3_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["3_month"].SummaryItem.FieldName = "3_month";
+            advBandedGridView1.Columns["3_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["3_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["3_rate"].SummaryItem.FieldName = "3_rate";
+            //advBandedGridView1.Columns["3_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["4_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["4_bef"].SummaryItem.FieldName = "4_bef";
+            advBandedGridView1.Columns["4_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["4_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["4_month"].SummaryItem.FieldName = "4_month";
+            advBandedGridView1.Columns["4_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["4_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["4_rate"].SummaryItem.FieldName = "4_rate";
+            //advBandedGridView1.Columns["4_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["5_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["5_bef"].SummaryItem.FieldName = "5_bef";
+            advBandedGridView1.Columns["5_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["5_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["5_month"].SummaryItem.FieldName = "5_month";
+            advBandedGridView1.Columns["5_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["5_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["5_rate"].SummaryItem.FieldName = "5_rate";
+            //advBandedGridView1.Columns["5_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["6_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["6_bef"].SummaryItem.FieldName = "6_bef";
+            advBandedGridView1.Columns["6_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["6_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["6_month"].SummaryItem.FieldName = "6_month";
+            advBandedGridView1.Columns["6_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["6_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["6_rate"].SummaryItem.FieldName = "6_rate";
+            //advBandedGridView1.Columns["6_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["7_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["7_bef"].SummaryItem.FieldName = "7_bef";
+            advBandedGridView1.Columns["7_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["7_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["7_month"].SummaryItem.FieldName = "7_month";
+            advBandedGridView1.Columns["7_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["7_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["7_rate"].SummaryItem.FieldName = "7_rate";
+            //advBandedGridView1.Columns["7_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["8_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["8_bef"].SummaryItem.FieldName = "8_bef";
+            advBandedGridView1.Columns["8_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["8_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["8_month"].SummaryItem.FieldName = "8_month";
+            advBandedGridView1.Columns["8_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["8_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["8_rate"].SummaryItem.FieldName = "8_rate";
+            //advBandedGridView1.Columns["8_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["9_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["9_bef"].SummaryItem.FieldName = "9_bef";
+            advBandedGridView1.Columns["9_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["9_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["9_month"].SummaryItem.FieldName = "9_month";
+            advBandedGridView1.Columns["9_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["9_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["9_rate"].SummaryItem.FieldName = "9_rate";
+            //advBandedGridView1.Columns["9_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["10_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["10_bef"].SummaryItem.FieldName = "10_bef";
+            advBandedGridView1.Columns["10_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["10_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["10_month"].SummaryItem.FieldName = "10_month";
+            advBandedGridView1.Columns["10_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["10_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["10_rate"].SummaryItem.FieldName = "10_rate";
+            //advBandedGridView1.Columns["10_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["11_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["11_bef"].SummaryItem.FieldName = "11_bef";
+            advBandedGridView1.Columns["11_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["11_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["11_month"].SummaryItem.FieldName = "11_month";
+            advBandedGridView1.Columns["11_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["11_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["11_rate"].SummaryItem.FieldName = "11_rate";
+            //advBandedGridView1.Columns["11_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["12_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["12_bef"].SummaryItem.FieldName = "12_bef";
+            advBandedGridView1.Columns["12_bef"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["12_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["12_month"].SummaryItem.FieldName = "12_month";
+            advBandedGridView1.Columns["12_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["12_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["12_rate"].SummaryItem.FieldName = "12_rate";
+            //advBandedGridView1.Columns["12_rate"].SummaryItem.DisplayFormat = "{0}";
+
+            advBandedGridView1.Columns["t_bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["t_bef"].SummaryItem.FieldName = "t_bef";
+            advBandedGridView1.Columns["t_bef"].SummaryItem.DisplayFormat = "합계: {0}";
+
+            advBandedGridView1.Columns["t_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView1.Columns["t_month"].SummaryItem.FieldName = "t_month";
+            advBandedGridView1.Columns["t_month"].SummaryItem.DisplayFormat = "{0}";
+
+            //advBandedGridView1.Columns["t_rate"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            //advBandedGridView1.Columns["t_rate"].SummaryItem.FieldName = "t_rate";
+            //advBandedGridView1.Columns["t_rate"].SummaryItem.DisplayFormat = "{0}";
         }
 
         public override void Search()
@@ -67,14 +222,12 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add("i_Qtype", MySqlDbType.VarChar, 1);
                         cmd.Parameters[1].Value = rbq_type.EditValue;
 
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
                             this.efwGridControl1.MyGridView.BestFitColumns();
-
                         }
                     }
                 }
