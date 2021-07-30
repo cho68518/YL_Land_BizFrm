@@ -69,6 +69,7 @@ namespace YL_TELECOM.BizFrm
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -268,6 +269,7 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn13,
             this.gridColumn3,
             this.gridColumn4,
+            this.gridColumn2,
             this.gridColumn12,
             this.gridColumn11,
             this.gridColumn6,
@@ -350,7 +352,7 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 5;
+            this.gridColumn12.VisibleIndex = 6;
             this.gridColumn12.Width = 176;
             // 
             // gridColumn11
@@ -362,7 +364,7 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 6;
+            this.gridColumn11.VisibleIndex = 7;
             this.gridColumn11.Width = 102;
             // 
             // gridColumn6
@@ -373,12 +375,12 @@ namespace YL_TELECOM.BizFrm
             // 
             // gridColumn7
             // 
-            this.gridColumn7.Caption = "삭세";
+            this.gridColumn7.Caption = "삭제";
             this.gridColumn7.ColumnEdit = this.repositoryItemButtonEdit1;
             this.gridColumn7.FieldName = "delete";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.VisibleIndex = 8;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -435,6 +437,14 @@ namespace YL_TELECOM.BizFrm
             this.repositoryItemCheckEdit4.Name = "repositoryItemCheckEdit4";
             this.repositoryItemCheckEdit4.ValueChecked = "Y";
             this.repositoryItemCheckEdit4.ValueUnchecked = "N";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "색상";
+            this.gridColumn2.FieldName = "color";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 5;
             // 
             // frmTM11
             // 
@@ -504,5 +514,6 @@ namespace YL_TELECOM.BizFrm
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }

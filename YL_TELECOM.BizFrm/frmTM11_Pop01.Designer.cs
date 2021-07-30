@@ -31,16 +31,15 @@ namespace YL_TELECOM.BizFrm
         {
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTM11_Pop01));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.txtFactory_NM = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.btnFactory = new Easy.Framework.WinForm.Control.efwButtonEdit();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.cmbIn_Factory = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cmbOut_Factory = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -55,9 +54,10 @@ namespace YL_TELECOM.BizFrm
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFactory_NM.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFactory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbIn_Factory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbOut_Factory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFileName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
@@ -66,9 +66,10 @@ namespace YL_TELECOM.BizFrm
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.txtFactory_NM);
+            this.efwPanelControl1.Controls.Add(this.btnFactory);
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Controls.Add(this.efwLabel5);
-            this.efwPanelControl1.Controls.Add(this.cmbIn_Factory);
             this.efwPanelControl1.Controls.Add(this.efwLabel4);
             this.efwPanelControl1.Controls.Add(this.cmbOut_Factory);
             this.efwPanelControl1.Controls.Add(this.efwLabel3);
@@ -81,8 +82,37 @@ namespace YL_TELECOM.BizFrm
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(0, 0);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(626, 91);
+            this.efwPanelControl1.Size = new System.Drawing.Size(787, 91);
             this.efwPanelControl1.TabIndex = 6;
+            // 
+            // txtFactory_NM
+            // 
+            this.txtFactory_NM.EditValue2 = null;
+            this.txtFactory_NM.EraserGroup = "CLR1";
+            this.txtFactory_NM.Location = new System.Drawing.Point(408, 51);
+            this.txtFactory_NM.Name = "txtFactory_NM";
+            this.txtFactory_NM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtFactory_NM.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtFactory_NM.RequireMessage = null;
+            this.txtFactory_NM.Size = new System.Drawing.Size(199, 20);
+            this.txtFactory_NM.TabIndex = 79;
+            // 
+            // btnFactory
+            // 
+            this.btnFactory.ByteLength = 10;
+            this.btnFactory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFactory.EditValue2 = null;
+            this.btnFactory.EraserGroup = "CLR1";
+            this.btnFactory.Location = new System.Drawing.Point(336, 51);
+            this.btnFactory.Name = "btnFactory";
+            this.btnFactory.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.btnFactory.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.btnFactory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.btnFactory.Size = new System.Drawing.Size(66, 20);
+            this.btnFactory.TabIndex = 78;
+            this.btnFactory.TabStop = false;
+            this.btnFactory.Click += new System.EventHandler(this.btnFactory_Click);
             // 
             // dtS_DATE
             // 
@@ -98,36 +128,18 @@ namespace YL_TELECOM.BizFrm
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtS_DATE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtS_DATE.Size = new System.Drawing.Size(118, 20);
+            this.dtS_DATE.Size = new System.Drawing.Size(175, 20);
             this.dtS_DATE.TabIndex = 77;
             // 
             // efwLabel5
             // 
             this.efwLabel5.EraserGroup = null;
             this.efwLabel5.IsMultiLang = false;
-            this.efwLabel5.Location = new System.Drawing.Point(230, 54);
+            this.efwLabel5.Location = new System.Drawing.Point(286, 54);
             this.efwLabel5.Name = "efwLabel5";
             this.efwLabel5.Size = new System.Drawing.Size(40, 14);
             this.efwLabel5.TabIndex = 76;
             this.efwLabel5.Text = "입고창고";
-            // 
-            // cmbIn_Factory
-            // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbIn_Factory.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbIn_Factory.HierarchyInfo = hierarchy1;
-            this.cmbIn_Factory.IsMultiLang = false;
-            this.cmbIn_Factory.Location = new System.Drawing.Point(291, 51);
-            this.cmbIn_Factory.MasterCode = "E03.PAY_GBN";
-            this.cmbIn_Factory.Name = "cmbIn_Factory";
-            this.cmbIn_Factory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbIn_Factory.Size = new System.Drawing.Size(118, 20);
-            this.cmbIn_Factory.TabIndex = 75;
             // 
             // efwLabel4
             // 
@@ -141,20 +153,20 @@ namespace YL_TELECOM.BizFrm
             // 
             // cmbOut_Factory
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbOut_Factory.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbOut_Factory.HierarchyInfo = hierarchy2;
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbOut_Factory.ChildHierarchyInfo = childHierarchy1;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbOut_Factory.HierarchyInfo = hierarchy1;
             this.cmbOut_Factory.IsMultiLang = false;
             this.cmbOut_Factory.Location = new System.Drawing.Point(85, 51);
             this.cmbOut_Factory.MasterCode = "E03.PAY_GBN";
             this.cmbOut_Factory.Name = "cmbOut_Factory";
             this.cmbOut_Factory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbOut_Factory.Size = new System.Drawing.Size(118, 20);
+            this.cmbOut_Factory.Size = new System.Drawing.Size(175, 20);
             this.cmbOut_Factory.TabIndex = 73;
             // 
             // efwLabel3
@@ -171,7 +183,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.efwLabel2.EraserGroup = null;
             this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(232, 21);
+            this.efwLabel2.Location = new System.Drawing.Point(286, 21);
             this.efwLabel2.Name = "efwLabel2";
             this.efwLabel2.Size = new System.Drawing.Size(20, 14);
             this.efwLabel2.TabIndex = 52;
@@ -190,7 +202,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
             this.efwSimpleButton2.IsMultiLang = false;
-            this.efwSimpleButton2.Location = new System.Drawing.Point(457, 47);
+            this.efwSimpleButton2.Location = new System.Drawing.Point(624, 47);
             this.efwSimpleButton2.Name = "efwSimpleButton2";
             this.efwSimpleButton2.Size = new System.Drawing.Size(151, 28);
             this.efwSimpleButton2.TabIndex = 50;
@@ -205,7 +217,7 @@ namespace YL_TELECOM.BizFrm
             this.lblCnt.Appearance.Options.UseForeColor = true;
             this.lblCnt.EraserGroup = null;
             this.lblCnt.IsMultiLang = false;
-            this.lblCnt.Location = new System.Drawing.Point(270, 19);
+            this.lblCnt.Location = new System.Drawing.Point(324, 19);
             this.lblCnt.Name = "lblCnt";
             this.lblCnt.Size = new System.Drawing.Size(10, 18);
             this.lblCnt.TabIndex = 49;
@@ -214,7 +226,7 @@ namespace YL_TELECOM.BizFrm
             // txtFileName
             // 
             this.txtFileName.EditValue2 = null;
-            this.txtFileName.Location = new System.Drawing.Point(365, 11);
+            this.txtFileName.Location = new System.Drawing.Point(419, 11);
             this.txtFileName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
@@ -228,7 +240,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
             this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(457, 14);
+            this.efwSimpleButton1.Location = new System.Drawing.Point(624, 14);
             this.efwSimpleButton1.Name = "efwSimpleButton1";
             this.efwSimpleButton1.Size = new System.Drawing.Size(151, 28);
             this.efwSimpleButton1.TabIndex = 0;
@@ -261,7 +273,7 @@ namespace YL_TELECOM.BizFrm
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.Size = new System.Drawing.Size(626, 475);
+            this.efwGridControl1.Size = new System.Drawing.Size(787, 475);
             this.efwGridControl1.TabIndex = 7;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -283,7 +295,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 566);
+            this.ClientSize = new System.Drawing.Size(787, 566);
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmTM11_Pop01";
@@ -293,9 +305,10 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFactory_NM.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFactory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbIn_Factory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbOut_Factory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFileName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
@@ -307,9 +320,7 @@ namespace YL_TELECOM.BizFrm
         #endregion
 
         private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl1;
-        private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
-        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbIn_Factory;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbOut_Factory;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
@@ -322,5 +333,8 @@ namespace YL_TELECOM.BizFrm
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtFactory_NM;
+        private Easy.Framework.WinForm.Control.efwButtonEdit btnFactory;
+        private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
     }
 }

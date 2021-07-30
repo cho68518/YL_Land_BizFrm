@@ -115,6 +115,19 @@ namespace YL_TELECOM.BizFrm
 
         public override void Search()
         {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open1();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open2();
+            }
+        }
+
+
+        private void Open1()
+        {
             Save01();
             try
             {
@@ -153,6 +166,49 @@ namespace YL_TELECOM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+
+        private void Open2()
+        {
+            Save01();
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM12_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
+
+                        cmd.Parameters.Add("i_factory", MySqlDbType.VarChar, 6);
+                        cmd.Parameters[1].Value = cmbFactory.EditValue;
+
+                        cmd.Parameters.Add("i_Search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = txtSearch.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+
         private void Save01()
         {
             try

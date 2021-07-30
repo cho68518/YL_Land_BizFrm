@@ -168,7 +168,7 @@ namespace YL_MM.BizFrm
                       , new ColumnControlSet("VIP_Money"         , txtCOUPON)
                       , new ColumnControlSet("is_gr_md"          , chkIS_GR_MD)
                       , new ColumnControlSet("is_doramd"         , chkIS_DORAMD)
-                      , new ColumnControlSet("is_biz"            , LayOut)
+                      , new ColumnControlSet("is_biz"            , chkIS_BIZ)
                       , new ColumnControlSet("chef_u_nickname"   , txtCHEF_U_NICKNAME)
                       , new ColumnControlSet("vip_reco_nickname" , txtVIP_RECO_NICKNAME)
                       , new ColumnControlSet("doramd_type"       , cmbDORAMD_TYPE)

@@ -114,6 +114,7 @@
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn65 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn66 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGridControl3 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -134,6 +135,7 @@
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn62 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn67 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGridControl4 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -152,8 +154,7 @@
             this.gridColumn59 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn60 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn66 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn67 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn68 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwTopPanelControl1)).BeginInit();
             this.efwTopPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkZ.Properties)).BeginInit();
@@ -1003,6 +1004,14 @@
             this.gridColumn65.Visible = true;
             this.gridColumn65.VisibleIndex = 14;
             // 
+            // gridColumn66
+            // 
+            this.gridColumn66.Caption = "현재등급";
+            this.gridColumn66.FieldName = "u_chef_level";
+            this.gridColumn66.Name = "gridColumn66";
+            this.gridColumn66.Visible = true;
+            this.gridColumn66.VisibleIndex = 15;
+            // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Controls.Add(this.efwGridControl3);
@@ -1073,7 +1082,8 @@
             this.gridColumn42,
             this.gridColumn46,
             this.gridColumn62,
-            this.gridColumn67});
+            this.gridColumn67,
+            this.gridColumn68});
             this.gridView3.GridControl = this.efwGridControl3;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ColumnAutoWidth = false;
@@ -1217,6 +1227,14 @@
             this.gridColumn62.Name = "gridColumn62";
             this.gridColumn62.Visible = true;
             this.gridColumn62.VisibleIndex = 15;
+            // 
+            // gridColumn67
+            // 
+            this.gridColumn67.Caption = "현재등급";
+            this.gridColumn67.FieldName = "u_chef_level";
+            this.gridColumn67.Name = "gridColumn67";
+            this.gridColumn67.Visible = true;
+            this.gridColumn67.VisibleIndex = 16;
             // 
             // xtraTabPage4
             // 
@@ -1413,21 +1431,13 @@
             this.gridColumn61.Visible = true;
             this.gridColumn61.VisibleIndex = 13;
             // 
-            // gridColumn66
+            // gridColumn68
             // 
-            this.gridColumn66.Caption = "현재등급";
-            this.gridColumn66.FieldName = "u_chef_level";
-            this.gridColumn66.Name = "gridColumn66";
-            this.gridColumn66.Visible = true;
-            this.gridColumn66.VisibleIndex = 15;
-            // 
-            // gridColumn67
-            // 
-            this.gridColumn67.Caption = "현재등급";
-            this.gridColumn67.FieldName = "u_chef_level";
-            this.gridColumn67.Name = "gridColumn67";
-            this.gridColumn67.Visible = true;
-            this.gridColumn67.VisibleIndex = 16;
+            this.gridColumn68.Caption = "비고";
+            this.gridColumn68.FieldName = "remark";
+            this.gridColumn68.Name = "gridColumn68";
+            this.gridColumn68.Visible = true;
+            this.gridColumn68.VisibleIndex = 17;
             // 
             // frmMM11
             // 
@@ -1593,5 +1603,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn65;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn66;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn67;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn68;
     }
 }
