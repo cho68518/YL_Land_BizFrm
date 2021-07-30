@@ -15,6 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YL_COMM.BizFrm;
+using YL_TELECOM.BizFrm.Dlg;
 //using YL_COMM.BizFrm;
 
 namespace YL_TELECOM.BizFrm
@@ -36,7 +37,7 @@ namespace YL_TELECOM.BizFrm
         {
             using (MySQLConn con = new MySQLConn(ConstantLib.TelConn_Real))
             {
-                con.Query = " SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM erp.tb_common_code where gcode_id = '00003'   ";
+                con.Query = " SELECT idx_fac as DCODE, u_name as DNAME  FROM telecom.tb_admin_masters where idx_fac = 4099   ";
 
                 DataSet ds = con.selectQueryDataSet();
                 //DataTable retDT = ds.Tables[0];
@@ -51,27 +52,8 @@ namespace YL_TELECOM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbOut_Factory, codeArray);
             }
-            cmbOut_Factory.EditValue = "000001";
+            cmbOut_Factory.EditValue = "4099";
 
-
-            using (MySQLConn con = new MySQLConn(ConstantLib.TelConn_Real))
-            {
-                con.Query = " SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM erp.tb_common_code where gcode_id = '00003'   ";
-
-                DataSet ds = con.selectQueryDataSet();
-                //DataTable retDT = ds.Tables[0];
-                DataRow[] dr = ds.Tables[0].Select();
-                CodeData[] codeArray = new CodeData[dr.Length];
-
-                // cmbTAREA1.EditValue = "";
-                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
-
-                for (int i = 0; i < dr.Length; i++)
-                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
-
-                CodeAgent.MakeCodeControl(this.cmbIn_Factory, codeArray);
-            }
-            cmbIn_Factory.EditValue = "000001";
 
         }
 
@@ -143,7 +125,7 @@ namespace YL_TELECOM.BizFrm
                                 cmd.Parameters[1].Value = cmbOut_Factory.EditValue;
 
                                 cmd.Parameters.Add("i_in_factory", MySqlDbType.VarChar, 50);
-                                cmd.Parameters[2].Value = cmbIn_Factory.EditValue;
+                                cmd.Parameters[2].Value = btnFactory.EditValue;
 
                                 cmd.Parameters.Add("i_m_code", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[3].Value = gridView1.GetRowCellValue(i, gridView1.Columns[0]).ToString();
@@ -151,8 +133,11 @@ namespace YL_TELECOM.BizFrm
                                 cmd.Parameters.Add("i_ser_no", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[4].Value = gridView1.GetRowCellValue(i, gridView1.Columns[1]).ToString();
 
+                                cmd.Parameters.Add("i_color", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[5].Value = gridView1.GetRowCellValue(i, gridView1.Columns[2]).ToString();
+
                                 cmd.Parameters.Add("i_qty", MySqlDbType.Int32, 11);
-                                cmd.Parameters[5].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[2]).ToString());
+                                cmd.Parameters[6].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[3]).ToString());
 
 
                                 cmd.ExecuteNonQuery();
@@ -171,5 +156,10 @@ namespace YL_TELECOM.BizFrm
 
         }
 
+        private void btnFactory_Click(object sender, EventArgs e)
+        {
+            frmFactory FrmInfo = new frmFactory() { Factory = btnFactory, Factory_NM = txtFactory_NM };
+            FrmInfo.ShowDialog();
+        }
     }
 }

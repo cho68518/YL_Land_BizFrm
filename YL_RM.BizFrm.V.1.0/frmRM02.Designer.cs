@@ -323,6 +323,7 @@
             this.efwXtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2});
+            this.efwXtraTabControl1.Click += new System.EventHandler(this.efwSimpleButton7_Click);
             // 
             // xtraTabPage1
             // 
@@ -977,6 +978,7 @@
             this.efwSimpleButton7.StyleController = this.dataLayoutControl1;
             this.efwSimpleButton7.TabIndex = 94;
             this.efwSimpleButton7.Text = "메인 이미지";
+            this.efwSimpleButton7.Click += new System.EventHandler(this.efwSimpleButton7_Click);
             // 
             // chkis_file
             // 
@@ -1002,6 +1004,7 @@
             this.efwSimpleButton6.StyleController = this.dataLayoutControl1;
             this.efwSimpleButton6.TabIndex = 93;
             this.efwSimpleButton6.Text = "삭제";
+            this.efwSimpleButton6.Click += new System.EventHandler(this.efwSimpleButton6_Click);
             // 
             // efwSimpleButton4
             // 
@@ -1014,6 +1017,7 @@
             this.efwSimpleButton4.StyleController = this.dataLayoutControl1;
             this.efwSimpleButton4.TabIndex = 92;
             this.efwSimpleButton4.Text = "삭제";
+            this.efwSimpleButton4.Click += new System.EventHandler(this.efwSimpleButton4_Click);
             // 
             // txtsummury
             // 
@@ -1061,6 +1065,7 @@
             this.efwSimpleButton3.StyleController = this.dataLayoutControl1;
             this.efwSimpleButton3.TabIndex = 59;
             this.efwSimpleButton3.Text = "첨부파일 선택";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
             // txtfile1
             // 
@@ -1086,6 +1091,7 @@
             this.efwSimpleButton2.StyleController = this.dataLayoutControl1;
             this.efwSimpleButton2.TabIndex = 57;
             this.efwSimpleButton2.Text = "이미지파일 3";
+            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
             // 
             // efwSimpleButton1
             // 
@@ -1098,6 +1104,7 @@
             this.efwSimpleButton1.StyleController = this.dataLayoutControl1;
             this.efwSimpleButton1.TabIndex = 56;
             this.efwSimpleButton1.Text = "이미지파일 2";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
             // 
             // btnFileOpen4
             // 
@@ -1110,6 +1117,7 @@
             this.btnFileOpen4.StyleController = this.dataLayoutControl1;
             this.btnFileOpen4.TabIndex = 55;
             this.btnFileOpen4.Text = "이미지파일 1";
+            this.btnFileOpen4.Click += new System.EventHandler(this.btnFileOpen4_Click);
             // 
             // picBanner3
             // 
@@ -1726,6 +1734,7 @@
             this.btn_del2.StyleController = this.dataLayoutControl1;
             this.btn_del2.TabIndex = 16;
             this.btn_del2.Text = "삭제";
+            this.btn_del2.Click += new System.EventHandler(this.btn_del2_Click);
             // 
             // btn_save2
             // 
@@ -1738,6 +1747,7 @@
             this.btn_save2.StyleController = this.dataLayoutControl1;
             this.btn_save2.TabIndex = 15;
             this.btn_save2.Text = "저장";
+            this.btn_save2.Click += new System.EventHandler(this.btn_save2_Click);
             // 
             // btn_new2
             // 
@@ -1750,6 +1760,7 @@
             this.btn_new2.StyleController = this.dataLayoutControl1;
             this.btn_new2.TabIndex = 14;
             this.btn_new2.Text = "신규";
+            this.btn_new2.Click += new System.EventHandler(this.btn_new2_Click);
             // 
             // rbboard_type
             // 
@@ -1773,6 +1784,7 @@
             this.efwSimpleButton5.StyleController = this.dataLayoutControl1;
             this.efwSimpleButton5.TabIndex = 92;
             this.efwSimpleButton5.Text = "삭제";
+            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
             // 
             // layoutControlGroup2
             // 

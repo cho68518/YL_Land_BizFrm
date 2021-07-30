@@ -102,14 +102,17 @@ namespace YL_TELECOM.BizFrm
                                 cmd.Parameters.Add("i_ser_no", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[3].Value = gridView1.GetRowCellValue(i, gridView1.Columns[2]).ToString();
 
-                                cmd.Parameters.Add("i_qty", MySqlDbType.Int32, 11);
-                                cmd.Parameters[4].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[3]).ToString());
+                                cmd.Parameters.Add("i_color", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[4].Value = gridView1.GetRowCellValue(i, gridView1.Columns[3]).ToString();
 
-                                cmd.Parameters.Add("i_price", MySqlDbType.Int32, 11);
+                                cmd.Parameters.Add("i_qty", MySqlDbType.Int32, 11);
                                 cmd.Parameters[5].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[4]).ToString());
 
-                                cmd.Parameters.Add("i_amt", MySqlDbType.Int32, 11);
+                                cmd.Parameters.Add("i_price", MySqlDbType.Int32, 11);
                                 cmd.Parameters[6].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[5]).ToString());
+
+                                cmd.Parameters.Add("i_amt", MySqlDbType.Int32, 11);
+                                cmd.Parameters[7].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[6]).ToString());
 
 
                                 cmd.ExecuteNonQuery();

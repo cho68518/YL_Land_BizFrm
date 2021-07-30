@@ -93,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstantLib.cs" />
+    <Compile Include="Dlg\frmFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\frmFactory.Designer.cs">
+      <DependentUpon>frmFactory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dlg\frmZipNoInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,8 +204,14 @@
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dlg\frmFactory.resx">
+      <DependentUpon>frmFactory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM09.resx">
+      <DependentUpon>frmTM09.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTM12.resx">
       <DependentUpon>frmTM12.cs</DependentUpon>
