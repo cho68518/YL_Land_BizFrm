@@ -105,6 +105,12 @@
     <Compile Include="Dlg\frmZipNoInfo.Designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTM12_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTM12_Pop01.Designer.cs">
+      <DependentUpon>frmTM12_Pop01.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTM09.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTM10_Pop01.resx">
       <DependentUpon>frmTM10_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTM12_Pop01.resx">
+      <DependentUpon>frmTM12_Pop01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

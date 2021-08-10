@@ -49,6 +49,7 @@
             this.dt1T = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dt1F = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -112,6 +113,7 @@
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
+            this.gridColumn7,
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6});
@@ -155,7 +157,7 @@
             this.gridColumn4.FieldName = "o_qty";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 4;
             // 
             // gridColumn5
             // 
@@ -163,7 +165,7 @@
             this.gridColumn5.FieldName = "o_amt";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.VisibleIndex = 5;
             // 
             // gridColumn6
             // 
@@ -171,7 +173,7 @@
             this.gridColumn6.FieldName = "remark";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.VisibleIndex = 6;
             this.gridColumn6.Width = 458;
             // 
             // repositoryItemLookUpEdit1
@@ -270,6 +272,15 @@
             this.efwLabel1.TabIndex = 47;
             this.efwLabel1.Text = "기간";
             // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "제품명";
+            this.gridColumn7.FieldName = "p_name";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 3;
+            this.gridColumn7.Width = 426;
+            // 
             // frmGM11_Pop05
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -316,5 +327,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
     }
 }

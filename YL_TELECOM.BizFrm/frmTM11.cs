@@ -160,5 +160,11 @@ namespace YL_TELECOM.BizFrm
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            Clipboard.SetText(gridView1.GetFocusedDisplayText());
+            e.Handled = true;
+        }
     }
 }

@@ -15,10 +15,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Columns;
+using YL_TELECOM.BizFrm.Dlg;
 namespace YL_TELECOM.BizFrm
 {
     public partial class frmTM12 : FrmBase
     {
+        frmTM12_Pop01 popup;
         public frmTM12()
         {
             InitializeComponent();
@@ -74,33 +76,11 @@ namespace YL_TELECOM.BizFrm
             gridView1.Columns["stock_amt"].SummaryItem.DisplayFormat = "재고 금액: {0:c}";
 
             dtS_DATE.EditValue = DateTime.Now;
-            setCmb();
+            btnFactory.EditValue = "4099";
+            txtFactory_NM.EditValue = "여유텔레콤(본사창고)";
         }
 
-        private void setCmb()
-        {
-
-
-            using (MySQLConn con = new MySQLConn(ConstantLib.TelConn_Real))
-            {
-                con.Query = " SELECT '' as DCODE, '선택하세요' as DNAME  FROM DUAL union all SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM erp.tb_common_code where gcode_id = '00003' ";
-
-                DataSet ds = con.selectQueryDataSet();
-                //DataTable retDT = ds.Tables[0];
-                DataRow[] dr = ds.Tables[0].Select();
-                CodeData[] codeArray = new CodeData[dr.Length];
-
-                // cmbTAREA1.EditValue = "";
-                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
-
-                for (int i = 0; i < dr.Length; i++)
-                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
-
-                CodeAgent.MakeCodeControl(this.cmbFactory, codeArray);
-            }
-            cmbFactory.EditValue = "";
-
-        }
+ 
 
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
@@ -144,7 +124,7 @@ namespace YL_TELECOM.BizFrm
                         cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
 
                         cmd.Parameters.Add("i_factory", MySqlDbType.VarChar, 6);
-                        cmd.Parameters[1].Value = cmbFactory.EditValue;
+                        cmd.Parameters[1].Value = btnFactory.EditValue;
 
                         cmd.Parameters.Add("i_Search", MySqlDbType.VarChar, 50);
                         cmd.Parameters[2].Value = txtSearch.EditValue;
@@ -185,7 +165,7 @@ namespace YL_TELECOM.BizFrm
                         cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
 
                         cmd.Parameters.Add("i_factory", MySqlDbType.VarChar, 6);
-                        cmd.Parameters[1].Value = cmbFactory.EditValue;
+                        cmd.Parameters[1].Value = btnFactory.EditValue;
 
                         cmd.Parameters.Add("i_Search", MySqlDbType.VarChar, 50);
                         cmd.Parameters[2].Value = txtSearch.EditValue;
@@ -246,6 +226,37 @@ namespace YL_TELECOM.BizFrm
         {
             if (e.KeyCode == Keys.Enter)
                 Search();
+        }
+
+        private void btnFactory_Click(object sender, EventArgs e)
+        {
+            frmFactory FrmInfo = new frmFactory() { Factory = btnFactory, Factory_NM = txtFactory_NM };
+            FrmInfo.ShowDialog();
+        }
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            popup = new frmTM12_Pop01();
+
+
+            popup.m_code = gridView1.GetFocusedRowCellValue("m_code").ToString();
+            popup.ser_no = gridView1.GetFocusedRowCellValue("ser_no").ToString();
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            popup = null;
+        }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            Clipboard.SetText(gridView1.GetFocusedDisplayText());
+            e.Handled = true;
         }
     }
 }

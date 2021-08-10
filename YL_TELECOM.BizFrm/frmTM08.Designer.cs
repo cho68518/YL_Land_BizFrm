@@ -38,6 +38,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.txtm_code = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtser_no = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.btnExcelUpdate = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -61,9 +62,10 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.delete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtm_code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtser_no.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -71,11 +73,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.txtm_code);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton2);
             this.efwPanelControl1.Controls.Add(this.txtser_no);
             this.efwPanelControl1.Controls.Add(this.btnExcelUpdate);
@@ -88,6 +91,19 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1222, 49);
             this.efwPanelControl1.TabIndex = 44;
+            // 
+            // txtm_code
+            // 
+            this.txtm_code.EditValue2 = null;
+            this.txtm_code.EraserGroup = "CLR1";
+            this.txtm_code.Location = new System.Drawing.Point(1130, 15);
+            this.txtm_code.Name = "txtm_code";
+            this.txtm_code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtm_code.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtm_code.RequireMessage = null;
+            this.txtm_code.Size = new System.Drawing.Size(73, 20);
+            this.txtm_code.TabIndex = 81;
+            this.txtm_code.Visible = false;
             // 
             // efwSimpleButton2
             // 
@@ -104,13 +120,14 @@
             // 
             this.txtser_no.EditValue2 = null;
             this.txtser_no.EraserGroup = "CLR1";
-            this.txtser_no.Location = new System.Drawing.Point(1119, 19);
+            this.txtser_no.Location = new System.Drawing.Point(1051, 15);
             this.txtser_no.Name = "txtser_no";
             this.txtser_no.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtser_no.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtser_no.RequireMessage = null;
             this.txtser_no.Size = new System.Drawing.Size(73, 20);
             this.txtser_no.TabIndex = 69;
+            this.txtser_no.Visible = false;
             // 
             // btnExcelUpdate
             // 
@@ -206,7 +223,7 @@
             this.efwGridControl1.PrevRowHandle = -2147483648;
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit5,
-            this.repositoryItemButtonEdit1});
+            this.delete});
             this.efwGridControl1.Size = new System.Drawing.Size(1222, 486);
             this.efwGridControl1.TabIndex = 45;
             this.efwGridControl1.TableName = "";
@@ -244,6 +261,7 @@
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "price", this.gridColumn2, "금액: {0}")});
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             // 
             // gridColumn1
             // 
@@ -369,22 +387,21 @@
             // gridColumn7
             // 
             this.gridColumn7.Caption = "삭세";
-            this.gridColumn7.ColumnEdit = this.repositoryItemButtonEdit1;
+            this.gridColumn7.ColumnEdit = this.delete;
             this.gridColumn7.FieldName = "delete";
             this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 9;
             // 
-            // repositoryItemButtonEdit1
+            // delete
             // 
-            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.delete.AutoHeight = false;
             editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.delete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
-            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repositoryItemButtonEdit1.Click += new System.EventHandler(this.repositoryItemButtonEdit1_Click);
+            this.delete.Name = "delete";
+            this.delete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // frmTM08
             // 
@@ -400,6 +417,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtm_code.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtser_no.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
@@ -407,7 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,11 +451,12 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit delete;
         private Easy.Framework.WinForm.Control.efwTextEdit txtser_no;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtm_code;
     }
 }

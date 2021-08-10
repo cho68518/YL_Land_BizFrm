@@ -72,6 +72,7 @@ namespace YL_TELECOM.BizFrm
             if (dr != null && dr["ser_no"].ToString() != "")
             {
                 this.txtser_no.EditValue = dr["ser_no"].ToString();
+                this.txtm_code.EditValue = dr["m_code"].ToString();
             }
 
         }
@@ -119,45 +120,6 @@ namespace YL_TELECOM.BizFrm
             popup.ShowDialog();
         }
 
-        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
-        {
-            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
-            this.txtser_no.EditValue = dr["ser_no"].ToString();
-
-            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
-            {
-                try
-                {
-                    using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
-                    {
-                        using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM10_DELETE_01", con))
-                        {
-                            con.Open();
-                            cmd.CommandType = CommandType.StoredProcedure;
-
-                            cmd.Parameters.Add(new MySqlParameter("i_ser_no", MySqlDbType.VarChar));
-                            cmd.Parameters["i_ser_no"].Value = txtser_no.EditValue;
-                            cmd.Parameters["i_ser_no"].Direction = ParameterDirection.Input;
-
-
-                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
-                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
-                            cmd.ExecuteNonQuery();
-
-                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
-
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-                }
-                txtser_no.EditValue = "";
-                Search();
-            }
-        }
-
         private void efwSimpleButton2_Click(object sender, EventArgs e)
         {
             try
@@ -191,6 +153,55 @@ namespace YL_TELECOM.BizFrm
         {
             if (e.KeyCode == Keys.Enter)
                 Search();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+            this.txtser_no.EditValue = dr["ser_no"].ToString();
+            this.txtm_code.EditValue = dr["m_code"].ToString();
+            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM08_DELETE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_m_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_m_code"].Value = txtm_code.EditValue.ToString();
+                            cmd.Parameters["i_m_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_ser_no", MySqlDbType.VarChar));
+                            cmd.Parameters["i_ser_no"].Value = txtser_no.EditValue.ToString();
+                            cmd.Parameters["i_ser_no"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                txtser_no.EditValue = "";
+                txtm_code.EditValue = "";
+                Search();
+            }
+        }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            Clipboard.SetText(gridView1.GetFocusedDisplayText());
+            e.Handled = true;
         }
     }
 }

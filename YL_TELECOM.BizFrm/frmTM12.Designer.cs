@@ -30,8 +30,6 @@ namespace YL_TELECOM.BizFrm
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTM12));
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -49,11 +47,12 @@ namespace YL_TELECOM.BizFrm
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.txtFactory_NM = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.btnFactory = new Easy.Framework.WinForm.Control.efwButtonEdit();
+            this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.cmbFactory = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.txtser_no = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtSearch = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -73,15 +72,8 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
-            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemCheckEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.efwXtraTabControl1 = new Easy.Framework.WinForm.Control.efwXtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
@@ -111,22 +103,15 @@ namespace YL_TELECOM.BizFrm
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFactory_NM.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFactory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbFactory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtser_no.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).BeginInit();
             this.efwXtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -146,25 +131,65 @@ namespace YL_TELECOM.BizFrm
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.txtFactory_NM);
+            this.efwPanelControl1.Controls.Add(this.btnFactory);
+            this.efwPanelControl1.Controls.Add(this.efwLabel5);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton2);
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
-            this.efwPanelControl1.Controls.Add(this.efwLabel4);
-            this.efwPanelControl1.Controls.Add(this.cmbFactory);
             this.efwPanelControl1.Controls.Add(this.txtser_no);
             this.efwPanelControl1.Controls.Add(this.efwLabel3);
             this.efwPanelControl1.Controls.Add(this.txtSearch);
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1259, 57);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1259, 61);
             this.efwPanelControl1.TabIndex = 49;
+            // 
+            // txtFactory_NM
+            // 
+            this.txtFactory_NM.EditValue2 = null;
+            this.txtFactory_NM.EraserGroup = "CLR1";
+            this.txtFactory_NM.Location = new System.Drawing.Point(375, 18);
+            this.txtFactory_NM.Name = "txtFactory_NM";
+            this.txtFactory_NM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtFactory_NM.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtFactory_NM.RequireMessage = null;
+            this.txtFactory_NM.Size = new System.Drawing.Size(199, 20);
+            this.txtFactory_NM.TabIndex = 82;
+            // 
+            // btnFactory
+            // 
+            this.btnFactory.ByteLength = 10;
+            this.btnFactory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFactory.EditValue2 = null;
+            this.btnFactory.EraserGroup = "CLR1";
+            this.btnFactory.Location = new System.Drawing.Point(303, 18);
+            this.btnFactory.Name = "btnFactory";
+            this.btnFactory.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.btnFactory.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.btnFactory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.btnFactory.Size = new System.Drawing.Size(66, 20);
+            this.btnFactory.TabIndex = 81;
+            this.btnFactory.TabStop = false;
+            this.btnFactory.Click += new System.EventHandler(this.btnFactory_Click);
+            // 
+            // efwLabel5
+            // 
+            this.efwLabel5.EraserGroup = null;
+            this.efwLabel5.IsMultiLang = false;
+            this.efwLabel5.Location = new System.Drawing.Point(265, 21);
+            this.efwLabel5.Name = "efwLabel5";
+            this.efwLabel5.Size = new System.Drawing.Size(20, 14);
+            this.efwLabel5.TabIndex = 80;
+            this.efwLabel5.Text = "창고";
             // 
             // efwSimpleButton2
             // 
             this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
             this.efwSimpleButton2.IsMultiLang = false;
-            this.efwSimpleButton2.Location = new System.Drawing.Point(881, 14);
+            this.efwSimpleButton2.Location = new System.Drawing.Point(1013, 14);
             this.efwSimpleButton2.Name = "efwSimpleButton2";
             this.efwSimpleButton2.Size = new System.Drawing.Size(180, 28);
             this.efwSimpleButton2.TabIndex = 79;
@@ -204,39 +229,11 @@ namespace YL_TELECOM.BizFrm
             this.efwLabel1.TabIndex = 77;
             this.efwLabel1.Text = "재고년월";
             // 
-            // efwLabel4
-            // 
-            this.efwLabel4.EraserGroup = null;
-            this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(275, 21);
-            this.efwLabel4.Name = "efwLabel4";
-            this.efwLabel4.Size = new System.Drawing.Size(20, 14);
-            this.efwLabel4.TabIndex = 76;
-            this.efwLabel4.Text = "창고";
-            // 
-            // cmbFactory
-            // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbFactory.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbFactory.HierarchyInfo = hierarchy1;
-            this.cmbFactory.IsMultiLang = false;
-            this.cmbFactory.Location = new System.Drawing.Point(313, 18);
-            this.cmbFactory.MasterCode = "E03.PAY_GBN";
-            this.cmbFactory.Name = "cmbFactory";
-            this.cmbFactory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbFactory.Size = new System.Drawing.Size(118, 20);
-            this.cmbFactory.TabIndex = 75;
-            // 
             // txtser_no
             // 
             this.txtser_no.EditValue2 = null;
             this.txtser_no.EraserGroup = "CLR1";
-            this.txtser_no.Location = new System.Drawing.Point(1067, 18);
+            this.txtser_no.Location = new System.Drawing.Point(1199, 18);
             this.txtser_no.Name = "txtser_no";
             this.txtser_no.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtser_no.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -249,7 +246,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.efwLabel3.EraserGroup = null;
             this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(480, 21);
+            this.efwLabel3.Location = new System.Drawing.Point(612, 21);
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(158, 14);
             this.efwLabel3.TabIndex = 67;
@@ -259,7 +256,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.txtSearch.EditValue2 = null;
             this.txtSearch.EraserGroup = "CLR1";
-            this.txtSearch.Location = new System.Drawing.Point(654, 18);
+            this.txtSearch.Location = new System.Drawing.Point(786, 18);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtSearch.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -295,16 +292,8 @@ namespace YL_TELECOM.BizFrm
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemLookUpEdit1,
-            this.repositoryItemMemoExEdit1,
-            this.repositoryItemMemoEdit1,
-            this.repositoryItemCheckEdit1,
-            this.repositoryItemCheckEdit2,
-            this.repositoryItemCheckEdit3,
-            this.repositoryItemCheckEdit4,
-            this.repositoryItemCheckEdit5,
-            this.repositoryItemButtonEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1243, 469);
+            this.btnDetail});
+            this.efwGridControl1.Size = new System.Drawing.Size(1243, 465);
             this.efwGridControl1.TabIndex = 50;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -334,7 +323,8 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn5,
             this.gridColumn7,
             this.gridColumn8,
-            this.gridColumn9});
+            this.gridColumn9,
+            this.gridColumn20});
             this.gridView1.DetailHeight = 408;
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -348,6 +338,7 @@ namespace YL_TELECOM.BizFrm
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "stock_amt", this.gridColumn9, "{0:c}")});
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             // 
             // gridColumn10
             // 
@@ -386,7 +377,7 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 182;
+            this.gridColumn4.Width = 157;
             // 
             // gridColumn14
             // 
@@ -404,7 +395,7 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 5;
-            this.gridColumn12.Width = 176;
+            this.gridColumn12.Width = 96;
             // 
             // gridColumn11
             // 
@@ -495,76 +486,32 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 13;
             // 
-            // repositoryItemLookUpEdit1
+            // gridColumn20
             // 
-            this.repositoryItemLookUpEdit1.AutoHeight = false;
-            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            this.gridColumn20.Caption = "상세현황";
+            this.gridColumn20.ColumnEdit = this.btnDetail;
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.Visible = true;
+            this.gridColumn20.VisibleIndex = 14;
             // 
-            // repositoryItemMemoExEdit1
+            // btnDetail
             // 
-            this.repositoryItemMemoExEdit1.AutoHeight = false;
-            this.repositoryItemMemoExEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemMemoExEdit1.Name = "repositoryItemMemoExEdit1";
-            // 
-            // repositoryItemMemoEdit1
-            // 
-            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            this.repositoryItemCheckEdit1.ValueChecked = "Y";
-            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
-            // 
-            // repositoryItemCheckEdit2
-            // 
-            this.repositoryItemCheckEdit2.AutoHeight = false;
-            this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
-            this.repositoryItemCheckEdit2.ValueChecked = "Y";
-            this.repositoryItemCheckEdit2.ValueUnchecked = "N";
-            // 
-            // repositoryItemCheckEdit3
-            // 
-            this.repositoryItemCheckEdit3.AutoHeight = false;
-            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
-            this.repositoryItemCheckEdit3.ValueChecked = "Y";
-            this.repositoryItemCheckEdit3.ValueUnchecked = "N";
-            // 
-            // repositoryItemCheckEdit4
-            // 
-            this.repositoryItemCheckEdit4.AutoHeight = false;
-            this.repositoryItemCheckEdit4.Name = "repositoryItemCheckEdit4";
-            this.repositoryItemCheckEdit4.ValueChecked = "Y";
-            this.repositoryItemCheckEdit4.ValueUnchecked = "N";
-            // 
-            // repositoryItemCheckEdit5
-            // 
-            this.repositoryItemCheckEdit5.AutoHeight = false;
-            this.repositoryItemCheckEdit5.Name = "repositoryItemCheckEdit5";
-            this.repositoryItemCheckEdit5.ValueChecked = "Y";
-            this.repositoryItemCheckEdit5.ValueUnchecked = "N";
-            // 
-            // repositoryItemButtonEdit1
-            // 
-            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.btnDetail.AutoHeight = false;
             editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.btnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
-            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // efwXtraTabControl1
             // 
             this.efwXtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwXtraTabControl1.IsMultiLang = false;
-            this.efwXtraTabControl1.Location = new System.Drawing.Point(3, 92);
+            this.efwXtraTabControl1.Location = new System.Drawing.Point(3, 96);
             this.efwXtraTabControl1.Name = "efwXtraTabControl1";
             this.efwXtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.efwXtraTabControl1.Size = new System.Drawing.Size(1259, 510);
+            this.efwXtraTabControl1.Size = new System.Drawing.Size(1259, 506);
             this.efwXtraTabControl1.TabIndex = 51;
             this.efwXtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -573,19 +520,19 @@ namespace YL_TELECOM.BizFrm
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.efwGridControl1);
-            this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
+            this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Padding = new System.Windows.Forms.Padding(5);
-            this.xtraTabPage1.Size = new System.Drawing.Size(1253, 479);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1253, 475);
             this.xtraTabPage1.Text = "개별 현황";
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.efwGridControl2);
-            this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
+            this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Padding = new System.Windows.Forms.Padding(5);
-            this.xtraTabPage2.Size = new System.Drawing.Size(1253, 479);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1253, 475);
             this.xtraTabPage2.Text = "품목별 집계현황";
             // 
             // efwGridControl2
@@ -624,7 +571,7 @@ namespace YL_TELECOM.BizFrm
             this.repositoryItemCheckEdit9,
             this.repositoryItemCheckEdit10,
             this.repositoryItemButtonEdit2});
-            this.efwGridControl2.Size = new System.Drawing.Size(1243, 469);
+            this.efwGridControl2.Size = new System.Drawing.Size(1243, 465);
             this.efwGridControl2.TabIndex = 51;
             this.efwGridControl2.TableName = "";
             serviceInfo6.InstanceName = "";
@@ -880,22 +827,15 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFactory_NM.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFactory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbFactory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtser_no.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).EndInit();
             this.efwXtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
@@ -934,17 +874,6 @@ namespace YL_TELECOM.BizFrm
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
-        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbFactory;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
@@ -978,5 +907,10 @@ namespace YL_TELECOM.BizFrm
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit9;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit10;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtFactory_NM;
+        private Easy.Framework.WinForm.Control.efwButtonEdit btnFactory;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetail;
     }
 }

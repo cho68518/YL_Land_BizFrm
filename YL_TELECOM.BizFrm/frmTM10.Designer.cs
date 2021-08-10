@@ -58,6 +58,7 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -72,7 +73,6 @@ namespace YL_TELECOM.BizFrm
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -286,6 +286,7 @@ namespace YL_TELECOM.BizFrm
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "price", this.gridColumn2, "금액: {0}")});
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             // 
             // gridColumn1
             // 
@@ -359,6 +360,14 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 5;
             this.gridColumn4.Width = 182;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.Caption = "색상";
+            this.gridColumn14.FieldName = "color";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 6;
             // 
             // gridColumn12
             // 
@@ -476,14 +485,6 @@ namespace YL_TELECOM.BizFrm
             this.repositoryItemCheckEdit4.Name = "repositoryItemCheckEdit4";
             this.repositoryItemCheckEdit4.ValueChecked = "Y";
             this.repositoryItemCheckEdit4.ValueUnchecked = "N";
-            // 
-            // gridColumn14
-            // 
-            this.gridColumn14.Caption = "색상";
-            this.gridColumn14.FieldName = "color";
-            this.gridColumn14.Name = "gridColumn14";
-            this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 6;
             // 
             // frmTM10
             // 
