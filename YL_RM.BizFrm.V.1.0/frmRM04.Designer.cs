@@ -494,6 +494,7 @@
             this.btn_save2.StyleController = this.dataLayoutControl1;
             this.btn_save2.TabIndex = 15;
             this.btn_save2.Text = "저장";
+            this.btn_save2.Click += new System.EventHandler(this.btn_save2_Click);
             // 
             // txtremark
             // 
