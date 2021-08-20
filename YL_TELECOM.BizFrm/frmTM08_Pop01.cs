@@ -28,6 +28,11 @@ namespace YL_TELECOM.BizFrm
         private void frmTM08_Pop01_Load(object sender, EventArgs e)
         {
             dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
+            dtS_DATE.Properties.Mask.EditMask = "yyyy-MM";
+            dtS_DATE.Properties.DisplayFormat.FormatString = "yyyy-MM";
+            dtS_DATE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            dtS_DATE.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            dtS_DATE.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
 
         }
         private void efwSimpleButton1_Click(object sender, EventArgs e)

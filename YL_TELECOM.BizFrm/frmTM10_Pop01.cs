@@ -56,8 +56,8 @@ namespace YL_TELECOM.BizFrm
 
             using (MySQLConn con = new MySQLConn(ConstantLib.TelConn_Real))
             {
-                con.Query = " SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM erp.tb_common_code where gcode_id = '00003'   ";
-
+              //  con.Query = " SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM erp.tb_common_code where gcode_id = '00003'   ";
+                con.Query = " SELECT idx_fac as DCODE, u_name as DNAME  FROM telecom.tb_admin_masters where idx_fac = 4099   ";
                 DataSet ds = con.selectQueryDataSet();
                 //DataTable retDT = ds.Tables[0];
                 DataRow[] dr = ds.Tables[0].Select();
@@ -71,7 +71,7 @@ namespace YL_TELECOM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbFactory, codeArray);
             }
-            cmbFactory.EditValue = "000001";
+            cmbFactory.EditValue = "4099";
 
         }
 
@@ -179,6 +179,64 @@ namespace YL_TELECOM.BizFrm
 
         }
 
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbAgencyCode.EditValue == "" ^ cmbAgencyCode.EditValue == null)
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, "거래처를 선택하세요!");
+                    return;
+                }
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                {
 
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM10_SAVE_01", con))
+                    {
+
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_input_date", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 8);
+
+                        cmd.Parameters.Add("i_is_factory", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = cmbFactory.EditValue;
+
+                        cmd.Parameters.Add("i_agency_code", MySqlDbType.Int32);
+                        cmd.Parameters[2].Value = Convert.ToInt32(cmbAgencyCode.EditValue).ToString();
+
+                        cmd.Parameters.Add("i_m_code", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtM_Code.EditValue;
+
+                        cmd.Parameters.Add("i_ser_no", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[4].Value = txtSer_No.EditValue;
+
+                        cmd.Parameters.Add("i_color", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[5].Value = txtColor.EditValue;
+
+                        cmd.Parameters.Add("i_qty", MySqlDbType.Int32, 11);
+                        cmd.Parameters[6].Value = Convert.ToInt32(txtQty.EditValue).ToString(); ;
+
+                        cmd.Parameters.Add("i_price", MySqlDbType.Int32, 11);
+                        cmd.Parameters[7].Value = Convert.ToInt32(txtPrice.EditValue).ToString(); ;
+
+                        cmd.Parameters.Add("i_amt", MySqlDbType.Int32, 11);
+                        cmd.Parameters[8].Value = Convert.ToInt32(txtAmt.EditValue).ToString(); ;
+
+
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+        }
     }
 }

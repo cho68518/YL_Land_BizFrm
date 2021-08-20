@@ -42,7 +42,7 @@ namespace YL_TELECOM.BizFrm
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
-            this.txtser_no = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtidx = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.btnExcelUpdate = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtSearch = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -79,7 +79,7 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtser_no.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtidx.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -99,7 +99,7 @@ namespace YL_TELECOM.BizFrm
             this.efwPanelControl1.Controls.Add(this.efwLabel2);
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Controls.Add(this.dtE_DATE);
-            this.efwPanelControl1.Controls.Add(this.txtser_no);
+            this.efwPanelControl1.Controls.Add(this.txtidx);
             this.efwPanelControl1.Controls.Add(this.btnExcelUpdate);
             this.efwPanelControl1.Controls.Add(this.efwLabel3);
             this.efwPanelControl1.Controls.Add(this.txtSearch);
@@ -154,18 +154,18 @@ namespace YL_TELECOM.BizFrm
             this.dtE_DATE.Size = new System.Drawing.Size(99, 20);
             this.dtE_DATE.TabIndex = 71;
             // 
-            // txtser_no
+            // txtidx
             // 
-            this.txtser_no.EditValue2 = null;
-            this.txtser_no.EraserGroup = "CLR1";
-            this.txtser_no.Location = new System.Drawing.Point(994, 15);
-            this.txtser_no.Name = "txtser_no";
-            this.txtser_no.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtser_no.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtser_no.RequireMessage = null;
-            this.txtser_no.Size = new System.Drawing.Size(73, 20);
-            this.txtser_no.TabIndex = 69;
-            this.txtser_no.Visible = false;
+            this.txtidx.EditValue2 = null;
+            this.txtidx.EraserGroup = "CLR1";
+            this.txtidx.Location = new System.Drawing.Point(994, 15);
+            this.txtidx.Name = "txtidx";
+            this.txtidx.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtidx.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtidx.RequireMessage = null;
+            this.txtidx.Size = new System.Drawing.Size(73, 20);
+            this.txtidx.TabIndex = 69;
+            this.txtidx.Visible = false;
             // 
             // btnExcelUpdate
             // 
@@ -504,7 +504,7 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtser_no.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtidx.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -524,7 +524,7 @@ namespace YL_TELECOM.BizFrm
         #endregion
 
         private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl1;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtser_no;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtidx;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnExcelUpdate;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
         private Easy.Framework.WinForm.Control.efwTextEdit txtSearch;

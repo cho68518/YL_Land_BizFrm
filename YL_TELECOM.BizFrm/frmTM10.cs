@@ -59,7 +59,7 @@ namespace YL_TELECOM.BizFrm
             gridView1.Columns["amt"].SummaryItem.DisplayFormat = "금액: {0:c}";
 
             this.efwGridControl1.BindControlSet(
-               new ColumnControlSet("ser_no", txtser_no)
+               new ColumnControlSet("idx", txtidx)
             );
             this.efwGridControl1.Click += efwGridControl1_Click;
         }
@@ -68,9 +68,9 @@ namespace YL_TELECOM.BizFrm
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
 
-            if (dr != null && dr["ser_no"].ToString() != "")
+            if (dr != null && dr["idx"].ToString() != "")
             {
-                this.txtser_no.EditValue = dr["ser_no"].ToString();
+                this.txtidx.EditValue = dr["idx"].ToString();
             }
 
         }
@@ -118,7 +118,7 @@ namespace YL_TELECOM.BizFrm
         private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
-            this.txtser_no.EditValue = dr["ser_no"].ToString();
+            this.txtidx.EditValue = dr["idx"].ToString();
 
             if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
             {
@@ -131,9 +131,9 @@ namespace YL_TELECOM.BizFrm
                             con.Open();
                             cmd.CommandType = CommandType.StoredProcedure;
 
-                            cmd.Parameters.Add(new MySqlParameter("i_ser_no", MySqlDbType.VarChar));
-                            cmd.Parameters["i_ser_no"].Value = txtser_no.EditValue;
-                            cmd.Parameters["i_ser_no"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtidx.EditValue);
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
 
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
@@ -149,7 +149,7 @@ namespace YL_TELECOM.BizFrm
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
-                txtser_no.EditValue = "";
+                txtidx.EditValue = "";
                 Search();
             }
         }

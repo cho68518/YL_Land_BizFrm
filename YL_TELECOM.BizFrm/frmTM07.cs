@@ -234,17 +234,17 @@ namespace YL_TELECOM.BizFrm
         private void btnSAVE_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(this.txtS_ID.Text))
-            {
-                MessageAgent.MessageShow(MessageType.Warning, " ID를 입력하세요!");
-                return;
-            }
+            //if (string.IsNullOrEmpty(this.txtS_ID.Text))
+            //{
+            //    MessageAgent.MessageShow(MessageType.Warning, " ID를 입력하세요!");
+            //    return;
+            //}
 
-            if (string.IsNullOrEmpty(this.txtS_PASSWORD.Text))
-            {
-                MessageAgent.MessageShow(MessageType.Warning, " 비빌번호를 입력하세요!");
-                return;
-            }
+            //if (string.IsNullOrEmpty(this.txtS_PASSWORD.Text))
+            //{
+            //    MessageAgent.MessageShow(MessageType.Warning, " 비빌번호를 입력하세요!");
+            //    return;
+            //}
 
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {

@@ -44,6 +44,7 @@
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -55,6 +56,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwLabel4);
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Controls.Add(this.efwLabel3);
             this.efwPanelControl1.Controls.Add(this.efwLabel2);
@@ -66,7 +68,7 @@
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(0, 0);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(582, 48);
+            this.efwPanelControl1.Size = new System.Drawing.Size(582, 72);
             this.efwPanelControl1.TabIndex = 4;
             this.efwPanelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.efwPanelControl1_Paint);
             // 
@@ -190,13 +192,13 @@
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.Location = new System.Drawing.Point(0, 48);
+            this.efwGridControl1.Location = new System.Drawing.Point(0, 72);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.Size = new System.Drawing.Size(582, 527);
+            this.efwGridControl1.Size = new System.Drawing.Size(582, 503);
             this.efwGridControl1.TabIndex = 5;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -213,6 +215,18 @@
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // efwLabel4
+            // 
+            this.efwLabel4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.efwLabel4.Appearance.Options.UseForeColor = true;
+            this.efwLabel4.EraserGroup = null;
+            this.efwLabel4.IsMultiLang = false;
+            this.efwLabel4.Location = new System.Drawing.Point(12, 46);
+            this.efwLabel4.Name = "efwLabel4";
+            this.efwLabel4.Size = new System.Drawing.Size(213, 14);
+            this.efwLabel4.TabIndex = 60;
+            this.efwLabel4.Text = "유심 SER_NO는 \'000000\' 를 입력해주세요.";
             // 
             // frmTM08_Pop01
             // 
@@ -251,5 +265,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
     }
 }

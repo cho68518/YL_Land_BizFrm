@@ -161,5 +161,52 @@ namespace YL_TELECOM.BizFrm
             frmFactory FrmInfo = new frmFactory() { Factory = btnFactory, Factory_NM = txtFactory_NM };
             FrmInfo.ShowDialog();
         }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                {
+
+
+                     using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM11_SAVE_01", con))
+                     {
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_out_date", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 8);
+
+                        cmd.Parameters.Add("i_out_factory", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = cmbOut_Factory.EditValue;
+
+                        cmd.Parameters.Add("i_in_factory", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = btnFactory.EditValue;
+
+                        cmd.Parameters.Add("i_m_code", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtM_Code.EditValue;
+
+                        cmd.Parameters.Add("i_ser_no", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[4].Value = txtSer_No.EditValue;
+
+                        cmd.Parameters.Add("i_color", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[5].Value = txtColor.EditValue;
+
+                        cmd.Parameters.Add("i_qty", MySqlDbType.Int32, 11);
+                        cmd.Parameters[6].Value = Convert.ToInt32(txtQty.EditValue);
+
+
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+        }
     }
 }

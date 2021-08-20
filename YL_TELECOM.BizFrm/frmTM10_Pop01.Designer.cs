@@ -29,15 +29,29 @@ namespace YL_TELECOM.BizFrm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTM10_Pop01));
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTM10_Pop01));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwLabel12 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtAmt = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel10 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtPrice = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel9 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtColor = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel8 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtQty = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtSer_No = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtM_Code = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel11 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
             this.cmbAgencyCode = new Easy.Framework.WinForm.Control.efwLookUpEdit();
@@ -55,6 +69,12 @@ namespace YL_TELECOM.BizFrm
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAmt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSer_No.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtM_Code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAgencyCode.Properties)).BeginInit();
@@ -66,6 +86,20 @@ namespace YL_TELECOM.BizFrm
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.efwSimpleButton3);
+            this.efwPanelControl1.Controls.Add(this.efwLabel12);
+            this.efwPanelControl1.Controls.Add(this.txtAmt);
+            this.efwPanelControl1.Controls.Add(this.efwLabel10);
+            this.efwPanelControl1.Controls.Add(this.txtPrice);
+            this.efwPanelControl1.Controls.Add(this.efwLabel9);
+            this.efwPanelControl1.Controls.Add(this.txtColor);
+            this.efwPanelControl1.Controls.Add(this.efwLabel8);
+            this.efwPanelControl1.Controls.Add(this.efwLabel7);
+            this.efwPanelControl1.Controls.Add(this.txtQty);
+            this.efwPanelControl1.Controls.Add(this.txtSer_No);
+            this.efwPanelControl1.Controls.Add(this.txtM_Code);
+            this.efwPanelControl1.Controls.Add(this.efwLabel11);
+            this.efwPanelControl1.Controls.Add(this.efwLabel6);
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
             this.efwPanelControl1.Controls.Add(this.efwLabel5);
             this.efwPanelControl1.Controls.Add(this.cmbAgencyCode);
@@ -81,8 +115,161 @@ namespace YL_TELECOM.BizFrm
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(0, 0);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(620, 91);
+            this.efwPanelControl1.Size = new System.Drawing.Size(620, 183);
             this.efwPanelControl1.TabIndex = 5;
+            // 
+            // efwSimpleButton3
+            // 
+            this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
+            this.efwSimpleButton3.IsMultiLang = false;
+            this.efwSimpleButton3.Location = new System.Drawing.Point(461, 120);
+            this.efwSimpleButton3.Name = "efwSimpleButton3";
+            this.efwSimpleButton3.Size = new System.Drawing.Size(144, 28);
+            this.efwSimpleButton3.TabIndex = 105;
+            this.efwSimpleButton3.Text = "개별 저장";
+            this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
+            // 
+            // efwLabel12
+            // 
+            this.efwLabel12.EraserGroup = null;
+            this.efwLabel12.IsMultiLang = false;
+            this.efwLabel12.Location = new System.Drawing.Point(284, 123);
+            this.efwLabel12.Name = "efwLabel12";
+            this.efwLabel12.Size = new System.Drawing.Size(20, 14);
+            this.efwLabel12.TabIndex = 104;
+            this.efwLabel12.Text = "금액";
+            // 
+            // txtAmt
+            // 
+            this.txtAmt.EditValue2 = null;
+            this.txtAmt.EraserGroup = "CLR1";
+            this.txtAmt.Location = new System.Drawing.Point(334, 120);
+            this.txtAmt.Name = "txtAmt";
+            this.txtAmt.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtAmt.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAmt.RequireMessage = null;
+            this.txtAmt.Size = new System.Drawing.Size(66, 20);
+            this.txtAmt.TabIndex = 103;
+            // 
+            // efwLabel10
+            // 
+            this.efwLabel10.EraserGroup = null;
+            this.efwLabel10.IsMultiLang = false;
+            this.efwLabel10.Location = new System.Drawing.Point(160, 123);
+            this.efwLabel10.Name = "efwLabel10";
+            this.efwLabel10.Size = new System.Drawing.Size(20, 14);
+            this.efwLabel10.TabIndex = 102;
+            this.efwLabel10.Text = "단가";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.EditValue2 = null;
+            this.txtPrice.EraserGroup = "CLR1";
+            this.txtPrice.Location = new System.Drawing.Point(196, 120);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtPrice.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPrice.RequireMessage = null;
+            this.txtPrice.Size = new System.Drawing.Size(62, 20);
+            this.txtPrice.TabIndex = 101;
+            // 
+            // efwLabel9
+            // 
+            this.efwLabel9.EraserGroup = null;
+            this.efwLabel9.IsMultiLang = false;
+            this.efwLabel9.Location = new System.Drawing.Point(415, 97);
+            this.efwLabel9.Name = "efwLabel9";
+            this.efwLabel9.Size = new System.Drawing.Size(20, 14);
+            this.efwLabel9.TabIndex = 100;
+            this.efwLabel9.Text = "색상";
+            // 
+            // txtColor
+            // 
+            this.txtColor.EditValue2 = null;
+            this.txtColor.Location = new System.Drawing.Point(461, 94);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtColor.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtColor.RequireMessage = null;
+            this.txtColor.Size = new System.Drawing.Size(144, 20);
+            this.txtColor.TabIndex = 99;
+            // 
+            // efwLabel8
+            // 
+            this.efwLabel8.EraserGroup = null;
+            this.efwLabel8.IsMultiLang = false;
+            this.efwLabel8.Location = new System.Drawing.Point(15, 123);
+            this.efwLabel8.Name = "efwLabel8";
+            this.efwLabel8.Size = new System.Drawing.Size(20, 14);
+            this.efwLabel8.TabIndex = 98;
+            this.efwLabel8.Text = "수량";
+            // 
+            // efwLabel7
+            // 
+            this.efwLabel7.EraserGroup = null;
+            this.efwLabel7.IsMultiLang = false;
+            this.efwLabel7.Location = new System.Drawing.Point(284, 97);
+            this.efwLabel7.Name = "efwLabel7";
+            this.efwLabel7.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel7.TabIndex = 97;
+            this.efwLabel7.Text = "Ser_No";
+            // 
+            // txtQty
+            // 
+            this.txtQty.EditValue2 = null;
+            this.txtQty.EraserGroup = "CLR1";
+            this.txtQty.Location = new System.Drawing.Point(83, 120);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtQty.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtQty.RequireMessage = null;
+            this.txtQty.Size = new System.Drawing.Size(59, 20);
+            this.txtQty.TabIndex = 95;
+            // 
+            // txtSer_No
+            // 
+            this.txtSer_No.EditValue2 = null;
+            this.txtSer_No.Location = new System.Drawing.Point(334, 94);
+            this.txtSer_No.Name = "txtSer_No";
+            this.txtSer_No.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtSer_No.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtSer_No.RequireMessage = null;
+            this.txtSer_No.Size = new System.Drawing.Size(66, 20);
+            this.txtSer_No.TabIndex = 96;
+            // 
+            // txtM_Code
+            // 
+            this.txtM_Code.EditValue2 = null;
+            this.txtM_Code.EraserGroup = "CLR1";
+            this.txtM_Code.Location = new System.Drawing.Point(83, 94);
+            this.txtM_Code.Name = "txtM_Code";
+            this.txtM_Code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtM_Code.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtM_Code.RequireMessage = null;
+            this.txtM_Code.Size = new System.Drawing.Size(175, 20);
+            this.txtM_Code.TabIndex = 94;
+            // 
+            // efwLabel11
+            // 
+            this.efwLabel11.EraserGroup = null;
+            this.efwLabel11.IsMultiLang = false;
+            this.efwLabel11.Location = new System.Drawing.Point(15, 97);
+            this.efwLabel11.Name = "efwLabel11";
+            this.efwLabel11.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel11.TabIndex = 93;
+            this.efwLabel11.Text = "상품코드";
+            // 
+            // efwLabel6
+            // 
+            this.efwLabel6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.efwLabel6.Appearance.Options.UseForeColor = true;
+            this.efwLabel6.EraserGroup = null;
+            this.efwLabel6.IsMultiLang = false;
+            this.efwLabel6.Location = new System.Drawing.Point(21, 154);
+            this.efwLabel6.Name = "efwLabel6";
+            this.efwLabel6.Size = new System.Drawing.Size(213, 14);
+            this.efwLabel6.TabIndex = 78;
+            this.efwLabel6.Text = "유심 SER_NO는 \'000000\' 를 입력해주세요.";
             // 
             // dtS_DATE
             // 
@@ -195,7 +382,7 @@ namespace YL_TELECOM.BizFrm
             this.efwSimpleButton2.Name = "efwSimpleButton2";
             this.efwSimpleButton2.Size = new System.Drawing.Size(151, 28);
             this.efwSimpleButton2.TabIndex = 50;
-            this.efwSimpleButton2.Text = "저장";
+            this.efwSimpleButton2.Text = "EXCEL 저장";
             this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
             // 
             // lblCnt
@@ -256,13 +443,13 @@ namespace YL_TELECOM.BizFrm
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
-            this.efwGridControl1.Location = new System.Drawing.Point(0, 91);
+            this.efwGridControl1.Location = new System.Drawing.Point(0, 183);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.Size = new System.Drawing.Size(620, 472);
+            this.efwGridControl1.Size = new System.Drawing.Size(620, 380);
             this.efwGridControl1.TabIndex = 6;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -294,6 +481,12 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAmt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtColor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSer_No.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtM_Code.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAgencyCode.Properties)).EndInit();
@@ -323,5 +516,19 @@ namespace YL_TELECOM.BizFrm
         private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
         private Easy.Framework.WinForm.Control.efwLookUpEdit cmbAgencyCode;
         private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel12;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtAmt;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel10;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtPrice;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel9;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtColor;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel8;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel7;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtQty;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtSer_No;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtM_Code;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel11;
     }
 }

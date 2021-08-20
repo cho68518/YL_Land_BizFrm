@@ -47,6 +47,7 @@ namespace YL_TELECOM.BizFrm
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.rbType = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.txtFactory_NM = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.btnFactory = new Easy.Framework.WinForm.Control.efwButtonEdit();
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -103,6 +104,7 @@ namespace YL_TELECOM.BizFrm
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFactory_NM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFactory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -131,6 +133,7 @@ namespace YL_TELECOM.BizFrm
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.rbType);
             this.efwPanelControl1.Controls.Add(this.txtFactory_NM);
             this.efwPanelControl1.Controls.Add(this.btnFactory);
             this.efwPanelControl1.Controls.Add(this.efwLabel5);
@@ -146,16 +149,34 @@ namespace YL_TELECOM.BizFrm
             this.efwPanelControl1.Size = new System.Drawing.Size(1259, 61);
             this.efwPanelControl1.TabIndex = 49;
             // 
+            // rbType
+            // 
+            this.rbType.IsMultiLang = false;
+            this.rbType.Location = new System.Drawing.Point(573, 20);
+            this.rbType.Name = "rbType";
+            this.rbType.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbType.Properties.Appearance.Options.UseBackColor = true;
+            this.rbType.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbType.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbType.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rbType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "평균이동단가"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "출고가")});
+            this.rbType.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.rbType.RequireMessage = null;
+            this.rbType.Size = new System.Drawing.Size(202, 23);
+            this.rbType.TabIndex = 83;
+            // 
             // txtFactory_NM
             // 
             this.txtFactory_NM.EditValue2 = null;
             this.txtFactory_NM.EraserGroup = "CLR1";
-            this.txtFactory_NM.Location = new System.Drawing.Point(375, 18);
+            this.txtFactory_NM.Location = new System.Drawing.Point(375, 21);
             this.txtFactory_NM.Name = "txtFactory_NM";
             this.txtFactory_NM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtFactory_NM.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtFactory_NM.RequireMessage = null;
-            this.txtFactory_NM.Size = new System.Drawing.Size(199, 20);
+            this.txtFactory_NM.Size = new System.Drawing.Size(173, 20);
             this.txtFactory_NM.TabIndex = 82;
             // 
             // btnFactory
@@ -164,7 +185,7 @@ namespace YL_TELECOM.BizFrm
             this.btnFactory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFactory.EditValue2 = null;
             this.btnFactory.EraserGroup = "CLR1";
-            this.btnFactory.Location = new System.Drawing.Point(303, 18);
+            this.btnFactory.Location = new System.Drawing.Point(303, 21);
             this.btnFactory.Name = "btnFactory";
             this.btnFactory.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.btnFactory.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -179,7 +200,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.efwLabel5.EraserGroup = null;
             this.efwLabel5.IsMultiLang = false;
-            this.efwLabel5.Location = new System.Drawing.Point(265, 21);
+            this.efwLabel5.Location = new System.Drawing.Point(265, 24);
             this.efwLabel5.Name = "efwLabel5";
             this.efwLabel5.Size = new System.Drawing.Size(20, 14);
             this.efwLabel5.TabIndex = 80;
@@ -189,9 +210,9 @@ namespace YL_TELECOM.BizFrm
             // 
             this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
             this.efwSimpleButton2.IsMultiLang = false;
-            this.efwSimpleButton2.Location = new System.Drawing.Point(1013, 14);
+            this.efwSimpleButton2.Location = new System.Drawing.Point(1153, 17);
             this.efwSimpleButton2.Name = "efwSimpleButton2";
-            this.efwSimpleButton2.Size = new System.Drawing.Size(180, 28);
+            this.efwSimpleButton2.Size = new System.Drawing.Size(46, 28);
             this.efwSimpleButton2.TabIndex = 79;
             this.efwSimpleButton2.Text = "이월처리 및 재고금액 산정";
             this.efwSimpleButton2.Visible = false;
@@ -201,7 +222,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.dtS_DATE.EditValue = new System.DateTime(2019, 7, 1, 0, 0, 0, 0);
             this.dtS_DATE.IsRequire = true;
-            this.dtS_DATE.Location = new System.Drawing.Point(109, 18);
+            this.dtS_DATE.Location = new System.Drawing.Point(109, 21);
             this.dtS_DATE.MaximumSize = new System.Drawing.Size(121, 0);
             this.dtS_DATE.MinimumSize = new System.Drawing.Size(121, 0);
             this.dtS_DATE.Name = "dtS_DATE";
@@ -223,7 +244,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(46, 21);
+            this.efwLabel1.Location = new System.Drawing.Point(46, 24);
             this.efwLabel1.Name = "efwLabel1";
             this.efwLabel1.Size = new System.Drawing.Size(40, 14);
             this.efwLabel1.TabIndex = 77;
@@ -233,7 +254,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.txtser_no.EditValue2 = null;
             this.txtser_no.EraserGroup = "CLR1";
-            this.txtser_no.Location = new System.Drawing.Point(1199, 18);
+            this.txtser_no.Location = new System.Drawing.Point(1205, 21);
             this.txtser_no.Name = "txtser_no";
             this.txtser_no.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtser_no.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -246,7 +267,7 @@ namespace YL_TELECOM.BizFrm
             // 
             this.efwLabel3.EraserGroup = null;
             this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(612, 21);
+            this.efwLabel3.Location = new System.Drawing.Point(804, 24);
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(158, 14);
             this.efwLabel3.TabIndex = 67;
@@ -256,12 +277,12 @@ namespace YL_TELECOM.BizFrm
             // 
             this.txtSearch.EditValue2 = null;
             this.txtSearch.EraserGroup = "CLR1";
-            this.txtSearch.Location = new System.Drawing.Point(786, 18);
+            this.txtSearch.Location = new System.Drawing.Point(978, 21);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtSearch.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSearch.RequireMessage = null;
-            this.txtSearch.Size = new System.Drawing.Size(176, 20);
+            this.txtSearch.Size = new System.Drawing.Size(144, 20);
             this.txtSearch.TabIndex = 64;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
@@ -827,6 +848,7 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFactory_NM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFactory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
@@ -912,5 +934,6 @@ namespace YL_TELECOM.BizFrm
         private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetail;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbType;
     }
 }

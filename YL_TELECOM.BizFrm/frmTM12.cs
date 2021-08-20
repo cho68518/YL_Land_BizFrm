@@ -75,9 +75,15 @@ namespace YL_TELECOM.BizFrm
             gridView1.Columns["stock_amt"].SummaryItem.FieldName = "stock_amt";
             gridView1.Columns["stock_amt"].SummaryItem.DisplayFormat = "재고 금액: {0:c}";
 
-            dtS_DATE.EditValue = DateTime.Now;
+            dtS_DATE.EditValue = DateTime.Now.ToString("yyyy-MM");
+            dtS_DATE.Properties.Mask.EditMask = "yyyy-MM";
+            dtS_DATE.Properties.DisplayFormat.FormatString = "yyyy-MM";
+            dtS_DATE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            dtS_DATE.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            dtS_DATE.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
             btnFactory.EditValue = "4099";
             txtFactory_NM.EditValue = "여유텔레콤(본사창고)";
+            rbType.EditValue = "1";
         }
 
  
@@ -129,6 +135,9 @@ namespace YL_TELECOM.BizFrm
                         cmd.Parameters.Add("i_Search", MySqlDbType.VarChar, 50);
                         cmd.Parameters[2].Value = txtSearch.EditValue;
 
+                        cmd.Parameters.Add("i_Type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[3].Value = rbType.EditValue;
+
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -170,6 +179,8 @@ namespace YL_TELECOM.BizFrm
                         cmd.Parameters.Add("i_Search", MySqlDbType.VarChar, 50);
                         cmd.Parameters[2].Value = txtSearch.EditValue;
 
+                        cmd.Parameters.Add("i_Type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[3].Value = rbType.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -202,8 +213,8 @@ namespace YL_TELECOM.BizFrm
                         con.Open();
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("i_YearMonth", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 8);
+                        cmd.Parameters.Add("i_YearMonth", MySqlDbType.VarChar, 6);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 6);
 
                         cmd.ExecuteNonQuery();
                         con.Close();
