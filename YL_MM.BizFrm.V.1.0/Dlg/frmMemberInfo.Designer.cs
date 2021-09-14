@@ -287,6 +287,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmMemberInfo";
             this.Padding = new System.Windows.Forms.Padding(5);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "회원정보";
             this.Load += new System.EventHandler(this.FrmMemberInfo_Load);
             this.panel1.ResumeLayout(false);

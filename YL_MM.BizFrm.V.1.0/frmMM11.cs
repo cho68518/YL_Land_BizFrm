@@ -12,11 +12,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YL_MM.BizFrm.Dlg;
 
 namespace YL_MM.BizFrm
 {
     public partial class frmMM11 : FrmBase
     {
+        frmMemberInfo popup;
         public frmMM11()
         {
             InitializeComponent();
@@ -78,6 +80,21 @@ namespace YL_MM.BizFrm
             ); 
 
             this.efwGridControl1.Click += efwGridControl1_Click;
+
+            this.efwGridControl2.BindControlSet(
+                new ColumnControlSet("member_relations", txtMember_Relations)
+              , new ColumnControlSet("chef_relations", txtChef_Relations)
+              , new ColumnControlSet("md_leader", txtMd_Leader)
+              , new ColumnControlSet("member_u_id", txtMember_u_id)
+              , new ColumnControlSet("chef_u_id", txtChef_u_id)
+              , new ColumnControlSet("md_u_id", txtMd_u_id)
+              , new ColumnControlSet("account_number", txtAccount_Number)
+              , new ColumnControlSet("o_u_id", txtU_id)
+              , new ColumnControlSet("u_nickname", txtNickname)
+              , new ColumnControlSet("o_code",txtPS_O_Code)
+            );
+            this.efwGridControl2.Click += efwGridControl2_Click;
+
         }
 
         private void efwGridControl1_Click(object sender, EventArgs e)
@@ -90,6 +107,25 @@ namespace YL_MM.BizFrm
             }
         }
 
+        private void efwGridControl2_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl2.GetSelectedRow(0);
+
+            if (dr != null && dr["o_u_id"].ToString() != "")
+            {
+                this.txtMember_Relations.EditValue = dr["member_relations"].ToString();
+                this.txtChef_Relations.EditValue = dr["chef_relations"].ToString();
+                this.txtMd_Leader.EditValue = dr["md_leader"].ToString();
+                this.txtMember_u_id.EditValue = dr["member_u_id"].ToString();
+                this.txtChef_u_id.EditValue = dr["chef_u_id"].ToString();
+                this.txtMd_u_id.EditValue = dr["md_u_id"].ToString();
+                this.txtAccount_Number.EditValue = dr["account_number"].ToString();
+                this.txtNickname.EditValue = dr["u_nickname"].ToString();
+                this.txtU_id.EditValue = dr["o_u_id"].ToString();
+                this.txtPS_O_Code.EditValue = dr["o_code"].ToString();
+            }
+        }
+
         public override void Search()
         {
             if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
@@ -97,8 +133,9 @@ namespace YL_MM.BizFrm
                 Open1();
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
-            {
+            {   // 2021-08-30 BIZ 회원을 헬퍼로 변경
                 Open2();
+                Open5();
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
             {
@@ -343,6 +380,65 @@ namespace YL_MM.BizFrm
             }
         }
 
+        private void Open5()
+        {
+            try
+            {
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM11_SELECT_05", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_qtype1", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = cmbQ1.EditValue;
+
+                        cmd.Parameters.Add("i_qtype2", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[1].Value = cmbQ2.EditValue;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[2].Value = dt1F.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[3].Value = dt1T.EditValue3;
+
+                        cmd.Parameters.Add("i_txt", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[4].Value = txtSearch.Text;
+
+                        cmd.Parameters.Add("i_o_type1", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[5].Value = chkT.EditValue;
+
+                        cmd.Parameters.Add("i_o_type2", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[6].Value = chkO.EditValue;
+
+                        cmd.Parameters.Add("i_o_type3", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[7].Value = chkI.EditValue;
+
+                        cmd.Parameters.Add("i_o_type4", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[8].Value = chkC.EditValue;
+
+                        cmd.Parameters.Add("i_o_type5", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[9].Value = chkZ.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                //lbCount.Text = String.Format("{0:#,##0}", Convert.ToInt32(gridView1.RowCount));
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+
 
         private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -357,7 +453,7 @@ namespace YL_MM.BizFrm
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                txtSearch.Focus();
+                Search();
         }
 
         private void efwSimpleButton7_Click(object sender, EventArgs e)
@@ -403,6 +499,172 @@ namespace YL_MM.BizFrm
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
                 Search();
+            }
+        }
+
+        private void btnSAVE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            popup = new frmMemberInfo
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+                MTYPE = "0"
+            };
+            popup.FormClosed += popup_FormClosed1;
+            popup.ShowDialog();
+        }
+        private void popup_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed1;
+            if (popup.DialogResult == DialogResult.OK)
+            {
+                this.txtChef_Relations.EditValue = popup.U_NICKNAME;
+                this.txtChef_u_id.EditValue = popup.U_ID;
+            }
+            popup = null;
+        }
+
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            popup = new frmMemberInfo
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+                MTYPE = "0"
+            };
+            popup.FormClosed += popup_FormClosed2;
+            popup.ShowDialog();
+        }
+        private void popup_FormClosed2(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed2;
+            if (popup.DialogResult == DialogResult.OK)
+            {
+                this.txtMd_Leader.EditValue = popup.U_NICKNAME;
+                this.txtMd_u_id.EditValue = popup.U_ID;
+            }
+            popup = null;
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            popup = new frmMemberInfo
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+                MTYPE = "0"
+            };
+            popup.FormClosed += popup_FormClosed3;
+            popup.ShowDialog();
+        }
+        private void popup_FormClosed3(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed3;
+            if (popup.DialogResult == DialogResult.OK)
+            {
+                this.txtMember_Relations.EditValue = popup.U_NICKNAME;
+                this.txtMember_u_id.EditValue = popup.U_ID;
+            }
+            popup = null;
+        }
+
+        private void btnSAVE_Click_1(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM11_SAVE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_id"].Value = txtU_id.EditValue;
+                            cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Chef_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Chef_u_id"].Value = txtChef_u_id.EditValue;
+                            cmd.Parameters["i_Chef_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Md_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Md_u_id"].Value = txtMd_u_id.EditValue;
+                            cmd.Parameters["i_Md_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Member_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Member_u_id"].Value = txtMember_u_id.EditValue;
+                            cmd.Parameters["i_Member_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Account_Number", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Account_Number"].Value = txtAccount_Number.EditValue;
+                            cmd.Parameters["i_Account_Number"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open5();
+
+            }
+        }
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "PS축하 스토리를 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PROD_ORDER_221", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_code"].Value = txtPS_O_Code.EditValue;
+                            cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
+
+                            cmd.ExecuteNonQuery();
+
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                Open5();
+
+            }
+        }
+
+        private void gridView2_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(gridView2.GetFocusedDisplayText());
+                e.Handled = true;
             }
         }
     }

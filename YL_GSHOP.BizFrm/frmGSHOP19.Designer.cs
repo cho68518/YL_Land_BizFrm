@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSHOP19));
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo7 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo8 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
@@ -52,6 +52,7 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.txtQRank2 = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -63,6 +64,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtStock_Qty = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtRank2 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtRank1 = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -89,9 +93,13 @@
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtYoutube_Qty = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
@@ -107,6 +115,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtQuery.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStock_Qty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRank2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRank1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
@@ -122,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYoutube_Qty.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemCheckEdit2
@@ -155,19 +165,19 @@
             // 
             this.efwGridControl2.BindSet = null;
             this.efwGridControl2.DBName = "";
-            serviceInfo7.InstanceName = "";
-            serviceInfo7.IsUserIDAdd = true;
-            serviceInfo7.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo7.ParamsInfo")));
-            serviceInfo7.ProcName = "";
-            serviceInfo7.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo7.UserParams")));
-            this.efwGridControl2.DeleteServiceInfo = serviceInfo7;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
+            this.efwGridControl2.DeleteServiceInfo = serviceInfo1;
             this.efwGridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo8.InstanceName = "";
-            serviceInfo8.IsUserIDAdd = true;
-            serviceInfo8.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo8.ParamsInfo")));
-            serviceInfo8.ProcName = "";
-            serviceInfo8.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo8.UserParams")));
-            this.efwGridControl2.InsertServiceInfo = serviceInfo8;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
+            this.efwGridControl2.InsertServiceInfo = serviceInfo2;
             this.efwGridControl2.IsAddExcelBtn = true;
             this.efwGridControl2.isAddPrintBtn = true;
             this.efwGridControl2.IsEditable = false;
@@ -183,12 +193,12 @@
             this.efwGridControl2.Size = new System.Drawing.Size(1106, 400);
             this.efwGridControl2.TabIndex = 9;
             this.efwGridControl2.TableName = "";
-            serviceInfo9.InstanceName = "";
-            serviceInfo9.IsUserIDAdd = true;
-            serviceInfo9.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo9.ParamsInfo")));
-            serviceInfo9.ProcName = "";
-            serviceInfo9.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo9.UserParams")));
-            this.efwGridControl2.UpdateServiceInfo = serviceInfo9;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
+            this.efwGridControl2.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             this.efwGridControl2.Click += new System.EventHandler(this.efwGridControl2_Click);
@@ -207,7 +217,9 @@
             this.gridColumn5,
             this.gridColumn11,
             this.gridColumn4,
-            this.gridColumn6});
+            this.gridColumn6,
+            this.gridColumn21,
+            this.gridColumn23});
             this.gridView2.DetailHeight = 408;
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.Name = "gridView2";
@@ -329,6 +341,17 @@
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 10;
             // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "플랜카드주식수";
+            this.gridColumn21.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn21.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn21.FieldName = "stock_qty";
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.OptionsColumn.AllowEdit = false;
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 11;
+            // 
             // repositoryItemCheckEdit4
             // 
             this.repositoryItemCheckEdit4.AutoHeight = false;
@@ -436,6 +459,10 @@
             // efwGroupControl1
             // 
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
+            this.efwGroupControl1.Controls.Add(this.txtYoutube_Qty);
+            this.efwGroupControl1.Controls.Add(this.efwLabel6);
+            this.efwGroupControl1.Controls.Add(this.txtStock_Qty);
+            this.efwGroupControl1.Controls.Add(this.efwLabel5);
             this.efwGroupControl1.Controls.Add(this.efwSimpleButton1);
             this.efwGroupControl1.Controls.Add(this.txtRank2);
             this.efwGroupControl1.Controls.Add(this.efwLabel4);
@@ -457,6 +484,44 @@
             this.efwGroupControl1.Size = new System.Drawing.Size(374, 247);
             this.efwGroupControl1.TabIndex = 10;
             this.efwGroupControl1.Text = "지급일 등록";
+            // 
+            // txtStock_Qty
+            // 
+            this.txtStock_Qty.EditValue = "0";
+            this.txtStock_Qty.EditValue2 = null;
+            this.txtStock_Qty.Location = new System.Drawing.Point(109, 152);
+            this.txtStock_Qty.Name = "txtStock_Qty";
+            this.txtStock_Qty.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtStock_Qty.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtStock_Qty.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtStock_Qty.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtStock_Qty.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtStock_Qty.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtStock_Qty.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtStock_Qty.RequireMessage = null;
+            this.txtStock_Qty.Size = new System.Drawing.Size(65, 20);
+            this.txtStock_Qty.TabIndex = 75;
+            // 
+            // efwLabel5
+            // 
+            this.efwLabel5.EraserGroup = null;
+            this.efwLabel5.IsMultiLang = false;
+            this.efwLabel5.Location = new System.Drawing.Point(21, 155);
+            this.efwLabel5.Name = "efwLabel5";
+            this.efwLabel5.Size = new System.Drawing.Size(70, 14);
+            this.efwLabel5.TabIndex = 74;
+            this.efwLabel5.Text = "플랜카드주식수";
+            // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(281, 108);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(73, 34);
+            this.efwSimpleButton1.TabIndex = 73;
+            this.efwSimpleButton1.Text = "삭제";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
             // 
             // txtRank2
             // 
@@ -506,7 +571,7 @@
             // 
             this.efwLabel3.EraserGroup = null;
             this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(18, 162);
+            this.efwLabel3.Location = new System.Drawing.Point(21, 182);
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(20, 14);
             this.efwLabel3.TabIndex = 68;
@@ -516,11 +581,11 @@
             // 
             this.txtRemark.ByteLength = 200;
             this.txtRemark.EraserGroup = "CLR1";
-            this.txtRemark.Location = new System.Drawing.Point(81, 161);
+            this.txtRemark.Location = new System.Drawing.Point(109, 178);
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtRemark.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRemark.Size = new System.Drawing.Size(273, 81);
+            this.txtRemark.Size = new System.Drawing.Size(245, 61);
             this.txtRemark.TabIndex = 66;
             // 
             // efwSimpleButton5
@@ -629,19 +694,19 @@
             // 
             this.efwGridControl3.BindSet = null;
             this.efwGridControl3.DBName = "";
-            serviceInfo1.InstanceName = "";
-            serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
-            serviceInfo1.ProcName = "";
-            serviceInfo1.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo1.UserParams")));
-            this.efwGridControl3.DeleteServiceInfo = serviceInfo1;
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo4.UserParams")));
+            this.efwGridControl3.DeleteServiceInfo = serviceInfo4;
             this.efwGridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo2.InstanceName = "";
-            serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
-            serviceInfo2.ProcName = "";
-            serviceInfo2.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo2.UserParams")));
-            this.efwGridControl3.InsertServiceInfo = serviceInfo2;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo5.UserParams")));
+            this.efwGridControl3.InsertServiceInfo = serviceInfo5;
             this.efwGridControl3.IsAddExcelBtn = true;
             this.efwGridControl3.isAddPrintBtn = true;
             this.efwGridControl3.IsEditable = false;
@@ -659,12 +724,12 @@
             this.efwGridControl3.Size = new System.Drawing.Size(727, 222);
             this.efwGridControl3.TabIndex = 10;
             this.efwGridControl3.TableName = "";
-            serviceInfo3.InstanceName = "";
-            serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
-            serviceInfo3.ProcName = "";
-            serviceInfo3.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo3.UserParams")));
-            this.efwGridControl3.UpdateServiceInfo = serviceInfo3;
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo6.UserParams")));
+            this.efwGridControl3.UpdateServiceInfo = serviceInfo6;
             this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
@@ -678,6 +743,8 @@
             this.gridColumn1,
             this.gridColumn18,
             this.gridColumn2,
+            this.gridColumn22,
+            this.gridColumn24,
             this.gridColumn19});
             this.gridView3.DetailHeight = 408;
             this.gridView3.GridControl = this.efwGridControl3;
@@ -765,6 +832,17 @@
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 4;
             // 
+            // gridColumn22
+            // 
+            this.gridColumn22.Caption = "플랜카드주식수";
+            this.gridColumn22.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn22.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn22.FieldName = "stock_qty";
+            this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.OptionsColumn.AllowEdit = false;
+            this.gridColumn22.Visible = true;
+            this.gridColumn22.VisibleIndex = 5;
+            // 
             // gridColumn19
             // 
             this.gridColumn19.Caption = "비고";
@@ -772,7 +850,7 @@
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.OptionsColumn.AllowEdit = false;
             this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 5;
+            this.gridColumn19.VisibleIndex = 7;
             this.gridColumn19.Width = 409;
             // 
             // repositoryItemCheckEdit9
@@ -782,16 +860,54 @@
             this.repositoryItemCheckEdit9.ValueChecked = "Y";
             this.repositoryItemCheckEdit9.ValueUnchecked = "N";
             // 
-            // efwSimpleButton1
+            // gridColumn23
             // 
-            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
-            this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(281, 108);
-            this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(73, 34);
-            this.efwSimpleButton1.TabIndex = 73;
-            this.efwSimpleButton1.Text = "삭제";
-            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
+            this.gridColumn23.Caption = "유튜브주식수";
+            this.gridColumn23.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn23.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn23.FieldName = "youtube_qty";
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.OptionsColumn.AllowEdit = false;
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 12;
+            // 
+            // gridColumn24
+            // 
+            this.gridColumn24.Caption = "유튜브주식수";
+            this.gridColumn24.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn24.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn24.FieldName = "youtube_qty";
+            this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.OptionsColumn.AllowEdit = false;
+            this.gridColumn24.Visible = true;
+            this.gridColumn24.VisibleIndex = 6;
+            // 
+            // txtYoutube_Qty
+            // 
+            this.txtYoutube_Qty.EditValue = "0";
+            this.txtYoutube_Qty.EditValue2 = null;
+            this.txtYoutube_Qty.Location = new System.Drawing.Point(289, 152);
+            this.txtYoutube_Qty.Name = "txtYoutube_Qty";
+            this.txtYoutube_Qty.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtYoutube_Qty.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtYoutube_Qty.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtYoutube_Qty.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtYoutube_Qty.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtYoutube_Qty.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtYoutube_Qty.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtYoutube_Qty.RequireMessage = null;
+            this.txtYoutube_Qty.Size = new System.Drawing.Size(65, 20);
+            this.txtYoutube_Qty.TabIndex = 77;
+            // 
+            // efwLabel6
+            // 
+            this.efwLabel6.EraserGroup = null;
+            this.efwLabel6.IsMultiLang = false;
+            this.efwLabel6.Location = new System.Drawing.Point(193, 155);
+            this.efwLabel6.Name = "efwLabel6";
+            this.efwLabel6.Size = new System.Drawing.Size(64, 14);
+            this.efwLabel6.TabIndex = 76;
+            this.efwLabel6.Text = "유튜브 주식수";
             // 
             // frmGSHOP19
             // 
@@ -827,6 +943,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStock_Qty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRank2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRank1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
@@ -842,6 +959,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYoutube_Qty.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -904,5 +1022,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtStock_Qty;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtYoutube_Qty;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
     }
 }

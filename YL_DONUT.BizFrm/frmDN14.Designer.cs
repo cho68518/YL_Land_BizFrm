@@ -1817,17 +1817,17 @@
             // 
             this.efwLabel7.EraserGroup = null;
             this.efwLabel7.IsMultiLang = false;
-            this.efwLabel7.Location = new System.Drawing.Point(1076, 142);
+            this.efwLabel7.Location = new System.Drawing.Point(774, 190);
             this.efwLabel7.Name = "efwLabel7";
-            this.efwLabel7.Size = new System.Drawing.Size(119, 14);
+            this.efwLabel7.Size = new System.Drawing.Size(125, 14);
             this.efwLabel7.TabIndex = 79;
-            this.efwLabel7.Text = "GM축하스토리 금액(BIZ)";
+            this.efwLabel7.Text = "GM축하 GD머니금액(BIZ)";
             // 
             // txtGM_CASH_CELE_STORY
             // 
             this.txtGM_CASH_CELE_STORY.EditValue = "0";
             this.txtGM_CASH_CELE_STORY.EditValue2 = null;
-            this.txtGM_CASH_CELE_STORY.Location = new System.Drawing.Point(1220, 139);
+            this.txtGM_CASH_CELE_STORY.Location = new System.Drawing.Point(928, 187);
             this.txtGM_CASH_CELE_STORY.Name = "txtGM_CASH_CELE_STORY";
             this.txtGM_CASH_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGM_CASH_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1844,7 +1844,7 @@
             // 
             this.txtGB_AD_CELE_STORY.EditValue = "0";
             this.txtGB_AD_CELE_STORY.EditValue2 = null;
-            this.txtGB_AD_CELE_STORY.Location = new System.Drawing.Point(1220, 191);
+            this.txtGB_AD_CELE_STORY.Location = new System.Drawing.Point(1466, 240);
             this.txtGB_AD_CELE_STORY.Name = "txtGB_AD_CELE_STORY";
             this.txtGB_AD_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGB_AD_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1854,18 +1854,20 @@
             this.txtGB_AD_CELE_STORY.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtGB_AD_CELE_STORY.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtGB_AD_CELE_STORY.RequireMessage = null;
-            this.txtGB_AD_CELE_STORY.Size = new System.Drawing.Size(100, 20);
+            this.txtGB_AD_CELE_STORY.Size = new System.Drawing.Size(22, 20);
             this.txtGB_AD_CELE_STORY.TabIndex = 77;
+            this.txtGB_AD_CELE_STORY.Visible = false;
             // 
             // efwLabel34
             // 
             this.efwLabel34.EraserGroup = null;
             this.efwLabel34.IsMultiLang = false;
-            this.efwLabel34.Location = new System.Drawing.Point(1076, 194);
+            this.efwLabel34.Location = new System.Drawing.Point(1331, 243);
             this.efwLabel34.Name = "efwLabel34";
             this.efwLabel34.Size = new System.Drawing.Size(129, 14);
             this.efwLabel34.TabIndex = 76;
             this.efwLabel34.Text = "GB축하스토리 AD머니 금액";
+            this.efwLabel34.Visible = false;
             // 
             // efwLabel33
             // 
@@ -2037,7 +2039,7 @@
             // 
             this.txtP_DISCOUNT_PRICE.EditValue = "0";
             this.txtP_DISCOUNT_PRICE.EditValue2 = null;
-            this.txtP_DISCOUNT_PRICE.Location = new System.Drawing.Point(928, 215);
+            this.txtP_DISCOUNT_PRICE.Location = new System.Drawing.Point(928, 239);
             this.txtP_DISCOUNT_PRICE.Name = "txtP_DISCOUNT_PRICE";
             this.txtP_DISCOUNT_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtP_DISCOUNT_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2054,7 +2056,7 @@
             // 
             this.efwLabel27.EraserGroup = null;
             this.efwLabel27.IsMultiLang = false;
-            this.efwLabel27.Location = new System.Drawing.Point(774, 218);
+            this.efwLabel27.Location = new System.Drawing.Point(774, 242);
             this.efwLabel27.Name = "efwLabel27";
             this.efwLabel27.Size = new System.Drawing.Size(30, 14);
             this.efwLabel27.TabIndex = 62;
@@ -2375,11 +2377,12 @@
             // 
             this.efwLabel21.EraserGroup = null;
             this.efwLabel21.IsMultiLang = false;
-            this.efwLabel21.Location = new System.Drawing.Point(525, 243);
+            this.efwLabel21.Location = new System.Drawing.Point(1084, 194);
             this.efwLabel21.Name = "efwLabel21";
             this.efwLabel21.Size = new System.Drawing.Size(62, 14);
             this.efwLabel21.TabIndex = 44;
             this.efwLabel21.Text = "G멀티샵 단가";
+            this.efwLabel21.Visible = false;
             // 
             // efwLabel22
             // 
@@ -2410,6 +2413,7 @@
             this.efwLabel24.Size = new System.Drawing.Size(57, 14);
             this.efwLabel24.TabIndex = 41;
             this.efwLabel24.Text = "후기2차도넛";
+            this.efwLabel24.Visible = false;
             // 
             // efwLabel25
             // 
@@ -2425,7 +2429,7 @@
             // 
             this.txtGSHOP_PRICE.EditValue = "0";
             this.txtGSHOP_PRICE.EditValue2 = null;
-            this.txtGSHOP_PRICE.Location = new System.Drawing.Point(661, 240);
+            this.txtGSHOP_PRICE.Location = new System.Drawing.Point(1220, 191);
             this.txtGSHOP_PRICE.Name = "txtGSHOP_PRICE";
             this.txtGSHOP_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGSHOP_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2437,6 +2441,7 @@
             this.txtGSHOP_PRICE.RequireMessage = null;
             this.txtGSHOP_PRICE.Size = new System.Drawing.Size(100, 20);
             this.txtGSHOP_PRICE.TabIndex = 39;
+            this.txtGSHOP_PRICE.Visible = false;
             // 
             // txtRECO_DONUT
             // 
@@ -2488,6 +2493,7 @@
             this.txtPS_DONUT02.RequireMessage = null;
             this.txtPS_DONUT02.Size = new System.Drawing.Size(100, 20);
             this.txtPS_DONUT02.TabIndex = 36;
+            this.txtPS_DONUT02.Visible = false;
             // 
             // txtSUPPLY_PRICE
             // 
@@ -2701,7 +2707,7 @@
             // 
             this.txtAD_GS_CELE_STORY.EditValue = "0";
             this.txtAD_GS_CELE_STORY.EditValue2 = null;
-            this.txtAD_GS_CELE_STORY.Location = new System.Drawing.Point(928, 189);
+            this.txtAD_GS_CELE_STORY.Location = new System.Drawing.Point(928, 213);
             this.txtAD_GS_CELE_STORY.Name = "txtAD_GS_CELE_STORY";
             this.txtAD_GS_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtAD_GS_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2821,7 +2827,7 @@
             // 
             this.efwLabel13.EraserGroup = null;
             this.efwLabel13.IsMultiLang = false;
-            this.efwLabel13.Location = new System.Drawing.Point(774, 192);
+            this.efwLabel13.Location = new System.Drawing.Point(774, 216);
             this.efwLabel13.Name = "efwLabel13";
             this.efwLabel13.Size = new System.Drawing.Size(89, 14);
             this.efwLabel13.TabIndex = 13;
