@@ -90,6 +90,14 @@ namespace YL_MM.BizFrm
             gridView10.Columns["p_num"].SummaryItem.FieldName = "p_num";
             gridView10.Columns["p_num"].SummaryItem.DisplayFormat = "{0}";
 
+            gridView11.Columns["stock_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView11.Columns["stock_qty"].SummaryItem.FieldName = "stock_qty";
+            gridView11.Columns["stock_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView12.Columns["ceo_pic_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView12.Columns["ceo_pic_qty"].SummaryItem.FieldName = "ceo_pic_qty";
+            gridView12.Columns["ceo_pic_qty"].SummaryItem.DisplayFormat = "{0}";
+
             // 시작시 텝 1위치 지정
             if (txtCode_id.EditValue.ToString() == "1")
             {
@@ -130,6 +138,14 @@ namespace YL_MM.BizFrm
             else if (txtCode_id.EditValue.ToString() == "10")
             {
                 efwXtraTabControl1.SelectedTabPage = xtraTabPage10;
+            }
+            else if (txtCode_id.EditValue.ToString() == "11")
+            {
+                efwXtraTabControl1.SelectedTabPage = xtraTabPage11;
+            }
+            else if (txtCode_id.EditValue.ToString() == "12")
+            {
+                efwXtraTabControl1.SelectedTabPage = xtraTabPage12;
             }
             Search();
         }
@@ -175,6 +191,14 @@ namespace YL_MM.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage10)
             {
                 Open10();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage11)
+            {
+                Open11();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage12)
+            {
+                Open12();
             }
         }
 
@@ -500,7 +524,70 @@ namespace YL_MM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+        private void Open11()
+        {
+            try
+            {
 
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_POP_SELECT_11", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = txtu_id.EditValue;
+
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl11.DataBind(ds);
+                            this.efwGridControl11.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                //lbCount.Text = String.Format("{0:#,##0}", Convert.ToInt32(gridView1.RowCount));
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+        private void Open12()
+        {
+            try
+            {
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_POP_SELECT_12", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = txtu_id.EditValue;
+
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl12.DataBind(ds);
+                            this.efwGridControl12.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                //lbCount.Text = String.Format("{0:#,##0}", Convert.ToInt32(gridView1.RowCount));
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
         private void gridView1_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
         {
             if (e.RowHandle >= 0 )

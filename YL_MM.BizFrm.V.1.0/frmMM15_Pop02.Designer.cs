@@ -421,9 +421,9 @@
             this.efwLabel5.IsMultiLang = false;
             this.efwLabel5.Location = new System.Drawing.Point(34, 147);
             this.efwLabel5.Name = "efwLabel5";
-            this.efwLabel5.Size = new System.Drawing.Size(18, 14);
+            this.efwLabel5.Size = new System.Drawing.Size(20, 14);
             this.efwLabel5.TabIndex = 60;
-            this.efwLabel5.Text = "BIZ";
+            this.efwLabel5.Text = "헬퍼";
             // 
             // efwLabel4
             // 

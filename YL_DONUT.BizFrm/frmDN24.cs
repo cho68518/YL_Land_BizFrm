@@ -21,6 +21,7 @@ namespace YL_DONUT.BizFrm
 {
     public partial class frmDN24 : FrmBase
     {
+        frmDN24_Pop01 popup;
         public frmDN24()
         {
             InitializeComponent();
@@ -96,12 +97,12 @@ namespace YL_DONUT.BizFrm
 
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
-            //DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
 
-            //if (dr != null && dr["o_company"].ToString() != "")
-            //{
-            //    this.cmbO_Company.EditValue = dr["o_company"].ToString();
-            //}
+            if (dr != null && dr["idx"].ToString() != "")
+            {
+                this.txtIdx.EditValue = dr["idx"].ToString();
+            }
         }
 
         private void SetCmb()
@@ -449,6 +450,12 @@ namespace YL_DONUT.BizFrm
             FrmInfo.COMPANYCD = "YL01";
             FrmInfo.COMPANYNAME = "(주)와이엘랜드";
             FrmInfo.ShowDialog();
+        }
+
+        private void btnExcelUpdate_Click(object sender, EventArgs e)
+        {
+            popup = new frmDN24_Pop01();
+            popup.ShowDialog();
         }
     }
 }

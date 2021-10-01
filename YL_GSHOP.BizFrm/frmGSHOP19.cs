@@ -68,6 +68,7 @@ namespace YL_GSHOP.BizFrm
              , new ColumnControlSet("rank2", txtRank2)
              , new ColumnControlSet("stock_qty", txtStock_Qty)
              , new ColumnControlSet("youtube_qty", txtYoutube_Qty)
+             , new ColumnControlSet("ceo_pic_qty", txtCeo_Pic_Qty)
             );
             this.efwGridControl2.Click += efwGridControl2_Click;
 
@@ -222,6 +223,15 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_youtube_qty", MySqlDbType.Int32));
                             cmd.Parameters["i_youtube_qty"].Value = Convert.ToInt32(txtYoutube_Qty.EditValue);
                             cmd.Parameters["i_youtube_qty"].Direction = ParameterDirection.Input;
+
+                            if (string.IsNullOrEmpty(this.txtCeo_Pic_Qty.Text))
+                            {
+                                txtCeo_Pic_Qty.EditValue = "0";
+                            }
+                            cmd.Parameters.Add(new MySqlParameter("i_ceo_pic_qty", MySqlDbType.Int32));
+                            cmd.Parameters["i_ceo_pic_qty"].Value = Convert.ToInt32(txtCeo_Pic_Qty.EditValue);
+                            cmd.Parameters["i_ceo_pic_qty"].Direction = ParameterDirection.Input;
+
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

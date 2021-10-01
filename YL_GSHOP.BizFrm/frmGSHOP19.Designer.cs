@@ -53,6 +53,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.txtQRank2 = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -64,6 +65,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtYoutube_Qty = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtStock_Qty = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -94,12 +97,13 @@
             this.repositoryItemCheckEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtYoutube_Qty = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtCeo_Pic_Qty = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
@@ -115,6 +119,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtQuery.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYoutube_Qty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock_Qty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRank2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRank1.Properties)).BeginInit();
@@ -131,7 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtYoutube_Qty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCeo_Pic_Qty.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemCheckEdit2
@@ -219,7 +224,8 @@
             this.gridColumn4,
             this.gridColumn6,
             this.gridColumn21,
-            this.gridColumn23});
+            this.gridColumn23,
+            this.gridColumn26});
             this.gridView2.DetailHeight = 408;
             this.gridView2.GridControl = this.efwGridControl2;
             this.gridView2.Name = "gridView2";
@@ -352,6 +358,17 @@
             this.gridColumn21.Visible = true;
             this.gridColumn21.VisibleIndex = 11;
             // 
+            // gridColumn23
+            // 
+            this.gridColumn23.Caption = "유튜브주식수";
+            this.gridColumn23.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn23.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn23.FieldName = "youtube_qty";
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.OptionsColumn.AllowEdit = false;
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 12;
+            // 
             // repositoryItemCheckEdit4
             // 
             this.repositoryItemCheckEdit4.AutoHeight = false;
@@ -459,6 +476,8 @@
             // efwGroupControl1
             // 
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
+            this.efwGroupControl1.Controls.Add(this.txtCeo_Pic_Qty);
+            this.efwGroupControl1.Controls.Add(this.efwLabel7);
             this.efwGroupControl1.Controls.Add(this.txtYoutube_Qty);
             this.efwGroupControl1.Controls.Add(this.efwLabel6);
             this.efwGroupControl1.Controls.Add(this.txtStock_Qty);
@@ -485,11 +504,38 @@
             this.efwGroupControl1.TabIndex = 10;
             this.efwGroupControl1.Text = "지급일 등록";
             // 
+            // txtYoutube_Qty
+            // 
+            this.txtYoutube_Qty.EditValue = "0";
+            this.txtYoutube_Qty.EditValue2 = null;
+            this.txtYoutube_Qty.Location = new System.Drawing.Point(295, 152);
+            this.txtYoutube_Qty.Name = "txtYoutube_Qty";
+            this.txtYoutube_Qty.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtYoutube_Qty.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtYoutube_Qty.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtYoutube_Qty.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtYoutube_Qty.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtYoutube_Qty.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtYoutube_Qty.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtYoutube_Qty.RequireMessage = null;
+            this.txtYoutube_Qty.Size = new System.Drawing.Size(59, 20);
+            this.txtYoutube_Qty.TabIndex = 77;
+            // 
+            // efwLabel6
+            // 
+            this.efwLabel6.EraserGroup = null;
+            this.efwLabel6.IsMultiLang = false;
+            this.efwLabel6.Location = new System.Drawing.Point(207, 155);
+            this.efwLabel6.Name = "efwLabel6";
+            this.efwLabel6.Size = new System.Drawing.Size(64, 14);
+            this.efwLabel6.TabIndex = 76;
+            this.efwLabel6.Text = "유튜브 주식수";
+            // 
             // txtStock_Qty
             // 
             this.txtStock_Qty.EditValue = "0";
             this.txtStock_Qty.EditValue2 = null;
-            this.txtStock_Qty.Location = new System.Drawing.Point(109, 152);
+            this.txtStock_Qty.Location = new System.Drawing.Point(127, 152);
             this.txtStock_Qty.Name = "txtStock_Qty";
             this.txtStock_Qty.Properties.Appearance.Options.UseTextOptions = true;
             this.txtStock_Qty.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -499,14 +545,14 @@
             this.txtStock_Qty.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtStock_Qty.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtStock_Qty.RequireMessage = null;
-            this.txtStock_Qty.Size = new System.Drawing.Size(65, 20);
+            this.txtStock_Qty.Size = new System.Drawing.Size(59, 20);
             this.txtStock_Qty.TabIndex = 75;
             // 
             // efwLabel5
             // 
             this.efwLabel5.EraserGroup = null;
             this.efwLabel5.IsMultiLang = false;
-            this.efwLabel5.Location = new System.Drawing.Point(21, 155);
+            this.efwLabel5.Location = new System.Drawing.Point(12, 155);
             this.efwLabel5.Name = "efwLabel5";
             this.efwLabel5.Size = new System.Drawing.Size(70, 14);
             this.efwLabel5.TabIndex = 74;
@@ -571,7 +617,7 @@
             // 
             this.efwLabel3.EraserGroup = null;
             this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(21, 182);
+            this.efwLabel3.Location = new System.Drawing.Point(12, 203);
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(20, 14);
             this.efwLabel3.TabIndex = 68;
@@ -581,11 +627,11 @@
             // 
             this.txtRemark.ByteLength = 200;
             this.txtRemark.EraserGroup = "CLR1";
-            this.txtRemark.Location = new System.Drawing.Point(109, 178);
+            this.txtRemark.Location = new System.Drawing.Point(127, 202);
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtRemark.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRemark.Size = new System.Drawing.Size(245, 61);
+            this.txtRemark.Size = new System.Drawing.Size(227, 37);
             this.txtRemark.TabIndex = 66;
             // 
             // efwSimpleButton5
@@ -637,7 +683,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 35);
+            this.label5.Location = new System.Drawing.Point(12, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 14);
             this.label5.TabIndex = 14;
@@ -647,7 +693,7 @@
             // 
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(18, 70);
+            this.efwLabel1.Location = new System.Drawing.Point(12, 70);
             this.efwLabel1.Name = "efwLabel1";
             this.efwLabel1.Size = new System.Drawing.Size(30, 14);
             this.efwLabel1.TabIndex = 17;
@@ -745,6 +791,7 @@
             this.gridColumn2,
             this.gridColumn22,
             this.gridColumn24,
+            this.gridColumn25,
             this.gridColumn19});
             this.gridView3.DetailHeight = 408;
             this.gridView3.GridControl = this.efwGridControl3;
@@ -843,34 +890,6 @@
             this.gridColumn22.Visible = true;
             this.gridColumn22.VisibleIndex = 5;
             // 
-            // gridColumn19
-            // 
-            this.gridColumn19.Caption = "비고";
-            this.gridColumn19.FieldName = "remark";
-            this.gridColumn19.Name = "gridColumn19";
-            this.gridColumn19.OptionsColumn.AllowEdit = false;
-            this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 7;
-            this.gridColumn19.Width = 409;
-            // 
-            // repositoryItemCheckEdit9
-            // 
-            this.repositoryItemCheckEdit9.AutoHeight = false;
-            this.repositoryItemCheckEdit9.Name = "repositoryItemCheckEdit9";
-            this.repositoryItemCheckEdit9.ValueChecked = "Y";
-            this.repositoryItemCheckEdit9.ValueUnchecked = "N";
-            // 
-            // gridColumn23
-            // 
-            this.gridColumn23.Caption = "유튜브주식수";
-            this.gridColumn23.DisplayFormat.FormatString = "###,###,###";
-            this.gridColumn23.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn23.FieldName = "youtube_qty";
-            this.gridColumn23.Name = "gridColumn23";
-            this.gridColumn23.OptionsColumn.AllowEdit = false;
-            this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 12;
-            // 
             // gridColumn24
             // 
             this.gridColumn24.Caption = "유튜브주식수";
@@ -882,32 +901,65 @@
             this.gridColumn24.Visible = true;
             this.gridColumn24.VisibleIndex = 6;
             // 
-            // txtYoutube_Qty
+            // gridColumn19
             // 
-            this.txtYoutube_Qty.EditValue = "0";
-            this.txtYoutube_Qty.EditValue2 = null;
-            this.txtYoutube_Qty.Location = new System.Drawing.Point(289, 152);
-            this.txtYoutube_Qty.Name = "txtYoutube_Qty";
-            this.txtYoutube_Qty.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtYoutube_Qty.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtYoutube_Qty.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtYoutube_Qty.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtYoutube_Qty.Properties.DisplayFormat.FormatString = "###,###,##0";
-            this.txtYoutube_Qty.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtYoutube_Qty.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtYoutube_Qty.RequireMessage = null;
-            this.txtYoutube_Qty.Size = new System.Drawing.Size(65, 20);
-            this.txtYoutube_Qty.TabIndex = 77;
+            this.gridColumn19.Caption = "비고";
+            this.gridColumn19.FieldName = "remark";
+            this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.OptionsColumn.AllowEdit = false;
+            this.gridColumn19.Visible = true;
+            this.gridColumn19.VisibleIndex = 8;
+            this.gridColumn19.Width = 409;
             // 
-            // efwLabel6
+            // repositoryItemCheckEdit9
             // 
-            this.efwLabel6.EraserGroup = null;
-            this.efwLabel6.IsMultiLang = false;
-            this.efwLabel6.Location = new System.Drawing.Point(193, 155);
-            this.efwLabel6.Name = "efwLabel6";
-            this.efwLabel6.Size = new System.Drawing.Size(64, 14);
-            this.efwLabel6.TabIndex = 76;
-            this.efwLabel6.Text = "유튜브 주식수";
+            this.repositoryItemCheckEdit9.AutoHeight = false;
+            this.repositoryItemCheckEdit9.Name = "repositoryItemCheckEdit9";
+            this.repositoryItemCheckEdit9.ValueChecked = "Y";
+            this.repositoryItemCheckEdit9.ValueUnchecked = "N";
+            // 
+            // txtCeo_Pic_Qty
+            // 
+            this.txtCeo_Pic_Qty.EditValue = "0";
+            this.txtCeo_Pic_Qty.EditValue2 = null;
+            this.txtCeo_Pic_Qty.Location = new System.Drawing.Point(127, 178);
+            this.txtCeo_Pic_Qty.Name = "txtCeo_Pic_Qty";
+            this.txtCeo_Pic_Qty.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtCeo_Pic_Qty.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtCeo_Pic_Qty.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtCeo_Pic_Qty.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtCeo_Pic_Qty.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtCeo_Pic_Qty.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCeo_Pic_Qty.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCeo_Pic_Qty.RequireMessage = null;
+            this.txtCeo_Pic_Qty.Size = new System.Drawing.Size(59, 20);
+            this.txtCeo_Pic_Qty.TabIndex = 79;
+            // 
+            // efwLabel7
+            // 
+            this.efwLabel7.EraserGroup = null;
+            this.efwLabel7.IsMultiLang = false;
+            this.efwLabel7.Location = new System.Drawing.Point(12, 181);
+            this.efwLabel7.Name = "efwLabel7";
+            this.efwLabel7.Size = new System.Drawing.Size(90, 14);
+            this.efwLabel7.TabIndex = 78;
+            this.efwLabel7.Text = "발모사진제보주식수";
+            // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "발모사진제보주식수";
+            this.gridColumn25.FieldName = "ceo_pic_qty";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 7;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "발모사진제보주식수";
+            this.gridColumn26.FieldName = "ceo_pic_qty";
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 13;
             // 
             // frmGSHOP19
             // 
@@ -943,6 +995,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYoutube_Qty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock_Qty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRank2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRank1.Properties)).EndInit();
@@ -959,7 +1012,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtYoutube_Qty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCeo_Pic_Qty.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1030,5 +1083,9 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtYoutube_Qty;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtCeo_Pic_Qty;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
     }
 }

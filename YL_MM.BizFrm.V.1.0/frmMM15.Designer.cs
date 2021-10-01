@@ -167,6 +167,7 @@
             this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.rbShow_Type = new Easy.Framework.WinForm.Control.efwRadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -218,6 +219,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtVip_Rate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChef_Rate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDoma_Rate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbShow_Type.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -526,7 +528,7 @@
             // 
             this.efwSimpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton9.ImageOptions.Image")));
             this.efwSimpleButton9.IsMultiLang = false;
-            this.efwSimpleButton9.Location = new System.Drawing.Point(662, 13);
+            this.efwSimpleButton9.Location = new System.Drawing.Point(870, 13);
             this.efwSimpleButton9.Name = "efwSimpleButton9";
             this.efwSimpleButton9.Size = new System.Drawing.Size(154, 23);
             this.efwSimpleButton9.TabIndex = 7;
@@ -862,7 +864,7 @@
             this.gridBand4.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand4.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand4.Caption = "BIZ";
+            this.gridBand4.Caption = "헬퍼";
             this.gridBand4.Columns.Add(this.bandedGridColumn31);
             this.gridBand4.Columns.Add(this.bandedGridColumn32);
             this.gridBand4.Name = "gridBand4";
@@ -1178,6 +1180,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.rbShow_Type);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton5);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton9);
             this.efwPanelControl1.Controls.Add(this.efwSimpleButton1);
@@ -1193,7 +1196,7 @@
             // 
             this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
             this.efwSimpleButton5.IsMultiLang = false;
-            this.efwSimpleButton5.Location = new System.Drawing.Point(411, 14);
+            this.efwSimpleButton5.Location = new System.Drawing.Point(619, 14);
             this.efwSimpleButton5.Name = "efwSimpleButton5";
             this.efwSimpleButton5.Size = new System.Drawing.Size(107, 22);
             this.efwSimpleButton5.TabIndex = 67;
@@ -1204,7 +1207,7 @@
             // 
             this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
             this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(281, 14);
+            this.efwSimpleButton1.Location = new System.Drawing.Point(489, 14);
             this.efwSimpleButton1.Name = "efwSimpleButton1";
             this.efwSimpleButton1.Size = new System.Drawing.Size(107, 22);
             this.efwSimpleButton1.TabIndex = 66;
@@ -1215,7 +1218,7 @@
             // 
             this.efwSimpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton4.ImageOptions.Image")));
             this.efwSimpleButton4.IsMultiLang = false;
-            this.efwSimpleButton4.Location = new System.Drawing.Point(134, 15);
+            this.efwSimpleButton4.Location = new System.Drawing.Point(342, 15);
             this.efwSimpleButton4.Name = "efwSimpleButton4";
             this.efwSimpleButton4.Size = new System.Drawing.Size(107, 22);
             this.efwSimpleButton4.TabIndex = 65;
@@ -1226,7 +1229,7 @@
             // 
             this.efwSimpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton3.ImageOptions.Image")));
             this.efwSimpleButton3.IsMultiLang = false;
-            this.efwSimpleButton3.Location = new System.Drawing.Point(21, 15);
+            this.efwSimpleButton3.Location = new System.Drawing.Point(229, 15);
             this.efwSimpleButton3.Name = "efwSimpleButton3";
             this.efwSimpleButton3.Size = new System.Drawing.Size(107, 22);
             this.efwSimpleButton3.TabIndex = 64;
@@ -1676,9 +1679,9 @@
             this.efwLabel7.IsMultiLang = false;
             this.efwLabel7.Location = new System.Drawing.Point(16, 147);
             this.efwLabel7.Name = "efwLabel7";
-            this.efwLabel7.Size = new System.Drawing.Size(18, 14);
+            this.efwLabel7.Size = new System.Drawing.Size(20, 14);
             this.efwLabel7.TabIndex = 31;
-            this.efwLabel7.Text = "BIZ";
+            this.efwLabel7.Text = "헬퍼";
             // 
             // efwLabel5
             // 
@@ -1699,6 +1702,25 @@
             this.efwLabel4.Size = new System.Drawing.Size(58, 14);
             this.efwLabel4.TabIndex = 29;
             this.efwLabel4.Text = "일반 DOMA";
+            // 
+            // rbShow_Type
+            // 
+            this.rbShow_Type.IsMultiLang = false;
+            this.rbShow_Type.Location = new System.Drawing.Point(21, 15);
+            this.rbShow_Type.Name = "rbShow_Type";
+            this.rbShow_Type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbShow_Type.Properties.Appearance.Options.UseBackColor = true;
+            this.rbShow_Type.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbShow_Type.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbShow_Type.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rbShow_Type.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.rbShow_Type.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("A", "전체"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "노출"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "미노출")});
+            this.rbShow_Type.RequireMessage = null;
+            this.rbShow_Type.Size = new System.Drawing.Size(172, 24);
+            this.rbShow_Type.TabIndex = 89;
             // 
             // frmMM15
             // 
@@ -1765,6 +1787,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtVip_Rate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChef_Rate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDoma_Rate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbShow_Type.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1888,5 +1911,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand6;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbShow_Type;
     }
 }

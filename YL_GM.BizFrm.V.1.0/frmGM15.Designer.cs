@@ -937,7 +937,7 @@
             this.efwLabel12.Name = "efwLabel12";
             this.efwLabel12.Size = new System.Drawing.Size(146, 28);
             this.efwLabel12.TabIndex = 48;
-            this.efwLabel12.Text = "BIZ신규";
+            this.efwLabel12.Text = "헬퍼신규";
             // 
             // lbl702
             // 

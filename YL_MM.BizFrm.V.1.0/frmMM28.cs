@@ -42,6 +42,9 @@ namespace YL_MM.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
+            dtS_DATE.EditValue = DateTime.Now.ToString("yyyy") + "-01-01";
+            dtE_DATE.EditValue = DateTime.Now;
+
             this.efwGridControl4.BindControlSet(
                       new ColumnControlSet("u_id",txtu_id)
                     , new ColumnControlSet("u_nickname", txtu_nickname)
@@ -61,7 +64,20 @@ namespace YL_MM.BizFrm
                 Open1();
             }
         }
+
         public override void Search()
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open2();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open3();
+            }
+        }
+
+        public void Open2()
         {
             try
             {
@@ -120,6 +136,48 @@ namespace YL_MM.BizFrm
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
                             efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        public void Open3()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_Search_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = cmbQ1.EditValue;
+
+                        cmd.Parameters.Add("i_search_Name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtSearch.EditValue;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[2].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[3].Value = dtE_DATE.EditValue3;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            efwGridControl2.MyGridView.BestFitColumns();
                         }
                     }
                 }

@@ -1625,7 +1625,7 @@
             this.efwLabel14.Name = "efwLabel14";
             this.efwLabel14.Size = new System.Drawing.Size(146, 28);
             this.efwLabel14.TabIndex = 15;
-            this.efwLabel14.Text = "     BIZ";
+            this.efwLabel14.Text = "    헬퍼";
             // 
             // efwLabel13
             // 

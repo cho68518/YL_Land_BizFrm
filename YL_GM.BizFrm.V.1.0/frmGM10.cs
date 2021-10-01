@@ -166,15 +166,116 @@ namespace YL_GM.BizFrm
 
 
 
+            gridView3.Columns["order_cnt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView3.Columns["order_cnt"].SummaryItem.FieldName = "order_cnt";
+            gridView3.Columns["order_cnt"].SummaryItem.DisplayFormat = "{0}";
+
+
+            gridView3.Columns["order_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView3.Columns["order_amt"].SummaryItem.FieldName = "order_amt";
+            gridView3.Columns["order_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+
+            gridView3.Columns["cnt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView3.Columns["cnt"].SummaryItem.FieldName = "cnt";
+            gridView3.Columns["cnt"].SummaryItem.DisplayFormat = "{0}";
+
+
+            // ----------------------------------------------------------------
+            gridView1.Columns["order_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["order_amt"].SummaryItem.FieldName = "order_amt";
+            gridView1.Columns["order_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month1"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month1"].SummaryItem.FieldName = "month1";
+            gridView1.Columns["month1"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month2"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month2"].SummaryItem.FieldName = "month2";
+            gridView1.Columns["month2"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month3"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month3"].SummaryItem.FieldName = "month3";
+            gridView1.Columns["month3"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month4"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month4"].SummaryItem.FieldName = "month4";
+            gridView1.Columns["month4"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month5"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month5"].SummaryItem.FieldName = "month5";
+            gridView1.Columns["month5"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month6"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month6"].SummaryItem.FieldName = "month6";
+            gridView1.Columns["month6"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month7"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month7"].SummaryItem.FieldName = "month7";
+            gridView1.Columns["month7"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month8"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month8"].SummaryItem.FieldName = "month8";
+            gridView1.Columns["month8"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month9"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month9"].SummaryItem.FieldName = "month9";
+            gridView1.Columns["month9"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month10"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month10"].SummaryItem.FieldName = "month10";
+            gridView1.Columns["month10"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month11"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month11"].SummaryItem.FieldName = "month11";
+            gridView1.Columns["month11"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView1.Columns["month12"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["month12"].SummaryItem.FieldName = "month12";
+            gridView1.Columns["month12"].SummaryItem.DisplayFormat = "{0:c}";
+            this.efwGridControl3.BindControlSet(
+                new ColumnControlSet("u_id", txtu_id)
+                );
         }
 
+        private void efwGridControl3_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl3.GetSelectedRow(0);
+
+            if (dr != null && dr["u_id"].ToString() != "")
+            {
+                this.txtu_id.EditValue = dr["u_id"].ToString();
+
+                if (efwXtraTabControl2.SelectedTabPage == this.xtraTabPage3)
+                {
+                    Open3();
+                }
+                else if (efwXtraTabControl2.SelectedTabPage == this.xtraTabPage4)
+                {
+                    Open4();
+                }
+            }
+        }
 
         public override void Search()
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open1();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open2();
+            }
+
+        }
+
+        private void Open1()
         {
             try
             {
                 string sP_SHOW_TYPE = string.Empty;
-
+                Cursor.Current = Cursors.WaitCursor;
                 // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
@@ -211,8 +312,138 @@ namespace YL_GM.BizFrm
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
             }
         }
 
+        private void Open2()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM10_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl3.DataBind(ds);
+                            this.efwGridControl3.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+                //ChartCreat1();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+
+        private void Open3()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM10_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_md_u_id", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtu_id.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl4.DataBind(ds);
+                            this.efwGridControl4.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+                //ChartCreat1();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+
+        private void Open4()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM10_SELECT_04", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_year", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 4);
+
+                        cmd.Parameters.Add("i_md_u_id", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtu_id.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+                //ChartCreat1();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+
+        private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            Search();
+        }
+
+        private void efwXtraTabControl2_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (efwXtraTabControl2.SelectedTabPage == this.xtraTabPage3)
+            {
+                Open3();
+            }
+            else if (efwXtraTabControl2.SelectedTabPage == this.xtraTabPage4)
+            {
+                Open4();
+            }
+        }
     }
 }

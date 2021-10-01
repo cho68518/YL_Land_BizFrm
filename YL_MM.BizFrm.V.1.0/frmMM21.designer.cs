@@ -61,7 +61,6 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGridControl2 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -74,6 +73,7 @@
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGridControl3 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -100,9 +100,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
-            this.xtraTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.xtraTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
@@ -117,7 +117,7 @@
             this.efwTopPanelControl1.Controls.Add(this.efwLabel4);
             this.efwTopPanelControl1.Controls.Add(this.txtSearch);
             this.efwTopPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwTopPanelControl1.Location = new System.Drawing.Point(3, 32);
+            this.efwTopPanelControl1.Location = new System.Drawing.Point(3, 35);
             this.efwTopPanelControl1.Name = "efwTopPanelControl1";
             this.efwTopPanelControl1.Padding = new System.Windows.Forms.Padding(2);
             this.efwTopPanelControl1.Size = new System.Drawing.Size(1104, 46);
@@ -399,16 +399,7 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.xtraTabPage2.Size = new System.Drawing.Size(1098, 573);
-            this.xtraTabPage2.Text = "BIZ 회원";
-            // 
-            // xtraTabPage3
-            // 
-            this.xtraTabPage3.Controls.Add(this.efwGridControl3);
-            this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
-            this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.xtraTabPage3.Size = new System.Drawing.Size(1098, 573);
-            this.xtraTabPage3.Text = "G멀티샵 회원";
+            this.xtraTabPage2.Text = "헬퍼 회원";
             // 
             // efwGridControl2
             // 
@@ -554,6 +545,15 @@
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 9;
             this.gridColumn20.Width = 525;
+            // 
+            // xtraTabPage3
+            // 
+            this.xtraTabPage3.Controls.Add(this.efwGridControl3);
+            this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
+            this.xtraTabPage3.Name = "xtraTabPage3";
+            this.xtraTabPage3.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1098, 573);
+            this.xtraTabPage3.Text = "G멀티샵 회원";
             // 
             // efwGridControl3
             // 
@@ -725,9 +725,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
-            this.xtraTabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.xtraTabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);

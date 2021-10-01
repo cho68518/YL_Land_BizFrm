@@ -44,6 +44,7 @@ namespace YL_DONUT.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
+            efwLabel1.Text = "입금완료일";
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
@@ -84,7 +85,24 @@ namespace YL_DONUT.BizFrm
 
         }
 
+
         public override void Search()
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open1();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open2();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                Open3();
+            }
+        }
+
+        private void Open1()
         {
             try
             {
@@ -126,7 +144,107 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void Open2()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = cmbORDER_SEARCH.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtI_SEARCH.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void Open3()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SELECT_04", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = cmbORDER_SEARCH.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtI_SEARCH.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl3.DataBind(ds);
+                            this.efwGridControl3.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
         public override void Save()
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Save1();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Save2();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                Save3();
+            }
+        }
+
+        public void Save1()
         {
             try
             {
@@ -164,6 +282,76 @@ namespace YL_DONUT.BizFrm
                             }
                         }
 
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            Search();
+        }
+
+        public void Save2()
+        {
+            try
+            {
+                if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+                {
+                    for (var i = 0; i < gridView2.DataRowCount; i++)
+                    {
+
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SAVE_03", con))
+                            {
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+                                cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[0].Value = gridView2.GetRowCellValue(i, "o_code");
+
+                                cmd.Parameters.Add("i_confirm_yn", MySqlDbType.VarChar, 1);
+                                cmd.Parameters[1].Value = gridView2.GetRowCellValue(i, "confirm_yn");
+
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            Search();
+        }
+
+        public void Save3()
+        {
+            try
+            {
+                if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+                {
+                    for (var i = 0; i < gridView2.DataRowCount; i++)
+                    {
+
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SAVE_04", con))
+                            {
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+                                cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[0].Value = gridView3.GetRowCellValue(i, "o_code");
+
+                                cmd.Parameters.Add("i_on_confirm_yn", MySqlDbType.VarChar, 1);
+                                cmd.Parameters[1].Value = gridView3.GetRowCellValue(i, "confirm_yn");
+
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
                     }
                 }
             }
@@ -259,6 +447,22 @@ namespace YL_DONUT.BizFrm
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
                 Search();
+            }
+        }
+
+        private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                efwLabel1.Text = "입금완료일";
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                efwLabel1.Text = "배송시작일";
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                efwLabel1.Text = "배송시작일";
             }
         }
     }

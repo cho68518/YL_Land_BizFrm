@@ -97,7 +97,7 @@
             this.rbLevelQ.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("215", "일반공지"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("218", "VIP공지"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("238", "BIZ공지"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("238", "헬퍼공지"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("400", "G 멀티샵 공지"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("206", "주주공지")});
             this.rbLevelQ.RequireMessage = null;

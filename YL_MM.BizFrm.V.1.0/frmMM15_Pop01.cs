@@ -112,6 +112,9 @@ namespace YL_MM.BizFrm
                         cmd.Parameters.Add("i_Id", MySqlDbType.Int32);
                         cmd.Parameters[0].Value = txtPm_id.EditValue;
 
+                        cmd.Parameters.Add("i_show_type", MySqlDbType.VarChar);
+                        cmd.Parameters[1].Value = "A";
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();

@@ -439,7 +439,7 @@
             // 
             // gridColumn15
             // 
-            this.gridColumn15.Caption = "담당BIZ 닉네임";
+            this.gridColumn15.Caption = "추천인 닉네임";
             this.gridColumn15.FieldName = "chef_u_nickname";
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.Visible = true;
@@ -447,7 +447,7 @@
             // 
             // gridColumn14
             // 
-            this.gridColumn14.Caption = "담당BIZ 이름";
+            this.gridColumn14.Caption = "추천인 이름";
             this.gridColumn14.FieldName = "chef_u_name";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
@@ -455,7 +455,7 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "담당BIZ 아이디";
+            this.gridColumn13.Caption = "추천인 아이디";
             this.gridColumn13.FieldName = "chef_login_id";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
@@ -463,13 +463,13 @@
             // 
             // gridColumn12
             // 
-            this.gridColumn12.Caption = "담당BIZ u_id";
+            this.gridColumn12.Caption = "추천인 u_id";
             this.gridColumn12.FieldName = "chef_u_id";
             this.gridColumn12.Name = "gridColumn12";
             // 
             // gridColumn16
             // 
-            this.gridColumn16.Caption = "담당BIZ 회원등급";
+            this.gridColumn16.Caption = "추천인 회원등급";
             this.gridColumn16.FieldName = "chef_u_chef_level";
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
@@ -558,7 +558,7 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Padding = new System.Windows.Forms.Padding(5);
             this.xtraTabPage2.Size = new System.Drawing.Size(997, 367);
-            this.xtraTabPage2.Text = "BIZ 회원";
+            this.xtraTabPage2.Text = "헬퍼 회원";
             // 
             // efwGridControl2
             // 
@@ -666,7 +666,7 @@
             // 
             // gridColumn26
             // 
-            this.gridColumn26.Caption = "담당BIZ 닉네임";
+            this.gridColumn26.Caption = "추천인 닉네임";
             this.gridColumn26.FieldName = "chef_u_nickname";
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.Visible = true;
@@ -674,7 +674,7 @@
             // 
             // gridColumn27
             // 
-            this.gridColumn27.Caption = "담당BIZ 이름";
+            this.gridColumn27.Caption = "추천인 이름";
             this.gridColumn27.FieldName = "chef_u_name";
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.Visible = true;
@@ -682,7 +682,7 @@
             // 
             // gridColumn28
             // 
-            this.gridColumn28.Caption = "담당BIZ 아이디";
+            this.gridColumn28.Caption = "추천인 아이디";
             this.gridColumn28.FieldName = "chef_login_id";
             this.gridColumn28.Name = "gridColumn28";
             this.gridColumn28.Visible = true;
@@ -690,13 +690,13 @@
             // 
             // gridColumn29
             // 
-            this.gridColumn29.Caption = "담당BIZ u_id";
+            this.gridColumn29.Caption = "추천인 u_id";
             this.gridColumn29.FieldName = "chef_u_id";
             this.gridColumn29.Name = "gridColumn29";
             // 
             // gridColumn30
             // 
-            this.gridColumn30.Caption = "담당BIZ 회원등급";
+            this.gridColumn30.Caption = "추천인 회원등급";
             this.gridColumn30.FieldName = "chef_u_chef_level";
             this.gridColumn30.Name = "gridColumn30";
             this.gridColumn30.Visible = true;
@@ -902,7 +902,7 @@
             // 
             // gridColumn46
             // 
-            this.gridColumn46.Caption = "담당MD 닉네임";
+            this.gridColumn46.Caption = "추천인 닉네임";
             this.gridColumn46.FieldName = "chef_u_nickname";
             this.gridColumn46.Name = "gridColumn46";
             this.gridColumn46.Visible = true;
@@ -910,7 +910,7 @@
             // 
             // gridColumn47
             // 
-            this.gridColumn47.Caption = "담당MD 이름";
+            this.gridColumn47.Caption = "추천인 이름";
             this.gridColumn47.FieldName = "chef_u_name";
             this.gridColumn47.Name = "gridColumn47";
             this.gridColumn47.Visible = true;
@@ -918,7 +918,7 @@
             // 
             // gridColumn48
             // 
-            this.gridColumn48.Caption = "담당MD 아이디";
+            this.gridColumn48.Caption = "추천인 아이디";
             this.gridColumn48.FieldName = "chef_login_id";
             this.gridColumn48.Name = "gridColumn48";
             this.gridColumn48.Visible = true;
@@ -926,13 +926,13 @@
             // 
             // gridColumn49
             // 
-            this.gridColumn49.Caption = "담당MD u_id";
+            this.gridColumn49.Caption = "추천인 u_id";
             this.gridColumn49.FieldName = "md_u_id";
             this.gridColumn49.Name = "gridColumn49";
             // 
             // gridColumn50
             // 
-            this.gridColumn50.Caption = "담당MD 회원등급";
+            this.gridColumn50.Caption = "추천인 회원등급";
             this.gridColumn50.FieldName = "chef_u_chef_level";
             this.gridColumn50.Name = "gridColumn50";
             this.gridColumn50.Visible = true;
@@ -1128,7 +1128,7 @@
             // 
             // gridColumn67
             // 
-            this.gridColumn67.Caption = "담당BIZ 닉네임";
+            this.gridColumn67.Caption = "추천인 닉네임";
             this.gridColumn67.FieldName = "chef_u_nickname";
             this.gridColumn67.Name = "gridColumn67";
             this.gridColumn67.Visible = true;
@@ -1136,7 +1136,7 @@
             // 
             // gridColumn68
             // 
-            this.gridColumn68.Caption = "담당BIZ 이름";
+            this.gridColumn68.Caption = "추천인 이름";
             this.gridColumn68.FieldName = "chef_u_name";
             this.gridColumn68.Name = "gridColumn68";
             this.gridColumn68.Visible = true;
@@ -1144,7 +1144,7 @@
             // 
             // gridColumn69
             // 
-            this.gridColumn69.Caption = "담당BIZ 아이디";
+            this.gridColumn69.Caption = "추천인 아이디";
             this.gridColumn69.FieldName = "chef_login_id";
             this.gridColumn69.Name = "gridColumn69";
             this.gridColumn69.Visible = true;
@@ -1152,13 +1152,13 @@
             // 
             // gridColumn70
             // 
-            this.gridColumn70.Caption = "담당BIZ u_id";
+            this.gridColumn70.Caption = "추천인 u_id";
             this.gridColumn70.FieldName = "chef_u_id";
             this.gridColumn70.Name = "gridColumn70";
             // 
             // gridColumn71
             // 
-            this.gridColumn71.Caption = "담당BIZ 회원등급";
+            this.gridColumn71.Caption = "추천인 회원등급";
             this.gridColumn71.FieldName = "chef_u_chef_level";
             this.gridColumn71.Name = "gridColumn71";
             this.gridColumn71.Visible = true;

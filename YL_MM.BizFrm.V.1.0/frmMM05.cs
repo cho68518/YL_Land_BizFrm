@@ -410,6 +410,10 @@ namespace YL_MM.BizFrm
                                 cmd.Parameters["i_is_vvip"].Value = cbis_vvip.EditValue;
                                 cmd.Parameters["i_is_vvip"].Direction = ParameterDirection.Input;
 
+                                cmd.Parameters.Add(new MySqlParameter("i_is_biz", MySqlDbType.VarChar));
+                                cmd.Parameters["i_is_biz"].Value = chkIS_BIZ.EditValue;
+                                cmd.Parameters["i_is_biz"].Direction = ParameterDirection.Input;
+
                                 cmd.ExecuteNonQuery();
                                 con.Close();
                             }

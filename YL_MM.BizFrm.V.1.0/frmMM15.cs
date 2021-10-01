@@ -59,7 +59,7 @@ namespace YL_MM.BizFrm
             gridView1.OptionsView.ShowFooter = true;
             gridView2.OptionsView.ShowFooter = true;
             bandedGridView2.OptionsView.ShowFooter = true;
-
+            rbShow_Type.EditValue = "A";
             this.efwGridControl1.BindControlSet(
                       new ColumnControlSet("id", txtId)
                     , new ColumnControlSet("pm_order", txtPm_order)
@@ -300,6 +300,11 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_Id", MySqlDbType.Int32);
                         cmd.Parameters[0].Value = txtId.EditValue;
+
+                        cmd.Parameters.Add("i_show_type", MySqlDbType.VarChar);
+                        cmd.Parameters[1].Value = rbShow_Type.EditValue;
+
+                        
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

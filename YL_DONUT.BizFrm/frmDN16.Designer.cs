@@ -1770,7 +1770,7 @@
             this.xtraTabPage3.Controls.Add(this.panel4);
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1601, 813);
-            this.xtraTabPage3.Text = "G메니저 회원가입";
+            this.xtraTabPage3.Text = "헬퍼 회원가입";
             // 
             // efwGridControl3
             // 
