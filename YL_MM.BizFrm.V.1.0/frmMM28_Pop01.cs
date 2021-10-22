@@ -77,7 +77,6 @@ namespace YL_MM.BizFrm
             gridView7.Columns["youtube_qty"].SummaryItem.FieldName = "youtube_qty";
             gridView7.Columns["youtube_qty"].SummaryItem.DisplayFormat = "{0}";
 
-
             gridView8.Columns["md_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView8.Columns["md_qty"].SummaryItem.FieldName = "md_qty";
             gridView8.Columns["md_qty"].SummaryItem.DisplayFormat = "{0}";
@@ -215,9 +214,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-   
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -239,7 +235,6 @@ namespace YL_MM.BizFrm
         {
             try
             {
-
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_POP_SELECT_02", con))
@@ -248,9 +243,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -271,7 +263,6 @@ namespace YL_MM.BizFrm
         {
             try
             {
-
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_POP_SELECT_03", con))
@@ -280,9 +271,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -303,7 +291,6 @@ namespace YL_MM.BizFrm
         {
             try
             {
-
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_POP_SELECT_04", con))
@@ -312,9 +299,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -344,9 +328,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -367,7 +348,6 @@ namespace YL_MM.BizFrm
         {
             try
             {
-
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_POP_SELECT_06", con))
@@ -376,9 +356,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -408,9 +385,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -440,9 +414,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -459,12 +430,10 @@ namespace YL_MM.BizFrm
             }
         }
 
-
         private void Open9()
         {
             try
             {
-
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_POP_SELECT_09", con))
@@ -473,9 +442,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -496,7 +462,6 @@ namespace YL_MM.BizFrm
         {
             try
             {
-
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_POP_SELECT_10", con))
@@ -505,9 +470,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -528,7 +490,6 @@ namespace YL_MM.BizFrm
         {
             try
             {
-
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_POP_SELECT_11", con))
@@ -537,9 +498,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -560,7 +518,6 @@ namespace YL_MM.BizFrm
         {
             try
             {
-
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                 {
                     using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_POP_SELECT_12", con))
@@ -569,9 +526,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = txtu_id.EditValue;
-
-
-
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();

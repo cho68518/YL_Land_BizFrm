@@ -303,8 +303,7 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_show_type", MySqlDbType.VarChar);
                         cmd.Parameters[1].Value = rbShow_Type.EditValue;
-
-                        
+                                             
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

@@ -85,7 +85,26 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject34 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject35 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject36 = new DevExpress.Utils.SerializableAppearanceObject();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo10 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo11 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo12 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject37 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject38 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject39 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject40 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject41 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject42 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject43 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject44 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject45 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject46 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject47 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject48 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.rbis_biz = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -224,8 +243,34 @@
             this.repositoryItemButtonEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit7 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.efwGridControl4 = new Easy.Framework.WinForm.Control.efwGridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn96 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn97 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn98 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn99 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn100 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn101 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn102 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn103 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn104 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn105 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn106 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn107 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn108 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemMemoExEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
+            this.repositoryItemMemoEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.repositoryItemCheckEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemCheckEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemButtonEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemButtonEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemButtonEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemCheckEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbis_biz.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -269,10 +314,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit7)).BeginInit();
+            this.xtraTabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit10)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.rbis_biz);
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
             this.efwPanelControl1.Controls.Add(this.efwLabel3);
             this.efwPanelControl1.Controls.Add(this.efwLabel2);
@@ -285,6 +343,23 @@
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1240, 53);
             this.efwPanelControl1.TabIndex = 39;
+            // 
+            // rbis_biz
+            // 
+            this.rbis_biz.IsMultiLang = false;
+            this.rbis_biz.Location = new System.Drawing.Point(803, 15);
+            this.rbis_biz.Name = "rbis_biz";
+            this.rbis_biz.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbis_biz.Properties.Appearance.Options.UseBackColor = true;
+            this.rbis_biz.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbis_biz.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbis_biz.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "헬퍼 정산집계"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "G멀티샵 정산집계")});
+            this.rbis_biz.RequireMessage = null;
+            this.rbis_biz.Size = new System.Drawing.Size(270, 26);
+            this.rbis_biz.TabIndex = 68;
+            this.rbis_biz.SelectedIndexChanged += new System.EventHandler(this.rbis_biz_SelectedIndexChanged);
             // 
             // efwLabel1
             // 
@@ -940,7 +1015,8 @@
             this.efwXtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2,
-            this.xtraTabPage3});
+            this.xtraTabPage3,
+            this.xtraTabPage4});
             this.efwXtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.efwXtraTabControl1_SelectedPageChanged);
             // 
             // xtraTabPage1
@@ -1414,6 +1490,7 @@
             // xtraTabPage3
             // 
             this.xtraTabPage3.Controls.Add(this.efwGridControl3);
+            this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1234, 493);
             this.xtraTabPage3.Text = "온라인주문 제품정산";
@@ -1763,7 +1840,7 @@
             // 
             // gridColumn91
             // 
-            this.gridColumn91.Caption = "50% 캐시백";
+            this.gridColumn91.Caption = "40% 캐시백";
             this.gridColumn91.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn91.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn91.FieldName = "50_back";
@@ -1868,6 +1945,297 @@
             this.repositoryItemButtonEdit7.Name = "repositoryItemButtonEdit7";
             this.repositoryItemButtonEdit7.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
+            // xtraTabPage4
+            // 
+            this.xtraTabPage4.Controls.Add(this.efwGridControl4);
+            this.xtraTabPage4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage4.ImageOptions.Image")));
+            this.xtraTabPage4.Name = "xtraTabPage4";
+            this.xtraTabPage4.Size = new System.Drawing.Size(1234, 493);
+            this.xtraTabPage4.Text = "정산내역   ";
+            // 
+            // efwGridControl4
+            // 
+            this.efwGridControl4.BindSet = null;
+            this.efwGridControl4.DBName = "";
+            serviceInfo10.InstanceName = "";
+            serviceInfo10.IsUserIDAdd = true;
+            serviceInfo10.ParamsInfo = null;
+            serviceInfo10.ProcName = "";
+            serviceInfo10.UserParams = null;
+            this.efwGridControl4.DeleteServiceInfo = serviceInfo10;
+            this.efwGridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            serviceInfo11.InstanceName = "";
+            serviceInfo11.IsUserIDAdd = true;
+            serviceInfo11.ParamsInfo = null;
+            serviceInfo11.ProcName = "";
+            serviceInfo11.UserParams = null;
+            this.efwGridControl4.InsertServiceInfo = serviceInfo11;
+            this.efwGridControl4.IsAddExcelBtn = true;
+            this.efwGridControl4.isAddPrintBtn = true;
+            this.efwGridControl4.IsMultiLang = false;
+            this.efwGridControl4.Location = new System.Drawing.Point(0, 0);
+            this.efwGridControl4.MainView = this.gridView4;
+            this.efwGridControl4.Name = "efwGridControl4";
+            this.efwGridControl4.NowRowHandle = 0;
+            this.efwGridControl4.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl4.PKColumns")));
+            this.efwGridControl4.PrevRowHandle = -2147483648;
+            this.efwGridControl4.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit4,
+            this.repositoryItemMemoExEdit4,
+            this.repositoryItemMemoEdit4,
+            this.repositoryItemCheckEdit11,
+            this.repositoryItemCheckEdit9,
+            this.repositoryItemButtonEdit8,
+            this.repositoryItemButtonEdit9,
+            this.repositoryItemButtonEdit10,
+            this.repositoryItemCheckEdit10});
+            this.efwGridControl4.Size = new System.Drawing.Size(1234, 493);
+            this.efwGridControl4.TabIndex = 45;
+            this.efwGridControl4.TableName = "";
+            serviceInfo12.InstanceName = "";
+            serviceInfo12.IsUserIDAdd = true;
+            serviceInfo12.ParamsInfo = null;
+            serviceInfo12.ProcName = "";
+            serviceInfo12.UserParams = null;
+            this.efwGridControl4.UpdateServiceInfo = serviceInfo12;
+            this.efwGridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // gridView4
+            // 
+            this.gridView4.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
+            this.gridView4.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gridView4.ColumnPanelRowHeight = 0;
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn96,
+            this.gridColumn97,
+            this.gridColumn98,
+            this.gridColumn99,
+            this.gridColumn100,
+            this.gridColumn101,
+            this.gridColumn102,
+            this.gridColumn103,
+            this.gridColumn104,
+            this.gridColumn105,
+            this.gridColumn106,
+            this.gridColumn107,
+            this.gridColumn108});
+            this.gridView4.FooterPanelHeight = 0;
+            this.gridView4.GridControl = this.efwGridControl4;
+            this.gridView4.GroupRowHeight = 0;
+            this.gridView4.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "(건수 : {0}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "o_total_cost", null, "합계 : {0:c} )")});
+            this.gridView4.Name = "gridView4";
+            this.gridView4.OptionsView.BestFitMode = DevExpress.XtraGrid.Views.Grid.GridBestFitMode.Full;
+            this.gridView4.OptionsView.ColumnAutoWidth = false;
+            this.gridView4.OptionsView.ShowFooter = true;
+            this.gridView4.RowHeight = 0;
+            this.gridView4.ViewCaptionHeight = 0;
+            // 
+            // gridColumn96
+            // 
+            this.gridColumn96.Caption = "아이디";
+            this.gridColumn96.FieldName = "login_id";
+            this.gridColumn96.Name = "gridColumn96";
+            this.gridColumn96.OptionsColumn.AllowEdit = false;
+            this.gridColumn96.Visible = true;
+            this.gridColumn96.VisibleIndex = 0;
+            // 
+            // gridColumn97
+            // 
+            this.gridColumn97.Caption = "이름";
+            this.gridColumn97.FieldName = "u_name";
+            this.gridColumn97.Name = "gridColumn97";
+            this.gridColumn97.OptionsColumn.AllowEdit = false;
+            this.gridColumn97.Visible = true;
+            this.gridColumn97.VisibleIndex = 1;
+            // 
+            // gridColumn98
+            // 
+            this.gridColumn98.Caption = "닉네임";
+            this.gridColumn98.FieldName = "u_nickname";
+            this.gridColumn98.Name = "gridColumn98";
+            this.gridColumn98.OptionsColumn.AllowEdit = false;
+            this.gridColumn98.Visible = true;
+            this.gridColumn98.VisibleIndex = 2;
+            // 
+            // gridColumn99
+            // 
+            this.gridColumn99.Caption = "주문건수";
+            this.gridColumn99.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn99.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn99.FieldName = "order_cnt";
+            this.gridColumn99.Name = "gridColumn99";
+            this.gridColumn99.OptionsColumn.AllowEdit = false;
+            this.gridColumn99.Visible = true;
+            this.gridColumn99.VisibleIndex = 3;
+            // 
+            // gridColumn100
+            // 
+            this.gridColumn100.Caption = "총주문금액";
+            this.gridColumn100.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn100.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn100.FieldName = "order_amt";
+            this.gridColumn100.Name = "gridColumn100";
+            this.gridColumn100.OptionsColumn.AllowEdit = false;
+            this.gridColumn100.Visible = true;
+            this.gridColumn100.VisibleIndex = 4;
+            // 
+            // gridColumn101
+            // 
+            this.gridColumn101.Caption = "10%세액공제";
+            this.gridColumn101.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn101.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn101.FieldName = "10_tax";
+            this.gridColumn101.Name = "gridColumn101";
+            this.gridColumn101.OptionsColumn.AllowEdit = false;
+            this.gridColumn101.Visible = true;
+            this.gridColumn101.VisibleIndex = 5;
+            this.gridColumn101.Width = 87;
+            // 
+            // gridColumn102
+            // 
+            this.gridColumn102.Caption = "50%캐시백(본인)";
+            this.gridColumn102.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn102.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn102.FieldName = "50_back";
+            this.gridColumn102.Name = "gridColumn102";
+            this.gridColumn102.OptionsColumn.AllowEdit = false;
+            this.gridColumn102.Visible = true;
+            this.gridColumn102.VisibleIndex = 6;
+            this.gridColumn102.Width = 116;
+            // 
+            // gridColumn103
+            // 
+            this.gridColumn103.Caption = "추천건수";
+            this.gridColumn103.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn103.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn103.FieldName = "recommend_cnt";
+            this.gridColumn103.Name = "gridColumn103";
+            this.gridColumn103.OptionsColumn.AllowEdit = false;
+            this.gridColumn103.Visible = true;
+            this.gridColumn103.VisibleIndex = 7;
+            // 
+            // gridColumn104
+            // 
+            this.gridColumn104.Caption = "10%캐시백(추천인)";
+            this.gridColumn104.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn104.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn104.FieldName = "10_recommend";
+            this.gridColumn104.Name = "gridColumn104";
+            this.gridColumn104.OptionsColumn.AllowEdit = false;
+            this.gridColumn104.Visible = true;
+            this.gridColumn104.VisibleIndex = 8;
+            this.gridColumn104.Width = 115;
+            // 
+            // gridColumn105
+            // 
+            this.gridColumn105.Caption = "세전 금액";
+            this.gridColumn105.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn105.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn105.FieldName = "principal_amt";
+            this.gridColumn105.Name = "gridColumn105";
+            this.gridColumn105.OptionsColumn.AllowEdit = false;
+            this.gridColumn105.Visible = true;
+            this.gridColumn105.VisibleIndex = 9;
+            // 
+            // gridColumn106
+            // 
+            this.gridColumn106.Caption = "세금(3.3%)";
+            this.gridColumn106.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn106.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn106.FieldName = "tax_amt";
+            this.gridColumn106.Name = "gridColumn106";
+            this.gridColumn106.OptionsColumn.AllowEdit = false;
+            this.gridColumn106.Visible = true;
+            this.gridColumn106.VisibleIndex = 10;
+            // 
+            // gridColumn107
+            // 
+            this.gridColumn107.Caption = "실 지급액";
+            this.gridColumn107.DisplayFormat.FormatString = "###,###,##0";
+            this.gridColumn107.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn107.FieldName = "amount";
+            this.gridColumn107.Name = "gridColumn107";
+            this.gridColumn107.OptionsColumn.AllowEdit = false;
+            this.gridColumn107.Visible = true;
+            this.gridColumn107.VisibleIndex = 11;
+            // 
+            // gridColumn108
+            // 
+            this.gridColumn108.Caption = "지급구분";
+            this.gridColumn108.FieldName = "type";
+            this.gridColumn108.Name = "gridColumn108";
+            this.gridColumn108.OptionsColumn.AllowEdit = false;
+            this.gridColumn108.Visible = true;
+            this.gridColumn108.VisibleIndex = 12;
+            // 
+            // repositoryItemLookUpEdit4
+            // 
+            this.repositoryItemLookUpEdit4.AutoHeight = false;
+            this.repositoryItemLookUpEdit4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit4.Name = "repositoryItemLookUpEdit4";
+            // 
+            // repositoryItemMemoExEdit4
+            // 
+            this.repositoryItemMemoExEdit4.AutoHeight = false;
+            this.repositoryItemMemoExEdit4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemMemoExEdit4.Name = "repositoryItemMemoExEdit4";
+            // 
+            // repositoryItemMemoEdit4
+            // 
+            this.repositoryItemMemoEdit4.Name = "repositoryItemMemoEdit4";
+            // 
+            // repositoryItemCheckEdit11
+            // 
+            this.repositoryItemCheckEdit11.AutoHeight = false;
+            this.repositoryItemCheckEdit11.Name = "repositoryItemCheckEdit11";
+            this.repositoryItemCheckEdit11.ValueChecked = "Y";
+            this.repositoryItemCheckEdit11.ValueUnchecked = "N";
+            // 
+            // repositoryItemCheckEdit9
+            // 
+            this.repositoryItemCheckEdit9.AutoHeight = false;
+            this.repositoryItemCheckEdit9.Name = "repositoryItemCheckEdit9";
+            this.repositoryItemCheckEdit9.ValueChecked = "Y";
+            this.repositoryItemCheckEdit9.ValueUnchecked = "N";
+            // 
+            // repositoryItemButtonEdit8
+            // 
+            this.repositoryItemButtonEdit8.AutoHeight = false;
+            editorButtonImageOptions10.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions10.Image")));
+            this.repositoryItemButtonEdit8.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonEdit8.Name = "repositoryItemButtonEdit8";
+            // 
+            // repositoryItemButtonEdit9
+            // 
+            this.repositoryItemButtonEdit9.AutoHeight = false;
+            editorButtonImageOptions11.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions11.Image")));
+            this.repositoryItemButtonEdit9.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonEdit9.Name = "repositoryItemButtonEdit9";
+            this.repositoryItemButtonEdit9.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            // 
+            // repositoryItemButtonEdit10
+            // 
+            this.repositoryItemButtonEdit10.AutoHeight = false;
+            editorButtonImageOptions12.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions12.Image")));
+            this.repositoryItemButtonEdit10.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonEdit10.Name = "repositoryItemButtonEdit10";
+            this.repositoryItemButtonEdit10.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // repositoryItemCheckEdit10
+            // 
+            this.repositoryItemCheckEdit10.AutoHeight = false;
+            this.repositoryItemCheckEdit10.Name = "repositoryItemCheckEdit10";
+            this.repositoryItemCheckEdit10.ValueChecked = "Y";
+            this.repositoryItemCheckEdit10.ValueUnchecked = "N";
+            // 
             // frmDN26
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1884,6 +2252,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbis_biz.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).EndInit();
@@ -1927,6 +2296,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit7)).EndInit();
+            this.xtraTabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2072,5 +2453,31 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit5;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit6;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit7;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
+        private Easy.Framework.WinForm.Control.efwGridControl efwGridControl4;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn96;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn97;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn98;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn99;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn100;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn101;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn102;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn103;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn104;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn105;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn106;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn107;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn108;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit11;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit9;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit8;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit9;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit10;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit10;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbis_biz;
     }
 }

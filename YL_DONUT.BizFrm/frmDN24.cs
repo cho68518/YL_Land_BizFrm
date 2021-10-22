@@ -29,7 +29,6 @@ namespace YL_DONUT.BizFrm
             this.QCode = "DN24";
             //폼명설정
             this.FrmName = "온라인 주문등록";
-
         }
 
         private void frmDN24_Load(object sender, EventArgs e)
@@ -49,9 +48,11 @@ namespace YL_DONUT.BizFrm
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
             dtO_Date.EditValue = DateTime.Now;
-            cmbO_Company.EditValue = "1";
+            cmbO_Company.EditValue = "2";
             cmbO_Sub_Company.EditValue = "0";
+            dtevent_end_date.EditValue = DateTime.Now;
             rbp_bunch_delivery.EditValue = "N";
+            rbp_bunch_delivery1.EditValue = "N";
 
             gridView1.OptionsView.ShowFooter = true;
 
@@ -92,18 +93,24 @@ namespace YL_DONUT.BizFrm
                    ); ;
 
             this.efwGridControl1.Click += efwGridControl1_Click;
+
+            this.efwGridControl2.BindControlSet(
+                      new ColumnControlSet("Idx", txtIdx1)
+                    , new ColumnControlSet("Remark", txtRemark1)
+                    , new ColumnControlSet("o_sub_company", cmbO_Sub_Company1)
+                    , new ColumnControlSet("p_code", txtp_code)
+                    , new ColumnControlSet("p_name", txtp_name1)
+                    , new ColumnControlSet("option_name", txtoption_name1)
+                    , new ColumnControlSet("event_name", txtevent_name1)
+                    , new ColumnControlSet("p_bunch_delivery", rbp_bunch_delivery1)
+                    , new ColumnControlSet("add_p_name", txtadd_p_name1)
+                    , new ColumnControlSet("p_bunch_delivery", rbp_bunch_delivery1)
+                   ); ;
+
+            this.efwGridControl2.Click += efwGridControl2_Click;
             SetCmb();
         }
 
-        private void efwGridControl1_Click(object sender, EventArgs e)
-        {
-            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
-
-            if (dr != null && dr["idx"].ToString() != "")
-            {
-                this.txtIdx.EditValue = dr["idx"].ToString();
-            }
-        }
 
         private void SetCmb()
         {
@@ -138,9 +145,34 @@ namespace YL_DONUT.BizFrm
                 CodeAgent.MakeCodeControl(this.cmbO_Company, codeArray);
             }
 
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " SELECT code_id as DCODE ,code_nm as DNAME  FROM domaadmin.tb_common_code where gcode_id = 00042 order by code_id ";
 
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbO_Sub_Company1, codeArray);
+            }
 
         }
+
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+
+            if (dr != null && dr["idx"].ToString() != "")
+            {
+                this.txtIdx.EditValue = dr["idx"].ToString();
+                this.txto_receive_zipcode1.EditValue = dr["o_receive_zipcode1"].ToString();
+            }
+        }
+
         private void from_new()
         {
             base.NewMode();
@@ -150,6 +182,17 @@ namespace YL_DONUT.BizFrm
         }
 
         public override void Search()
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open1();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open2();
+            }
+        }
+        private void Open1()
         {
             try
             {
@@ -184,7 +227,43 @@ namespace YL_DONUT.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
+        }
 
+        private void Open2()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                string sCom = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN24_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
         }
 
         private void efwSimpleButton6_Click(object sender, EventArgs e)
@@ -313,7 +392,235 @@ namespace YL_DONUT.BizFrm
             }
         }
 
-        private void efwSimpleButton7_Click(object sender, EventArgs e)
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            rbp_bunch_delivery.EditValue = "N";
+            from_new();
+
+        }
+
+        private void txto_receive_zipcode1_Click(object sender, EventArgs e)
+        {
+            frmZipNoInfo FrmInfo = new frmZipNoInfo() { ParentBtn = txto_receive_zipcode1, ParentAddr1 = txto_receive_address1, ParentAddr2 = txto_receive_address2 };
+            FrmInfo.COMPANYCD = "YL01";
+            FrmInfo.COMPANYNAME = "(주)와이엘랜드";
+            FrmInfo.ShowDialog();
+        }
+
+        private void btnExcelUpdate_Click(object sender, EventArgs e)
+        {
+            popup = new frmDN24_Pop01();
+            popup.ShowDialog();
+        }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(gridView1.GetFocusedDisplayText());
+                e.Handled = true;
+            }
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            Eraser.Clear(this, "CLR2");
+            cmbO_Sub_Company.EditValue = "0";
+            dtevent_end_date.EditValue = DateTime.Now;
+            rbp_bunch_delivery1.EditValue = "N";
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.cmbO_Sub_Company1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 온라인몰을 선택하세요!");
+                return;
+            }
+
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN24_SAVE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_proc_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_proc_type"].Value = "P";
+                            cmd.Parameters["i_proc_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtIdx1.EditValue);
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_sub_company", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_sub_company"].Value = cmbO_Sub_Company1.EditValue;
+                            cmd.Parameters["i_o_sub_company"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_code"].Value = txtp_code.EditValue;
+                            cmd.Parameters["i_p_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtRemark1.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                           cmd.Parameters.Add(new MySqlParameter("i_p_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_name"].Value = txtp_name1.EditValue;
+                            cmd.Parameters["i_p_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_option_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_option_name"].Value = txtoption_name1.EditValue;
+                            cmd.Parameters["i_option_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_event_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_event_name"].Value = txtevent_name1.EditValue;
+                            cmd.Parameters["i_event_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_add_p_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_add_p_name"].Value = txtadd_p_name1.EditValue;
+                            cmd.Parameters["i_add_p_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_bunch_delivery", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_bunch_delivery"].Value = rbp_bunch_delivery1.EditValue;
+                            cmd.Parameters["i_p_bunch_delivery"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_event_end_date", MySqlDbType.DateTime));
+                            cmd.Parameters["i_event_end_date"].Value = dtevent_end_date.EditValue;
+                            cmd.Parameters["i_event_end_date"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+            }
+        }
+
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtIdx1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 삭제할 온라인몰의 제품을 선택하세요!");
+                return;
+            }
+
+
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN24_SAVE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_proc_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_proc_type"].Value = "D";
+                            cmd.Parameters["i_proc_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtIdx1.EditValue);
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_sub_company", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_sub_company"].Value = cmbO_Sub_Company1.EditValue;
+                            cmd.Parameters["i_o_sub_company"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_code"].Value = txtp_code.EditValue;
+                            cmd.Parameters["i_p_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtRemark1.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_name"].Value = txtp_name1.EditValue;
+                            cmd.Parameters["i_p_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_option_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_option_name"].Value = txtoption_name1.EditValue;
+                            cmd.Parameters["i_option_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_event_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_event_name"].Value = txtevent_name1.EditValue;
+                            cmd.Parameters["i_event_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_add_p_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_add_p_name"].Value = txtadd_p_name1.EditValue;
+                            cmd.Parameters["i_add_p_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_bunch_delivery", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_bunch_delivery"].Value = rbp_bunch_delivery1.EditValue;
+                            cmd.Parameters["i_p_bunch_delivery"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_event_end_date", MySqlDbType.DateTime));
+                            cmd.Parameters["i_event_end_date"].Value = dtevent_end_date.EditValue;
+                            cmd.Parameters["i_event_end_date"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+                Eraser.Clear(this, "CLR2");
+                cmbO_Sub_Company.EditValue = "0";
+                dtevent_end_date.EditValue = DateTime.Now;
+            }
+        }
+
+        private void efwXtraTabControl1_SelectedPageChanging(object sender, DevExpress.XtraTab.TabPageChangingEventArgs e)
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                efwLabel5.Text = "주문일";
+                dtS_DATE.EditValue = DateTime.Now;
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                efwLabel5.Text = "등록일";
+                dtS_DATE.EditValue = "2021-01-01";
+            }
+        }
+
+        private void efwGridControl2_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl2.GetSelectedRow(0);
+            if (dr != null && dr["idx"].ToString() != "")
+            {
+                this.txtIdx1.EditValue = dr["idx"].ToString();
+            }
+        }
+
+        private void efwSimpleButton7_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(this.txtIdx.Text))
             {
@@ -322,7 +629,7 @@ namespace YL_DONUT.BizFrm
             }
 
 
-            if (txto_delivery_num.EditValue.ToString().Length > 2) 
+            if (txto_delivery_num.EditValue.ToString().Length > 2)
             {
                 MessageAgent.MessageShow(MessageType.Warning, " 배송중인 품목이므로 삭제할수 없습니다!");
                 return;
@@ -435,27 +742,7 @@ namespace YL_DONUT.BizFrm
                 Search();
                 from_new();
             }
-        }
 
-        private void efwSimpleButton1_Click(object sender, EventArgs e)
-        {
-            rbp_bunch_delivery.EditValue = "N";
-            from_new();
-
-        }
-
-        private void txto_receive_zipcode1_Click(object sender, EventArgs e)
-        {
-            frmZipNoInfo FrmInfo = new frmZipNoInfo() { ParentBtn = txto_receive_zipcode1, ParentAddr1 = txto_receive_address1, ParentAddr2 = txto_receive_address2 };
-            FrmInfo.COMPANYCD = "YL01";
-            FrmInfo.COMPANYNAME = "(주)와이엘랜드";
-            FrmInfo.ShowDialog();
-        }
-
-        private void btnExcelUpdate_Click(object sender, EventArgs e)
-        {
-            popup = new frmDN24_Pop01();
-            popup.ShowDialog();
         }
     }
 }

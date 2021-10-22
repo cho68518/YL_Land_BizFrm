@@ -58,6 +58,8 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["o_total_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["o_total_cost"].SummaryItem.FieldName = "o_total_cost";
             gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            rbis_biz.EditValue = "1";
+            this.rbis_biz.Visible = false;
             setCmb();
         }
 
@@ -99,6 +101,10 @@ namespace YL_DONUT.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
             {
                 Open3();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                Open4();
             }
         }
 
@@ -228,6 +234,44 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void Open4()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SELECT_05", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[2].Value = rbis_biz.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl4.DataBind(ds);
+                            this.efwGridControl4.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
         public override void Save()
         {
             if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
@@ -333,7 +377,7 @@ namespace YL_DONUT.BizFrm
             {
                 if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
                 {
-                    for (var i = 0; i < gridView2.DataRowCount; i++)
+                    for (var i = 0; i < gridView3.DataRowCount; i++)
                     {
 
                         using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
@@ -455,14 +499,34 @@ namespace YL_DONUT.BizFrm
             if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
             {
                 efwLabel1.Text = "입금완료일";
+                this.rbis_biz.Visible = false;
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
             {
                 efwLabel1.Text = "배송시작일";
+                this.rbis_biz.Visible = false;
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
             {
                 efwLabel1.Text = "배송시작일";
+                this.rbis_biz.Visible = false;
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                efwLabel1.Text = "배송시작일";
+                this.rbis_biz.Visible = true;
+            }
+        }
+
+        private void rbis_biz_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (rbis_biz.EditValue.ToString() == "1")
+            {
+                this.gridView4.Columns[6].Caption = "50%캐시백(본인)";
+            }
+            else
+            {
+                this.gridView4.Columns[6].Caption = "40%캐시백(G멀티샵)";
             }
         }
     }

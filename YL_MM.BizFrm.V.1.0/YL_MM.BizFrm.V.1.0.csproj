@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{574A24CB-6C11-4F50-96CC-A188CC30B49E}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_MM.BizFrm</RootNamespace>
     <AssemblyName>YL_MM.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -125,6 +125,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BizNode.cs" />
+    <Compile Include="Com_CodeNode.cs" />
+    <Compile Include="Com_CodeNode1.cs" />
     <Compile Include="ConstantLib.cs" />
     <Compile Include="DeptNode.cs" />
     <Compile Include="Dlg\frmMember_doma.cs">
@@ -400,6 +402,12 @@
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Test03.designer.cs">
+      <DependentUpon>Test03.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dlg\frmMember_doma.resx">
       <DependentUpon>frmMember_doma.cs</DependentUpon>
     </EmbeddedResource>
@@ -547,6 +555,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Test03.resx">
+      <DependentUpon>Test03.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

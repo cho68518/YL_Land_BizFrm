@@ -20,7 +20,8 @@ using DevExpress.XtraGrid.Columns;
 namespace YL_GSHOP.BizFrm
 {
     public partial class frmGSHOP19 : FrmBase
-{
+    {
+        frmMemberInfo popup;
         public frmGSHOP19()
         {
             InitializeComponent();
@@ -69,6 +70,8 @@ namespace YL_GSHOP.BizFrm
              , new ColumnControlSet("stock_qty", txtStock_Qty)
              , new ColumnControlSet("youtube_qty", txtYoutube_Qty)
              , new ColumnControlSet("ceo_pic_qty", txtCeo_Pic_Qty)
+             , new ColumnControlSet("youtube_relations", txtYouTube_Relations)
+             , new ColumnControlSet("utube_nic", txtUtube_nic)
             );
             this.efwGridControl2.Click += efwGridControl2_Click;
 
@@ -233,6 +236,10 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters["i_ceo_pic_qty"].Direction = ParameterDirection.Input;
 
 
+                            cmd.Parameters.Add(new MySqlParameter("i_YouTube_Relations", MySqlDbType.VarChar));
+                            cmd.Parameters["i_YouTube_Relations"].Value = txtYouTube_Relations.EditValue;
+                            cmd.Parameters["i_YouTube_Relations"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -294,6 +301,29 @@ namespace YL_GSHOP.BizFrm
                 Search();
                 Open1();
             }
+        }
+
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            popup = new frmMemberInfo
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+                MEMBER_TYPE = "ALL",
+            };
+            popup.FormClosed += popup_FormClosed2;
+            PopUpBizAgent.Show(this, popup);
+        }
+
+        private void popup_FormClosed2(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed2;
+            if (popup.DialogResult == DialogResult.OK)
+            {
+                this.txtYouTube_Relations.EditValue = popup.U_ID;
+                this.txtUtube_nic.EditValue = popup.U_NICKNAME;
+            }
+            popup = null;
         }
     }
 }

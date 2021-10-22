@@ -347,7 +347,7 @@
             hierarchy1.SpName = null;
             this.cmbMALL_TYPE.HierarchyInfo = hierarchy1;
             this.cmbMALL_TYPE.IsMultiLang = false;
-            this.cmbMALL_TYPE.Location = new System.Drawing.Point(124, 48);
+            this.cmbMALL_TYPE.Location = new System.Drawing.Point(120, 48);
             this.cmbMALL_TYPE.MasterCode = "E03.PAY_GBN";
             this.cmbMALL_TYPE.Name = "cmbMALL_TYPE";
             this.cmbMALL_TYPE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {

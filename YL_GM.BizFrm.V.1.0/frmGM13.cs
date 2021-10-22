@@ -20,6 +20,7 @@ namespace YL_GM.BizFrm
 {
     public partial class frmGM13 : FrmBase
     {
+        frmGM13_Pop01 popup;
         public frmGM13()
         {
             InitializeComponent();
@@ -188,6 +189,41 @@ namespace YL_GM.BizFrm
             }
         }
 
+        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
+        {
+            if (rbq_type.EditValue.ToString() == "0")
+            {
+                popup = new frmGM13_Pop01();
+
+                popup.pO_Code = bandedGridView1.GetFocusedRowCellValue("o_code").ToString();
+                popup.pStory_208 = bandedGridView1.GetFocusedRowCellValue("ps_story1").ToString();
+                popup.pStory_221 = bandedGridView1.GetFocusedRowCellValue("ps_story2").ToString();
+                popup.pStory_248 = bandedGridView1.GetFocusedRowCellValue("gd_story").ToString();
+                popup.pStory_232 = bandedGridView1.GetFocusedRowCellValue("tel_story").ToString();
+                popup.pStory_247 = bandedGridView1.GetFocusedRowCellValue("gv_story").ToString();
+                popup.pStory_244 = bandedGridView1.GetFocusedRowCellValue("gm_story").ToString();
+
+                popup.pU_NickNAme = bandedGridView1.GetFocusedRowCellValue("u_nickname").ToString();
+                popup.pU_Chef_Level = bandedGridView1.GetFocusedRowCellValue("u_chef_level").ToString();
+                popup.pDoma = bandedGridView1.GetFocusedRowCellValue("doma").ToString();
+                popup.pVip = bandedGridView1.GetFocusedRowCellValue("vip").ToString();
+                popup.pBiz = bandedGridView1.GetFocusedRowCellValue("biz").ToString();
+
+                popup.FormClosed += popup_FormClosed;
+                popup.ShowDialog();
+            }
+            else
+            {
+                MessageAgent.MessageShow(MessageType.Informational, "생성유무로 조회 하신후 스토리를 생성하세요!.");
+            }
+            
+        }
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            popup = null;
+        }
     }
 
 }

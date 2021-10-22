@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5B7850A0-A628-4D0B-BC3F-FBCDB66DF433}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_GM.BizFrm</RootNamespace>
     <AssemblyName>YL_GM.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -93,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstantLib.cs" />
+    <Compile Include="Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control.designer.cs">
+      <DependentUpon>Control.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dlg\frmGM01_Pop03.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,18 @@
     </Compile>
     <Compile Include="Dlg\frmMemberInfo.designer.cs">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM22.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGM22.Designer.cs">
+      <DependentUpon>frmGM22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGM13_Pop01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGM13_Pop01.Designer.cs">
+      <DependentUpon>frmGM13_Pop01.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGM21.cs">
       <SubType>UserControl</SubType>
@@ -326,6 +344,9 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Control.resx">
+      <DependentUpon>Control.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmGM01_Pop01.resx">
       <DependentUpon>frmGM01_Pop01.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dlg\frmMemberInfo.resx">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM13_Pop01.resx">
+      <DependentUpon>frmGM13_Pop01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM19.resx">
       <DependentUpon>frmGM19.cs</DependentUpon>
@@ -427,6 +451,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGM21.resx">
       <DependentUpon>frmGM21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGM22.resx">
+      <DependentUpon>frmGM22.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
