@@ -48,6 +48,11 @@ namespace YL_MM.BizFrm
             ckdora_md.EditValue = '0';
             rbis_use.EditValue = 'Y';
             rbshow_level.EditValue = 1;
+            rbOtype_e_yn.EditValue = "N";
+            rbEa_product.EditValue = "N";
+            rbOnline_product.EditValue = "D";
+
+
             gridView1.OptionsView.ShowFooter = true;
             SetCmb();
             Open1();
@@ -675,6 +680,14 @@ namespace YL_MM.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_p_represent", MySqlDbType.VarChar));
                         cmd.Parameters["o_p_represent"].Direction = ParameterDirection.Output;
 
+                        cmd.Parameters.Add(new MySqlParameter("o_otype_e_yn", MySqlDbType.VarChar));
+                        cmd.Parameters["o_otype_e_yn"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_ea_product", MySqlDbType.VarChar));
+                        cmd.Parameters["o_ea_product"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_online_product", MySqlDbType.VarChar));
+                        cmd.Parameters["o_online_product"].Direction = ParameterDirection.Output;
                         //
 
                         cmd.ExecuteNonQuery();
@@ -751,6 +764,10 @@ namespace YL_MM.BizFrm
                         txtp_explanation.EditValue = cmd.Parameters["o_p_explanation"].Value.ToString();
                         txtp_title.EditValue = cmd.Parameters["o_p_title"].Value.ToString();
                         cbp_represent.EditValue = cmd.Parameters["o_p_represent"].Value.ToString();
+
+                        rbOtype_e_yn.EditValue = cmd.Parameters["o_otype_e_yn"].Value.ToString();
+                        rbEa_product.EditValue = cmd.Parameters["o_ea_product"].Value.ToString();
+                        rbOnline_product.EditValue = cmd.Parameters["o_online_product"].Value.ToString();
 
 
                         if (chkAll.EditValue.ToString() == "1")
@@ -1098,7 +1115,6 @@ namespace YL_MM.BizFrm
                 sSftp.Close();
                 txtP_Img.EditValue = "https://media.domalife.net/files/product/domamall/" + txtP_Code.EditValue+"/"+sFileName;
             }
-            
         }
 
         private void btnFileOpen2_Click(object sender, EventArgs e)
@@ -1362,7 +1378,6 @@ namespace YL_MM.BizFrm
         private void bthNew_Click(object sender, EventArgs e)
         {
             New();
-
         }
 
         private void New()
@@ -1449,6 +1464,9 @@ namespace YL_MM.BizFrm
             txtp_title.EditValue = null;
             cbp_represent.EditValue = "N";
 
+            rbOtype_e_yn.EditValue = "N";
+            rbEa_product.EditValue = "N";
+            rbOnline_product.EditValue = "D";
 
             //gridView1.Columns.Clear();
             //gridView2.Columns.Clear();
@@ -1472,8 +1490,6 @@ namespace YL_MM.BizFrm
 
                 txtP_Code.EditValue = sql.selectQueryForSingleValue();
             }
-
-
             SetCmb();
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -1739,6 +1755,18 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_p_represent"].Value = cbp_represent.EditValue;
                             cmd.Parameters["i_p_represent"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_otype_e_yn", MySqlDbType.VarChar));
+                            cmd.Parameters["i_otype_e_yn"].Value = rbOtype_e_yn.EditValue;
+                            cmd.Parameters["i_otype_e_yn"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_ea_product", MySqlDbType.VarChar));
+                            cmd.Parameters["i_ea_product"].Value = rbEa_product.EditValue;
+                            cmd.Parameters["i_ea_product"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_online_product", MySqlDbType.VarChar));
+                            cmd.Parameters["i_online_product"].Value = rbOnline_product.EditValue;
+                            cmd.Parameters["i_online_product"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Result_P_Id", MySqlDbType.VarChar));
                             cmd.Parameters["o_Result_P_Id"].Direction = ParameterDirection.Output;
 
@@ -1750,8 +1778,6 @@ namespace YL_MM.BizFrm
                             cmd.ExecuteNonQuery();
                             txtP_Id.EditValue = cmd.Parameters["o_Result_P_Id"].Value.ToString();
                             MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
-
-
 
                         }
                     }
@@ -2340,6 +2366,46 @@ namespace YL_MM.BizFrm
             }
 
             Open2();
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtP_Id.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "복사할 상품을 먼저 선택하세요 !");
+                txtP_Name.Focus();
+                return;
+            }
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_06", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_Id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_p_Id"].Value = Convert.ToInt32(txtP_Id.EditValue).ToString();
+                            cmd.Parameters["i_p_Id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+
         }
     }
 }

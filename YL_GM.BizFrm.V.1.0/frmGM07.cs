@@ -143,7 +143,7 @@ namespace YL_GM.BizFrm
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
-                con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00057' and code_id in ('01','02','03') ";
+                con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00057' and code_id in ('01','02','03','98') ";
 
                 DataSet ds = con.selectQueryDataSet();
                 //DataTable retDT = ds.Tables[0];
@@ -732,7 +732,7 @@ namespace YL_GM.BizFrm
             {
                 using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
                 {
-                    con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00057' and code_id in ('01','02','03') ";
+                    con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00057'  and code_memo = '1'  ";
 
                     DataSet ds = con.selectQueryDataSet();
                     //DataTable retDT = ds.Tables[0];
@@ -750,7 +750,7 @@ namespace YL_GM.BizFrm
 
                 using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
                 {
-                    con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00058' and code_id = '00' ";
+                    con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00058' ";
 
                     DataSet ds = con.selectQueryDataSet();
                     //DataTable retDT = ds.Tables[0];
@@ -773,7 +773,7 @@ namespace YL_GM.BizFrm
             {
                 using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
                 {
-                    con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00057' and code_id in ('04','05','06') ";
+                    con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00057'  and code_memo = '2'   ";
 
                     DataSet ds = con.selectQueryDataSet();
                     //DataTable retDT = ds.Tables[0];

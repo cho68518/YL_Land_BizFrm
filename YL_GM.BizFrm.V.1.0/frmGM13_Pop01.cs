@@ -23,12 +23,15 @@ namespace YL_GM.BizFrm
     {
 
         public string pO_Code { get; set; }
+        public string pShop_Code { get; set; }
         public string pStory_208 { get; set; }
         public string pStory_221 { get; set; }
         public string pStory_248 { get; set; }
         public string pStory_232 { get; set; }
         public string pStory_247 { get; set; }
         public string pStory_244 { get; set; }
+        public string pStory_223 { get; set; }
+        public string pStory_243 { get; set; }
 
         public string pU_NickNAme { get; set; }
         public string pU_Chef_Level{ get; set; }
@@ -47,12 +50,15 @@ namespace YL_GM.BizFrm
             DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("맑은고딕", 9);
 
             txtO_Code.EditValue = pO_Code;
+            txtGShop_O_Code.EditValue = pShop_Code;
             txtStory_208.EditValue = pStory_208;
             txtStory_221.EditValue = pStory_221;
             txtStory_248.EditValue = pStory_248;
             txtStory_232.EditValue = pStory_232;
             txtStory_247.EditValue = pStory_247;
             txtStory_244.EditValue = pStory_244;
+            txtStory_223.EditValue = pStory_223;
+            txtStory_243.EditValue = pStory_243;
 
             txtU_NickName.EditValue = pU_NickNAme;
             txtU_Chef_Level.EditValue = pU_Chef_Level;
@@ -98,6 +104,9 @@ namespace YL_GM.BizFrm
 
                         cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
                         cmd.Parameters[0].Value = txtO_Code.EditValue;
+
+                        cmd.Parameters.Add("i_gshop_code", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtGShop_O_Code.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -386,6 +395,76 @@ namespace YL_GM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_expiration_date", MySqlDbType.DateTime));
                             cmd.Parameters["i_expiration_date"].Value = dtExpiration_Date.EditValue;
                             cmd.Parameters["i_expiration_date"].Direction = ParameterDirection.Input;
+
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                MessageAgent.MessageShow(MessageType.Informational, "완료 되었습니다. 조회 결과를 확인하세요.");
+                Open1();
+            }
+        }
+
+        private void efwSimpleButton10_Click(object sender, EventArgs e)
+        {
+            if (txtStory_223.EditValue.ToString() == "O")
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 이미 생성된 스토리 입니다");
+                return;
+            }
+            if (MessageAgent.MessageShow(MessageType.Confirm, "PR등록 스토리를 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PROD_ORDER_223", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_code"].Value = txtGShop_O_Code.EditValue;
+                            cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
+
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                MessageAgent.MessageShow(MessageType.Informational, "완료 되었습니다. 조회 결과를 확인하세요.");
+                Open1();
+            }
+        }
+
+        private void efwSimpleButton9_Click(object sender, EventArgs e)
+        {
+            if (txtStory_243.EditValue.ToString() == "O")
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 이미 생성된 스토리 입니다");
+                return;
+            }
+            if (MessageAgent.MessageShow(MessageType.Confirm, "PR추천 스토리를 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PROD_ORDER_243", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_code"].Value = txtGShop_O_Code.EditValue;
+                            cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
 
                             cmd.ExecuteNonQuery();
                         }

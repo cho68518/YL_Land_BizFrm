@@ -166,7 +166,7 @@ namespace YL_DONUT.BizFrm
         {
             try
             {
-                Dictionary<string, string> myRecord;
+                //Dictionary<string, string> myRecord;
 
 
                 string strQueruy1 = @"  SELECT

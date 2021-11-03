@@ -333,6 +333,12 @@ namespace YL_MM.BizFrm
             }
 
 
+            if (cmbU_CHEF_LEVEL.EditValue.ToString() == "4")
+            {
+                MessageAgent.MessageShow(MessageType.Error, "멀티샵 등급인경우 헬퍼로 선택후 미용실(G샵) 체크하세요 !");
+                IsAutoSearch = false;
+                return;
+            }
 
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {

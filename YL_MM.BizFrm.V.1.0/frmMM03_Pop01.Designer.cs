@@ -111,6 +111,11 @@
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGroupControlProd = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel51 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.rbOnline_product = new Easy.Framework.WinForm.Control.efwRadioGroup();
+            this.rbEa_product = new Easy.Framework.WinForm.Control.efwRadioGroup();
+            this.rbOtype_e_yn = new Easy.Framework.WinForm.Control.efwRadioGroup();
+            this.efwSimpleButton6 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel50 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel49 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtp_title = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -287,6 +292,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picOP_IMG.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).BeginInit();
             this.efwGroupControlProd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbOnline_product.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbEa_product.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbOtype_e_yn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbp_represent.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_explanation.Properties)).BeginInit();
@@ -725,6 +733,11 @@
             // efwGroupControlProd
             // 
             this.efwGroupControlProd.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControlProd.CaptionImageOptions.Image")));
+            this.efwGroupControlProd.Controls.Add(this.efwLabel51);
+            this.efwGroupControlProd.Controls.Add(this.rbOnline_product);
+            this.efwGroupControlProd.Controls.Add(this.rbEa_product);
+            this.efwGroupControlProd.Controls.Add(this.rbOtype_e_yn);
+            this.efwGroupControlProd.Controls.Add(this.efwSimpleButton6);
             this.efwGroupControlProd.Controls.Add(this.efwLabel50);
             this.efwGroupControlProd.Controls.Add(this.efwLabel49);
             this.efwGroupControlProd.Controls.Add(this.txtp_title);
@@ -788,6 +801,70 @@
             resources.ApplyResources(this.efwGroupControlProd, "efwGroupControlProd");
             this.efwGroupControlProd.IsMultiLang = false;
             this.efwGroupControlProd.Name = "efwGroupControlProd";
+            // 
+            // efwLabel51
+            // 
+            this.efwLabel51.EraserGroup = null;
+            this.efwLabel51.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel51, "efwLabel51");
+            this.efwLabel51.Name = "efwLabel51";
+            // 
+            // rbOnline_product
+            // 
+            this.rbOnline_product.IsMultiLang = false;
+            resources.ApplyResources(this.rbOnline_product, "rbOnline_product");
+            this.rbOnline_product.Name = "rbOnline_product";
+            this.rbOnline_product.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbOnline_product.Properties.Appearance.Options.UseBackColor = true;
+            this.rbOnline_product.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbOnline_product.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbOnline_product.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rbOnline_product.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(resources.GetString("rbOnline_product.Properties.Items"), resources.GetString("rbOnline_product.Properties.Items1")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(resources.GetString("rbOnline_product.Properties.Items2"), resources.GetString("rbOnline_product.Properties.Items3")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(resources.GetString("rbOnline_product.Properties.Items4"), resources.GetString("rbOnline_product.Properties.Items5"))});
+            this.rbOnline_product.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.rbOnline_product.RequireMessage = null;
+            // 
+            // rbEa_product
+            // 
+            this.rbEa_product.IsMultiLang = false;
+            resources.ApplyResources(this.rbEa_product, "rbEa_product");
+            this.rbEa_product.Name = "rbEa_product";
+            this.rbEa_product.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbEa_product.Properties.Appearance.Options.UseBackColor = true;
+            this.rbEa_product.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbEa_product.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbEa_product.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rbEa_product.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(resources.GetString("rbEa_product.Properties.Items"), resources.GetString("rbEa_product.Properties.Items1")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(resources.GetString("rbEa_product.Properties.Items2"), resources.GetString("rbEa_product.Properties.Items3"))});
+            this.rbEa_product.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.rbEa_product.RequireMessage = null;
+            // 
+            // rbOtype_e_yn
+            // 
+            this.rbOtype_e_yn.IsMultiLang = false;
+            resources.ApplyResources(this.rbOtype_e_yn, "rbOtype_e_yn");
+            this.rbOtype_e_yn.Name = "rbOtype_e_yn";
+            this.rbOtype_e_yn.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbOtype_e_yn.Properties.Appearance.Options.UseBackColor = true;
+            this.rbOtype_e_yn.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbOtype_e_yn.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbOtype_e_yn.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rbOtype_e_yn.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(resources.GetString("rbOtype_e_yn.Properties.Items"), resources.GetString("rbOtype_e_yn.Properties.Items1")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(resources.GetString("rbOtype_e_yn.Properties.Items2"), resources.GetString("rbOtype_e_yn.Properties.Items3"))});
+            this.rbOtype_e_yn.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.rbOtype_e_yn.RequireMessage = null;
+            // 
+            // efwSimpleButton6
+            // 
+            this.efwSimpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton6.ImageOptions.Image")));
+            this.efwSimpleButton6.IsMultiLang = false;
+            resources.ApplyResources(this.efwSimpleButton6, "efwSimpleButton6");
+            this.efwSimpleButton6.Name = "efwSimpleButton6";
+            this.efwSimpleButton6.Click += new System.EventHandler(this.efwSimpleButton6_Click);
             // 
             // efwLabel50
             // 
@@ -2580,6 +2657,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControlProd)).EndInit();
             this.efwGroupControlProd.ResumeLayout(false);
             this.efwGroupControlProd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbOnline_product.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbEa_product.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbOtype_e_yn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbp_represent.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_explanation.Properties)).EndInit();
@@ -2886,5 +2966,10 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel50;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel49;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton6;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbOnline_product;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbEa_product;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbOtype_e_yn;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel51;
     }
 }

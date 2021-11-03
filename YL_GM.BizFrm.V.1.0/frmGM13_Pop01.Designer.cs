@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGM13_Pop01));
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.txtO_Code = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel9 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -44,6 +44,8 @@
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtU_Chef_Level = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.txtGShop_O_Code = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel10 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -67,6 +69,7 @@
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel8 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtIs_Write = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwSimpleButton8 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -88,7 +91,10 @@
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtStory_232 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtStory_247 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwLabel8 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwSimpleButton9 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.efwSimpleButton10 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.txtStory_223 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtStory_243 = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtO_Code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDoma.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVip.Properties)).BeginInit();
@@ -97,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtU_Chef_Level.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGShop_O_Code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).BeginInit();
             this.efwPanelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
@@ -119,6 +126,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStory_244.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStory_232.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStory_247.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_223.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_243.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtO_Code
@@ -127,7 +136,7 @@
             this.txtO_Code.EditValue2 = null;
             this.txtO_Code.Enabled = false;
             this.txtO_Code.EraserGroup = "CLR2";
-            this.txtO_Code.Location = new System.Drawing.Point(79, 15);
+            this.txtO_Code.Location = new System.Drawing.Point(113, 15);
             this.txtO_Code.Name = "txtO_Code";
             this.txtO_Code.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.txtO_Code.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -162,7 +171,7 @@
             // 
             this.efwLabel2.EraserGroup = null;
             this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(763, 23);
+            this.efwLabel2.Location = new System.Drawing.Point(759, 27);
             this.efwLabel2.Name = "efwLabel2";
             this.efwLabel2.Size = new System.Drawing.Size(48, 14);
             this.efwLabel2.TabIndex = 99;
@@ -172,7 +181,7 @@
             // 
             this.efwLabel3.EraserGroup = null;
             this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(624, 23);
+            this.efwLabel3.Location = new System.Drawing.Point(620, 27);
             this.efwLabel3.Name = "efwLabel3";
             this.efwLabel3.Size = new System.Drawing.Size(49, 14);
             this.efwLabel3.TabIndex = 100;
@@ -182,7 +191,7 @@
             // 
             this.efwLabel4.EraserGroup = null;
             this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(477, 23);
+            this.efwLabel4.Location = new System.Drawing.Point(473, 27);
             this.efwLabel4.Name = "efwLabel4";
             this.efwLabel4.Size = new System.Drawing.Size(60, 14);
             this.efwLabel4.TabIndex = 101;
@@ -194,7 +203,7 @@
             this.txtDoma.EditValue2 = null;
             this.txtDoma.Enabled = false;
             this.txtDoma.EraserGroup = "CLR2";
-            this.txtDoma.Location = new System.Drawing.Point(450, 43);
+            this.txtDoma.Location = new System.Drawing.Point(446, 47);
             this.txtDoma.Name = "txtDoma";
             this.txtDoma.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.txtDoma.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -221,7 +230,7 @@
             this.txtVip.EditValue2 = null;
             this.txtVip.Enabled = false;
             this.txtVip.EraserGroup = "CLR2";
-            this.txtVip.Location = new System.Drawing.Point(591, 43);
+            this.txtVip.Location = new System.Drawing.Point(587, 47);
             this.txtVip.Name = "txtVip";
             this.txtVip.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.txtVip.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -248,7 +257,7 @@
             this.txtBiz.EditValue2 = null;
             this.txtBiz.Enabled = false;
             this.txtBiz.EraserGroup = "CLR2";
-            this.txtBiz.Location = new System.Drawing.Point(730, 43);
+            this.txtBiz.Location = new System.Drawing.Point(726, 47);
             this.txtBiz.Name = "txtBiz";
             this.txtBiz.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.txtBiz.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -275,7 +284,7 @@
             this.txtU_NickName.EditValue2 = null;
             this.txtU_NickName.Enabled = false;
             this.txtU_NickName.EraserGroup = "CLR2";
-            this.txtU_NickName.Location = new System.Drawing.Point(79, 46);
+            this.txtU_NickName.Location = new System.Drawing.Point(113, 68);
             this.txtU_NickName.Name = "txtU_NickName";
             this.txtU_NickName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.txtU_NickName.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -300,7 +309,7 @@
             // 
             this.efwLabel5.EraserGroup = null;
             this.efwLabel5.IsMultiLang = false;
-            this.efwLabel5.Location = new System.Drawing.Point(19, 49);
+            this.efwLabel5.Location = new System.Drawing.Point(19, 71);
             this.efwLabel5.Name = "efwLabel5";
             this.efwLabel5.Size = new System.Drawing.Size(30, 14);
             this.efwLabel5.TabIndex = 106;
@@ -312,7 +321,7 @@
             this.txtU_Chef_Level.EditValue2 = null;
             this.txtU_Chef_Level.Enabled = false;
             this.txtU_Chef_Level.EraserGroup = "CLR2";
-            this.txtU_Chef_Level.Location = new System.Drawing.Point(219, 46);
+            this.txtU_Chef_Level.Location = new System.Drawing.Point(253, 68);
             this.txtU_Chef_Level.Name = "txtU_Chef_Level";
             this.txtU_Chef_Level.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.txtU_Chef_Level.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -335,6 +344,8 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.txtGShop_O_Code);
+            this.efwPanelControl1.Controls.Add(this.efwLabel10);
             this.efwPanelControl1.Controls.Add(this.txtU_Chef_Level);
             this.efwPanelControl1.Controls.Add(this.txtU_NickName);
             this.efwPanelControl1.Controls.Add(this.txtO_Code);
@@ -349,14 +360,51 @@
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(0, 0);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(884, 81);
+            this.efwPanelControl1.Size = new System.Drawing.Size(884, 101);
             this.efwPanelControl1.TabIndex = 108;
+            // 
+            // txtGShop_O_Code
+            // 
+            this.txtGShop_O_Code.EditValue = "";
+            this.txtGShop_O_Code.EditValue2 = null;
+            this.txtGShop_O_Code.Enabled = false;
+            this.txtGShop_O_Code.EraserGroup = "CLR2";
+            this.txtGShop_O_Code.Location = new System.Drawing.Point(113, 41);
+            this.txtGShop_O_Code.Name = "txtGShop_O_Code";
+            this.txtGShop_O_Code.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.txtGShop_O_Code.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.txtGShop_O_Code.Properties.Appearance.ForeColor = System.Drawing.Color.Purple;
+            this.txtGShop_O_Code.Properties.Appearance.Options.UseFont = true;
+            this.txtGShop_O_Code.Properties.Appearance.Options.UseForeColor = true;
+            this.txtGShop_O_Code.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtGShop_O_Code.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtGShop_O_Code.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtGShop_O_Code.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtGShop_O_Code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtGShop_O_Code.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGShop_O_Code.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtGShop_O_Code.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtGShop_O_Code.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtGShop_O_Code.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtGShop_O_Code.RequireMessage = null;
+            this.txtGShop_O_Code.Size = new System.Drawing.Size(255, 20);
+            this.txtGShop_O_Code.TabIndex = 108;
+            // 
+            // efwLabel10
+            // 
+            this.efwLabel10.EraserGroup = null;
+            this.efwLabel10.IsMultiLang = false;
+            this.efwLabel10.Location = new System.Drawing.Point(19, 44);
+            this.efwLabel10.Name = "efwLabel10";
+            this.efwLabel10.Size = new System.Drawing.Size(74, 14);
+            this.efwLabel10.TabIndex = 109;
+            this.efwLabel10.Text = "멀티샵 주문번호";
             // 
             // efwPanelControl2
             // 
             this.efwPanelControl2.Controls.Add(this.efwGridControl1);
             this.efwPanelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efwPanelControl2.Location = new System.Drawing.Point(0, 81);
+            this.efwPanelControl2.Location = new System.Drawing.Point(0, 101);
             this.efwPanelControl2.Name = "efwPanelControl2";
             this.efwPanelControl2.Size = new System.Drawing.Size(884, 165);
             this.efwPanelControl2.TabIndex = 109;
@@ -365,19 +413,19 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = null;
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = null;
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo4;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = null;
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = null;
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
             this.efwGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = null;
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = null;
-            this.efwGridControl1.InsertServiceInfo = serviceInfo5;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = null;
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = null;
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsMultiLang = false;
@@ -396,12 +444,12 @@
             this.efwGridControl1.Size = new System.Drawing.Size(880, 161);
             this.efwGridControl1.TabIndex = 44;
             this.efwGridControl1.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = null;
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = null;
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo6;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = null;
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = null;
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.efwGridControl1.Click += new System.EventHandler(this.efwGridControl1_Click);
@@ -593,7 +641,7 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(0, 246);
+            this.splitterControl1.Location = new System.Drawing.Point(0, 266);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(884, 5);
             this.splitterControl1.TabIndex = 111;
@@ -602,6 +650,10 @@
             // efwGroupControl1
             // 
             this.efwGroupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl1.CaptionImageOptions.Image")));
+            this.efwGroupControl1.Controls.Add(this.efwSimpleButton9);
+            this.efwGroupControl1.Controls.Add(this.efwSimpleButton10);
+            this.efwGroupControl1.Controls.Add(this.txtStory_223);
+            this.efwGroupControl1.Controls.Add(this.txtStory_243);
             this.efwGroupControl1.Controls.Add(this.efwLabel8);
             this.efwGroupControl1.Controls.Add(this.txtIs_Write);
             this.efwGroupControl1.Controls.Add(this.efwLabel7);
@@ -626,12 +678,22 @@
             this.efwGroupControl1.Controls.Add(this.txtStory_247);
             this.efwGroupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl1.IsMultiLang = false;
-            this.efwGroupControl1.Location = new System.Drawing.Point(0, 251);
+            this.efwGroupControl1.Location = new System.Drawing.Point(0, 271);
             this.efwGroupControl1.Name = "efwGroupControl1";
             this.efwGroupControl1.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.efwGroupControl1.Size = new System.Drawing.Size(884, 135);
+            this.efwGroupControl1.Size = new System.Drawing.Size(884, 167);
             this.efwGroupControl1.TabIndex = 112;
             this.efwGroupControl1.Text = "스토리관리";
+            // 
+            // efwLabel8
+            // 
+            this.efwLabel8.EraserGroup = null;
+            this.efwLabel8.IsMultiLang = false;
+            this.efwLabel8.Location = new System.Drawing.Point(710, 99);
+            this.efwLabel8.Name = "efwLabel8";
+            this.efwLabel8.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel8.TabIndex = 114;
+            this.efwLabel8.Text = "작성유무";
             // 
             // txtIs_Write
             // 
@@ -1014,21 +1076,87 @@
             this.txtStory_247.Size = new System.Drawing.Size(35, 20);
             this.txtStory_247.TabIndex = 96;
             // 
-            // efwLabel8
+            // efwSimpleButton9
             // 
-            this.efwLabel8.EraserGroup = null;
-            this.efwLabel8.IsMultiLang = false;
-            this.efwLabel8.Location = new System.Drawing.Point(710, 99);
-            this.efwLabel8.Name = "efwLabel8";
-            this.efwLabel8.Size = new System.Drawing.Size(40, 14);
-            this.efwLabel8.TabIndex = 114;
-            this.efwLabel8.Text = "작성유무";
+            this.efwSimpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton9.ImageOptions.Image")));
+            this.efwSimpleButton9.IsMultiLang = false;
+            this.efwSimpleButton9.Location = new System.Drawing.Point(264, 123);
+            this.efwSimpleButton9.Name = "efwSimpleButton9";
+            this.efwSimpleButton9.Size = new System.Drawing.Size(147, 22);
+            this.efwSimpleButton9.TabIndex = 115;
+            this.efwSimpleButton9.Text = "PR 추천스토리";
+            this.efwSimpleButton9.Click += new System.EventHandler(this.efwSimpleButton9_Click);
+            // 
+            // efwSimpleButton10
+            // 
+            this.efwSimpleButton10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton10.ImageOptions.Image")));
+            this.efwSimpleButton10.IsMultiLang = false;
+            this.efwSimpleButton10.Location = new System.Drawing.Point(57, 123);
+            this.efwSimpleButton10.Name = "efwSimpleButton10";
+            this.efwSimpleButton10.Size = new System.Drawing.Size(147, 22);
+            this.efwSimpleButton10.TabIndex = 116;
+            this.efwSimpleButton10.Text = "PR 등록스토리";
+            this.efwSimpleButton10.Click += new System.EventHandler(this.efwSimpleButton10_Click);
+            // 
+            // txtStory_223
+            // 
+            this.txtStory_223.EditValue = "";
+            this.txtStory_223.EditValue2 = null;
+            this.txtStory_223.Enabled = false;
+            this.txtStory_223.EraserGroup = "CLR2";
+            this.txtStory_223.Location = new System.Drawing.Point(16, 124);
+            this.txtStory_223.Name = "txtStory_223";
+            this.txtStory_223.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.txtStory_223.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.txtStory_223.Properties.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txtStory_223.Properties.Appearance.Options.UseFont = true;
+            this.txtStory_223.Properties.Appearance.Options.UseForeColor = true;
+            this.txtStory_223.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtStory_223.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtStory_223.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtStory_223.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtStory_223.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtStory_223.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtStory_223.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtStory_223.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtStory_223.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtStory_223.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtStory_223.RequireMessage = null;
+            this.txtStory_223.Size = new System.Drawing.Size(35, 20);
+            this.txtStory_223.TabIndex = 117;
+            // 
+            // txtStory_243
+            // 
+            this.txtStory_243.EditValue = "";
+            this.txtStory_243.EditValue2 = null;
+            this.txtStory_243.Enabled = false;
+            this.txtStory_243.EraserGroup = "CLR2";
+            this.txtStory_243.Location = new System.Drawing.Point(223, 124);
+            this.txtStory_243.Name = "txtStory_243";
+            this.txtStory_243.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.txtStory_243.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.txtStory_243.Properties.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txtStory_243.Properties.Appearance.Options.UseFont = true;
+            this.txtStory_243.Properties.Appearance.Options.UseForeColor = true;
+            this.txtStory_243.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtStory_243.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtStory_243.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtStory_243.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtStory_243.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtStory_243.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtStory_243.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtStory_243.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtStory_243.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtStory_243.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtStory_243.RequireMessage = null;
+            this.txtStory_243.Size = new System.Drawing.Size(35, 20);
+            this.txtStory_243.TabIndex = 118;
             // 
             // frmGM13_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 386);
+            this.ClientSize = new System.Drawing.Size(884, 438);
             this.Controls.Add(this.efwGroupControl1);
             this.Controls.Add(this.splitterControl1);
             this.Controls.Add(this.efwPanelControl2);
@@ -1046,6 +1174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGShop_O_Code.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).EndInit();
             this.efwPanelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
@@ -1069,6 +1198,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStory_244.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStory_232.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStory_247.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_223.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStory_243.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1131,5 +1262,11 @@
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton8;
         private Easy.Framework.WinForm.Control.efwDateEdit dtExpiration_Date;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel8;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtGShop_O_Code;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel10;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton9;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton10;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtStory_223;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtStory_243;
     }
 }

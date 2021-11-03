@@ -196,12 +196,15 @@ namespace YL_GM.BizFrm
                 popup = new frmGM13_Pop01();
 
                 popup.pO_Code = bandedGridView1.GetFocusedRowCellValue("o_code").ToString();
+                popup.pShop_Code = bandedGridView1.GetFocusedRowCellValue("shop_order").ToString();
                 popup.pStory_208 = bandedGridView1.GetFocusedRowCellValue("ps_story1").ToString();
                 popup.pStory_221 = bandedGridView1.GetFocusedRowCellValue("ps_story2").ToString();
                 popup.pStory_248 = bandedGridView1.GetFocusedRowCellValue("gd_story").ToString();
                 popup.pStory_232 = bandedGridView1.GetFocusedRowCellValue("tel_story").ToString();
                 popup.pStory_247 = bandedGridView1.GetFocusedRowCellValue("gv_story").ToString();
                 popup.pStory_244 = bandedGridView1.GetFocusedRowCellValue("gm_story").ToString();
+                popup.pStory_223 = bandedGridView1.GetFocusedRowCellValue("pr_story1").ToString();
+                popup.pStory_243 = bandedGridView1.GetFocusedRowCellValue("pr_story2").ToString();
 
                 popup.pU_NickNAme = bandedGridView1.GetFocusedRowCellValue("u_nickname").ToString();
                 popup.pU_Chef_Level = bandedGridView1.GetFocusedRowCellValue("u_chef_level").ToString();
