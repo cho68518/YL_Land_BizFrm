@@ -752,6 +752,48 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="efwSimpleButton7.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADN0RVh0VGl0
+        bGUASW1hZ2U7UGhvdG87UGljdHVyZTtEaWFncmFtO0ZpZ3VyZTtkcmF3O3BhaW50FdXGcAAAAqJJREFU
+        OE+l0+tLU2EAx/FjRhetrD+gNwUNEi9lSCRUIL3pjVLQi2yE07zMS4bzNi+5cGradN5SQgU1nYpsqFNT
+        a9pEpxhtU9QooSLLoKymm5fdfj3Ps2URvgg68DnnOQ+c73PO4RyObB5uu3bguYPdbnTswVW3GTU1ihlQ
+        1W2UEdWtRlS5VT42MBUtBsib9ZA36VFOPGiYHmWRkvppOAEXsvtX0tpJkMAerqhuik3MrtiYmRUrdO9W
+        sNhTBMfnTqzP1QPfVdh6/RD4qsBCuxgOcoGkaoIG9nIFNToWmFjexPinTWg/rOGZZgiv2nNgmpRhqT8R
+        U/nnsNQXC7NBCuOjBNgdTuTJx2hgH5dfOc6KqkUzlETH3BcYygVk5WqyYgc06SGYlYeS41ngbQ7MUyLY
+        7E7kyJ7TwH4ut0zLin1vBEz3/E2olFfxQnYFy93JmGmIQCc/EPqaMHxU8KGTXILV5kRGyQgNeHHi0lFW
+        VM5FQEUo56+jURuOkexQchelWGqNgn0hFe8br8Gii4FGFIItqwOiQg0NeHPpxRpSdKDtZRgU+nCmRHkR
+        6sxgDAuD0B93CiZtMgYSAqGOCURnkh82tuy4UzBMAwe4VOlTVqwbu+B2HrnNp9EzGQdp1xmkJR7DIJ8H
+        segE4st8EX2fB8umHcmSQRo4yKXcG2LF8uFgRj4UjKLuIMTKeOBLjiOryQ/ilgBESnlIqfXHDTK3tm5D
+        Qt4ADRziku4+gWXDhiJ1AKRqf6a413/7nI5T608ispAHYYUvLguPwmS2Ij67jwZ8OGFuPytSqxbKypgY
+        m+tILvhBfFsjVl1is9SugEDUNXIrUw0qmsro3RaV/ksPI0j7jX9boSUBL4J8TfRl0Odx8fnL4T8ccaNj
+        b8KTI//QfwD3E3v7ffFIrTjwAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="efwSimpleButton7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>556, 295</value>
+  </data>
+  <data name="efwSimpleButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 22</value>
+  </data>
+  <data name="efwSimpleButton7.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="efwSimpleButton7.Text" xml:space="preserve">
+    <value>이미지파일</value>
+  </data>
+  <data name="&gt;&gt;efwSimpleButton7.Name" xml:space="preserve">
+    <value>efwSimpleButton7</value>
+  </data>
+  <data name="&gt;&gt;efwSimpleButton7.Type" xml:space="preserve">
+    <value>Easy.Framework.WinForm.Control.efwSimpleButton, Easy.Framework.WinForm.Control.V.3.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;efwSimpleButton7.Parent" xml:space="preserve">
+    <value>efwGroupControlProd</value>
+  </data>
+  <data name="&gt;&gt;efwSimpleButton7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="efwLabel51.Location" type="System.Drawing.Point, System.Drawing">
     <value>47, 330</value>
   </data>
@@ -774,7 +816,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel51.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="rbOnline_product.Location" type="System.Drawing.Point, System.Drawing">
     <value>169, 326</value>
@@ -813,7 +855,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;rbOnline_product.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="rbEa_product.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 122</value>
@@ -846,7 +888,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;rbEa_product.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="rbOtype_e_yn.Location" type="System.Drawing.Point, System.Drawing">
     <value>426, 326</value>
@@ -879,7 +921,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;rbOtype_e_yn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="efwSimpleButton6.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -940,7 +982,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwSimpleButton6.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="efwLabel50.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 149</value>
@@ -964,7 +1006,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel50.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="efwLabel49.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 174</value>
@@ -988,7 +1030,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel49.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="txtp_title.Location" type="System.Drawing.Point, System.Drawing">
     <value>236, 269</value>
@@ -1009,7 +1051,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;txtp_title.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="efwLabel44.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 272</value>
@@ -1033,7 +1075,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel44.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="cbp_represent.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 270</value>
@@ -1057,7 +1099,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cbp_represent.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="txtp_explanation.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 294</value>
@@ -1078,7 +1120,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;txtp_explanation.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="efwLabel24.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 295</value>
@@ -1102,7 +1144,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel24.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="ckdora_md.Location" type="System.Drawing.Point, System.Drawing">
     <value>477, 245</value>
@@ -1126,7 +1168,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;ckdora_md.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="chkGShop.Location" type="System.Drawing.Point, System.Drawing">
     <value>397, 245</value>
@@ -1150,7 +1192,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;chkGShop.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="chkChef.Location" type="System.Drawing.Point, System.Drawing">
     <value>335, 245</value>
@@ -1174,7 +1216,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;chkChef.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="chkVip.Location" type="System.Drawing.Point, System.Drawing">
     <value>273, 245</value>
@@ -1198,7 +1240,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;chkVip.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="chkMember.Location" type="System.Drawing.Point, System.Drawing">
     <value>215, 245</value>
@@ -1222,7 +1264,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;chkMember.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="chkAll.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 245</value>
@@ -1246,7 +1288,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;chkAll.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="efwLabel39.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 247</value>
@@ -1270,7 +1312,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel39.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="efwLabel38.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 23</value>
@@ -1294,7 +1336,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel38.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="btnSave.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1331,7 +1373,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="txtPc_Thumbnail.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 50</value>
@@ -1665,7 +1707,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwGroupControl5.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="bthNew.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1732,7 +1774,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;bthNew.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="btnFileOpen1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1774,7 +1816,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;btnFileOpen1.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="txtP_Id.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1798,7 +1840,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;txtP_Id.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="serviceInfo4.ParamsInfo" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -1927,7 +1969,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwGridControl2.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="efwLabel19.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 357</value>
@@ -1951,7 +1993,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel19.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="cmbP_EC_Code.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 354</value>
@@ -1975,7 +2017,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cmbP_EC_Code.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>28</value>
   </data>
   <data name="txtP_Max_Send_Num.Location" type="System.Drawing.Point, System.Drawing">
     <value>422, 221</value>
@@ -1996,7 +2038,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;txtP_Max_Send_Num.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>29</value>
   </data>
   <data name="efwLabel17.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 224</value>
@@ -2020,7 +2062,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel17.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>30</value>
   </data>
   <data name="efwLabel18.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 224</value>
@@ -2047,7 +2089,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel18.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>31</value>
   </data>
   <data name="cmbP_Chef_Level.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 221</value>
@@ -2074,7 +2116,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cmbP_Chef_Level.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>32</value>
   </data>
   <data name="efwLabel16.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 200</value>
@@ -2098,7 +2140,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel16.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>33</value>
   </data>
   <data name="cmbP_Sell_Type.Location" type="System.Drawing.Point, System.Drawing">
     <value>422, 197</value>
@@ -2122,7 +2164,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cmbP_Sell_Type.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>34</value>
   </data>
   <data name="efwLabel15.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 200</value>
@@ -2146,7 +2188,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel15.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>35</value>
   </data>
   <data name="cmbP_Show_Type.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 197</value>
@@ -2170,7 +2212,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cmbP_Show_Type.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>36</value>
   </data>
   <data name="txtP_Compare_Text.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 171</value>
@@ -2191,7 +2233,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;txtP_Compare_Text.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>37</value>
   </data>
   <data name="rbP_Compare_Type.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 145</value>
@@ -2230,7 +2272,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;rbP_Compare_Type.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>38</value>
   </data>
   <data name="txtP_Multi_Discount_Cost.EditValue" xml:space="preserve">
     <value />
@@ -2260,7 +2302,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;txtP_Multi_Discount_Cost.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>39</value>
   </data>
   <data name="efwLabel14.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 100</value>
@@ -2284,7 +2326,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel14.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>40</value>
   </data>
   <data name="txtP_Min_Purchase_Num.EditValue" xml:space="preserve">
     <value>0</value>
@@ -2314,7 +2356,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;txtP_Min_Purchase_Num.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>41</value>
   </data>
   <data name="efwLabel12.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 124</value>
@@ -2338,7 +2380,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel12.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>42</value>
   </data>
   <data name="btnFileOpen3.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2380,7 +2422,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;btnFileOpen3.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>43</value>
   </data>
   <data name="btnFileOpen2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2422,7 +2464,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;btnFileOpen2.ZOrder" xml:space="preserve">
-    <value>43</value>
+    <value>44</value>
   </data>
   <data name="efwLabel10.Location" type="System.Drawing.Point, System.Drawing">
     <value>1120, 294</value>
@@ -2446,7 +2488,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel10.ZOrder" xml:space="preserve">
-    <value>44</value>
+    <value>45</value>
   </data>
   <data name="picP_CONTENTS.Location" type="System.Drawing.Point, System.Drawing">
     <value>1060, 109</value>
@@ -2467,7 +2509,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;picP_CONTENTS.ZOrder" xml:space="preserve">
-    <value>45</value>
+    <value>46</value>
   </data>
   <data name="efwLabel11.Location" type="System.Drawing.Point, System.Drawing">
     <value>884, 294</value>
@@ -2491,7 +2533,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel11.ZOrder" xml:space="preserve">
-    <value>46</value>
+    <value>47</value>
   </data>
   <data name="picP_IMG2.Location" type="System.Drawing.Point, System.Drawing">
     <value>862, 109</value>
@@ -2512,7 +2554,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;picP_IMG2.ZOrder" xml:space="preserve">
-    <value>47</value>
+    <value>48</value>
   </data>
   <data name="efwLabel9.Location" type="System.Drawing.Point, System.Drawing">
     <value>682, 294</value>
@@ -2536,7 +2578,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel9.ZOrder" xml:space="preserve">
-    <value>48</value>
+    <value>49</value>
   </data>
   <data name="picP_IMG.Location" type="System.Drawing.Point, System.Drawing">
     <value>665, 109</value>
@@ -2557,7 +2599,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;picP_IMG.ZOrder" xml:space="preserve">
-    <value>49</value>
+    <value>50</value>
   </data>
   <data name="txtP_Name.Location" type="System.Drawing.Point, System.Drawing">
     <value>666, 78</value>
@@ -2578,7 +2620,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;txtP_Name.ZOrder" xml:space="preserve">
-    <value>50</value>
+    <value>51</value>
   </data>
   <data name="efwLabel8.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 78</value>
@@ -2602,7 +2644,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel8.ZOrder" xml:space="preserve">
-    <value>51</value>
+    <value>52</value>
   </data>
   <data name="efwLabel7.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 58</value>
@@ -2626,7 +2668,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel7.ZOrder" xml:space="preserve">
-    <value>52</value>
+    <value>53</value>
   </data>
   <data name="cmbP_Seller_Id.Location" type="System.Drawing.Point, System.Drawing">
     <value>666, 55</value>
@@ -2650,7 +2692,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cmbP_Seller_Id.ZOrder" xml:space="preserve">
-    <value>53</value>
+    <value>54</value>
   </data>
   <data name="efwLabel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 32</value>
@@ -2674,7 +2716,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel6.ZOrder" xml:space="preserve">
-    <value>54</value>
+    <value>55</value>
   </data>
   <data name="dtOrder_Date.EditValue" type="System.DateTime, mscorlib">
     <value>2019-09-20</value>
@@ -2704,7 +2746,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;dtOrder_Date.ZOrder" xml:space="preserve">
-    <value>55</value>
+    <value>56</value>
   </data>
   <data name="txtP_Code.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 97</value>
@@ -2725,7 +2767,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;txtP_Code.ZOrder" xml:space="preserve">
-    <value>56</value>
+    <value>57</value>
   </data>
   <data name="efwLabel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 100</value>
@@ -2749,7 +2791,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel5.ZOrder" xml:space="preserve">
-    <value>57</value>
+    <value>58</value>
   </data>
   <data name="efwLabel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>59, 23</value>
@@ -2773,7 +2815,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel4.ZOrder" xml:space="preserve">
-    <value>58</value>
+    <value>59</value>
   </data>
   <data name="cmbShops_Type.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 20</value>
@@ -2797,7 +2839,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cmbShops_Type.ZOrder" xml:space="preserve">
-    <value>59</value>
+    <value>60</value>
   </data>
   <data name="efwLabel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>59, 49</value>
@@ -2821,7 +2863,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;efwLabel3.ZOrder" xml:space="preserve">
-    <value>60</value>
+    <value>61</value>
   </data>
   <data name="cmbCate_Code4.Location" type="System.Drawing.Point, System.Drawing">
     <value>308, 72</value>
@@ -2845,7 +2887,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cmbCate_Code4.ZOrder" xml:space="preserve">
-    <value>61</value>
+    <value>62</value>
   </data>
   <data name="cmbCate_Code3.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 72</value>
@@ -2869,7 +2911,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cmbCate_Code3.ZOrder" xml:space="preserve">
-    <value>62</value>
+    <value>63</value>
   </data>
   <data name="cmbCate_Code2.Location" type="System.Drawing.Point, System.Drawing">
     <value>308, 46</value>
@@ -2893,7 +2935,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cmbCate_Code2.ZOrder" xml:space="preserve">
-    <value>63</value>
+    <value>64</value>
   </data>
   <data name="cmbCate_Code1.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 46</value>
@@ -2917,7 +2959,7 @@
     <value>efwGroupControlProd</value>
   </data>
   <data name="&gt;&gt;cmbCate_Code1.ZOrder" xml:space="preserve">
-    <value>64</value>
+    <value>65</value>
   </data>
   <data name="efwGroupControlProd.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

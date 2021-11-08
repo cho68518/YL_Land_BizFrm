@@ -2407,5 +2407,88 @@ namespace YL_MM.BizFrm
             }
 
         }
+
+        private void efwSimpleButton7_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
+
+            string sftpURL = "222.233.52.238";
+            string sUserName = "yeoyou238";
+            string sPassword = "@$도넛지파동(9)0!";
+            int nPort = 3389;
+            string sftpDirectory = "/wService/master.eyeoyou.com/ManageInfoSys/MemberStatics/Day_Statistics_Upload/" + txtP_Code.EditValue;
+
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    txtPicPath1.EditValue = openFileDialog.FileName;
+                    picP_IMG.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+                // 폴더생성
+
+                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+
+                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
+
+                string sOldFile = txtPicPath1.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                string sNewFile = "c:\\temp\\" + sFileName;
+                System.IO.File.Copy(sOldFile, sNewFile);
+
+
+                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
+
+
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+
+                sSftp.Connect(nPort);
+
+                // 저장 경로에 있는지 체크
+                string sFtpPath = "/wService/master.eyeoyou.com/ManageInfoSys/MemberStatics/Day_Statistics_Upload/";
+                string sFtpPath2 = "/wService/master.eyeoyou.com/ManageInfoSys/MemberStatics/Day_Statistics_Upload//" + txtP_Code.EditValue;
+
+                ArrayList ay = sSftp.GetFileList(sFtpPath);
+                bool isdir = false;
+
+                for (int i = 0; i < ay.Count; i++)
+                {
+                    // string sChk = ay[i].ToString();
+                    if (ay[i].ToString() == txtP_Code.EditValue.ToString())
+                    {
+                        isdir = true;
+                    }
+                }
+                if (isdir == false)
+                {
+
+                    sSftp.Mkdir(sFtpPath2);
+                }
+
+                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
+                sSftp.Close();
+                txtP_Img.EditValue = "https://media.domalife.net/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
+            }
+        }
     }
 }

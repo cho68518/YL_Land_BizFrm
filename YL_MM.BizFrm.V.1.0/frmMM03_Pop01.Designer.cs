@@ -277,6 +277,7 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwSimpleButton7 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_show_name.Properties)).BeginInit();
@@ -733,6 +734,7 @@
             // efwGroupControlProd
             // 
             this.efwGroupControlProd.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControlProd.CaptionImageOptions.Image")));
+            this.efwGroupControlProd.Controls.Add(this.efwSimpleButton7);
             this.efwGroupControlProd.Controls.Add(this.efwLabel51);
             this.efwGroupControlProd.Controls.Add(this.rbOnline_product);
             this.efwGroupControlProd.Controls.Add(this.rbEa_product);
@@ -2627,6 +2629,15 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
+            // efwSimpleButton7
+            // 
+            this.efwSimpleButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton7.ImageOptions.Image")));
+            this.efwSimpleButton7.IsMultiLang = false;
+            resources.ApplyResources(this.efwSimpleButton7, "efwSimpleButton7");
+            this.efwSimpleButton7.Name = "efwSimpleButton7";
+            this.efwSimpleButton7.Click += new System.EventHandler(this.efwSimpleButton7_Click);
+            // 
             // frmMM03_Pop01
             // 
             resources.ApplyResources(this, "$this");
@@ -2971,5 +2982,6 @@
         private Easy.Framework.WinForm.Control.efwRadioGroup rbEa_product;
         private Easy.Framework.WinForm.Control.efwRadioGroup rbOtype_e_yn;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel51;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton7;
     }
 }

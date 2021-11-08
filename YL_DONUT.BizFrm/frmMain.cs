@@ -178,5 +178,10 @@ namespace YL_DONUT.BizFrm
         {
             FrmBaseLoad(new frmDN26());
         }
+
+        private void efwSimpleButton18_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmTest01());
+        }
     }
 }
