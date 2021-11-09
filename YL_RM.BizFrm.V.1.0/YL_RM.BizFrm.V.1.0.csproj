@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D7D76A38-64D4-4CB5-879A-98C71708B7ED}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_RM.BizFrm</RootNamespace>
     <AssemblyName>YL_RM.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -135,7 +135,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Tamir.SharpSSH">
-      <HintPath>..\YL_MM.BizFrm.V.1.0\bin\Debug\Tamir.SharpSSH.dll</HintPath>
+      <HintPath>..\..\Tamir.SharpSSH.dll</HintPath>
     </Reference>
     <Reference Include="WinFormHtmlEditor">
       <HintPath>..\..\WinFormHtmlEditor.dll</HintPath>

@@ -51,7 +51,11 @@ namespace YL_GSHOP.BizFrm
             dtE_DATE.EditValue = DateTime.Now;
 
             gridView1.OptionsView.ShowFooter = true;
+            this.efwGridControl1.BindControlSet(
+                new ColumnControlSet("story_id", txtStory_ID)
+           ); ;
 
+            this.efwGridControl1.Click += efwGridControl1_Click;
         }
 
 
@@ -95,10 +99,55 @@ namespace YL_GSHOP.BizFrm
             }
         }
 
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+            txtInformant.EditValue = "";
+            txtStory_ID.EditValue = "";
 
+            if (dr != null && dr["story_id"].ToString() != "")
+            {
+                this.txtInformant.EditValue = dr["Informant"].ToString();
+                this.txtStory_ID.EditValue = dr["story_id"].ToString();
+            }
+        }
 
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtStory_ID.EditValue.ToString() == "" ^ txtStory_ID.EditValue.ToString() == null)
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, "변경할 발모후기를 선택하세요!");
+                    return;
+                }
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
 
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP15_SAVE_01", con))
+                    {
 
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
 
+                        cmd.Parameters.Add("i_story_id", MySqlDbType.Int32);
+                        cmd.Parameters[0].Value = Convert.ToInt32(txtStory_ID.EditValue.ToString());
+
+                        cmd.Parameters.Add("i_informant", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtInformant.EditValue;
+
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+            Search();
+        }
     }
 }

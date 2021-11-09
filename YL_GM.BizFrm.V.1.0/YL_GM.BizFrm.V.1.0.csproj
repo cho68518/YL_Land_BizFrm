@@ -38,7 +38,7 @@
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\YL_DONUT.BizFrm\bin\Debug\DevExpress.Office.v18.2.Core.dll</HintPath>
+      <HintPath>bin\Debug\DevExpress.Office.v18.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -99,9 +99,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="YL_COMM.BizFrm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\YL_DONUT.BizFrm\bin\Debug\YL_COMM.BizFrm.dll</HintPath>
+    <Reference Include="YL_COMM.BizFrm">
+      <HintPath>..\YL_COMM.BizFrm\bin\Debug\YL_COMM.BizFrm.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
