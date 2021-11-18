@@ -265,6 +265,7 @@
             this.gridBand32 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn66 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn67 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn68 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
@@ -334,6 +335,8 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -393,6 +396,7 @@
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwPanelControl3 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -1480,6 +1484,7 @@
             this.txtInput_Qty.Size = new System.Drawing.Size(65, 20);
             this.txtInput_Qty.StyleController = this.layoutControl1;
             this.txtInput_Qty.TabIndex = 93;
+            this.txtInput_Qty.EditValueChanged += new System.EventHandler(this.txtInput_Qty_EditValueChanged);
             // 
             // txtInput_Idx
             // 
@@ -2050,7 +2055,8 @@
             this.bandedGridColumn64,
             this.bandedGridColumn65,
             this.bandedGridColumn66,
-            this.bandedGridColumn67});
+            this.bandedGridColumn67,
+            this.bandedGridColumn68});
             this.bandedGridView1.GridControl = this.efwGridControl1;
             this.bandedGridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "(건수 : {0}"),
@@ -3218,7 +3224,7 @@
             this.bandedGridColumn64.Caption = "정상";
             this.bandedGridColumn64.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn64.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.bandedGridColumn64.FieldName = "30";
+            this.bandedGridColumn64.FieldName = "qty30";
             this.bandedGridColumn64.Name = "bandedGridColumn64";
             this.bandedGridColumn64.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn64.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
@@ -3273,6 +3279,15 @@
             this.bandedGridColumn67.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.bandedGridColumn67.Visible = true;
             this.bandedGridColumn67.Width = 20;
+            // 
+            // bandedGridColumn68
+            // 
+            this.bandedGridColumn68.Caption = "매입가";
+            this.bandedGridColumn68.DisplayFormat.FormatString = "###,###,###";
+            this.bandedGridColumn68.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.bandedGridColumn68.FieldName = "cust_price";
+            this.bandedGridColumn68.Name = "bandedGridColumn68";
+            this.bandedGridColumn68.OptionsColumn.AllowEdit = false;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -3401,6 +3416,7 @@
             this.txtQty_tab1.Size = new System.Drawing.Size(82, 20);
             this.txtQty_tab1.StyleController = this.layoutControl2;
             this.txtQty_tab1.TabIndex = 93;
+            this.txtQty_tab1.EditValueChanged += new System.EventHandler(this.txtQty_tab1_EditValueChanged);
             // 
             // txtIdx_tab1
             // 
@@ -4101,7 +4117,9 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn2,
-            this.gridColumn3});
+            this.gridColumn3,
+            this.gridColumn43,
+            this.gridColumn49});
             this.gridView1.GridControl = this.efwGridControl2;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -4123,6 +4141,28 @@
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.Caption = "현재고";
+            this.gridColumn43.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn43.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn43.FieldName = "stock_qty";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.OptionsColumn.AllowEdit = false;
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 1;
+            // 
+            // gridColumn49
+            // 
+            this.gridColumn49.Caption = "매입가";
+            this.gridColumn49.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn49.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn49.FieldName = "last_price";
+            this.gridColumn49.Name = "gridColumn49";
+            this.gridColumn49.OptionsColumn.AllowEdit = false;
+            this.gridColumn49.Visible = true;
+            this.gridColumn49.VisibleIndex = 2;
             // 
             // repositoryItemCheckEdit2
             // 
@@ -4821,7 +4861,8 @@
             // 
             this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn15,
-            this.gridColumn16});
+            this.gridColumn16,
+            this.gridColumn48});
             this.gridView3.GridControl = this.efwGridControl4;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ShowGroupPanel = false;
@@ -4843,6 +4884,14 @@
             this.gridColumn16.OptionsColumn.ReadOnly = true;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 0;
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.Caption = "재고수량";
+            this.gridColumn48.FieldName = "stock_qty";
+            this.gridColumn48.Name = "gridColumn48";
+            this.gridColumn48.Visible = true;
+            this.gridColumn48.VisibleIndex = 1;
             // 
             // repositoryItemCheckEdit4
             // 
@@ -6537,5 +6586,9 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn93;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn94;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn95;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn68;
     }
 }

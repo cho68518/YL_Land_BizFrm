@@ -47,7 +47,7 @@ namespace YL_DONUT.BizFrm
             dtInput_Date.EditValue = DateTime.Now;
             dtOut_Date.EditValue = DateTime.Now;
             txtType.EditValue = "입고";
-            rbInput_Type_tab1.EditValue = "1";
+            rbInput_Type_tab1.EditValue = "2";
             rbG_Prod.EditValue = "1";
 
             dtYearMonth.EditValue = DateTime.Now.ToString("yyyy-MM");
@@ -58,7 +58,7 @@ namespace YL_DONUT.BizFrm
             dtYearMonth.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
             txtOut_Idx.EditValue = "0";
             txtInput_Idx.EditValue = "0";
-            rbInput_Type.EditValue = "1";
+            rbInput_Type.EditValue = "2";
 
             this.efwLabel1.Text = "년월";
             this.dtYearMonth.Visible = true;
@@ -76,12 +76,14 @@ namespace YL_DONUT.BizFrm
              , new ColumnControlSet("p_name", txtInput_P_Name)
              , new ColumnControlSet("p_name", txtOut_P_Name)
              , new ColumnControlSet("type", txtType)
+             , new ColumnControlSet("last_price", txtInput_Price)
            );
 
             gridView1.OptionsView.ShowFooter = true;
             this.efwGridControl2.BindControlSet(
             new ColumnControlSet("p_code", txtP_Code_tab1)
             , new ColumnControlSet("p_name", txtP_Name_tab1)
+            , new ColumnControlSet("last_price", txtPrice_tab1)
             );
 
             gridView2.OptionsView.ShowFooter = true;
@@ -217,7 +219,7 @@ namespace YL_DONUT.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbAgency_Idx, codeArray); 
             }
-            cmbAgency_Idx.EditValue = "2";
+            cmbAgency_Idx.EditValue = "5";
             
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
@@ -769,11 +771,11 @@ namespace YL_DONUT.BizFrm
 
                             cmbAgency_Idx.EditValue = cmd.Parameters["o_agency_idx"].Value.ToString();
                             if (cmbAgency_Idx.EditValue.ToString() == "" ^ cmbAgency_Idx.EditValue.ToString() == null)
-                                cmbAgency_Idx.EditValue = "2";
+                                cmbAgency_Idx.EditValue = "5";
 
                             rbInput_Type.EditValue = cmd.Parameters["o_input_type"].Value.ToString();
                             if (rbInput_Type.EditValue.ToString() == "" ^ rbInput_Type.EditValue.ToString() == null)
-                                rbInput_Type.EditValue = "1";
+                                rbInput_Type.EditValue = "2";
 
                             txtRemark.EditValue = cmd.Parameters["o_remark"].Value.ToString();
                         }
@@ -824,7 +826,7 @@ namespace YL_DONUT.BizFrm
 
         private void btnIn_New_Click(object sender, EventArgs e)
         {
-            rbInput_Type.EditValue = "1";
+            rbInput_Type.EditValue = "2";
             txtInput_P_Name.EditValue = "";
             cmbInput_Factory.EditValue = "002";
             txtInput_P_Name.EditValue = "";
@@ -989,6 +991,9 @@ namespace YL_DONUT.BizFrm
                         cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 50);
                         cmd.Parameters[0].Value = txtProdName.EditValue;
 
+                        cmd.Parameters.Add("i_is_factory", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = cmbIs_FactoryQ.EditValue;
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -1133,6 +1138,9 @@ namespace YL_DONUT.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 50);
                         cmd.Parameters[0].Value = txtProdName.EditValue;
+
+                        cmd.Parameters.Add("i_is_factory", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = cmbIs_FactoryQ.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -1604,5 +1612,14 @@ namespace YL_DONUT.BizFrm
         }
 
 
+        private void txtQty_tab1_EditValueChanged(object sender, EventArgs e)
+        {
+            txtAmt_tab1.EditValue = Convert.ToInt32(txtQty_tab1.EditValue) * Convert.ToInt32(txtPrice_tab1.EditValue);
+        }
+
+        private void txtInput_Qty_EditValueChanged(object sender, EventArgs e)
+        {
+            txtInput_Amt.EditValue = Convert.ToInt32(txtInput_Qty.EditValue) * Convert.ToInt32(txtInput_Price.EditValue);
+        }
     }
 }
