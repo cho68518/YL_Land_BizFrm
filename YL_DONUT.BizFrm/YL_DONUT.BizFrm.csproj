@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5747A80A-CBFC-42C3-B170-73495553A80D}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_DONUT.BizFrm</RootNamespace>
     <AssemblyName>YL_DONUT.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -156,6 +156,18 @@
     </Compile>
     <Compile Include="Dlg\frmZipNoInfo.Designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDN28.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN28.Designer.cs">
+      <DependentUpon>frmDN28.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDN27.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN27.Designer.cs">
+      <DependentUpon>frmDN27.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDN24_Pop01.cs">
       <SubType>Form</SubType>
@@ -542,6 +554,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN26_Pop01.resx">
       <DependentUpon>frmDN26_Pop01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN27.resx">
+      <DependentUpon>frmDN27.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN28.resx">
+      <DependentUpon>frmDN28.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

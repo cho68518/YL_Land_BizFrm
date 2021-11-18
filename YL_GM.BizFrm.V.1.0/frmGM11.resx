@@ -302,6 +302,16 @@
         dHlDb21wYXJlcmAxW1tTeXN0ZW0uSW50MzIAAAAAAwAAAAs=
 </value>
   </data>
+  <data name="efwSimpleButton2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAHHRFWHRUaXRsZQBTYXZlIEFu
+        ZCBOZXc7U2F2ZTtOZXc75W7qSwAAAJxJREFUOE+9jtEJgDAMBd3JOVzEMaQbOIjgj/44gCO4gkvEPk0l
+        TWMrCAZO2uTlbEVEnzg/fTssHmJwD2eNnGHnFjyFdC/J/iYIvBbkiLKWQCIXR+5F86wAs6abydNwLkEL
+        7gH6LKghWbfdX4mccxGPAv5zhK6sAH2/lLxAVukFAXMZlRVIrnhalsCiQtAqKZjUkqQsCCBsgaCNowNo
+        epy4zx8mNgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="behaviorManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>131, 17</value>
   </metadata>

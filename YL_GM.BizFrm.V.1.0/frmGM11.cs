@@ -23,6 +23,7 @@ namespace YL_GM.BizFrm
         frmGM11_Pop03 popup3;
         frmGM11_Pop04 popup4;
         frmGM11_Pop05 popup5;
+        frmGM11_Pop06 popup6;
         public frmGM11()
         {
             InitializeComponent();
@@ -201,8 +202,14 @@ namespace YL_GM.BizFrm
             bandedGridView1.Columns["naver_qty"].SummaryItem.DisplayFormat = "{0}";
             bandedGridView1.Columns["naver_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             bandedGridView1.Columns["naver_amt"].SummaryItem.FieldName = "naver_amt";
-            bandedGridView1.Columns["naver_amt"].SummaryItem.DisplayFormat = "{0:c}";
+            bandedGridView1.Columns["naver_amt"].SummaryItem.DisplayFormat = "{0:c}"; 
 
+            bandedGridView1.Columns["experience_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["experience_qty"].SummaryItem.FieldName = "experience_qty";
+            bandedGridView1.Columns["experience_qty"].SummaryItem.DisplayFormat = "{0}";
+            bandedGridView1.Columns["experience_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["experience_amt"].SummaryItem.FieldName = "experience_amt";
+            bandedGridView1.Columns["experience_amt"].SummaryItem.DisplayFormat = "{0:c}";
         }
 
         public override void Search()
@@ -322,5 +329,10 @@ namespace YL_GM.BizFrm
             popup5 = null;
         }
 
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            popup6 = new frmGM11_Pop06();
+            popup6.ShowDialog();
+        }
     }
 }

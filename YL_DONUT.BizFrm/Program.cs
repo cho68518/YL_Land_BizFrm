@@ -14,7 +14,7 @@ namespace YL_DONUT.BizFrm
         /// </summary>
         [STAThread]
         static void Main()
-        {
+       {
             //MessageBox.Show(UserInfo.instance().UserId);
 
             Application.EnableVisualStyles();

@@ -2417,10 +2417,10 @@ namespace YL_MM.BizFrm
             openFileDialog.Title = "이미지파일 가져오기";
 
             string sftpURL = "222.233.52.238";
-            string sUserName = "yeoyou238";
-            string sPassword = "@$도넛지파동(9)0!";
-            int nPort = 3389;
-            string sftpDirectory = "/wService/master.eyeoyou.com/ManageInfoSys/MemberStatics/Day_Statistics_Upload/" + txtP_Code.EditValue;
+            string sUserName = "ylftp";
+            string sPassword = "fosem5646#@!";
+            int nPort = 21;
+            string sftpDirectory = "/" + txtP_Code.EditValue;
 
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -2466,7 +2466,7 @@ namespace YL_MM.BizFrm
 
                 // 저장 경로에 있는지 체크
                 string sFtpPath = "/wService/master.eyeoyou.com/ManageInfoSys/MemberStatics/Day_Statistics_Upload/";
-                string sFtpPath2 = "/wService/master.eyeoyou.com/ManageInfoSys/MemberStatics/Day_Statistics_Upload//" + txtP_Code.EditValue;
+                string sFtpPath2 = "/wService/master.eyeoyou.com/ManageInfoSys/MemberStatics/Day_Statistics_Upload/" + txtP_Code.EditValue;
 
                 ArrayList ay = sSftp.GetFileList(sFtpPath);
                 bool isdir = false;
