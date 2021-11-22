@@ -67,6 +67,7 @@ namespace YL_DONUT.BizFrm
             this.rbG_Prod.Visible = false;
             this.efwSimpleButton11.Visible = false;
             cmbIs_FactoryQ.EditValue = "002";
+            gridView5.OptionsView.ShowFooter = true;
 
             bandedGridView1.OptionsView.ShowFooter = true;
 
@@ -76,7 +77,7 @@ namespace YL_DONUT.BizFrm
              , new ColumnControlSet("p_name", txtInput_P_Name)
              , new ColumnControlSet("p_name", txtOut_P_Name)
              , new ColumnControlSet("type", txtType)
-             , new ColumnControlSet("last_price", txtInput_Price)
+             , new ColumnControlSet("cust_price", txtInput_Price)
            );
 
             gridView1.OptionsView.ShowFooter = true;
@@ -120,14 +121,60 @@ namespace YL_DONUT.BizFrm
             , new ColumnControlSet("remark", txtRemark_tab2)
             );
 
-            gridView5.OptionsView.ShowFooter = true;
-
             gridView4.OptionsView.ShowFooter = true;
 
             this.efwGridControl7.BindControlSet(
             new ColumnControlSet("p_code", txtP_CodeQ)
             );
 
+            bandedGridView2.OptionsView.ShowFooter = true;
+            bandedGridView2.Columns["bef_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["bef_qty"].SummaryItem.FieldName = "bef_qty";
+            bandedGridView2.Columns["bef_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            bandedGridView2.Columns["bef_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["bef_amt"].SummaryItem.FieldName = "bef_amt";
+            bandedGridView2.Columns["bef_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView2.Columns["good_in_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["good_in_qty"].SummaryItem.FieldName = "good_in_qty";
+            bandedGridView2.Columns["good_in_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            bandedGridView2.Columns["prod_in_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["prod_in_qty"].SummaryItem.FieldName = "prod_in_qty";
+            bandedGridView2.Columns["prod_in_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            bandedGridView2.Columns["in_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["in_amt"].SummaryItem.FieldName = "in_amt";
+            bandedGridView2.Columns["in_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView2.Columns["prod_out_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["prod_out_qty"].SummaryItem.FieldName = "prod_out_qty";
+            bandedGridView2.Columns["prod_out_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            bandedGridView2.Columns["slae_out_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["slae_out_qty"].SummaryItem.FieldName = "slae_out_qty";
+            bandedGridView2.Columns["slae_out_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            bandedGridView2.Columns["promotion_out_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["promotion_out_qty"].SummaryItem.FieldName = "promotion_out_qty";
+            bandedGridView2.Columns["promotion_out_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            bandedGridView2.Columns["back_out_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["back_out_qty"].SummaryItem.FieldName = "back_out_qty";
+            bandedGridView2.Columns["back_out_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            bandedGridView2.Columns["out_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["out_amt"].SummaryItem.FieldName = "out_amt";
+            bandedGridView2.Columns["out_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView2.Columns["stock_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["stock_qty"].SummaryItem.FieldName = "stock_qty";
+            bandedGridView2.Columns["stock_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            bandedGridView2.Columns["stock_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView2.Columns["stock_amt"].SummaryItem.FieldName = "stock_amt";
+            bandedGridView2.Columns["stock_amt"].SummaryItem.DisplayFormat = "{0:c}";
             SetCmb();
         }
 
@@ -599,6 +646,10 @@ namespace YL_DONUT.BizFrm
         #region
         private void bandedGridView1_Click(object sender, EventArgs e)
         {
+            txtInput_Qty.EditValue = "0";
+            txtInput_Price.EditValue = "0";
+            txtInput_Amt.EditValue = "0";
+            txtOut_Qty.EditValue = "0";
 
             var gv = sender as DevExpress.XtraGrid.Views.Grid.GridView;
             var rowIndex = gv.FocusedRowHandle;
