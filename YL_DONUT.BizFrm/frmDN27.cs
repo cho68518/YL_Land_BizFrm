@@ -90,10 +90,34 @@ namespace YL_DONUT.BizFrm
              , new ColumnControlSet("s_address", txtS_ADDRESS)
              );
             this.efwGridControl2.Click += efwGridControl2_Click;
+
+
+            this.efwGridControl4.BindControlSet(
+              new ColumnControlSet("option_id", txtOption_ID)
+            , new ColumnControlSet("product_name", txtSet_Name)
+            , new ColumnControlSet("option_name", txtSet_Option)
+            );
+
+
+            this.efwGridControl3.BindControlSet(
+              new ColumnControlSet("p_code", txtEA_Code)
+            , new ColumnControlSet("p_name", txtEA_Name)
+            );
+
+
+            this.efwGridControl5.BindControlSet(
+              new ColumnControlSet("option_id", txtOption_ID)
+            , new ColumnControlSet("set_name", txtSet_Name)
+            , new ColumnControlSet("option_name", txtSet_Option)
+            , new ColumnControlSet("ea_code", txtEA_Code)
+            , new ColumnControlSet("ea_name", txtEA_Name)
+            , new ColumnControlSet("qty", txtQty)
+            , new ColumnControlSet("remark", txtSet_Remark)
+            );
+
             txtS_IDX.EditValue = "0";
             txtP_Code.EditValue = "0";
-
-
+            rbShowType.EditValue = "Y";
 
             SetCmb();
         }
@@ -119,6 +143,25 @@ namespace YL_DONUT.BizFrm
                 this.btnS_ZIPCODE.EditValue2 = dr["s_zipcode"].ToString();
                 this.btnS_ZIPCODE.Text = dr["s_zipcode"].ToString();
             }
+        }
+
+        private void efwGridControl4_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl4.GetSelectedRow(0);
+            if (dr != null && dr["option_id"].ToString() != "")
+            {
+                this.txtOption_ID.EditValue = dr["option_id"].ToString();
+                txtEA_Code.EditValue = "";
+                txtEA_Name.EditValue = "";
+                txtQty.EditValue = "1";
+                txtSet_Remark.EditValue = "";
+                Open3();
+            }
+        }
+
+        private void efwGridControl5_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void SetCmb()
@@ -327,6 +370,41 @@ namespace YL_DONUT.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl2.DataBind(ds);
+                            this.efwGridControl1.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+
+        private void Open3()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN27_SELECT_05", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_set_code", MySqlDbType.Int32);
+                        cmd.Parameters[0].Value = Convert.ToInt32(txtOption_ID.EditValue).ToString();
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl5.DataBind(ds);
                             this.efwGridControl1.MyGridView.BestFitColumns();
 
                         }
@@ -770,5 +848,174 @@ namespace YL_DONUT.BizFrm
             FrmInfo.COMPANYNAME = "(주)와이엘랜드";
             FrmInfo.ShowDialog();
         }
+
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN27_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtProdName.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl3.DataBind(ds);
+                            this.efwGridControl3.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sShow_Type = string.Empty;
+                string sCOMFIRM = string.Empty;
+                string sShowType = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN27_SELECT_04", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_ProdName", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtProdName.EditValue;
+
+
+                        cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[1].Value = rbShowType.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl4.DataBind(ds);
+                            this.efwGridControl4.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN27_SAVE_03", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_work_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_work_type"].Value = "A";
+                            cmd.Parameters["i_work_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_set_code", MySqlDbType.Int32));
+                            cmd.Parameters["i_set_code"].Value = Convert.ToInt32(txtOption_ID.EditValue).ToString();
+                            cmd.Parameters["i_set_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_code", MySqlDbType.Int32));
+                            cmd.Parameters["i_p_code"].Value = Convert.ToInt32(txtEA_Code.EditValue).ToString();
+                            cmd.Parameters["i_p_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_qty", MySqlDbType.Int32));
+                            cmd.Parameters["i_qty"].Value = Convert.ToInt32(txtQty.EditValue).ToString();
+                            cmd.Parameters["i_qty"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtSet_Remark.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open3();
+            }
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN27_SAVE_03", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_work_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_work_type"].Value = "D";
+                            cmd.Parameters["i_work_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_set_code", MySqlDbType.Int32));
+                            cmd.Parameters["i_set_code"].Value = Convert.ToInt32(txtOption_ID.EditValue).ToString();
+                            cmd.Parameters["i_set_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_p_code", MySqlDbType.Int32));
+                            cmd.Parameters["i_p_code"].Value = Convert.ToInt32(txtEA_Code.EditValue).ToString();
+                            cmd.Parameters["i_p_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_qty", MySqlDbType.Int32));
+                            cmd.Parameters["i_qty"].Value = Convert.ToInt32(txtQty.EditValue).ToString();
+                            cmd.Parameters["i_qty"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtSet_Remark.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open3();
+            }
+        }
+
     }
 }

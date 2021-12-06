@@ -795,7 +795,7 @@
     <value>0</value>
   </data>
   <data name="efwLabel51.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 330</value>
+    <value>24, 327</value>
   </data>
   <data name="efwLabel51.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 14</value>
@@ -891,7 +891,7 @@
     <value>3</value>
   </data>
   <data name="rbOtype_e_yn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 326</value>
+    <value>442, 323</value>
   </data>
   <data name="rbOtype_e_yn.Properties.Items" xml:space="preserve">
     <value>N</value>

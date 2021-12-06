@@ -19,12 +19,12 @@ using YL_TELECOM.BizFrm.Dlg;
 
 namespace YL_TELECOM.BizFrm
 {
-    public partial class frmTM12_Pop01 : FrmPopUpBase
+    public partial class frmTM08_Pop04 : FrmPopUpBase
     {
         public string m_code { get; set; }
         public string ser_no { get; set; }
 
-        public frmTM12_Pop01()
+        public frmTM08_Pop04()
         {
             InitializeComponent();
         }
@@ -48,7 +48,7 @@ namespace YL_TELECOM.BizFrm
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM12_SELECT_03", con))
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM08_SELECT_06", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -64,7 +64,6 @@ namespace YL_TELECOM.BizFrm
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
                             this.efwGridControl1.MyGridView.BestFitColumns();
-
                         }
                     }
                 }
@@ -85,7 +84,7 @@ namespace YL_TELECOM.BizFrm
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM12_SELECT_04", con))
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM08_SELECT_07", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -101,7 +100,6 @@ namespace YL_TELECOM.BizFrm
                             sda.Fill(ds);
                             efwGridControl2.DataBind(ds);
                             this.efwGridControl2.MyGridView.BestFitColumns();
-
                         }
                     }
                 }

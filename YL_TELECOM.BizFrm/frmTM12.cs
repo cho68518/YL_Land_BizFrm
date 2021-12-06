@@ -20,7 +20,7 @@ namespace YL_TELECOM.BizFrm
 {
     public partial class frmTM12 : FrmBase
     {
-        frmTM12_Pop01 popup;
+        //frmTM12_Pop01 popup;
         public frmTM12()
         {
             InitializeComponent();
@@ -247,21 +247,21 @@ namespace YL_TELECOM.BizFrm
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
-            popup = new frmTM12_Pop01();
+            //popup = new frmTM12_Pop01();
 
 
-            popup.m_code = gridView1.GetFocusedRowCellValue("m_code").ToString();
-            popup.ser_no = gridView1.GetFocusedRowCellValue("ser_no").ToString();
+            //popup.m_code = gridView1.GetFocusedRowCellValue("m_code").ToString();
+            //popup.ser_no = gridView1.GetFocusedRowCellValue("ser_no").ToString();
 
-            popup.FormClosed += popup_FormClosed;
-            popup.ShowDialog();
+            //popup.FormClosed += popup_FormClosed;
+            //popup.ShowDialog();
         }
 
         private void popup_FormClosed(object sender, FormClosedEventArgs e)
         {
-            popup.FormClosed -= popup_FormClosed;
+            //popup.FormClosed -= popup_FormClosed;
 
-            popup = null;
+            //popup = null;
         }
 
         private void gridView1_KeyDown(object sender, KeyEventArgs e)

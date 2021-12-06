@@ -111,6 +111,7 @@
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwGroupControlProd = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwSimpleButton7 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel51 = new Easy.Framework.WinForm.Control.efwLabel();
             this.rbOnline_product = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.rbEa_product = new Easy.Framework.WinForm.Control.efwRadioGroup();
@@ -277,7 +278,6 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.efwSimpleButton7 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_show_name.Properties)).BeginInit();
@@ -803,6 +803,15 @@
             resources.ApplyResources(this.efwGroupControlProd, "efwGroupControlProd");
             this.efwGroupControlProd.IsMultiLang = false;
             this.efwGroupControlProd.Name = "efwGroupControlProd";
+            // 
+            // efwSimpleButton7
+            // 
+            this.efwSimpleButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton7.ImageOptions.Image")));
+            this.efwSimpleButton7.IsMultiLang = false;
+            resources.ApplyResources(this.efwSimpleButton7, "efwSimpleButton7");
+            this.efwSimpleButton7.Name = "efwSimpleButton7";
+            this.efwSimpleButton7.Click += new System.EventHandler(this.efwSimpleButton7_Click);
             // 
             // efwLabel51
             // 
@@ -2628,15 +2637,6 @@
             this.picPc_Thumbnail.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
-            // 
-            // efwSimpleButton7
-            // 
-            this.efwSimpleButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.efwSimpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton7.ImageOptions.Image")));
-            this.efwSimpleButton7.IsMultiLang = false;
-            resources.ApplyResources(this.efwSimpleButton7, "efwSimpleButton7");
-            this.efwSimpleButton7.Name = "efwSimpleButton7";
-            this.efwSimpleButton7.Click += new System.EventHandler(this.efwSimpleButton7_Click);
             // 
             // frmMM03_Pop01
             // 

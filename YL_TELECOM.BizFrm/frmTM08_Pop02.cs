@@ -15,14 +15,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YL_COMM.BizFrm;
-using YL_TELECOM.BizFrm.Dlg;
 //using YL_COMM.BizFrm;
 
 namespace YL_TELECOM.BizFrm
 {
-    public partial class frmTM11_Pop01 : FrmPopUpBase
+    public partial class frmTM08_Pop02 : FrmPopUpBase
     {
-        public frmTM11_Pop01()
+        public frmTM08_Pop02()
         {
             InitializeComponent();
         }
@@ -37,7 +36,7 @@ namespace YL_TELECOM.BizFrm
         {
             using (MySQLConn con = new MySQLConn(ConstantLib.TelConn_Real))
             {
-                con.Query = " SELECT idx_fac as DCODE, u_name as DNAME  FROM telecom.tb_admin_masters where idx_fac = 4099   ";
+                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(s_idx,'') as DCODE ,s_company_name as DNAME  FROM erp.tb_sellers_info where s_status = 'Y'   ";
 
                 DataSet ds = con.selectQueryDataSet();
                 //DataTable retDT = ds.Tables[0];
@@ -50,19 +49,37 @@ namespace YL_TELECOM.BizFrm
                 for (int i = 0; i < dr.Length; i++)
                     codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
 
-                CodeAgent.MakeCodeControl(this.cmbOut_Factory, codeArray);
+                CodeAgent.MakeCodeControl(this.cmbAgencyCode, codeArray);
             }
-            cmbOut_Factory.EditValue = "4099";
+            cmbAgencyCode.EditValue = "";
 
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.TelConn_Real))
+            {
+              //  con.Query = " SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM erp.tb_common_code where gcode_id = '00003'   ";
+                con.Query = " SELECT idx_fac as DCODE, u_name as DNAME  FROM telecom.tb_admin_masters where idx_fac = 4099   ";
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbFactory, codeArray);
+            }
+            cmbFactory.EditValue = "4099";
 
         }
-
 
         private void efwSimpleButton1_Click(object sender, EventArgs e)
         {
             //OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.DefaultExt = "xlsx";
-            openFileDialog1.FileName = "상품출고.xlsx";
+            openFileDialog1.FileName = "상품입고.xlsx";
             openFileDialog1.Filter = "Excel97 - 2003 통합문서|*.xlsx";
             openFileDialog1.Title = "엑셀데이터 가져오기";
 
@@ -76,7 +93,7 @@ namespace YL_TELECOM.BizFrm
                     {
                         string fileName = openFileDialog1.FileName;
 
-                        if (fileName.IndexOf("상품출고.xlsx") < 0)
+                        if (fileName.IndexOf("상품입고.xlsx") < 0)
                         {
                             MessageAgent.MessageShow(MessageType.Error, "엑셀파일명에 문제가 있습니다. 파일명을 확인하세요.");
                             return;
@@ -112,20 +129,20 @@ namespace YL_TELECOM.BizFrm
                     {
                         if (gridView1.GetRowCellValue(i, gridView1.Columns[0]).ToString().Length > 2)
                         {
-                            using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM11_SAVE_01", con))
+                            using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM08_SAVE_04", con))
                             {
 
                                 con.Open();
                                 cmd.CommandType = CommandType.StoredProcedure;
 
-                                cmd.Parameters.Add("i_out_date", MySqlDbType.VarChar, 8);
+                                cmd.Parameters.Add("i_input_date", MySqlDbType.VarChar, 8);
                                 cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 8);
 
-                                cmd.Parameters.Add("i_out_factory", MySqlDbType.VarChar, 50);
-                                cmd.Parameters[1].Value = cmbOut_Factory.EditValue;
+                                cmd.Parameters.Add("i_is_factory", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[1].Value = cmbFactory.EditValue;
 
-                                cmd.Parameters.Add("i_in_factory", MySqlDbType.VarChar, 50);
-                                cmd.Parameters[2].Value = btnFactory.EditValue;
+                                cmd.Parameters.Add("i_agency_code", MySqlDbType.Int32);
+                                cmd.Parameters[2].Value = Convert.ToInt32(cmbAgencyCode.EditValue).ToString();
 
                                 cmd.Parameters.Add("i_m_code", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[3].Value = gridView1.GetRowCellValue(i, gridView1.Columns[0]).ToString();
@@ -138,6 +155,12 @@ namespace YL_TELECOM.BizFrm
 
                                 cmd.Parameters.Add("i_qty", MySqlDbType.Int32, 11);
                                 cmd.Parameters[6].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[3]).ToString());
+
+                                cmd.Parameters.Add("i_price", MySqlDbType.Int32, 11);
+                                cmd.Parameters[7].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[4]).ToString());
+
+                                cmd.Parameters.Add("i_amt", MySqlDbType.Int32, 11);
+                                cmd.Parameters[8].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[5]).ToString());
 
 
                                 cmd.ExecuteNonQuery();
@@ -156,33 +179,32 @@ namespace YL_TELECOM.BizFrm
 
         }
 
-        private void btnFactory_Click(object sender, EventArgs e)
-        {
-            frmFactory FrmInfo = new frmFactory() { Factory = btnFactory, Factory_NM = txtFactory_NM };
-            FrmInfo.ShowDialog();
-        }
-
         private void efwSimpleButton3_Click(object sender, EventArgs e)
         {
             try
             {
+                if (cmbAgencyCode.EditValue == "" ^ cmbAgencyCode.EditValue == null)
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, "거래처를 선택하세요!");
+                    return;
+                }
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
                 {
 
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM08_SAVE_04", con))
+                    {
 
-                     using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM11_SAVE_01", con))
-                     {
                         con.Open();
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("i_out_date", MySqlDbType.VarChar, 8);
+                        cmd.Parameters.Add("i_input_date", MySqlDbType.VarChar, 8);
                         cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 8);
 
-                        cmd.Parameters.Add("i_out_factory", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[1].Value = cmbOut_Factory.EditValue;
+                        cmd.Parameters.Add("i_is_factory", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = cmbFactory.EditValue;
 
-                        cmd.Parameters.Add("i_in_factory", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[2].Value = btnFactory.EditValue;
+                        cmd.Parameters.Add("i_agency_code", MySqlDbType.Int32);
+                        cmd.Parameters[2].Value = Convert.ToInt32(cmbAgencyCode.EditValue).ToString();
 
                         cmd.Parameters.Add("i_m_code", MySqlDbType.VarChar, 50);
                         cmd.Parameters[3].Value = txtM_Code.EditValue;
@@ -194,12 +216,20 @@ namespace YL_TELECOM.BizFrm
                         cmd.Parameters[5].Value = txtColor.EditValue;
 
                         cmd.Parameters.Add("i_qty", MySqlDbType.Int32, 11);
-                        cmd.Parameters[6].Value = Convert.ToInt32(txtQty.EditValue);
+                        cmd.Parameters[6].Value = Convert.ToInt32(txtQty.EditValue).ToString(); ;
+
+                        cmd.Parameters.Add("i_price", MySqlDbType.Int32, 11);
+                        cmd.Parameters[7].Value = Convert.ToInt32(txtPrice.EditValue).ToString(); ;
+
+                        cmd.Parameters.Add("i_amt", MySqlDbType.Int32, 11);
+                        cmd.Parameters[8].Value = Convert.ToInt32(txtAmt.EditValue).ToString(); ;
 
 
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
+
+
                 }
             }
             catch (Exception ex)

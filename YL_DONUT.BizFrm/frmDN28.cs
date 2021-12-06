@@ -175,6 +175,44 @@ namespace YL_DONUT.BizFrm
             bandedGridView2.Columns["stock_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             bandedGridView2.Columns["stock_amt"].SummaryItem.FieldName = "stock_amt";
             bandedGridView2.Columns["stock_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            // 통합수불
+
+            gridView9.OptionsView.ShowFooter = true;
+            gridView9.Columns["bef_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView9.Columns["bef_qty"].SummaryItem.FieldName = "bef_qty";
+            gridView9.Columns["bef_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView9.Columns["bef_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView9.Columns["bef_amt"].SummaryItem.FieldName = "bef_amt";
+            gridView9.Columns["bef_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+         
+            gridView9.Columns["in_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView9.Columns["in_qty"].SummaryItem.FieldName = "in_qty";
+            gridView9.Columns["in_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView9.Columns["in_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView9.Columns["in_amt"].SummaryItem.FieldName = "in_amt";
+            gridView9.Columns["in_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView9.Columns["out_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView9.Columns["out_qty"].SummaryItem.FieldName = "out_qty";
+            gridView9.Columns["out_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView9.Columns["out_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView9.Columns["out_amt"].SummaryItem.FieldName = "out_amt";
+            gridView9.Columns["out_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView9.Columns["stock_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView9.Columns["stock_qty"].SummaryItem.FieldName = "stock_qty";
+            gridView9.Columns["stock_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView9.Columns["stock_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView9.Columns["stock_amt"].SummaryItem.FieldName = "stock_amt";
+            gridView9.Columns["stock_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+
             SetCmb();
         }
 
@@ -347,13 +385,19 @@ namespace YL_DONUT.BizFrm
             {
                 Open1();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage7)
+            {
+                Open10();
+            }
             else if (efwXtraTabControl2.SelectedTabPage == this.xtraTabPage3)
             {
                 Open3();
+                
             }
             else if (efwXtraTabControl2.SelectedTabPage == this.xtraTabPage4)
             {
                 Open4();
+                Open9();
             }
             else if (efwXtraTabControl2.SelectedTabPage == this.xtraTabPage6)
             {
@@ -363,10 +407,7 @@ namespace YL_DONUT.BizFrm
             {
                 Open6();
             }
-            //else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage10)
-            //{
-            //    AccCode();
-            //}
+
         }
 
         private void Open1()
@@ -476,7 +517,8 @@ namespace YL_DONUT.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl5.DataBind(ds);
-                            this.efwGridControl5.MyGridView.BestFitColumns();
+                            //this.efwGridControl5.MyGridView.BestFitColumns();
+                            //gridView4.BestFitColumns();
                         }
                     }
                 }
@@ -642,6 +684,87 @@ namespace YL_DONUT.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+        private void Open9()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN28_SELECT_11", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 8);
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3.Substring(0, 8);
+
+                        cmd.Parameters.Add("i_is_factory", MySqlDbType.VarChar, 3);
+                        cmd.Parameters[2].Value = cmbIs_FactoryQ.EditValue;
+
+                        cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtP_NameQ.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl10.DataBind(ds);
+                            this.efwGridControl10.MyGridView.BestFitColumns();
+                            gridView6.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void Open10()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN28_SELECT_12", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_yearmonth", MySqlDbType.VarChar, 6);
+                        cmd.Parameters[0].Value = dtYearMonth.EditValue3.Substring(0, 6);
+                        
+                        cmd.Parameters.Add("i_price_type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[1].Value = rbG_Prod.EditValue;
+
+                        cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = txtProdName.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl11.DataBind(ds);
+                            this.efwGridControl11.MyGridView.BestFitColumns();
+                            gridView9.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
 
         #region
         private void bandedGridView1_Click(object sender, EventArgs e)
@@ -898,6 +1021,7 @@ namespace YL_DONUT.BizFrm
             txtOut_Qty.EditValue = "0";
             txtOut_P_Code.EditValue = "";
             txtOut_Idx.EditValue = "0";
+
         }
 
         private void btnIn_Save_Click(object sender, EventArgs e)
@@ -1151,29 +1275,7 @@ namespace YL_DONUT.BizFrm
             dtInput_Date_tab1.EditValue = DateTime.Now;
         }
 
-        private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
-        {
-            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
-            {
-                this.efwLabel1.Text = "년월";
-                this.dtYearMonth.Visible = true;
-                this.dtS_DATE.Visible = false ;
-                this.dtE_DATE.Visible = false;
-                cmbIs_FactoryQ.EditValue = "002";
-                this.efwSimpleButton11.Visible = false;
-                this.rbG_Prod.Visible = false;
-            }
-            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
-            {
-                this.efwLabel1.Text = "일자";
-                this.dtYearMonth.Visible = false;
-                this.dtS_DATE.Visible = true;
-                this.dtE_DATE.Visible = true;
-                cmbIs_FactoryQ.EditValue = "001";
-                this.efwSimpleButton11.Visible = false;
-                this.rbG_Prod.Visible = false;
-            }
-        }
+
 
         private void efwSimpleButton5_Click(object sender, EventArgs e)
         {
@@ -1462,6 +1564,46 @@ namespace YL_DONUT.BizFrm
         {
 
         }
+        private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                this.efwLabel1.Text = "년월";
+                this.dtYearMonth.Visible = true;
+                this.dtS_DATE.Visible = false;
+                this.dtE_DATE.Visible = false;
+                cmbIs_FactoryQ.EditValue = "002";
+                this.efwSimpleButton11.Visible = false;
+                this.rbG_Prod.Visible = false;
+                this.cmbIs_FactoryQ.Visible = true;
+                this.efwLabel46.Visible = true;
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                this.efwLabel1.Text = "일자";
+                this.dtYearMonth.Visible = false;
+                this.dtS_DATE.Visible = true;
+                this.dtE_DATE.Visible = true;
+                cmbIs_FactoryQ.EditValue = "001";
+                this.efwSimpleButton11.Visible = false;
+                this.rbG_Prod.Visible = false;
+                this.cmbIs_FactoryQ.Visible = true;
+                this.efwLabel46.Visible = true;
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage7)
+            {
+                this.efwLabel1.Text = "년월";
+                this.dtYearMonth.Visible = true;
+                this.dtS_DATE.Visible = false;
+                this.dtE_DATE.Visible = false;
+                this.efwSimpleButton11.Visible = false;
+                this.rbG_Prod.Visible = true;
+                this.txtP_NameQ.Visible = true;
+                this.efwLabel4.Visible = true;
+                this.cmbIs_FactoryQ.Visible = false;
+                this.efwLabel46.Visible = false;
+            }
+        }
 
         private void efwXtraTabControl2_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
@@ -1471,9 +1613,11 @@ namespace YL_DONUT.BizFrm
                 this.dtYearMonth.Visible = true;
                 this.dtS_DATE.Visible = false;
                 this.dtE_DATE.Visible = false;
-                cmbIs_FactoryQ.EditValue = "002";
-                this.efwSimpleButton11.Visible = false;
-                this.rbG_Prod.Visible = false;
+                cmbIs_FactoryQ.EditValue = "001";
+                this.efwSimpleButton11.Visible = true;
+                this.rbG_Prod.Visible = true;
+                this.efwLabel46.Visible = true;
+                this.cmbIs_FactoryQ.Visible = true;
             }
             else if (efwXtraTabControl2.SelectedTabPage == this.xtraTabPage3 ^ efwXtraTabControl2.SelectedTabPage == this.xtraTabPage4 )
             {
@@ -1482,18 +1626,11 @@ namespace YL_DONUT.BizFrm
                 this.dtS_DATE.Visible = true;
                 this.dtE_DATE.Visible = true;
                 cmbIs_FactoryQ.EditValue = "001";
+                this.rbG_Prod.Visible = false;
                 this.efwSimpleButton11.Visible = false;
                 this.efwSimpleButton11.Visible = false;
-            }
-            if (efwXtraTabControl2.SelectedTabPage == this.xtraTabPage5 ^ efwXtraTabControl2.SelectedTabPage == this.xtraTabPage6)
-            {
-                this.efwLabel1.Text = "년월";
-                this.dtYearMonth.Visible = true;
-                this.dtS_DATE.Visible = false;
-                this.dtE_DATE.Visible = false;
-                cmbIs_FactoryQ.EditValue = "001";
-                this.efwSimpleButton11.Visible = true;
-                this.rbG_Prod.Visible = true;
+                this.efwLabel46.Visible = true;
+                this.cmbIs_FactoryQ.Visible = true;
             }
         }
 
@@ -1526,29 +1663,29 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters[1].Value = cmbIs_FactoryQ.EditValue.ToString();
 
                                 cmd.Parameters.Add("i_p_code", MySqlDbType.Int32, 11);
-                                cmd.Parameters[2].Value = Convert.ToInt32(gridView5.GetRowCellValue(i, gridView5.Columns[0]).ToString());
+                                cmd.Parameters[2].Value = Convert.ToInt32(gridView5.GetRowCellValue(i, gridView5.Columns[1]).ToString());
 
                                 string sQty;
-                                if (Convert.ToInt32(gridView5.GetRowCellValue(i, gridView5.Columns[2])).ToString() == "" ^ Convert.ToInt32(gridView5.GetRowCellValue(i, gridView5.Columns[2])).ToString() == null )
+                                if (Convert.ToInt32(gridView5.GetRowCellValue(i, gridView5.Columns[3])).ToString() == "" ^ Convert.ToInt32(gridView5.GetRowCellValue(i, gridView5.Columns[3])).ToString() == null )
                                     sQty = "0";
                                 else
-                                    sQty = Convert.ToInt32(gridView5.GetRowCellValue(i, gridView5.Columns[2])).ToString();
+                                    sQty = Convert.ToInt32(gridView5.GetRowCellValue(i, gridView5.Columns[3])).ToString();
                                 cmd.Parameters.Add("i_qty", MySqlDbType.Int32, 11);
                                 cmd.Parameters[3].Value = Convert.ToInt32(sQty);
 
                                 string sPrice;
-                                if (gridView5.GetRowCellValue(i, gridView5.Columns[3]).ToString() == "" ^ gridView5.GetRowCellValue(i, gridView5.Columns[3]).ToString() == null)
+                                if (gridView5.GetRowCellValue(i, gridView5.Columns[4]).ToString() == "" ^ gridView5.GetRowCellValue(i, gridView5.Columns[4]).ToString() == null)
                                     sPrice = "0";
                                 else
-                                    sPrice = gridView5.GetRowCellValue(i, gridView5.Columns[3]).ToString();
+                                    sPrice = gridView5.GetRowCellValue(i, gridView5.Columns[4]).ToString();
                                 cmd.Parameters.Add("i_price", MySqlDbType.Int32, 11);
                                 cmd.Parameters[4].Value = Convert.ToInt32(sPrice);
 
                                 string sAmt;
-                                if (gridView5.GetRowCellValue(i, gridView5.Columns[4]).ToString() == "" ^ gridView5.GetRowCellValue(i, gridView5.Columns[4]).ToString() == null)
+                                if (gridView5.GetRowCellValue(i, gridView5.Columns[5]).ToString() == "" ^ gridView5.GetRowCellValue(i, gridView5.Columns[5]).ToString() == null)
                                     sAmt = "0";
                                 else
-                                    sAmt = gridView5.GetRowCellValue(i, gridView5.Columns[4]).ToString();
+                                    sAmt = gridView5.GetRowCellValue(i, gridView5.Columns[5]).ToString();
                                 cmd.Parameters.Add("i_amt", MySqlDbType.Int32, 11);
                                 cmd.Parameters[5].Value = Convert.ToInt32(sAmt);
 

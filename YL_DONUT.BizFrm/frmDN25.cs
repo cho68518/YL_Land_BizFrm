@@ -49,7 +49,6 @@ namespace YL_DONUT.BizFrm
             dtE_DATE.EditValue = DateTime.Now;
 
 
-
             using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
             {
 

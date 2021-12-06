@@ -21,7 +21,7 @@ namespace YL_TELECOM.BizFrm
 {
     public partial class frmTM10 : FrmBase
     {
-        frmTM10_Pop01 popup;
+        //frmTM10_Pop01 popup;
         public frmTM10()
         {
             InitializeComponent();
@@ -156,8 +156,8 @@ namespace YL_TELECOM.BizFrm
 
         private void btnExcelUpdate_Click(object sender, EventArgs e)
         {
-            popup = new frmTM10_Pop01();
-            popup.ShowDialog();
+          //  popup = new frmTM10_Pop01();
+          //  popup.ShowDialog();
         }
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)

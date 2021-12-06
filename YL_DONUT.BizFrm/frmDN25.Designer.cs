@@ -90,6 +90,7 @@
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel17 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtCoidName = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel13 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtdonut_count = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -124,7 +125,6 @@
             this.txtr_u_name = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtreceive_message_b = new Easy.Framework.WinForm.Control.efwMemoEdit();
             this.splitterControl2 = new DevExpress.XtraEditors.SplitterControl();
-            this.efwLabel17 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuery.Properties)).BeginInit();
@@ -318,7 +318,7 @@
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.Size = new System.Drawing.Size(1280, 524);
+            this.efwGridControl1.Size = new System.Drawing.Size(1280, 485);
             this.efwGridControl1.TabIndex = 51;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -771,7 +771,7 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 616);
+            this.splitterControl1.Location = new System.Drawing.Point(3, 577);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1280, 5);
             this.splitterControl1.TabIndex = 52;
@@ -802,11 +802,25 @@
             this.efwGroupControl1.Controls.Add(this.efwLabel2);
             this.efwGroupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.efwGroupControl1.IsMultiLang = false;
-            this.efwGroupControl1.Location = new System.Drawing.Point(3, 621);
+            this.efwGroupControl1.Location = new System.Drawing.Point(3, 582);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(676, 145);
+            this.efwGroupControl1.Size = new System.Drawing.Size(676, 184);
             this.efwGroupControl1.TabIndex = 53;
             this.efwGroupControl1.Text = "소급 지급";
+            // 
+            // efwLabel17
+            // 
+            this.efwLabel17.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.efwLabel17.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.efwLabel17.Appearance.Options.UseFont = true;
+            this.efwLabel17.Appearance.Options.UseForeColor = true;
+            this.efwLabel17.EraserGroup = null;
+            this.efwLabel17.IsMultiLang = false;
+            this.efwLabel17.Location = new System.Drawing.Point(76, 180);
+            this.efwLabel17.Name = "efwLabel17";
+            this.efwLabel17.Size = new System.Drawing.Size(375, 19);
+            this.efwLabel17.TabIndex = 86;
+            this.efwLabel17.Text = "주의! 계속 적립될수 있으니 저장 버튼을 한번만 눌러주세요";
             // 
             // txtCoidName
             // 
@@ -834,12 +848,12 @@
             // 
             this.txtdonut_count.EditValue2 = null;
             this.txtdonut_count.EraserGroup = "CLR1";
-            this.txtdonut_count.Location = new System.Drawing.Point(77, 140);
+            this.txtdonut_count.Location = new System.Drawing.Point(77, 139);
             this.txtdonut_count.Name = "txtdonut_count";
             this.txtdonut_count.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtdonut_count.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtdonut_count.RequireMessage = null;
-            this.txtdonut_count.Size = new System.Drawing.Size(100, 20);
+            this.txtdonut_count.Size = new System.Drawing.Size(103, 20);
             this.txtdonut_count.TabIndex = 84;
             // 
             // efwSimpleButton3
@@ -899,7 +913,7 @@
             // 
             this.efwLabel6.EraserGroup = null;
             this.efwLabel6.IsMultiLang = false;
-            this.efwLabel6.Location = new System.Drawing.Point(15, 143);
+            this.efwLabel6.Location = new System.Drawing.Point(15, 142);
             this.efwLabel6.Name = "efwLabel6";
             this.efwLabel6.Size = new System.Drawing.Size(44, 14);
             this.efwLabel6.TabIndex = 76;
@@ -926,19 +940,19 @@
             hierarchy1.SpName = null;
             this.cmbDonut_Type.HierarchyInfo = hierarchy1;
             this.cmbDonut_Type.IsMultiLang = false;
-            this.cmbDonut_Type.Location = new System.Drawing.Point(77, 114);
+            this.cmbDonut_Type.Location = new System.Drawing.Point(77, 113);
             this.cmbDonut_Type.MasterCode = "E03.PAY_GBN";
             this.cmbDonut_Type.Name = "cmbDonut_Type";
             this.cmbDonut_Type.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbDonut_Type.Size = new System.Drawing.Size(186, 20);
+            this.cmbDonut_Type.Size = new System.Drawing.Size(103, 20);
             this.cmbDonut_Type.TabIndex = 74;
             // 
             // efwLabel4
             // 
             this.efwLabel4.EraserGroup = null;
             this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(15, 117);
+            this.efwLabel4.Location = new System.Drawing.Point(15, 116);
             this.efwLabel4.Name = "efwLabel4";
             this.efwLabel4.Size = new System.Drawing.Size(40, 14);
             this.efwLabel4.TabIndex = 73;
@@ -1047,9 +1061,9 @@
             this.efwGroupControl2.Controls.Add(this.txtreceive_message_b);
             this.efwGroupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl2.IsMultiLang = false;
-            this.efwGroupControl2.Location = new System.Drawing.Point(679, 621);
+            this.efwGroupControl2.Location = new System.Drawing.Point(679, 582);
             this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(604, 145);
+            this.efwGroupControl2.Size = new System.Drawing.Size(604, 184);
             this.efwGroupControl2.TabIndex = 73;
             this.efwGroupControl2.Text = "적용 취소";
             // 
@@ -1211,25 +1225,11 @@
             // 
             // splitterControl2
             // 
-            this.splitterControl2.Location = new System.Drawing.Point(679, 621);
+            this.splitterControl2.Location = new System.Drawing.Point(679, 582);
             this.splitterControl2.Name = "splitterControl2";
-            this.splitterControl2.Size = new System.Drawing.Size(5, 145);
+            this.splitterControl2.Size = new System.Drawing.Size(5, 184);
             this.splitterControl2.TabIndex = 74;
             this.splitterControl2.TabStop = false;
-            // 
-            // efwLabel17
-            // 
-            this.efwLabel17.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.efwLabel17.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.efwLabel17.Appearance.Options.UseFont = true;
-            this.efwLabel17.Appearance.Options.UseForeColor = true;
-            this.efwLabel17.EraserGroup = null;
-            this.efwLabel17.IsMultiLang = false;
-            this.efwLabel17.Location = new System.Drawing.Point(75, 172);
-            this.efwLabel17.Name = "efwLabel17";
-            this.efwLabel17.Size = new System.Drawing.Size(375, 19);
-            this.efwLabel17.TabIndex = 86;
-            this.efwLabel17.Text = "주의! 계속 적립될수 있으니 저장 버튼을 한번만 눌러주세요";
             // 
             // frmDN25
             // 

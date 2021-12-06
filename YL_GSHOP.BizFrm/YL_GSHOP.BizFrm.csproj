@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E1D8686E-D66A-4172-8E0A-E9148D6296F2}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_GSHOP.BizFrm</RootNamespace>
     <AssemblyName>YL_GSHOP.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -468,10 +468,6 @@
     <ProjectReference Include="..\YL_DONUT.BizFrm\YL_DONUT.BizFrm.csproj">
       <Project>{5747A80A-CBFC-42C3-B170-73495553A80D}</Project>
       <Name>YL_DONUT.BizFrm</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YL_GM.BizFrm.V.1.0\YL_GM.BizFrm.V.1.0.csproj">
-      <Project>{5B7850A0-A628-4D0B-BC3F-FBCDB66DF433}</Project>
-      <Name>YL_GM.BizFrm.V.1.0</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

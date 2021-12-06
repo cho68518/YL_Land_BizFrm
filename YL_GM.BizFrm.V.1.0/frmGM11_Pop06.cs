@@ -93,6 +93,7 @@ namespace YL_GM.BizFrm
             string sOldFile = txtPicPath1.EditValue.ToString();
             string sFileName = str.Substring(0, 4) + "-" + str.Substring(4, 2) + "-" + str.Substring(6, 6);
             string sNewFile = "c:\\temp\\" + sFileName;
+            System.IO.File.Delete(sNewFile);
             System.IO.File.Copy(sOldFile, sNewFile);
 
 
@@ -163,6 +164,7 @@ namespace YL_GM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
             MessageAgent.MessageShow(MessageType.Informational, "업로드가 완료 되었습니다.");
+            System.IO.File.Delete(sNewFile);
         }
     }
 }

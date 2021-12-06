@@ -85,7 +85,6 @@ namespace YL_TELECOM.BizFrm
             cmbS_DIVISION.EditValue = "C";
         }
 
-
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
@@ -189,6 +188,50 @@ namespace YL_TELECOM.BizFrm
 
         public override void Search()
         {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open1();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open2();
+            }
+        }
+
+        private void Open1()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM07_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_Search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtQuery.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void Open2()
+        {
             try
             {
                 string sCOMFIRM = string.Empty;
@@ -201,7 +244,7 @@ namespace YL_TELECOM.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("i_agencyname", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[0].Value = txtQ_AGENCY_NAME.EditValue;
+                        cmd.Parameters[0].Value = txtQuery.EditValue;
 
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
@@ -219,11 +262,6 @@ namespace YL_TELECOM.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
-        }
-
-        private void efwGridControl1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnNEW_Click(object sender, EventArgs e)
@@ -389,5 +427,6 @@ namespace YL_TELECOM.BizFrm
             FrmInfo.COMPANYNAME = "(주)와이엘랜드";
             FrmInfo.ShowDialog();
         }
+
     }
 }
