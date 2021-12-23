@@ -29,7 +29,7 @@ namespace YL_TELECOM.BizFrm
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTM08_Pop01));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTM08_Pop02));
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
@@ -172,6 +172,7 @@ namespace YL_TELECOM.BizFrm
             this.txtPrice.RequireMessage = null;
             this.txtPrice.Size = new System.Drawing.Size(62, 20);
             this.txtPrice.TabIndex = 101;
+            this.txtPrice.EditValueChanged += new System.EventHandler(this.txtPrice_EditValueChanged);
             // 
             // efwLabel9
             // 
@@ -467,14 +468,14 @@ namespace YL_TELECOM.BizFrm
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // frmTM10_Pop01
+            // frmTM08_Pop02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 563);
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
-            this.Name = "frmTM10_Pop01";
+            this.Name = "frmTM08_Pop02";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "상품 입고등록";
             this.Load += new System.EventHandler(this.frmTM10_Pop01_Load);

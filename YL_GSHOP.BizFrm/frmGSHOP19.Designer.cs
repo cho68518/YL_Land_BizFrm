@@ -54,8 +54,8 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.txtQRank2 = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -378,14 +378,6 @@
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 12;
             // 
-            // gridColumn26
-            // 
-            this.gridColumn26.Caption = "발모사진제보주식수";
-            this.gridColumn26.FieldName = "ceo_pic_qty";
-            this.gridColumn26.Name = "gridColumn26";
-            this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 14;
-            // 
             // gridColumn27
             // 
             this.gridColumn27.Caption = "유튜브영상 추천인";
@@ -393,6 +385,14 @@
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.Visible = true;
             this.gridColumn27.VisibleIndex = 13;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "발모사진제보주식수";
+            this.gridColumn26.FieldName = "ceo_pic_qty";
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 14;
             // 
             // repositoryItemCheckEdit4
             // 
@@ -875,6 +875,7 @@
             this.efwGridControl3.UpdateServiceInfo = serviceInfo6;
             this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
+            this.efwGridControl3.Click += new System.EventHandler(this.efwGridControl3_Click);
             // 
             // gridView3
             // 

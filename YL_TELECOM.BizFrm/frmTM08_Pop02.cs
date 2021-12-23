@@ -224,7 +224,6 @@ namespace YL_TELECOM.BizFrm
                         cmd.Parameters.Add("i_amt", MySqlDbType.Int32, 11);
                         cmd.Parameters[8].Value = Convert.ToInt32(txtAmt.EditValue).ToString(); ;
 
-
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
@@ -237,6 +236,11 @@ namespace YL_TELECOM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
             MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+        }
+
+        private void txtPrice_EditValueChanged(object sender, EventArgs e)
+        {
+            txtAmt.EditValue = Convert.ToInt32(txtQty.EditValue) * Convert.ToInt32(txtPrice.EditValue);
         }
     }
 }

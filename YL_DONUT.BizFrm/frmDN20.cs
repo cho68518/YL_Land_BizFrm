@@ -50,6 +50,16 @@ namespace YL_DONUT.BizFrm
 
             gridView1.OptionsView.ShowFooter = true;
 
+            gridView3.OptionsView.ShowFooter = true;
+            gridView3.Columns["tot_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView3.Columns["tot_qty"].SummaryItem.FieldName = "tot_qty";
+            gridView3.Columns["tot_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView5.OptionsView.ShowFooter = true;
+            gridView5.Columns["tot_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView5.Columns["tot_qty"].SummaryItem.FieldName = "tot_qty";
+            gridView5.Columns["tot_qty"].SummaryItem.DisplayFormat = "{0}";
+
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
                 con.Query = "SELECT d_code as DCODE ,d_name as DNAME  FROM domamall.tb_am_product_delivers order by sort";
@@ -65,6 +75,13 @@ namespace YL_DONUT.BizFrm
 
             }
 
+
+            gridView4.OptionsView.ShowFooter = true;
+
+            this.efwGridControl4.BindControlSet(
+            new ColumnControlSet("p_code", txtP_Code)
+            );
+            this.efwGridControl4.Click += efwGridControl4_Click;
             SetCmb();
         }
 
@@ -129,6 +146,14 @@ namespace YL_DONUT.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
             {
                 Open2();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                Open3();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                Open4();
             }
         }
 
@@ -223,6 +248,138 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void Open3()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN20_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_StoreCode", MySqlDbType.Int32);
+                        cmd.Parameters[2].Value = cmbSellers.EditValue;
+
+                        cmd.Parameters.Add("i_company", MySqlDbType.VarChar);
+                        cmd.Parameters[3].Value = rbCompany.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl3.DataBind(ds);
+                            this.efwGridControl3.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+        private void Open4()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN20_SELECT_04", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_StoreCode", MySqlDbType.Int32);
+                        cmd.Parameters[2].Value = cmbSellers.EditValue;
+
+                        cmd.Parameters.Add("i_company", MySqlDbType.VarChar);
+                        cmd.Parameters[3].Value = rbCompany.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl4.DataBind(ds);
+                            //this.efwGridControl4.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+        private void Open5()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN20_SELECT_05", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_StoreCode", MySqlDbType.Int32);
+                        cmd.Parameters[2].Value = cmbSellers.EditValue;
+
+                        cmd.Parameters.Add("i_company", MySqlDbType.VarChar);
+                        cmd.Parameters[3].Value = rbCompany.EditValue;
+
+                        cmd.Parameters.Add("i_p_code", MySqlDbType.Int32);
+                        cmd.Parameters[4].Value = Convert.ToInt32(txtP_Code.EditValue).ToString();
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl5.DataBind(ds);
+                            this.efwGridControl5.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
 
         private void btnExcelUpdate_Click(object sender, EventArgs e)
         {
@@ -394,6 +551,16 @@ namespace YL_DONUT.BizFrm
         private void efwXtraTabControl1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void efwGridControl4_Click(object sender, EventArgs e)
+        { 
+            DataRow dr = this.efwGridControl4.GetSelectedRow(0);
+            if (dr != null && dr["p_code"].ToString() != "")
+            {
+                Open5();
+            }
+            
         }
     }
 }

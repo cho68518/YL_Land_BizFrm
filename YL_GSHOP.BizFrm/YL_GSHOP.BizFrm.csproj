@@ -154,6 +154,8 @@
     <Compile Include="Dlg\frmZipNoInfo.designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGSHOP03.cs" />
+    <Compile Include="frmGSHOP03.Designer.cs" />
     <Compile Include="frmGSHOP20.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -250,12 +252,6 @@
     <Compile Include="frmGSHOP01.Designer.cs">
       <DependentUpon>frmGSHOP01.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGSHOP03.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frmGSHOP03.Designer.cs">
-      <DependentUpon>frmGSHOP03.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGSHOP04.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -313,12 +309,6 @@
     <Compile Include="MySQLConn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GSHOP03_RPT.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="GSHOP03_RPT.Designer.cs">
-      <DependentUpon>GSHOP03_RPT.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Dlg\frmMDMemberInfo.resx">
       <DependentUpon>frmMDMemberInfo.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -329,6 +319,7 @@
     <EmbeddedResource Include="Dlg\frmZipNoInfo.resx">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGSHOP03.resx" />
     <EmbeddedResource Include="frmGSHOP18.resx">
       <DependentUpon>frmGSHOP18.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,9 +361,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP01.resx">
       <DependentUpon>frmGSHOP01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGSHOP03.resx">
-      <DependentUpon>frmGSHOP03.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGSHOP08.resx">
       <DependentUpon>frmGSHOP08.cs</DependentUpon>
@@ -417,9 +405,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GSHOP03_RPT.resx">
-      <DependentUpon>GSHOP03_RPT.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -463,12 +448,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\YL_DONUT.BizFrm\YL_DONUT.BizFrm.csproj">
-      <Project>{5747A80A-CBFC-42C3-B170-73495553A80D}</Project>
-      <Name>YL_DONUT.BizFrm</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

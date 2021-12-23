@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Columns;
 using YL_TELECOM.BizFrm.Dlg;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace YL_TELECOM.BizFrm
 {
@@ -74,6 +75,9 @@ namespace YL_TELECOM.BizFrm
             gridView1.Columns["amt"].SummaryItem.DisplayFormat = "{0:c}";
 
             gridView3.OptionsView.ShowFooter = true;
+            DataTable table = new DataTable();
+            this.efwGridControl3.DataSource = table;
+            (this.efwGridControl3.MainView as GridView).RowCellStyle += gridView3_RowCellStyle;
 
             this.efwGridControl2.BindControlSet(
                new ColumnControlSet("acc_code", txtAcc_Code)
@@ -233,61 +237,61 @@ namespace YL_TELECOM.BizFrm
         private void tot()
         {
 
-            gridView3.Columns["1_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["1_month"].SummaryItem.FieldName = "1_month";
-            gridView3.Columns["1_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["1_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["1_month"].SummaryItem.FieldName = "1_month";
+            //gridView3.Columns["1_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["2_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["2_month"].SummaryItem.FieldName = "2_month";
-            gridView3.Columns["2_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["2_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["2_month"].SummaryItem.FieldName = "2_month";
+            //gridView3.Columns["2_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["3_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["3_month"].SummaryItem.FieldName = "3_month";
-            gridView3.Columns["3_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["3_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["3_month"].SummaryItem.FieldName = "3_month";
+            //gridView3.Columns["3_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["4_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["4_month"].SummaryItem.FieldName = "4_month";
-            gridView3.Columns["4_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["4_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["4_month"].SummaryItem.FieldName = "4_month";
+            //gridView3.Columns["4_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["5_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["5_month"].SummaryItem.FieldName = "5_month";
-            gridView3.Columns["5_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["5_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["5_month"].SummaryItem.FieldName = "5_month";
+            //gridView3.Columns["5_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["6_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["6_month"].SummaryItem.FieldName = "6_month";
-            gridView3.Columns["6_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["6_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["6_month"].SummaryItem.FieldName = "6_month";
+            //gridView3.Columns["6_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["7_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["7_month"].SummaryItem.FieldName = "7_month";
-            gridView3.Columns["7_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["7_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["7_month"].SummaryItem.FieldName = "7_month";
+            //gridView3.Columns["7_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["8_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["8_month"].SummaryItem.FieldName = "8_month";
-            gridView3.Columns["8_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["8_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["8_month"].SummaryItem.FieldName = "8_month";
+            //gridView3.Columns["8_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["9_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["9_month"].SummaryItem.FieldName = "9_month";
-            gridView3.Columns["9_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["9_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["9_month"].SummaryItem.FieldName = "9_month";
+            //gridView3.Columns["9_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["10_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["10_month"].SummaryItem.FieldName = "10_month";
-            gridView3.Columns["10_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["10_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["10_month"].SummaryItem.FieldName = "10_month";
+            //gridView3.Columns["10_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["11_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["11_month"].SummaryItem.FieldName = "11_month";
-            gridView3.Columns["11_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["11_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["11_month"].SummaryItem.FieldName = "11_month";
+            //gridView3.Columns["11_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["12_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["12_month"].SummaryItem.FieldName = "12_month";
-            gridView3.Columns["12_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["12_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["12_month"].SummaryItem.FieldName = "12_month";
+            //gridView3.Columns["12_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["t_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["t_month"].SummaryItem.FieldName = "t_month";
-            gridView3.Columns["t_month"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["t_month"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["t_month"].SummaryItem.FieldName = "t_month";
+            //gridView3.Columns["t_month"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView3.Columns["bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView3.Columns["bef"].SummaryItem.FieldName = "bef";
-            gridView3.Columns["bef"].SummaryItem.DisplayFormat = "{0:c}";
+            //gridView3.Columns["bef"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //gridView3.Columns["bef"].SummaryItem.FieldName = "bef";
+            //gridView3.Columns["bef"].SummaryItem.DisplayFormat = "{0:c}";
         }
         public override void Search()
         {
@@ -327,6 +331,9 @@ namespace YL_TELECOM.BizFrm
 
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_company", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[2].Value = cmbCompanyQ.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -744,5 +751,29 @@ namespace YL_TELECOM.BizFrm
 
         }
 
+        private void gridView3_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (view == null)
+                return;
+
+            if (e.RowHandle != view.FocusedRowHandle)
+            {
+                DevExpress.XtraGrid.Views.Grid.GridView View = sender as GridView;
+                string err = View.GetRowCellDisplayText(e.RowHandle, View.Columns["large_name"]);
+                if (err == "합계")//Cell의 값이 APPLE인 경우 Cell색 변경
+                {
+                    e.Appearance.BackColor = Color.Cornsilk;
+                    e.Appearance.BackColor2 = Color.Cornsilk; //그라데이션 처리
+                }
+               else if (err == "총계")
+                {
+                    {
+                        e.Appearance.BackColor = Color.Ivory;
+                        e.Appearance.BackColor2 = Color.Ivory; //그라데이션 처리
+                    }
+                }
+            }
+        }
     }
 }

@@ -136,6 +136,7 @@
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -1210,6 +1211,7 @@
             this.gridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
             this.gridView1.Appearance.FooterPanel.Options.UseForeColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn18,
             this.gridColumn6,
             this.gridColumn11,
             this.gridColumn1,
@@ -1228,13 +1230,19 @@
             this.gridView1.OptionsView.BestFitMode = DevExpress.XtraGrid.Views.Grid.GridBestFitMode.Full;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             // 
+            // gridColumn18
+            // 
+            this.gridColumn18.Caption = "통신사구분";
+            this.gridColumn18.FieldName = "company_nm";
+            this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.Visible = true;
+            this.gridColumn18.VisibleIndex = 0;
+            // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "비용코드";
             this.gridColumn6.FieldName = "large_code";
             this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 0;
             // 
             // gridColumn11
             // 
@@ -1477,6 +1485,7 @@
             this.gridView3.OptionsView.AllowCellMerge = true;
             this.gridView3.OptionsView.BestFitMode = DevExpress.XtraGrid.Views.Grid.GridBestFitMode.Full;
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView3_RowCellStyle);
             // 
             // bandedGridColumn45
             // 
@@ -1495,7 +1504,7 @@
             this.bandedGridColumn46.FieldName = "middle_name";
             this.bandedGridColumn46.Name = "bandedGridColumn46";
             this.bandedGridColumn46.OptionsColumn.AllowEdit = false;
-            this.bandedGridColumn46.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.bandedGridColumn46.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.bandedGridColumn46.Visible = true;
             this.bandedGridColumn46.VisibleIndex = 1;
             this.bandedGridColumn46.Width = 106;
@@ -2864,13 +2873,13 @@
             this.repositoryItemCheckEdit13.ValueChecked = "Y";
             this.repositoryItemCheckEdit13.ValueUnchecked = "N";
             // 
-            // frmTM14
+            // frmTM09
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.efwXtraTabControl1);
             this.Controls.Add(this.efwPanelControl3);
-            this.Name = "frmTM14";
+            this.Name = "frmTM09";
             this.Size = new System.Drawing.Size(1214, 798);
             this.Load += new System.EventHandler(this.frmTM114_Load);
             this.Controls.SetChildIndex(this.efwPanelControl3, 0);
@@ -3185,5 +3194,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit4;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
     }
 }

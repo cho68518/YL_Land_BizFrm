@@ -73,7 +73,7 @@ namespace YL_GSHOP.BizFrm
              , new ColumnControlSet("youtube_relations", txtYouTube_Relations)
              , new ColumnControlSet("utube_nic", txtUtube_nic)
             );
-            this.efwGridControl2.Click += efwGridControl2_Click;
+            this.efwGridControl3.Click += efwGridControl3_Click;
 
         }
 
@@ -83,6 +83,16 @@ namespace YL_GSHOP.BizFrm
             if (dr != null && dr["gshop_id"].ToString() != "")
             {
                 Open1();
+            }
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void efwGridControl3_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl2.GetSelectedRow(0);
+            if (dr != null && dr["gshop_id"].ToString() != "")
+            {
+                this.txtGShop_ID.EditValue = dr["gshop_id"].ToString();
             }
             Cursor.Current = Cursors.Default;
         }
@@ -163,6 +173,12 @@ namespace YL_GSHOP.BizFrm
 
         private void efwSimpleButton5_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(this.dtReg_Date.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 지급일을 선택하세요!");
+                return;
+            }
+
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
                 try

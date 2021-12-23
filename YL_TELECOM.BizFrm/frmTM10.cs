@@ -21,7 +21,7 @@ namespace YL_TELECOM.BizFrm
 {
     public partial class frmTM10 : FrmBase
     {
-        //frmTM10_Pop01 popup;
+        frmTM10_Pop01 popup;
         public frmTM10()
         {
             InitializeComponent();
@@ -45,23 +45,26 @@ namespace YL_TELECOM.BizFrm
             this.IsPrint = false;
             this.IsExcel = true;
 
-            dtS_DATE.EditValue = DateTime.Now;
-            dtE_DATE.EditValue = DateTime.Now;
+            dtInsert_Date.EditValue = DateTime.Now;
+            txtWork_Idx.EditValue = "0";
 
             gridView1.OptionsView.ShowFooter = true;
-
-            gridView1.Columns["qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["qty"].SummaryItem.FieldName = "qty";
-            gridView1.Columns["qty"].SummaryItem.DisplayFormat = "수량: {0}";
-
-            gridView1.Columns["amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["amt"].SummaryItem.FieldName = "amt";
-            gridView1.Columns["amt"].SummaryItem.DisplayFormat = "금액: {0:c}";
-
             this.efwGridControl1.BindControlSet(
                new ColumnControlSet("idx", txtidx)
+              , new ColumnControlSet("o_code", txtO_Code)
+              , new ColumnControlSet("entr_no", txtEntr_No)
+              , new ColumnControlSet("o_code", txtO_Code_Q)
             );
             this.efwGridControl1.Click += efwGridControl1_Click;
+
+            gridView2.OptionsView.ShowFooter = true;
+            this.efwGridControl2.BindControlSet(
+               new ColumnControlSet("idx", txtidx)
+              , new ColumnControlSet("insert_user", txtInsert_User)
+              , new ColumnControlSet("w_info", txtW_Info)
+              , new ColumnControlSet("w_type", txtW_Type)
+            );
+            this.efwGridControl2.Click += efwGridControl2_Click;
         }
 
         private void efwGridControl1_Click(object sender, EventArgs e)
@@ -71,6 +74,22 @@ namespace YL_TELECOM.BizFrm
             if (dr != null && dr["idx"].ToString() != "")
             {
                 this.txtidx.EditValue = dr["idx"].ToString();
+                this.txtO_Code_Q.EditValue = dr["o_code"].ToString();
+                dtInsert_Date.EditValue = DateTime.Now;
+                txtWork_Idx.EditValue = "0";
+                Open1();
+            }
+
+        }
+
+        private void efwGridControl2_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl2.GetSelectedRow(0);
+
+            if (dr != null && dr["idx"].ToString() != "")
+            {
+                this.txtWork_Idx.EditValue = dr["idx"].ToString();
+                this.dtInsert_Date.EditValue = dr["insert_date"].ToString();
             }
 
         }
@@ -88,22 +107,15 @@ namespace YL_TELECOM.BizFrm
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 8);
-
-                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[1].Value = dtE_DATE.EditValue3.Substring(0, 8);
-
-                        cmd.Parameters.Add("i_Search", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[2].Value = txtSearch.EditValue;
-
+                        cmd.Parameters.Add("i_Query", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtSearch.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
-                            this.efwGridControl1.MyGridView.BestFitColumns();
+                            //this.efwGridControl1.MyGridView.BestFitColumns();
 
                         }
                     }
@@ -115,49 +127,43 @@ namespace YL_TELECOM.BizFrm
             }
         }
 
-        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
+
+        public void Open1()
         {
-            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
-            this.txtidx.EditValue = dr["idx"].ToString();
-
-            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+            try
             {
-                try
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+
                 {
-                    using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM10_SELECT_02", con))
                     {
-                        using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM10_DELETE_01", con))
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtO_Code_Q.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
-                            con.Open();
-                            cmd.CommandType = CommandType.StoredProcedure;
-
-                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
-                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtidx.EditValue);
-                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
-
-
-                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
-                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
-                            cmd.ExecuteNonQuery();
-
-                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
-
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-                }
-                txtidx.EditValue = "";
-                Search();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
 
         private void btnExcelUpdate_Click(object sender, EventArgs e)
         {
-          //  popup = new frmTM10_Pop01();
-          //  popup.ShowDialog();
+            popup = new frmTM10_Pop01();
+            popup.ShowDialog();
         }
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
@@ -166,10 +172,121 @@ namespace YL_TELECOM.BizFrm
                 Search();
         }
 
-        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(gridView1.GetFocusedDisplayText());
-            e.Handled = true;
+            txtWork_Idx.EditValue = "0";
+            txtInsert_User.EditValue = "";
+            txtW_Info.EditValue = "";
         }
+
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            if (txtO_Code.EditValue.ToString() == "" ^ txtO_Code.EditValue.ToString() == null)
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "접수번호를 선택하세요!");
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM10_SAVE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtWork_Idx.EditValue);
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_code"].Value = txtO_Code.EditValue;
+                            cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_w_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_w_type"].Value = txtW_Type.EditValue;
+                            cmd.Parameters["i_w_type"].Direction = ParameterDirection.Input;
+
+                            string sUserNmae = string.Empty;
+                            if (string.IsNullOrEmpty(this.txtInsert_User.Text))
+                            {
+                                sUserNmae = UserInfo.instance().Name;
+                            }
+                            else
+                            {
+                                sUserNmae = txtInsert_User.EditValue.ToString();
+                            }
+                            cmd.Parameters.Add(new MySqlParameter("i_insert_user", MySqlDbType.VarChar));
+                            cmd.Parameters["i_insert_user"].Value = sUserNmae;
+                            cmd.Parameters["i_insert_user"].Direction = ParameterDirection.Input;
+
+                            string sInsert_date = string.Empty;
+                            sInsert_date = dtInsert_Date.EditValue.ToString();
+                            sInsert_date = sInsert_date.Replace("오전 ","").Replace("오후 ", "");
+
+                            cmd.Parameters.Add(new MySqlParameter("i_insert_date", MySqlDbType.DateTime));
+                            cmd.Parameters["i_insert_date"].Value = Convert.ToDateTime(sInsert_date);
+                            cmd.Parameters["i_insert_date"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_w_info", MySqlDbType.VarChar));
+                            cmd.Parameters["i_w_info"].Value = txtW_Info.EditValue;
+                            cmd.Parameters["i_w_info"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_idx", MySqlDbType.Int32));
+                            cmd.Parameters["o_idx"].Direction = ParameterDirection.Output;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+
+                            cmd.ExecuteNonQuery();
+                            txtWork_Idx.EditValue = cmd.Parameters["o_idx"].Value.ToString();
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open1();
+            }
+        }
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM10_DELETE_01", con))
+                    {
+                        con.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                        cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtWork_Idx.EditValue);
+                        cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+
+                        cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                        cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            txtWork_Idx.EditValue = "0";
+            Open1();
+        }
+
     }
 }

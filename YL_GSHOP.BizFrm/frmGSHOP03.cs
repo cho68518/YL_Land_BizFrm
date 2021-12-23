@@ -306,14 +306,14 @@ namespace YL_GSHOP.BizFrm
             string sADDR = txtU_ADDR.EditValue.ToString();
             string sU_NAME = txtU_NAME.EditValue.ToString();
 
-            GSHOP03_RPT report = new GSHOP03_RPT();
-            report.Parameters["TEL_NO"].Value = sTEL_NO;
-            report.Parameters["MEMBER_TYPE"].Value = sMEMBER_TYPE;
-            report.Parameters["U_NAME"].Value = sU_NAME;
-            report.Parameters["Addr"].Value = sADDR;
+            //GSHOP03_RPT report = new GSHOP03_RPT();
+            //report.Parameters["TEL_NO"].Value = sTEL_NO;
+            //report.Parameters["MEMBER_TYPE"].Value = sMEMBER_TYPE;
+            //report.Parameters["U_NAME"].Value = sU_NAME;
+            //report.Parameters["Addr"].Value = sADDR;
 
-            report.DataSource = ds.Tables[0];
-            report.ShowPreview();
+            //report.DataSource = ds.Tables[0];
+            //report.ShowPreview();
 
         }
 

@@ -119,6 +119,7 @@ namespace YL_DONUT.BizFrm
             txtP_Code.EditValue = "0";
             rbShowType.EditValue = "Y";
 
+
             SetCmb();
         }
 
@@ -315,6 +316,10 @@ namespace YL_DONUT.BizFrm
             {
                 Open2();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                Open4();
+            }
         }
         private void Open1()
         {
@@ -370,7 +375,7 @@ namespace YL_DONUT.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl2.DataBind(ds);
-                            this.efwGridControl1.MyGridView.BestFitColumns();
+                            this.efwGridControl2.MyGridView.BestFitColumns();
 
                         }
                     }
@@ -405,7 +410,41 @@ namespace YL_DONUT.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl5.DataBind(ds);
-                            this.efwGridControl1.MyGridView.BestFitColumns();
+                            this.efwGridControl5.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
+        }
+        private void Open4()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN27_SELECT_06", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_query", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtQuery.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl6.DataBind(ds);
+                            this.efwGridControl6.MyGridView.BestFitColumns();
 
                         }
                     }
@@ -896,7 +935,7 @@ namespace YL_DONUT.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("i_ProdName", MySqlDbType.VarChar, 50);
-                        cmd.Parameters[0].Value = txtProdName.EditValue;
+                        cmd.Parameters[0].Value = txtP_NameQ.EditValue;
 
 
                         cmd.Parameters.Add("i_ShowType", MySqlDbType.VarChar, 1);

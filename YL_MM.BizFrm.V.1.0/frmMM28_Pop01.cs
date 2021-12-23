@@ -93,9 +93,9 @@ namespace YL_MM.BizFrm
             gridView11.Columns["stock_qty"].SummaryItem.FieldName = "stock_qty";
             gridView11.Columns["stock_qty"].SummaryItem.DisplayFormat = "{0}";
 
-            gridView12.Columns["ceo_pic_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView12.Columns["ceo_pic_qty"].SummaryItem.FieldName = "ceo_pic_qty";
-            gridView12.Columns["ceo_pic_qty"].SummaryItem.DisplayFormat = "{0}";
+            gridView12.Columns["qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView12.Columns["qty"].SummaryItem.FieldName = "qty";
+            gridView12.Columns["qty"].SummaryItem.DisplayFormat = "{0}";
 
             // 시작시 텝 1위치 지정
             if (txtCode_id.EditValue.ToString() == "1")
