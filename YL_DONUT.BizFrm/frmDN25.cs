@@ -97,7 +97,7 @@ namespace YL_DONUT.BizFrm
                 CodeAgent.MakeCodeControl(this.cmbDonut_Type, codeArray);
             }
 
-            cmbDonut_Type.EditValue = "4";
+            cmbDonut_Type.EditValue = "0";
         }
         
         private void efwGridControl1_Click(object sender, EventArgs e)
@@ -286,7 +286,7 @@ namespace YL_DONUT.BizFrm
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
-
+        // 저장
         private void efwSimpleButton4_Click(object sender, EventArgs e)
         {
 

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace YL_SCM.BizFrm
+namespace YL_DT.BizFrm
 {
     class MySQLConn : IDisposable
     {

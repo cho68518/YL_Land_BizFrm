@@ -1709,6 +1709,7 @@
             // 
             this.txtU_NICKNAME.ByteLength = 50;
             this.txtU_NICKNAME.EditValue2 = null;
+            this.txtU_NICKNAME.Enabled = false;
             this.txtU_NICKNAME.EraserGroup = "CLR1";
             this.txtU_NICKNAME.Location = new System.Drawing.Point(396, 62);
             this.txtU_NICKNAME.Name = "txtU_NICKNAME";
@@ -2047,7 +2048,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.Red;
+            this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
             this.layoutControlItem3.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem3.Control = this.txtU_NICKNAME;
             this.layoutControlItem3.CustomizationFormText = "부서코드";

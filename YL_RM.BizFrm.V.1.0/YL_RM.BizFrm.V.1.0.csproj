@@ -140,9 +140,6 @@
     <Reference Include="WinFormHtmlEditor">
       <HintPath>..\..\WinFormHtmlEditor.dll</HintPath>
     </Reference>
-    <Reference Include="YL_PM.BizFrm.V.1.0">
-      <HintPath>..\YL_PM.BizFrm.V.1.0\bin\Debug\YL_PM.BizFrm.V.1.0.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstantLib.cs" />

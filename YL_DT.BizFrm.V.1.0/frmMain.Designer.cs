@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
-            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.btnDT01 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwPnlBody = new Easy.Framework.WinForm.Control.efwPanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
@@ -39,23 +38,12 @@
             // 
             // efwPanelControl1
             // 
-            this.efwPanelControl1.Controls.Add(this.efwSimpleButton2);
             this.efwPanelControl1.Controls.Add(this.btnDT01);
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.efwPanelControl1.Location = new System.Drawing.Point(0, 0);
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(123, 718);
             this.efwPanelControl1.TabIndex = 15;
-            // 
-            // efwSimpleButton2
-            // 
-            this.efwSimpleButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.efwSimpleButton2.IsMultiLang = false;
-            this.efwSimpleButton2.Location = new System.Drawing.Point(2, 685);
-            this.efwSimpleButton2.Name = "efwSimpleButton2";
-            this.efwSimpleButton2.Size = new System.Drawing.Size(119, 31);
-            this.efwSimpleButton2.TabIndex = 3;
-            this.efwSimpleButton2.Text = "frmTest";
             // 
             // btnDT01
             // 
@@ -96,7 +84,6 @@
         #endregion
 
         private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl1;
-        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
         private Easy.Framework.WinForm.Control.efwSimpleButton btnDT01;
         private Easy.Framework.WinForm.Control.efwPanelControl efwPnlBody;
     }

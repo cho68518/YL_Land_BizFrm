@@ -5736,7 +5736,7 @@
             // 
             // bandedGridColumn84
             // 
-            this.bandedGridColumn84.Caption = "전월수량";
+            this.bandedGridColumn84.Caption = "수량";
             this.bandedGridColumn84.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn84.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn84.FieldName = "bef_qty";
@@ -5748,7 +5748,7 @@
             // 
             // bandedGridColumn85
             // 
-            this.bandedGridColumn85.Caption = "전월금액";
+            this.bandedGridColumn85.Caption = "금액";
             this.bandedGridColumn85.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn85.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn85.FieldName = "bef_amt";
@@ -5774,7 +5774,7 @@
             // 
             // bandedGridColumn86
             // 
-            this.bandedGridColumn86.Caption = "상품입고수량";
+            this.bandedGridColumn86.Caption = "상품";
             this.bandedGridColumn86.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn86.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn86.FieldName = "good_in_qty";
@@ -5786,7 +5786,7 @@
             // 
             // bandedGridColumn87
             // 
-            this.bandedGridColumn87.Caption = "생산수량";
+            this.bandedGridColumn87.Caption = "생산";
             this.bandedGridColumn87.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn87.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn87.FieldName = "prod_in_qty";
@@ -5798,7 +5798,7 @@
             // 
             // bandedGridColumn88
             // 
-            this.bandedGridColumn88.Caption = "입고금액";
+            this.bandedGridColumn88.Caption = "금액";
             this.bandedGridColumn88.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn88.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn88.FieldName = "in_amt";
@@ -5828,7 +5828,7 @@
             // 
             // bandedGridColumn89
             // 
-            this.bandedGridColumn89.Caption = "생산출고수량";
+            this.bandedGridColumn89.Caption = "생산";
             this.bandedGridColumn89.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn89.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn89.FieldName = "prod_out_qty";
@@ -5840,7 +5840,7 @@
             // 
             // bandedGridColumn90
             // 
-            this.bandedGridColumn90.Caption = "판매출고수량";
+            this.bandedGridColumn90.Caption = "판매";
             this.bandedGridColumn90.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn90.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn90.FieldName = "slae_out_qty";
@@ -5852,7 +5852,7 @@
             // 
             // bandedGridColumn91
             // 
-            this.bandedGridColumn91.Caption = "판촉출고수량";
+            this.bandedGridColumn91.Caption = "판촉";
             this.bandedGridColumn91.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn91.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn91.FieldName = "promotion_out_qty";
@@ -5864,7 +5864,7 @@
             // 
             // bandedGridColumn92
             // 
-            this.bandedGridColumn92.Caption = "반품입고수량";
+            this.bandedGridColumn92.Caption = "반품";
             this.bandedGridColumn92.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn92.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn92.FieldName = "back_out_qty";
@@ -5876,7 +5876,7 @@
             // 
             // bandedGridColumn70
             // 
-            this.bandedGridColumn70.Caption = "불량(폐기)출고";
+            this.bandedGridColumn70.Caption = "폐기";
             this.bandedGridColumn70.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn70.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn70.FieldName = "bad_out_qty";
@@ -5888,7 +5888,7 @@
             // 
             // bandedGridColumn71
             // 
-            this.bandedGridColumn71.Caption = "이동(본사)출고";
+            this.bandedGridColumn71.Caption = "본사";
             this.bandedGridColumn71.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn71.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn71.FieldName = "move_out_qty";
@@ -5900,7 +5900,7 @@
             // 
             // bandedGridColumn69
             // 
-            this.bandedGridColumn69.Caption = "출고금액";
+            this.bandedGridColumn69.Caption = "금액";
             this.bandedGridColumn69.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn69.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn69.FieldName = "out_amt";
@@ -5926,7 +5926,7 @@
             // 
             // bandedGridColumn93
             // 
-            this.bandedGridColumn93.Caption = "재고수량";
+            this.bandedGridColumn93.Caption = "수량";
             this.bandedGridColumn93.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn93.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn93.FieldName = "stock_qty";
@@ -5938,7 +5938,7 @@
             // 
             // bandedGridColumn94
             // 
-            this.bandedGridColumn94.Caption = "재고금액";
+            this.bandedGridColumn94.Caption = "금액";
             this.bandedGridColumn94.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn94.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn94.FieldName = "stock_amt";
@@ -6183,6 +6183,7 @@
             this.efwSimpleButton12.Size = new System.Drawing.Size(203, 32);
             this.efwSimpleButton12.TabIndex = 11;
             this.efwSimpleButton12.Text = "기초재고 수불 UPDATE";
+            this.efwSimpleButton12.Visible = false;
             this.efwSimpleButton12.Click += new System.EventHandler(this.efwSimpleButton12_Click);
             // 
             // efwSimpleButton10

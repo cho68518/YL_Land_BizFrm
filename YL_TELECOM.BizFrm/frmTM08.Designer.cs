@@ -348,7 +348,7 @@
             this.efwSimpleButton11.IsMultiLang = false;
             this.efwSimpleButton11.Location = new System.Drawing.Point(1294, 13);
             this.efwSimpleButton11.Name = "efwSimpleButton11";
-            this.efwSimpleButton11.Size = new System.Drawing.Size(227, 29);
+            this.efwSimpleButton11.Size = new System.Drawing.Size(225, 29);
             this.efwSimpleButton11.TabIndex = 98;
             this.efwSimpleButton11.Text = "월재고 마감처리(평균단가 산정)";
             this.efwSimpleButton11.Click += new System.EventHandler(this.efwSimpleButton11_Click);
@@ -489,6 +489,7 @@
             this.efwSimpleButton2.Size = new System.Drawing.Size(125, 29);
             this.efwSimpleButton2.TabIndex = 80;
             this.efwSimpleButton2.Text = "기초 재고로 이관";
+            this.efwSimpleButton2.Visible = false;
             this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click_1);
             // 
             // txtser_no

@@ -571,15 +571,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\YL_GM.BizFrm.V.1.0\YL_GM.BizFrm.V.1.0.csproj">
-      <Project>{5B7850A0-A628-4D0B-BC3F-FBCDB66DF433}</Project>
-      <Name>YL_GM.BizFrm.V.1.0</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YL_MA.BizFrm.V.1.0\YL_MA.BizFrm.V.1.0.csproj">
-      <Project>{E75E6209-991A-40F8-8F66-DC89D5AEF850}</Project>
-      <Name>YL_MA.BizFrm.V.1.0</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

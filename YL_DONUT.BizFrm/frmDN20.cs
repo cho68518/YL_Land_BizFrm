@@ -43,6 +43,7 @@ namespace YL_DONUT.BizFrm
 
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
+            dtOut_Date.EditValue = DateTime.Now;
             rbCompany.EditValue = "1";
             rbo_type.EditValue = "O";
 
@@ -561,6 +562,50 @@ namespace YL_DONUT.BizFrm
                 Open5();
             }
             
+        }
+
+        private void efwSimpleButton2_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+
+                        for (int i = 0; i < gridView4.DataRowCount; i++)
+                        {
+                            if (gridView4.GetRowCellValue(i, gridView4.Columns[3]).ToString().Length > 0)
+                            {
+                                using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DM20_SAVE01", con))
+                                {
+
+                                    con.Open();
+                                    cmd.CommandType = CommandType.StoredProcedure;
+
+                                    cmd.Parameters.Add("i_out_date", MySqlDbType.DateTime);
+                                    cmd.Parameters[0].Value = Convert.ToDateTime(dtOut_Date.EditValue);
+
+                                    cmd.Parameters.Add("i_out_p_code", MySqlDbType.Int32);
+                                    cmd.Parameters[1].Value = Convert.ToInt32(gridView4.GetRowCellValue(i, gridView4.Columns[1]).ToString());
+
+                                    cmd.Parameters.Add("i_qty", MySqlDbType.Int32);
+                                    cmd.Parameters[2].Value = Convert.ToInt32(gridView4.GetRowCellValue(i, gridView4.Columns[3]).ToString());
+
+                                    cmd.ExecuteNonQuery();
+                                    con.Close();
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+            }
+
         }
     }
 }

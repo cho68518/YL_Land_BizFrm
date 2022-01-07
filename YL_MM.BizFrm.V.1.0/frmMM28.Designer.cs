@@ -61,6 +61,7 @@
             this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.efwXtraTabControl1 = new Easy.Framework.WinForm.Control.efwXtraTabControl();
@@ -99,6 +100,7 @@
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwTopPanelControl1)).BeginInit();
             this.efwTopPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -290,7 +292,9 @@
             this.gridColumn53,
             this.gridColumn54,
             this.gridColumn56,
+            this.gridColumn23,
             this.gridColumn57,
+            this.gridColumn24,
             this.gridColumn61});
             this.gridView4.GridControl = this.efwGridControl4;
             this.gridView4.Name = "gridView4";
@@ -336,11 +340,22 @@
             // 
             // gridColumn56
             // 
-            this.gridColumn56.Caption = "가입일";
+            this.gridColumn56.Caption = "도넛라이프 가입일";
             this.gridColumn56.FieldName = "begin_date";
             this.gridColumn56.Name = "gridColumn56";
             this.gridColumn56.Visible = true;
             this.gridColumn56.VisibleIndex = 4;
+            this.gridColumn56.Width = 104;
+            // 
+            // gridColumn23
+            // 
+            this.gridColumn23.Caption = "G멀티샵 가입일";
+            this.gridColumn23.FieldName = "create_date";
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.OptionsColumn.AllowEdit = false;
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 5;
+            this.gridColumn23.Width = 113;
             // 
             // gridColumn57
             // 
@@ -348,7 +363,7 @@
             this.gridColumn57.FieldName = "u_chef_level";
             this.gridColumn57.Name = "gridColumn57";
             this.gridColumn57.Visible = true;
-            this.gridColumn57.VisibleIndex = 5;
+            this.gridColumn57.VisibleIndex = 6;
             // 
             // gridColumn61
             // 
@@ -358,7 +373,7 @@
             this.gridColumn61.FieldName = "stock_qty";
             this.gridColumn61.Name = "gridColumn61";
             this.gridColumn61.Visible = true;
-            this.gridColumn61.VisibleIndex = 6;
+            this.gridColumn61.VisibleIndex = 8;
             // 
             // efwXtraTabControl1
             // 
@@ -817,6 +832,14 @@
             this.gridColumn21.Visible = true;
             this.gridColumn21.VisibleIndex = 15;
             // 
+            // gridColumn24
+            // 
+            this.gridColumn24.Caption = "주주유무";
+            this.gridColumn24.FieldName = "is_stock_friend";
+            this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.Visible = true;
+            this.gridColumn24.VisibleIndex = 7;
+            // 
             // frmMM28
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -915,5 +938,7 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
         private Easy.Framework.WinForm.Control.efwTextEdit txtu_nickname;
         private DevExpress.XtraEditors.SplitterControl splitterControl1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
     }
 }

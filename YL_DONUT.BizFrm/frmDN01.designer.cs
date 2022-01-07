@@ -1195,8 +1195,6 @@
             this.gridColumn35.Name = "gridColumn35";
             this.gridColumn35.OptionsColumn.AllowEdit = false;
             this.gridColumn35.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.gridColumn35.Visible = true;
-            this.gridColumn35.VisibleIndex = 36;
             // 
             // gridColumn36
             // 

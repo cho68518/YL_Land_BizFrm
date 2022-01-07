@@ -105,6 +105,7 @@ namespace YL_GM.BizFrm
                     , new ColumnControlSet("small_code", cmbSmall_Code)
                     , new ColumnControlSet("sort", txtSort)
                     , new ColumnControlSet("use_yn", tbUse_YN)
+                    , new ColumnControlSet("tel_use_yn", rbtel_use_yn)
                     , new ColumnControlSet("remark", txtCustRemark)
                       );
 
@@ -892,6 +893,11 @@ namespace YL_GM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_Remark", MySqlDbType.VarChar));
                             cmd.Parameters["i_Remark"].Value = txtCustRemark.EditValue;
                             cmd.Parameters["i_Remark"].Direction = ParameterDirection.Input;
+
+
+                            cmd.Parameters.Add(new MySqlParameter("i_tel_use_yn", MySqlDbType.VarChar));
+                            cmd.Parameters["i_tel_use_yn"].Value = rbtel_use_yn.EditValue;
+                            cmd.Parameters["i_tel_use_yn"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_idx", MySqlDbType.Int32));
                             cmd.Parameters["o_idx"].Direction = ParameterDirection.Output;

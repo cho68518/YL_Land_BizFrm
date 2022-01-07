@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace YL_DONUT.BizFrm
 {
     public partial class frmDN28 : FrmBase
@@ -48,7 +49,7 @@ namespace YL_DONUT.BizFrm
             dtOut_Date.EditValue = DateTime.Now;
             txtType.EditValue = "입고";
             rbInput_Type_tab1.EditValue = "2";
-            rbG_Prod.EditValue = "1";
+            rbG_Prod.EditValue = "3";
 
             dtYearMonth.EditValue = DateTime.Now.ToString("yyyy-MM");
             dtYearMonth.Properties.Mask.EditMask = "yyyy-MM";

@@ -46,10 +46,12 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efwPanel = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.lb3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtU_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -87,10 +89,12 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.efwGridControl2 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
@@ -141,6 +145,7 @@
             // 
             // efwPanel
             // 
+            this.efwPanel.Controls.Add(this.lb3);
             this.efwPanel.Controls.Add(this.txtU_ID);
             this.efwPanel.Controls.Add(this.lb2);
             this.efwPanel.Controls.Add(this.lb1);
@@ -153,6 +158,25 @@
             this.efwPanel.Name = "efwPanel";
             this.efwPanel.Size = new System.Drawing.Size(1584, 53);
             this.efwPanel.TabIndex = 44;
+            // 
+            // lb3
+            // 
+            this.lb3.Appearance.BackColor = System.Drawing.Color.Honeydew;
+            this.lb3.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.lb3.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.lb3.Appearance.Options.UseBackColor = true;
+            this.lb3.Appearance.Options.UseFont = true;
+            this.lb3.Appearance.Options.UseForeColor = true;
+            this.lb3.Appearance.Options.UseTextOptions = true;
+            this.lb3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lb3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lb3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lb3.EraserGroup = null;
+            this.lb3.IsMultiLang = false;
+            this.lb3.Location = new System.Drawing.Point(612, 12);
+            this.lb3.Name = "lb3";
+            this.lb3.Size = new System.Drawing.Size(105, 26);
+            this.lb3.TabIndex = 89;
             // 
             // txtU_ID
             // 
@@ -175,7 +199,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(2, 23);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(1277, 437);
+            this.layoutControl2.Size = new System.Drawing.Size(1071, 437);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -211,7 +235,7 @@
             this.btnDispYes,
             this.repositoryItemMemoExEdit1,
             this.repositoryItemMemoEdit1});
-            this.efwGridControl1.Size = new System.Drawing.Size(1263, 426);
+            this.efwGridControl1.Size = new System.Drawing.Size(1057, 426);
             this.efwGridControl1.TabIndex = 13;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -226,6 +250,7 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn27,
             this.gridColumn11,
             this.gridColumn12,
             this.gridColumn9,
@@ -254,6 +279,15 @@
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // gridColumn27
+            // 
+            this.gridColumn27.Caption = "전환유무";
+            this.gridColumn27.FieldName = "gshop_yn";
+            this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.OptionsColumn.AllowEdit = false;
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 0;
+            // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "작성일시";
@@ -261,7 +295,7 @@
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 0;
+            this.gridColumn11.VisibleIndex = 1;
             this.gridColumn11.Width = 124;
             // 
             // gridColumn12
@@ -271,7 +305,7 @@
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 1;
+            this.gridColumn12.VisibleIndex = 2;
             // 
             // gridColumn9
             // 
@@ -280,7 +314,7 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 2;
+            this.gridColumn9.VisibleIndex = 3;
             this.gridColumn9.Width = 100;
             // 
             // gridColumn10
@@ -298,7 +332,7 @@
             this.gridColumn14.FieldName = "is_use2";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 3;
+            this.gridColumn14.VisibleIndex = 4;
             this.gridColumn14.Width = 60;
             // 
             // btnDispYes
@@ -317,7 +351,7 @@
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 4;
+            this.gridColumn13.VisibleIndex = 5;
             this.gridColumn13.Width = 185;
             // 
             // gridColumn4
@@ -327,7 +361,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 5;
+            this.gridColumn4.VisibleIndex = 6;
             this.gridColumn4.Width = 682;
             // 
             // gridColumn15
@@ -450,7 +484,7 @@
             this.layoutControlItem1});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1277, 437);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1071, 437);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem1
@@ -458,7 +492,7 @@
             this.layoutControlItem1.Control = this.efwGridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1267, 430);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1061, 430);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -556,7 +590,7 @@
             this.efwGroupControl2.IsMultiLang = false;
             this.efwGroupControl2.Location = new System.Drawing.Point(3, 88);
             this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(298, 462);
+            this.efwGroupControl2.Size = new System.Drawing.Size(504, 462);
             this.efwGroupControl2.TabIndex = 47;
             this.efwGroupControl2.Text = "MD 목록";
             // 
@@ -567,7 +601,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(2, 23);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(294, 437);
+            this.layoutControl1.Size = new System.Drawing.Size(500, 437);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -603,7 +637,7 @@
             this.repositoryItemButtonEdit1,
             this.repositoryItemMemoExEdit4,
             this.repositoryItemMemoEdit4});
-            this.efwGridControl2.Size = new System.Drawing.Size(280, 426);
+            this.efwGridControl2.Size = new System.Drawing.Size(486, 426);
             this.efwGridControl2.TabIndex = 14;
             this.efwGridControl2.TableName = "";
             serviceInfo6.InstanceName = "";
@@ -619,10 +653,12 @@
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn21,
             this.gridColumn22,
             this.gridColumn23,
             this.gridColumn24,
+            this.gridColumn21,
+            this.gridColumn25,
+            this.gridColumn26,
             this.gridColumn20});
             this.gridView2.DetailHeight = 327;
             this.gridView2.GridControl = this.efwGridControl2;
@@ -633,17 +669,6 @@
             this.gridView2.OptionsView.ColumnAutoWidth = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn21
-            // 
-            this.gridColumn21.Caption = "작성건수";
-            this.gridColumn21.DisplayFormat.FormatString = "###,###,###";
-            this.gridColumn21.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn21.FieldName = "cnt";
-            this.gridColumn21.Name = "gridColumn21";
-            this.gridColumn21.OptionsColumn.AllowEdit = false;
-            this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 0;
-            // 
             // gridColumn22
             // 
             this.gridColumn22.Caption = "닉네임";
@@ -653,7 +678,7 @@
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.OptionsColumn.AllowEdit = false;
             this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 1;
+            this.gridColumn22.VisibleIndex = 0;
             // 
             // gridColumn23
             // 
@@ -664,7 +689,7 @@
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 2;
+            this.gridColumn23.VisibleIndex = 1;
             // 
             // gridColumn24
             // 
@@ -675,7 +700,39 @@
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.OptionsColumn.AllowEdit = false;
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 3;
+            this.gridColumn24.VisibleIndex = 2;
+            this.gridColumn24.Width = 65;
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "작성건수";
+            this.gridColumn21.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn21.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn21.FieldName = "cnt";
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.OptionsColumn.AllowEdit = false;
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 3;
+            this.gridColumn21.Width = 56;
+            // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "전환건수";
+            this.gridColumn25.FieldName = "gshop_cnt";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.OptionsColumn.AllowEdit = false;
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 4;
+            this.gridColumn25.Width = 58;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "전환율(%)";
+            this.gridColumn26.FieldName = "rate";
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.OptionsColumn.AllowEdit = false;
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 5;
             // 
             // gridColumn20
             // 
@@ -731,7 +788,7 @@
             this.layoutControlItem2});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(294, 437);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(500, 437);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem2
@@ -739,13 +796,13 @@
             this.layoutControlItem2.Control = this.efwGridControl2;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(284, 430);
+            this.layoutControlItem2.Size = new System.Drawing.Size(490, 430);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // splitterControl1
             // 
-            this.splitterControl1.Location = new System.Drawing.Point(301, 88);
+            this.splitterControl1.Location = new System.Drawing.Point(507, 88);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(5, 462);
             this.splitterControl1.TabIndex = 48;
@@ -757,9 +814,9 @@
             this.efwGroupControl1.Controls.Add(this.layoutControl2);
             this.efwGroupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efwGroupControl1.IsMultiLang = false;
-            this.efwGroupControl1.Location = new System.Drawing.Point(306, 88);
+            this.efwGroupControl1.Location = new System.Drawing.Point(512, 88);
             this.efwGroupControl1.Name = "efwGroupControl1";
-            this.efwGroupControl1.Size = new System.Drawing.Size(1281, 462);
+            this.efwGroupControl1.Size = new System.Drawing.Size(1075, 462);
             this.efwGroupControl1.TabIndex = 49;
             this.efwGroupControl1.Text = "PR체험 스토리 상세현황";
             // 
@@ -877,5 +934,9 @@
         private Easy.Framework.WinForm.Control.efwLabel lb2;
         private Easy.Framework.WinForm.Control.efwLabel lb1;
         private Easy.Framework.WinForm.Control.efwTextEdit txtU_ID;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private Easy.Framework.WinForm.Control.efwLabel lb3;
     }
 }

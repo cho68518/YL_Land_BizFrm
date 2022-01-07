@@ -56,6 +56,7 @@ namespace YL_GSHOP.BizFrm
             this.efwGridControl2.BindControlSet(
                new ColumnControlSet("u_nickname", lb1)
              , new ColumnControlSet("cnt", lb2)
+             , new ColumnControlSet("gshop_cnt", lb3)
              , new ColumnControlSet("U_ID", txtU_ID)
            );
             this.efwGridControl2.Click += efwGridControl2_Click;
@@ -100,7 +101,7 @@ namespace YL_GSHOP.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl2.DataBind(ds);
-                            this.efwGridControl1.MyGridView.BestFitColumns();
+                            this.efwGridControl2.MyGridView.BestFitColumns();
                         }
                     }
                 }

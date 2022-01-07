@@ -57,17 +57,8 @@ namespace YL_TELECOM.BizFrm
             this.dtS_DATE.Visible = true;
             this.dtE_DATE.Visible = true;
             this.efwLabel2.Visible = true;
-            this.dtYearMonth.Visible = false;
-            this.btnExcelUpdate.Visible = true;
             this.rbUnit.Visible = false;
             this.dtYear.Visible = false;
-
-            dtYearMonth.EditValue = DateTime.Now.ToString("yyyy-MM");
-            dtYearMonth.Properties.Mask.EditMask = "yyyy-MM";
-            dtYearMonth.Properties.DisplayFormat.FormatString = "yyyy-MM";
-            dtYearMonth.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            dtYearMonth.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
-            dtYearMonth.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
 
             gridView1.OptionsView.ShowFooter = true;
             gridView1.Columns["amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
@@ -308,6 +299,10 @@ namespace YL_TELECOM.BizFrm
             {
                 Open3();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                Open4();
+            }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage10)
             {
                 AccCode();
@@ -365,7 +360,7 @@ namespace YL_TELECOM.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
-                        cmd.Parameters[0].Value = dtYearMonth.EditValue3.Substring(0, 4);
+                        cmd.Parameters[0].Value = dtYear.EditValue3.Substring(0, 4);
 
                         cmd.Parameters.Add("i_company", MySqlDbType.VarChar, 10);
                         cmd.Parameters[1].Value = cmbCompanyQ.EditValue;
@@ -405,7 +400,7 @@ namespace YL_TELECOM.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
-                        cmd.Parameters[0].Value = dtYearMonth.EditValue3.Substring(0, 4);
+                        cmd.Parameters[0].Value = dtYear.EditValue3.Substring(0, 4);
 
                         cmd.Parameters.Add("i_company", MySqlDbType.VarChar, 10);
                         cmd.Parameters[1].Value = cmbCompanyQ.EditValue;
@@ -422,6 +417,41 @@ namespace YL_TELECOM.BizFrm
                             sda.Fill(ds);
                             efwGridControl4.DataBind(ds);
                             this.efwGridControl4.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void Open4()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_TM_TM14_SELECT_06", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
+                        cmd.Parameters[0].Value = dtYear.EditValue3.Substring(0, 4);
+
+                        cmd.Parameters.Add("i_unit", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[1].Value = rbUnit.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl5.DataBind(ds);
+                            this.efwGridControl5.MyGridView.BestFitColumns();
                         }
                     }
                 }
@@ -772,6 +802,68 @@ namespace YL_TELECOM.BizFrm
                         e.Appearance.BackColor = Color.Ivory;
                         e.Appearance.BackColor2 = Color.Ivory; //그라데이션 처리
                     }
+                }
+            }
+        }
+
+        private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                this.efwLabel1.Text = "일자";
+                this.cmbCompanyQ.Visible = true;
+                this.efwLabel46.Visible = true;
+                this.dtYear.Visible = false;
+                this.dtS_DATE.Visible = true;
+                this.dtE_DATE.Visible = true;
+                this.efwLabel2.Visible = true;
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                this.efwLabel1.Text = "년도";
+                this.cmbCompanyQ.Visible = true;
+                this.efwLabel46.Visible = true;
+                this.dtYear.Visible = true;
+                this.dtS_DATE.Visible = false;
+                this.dtE_DATE.Visible = false;
+                this.efwLabel2.Visible = false;
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                this.efwLabel1.Text = "년도";
+                this.cmbCompanyQ.Visible = false;
+                this.efwLabel46.Visible = false;
+                this.dtYear.Visible = true;
+                this.dtS_DATE.Visible = false;
+                this.dtE_DATE.Visible = false;
+                this.efwLabel2.Visible = false;
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                this.efwLabel1.Text = "년도";
+                this.cmbCompanyQ.Visible = false;
+                this.efwLabel46.Visible = false;
+                this.dtYear.Visible = true;
+                this.dtS_DATE.Visible = false;
+                this.dtE_DATE.Visible = false;
+                this.efwLabel2.Visible = false;
+            }
+        }
+
+        private void gridView5_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (view == null)
+                return;
+
+            if (e.RowHandle != view.FocusedRowHandle)
+            {
+                DevExpress.XtraGrid.Views.Grid.GridView View = sender as GridView;
+                string err = View.GetRowCellDisplayText(e.RowHandle, View.Columns["middle_name"]);
+                if (err == "합계")//Cell의 값이 APPLE인 경우 Cell색 변경
+                {
+                    e.Appearance.BackColor = Color.Cornsilk;
+                    e.Appearance.BackColor2 = Color.Cornsilk; //그라데이션 처리
                 }
             }
         }
