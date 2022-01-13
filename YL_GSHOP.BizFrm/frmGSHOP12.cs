@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using YL_GSHOP.BizFrm.Dlg;
 using DevExpress.XtraGrid.Columns;
+using System.Data.SqlClient;
 
 namespace YL_GSHOP.BizFrm
 {
@@ -56,10 +57,22 @@ namespace YL_GSHOP.BizFrm
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
 
+            txtOverlap_Pic1.EditValue = "0";
+            txtOverlap_Pic2.EditValue = "0";
+            txtOverlap_Pic3.EditValue = "0";
+            txtOverlap_Pic4.EditValue = "0";
+            txtOverlap_Pic5.EditValue = "0";
+
+            txtOverlap_Loc1.EditValue = "0";
+            txtOverlap_Loc2.EditValue = "0";
+            txtOverlap_Loc3.EditValue = "0";
+            txtOverlap_Loc4.EditValue = "0";
+            txtOverlap_Loc5.EditValue = "0";
+
             gridView1.OptionsView.ShowFooter = true;
 
             this.efwGridControl1.BindControlSet(
-           new ColumnControlSet("pic_url1", txtPic_Url1)
+             new ColumnControlSet("pic_url1", txtPic_Url1)
            , new ColumnControlSet("pic_url2", txtPic_Url2)
            , new ColumnControlSet("pic_url3", txtPic_Url3)
            , new ColumnControlSet("pic_url4", txtPic_Url4)
@@ -71,16 +84,29 @@ namespace YL_GSHOP.BizFrm
            , new ColumnControlSet("shooting_date5", txtShooting_Date5)
            , new ColumnControlSet("story_id", txtstory_id)
            , new ColumnControlSet("is_use", chis_use)
-
+           , new ColumnControlSet("overlap_pic1", txtOverlap_Pic1)
+           , new ColumnControlSet("overlap_pic2", txtOverlap_Pic2)
+           , new ColumnControlSet("overlap_pic3", txtOverlap_Pic3)
+           , new ColumnControlSet("overlap_pic4", txtOverlap_Pic4)
+           , new ColumnControlSet("overlap_pic5", txtOverlap_Pic5)
+           , new ColumnControlSet("overlap_loc1", txtOverlap_Loc1)
+           , new ColumnControlSet("overlap_loc2", txtOverlap_Loc2)
+           , new ColumnControlSet("overlap_loc3", txtOverlap_Loc3)
+           , new ColumnControlSet("overlap_loc4", txtOverlap_Loc4)
+           , new ColumnControlSet("overlap_loc5", txtOverlap_Loc5)
+           , new ColumnControlSet("u_id", txtU_Id)
+           , new ColumnControlSet("u_nickname", lbU_Nickname)
             );
+
             this.efwGridControl1.Click += efwGridControl1_Click;
             gridView1.CustomUnboundColumnData += gridView1_CustomUnboundColumnData;
+
         }
         // picP_IMG.LoadAsync(cmd.Parameters["o_p_img"].Value.ToString());
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
-            if (dr != null && dr["pic_url1"].ToString() != "")
+            if (dr != null && dr["story_id"].ToString() != "")
             {
                 picBest_Pic1.LoadAsync(txtPic_Url1.EditValue.ToString());
                 picBest_Pic2.LoadAsync(txtPic_Url2.EditValue.ToString());
@@ -288,6 +314,50 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters["i_Shooting_Date5"].Value = txtShooting_Date5.EditValue;
                             cmd.Parameters["i_Shooting_Date5"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_pic1", MySqlDbType.Int32));
+                            cmd.Parameters["i_overlap_pic1"].Value = Convert.ToInt32(txtOverlap_Pic1.EditValue);
+                            cmd.Parameters["i_overlap_pic1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_pic2", MySqlDbType.Int32));
+                            cmd.Parameters["i_overlap_pic2"].Value = Convert.ToInt32(txtOverlap_Pic2.EditValue);
+                            cmd.Parameters["i_overlap_pic2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_pic3", MySqlDbType.Int32));
+                            cmd.Parameters["i_overlap_pic3"].Value = Convert.ToInt32(txtOverlap_Pic3.EditValue);
+                            cmd.Parameters["i_overlap_pic3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_pic4", MySqlDbType.Int32));
+                            cmd.Parameters["i_overlap_pic4"].Value = Convert.ToInt32(txtOverlap_Pic4.EditValue);
+                            cmd.Parameters["i_overlap_pic4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_pic5", MySqlDbType.Int32));
+                            cmd.Parameters["i_overlap_pic5"].Value = Convert.ToInt32(txtOverlap_Pic5.EditValue);
+                            cmd.Parameters["i_overlap_pic5"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_Loc1", MySqlDbType.Int32));
+                            cmd.Parameters["i_overlap_Loc1"].Value = Convert.ToInt32(txtOverlap_Loc1.EditValue);
+                            cmd.Parameters["i_overlap_Loc1"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_Loc2", MySqlDbType.Int32));
+                            cmd.Parameters["i_overlap_Loc2"].Value = Convert.ToInt32(txtOverlap_Loc2.EditValue);
+                            cmd.Parameters["i_overlap_Loc2"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_Loc3", MySqlDbType.Int32));
+                            cmd.Parameters["i_overlap_Loc3"].Value = Convert.ToInt32(txtOverlap_Loc3.EditValue);
+                            cmd.Parameters["i_overlap_Loc3"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_Loc4", MySqlDbType.Int32));
+                            cmd.Parameters["i_overlap_Loc4"].Value = Convert.ToInt32(txtOverlap_Loc4.EditValue);
+                            cmd.Parameters["i_overlap_Loc4"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_Loc5", MySqlDbType.Int32));
+                            cmd.Parameters["i_overlap_Loc5"].Value = Convert.ToInt32(txtOverlap_Loc5.EditValue);
+                            cmd.Parameters["i_overlap_Loc5"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_customer_num", MySqlDbType.Int32));
+                            cmd.Parameters["i_customer_num"].Value = Convert.ToInt32(txtCustomer_Num.EditValue);
+                            cmd.Parameters["i_customer_num"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -302,6 +372,191 @@ namespace YL_GSHOP.BizFrm
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
                 Search();
+            }
+        }
+
+        private void Open1()
+        {
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                SqlCommand cmd = new SqlCommand();
+                sql.Query = " select t1.reg_date as reg_date, t3.u_nickname as u_nickname, t1.is_use as is_use, t2.image_url as pic_url1, " +
+                            "        t2.contents_id as contents_id, t2.order_key as order_key, t2.overlap_pic as overlap_pic, t2.overlap_loc as overlap_loc,  t2.customer_num as customer_num " +
+                            "   from domalife.story_list t1  " +
+                            "        inner join domalife.y_thumbnail_list t2 on t2.contents_id = t1.story_id  and t2.is_use = 'Y' " +
+                            "        inner join domalife.member_master    t3 on t3.u_id = t1.u_id    " +
+                            "   where t1.category_no = 249 and t1.u_id =  '" +  txtU_Id.EditValue +  "'  " +
+                            "  order by t1.story_id, t2.order_key ";
+
+                DataSet ds = sql.selectQueryDataSet();
+                gridControl1.DataSource = ds.Tables[0];
+            }
+        }
+
+        private void layoutView2_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            DataRow dr = (e.Row as DataRowView).Row;
+            string url = string.Empty;
+
+            if (e.Column.FieldName == "Image1")
+            {
+                url = dr["pic_url1"].ToString();
+            }
+
+            if (iconsCache.ContainsKey(url))
+            {
+                e.Value = iconsCache[url];
+                return;
+            }
+
+            if (url != "")
+            {
+                var request = WebRequest.Create(url);
+
+                using (var response = request.GetResponse())
+                {
+                    using (var stream = response.GetResponseStream())
+                    {
+                        e.Value = Bitmap.FromStream(stream);
+                        iconsCache.Add(url, (Bitmap)e.Value);
+                    }
+                }
+            }
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            Open1();
+        }
+
+
+        private void layoutView1_Click(object sender, EventArgs e)
+        {
+            txtContents_Id.EditValue = layoutView1.GetFocusedRowCellValue("contents_id").ToString();
+            txtOrder_Key.EditValue = layoutView1.GetFocusedRowCellValue("order_key").ToString();
+            cbIs_Use.EditValue = layoutView1.GetFocusedRowCellValue("is_use").ToString();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtstory_id.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 발모후기 스토리를 선택하세요!");
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP12_SAVE_03", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_story_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_story_id"].Value = Convert.ToInt32(txtContents_Id.EditValue);
+                            cmd.Parameters["i_story_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_order_key", MySqlDbType.Int32));
+                            cmd.Parameters["i_order_key"].Value = Convert.ToInt32(txtOrder_Key.EditValue);
+                            cmd.Parameters["i_order_key"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_use", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_use"].Value = cbIs_Use.EditValue;
+                            cmd.Parameters["i_is_use"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_pic", MySqlDbType.VarChar));
+                            cmd.Parameters["i_overlap_pic"].Value = Convert.ToInt32(txtOverlap_Pic.EditValue);
+                            cmd.Parameters["i_overlap_pic"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_overlap_Loc", MySqlDbType.VarChar));
+                            cmd.Parameters["i_overlap_Loc"].Value = Convert.ToInt32(txtOverlap_Loc.EditValue);
+                            cmd.Parameters["i_overlap_Loc"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open1();
+            }
+        }
+
+        private void gridControl1_DoubleClick(object sender, EventArgs e)
+        {
+            txtURL.EditValue = layoutView1.GetFocusedRowCellValue("pic_url1").ToString();
+            OpenDlg();
+        }
+
+        private void OpenDlg()
+        {
+            popup = new frmGSHOP12_Pop01();
+            //popup.Owner = this;
+
+            popup.pURL = txtURL.EditValue.ToString();
+
+
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                SqlCommand cmd = new SqlCommand();
+                sql.Query = " select t1.reg_date as reg_date, t1.is_use as is_use, t2.image_url as pic_url1, " +
+                            "        t2.contents_id as contents_id, t2.order_key as order_key, t2.overlap_pic as overlap_pic, t2.overlap_loc as overlap_loc" +
+                            "   from domalife.story_list t1  " +
+                            "        inner join domalife.y_thumbnail_list t2 on t2.contents_id = t1.story_id  and t2.is_use = 'Y' " +
+                            "   where t1.category_no = 249 and t1.u_id =  '" + txtU_Id.EditValue + "' and  t2.overlap_pic != 0 " +
+                            " union ALL " +
+                            " select t1.reg_date as reg_date, t2.is_use as is_use, t2.image_url as pic_url1, " +
+                            "        t2.contents_id as contents_id, t2.order_key as order_key, t2.overlap_pic as overlap_pic, t2.overlap_loc as overlap_loc " +
+                            "   from domalife.story_list t1 " +
+                            "        inner join domalife.y_thumbnail_list t2 on t2.contents_id = t1.story_id   and t2.is_use = 'Y' " +
+                            "  where t1.category_no = 249 and t1.u_id = '" + txtU_Id.EditValue + "'  AND " +
+                            "        t2.contents_id in (select overlap_pic " +
+                            "                             from domalife.story_list a " +
+                            "                                  inner join domalife.y_thumbnail_list b on b.contents_id = a.story_id   and a.is_use = 'Y' " +
+                            "                             where a.category_no = 249 and a.u_id = '" + txtU_Id.EditValue + "'  and overlap_pic != 0) and " +
+                            "        t2.order_key   in (select overlap_loc " +
+                            "                            from domalife.story_list a " +
+                            "                                 inner join domalife.y_thumbnail_list b on b.contents_id = a.story_id   and a.is_use = 'Y' " +
+                            "                            where a.category_no = 249 and a.u_id = '" + txtU_Id.EditValue + "' and overlap_loc != 0) "; 
+
+                DataSet ds = sql.selectQueryDataSet();
+                gridControl1.DataSource = ds.Tables[0];
+            }
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                SqlCommand cmd = new SqlCommand();
+                sql.Query = " select t1.reg_date as reg_date, t3.u_nickname as u_nickname, t1.is_use as is_use, t2.image_url as pic_url1, " +
+                            "        t2.contents_id as contents_id, t2.order_key as order_key, t2.overlap_pic as overlap_pic, t2.overlap_loc as overlap_loc" +
+                            "   from domalife.story_list t1  " +
+                            "        inner join domalife.y_thumbnail_list t2 on t2.contents_id = t1.story_id  and t2.is_use = 'Y' " +
+                            "        inner join domalife.member_master    t3 on t3.u_id = t1.u_id    " +
+                            "   where t1.category_no = 249 and t1.u_id =  '" + txtU_Id.EditValue + "' and  t2.overlap_pic = 0 " +
+                            "  order by t1.story_id, t2.order_key ";
+
+                DataSet ds = sql.selectQueryDataSet();
+                gridControl1.DataSource = ds.Tables[0];
             }
         }
     }

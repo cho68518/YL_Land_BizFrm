@@ -604,7 +604,11 @@ namespace YL_MM.BizFrm
 
                             cmd.Parameters.Add(new MySqlParameter("i_Account_Number", MySqlDbType.VarChar));
                             cmd.Parameters["i_Account_Number"].Value = txtAccount_Number.EditValue;
-                            cmd.Parameters["i_Account_Number"].Direction = ParameterDirection.Input;
+                            cmd.Parameters["i_Account_Number"].Direction = ParameterDirection.Input; 
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_code"].Value = txtPS_O_Code.EditValue;
+                            cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input; 
 
                             cmd.Parameters.Add(new MySqlParameter("o_return", MySqlDbType.VarChar));
                             cmd.Parameters["o_return"].Direction = ParameterDirection.Output;

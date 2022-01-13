@@ -42,8 +42,6 @@ namespace YL_MM.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
-            dtS_DATE.EditValue = DateTime.Now.ToString("yyyy") + "-01-01";
-            dtE_DATE.EditValue = DateTime.Now;
 
             this.efwGridControl4.BindControlSet(
                       new ColumnControlSet("u_id",txtu_id)
@@ -165,12 +163,6 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add("i_search_Name", MySqlDbType.VarChar, 50);
                         cmd.Parameters[1].Value = txtSearch.EditValue;
-
-                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[2].Value = dtS_DATE.EditValue3;
-
-                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[3].Value = dtE_DATE.EditValue3;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

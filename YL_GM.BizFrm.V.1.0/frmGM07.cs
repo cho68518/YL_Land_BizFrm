@@ -43,6 +43,14 @@ namespace YL_GM.BizFrm
             this.IsExcel = false;
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
+            rbUse_Member_Writing.EditValue = "Y";
+            rbUse_Reply.EditValue = "Y";
+            rbUse_Emoticon.EditValue = "Y";
+            rbC_Is_Use.EditValue = "Y";
+            rbUse_Photo_Upload.EditValue = "Y";
+            rbUse_Html.EditValue = "Y";
+            dtReg_Date.EditValue = DateTime.Now;
+            efwXtraTabControl1.SelectedTabPage = xtraTabPage1;
 
             gridView1.OptionsView.ShowFooter = true;
             this.efwGridControl1.BindControlSet(
@@ -110,6 +118,21 @@ namespace YL_GM.BizFrm
                       );
 
             this.efwGridControl6.Click += efwGridControl6_Click;
+
+            gridView7.OptionsView.ShowFooter = true;
+            this.efwGridControl7.BindControlSet(
+                      new ColumnControlSet("code", txtCode)
+                    , new ColumnControlSet("name", txtName)
+                    , new ColumnControlSet("is_use", rbC_Is_Use)
+                    , new ColumnControlSet("reg_date", dtReg_Date)
+                    , new ColumnControlSet("use_reply", rbUse_Reply)
+                    , new ColumnControlSet("use_photo_upload", rbUse_Photo_Upload)
+                    , new ColumnControlSet("use_member_writing", rbUse_Member_Writing)
+                    , new ColumnControlSet("use_html", rbUse_Html)
+                    , new ColumnControlSet("use_emoticon", rbUse_Emoticon)
+                    , new ColumnControlSet("title", txtC_Title)
+                    , new ColumnControlSet("hint_message", txtHint_Message)
+                   );
 
 
             cbis_use.EditValue = "Y";
@@ -220,6 +243,10 @@ namespace YL_GM.BizFrm
             if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage6)
             {
                 Open6();  //원가항목
+            }
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage7)
+            {
+                Open7();  // 스토리 카테고리
             }
         }
         //스토리 마스터
@@ -421,6 +448,40 @@ namespace YL_GM.BizFrm
                             sda.Fill(ds);
                             efwGridControl6.DataBind(ds);
                             this.efwGridControl6.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        public void Open7()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                string sCom = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM07_SELECT_06", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = cmbmajor_codeQ.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl7.DataBind(ds);
+                            this.efwGridControl7.MyGridView.BestFitColumns();
 
                         }
                     }
@@ -937,6 +998,97 @@ namespace YL_GM.BizFrm
         private void cmbmajor_codeQ_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void efwSimpleButton10_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtCode.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 카테코리 코드를 입력하세요!");
+                return;
+            }
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM07_SAVE_04", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_code", MySqlDbType.Int32));
+                            cmd.Parameters["i_code"].Value = Convert.ToInt32(txtCode.EditValue).ToString();
+                            cmd.Parameters["i_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_name"].Value = txtName.EditValue;
+                            cmd.Parameters["i_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_use", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_use"].Value = rbC_Is_Use.EditValue;
+                            cmd.Parameters["i_is_use"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_use_reply", MySqlDbType.VarChar));
+                            cmd.Parameters["i_use_reply"].Value = rbUse_Reply.EditValue;
+                            cmd.Parameters["i_use_reply"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_use_photo_upload", MySqlDbType.VarChar));
+                            cmd.Parameters["i_use_photo_upload"].Value = rbUse_Photo_Upload.EditValue;
+                            cmd.Parameters["i_use_photo_upload"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_use_member_writing", MySqlDbType.VarChar));
+                            cmd.Parameters["i_use_member_writing"].Value = rbUse_Member_Writing.EditValue;
+                            cmd.Parameters["i_use_member_writing"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_use_html", MySqlDbType.VarChar));
+                            cmd.Parameters["i_use_html"].Value = rbUse_Html.EditValue;
+                            cmd.Parameters["i_use_html"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_use_emoticon", MySqlDbType.VarChar));
+                            cmd.Parameters["i_use_emoticon"].Value = rbUse_Emoticon.EditValue;
+                            cmd.Parameters["i_use_emoticon"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_title", MySqlDbType.VarChar));
+                            cmd.Parameters["i_title"].Value = txtC_Title.EditValue;
+                            cmd.Parameters["i_title"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_hint_message", MySqlDbType.VarChar));
+                            cmd.Parameters["i_hint_message"].Value = txtHint_Message.EditValue;
+                            cmd.Parameters["i_hint_message"].Direction = ParameterDirection.Input;
+
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Open6();
+            }
+        }
+
+        private void efwSimpleButton11_Click(object sender, EventArgs e)
+        {
+
+            txtCode.EditValue = "";
+            txtName.EditValue = "";
+            rbUse_Member_Writing.EditValue = "Y";
+            rbUse_Reply.EditValue = "Y";
+            rbUse_Emoticon.EditValue = "Y";
+            rbC_Is_Use.EditValue = "Y";
+            rbUse_Photo_Upload.EditValue = "Y";
+            rbUse_Html.EditValue = "Y";
+            txtC_Title.EditValue = "";
+            txtHint_Message.EditValue = "";
+            dtReg_Date.EditValue = DateTime.Now;
         }
     }
 }

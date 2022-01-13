@@ -85,6 +85,7 @@
             this.Controls.Add(this.picImg);
             this.Controls.Add(this.panel1);
             this.Name = "frmGSHOP12_Pop01";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BEST 이미지";
             this.Load += new System.EventHandler(this.frmGSHOP12_Pop01_Load);
             this.panel1.ResumeLayout(false);

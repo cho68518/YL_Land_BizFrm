@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSHOP12));
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleDataBar formatConditionRuleDataBar1 = new DevExpress.XtraEditors.FormatConditionRuleDataBar();
+            this.layoutViewColumn9 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.txtURL = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtU_Id = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtstory_id = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtgshop_name = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -46,6 +51,41 @@
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
+            this.efwXtraTabControl1 = new Easy.Framework.WinForm.Control.efwXtraTabControl();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel11 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtCustomer_Num = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtOverlap_Loc5 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtOverlap_Pic5 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtOverlap_Loc4 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtOverlap_Pic4 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtOverlap_Loc3 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtOverlap_Pic3 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtOverlap_Loc2 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtOverlap_Pic2 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel10 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel9 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtOverlap_Loc1 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtOverlap_Pic1 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtShooting_Date5 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtShooting_Date4 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtShooting_Date3 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtShooting_Date2 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtShooting_Date1 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.chis_use = new Easy.Framework.WinForm.Control.efwCheckEdit();
+            this.efwLabel8 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.picBest_Pic5 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.picBest_Pic4 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.picBest_Pic3 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.picBest_Pic2 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.picBest_Pic1 = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGridControl1 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -82,33 +122,66 @@
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Image0 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
-            this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
-            this.txtShooting_Date5 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtShooting_Date4 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtShooting_Date3 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtShooting_Date2 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtShooting_Date1 = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.chis_use = new Easy.Framework.WinForm.Control.efwCheckEdit();
-            this.efwLabel8 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwLabel6 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.picBest_Pic5 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.picBest_Pic4 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.picBest_Pic3 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.picBest_Pic2 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.picBest_Pic1 = new Easy.Framework.WinForm.Control.efwPictureEdit();
-            this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.layoutView1 = new DevExpress.XtraGrid.Views.Layout.LayoutView();
+            this.layoutViewColumn1 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewColumn3 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.repositoryItemCheckEdit7 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.layoutViewColumn4 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.layoutViewColumn5 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewColumn6 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewColumn7 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewColumn2 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewColumn8 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.efwPanelControl2 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.cbIs_Use = new Easy.Framework.WinForm.Control.efwCheckEdit();
+            this.txtOrder_Key = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel16 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtContents_Id = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel17 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbU_Nickname = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel15 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtOverlap_Loc = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel13 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtOverlap_Pic = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel14 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
+            this.layoutViewField_layoutViewColumn1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewField_layoutViewColumn4 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewField_layoutViewColumn6 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewField_layoutViewColumn7 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewField_layoutViewColumn2 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewField_layoutViewColumn8 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewField_layoutViewColumn3 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewField_layoutViewColumn9 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewField_layoutViewColumn5 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtURL.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtU_Id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstory_id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtgshop_name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url5.Properties)).BeginInit();
@@ -120,6 +193,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).BeginInit();
+            this.efwXtraTabControl1.SuspendLayout();
+            this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
+            this.efwGroupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomer_Num.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chis_use.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit6)).BeginInit();
@@ -134,23 +234,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
-            this.efwGroupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chis_use.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic1.Properties)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).BeginInit();
+            this.efwPanelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbIs_Use.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOrder_Key.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContents_Id.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn5)).BeginInit();
             this.SuspendLayout();
+            // 
+            // layoutViewColumn9
+            // 
+            this.layoutViewColumn9.Caption = "고객순번";
+            this.layoutViewColumn9.FieldName = "customer_num";
+            this.layoutViewColumn9.LayoutViewField = this.layoutViewField_layoutViewColumn9;
+            this.layoutViewColumn9.Name = "layoutViewColumn9";
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.txtURL);
+            this.efwPanelControl1.Controls.Add(this.txtU_Id);
             this.efwPanelControl1.Controls.Add(this.txtstory_id);
             this.efwPanelControl1.Controls.Add(this.efwLabel3);
             this.efwPanelControl1.Controls.Add(this.txtgshop_name);
@@ -166,19 +284,45 @@
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(3, 35);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1401, 53);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1433, 53);
             this.efwPanelControl1.TabIndex = 41;
+            // 
+            // txtURL
+            // 
+            this.txtURL.EditValue2 = null;
+            this.txtURL.EraserGroup = "CLR1";
+            this.txtURL.Location = new System.Drawing.Point(927, 19);
+            this.txtURL.Name = "txtURL";
+            this.txtURL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtURL.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtURL.RequireMessage = null;
+            this.txtURL.Size = new System.Drawing.Size(168, 20);
+            this.txtURL.TabIndex = 59;
+            this.txtURL.Visible = false;
+            // 
+            // txtU_Id
+            // 
+            this.txtU_Id.EditValue2 = null;
+            this.txtU_Id.EraserGroup = "CLR1";
+            this.txtU_Id.Location = new System.Drawing.Point(689, 5);
+            this.txtU_Id.Name = "txtU_Id";
+            this.txtU_Id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtU_Id.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtU_Id.RequireMessage = null;
+            this.txtU_Id.Size = new System.Drawing.Size(10, 20);
+            this.txtU_Id.TabIndex = 54;
+            this.txtU_Id.Visible = false;
             // 
             // txtstory_id
             // 
             this.txtstory_id.EditValue2 = null;
             this.txtstory_id.EraserGroup = "CLR1";
-            this.txtstory_id.Location = new System.Drawing.Point(793, 28);
+            this.txtstory_id.Location = new System.Drawing.Point(689, 28);
             this.txtstory_id.Name = "txtstory_id";
             this.txtstory_id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtstory_id.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtstory_id.RequireMessage = null;
-            this.txtstory_id.Size = new System.Drawing.Size(91, 20);
+            this.txtstory_id.Size = new System.Drawing.Size(10, 20);
             this.txtstory_id.TabIndex = 51;
             this.txtstory_id.Visible = false;
             // 
@@ -208,12 +352,12 @@
             // 
             this.txtPic_Url5.EditValue2 = null;
             this.txtPic_Url5.EraserGroup = "CLR1";
-            this.txtPic_Url5.Location = new System.Drawing.Point(964, 28);
+            this.txtPic_Url5.Location = new System.Drawing.Point(725, 28);
             this.txtPic_Url5.Name = "txtPic_Url5";
             this.txtPic_Url5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPic_Url5.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPic_Url5.RequireMessage = null;
-            this.txtPic_Url5.Size = new System.Drawing.Size(29, 20);
+            this.txtPic_Url5.Size = new System.Drawing.Size(10, 20);
             this.txtPic_Url5.TabIndex = 48;
             this.txtPic_Url5.Visible = false;
             // 
@@ -221,12 +365,12 @@
             // 
             this.txtPic_Url4.EditValue2 = null;
             this.txtPic_Url4.EraserGroup = "CLR1";
-            this.txtPic_Url4.Location = new System.Drawing.Point(929, 28);
+            this.txtPic_Url4.Location = new System.Drawing.Point(712, 28);
             this.txtPic_Url4.Name = "txtPic_Url4";
             this.txtPic_Url4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPic_Url4.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPic_Url4.RequireMessage = null;
-            this.txtPic_Url4.Size = new System.Drawing.Size(29, 20);
+            this.txtPic_Url4.Size = new System.Drawing.Size(10, 20);
             this.txtPic_Url4.TabIndex = 47;
             this.txtPic_Url4.Visible = false;
             // 
@@ -234,12 +378,12 @@
             // 
             this.txtPic_Url3.EditValue2 = null;
             this.txtPic_Url3.EraserGroup = "CLR1";
-            this.txtPic_Url3.Location = new System.Drawing.Point(892, 28);
+            this.txtPic_Url3.Location = new System.Drawing.Point(700, 28);
             this.txtPic_Url3.Name = "txtPic_Url3";
             this.txtPic_Url3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPic_Url3.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPic_Url3.RequireMessage = null;
-            this.txtPic_Url3.Size = new System.Drawing.Size(29, 20);
+            this.txtPic_Url3.Size = new System.Drawing.Size(10, 20);
             this.txtPic_Url3.TabIndex = 46;
             this.txtPic_Url3.Visible = false;
             // 
@@ -247,12 +391,12 @@
             // 
             this.txtPic_Url2.EditValue2 = null;
             this.txtPic_Url2.EraserGroup = "CLR1";
-            this.txtPic_Url2.Location = new System.Drawing.Point(964, 6);
+            this.txtPic_Url2.Location = new System.Drawing.Point(725, 6);
             this.txtPic_Url2.Name = "txtPic_Url2";
             this.txtPic_Url2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPic_Url2.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPic_Url2.RequireMessage = null;
-            this.txtPic_Url2.Size = new System.Drawing.Size(29, 20);
+            this.txtPic_Url2.Size = new System.Drawing.Size(10, 20);
             this.txtPic_Url2.TabIndex = 45;
             this.txtPic_Url2.Visible = false;
             // 
@@ -260,12 +404,12 @@
             // 
             this.txtPic_Url1.EditValue2 = null;
             this.txtPic_Url1.EraserGroup = "CLR1";
-            this.txtPic_Url1.Location = new System.Drawing.Point(929, 6);
+            this.txtPic_Url1.Location = new System.Drawing.Point(712, 6);
             this.txtPic_Url1.Name = "txtPic_Url1";
             this.txtPic_Url1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPic_Url1.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPic_Url1.RequireMessage = null;
-            this.txtPic_Url1.Size = new System.Drawing.Size(29, 20);
+            this.txtPic_Url1.Size = new System.Drawing.Size(10, 20);
             this.txtPic_Url1.TabIndex = 44;
             this.txtPic_Url1.Visible = false;
             // 
@@ -323,6 +467,436 @@
             this.dtE_DATE.Size = new System.Drawing.Size(118, 20);
             this.dtE_DATE.TabIndex = 5;
             // 
+            // efwXtraTabControl1
+            // 
+            this.efwXtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efwXtraTabControl1.IsMultiLang = false;
+            this.efwXtraTabControl1.Location = new System.Drawing.Point(3, 88);
+            this.efwXtraTabControl1.Name = "efwXtraTabControl1";
+            this.efwXtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.efwXtraTabControl1.Size = new System.Drawing.Size(1433, 697);
+            this.efwXtraTabControl1.TabIndex = 48;
+            this.efwXtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2});
+            this.efwXtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.efwXtraTabControl1_SelectedPageChanged);
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Controls.Add(this.efwGroupControl2);
+            this.xtraTabPage1.Controls.Add(this.splitterControl1);
+            this.xtraTabPage1.Controls.Add(this.efwGridControl1);
+            this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Padding = new System.Windows.Forms.Padding(5);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1427, 666);
+            this.xtraTabPage1.Text = "일자별 발모후기현황";
+            // 
+            // efwGroupControl2
+            // 
+            this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
+            this.efwGroupControl2.Controls.Add(this.efwLabel11);
+            this.efwGroupControl2.Controls.Add(this.txtCustomer_Num);
+            this.efwGroupControl2.Controls.Add(this.txtOverlap_Loc5);
+            this.efwGroupControl2.Controls.Add(this.txtOverlap_Pic5);
+            this.efwGroupControl2.Controls.Add(this.txtOverlap_Loc4);
+            this.efwGroupControl2.Controls.Add(this.txtOverlap_Pic4);
+            this.efwGroupControl2.Controls.Add(this.txtOverlap_Loc3);
+            this.efwGroupControl2.Controls.Add(this.txtOverlap_Pic3);
+            this.efwGroupControl2.Controls.Add(this.txtOverlap_Loc2);
+            this.efwGroupControl2.Controls.Add(this.txtOverlap_Pic2);
+            this.efwGroupControl2.Controls.Add(this.efwLabel10);
+            this.efwGroupControl2.Controls.Add(this.efwLabel9);
+            this.efwGroupControl2.Controls.Add(this.txtOverlap_Loc1);
+            this.efwGroupControl2.Controls.Add(this.txtOverlap_Pic1);
+            this.efwGroupControl2.Controls.Add(this.txtShooting_Date5);
+            this.efwGroupControl2.Controls.Add(this.txtShooting_Date4);
+            this.efwGroupControl2.Controls.Add(this.txtShooting_Date3);
+            this.efwGroupControl2.Controls.Add(this.txtShooting_Date2);
+            this.efwGroupControl2.Controls.Add(this.txtShooting_Date1);
+            this.efwGroupControl2.Controls.Add(this.simpleButton2);
+            this.efwGroupControl2.Controls.Add(this.chis_use);
+            this.efwGroupControl2.Controls.Add(this.efwLabel8);
+            this.efwGroupControl2.Controls.Add(this.efwLabel7);
+            this.efwGroupControl2.Controls.Add(this.efwLabel6);
+            this.efwGroupControl2.Controls.Add(this.efwLabel4);
+            this.efwGroupControl2.Controls.Add(this.picBest_Pic5);
+            this.efwGroupControl2.Controls.Add(this.picBest_Pic4);
+            this.efwGroupControl2.Controls.Add(this.picBest_Pic3);
+            this.efwGroupControl2.Controls.Add(this.picBest_Pic2);
+            this.efwGroupControl2.Controls.Add(this.picBest_Pic1);
+            this.efwGroupControl2.Controls.Add(this.efwLabel5);
+            this.efwGroupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efwGroupControl2.IsMultiLang = false;
+            this.efwGroupControl2.Location = new System.Drawing.Point(5, 468);
+            this.efwGroupControl2.Name = "efwGroupControl2";
+            this.efwGroupControl2.Size = new System.Drawing.Size(1417, 193);
+            this.efwGroupControl2.TabIndex = 48;
+            this.efwGroupControl2.Text = "상세 이미지";
+            // 
+            // efwLabel11
+            // 
+            this.efwLabel11.EraserGroup = null;
+            this.efwLabel11.IsMultiLang = false;
+            this.efwLabel11.Location = new System.Drawing.Point(22, 67);
+            this.efwLabel11.Name = "efwLabel11";
+            this.efwLabel11.Size = new System.Drawing.Size(44, 14);
+            this.efwLabel11.TabIndex = 91;
+            this.efwLabel11.Text = "고객 순번";
+            // 
+            // txtCustomer_Num
+            // 
+            this.txtCustomer_Num.EditValue = "";
+            this.txtCustomer_Num.EditValue2 = null;
+            this.txtCustomer_Num.EraserGroup = "CLR1";
+            this.txtCustomer_Num.Location = new System.Drawing.Point(81, 64);
+            this.txtCustomer_Num.Name = "txtCustomer_Num";
+            this.txtCustomer_Num.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtCustomer_Num.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtCustomer_Num.RequireMessage = null;
+            this.txtCustomer_Num.Size = new System.Drawing.Size(43, 20);
+            this.txtCustomer_Num.TabIndex = 90;
+            // 
+            // txtOverlap_Loc5
+            // 
+            this.txtOverlap_Loc5.EditValue = "";
+            this.txtOverlap_Loc5.EditValue2 = null;
+            this.txtOverlap_Loc5.EraserGroup = "CLR1";
+            this.txtOverlap_Loc5.Location = new System.Drawing.Point(1212, 116);
+            this.txtOverlap_Loc5.Name = "txtOverlap_Loc5";
+            this.txtOverlap_Loc5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Loc5.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Loc5.RequireMessage = null;
+            this.txtOverlap_Loc5.Size = new System.Drawing.Size(43, 20);
+            this.txtOverlap_Loc5.TabIndex = 89;
+            // 
+            // txtOverlap_Pic5
+            // 
+            this.txtOverlap_Pic5.EditValue = "";
+            this.txtOverlap_Pic5.EditValue2 = null;
+            this.txtOverlap_Pic5.EraserGroup = "CLR1";
+            this.txtOverlap_Pic5.Location = new System.Drawing.Point(1212, 90);
+            this.txtOverlap_Pic5.Name = "txtOverlap_Pic5";
+            this.txtOverlap_Pic5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Pic5.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Pic5.RequireMessage = null;
+            this.txtOverlap_Pic5.Size = new System.Drawing.Size(91, 20);
+            this.txtOverlap_Pic5.TabIndex = 88;
+            // 
+            // txtOverlap_Loc4
+            // 
+            this.txtOverlap_Loc4.EditValue = "";
+            this.txtOverlap_Loc4.EditValue2 = null;
+            this.txtOverlap_Loc4.EraserGroup = "CLR1";
+            this.txtOverlap_Loc4.Location = new System.Drawing.Point(963, 116);
+            this.txtOverlap_Loc4.Name = "txtOverlap_Loc4";
+            this.txtOverlap_Loc4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Loc4.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Loc4.RequireMessage = null;
+            this.txtOverlap_Loc4.Size = new System.Drawing.Size(43, 20);
+            this.txtOverlap_Loc4.TabIndex = 87;
+            // 
+            // txtOverlap_Pic4
+            // 
+            this.txtOverlap_Pic4.EditValue = "";
+            this.txtOverlap_Pic4.EditValue2 = null;
+            this.txtOverlap_Pic4.EraserGroup = "CLR1";
+            this.txtOverlap_Pic4.Location = new System.Drawing.Point(963, 90);
+            this.txtOverlap_Pic4.Name = "txtOverlap_Pic4";
+            this.txtOverlap_Pic4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Pic4.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Pic4.RequireMessage = null;
+            this.txtOverlap_Pic4.Size = new System.Drawing.Size(91, 20);
+            this.txtOverlap_Pic4.TabIndex = 86;
+            // 
+            // txtOverlap_Loc3
+            // 
+            this.txtOverlap_Loc3.EditValue = "";
+            this.txtOverlap_Loc3.EditValue2 = null;
+            this.txtOverlap_Loc3.EraserGroup = "CLR1";
+            this.txtOverlap_Loc3.Location = new System.Drawing.Point(708, 116);
+            this.txtOverlap_Loc3.Name = "txtOverlap_Loc3";
+            this.txtOverlap_Loc3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Loc3.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Loc3.RequireMessage = null;
+            this.txtOverlap_Loc3.Size = new System.Drawing.Size(43, 20);
+            this.txtOverlap_Loc3.TabIndex = 85;
+            // 
+            // txtOverlap_Pic3
+            // 
+            this.txtOverlap_Pic3.EditValue = "";
+            this.txtOverlap_Pic3.EditValue2 = null;
+            this.txtOverlap_Pic3.EraserGroup = "CLR1";
+            this.txtOverlap_Pic3.Location = new System.Drawing.Point(708, 90);
+            this.txtOverlap_Pic3.Name = "txtOverlap_Pic3";
+            this.txtOverlap_Pic3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Pic3.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Pic3.RequireMessage = null;
+            this.txtOverlap_Pic3.Size = new System.Drawing.Size(91, 20);
+            this.txtOverlap_Pic3.TabIndex = 84;
+            // 
+            // txtOverlap_Loc2
+            // 
+            this.txtOverlap_Loc2.EditValue = "";
+            this.txtOverlap_Loc2.EditValue2 = null;
+            this.txtOverlap_Loc2.EraserGroup = "CLR1";
+            this.txtOverlap_Loc2.Location = new System.Drawing.Point(456, 116);
+            this.txtOverlap_Loc2.Name = "txtOverlap_Loc2";
+            this.txtOverlap_Loc2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Loc2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Loc2.RequireMessage = null;
+            this.txtOverlap_Loc2.Size = new System.Drawing.Size(43, 20);
+            this.txtOverlap_Loc2.TabIndex = 83;
+            // 
+            // txtOverlap_Pic2
+            // 
+            this.txtOverlap_Pic2.EditValue = "";
+            this.txtOverlap_Pic2.EditValue2 = null;
+            this.txtOverlap_Pic2.EraserGroup = "CLR1";
+            this.txtOverlap_Pic2.Location = new System.Drawing.Point(456, 90);
+            this.txtOverlap_Pic2.Name = "txtOverlap_Pic2";
+            this.txtOverlap_Pic2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Pic2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Pic2.RequireMessage = null;
+            this.txtOverlap_Pic2.Size = new System.Drawing.Size(91, 20);
+            this.txtOverlap_Pic2.TabIndex = 82;
+            // 
+            // efwLabel10
+            // 
+            this.efwLabel10.EraserGroup = null;
+            this.efwLabel10.IsMultiLang = false;
+            this.efwLabel10.Location = new System.Drawing.Point(147, 119);
+            this.efwLabel10.Name = "efwLabel10";
+            this.efwLabel10.Size = new System.Drawing.Size(20, 14);
+            this.efwLabel10.TabIndex = 81;
+            this.efwLabel10.Text = "위치";
+            // 
+            // efwLabel9
+            // 
+            this.efwLabel9.EraserGroup = null;
+            this.efwLabel9.IsMultiLang = false;
+            this.efwLabel9.Location = new System.Drawing.Point(147, 93);
+            this.efwLabel9.Name = "efwLabel9";
+            this.efwLabel9.Size = new System.Drawing.Size(32, 14);
+            this.efwLabel9.TabIndex = 80;
+            this.efwLabel9.Text = "중복ID";
+            // 
+            // txtOverlap_Loc1
+            // 
+            this.txtOverlap_Loc1.EditValue = "";
+            this.txtOverlap_Loc1.EditValue2 = null;
+            this.txtOverlap_Loc1.EraserGroup = "CLR1";
+            this.txtOverlap_Loc1.Location = new System.Drawing.Point(206, 116);
+            this.txtOverlap_Loc1.Name = "txtOverlap_Loc1";
+            this.txtOverlap_Loc1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Loc1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Loc1.RequireMessage = null;
+            this.txtOverlap_Loc1.Size = new System.Drawing.Size(43, 20);
+            this.txtOverlap_Loc1.TabIndex = 79;
+            // 
+            // txtOverlap_Pic1
+            // 
+            this.txtOverlap_Pic1.EditValue = "";
+            this.txtOverlap_Pic1.EditValue2 = null;
+            this.txtOverlap_Pic1.EraserGroup = "CLR1";
+            this.txtOverlap_Pic1.Location = new System.Drawing.Point(206, 90);
+            this.txtOverlap_Pic1.Name = "txtOverlap_Pic1";
+            this.txtOverlap_Pic1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Pic1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Pic1.RequireMessage = null;
+            this.txtOverlap_Pic1.Size = new System.Drawing.Size(91, 20);
+            this.txtOverlap_Pic1.TabIndex = 78;
+            // 
+            // txtShooting_Date5
+            // 
+            this.txtShooting_Date5.EditValue2 = null;
+            this.txtShooting_Date5.EraserGroup = "CLR1";
+            this.txtShooting_Date5.Location = new System.Drawing.Point(1212, 64);
+            this.txtShooting_Date5.Name = "txtShooting_Date5";
+            this.txtShooting_Date5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtShooting_Date5.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtShooting_Date5.RequireMessage = null;
+            this.txtShooting_Date5.Size = new System.Drawing.Size(91, 20);
+            this.txtShooting_Date5.TabIndex = 77;
+            // 
+            // txtShooting_Date4
+            // 
+            this.txtShooting_Date4.EditValue2 = null;
+            this.txtShooting_Date4.EraserGroup = "CLR1";
+            this.txtShooting_Date4.Location = new System.Drawing.Point(963, 64);
+            this.txtShooting_Date4.Name = "txtShooting_Date4";
+            this.txtShooting_Date4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtShooting_Date4.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtShooting_Date4.RequireMessage = null;
+            this.txtShooting_Date4.Size = new System.Drawing.Size(91, 20);
+            this.txtShooting_Date4.TabIndex = 76;
+            // 
+            // txtShooting_Date3
+            // 
+            this.txtShooting_Date3.EditValue2 = null;
+            this.txtShooting_Date3.EraserGroup = "CLR1";
+            this.txtShooting_Date3.Location = new System.Drawing.Point(708, 64);
+            this.txtShooting_Date3.Name = "txtShooting_Date3";
+            this.txtShooting_Date3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtShooting_Date3.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtShooting_Date3.RequireMessage = null;
+            this.txtShooting_Date3.Size = new System.Drawing.Size(91, 20);
+            this.txtShooting_Date3.TabIndex = 75;
+            // 
+            // txtShooting_Date2
+            // 
+            this.txtShooting_Date2.EditValue2 = null;
+            this.txtShooting_Date2.EraserGroup = "CLR1";
+            this.txtShooting_Date2.Location = new System.Drawing.Point(456, 64);
+            this.txtShooting_Date2.Name = "txtShooting_Date2";
+            this.txtShooting_Date2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtShooting_Date2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtShooting_Date2.RequireMessage = null;
+            this.txtShooting_Date2.Size = new System.Drawing.Size(91, 20);
+            this.txtShooting_Date2.TabIndex = 74;
+            // 
+            // txtShooting_Date1
+            // 
+            this.txtShooting_Date1.EditValue2 = null;
+            this.txtShooting_Date1.EraserGroup = "CLR1";
+            this.txtShooting_Date1.Location = new System.Drawing.Point(206, 64);
+            this.txtShooting_Date1.Name = "txtShooting_Date1";
+            this.txtShooting_Date1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtShooting_Date1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtShooting_Date1.RequireMessage = null;
+            this.txtShooting_Date1.Size = new System.Drawing.Size(91, 20);
+            this.txtShooting_Date1.TabIndex = 73;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(22, 93);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(102, 40);
+            this.simpleButton2.TabIndex = 72;
+            this.simpleButton2.Text = "저장";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // chis_use
+            // 
+            this.chis_use.EraserGroup = "CLR1";
+            this.chis_use.Location = new System.Drawing.Point(22, 36);
+            this.chis_use.Name = "chis_use";
+            this.chis_use.Properties.Caption = "노출유무";
+            this.chis_use.Properties.ValueChecked = "Y";
+            this.chis_use.Properties.ValueUnchecked = "N";
+            this.chis_use.Size = new System.Drawing.Size(72, 19);
+            this.chis_use.TabIndex = 70;
+            // 
+            // efwLabel8
+            // 
+            this.efwLabel8.EraserGroup = null;
+            this.efwLabel8.IsMultiLang = false;
+            this.efwLabel8.Location = new System.Drawing.Point(1212, 36);
+            this.efwLabel8.Name = "efwLabel8";
+            this.efwLabel8.Size = new System.Drawing.Size(30, 14);
+            this.efwLabel8.TabIndex = 69;
+            this.efwLabel8.Text = "촬영일";
+            // 
+            // efwLabel7
+            // 
+            this.efwLabel7.EraserGroup = null;
+            this.efwLabel7.IsMultiLang = false;
+            this.efwLabel7.Location = new System.Drawing.Point(963, 36);
+            this.efwLabel7.Name = "efwLabel7";
+            this.efwLabel7.Size = new System.Drawing.Size(30, 14);
+            this.efwLabel7.TabIndex = 68;
+            this.efwLabel7.Text = "촬영일";
+            // 
+            // efwLabel6
+            // 
+            this.efwLabel6.EraserGroup = null;
+            this.efwLabel6.IsMultiLang = false;
+            this.efwLabel6.Location = new System.Drawing.Point(708, 36);
+            this.efwLabel6.Name = "efwLabel6";
+            this.efwLabel6.Size = new System.Drawing.Size(30, 14);
+            this.efwLabel6.TabIndex = 67;
+            this.efwLabel6.Text = "촬영일";
+            // 
+            // efwLabel4
+            // 
+            this.efwLabel4.EraserGroup = null;
+            this.efwLabel4.IsMultiLang = false;
+            this.efwLabel4.Location = new System.Drawing.Point(456, 36);
+            this.efwLabel4.Name = "efwLabel4";
+            this.efwLabel4.Size = new System.Drawing.Size(30, 14);
+            this.efwLabel4.TabIndex = 66;
+            this.efwLabel4.Text = "촬영일";
+            // 
+            // picBest_Pic5
+            // 
+            this.picBest_Pic5.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picBest_Pic5.Location = new System.Drawing.Point(1318, 36);
+            this.picBest_Pic5.Name = "picBest_Pic5";
+            this.picBest_Pic5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picBest_Pic5.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picBest_Pic5.Size = new System.Drawing.Size(129, 105);
+            this.picBest_Pic5.TabIndex = 57;
+            // 
+            // picBest_Pic4
+            // 
+            this.picBest_Pic4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picBest_Pic4.Location = new System.Drawing.Point(1065, 36);
+            this.picBest_Pic4.Name = "picBest_Pic4";
+            this.picBest_Pic4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picBest_Pic4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picBest_Pic4.Size = new System.Drawing.Size(129, 105);
+            this.picBest_Pic4.TabIndex = 56;
+            // 
+            // picBest_Pic3
+            // 
+            this.picBest_Pic3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picBest_Pic3.Location = new System.Drawing.Point(811, 36);
+            this.picBest_Pic3.Name = "picBest_Pic3";
+            this.picBest_Pic3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picBest_Pic3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picBest_Pic3.Size = new System.Drawing.Size(129, 105);
+            this.picBest_Pic3.TabIndex = 55;
+            // 
+            // picBest_Pic2
+            // 
+            this.picBest_Pic2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picBest_Pic2.Location = new System.Drawing.Point(558, 36);
+            this.picBest_Pic2.Name = "picBest_Pic2";
+            this.picBest_Pic2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picBest_Pic2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picBest_Pic2.Size = new System.Drawing.Size(129, 105);
+            this.picBest_Pic2.TabIndex = 54;
+            // 
+            // picBest_Pic1
+            // 
+            this.picBest_Pic1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picBest_Pic1.Location = new System.Drawing.Point(306, 36);
+            this.picBest_Pic1.Name = "picBest_Pic1";
+            this.picBest_Pic1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picBest_Pic1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picBest_Pic1.Size = new System.Drawing.Size(129, 105);
+            this.picBest_Pic1.TabIndex = 53;
+            // 
+            // efwLabel5
+            // 
+            this.efwLabel5.EraserGroup = null;
+            this.efwLabel5.IsMultiLang = false;
+            this.efwLabel5.Location = new System.Drawing.Point(206, 36);
+            this.efwLabel5.Name = "efwLabel5";
+            this.efwLabel5.Size = new System.Drawing.Size(30, 14);
+            this.efwLabel5.TabIndex = 22;
+            this.efwLabel5.Text = "촬영일";
+            // 
+            // splitterControl1
+            // 
+            this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitterControl1.Location = new System.Drawing.Point(5, 463);
+            this.splitterControl1.Name = "splitterControl1";
+            this.splitterControl1.Size = new System.Drawing.Size(1417, 5);
+            this.splitterControl1.TabIndex = 47;
+            this.splitterControl1.TabStop = false;
+            // 
             // efwGridControl1
             // 
             this.efwGridControl1.BindSet = null;
@@ -347,7 +921,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.efwGridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.efwGridControl1.Location = new System.Drawing.Point(3, 88);
+            this.efwGridControl1.Location = new System.Drawing.Point(5, 5);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
             this.efwGridControl1.NowRowHandle = 0;
@@ -366,8 +940,8 @@
             this.repositoryItemCheckEdit4,
             this.repositoryItemCheckEdit5,
             this.repositoryItemCheckEdit6});
-            this.efwGridControl1.Size = new System.Drawing.Size(1401, 548);
-            this.efwGridControl1.TabIndex = 45;
+            this.efwGridControl1.Size = new System.Drawing.Size(1417, 458);
+            this.efwGridControl1.TabIndex = 46;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
             serviceInfo3.IsUserIDAdd = true;
@@ -377,7 +951,6 @@
             this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.efwGridControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.efwGridControl1_MouseMove);
             // 
             // gridView1
             // 
@@ -409,11 +982,25 @@
             this.gridColumn13,
             this.gridColumn17,
             this.gridColumn23,
-            this.gridColumn28});
+            this.gridColumn28,
+            this.gridColumn29,
+            this.gridColumn30,
+            this.gridColumn31,
+            this.gridColumn32,
+            this.gridColumn33,
+            this.gridColumn34,
+            this.gridColumn35,
+            this.gridColumn36,
+            this.gridColumn37,
+            this.gridColumn38,
+            this.gridColumn39,
+            this.gridColumn40});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowHeight = 100;
+            this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             // 
             // gridColumn1
             // 
@@ -688,6 +1275,80 @@
             this.gridColumn28.Visible = true;
             this.gridColumn28.VisibleIndex = 17;
             // 
+            // gridColumn29
+            // 
+            this.gridColumn29.Caption = "중복사진1";
+            this.gridColumn29.FieldName = "overlap_pic1";
+            this.gridColumn29.Name = "gridColumn29";
+            // 
+            // gridColumn30
+            // 
+            this.gridColumn30.Caption = "중복사진2";
+            this.gridColumn30.FieldName = "overlap_pic2";
+            this.gridColumn30.Name = "gridColumn30";
+            // 
+            // gridColumn31
+            // 
+            this.gridColumn31.Caption = "중복사진3";
+            this.gridColumn31.FieldName = "overlap_pic3";
+            this.gridColumn31.Name = "gridColumn31";
+            // 
+            // gridColumn32
+            // 
+            this.gridColumn32.Caption = "중복사진4";
+            this.gridColumn32.FieldName = "overlap_pic4";
+            this.gridColumn32.Name = "gridColumn32";
+            // 
+            // gridColumn33
+            // 
+            this.gridColumn33.Caption = "중복사진5";
+            this.gridColumn33.FieldName = "overlap_pic5";
+            this.gridColumn33.Name = "gridColumn33";
+            // 
+            // gridColumn34
+            // 
+            this.gridColumn34.Caption = "위치1";
+            this.gridColumn34.FieldName = "overlap_loc1";
+            this.gridColumn34.Name = "gridColumn34";
+            // 
+            // gridColumn35
+            // 
+            this.gridColumn35.Caption = "위치2";
+            this.gridColumn35.FieldName = "overlap_loc2";
+            this.gridColumn35.Name = "gridColumn35";
+            // 
+            // gridColumn36
+            // 
+            this.gridColumn36.Caption = "위치3";
+            this.gridColumn36.FieldName = "overlap_loc3";
+            this.gridColumn36.Name = "gridColumn36";
+            // 
+            // gridColumn37
+            // 
+            this.gridColumn37.Caption = "위치4";
+            this.gridColumn37.FieldName = "overlap_loc4";
+            this.gridColumn37.Name = "gridColumn37";
+            // 
+            // gridColumn38
+            // 
+            this.gridColumn38.Caption = "위치5";
+            this.gridColumn38.FieldName = "overlap_loc5";
+            this.gridColumn38.Name = "gridColumn38";
+            // 
+            // gridColumn39
+            // 
+            this.gridColumn39.Caption = "u_id";
+            this.gridColumn39.FieldName = "u_id";
+            this.gridColumn39.Name = "gridColumn39";
+            // 
+            // gridColumn40
+            // 
+            this.gridColumn40.Caption = "고객순번";
+            this.gridColumn40.FieldName = "customer_num";
+            this.gridColumn40.Name = "gridColumn40";
+            this.gridColumn40.Visible = true;
+            this.gridColumn40.VisibleIndex = 18;
+            // 
             // Image0
             // 
             this.Image0.Name = "Image0";
@@ -727,247 +1388,454 @@
             this.repositoryItemCheckEdit5.ValueChecked = "Y";
             this.repositoryItemCheckEdit5.ValueUnchecked = "N";
             // 
-            // splitterControl1
+            // xtraTabPage2
             // 
-            this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(3, 636);
-            this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(1401, 5);
-            this.splitterControl1.TabIndex = 46;
-            this.splitterControl1.TabStop = false;
+            this.xtraTabPage2.Controls.Add(this.gridControl1);
+            this.xtraTabPage2.Controls.Add(this.efwPanelControl2);
+            this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Padding = new System.Windows.Forms.Padding(5);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1427, 666);
+            this.xtraTabPage2.Text = "회원별 발모후기현황";
             // 
-            // efwGroupControl2
+            // gridControl1
             // 
-            this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
-            this.efwGroupControl2.Controls.Add(this.txtShooting_Date5);
-            this.efwGroupControl2.Controls.Add(this.txtShooting_Date4);
-            this.efwGroupControl2.Controls.Add(this.txtShooting_Date3);
-            this.efwGroupControl2.Controls.Add(this.txtShooting_Date2);
-            this.efwGroupControl2.Controls.Add(this.txtShooting_Date1);
-            this.efwGroupControl2.Controls.Add(this.simpleButton2);
-            this.efwGroupControl2.Controls.Add(this.chis_use);
-            this.efwGroupControl2.Controls.Add(this.efwLabel8);
-            this.efwGroupControl2.Controls.Add(this.efwLabel7);
-            this.efwGroupControl2.Controls.Add(this.efwLabel6);
-            this.efwGroupControl2.Controls.Add(this.efwLabel4);
-            this.efwGroupControl2.Controls.Add(this.picBest_Pic5);
-            this.efwGroupControl2.Controls.Add(this.picBest_Pic4);
-            this.efwGroupControl2.Controls.Add(this.picBest_Pic3);
-            this.efwGroupControl2.Controls.Add(this.picBest_Pic2);
-            this.efwGroupControl2.Controls.Add(this.picBest_Pic1);
-            this.efwGroupControl2.Controls.Add(this.efwLabel5);
-            this.efwGroupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efwGroupControl2.IsMultiLang = false;
-            this.efwGroupControl2.Location = new System.Drawing.Point(3, 641);
-            this.efwGroupControl2.Name = "efwGroupControl2";
-            this.efwGroupControl2.Size = new System.Drawing.Size(1401, 145);
-            this.efwGroupControl2.TabIndex = 47;
-            this.efwGroupControl2.Text = "상세 이미지";
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(5, 50);
+            this.gridControl1.MainView = this.layoutView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit7,
+            this.repositoryItemPictureEdit1});
+            this.gridControl1.Size = new System.Drawing.Size(1417, 611);
+            this.gridControl1.TabIndex = 50;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.layoutView1});
+            this.gridControl1.Click += new System.EventHandler(this.layoutView1_Click);
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
-            // txtShooting_Date5
+            // layoutView1
             // 
-            this.txtShooting_Date5.EditValue2 = null;
-            this.txtShooting_Date5.EraserGroup = "CLR1";
-            this.txtShooting_Date5.Location = new System.Drawing.Point(1136, 66);
-            this.txtShooting_Date5.Name = "txtShooting_Date5";
-            this.txtShooting_Date5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtShooting_Date5.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtShooting_Date5.RequireMessage = null;
-            this.txtShooting_Date5.Size = new System.Drawing.Size(91, 20);
-            this.txtShooting_Date5.TabIndex = 77;
+            this.layoutView1.CardMinSize = new System.Drawing.Size(190, 211);
+            this.layoutView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] {
+            this.layoutViewColumn1,
+            this.layoutViewColumn3,
+            this.layoutViewColumn4,
+            this.layoutViewColumn5,
+            this.layoutViewColumn6,
+            this.layoutViewColumn7,
+            this.layoutViewColumn2,
+            this.layoutViewColumn8,
+            this.layoutViewColumn9});
+            this.layoutView1.DetailHeight = 100;
+            gridFormatRule1.Column = this.layoutViewColumn9;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleDataBar1.PredefinedName = null;
+            gridFormatRule1.Rule = formatConditionRuleDataBar1;
+            this.layoutView1.FormatRules.Add(gridFormatRule1);
+            this.layoutView1.GridControl = this.gridControl1;
+            this.layoutView1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutViewField_layoutViewColumn5});
+            this.layoutView1.Name = "layoutView1";
+            this.layoutView1.OptionsCustomization.AllowSort = false;
+            this.layoutView1.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.ShowAlways;
+            this.layoutView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.layoutViewColumn7, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.layoutViewColumn6, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.layoutViewColumn9, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.layoutView1.TemplateCard = this.layoutViewCard1;
+            this.layoutView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.layoutView2_CustomUnboundColumnData);
+            this.layoutView1.Click += new System.EventHandler(this.layoutView1_Click);
             // 
-            // txtShooting_Date4
+            // layoutViewColumn1
             // 
-            this.txtShooting_Date4.EditValue2 = null;
-            this.txtShooting_Date4.EraserGroup = "CLR1";
-            this.txtShooting_Date4.Location = new System.Drawing.Point(887, 66);
-            this.txtShooting_Date4.Name = "txtShooting_Date4";
-            this.txtShooting_Date4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtShooting_Date4.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtShooting_Date4.RequireMessage = null;
-            this.txtShooting_Date4.Size = new System.Drawing.Size(91, 20);
-            this.txtShooting_Date4.TabIndex = 76;
+            this.layoutViewColumn1.Caption = "등록일자";
+            this.layoutViewColumn1.DisplayFormat.FormatString = "yyyy/M/d HH:mm:ss";
+            this.layoutViewColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.layoutViewColumn1.FieldName = "reg_date";
+            this.layoutViewColumn1.LayoutViewField = this.layoutViewField_layoutViewColumn1;
+            this.layoutViewColumn1.Name = "layoutViewColumn1";
+            this.layoutViewColumn1.OptionsColumn.AllowEdit = false;
+            this.layoutViewColumn1.OptionsColumn.AllowSize = false;
             // 
-            // txtShooting_Date3
+            // layoutViewColumn3
             // 
-            this.txtShooting_Date3.EditValue2 = null;
-            this.txtShooting_Date3.EraserGroup = "CLR1";
-            this.txtShooting_Date3.Location = new System.Drawing.Point(632, 66);
-            this.txtShooting_Date3.Name = "txtShooting_Date3";
-            this.txtShooting_Date3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtShooting_Date3.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtShooting_Date3.RequireMessage = null;
-            this.txtShooting_Date3.Size = new System.Drawing.Size(91, 20);
-            this.txtShooting_Date3.TabIndex = 75;
+            this.layoutViewColumn3.Caption = "노출유무";
+            this.layoutViewColumn3.ColumnEdit = this.repositoryItemCheckEdit7;
+            this.layoutViewColumn3.FieldName = "is_use";
+            this.layoutViewColumn3.LayoutViewField = this.layoutViewField_layoutViewColumn3;
+            this.layoutViewColumn3.Name = "layoutViewColumn3";
+            this.layoutViewColumn3.OptionsColumn.AllowEdit = false;
             // 
-            // txtShooting_Date2
+            // repositoryItemCheckEdit7
             // 
-            this.txtShooting_Date2.EditValue2 = null;
-            this.txtShooting_Date2.EraserGroup = "CLR1";
-            this.txtShooting_Date2.Location = new System.Drawing.Point(380, 66);
-            this.txtShooting_Date2.Name = "txtShooting_Date2";
-            this.txtShooting_Date2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtShooting_Date2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtShooting_Date2.RequireMessage = null;
-            this.txtShooting_Date2.Size = new System.Drawing.Size(91, 20);
-            this.txtShooting_Date2.TabIndex = 74;
+            this.repositoryItemCheckEdit7.AutoHeight = false;
+            this.repositoryItemCheckEdit7.Name = "repositoryItemCheckEdit7";
+            this.repositoryItemCheckEdit7.ValueChecked = "Y";
+            this.repositoryItemCheckEdit7.ValueUnchecked = "N";
             // 
-            // txtShooting_Date1
+            // layoutViewColumn4
             // 
-            this.txtShooting_Date1.EditValue2 = null;
-            this.txtShooting_Date1.EraserGroup = "CLR1";
-            this.txtShooting_Date1.Location = new System.Drawing.Point(130, 66);
-            this.txtShooting_Date1.Name = "txtShooting_Date1";
-            this.txtShooting_Date1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtShooting_Date1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtShooting_Date1.RequireMessage = null;
-            this.txtShooting_Date1.Size = new System.Drawing.Size(91, 20);
-            this.txtShooting_Date1.TabIndex = 73;
+            this.layoutViewColumn4.Caption = "이미지";
+            this.layoutViewColumn4.ColumnEdit = this.repositoryItemPictureEdit1;
+            this.layoutViewColumn4.FieldName = "Image1";
+            this.layoutViewColumn4.LayoutViewField = this.layoutViewField_layoutViewColumn4;
+            this.layoutViewColumn4.MinWidth = 100;
+            this.layoutViewColumn4.Name = "layoutViewColumn4";
+            this.layoutViewColumn4.OptionsColumn.AllowEdit = false;
+            this.layoutViewColumn4.OptionsColumn.AllowSize = false;
+            this.layoutViewColumn4.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             // 
-            // simpleButton2
+            // repositoryItemPictureEdit1
             // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(22, 63);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(79, 23);
-            this.simpleButton2.TabIndex = 72;
-            this.simpleButton2.Text = "저장";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
+            this.repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             // 
-            // chis_use
+            // layoutViewColumn5
             // 
-            this.chis_use.EraserGroup = "CLR1";
-            this.chis_use.Location = new System.Drawing.Point(22, 36);
-            this.chis_use.Name = "chis_use";
-            this.chis_use.Properties.Caption = "노출유무";
-            this.chis_use.Properties.ValueChecked = "Y";
-            this.chis_use.Properties.ValueUnchecked = "N";
-            this.chis_use.Size = new System.Drawing.Size(72, 19);
-            this.chis_use.TabIndex = 70;
+            this.layoutViewColumn5.Caption = "pic_url1";
+            this.layoutViewColumn5.FieldName = "pic_url1";
+            this.layoutViewColumn5.LayoutViewField = this.layoutViewField_layoutViewColumn5;
+            this.layoutViewColumn5.Name = "layoutViewColumn5";
+            this.layoutViewColumn5.OptionsColumn.AllowEdit = false;
             // 
-            // efwLabel8
+            // layoutViewColumn6
             // 
-            this.efwLabel8.EraserGroup = null;
-            this.efwLabel8.IsMultiLang = false;
-            this.efwLabel8.Location = new System.Drawing.Point(1136, 38);
-            this.efwLabel8.Name = "efwLabel8";
-            this.efwLabel8.Size = new System.Drawing.Size(30, 14);
-            this.efwLabel8.TabIndex = 69;
-            this.efwLabel8.Text = "촬영일";
+            this.layoutViewColumn6.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.layoutViewColumn6.AppearanceCell.ForeColor = System.Drawing.Color.Red;
+            this.layoutViewColumn6.AppearanceCell.Options.UseFont = true;
+            this.layoutViewColumn6.AppearanceCell.Options.UseForeColor = true;
+            this.layoutViewColumn6.AppearanceCell.Options.UseTextOptions = true;
+            this.layoutViewColumn6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.layoutViewColumn6.Caption = "ID";
+            this.layoutViewColumn6.FieldName = "contents_id";
+            this.layoutViewColumn6.LayoutViewField = this.layoutViewField_layoutViewColumn6;
+            this.layoutViewColumn6.Name = "layoutViewColumn6";
+            this.layoutViewColumn6.OptionsColumn.AllowEdit = false;
             // 
-            // efwLabel7
+            // layoutViewColumn7
             // 
-            this.efwLabel7.EraserGroup = null;
-            this.efwLabel7.IsMultiLang = false;
-            this.efwLabel7.Location = new System.Drawing.Point(887, 38);
-            this.efwLabel7.Name = "efwLabel7";
-            this.efwLabel7.Size = new System.Drawing.Size(30, 14);
-            this.efwLabel7.TabIndex = 68;
-            this.efwLabel7.Text = "촬영일";
+            this.layoutViewColumn7.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.layoutViewColumn7.AppearanceCell.ForeColor = System.Drawing.Color.Red;
+            this.layoutViewColumn7.AppearanceCell.Options.UseFont = true;
+            this.layoutViewColumn7.AppearanceCell.Options.UseForeColor = true;
+            this.layoutViewColumn7.AppearanceCell.Options.UseTextOptions = true;
+            this.layoutViewColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.layoutViewColumn7.Caption = "위치";
+            this.layoutViewColumn7.FieldName = "order_key";
+            this.layoutViewColumn7.LayoutViewField = this.layoutViewField_layoutViewColumn7;
+            this.layoutViewColumn7.Name = "layoutViewColumn7";
+            this.layoutViewColumn7.OptionsColumn.AllowEdit = false;
             // 
-            // efwLabel6
+            // layoutViewColumn2
             // 
-            this.efwLabel6.EraserGroup = null;
-            this.efwLabel6.IsMultiLang = false;
-            this.efwLabel6.Location = new System.Drawing.Point(632, 38);
-            this.efwLabel6.Name = "efwLabel6";
-            this.efwLabel6.Size = new System.Drawing.Size(30, 14);
-            this.efwLabel6.TabIndex = 67;
-            this.efwLabel6.Text = "촬영일";
+            this.layoutViewColumn2.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.layoutViewColumn2.AppearanceCell.Options.UseForeColor = true;
+            this.layoutViewColumn2.AppearanceCell.Options.UseTextOptions = true;
+            this.layoutViewColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.layoutViewColumn2.Caption = "중복 ID";
+            this.layoutViewColumn2.FieldName = "overlap_pic";
+            this.layoutViewColumn2.LayoutViewField = this.layoutViewField_layoutViewColumn2;
+            this.layoutViewColumn2.Name = "layoutViewColumn2";
+            this.layoutViewColumn2.OptionsColumn.AllowEdit = false;
             // 
-            // efwLabel4
+            // layoutViewColumn8
             // 
-            this.efwLabel4.EraserGroup = null;
-            this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(380, 38);
-            this.efwLabel4.Name = "efwLabel4";
-            this.efwLabel4.Size = new System.Drawing.Size(30, 14);
-            this.efwLabel4.TabIndex = 66;
-            this.efwLabel4.Text = "촬영일";
+            this.layoutViewColumn8.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.layoutViewColumn8.AppearanceCell.Options.UseForeColor = true;
+            this.layoutViewColumn8.AppearanceCell.Options.UseTextOptions = true;
+            this.layoutViewColumn8.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.layoutViewColumn8.Caption = "위치";
+            this.layoutViewColumn8.FieldName = "overlap_loc";
+            this.layoutViewColumn8.LayoutViewField = this.layoutViewField_layoutViewColumn8;
+            this.layoutViewColumn8.Name = "layoutViewColumn8";
+            this.layoutViewColumn8.OptionsColumn.AllowEdit = false;
             // 
-            // picBest_Pic5
+            // efwPanelControl2
             // 
-            this.picBest_Pic5.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBest_Pic5.Location = new System.Drawing.Point(1242, 38);
-            this.picBest_Pic5.Name = "picBest_Pic5";
-            this.picBest_Pic5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picBest_Pic5.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBest_Pic5.Size = new System.Drawing.Size(129, 105);
-            this.picBest_Pic5.TabIndex = 57;
-            this.picBest_Pic5.Click += new System.EventHandler(this.picBest_Pic5_DoubleClick);
+            this.efwPanelControl2.Controls.Add(this.simpleButton4);
+            this.efwPanelControl2.Controls.Add(this.simpleButton3);
+            this.efwPanelControl2.Controls.Add(this.simpleButton1);
+            this.efwPanelControl2.Controls.Add(this.cbIs_Use);
+            this.efwPanelControl2.Controls.Add(this.txtOrder_Key);
+            this.efwPanelControl2.Controls.Add(this.efwLabel16);
+            this.efwPanelControl2.Controls.Add(this.txtContents_Id);
+            this.efwPanelControl2.Controls.Add(this.efwLabel17);
+            this.efwPanelControl2.Controls.Add(this.lbU_Nickname);
+            this.efwPanelControl2.Controls.Add(this.efwLabel15);
+            this.efwPanelControl2.Controls.Add(this.txtOverlap_Loc);
+            this.efwPanelControl2.Controls.Add(this.efwLabel13);
+            this.efwPanelControl2.Controls.Add(this.txtOverlap_Pic);
+            this.efwPanelControl2.Controls.Add(this.efwLabel14);
+            this.efwPanelControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efwPanelControl2.Location = new System.Drawing.Point(5, 5);
+            this.efwPanelControl2.Name = "efwPanelControl2";
+            this.efwPanelControl2.Size = new System.Drawing.Size(1417, 45);
+            this.efwPanelControl2.TabIndex = 49;
             // 
-            // picBest_Pic4
+            // simpleButton4
             // 
-            this.picBest_Pic4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBest_Pic4.Location = new System.Drawing.Point(989, 38);
-            this.picBest_Pic4.Name = "picBest_Pic4";
-            this.picBest_Pic4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picBest_Pic4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBest_Pic4.Size = new System.Drawing.Size(129, 105);
-            this.picBest_Pic4.TabIndex = 56;
-            this.picBest_Pic4.Click += new System.EventHandler(this.picBest_Pic4_DoubleClick);
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(1261, 8);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(147, 29);
+            this.simpleButton4.TabIndex = 75;
+            this.simpleButton4.Text = "중복 사진 제외현황";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
-            // picBest_Pic3
+            // simpleButton3
             // 
-            this.picBest_Pic3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBest_Pic3.Location = new System.Drawing.Point(735, 38);
-            this.picBest_Pic3.Name = "picBest_Pic3";
-            this.picBest_Pic3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picBest_Pic3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBest_Pic3.Size = new System.Drawing.Size(129, 105);
-            this.picBest_Pic3.TabIndex = 55;
-            this.picBest_Pic3.Click += new System.EventHandler(this.picBest_Pic3_DoubleClick);
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(1108, 8);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(147, 29);
+            this.simpleButton3.TabIndex = 74;
+            this.simpleButton3.Text = "중복 사진현황";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
-            // picBest_Pic2
+            // simpleButton1
             // 
-            this.picBest_Pic2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBest_Pic2.Location = new System.Drawing.Point(482, 38);
-            this.picBest_Pic2.Name = "picBest_Pic2";
-            this.picBest_Pic2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picBest_Pic2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBest_Pic2.Size = new System.Drawing.Size(129, 105);
-            this.picBest_Pic2.TabIndex = 54;
-            this.picBest_Pic2.Click += new System.EventHandler(this.picBest_Pic2_DoubleClick);
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(842, 8);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(111, 29);
+            this.simpleButton1.TabIndex = 73;
+            this.simpleButton1.Text = "저장";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // picBest_Pic1
+            // cbIs_Use
             // 
-            this.picBest_Pic1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.picBest_Pic1.Location = new System.Drawing.Point(230, 38);
-            this.picBest_Pic1.Name = "picBest_Pic1";
-            this.picBest_Pic1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picBest_Pic1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBest_Pic1.Size = new System.Drawing.Size(129, 105);
-            this.picBest_Pic1.TabIndex = 53;
-            this.picBest_Pic1.Click += new System.EventHandler(this.picBest_Pic1_DoubleClick);
+            this.cbIs_Use.Location = new System.Drawing.Point(745, 13);
+            this.cbIs_Use.Name = "cbIs_Use";
+            this.cbIs_Use.Properties.Caption = "노출유무";
+            this.cbIs_Use.Properties.ValueChecked = "Y";
+            this.cbIs_Use.Properties.ValueUnchecked = "N";
+            this.cbIs_Use.Size = new System.Drawing.Size(91, 19);
+            this.cbIs_Use.TabIndex = 69;
             // 
-            // efwLabel5
+            // txtOrder_Key
             // 
-            this.efwLabel5.EraserGroup = null;
-            this.efwLabel5.IsMultiLang = false;
-            this.efwLabel5.Location = new System.Drawing.Point(130, 38);
-            this.efwLabel5.Name = "efwLabel5";
-            this.efwLabel5.Size = new System.Drawing.Size(30, 14);
-            this.efwLabel5.TabIndex = 22;
-            this.efwLabel5.Text = "촬영일";
+            this.txtOrder_Key.EditValue2 = null;
+            this.txtOrder_Key.Enabled = false;
+            this.txtOrder_Key.EraserGroup = "CLR1";
+            this.txtOrder_Key.Location = new System.Drawing.Point(428, 12);
+            this.txtOrder_Key.Name = "txtOrder_Key";
+            this.txtOrder_Key.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOrder_Key.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOrder_Key.RequireMessage = null;
+            this.txtOrder_Key.Size = new System.Drawing.Size(37, 20);
+            this.txtOrder_Key.TabIndex = 68;
+            // 
+            // efwLabel16
+            // 
+            this.efwLabel16.EraserGroup = null;
+            this.efwLabel16.IsMultiLang = false;
+            this.efwLabel16.Location = new System.Drawing.Point(386, 15);
+            this.efwLabel16.Name = "efwLabel16";
+            this.efwLabel16.Size = new System.Drawing.Size(20, 14);
+            this.efwLabel16.TabIndex = 67;
+            this.efwLabel16.Text = "위치";
+            // 
+            // txtContents_Id
+            // 
+            this.txtContents_Id.EditValue2 = null;
+            this.txtContents_Id.Enabled = false;
+            this.txtContents_Id.EraserGroup = "CLR1";
+            this.txtContents_Id.Location = new System.Drawing.Point(301, 12);
+            this.txtContents_Id.Name = "txtContents_Id";
+            this.txtContents_Id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtContents_Id.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtContents_Id.RequireMessage = null;
+            this.txtContents_Id.Size = new System.Drawing.Size(67, 20);
+            this.txtContents_Id.TabIndex = 66;
+            // 
+            // efwLabel17
+            // 
+            this.efwLabel17.EraserGroup = null;
+            this.efwLabel17.IsMultiLang = false;
+            this.efwLabel17.Location = new System.Drawing.Point(247, 15);
+            this.efwLabel17.Name = "efwLabel17";
+            this.efwLabel17.Size = new System.Drawing.Size(36, 14);
+            this.efwLabel17.TabIndex = 65;
+            this.efwLabel17.Text = "선택 ID";
+            // 
+            // lbU_Nickname
+            // 
+            this.lbU_Nickname.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.lbU_Nickname.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lbU_Nickname.Appearance.Options.UseFont = true;
+            this.lbU_Nickname.Appearance.Options.UseForeColor = true;
+            this.lbU_Nickname.EraserGroup = null;
+            this.lbU_Nickname.IsMultiLang = false;
+            this.lbU_Nickname.Location = new System.Drawing.Point(81, 14);
+            this.lbU_Nickname.Name = "lbU_Nickname";
+            this.lbU_Nickname.Size = new System.Drawing.Size(0, 18);
+            this.lbU_Nickname.TabIndex = 60;
+            // 
+            // efwLabel15
+            // 
+            this.efwLabel15.EraserGroup = null;
+            this.efwLabel15.IsMultiLang = false;
+            this.efwLabel15.Location = new System.Drawing.Point(26, 15);
+            this.efwLabel15.Name = "efwLabel15";
+            this.efwLabel15.Size = new System.Drawing.Size(30, 14);
+            this.efwLabel15.TabIndex = 59;
+            this.efwLabel15.Text = "닉네임";
+            // 
+            // txtOverlap_Loc
+            // 
+            this.txtOverlap_Loc.EditValue2 = null;
+            this.txtOverlap_Loc.EraserGroup = "CLR1";
+            this.txtOverlap_Loc.Location = new System.Drawing.Point(676, 12);
+            this.txtOverlap_Loc.Name = "txtOverlap_Loc";
+            this.txtOverlap_Loc.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Loc.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Loc.RequireMessage = null;
+            this.txtOverlap_Loc.Size = new System.Drawing.Size(37, 20);
+            this.txtOverlap_Loc.TabIndex = 58;
+            // 
+            // efwLabel13
+            // 
+            this.efwLabel13.EraserGroup = null;
+            this.efwLabel13.IsMultiLang = false;
+            this.efwLabel13.Location = new System.Drawing.Point(634, 15);
+            this.efwLabel13.Name = "efwLabel13";
+            this.efwLabel13.Size = new System.Drawing.Size(20, 14);
+            this.efwLabel13.TabIndex = 57;
+            this.efwLabel13.Text = "위치";
+            // 
+            // txtOverlap_Pic
+            // 
+            this.txtOverlap_Pic.EditValue2 = null;
+            this.txtOverlap_Pic.EraserGroup = "CLR1";
+            this.txtOverlap_Pic.Location = new System.Drawing.Point(549, 12);
+            this.txtOverlap_Pic.Name = "txtOverlap_Pic";
+            this.txtOverlap_Pic.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtOverlap_Pic.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOverlap_Pic.RequireMessage = null;
+            this.txtOverlap_Pic.Size = new System.Drawing.Size(67, 20);
+            this.txtOverlap_Pic.TabIndex = 56;
+            // 
+            // efwLabel14
+            // 
+            this.efwLabel14.EraserGroup = null;
+            this.efwLabel14.IsMultiLang = false;
+            this.efwLabel14.Location = new System.Drawing.Point(495, 15);
+            this.efwLabel14.Name = "efwLabel14";
+            this.efwLabel14.Size = new System.Drawing.Size(36, 14);
+            this.efwLabel14.TabIndex = 55;
+            this.efwLabel14.Text = "중복 ID";
+            // 
+            // layoutViewCard1
+            // 
+            this.layoutViewCard1.CustomizationFormText = "TemplateCard";
+            this.layoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+            this.layoutViewCard1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutViewField_layoutViewColumn1,
+            this.layoutViewField_layoutViewColumn4,
+            this.layoutViewField_layoutViewColumn6,
+            this.layoutViewField_layoutViewColumn7,
+            this.layoutViewField_layoutViewColumn2,
+            this.layoutViewField_layoutViewColumn8,
+            this.layoutViewField_layoutViewColumn3,
+            this.layoutViewField_layoutViewColumn9});
+            this.layoutViewCard1.Name = "layoutViewCard1";
+            this.layoutViewCard1.OptionsItemText.TextToControlDistance = 5;
+            this.layoutViewCard1.Text = "TemplateCard";
+            // 
+            // layoutViewField_layoutViewColumn1
+            // 
+            this.layoutViewField_layoutViewColumn1.EditorPreferredWidth = 87;
+            this.layoutViewField_layoutViewColumn1.Location = new System.Drawing.Point(0, 24);
+            this.layoutViewField_layoutViewColumn1.Name = "layoutViewField_layoutViewColumn1";
+            this.layoutViewField_layoutViewColumn1.Size = new System.Drawing.Size(140, 24);
+            this.layoutViewField_layoutViewColumn1.TextSize = new System.Drawing.Size(44, 14);
+            // 
+            // layoutViewField_layoutViewColumn4
+            // 
+            this.layoutViewField_layoutViewColumn4.EditorPreferredWidth = 160;
+            this.layoutViewField_layoutViewColumn4.Location = new System.Drawing.Point(0, 48);
+            this.layoutViewField_layoutViewColumn4.MaxSize = new System.Drawing.Size(100, 100);
+            this.layoutViewField_layoutViewColumn4.MinSize = new System.Drawing.Size(100, 100);
+            this.layoutViewField_layoutViewColumn4.Name = "layoutViewField_layoutViewColumn4";
+            this.layoutViewField_layoutViewColumn4.Size = new System.Drawing.Size(213, 100);
+            this.layoutViewField_layoutViewColumn4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutViewField_layoutViewColumn4.StartNewLine = true;
+            this.layoutViewField_layoutViewColumn4.TextSize = new System.Drawing.Size(44, 14);
+            // 
+            // layoutViewField_layoutViewColumn6
+            // 
+            this.layoutViewField_layoutViewColumn6.EditorPreferredWidth = 55;
+            this.layoutViewField_layoutViewColumn6.Location = new System.Drawing.Point(0, 0);
+            this.layoutViewField_layoutViewColumn6.Name = "layoutViewField_layoutViewColumn6";
+            this.layoutViewField_layoutViewColumn6.Size = new System.Drawing.Size(108, 24);
+            this.layoutViewField_layoutViewColumn6.TextSize = new System.Drawing.Size(44, 14);
+            // 
+            // layoutViewField_layoutViewColumn7
+            // 
+            this.layoutViewField_layoutViewColumn7.EditorPreferredWidth = 20;
+            this.layoutViewField_layoutViewColumn7.Location = new System.Drawing.Point(140, 0);
+            this.layoutViewField_layoutViewColumn7.Name = "layoutViewField_layoutViewColumn7";
+            this.layoutViewField_layoutViewColumn7.Size = new System.Drawing.Size(73, 24);
+            this.layoutViewField_layoutViewColumn7.TextSize = new System.Drawing.Size(44, 14);
+            // 
+            // layoutViewField_layoutViewColumn2
+            // 
+            this.layoutViewField_layoutViewColumn2.EditorPreferredWidth = 85;
+            this.layoutViewField_layoutViewColumn2.Location = new System.Drawing.Point(0, 148);
+            this.layoutViewField_layoutViewColumn2.Name = "layoutViewField_layoutViewColumn2";
+            this.layoutViewField_layoutViewColumn2.Size = new System.Drawing.Size(138, 24);
+            this.layoutViewField_layoutViewColumn2.TextSize = new System.Drawing.Size(44, 14);
+            // 
+            // layoutViewField_layoutViewColumn8
+            // 
+            this.layoutViewField_layoutViewColumn8.EditorPreferredWidth = 22;
+            this.layoutViewField_layoutViewColumn8.Location = new System.Drawing.Point(138, 148);
+            this.layoutViewField_layoutViewColumn8.Name = "layoutViewField_layoutViewColumn8";
+            this.layoutViewField_layoutViewColumn8.Size = new System.Drawing.Size(75, 24);
+            this.layoutViewField_layoutViewColumn8.TextSize = new System.Drawing.Size(44, 14);
+            // 
+            // layoutViewField_layoutViewColumn3
+            // 
+            this.layoutViewField_layoutViewColumn3.EditorPreferredWidth = 20;
+            this.layoutViewField_layoutViewColumn3.Location = new System.Drawing.Point(140, 24);
+            this.layoutViewField_layoutViewColumn3.Name = "layoutViewField_layoutViewColumn3";
+            this.layoutViewField_layoutViewColumn3.Size = new System.Drawing.Size(73, 24);
+            this.layoutViewField_layoutViewColumn3.TextSize = new System.Drawing.Size(44, 14);
+            // 
+            // layoutViewField_layoutViewColumn9
+            // 
+            this.layoutViewField_layoutViewColumn9.EditorPreferredWidth = 28;
+            this.layoutViewField_layoutViewColumn9.Location = new System.Drawing.Point(108, 0);
+            this.layoutViewField_layoutViewColumn9.Name = "layoutViewField_layoutViewColumn9";
+            this.layoutViewField_layoutViewColumn9.Size = new System.Drawing.Size(32, 24);
+            this.layoutViewField_layoutViewColumn9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutViewField_layoutViewColumn9.TextVisible = false;
+            // 
+            // layoutViewField_layoutViewColumn5
+            // 
+            this.layoutViewField_layoutViewColumn5.EditorPreferredWidth = 20;
+            this.layoutViewField_layoutViewColumn5.Location = new System.Drawing.Point(0, 0);
+            this.layoutViewField_layoutViewColumn5.Name = "layoutViewField_layoutViewColumn5";
+            this.layoutViewField_layoutViewColumn5.Size = new System.Drawing.Size(213, 172);
+            this.layoutViewField_layoutViewColumn5.TextSize = new System.Drawing.Size(46, 14);
             // 
             // frmGSHOP12
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.efwGroupControl2);
-            this.Controls.Add(this.splitterControl1);
-            this.Controls.Add(this.efwGridControl1);
+            this.Controls.Add(this.efwXtraTabControl1);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmGSHOP12";
-            this.Size = new System.Drawing.Size(1407, 786);
+            this.Size = new System.Drawing.Size(1439, 785);
             this.Load += new System.EventHandler(this.frmGSHOP12_Load);
             this.Controls.SetChildIndex(this.efwPanelControl1, 0);
-            this.Controls.SetChildIndex(this.efwGridControl1, 0);
-            this.Controls.SetChildIndex(this.splitterControl1, 0);
-            this.Controls.SetChildIndex(this.efwGroupControl2, 0);
+            this.Controls.SetChildIndex(this.efwXtraTabControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtURL.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtU_Id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstory_id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtgshop_name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic_Url5.Properties)).EndInit();
@@ -979,6 +1847,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtE_DATE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).EndInit();
+            this.efwXtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
+            this.efwGroupControl2.ResumeLayout(false);
+            this.efwGroupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomer_Num.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chis_use.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit6)).EndInit();
@@ -993,20 +1889,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
-            this.efwGroupControl2.ResumeLayout(false);
-            this.efwGroupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShooting_Date1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chis_use.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBest_Pic1.Properties)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).EndInit();
+            this.efwPanelControl2.ResumeLayout(false);
+            this.efwPanelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbIs_Use.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOrder_Key.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContents_Id.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Loc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOverlap_Pic.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1017,74 +1922,143 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
         private Easy.Framework.WinForm.Control.efwDateEdit dtS_DATE;
         private Easy.Framework.WinForm.Control.efwDateEdit dtE_DATE;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url5;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url4;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url3;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url2;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtgshop_name;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtstory_id;
+        private Easy.Framework.WinForm.Control.efwXtraTabControl efwXtraTabControl1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Loc5;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Pic5;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Loc4;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Pic4;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Loc3;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Pic3;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Loc2;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Pic2;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel10;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel9;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Loc1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Pic1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date5;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date4;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date3;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date2;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private Easy.Framework.WinForm.Control.efwCheckEdit chis_use;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel8;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel7;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic5;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic4;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic3;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic2;
+        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic1;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
+        private DevExpress.XtraEditors.SplitterControl splitterControl1;
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
-        private DevExpress.XtraEditors.SplitterControl splitterControl1;
-        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image3;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image4;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Image0;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url1;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url5;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url4;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url3;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtPic_Url2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel5;
-        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic5;
-        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic4;
-        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic3;
-        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic2;
-        private Easy.Framework.WinForm.Control.efwPictureEdit picBest_Pic1;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel8;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel7;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel6;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtgshop_name;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
-        private Easy.Framework.WinForm.Control.efwCheckEdit chis_use;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtstory_id;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date5;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date4;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date3;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date2;
-        private Easy.Framework.WinForm.Control.efwTextEdit txtShooting_Date1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtU_Id;
+        private Easy.Framework.WinForm.Control.efwPanelControl efwPanelControl2;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel15;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Loc;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel13;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOverlap_Pic;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel14;
+        private Easy.Framework.WinForm.Control.efwLabel lbU_Nickname;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutView layoutView1;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn1;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit7;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn5;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn6;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn7;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn2;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn8;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtOrder_Key;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel16;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtContents_Id;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel17;
+        private Easy.Framework.WinForm.Control.efwCheckEdit cbIs_Use;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtURL;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel11;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtCustomer_Num;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn9;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn9;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn3;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn4;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn5;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn6;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn7;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn2;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn8;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
     }
 }
