@@ -54,6 +54,7 @@ namespace YL_TELECOM.BizFrm
             dtYear_Month.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             dtYear_Month.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
             dtYear_Month.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
+
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
             btnFactory.EditValue = "4099";

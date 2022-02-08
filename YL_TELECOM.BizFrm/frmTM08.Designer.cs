@@ -437,7 +437,7 @@
             // 
             this.dtS_DATE.EditValue = new System.DateTime(2019, 6, 7, 0, 0, 0, 0);
             this.dtS_DATE.IsRequire = true;
-            this.dtS_DATE.Location = new System.Drawing.Point(87, 17);
+            this.dtS_DATE.Location = new System.Drawing.Point(88, 17);
             this.dtS_DATE.Name = "dtS_DATE";
             this.dtS_DATE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.dtS_DATE.Properties.Appearance.Options.UseBackColor = true;

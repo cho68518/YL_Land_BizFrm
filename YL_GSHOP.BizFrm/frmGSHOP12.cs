@@ -17,6 +17,7 @@ using System.Windows.Forms;
 using YL_GSHOP.BizFrm.Dlg;
 using DevExpress.XtraGrid.Columns;
 using System.Data.SqlClient;
+using DevExpress.XtraGrid.Views.Tile;
 
 namespace YL_GSHOP.BizFrm
 {
@@ -380,7 +381,7 @@ namespace YL_GSHOP.BizFrm
             using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
             {
                 SqlCommand cmd = new SqlCommand();
-                sql.Query = " select t1.reg_date as reg_date, t3.u_nickname as u_nickname, t1.is_use as is_use, t2.image_url as pic_url1, " +
+                sql.Query = " select t2.idx as idx, t1.reg_date as reg_date, t3.u_nickname as u_nickname, t1.is_use as is_use, t2.image_url as pic_url1, " +
                             "        t2.contents_id as contents_id, t2.order_key as order_key, t2.overlap_pic as overlap_pic, t2.overlap_loc as overlap_loc,  t2.customer_num as customer_num " +
                             "   from domalife.story_list t1  " +
                             "        inner join domalife.y_thumbnail_list t2 on t2.contents_id = t1.story_id  and t2.is_use = 'Y' " +
@@ -427,15 +428,22 @@ namespace YL_GSHOP.BizFrm
 
         private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
-            Open1();
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open1();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                Open2();
+            }
         }
 
 
         private void layoutView1_Click(object sender, EventArgs e)
         {
-            txtContents_Id.EditValue = layoutView1.GetFocusedRowCellValue("contents_id").ToString();
-            txtOrder_Key.EditValue = layoutView1.GetFocusedRowCellValue("order_key").ToString();
-            cbIs_Use.EditValue = layoutView1.GetFocusedRowCellValue("is_use").ToString();
+            txtContents_Id.EditValue = tileView1.GetFocusedRowCellValue("contents_id").ToString();
+            txtOrder_Key.EditValue = tileView1.GetFocusedRowCellValue("order_key").ToString();
+            cbIs_Use.EditValue = tileView1.GetFocusedRowCellValue("is_use").ToString();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -496,7 +504,7 @@ namespace YL_GSHOP.BizFrm
 
         private void gridControl1_DoubleClick(object sender, EventArgs e)
         {
-            txtURL.EditValue = layoutView1.GetFocusedRowCellValue("pic_url1").ToString();
+            txtURL.EditValue = tileView1.GetFocusedRowCellValue("pic_url1").ToString();
             OpenDlg();
         }
 
@@ -512,18 +520,18 @@ namespace YL_GSHOP.BizFrm
             popup.ShowDialog();
         }
 
-        private void simpleButton3_Click(object sender, EventArgs e)
+        private void Open2()
         {
             using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
             {
                 SqlCommand cmd = new SqlCommand();
-                sql.Query = " select t1.reg_date as reg_date, t1.is_use as is_use, t2.image_url as pic_url1, " +
+                sql.Query = " select t2.idx as idx, t1.reg_date as reg_date, t1.is_use as is_use, t2.image_url as pic_url1, " +
                             "        t2.contents_id as contents_id, t2.order_key as order_key, t2.overlap_pic as overlap_pic, t2.overlap_loc as overlap_loc" +
                             "   from domalife.story_list t1  " +
                             "        inner join domalife.y_thumbnail_list t2 on t2.contents_id = t1.story_id  and t2.is_use = 'Y' " +
                             "   where t1.category_no = 249 and t1.u_id =  '" + txtU_Id.EditValue + "' and  t2.overlap_pic != 0 " +
                             " union ALL " +
-                            " select t1.reg_date as reg_date, t2.is_use as is_use, t2.image_url as pic_url1, " +
+                            " select t2.idx as idx, t1.reg_date as reg_date, t2.is_use as is_use, t2.image_url as pic_url1, " +
                             "        t2.contents_id as contents_id, t2.order_key as order_key, t2.overlap_pic as overlap_pic, t2.overlap_loc as overlap_loc " +
                             "   from domalife.story_list t1 " +
                             "        inner join domalife.y_thumbnail_list t2 on t2.contents_id = t1.story_id   and t2.is_use = 'Y' " +
@@ -535,19 +543,18 @@ namespace YL_GSHOP.BizFrm
                             "        t2.order_key   in (select overlap_loc " +
                             "                            from domalife.story_list a " +
                             "                                 inner join domalife.y_thumbnail_list b on b.contents_id = a.story_id   and a.is_use = 'Y' " +
-                            "                            where a.category_no = 249 and a.u_id = '" + txtU_Id.EditValue + "' and overlap_loc != 0) "; 
+                            "                            where a.category_no = 249 and a.u_id = '" + txtU_Id.EditValue + "' and overlap_loc != 0) ";
 
-                DataSet ds = sql.selectQueryDataSet();
-                gridControl1.DataSource = ds.Tables[0];
+                DataSet ds1 = sql.selectQueryDataSet();
+                gridControl2.DataSource = ds1.Tables[0];
             }
         }
-
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
             {
                 SqlCommand cmd = new SqlCommand();
-                sql.Query = " select t1.reg_date as reg_date, t3.u_nickname as u_nickname, t1.is_use as is_use, t2.image_url as pic_url1, " +
+                sql.Query = " select t2.idx as idx, t1.reg_date as reg_date, t3.u_nickname as u_nickname, t1.is_use as is_use, t2.image_url as pic_url1, " +
                             "        t2.contents_id as contents_id, t2.order_key as order_key, t2.overlap_pic as overlap_pic, t2.overlap_loc as overlap_loc" +
                             "   from domalife.story_list t1  " +
                             "        inner join domalife.y_thumbnail_list t2 on t2.contents_id = t1.story_id  and t2.is_use = 'Y' " +
@@ -555,8 +562,8 @@ namespace YL_GSHOP.BizFrm
                             "   where t1.category_no = 249 and t1.u_id =  '" + txtU_Id.EditValue + "' and  t2.overlap_pic = 0 " +
                             "  order by t1.story_id, t2.order_key ";
 
-                DataSet ds = sql.selectQueryDataSet();
-                gridControl1.DataSource = ds.Tables[0];
+                DataSet ds2 = sql.selectQueryDataSet();
+                gridControl1.DataSource = ds2.Tables[0];
             }
         }
     }

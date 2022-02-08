@@ -526,7 +526,7 @@ namespace YL_GM.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
-                        cmd.Parameters[0].Value = dtYearMonth.EditValue3.Substring(0, 4);
+                        cmd.Parameters[0].Value = dtYear.EditValue3.Substring(0, 4);
 
                         cmd.Parameters.Add("i_company", MySqlDbType.VarChar, 10);
                         cmd.Parameters[1].Value = cmbCompanyQ.EditValue;

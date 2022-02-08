@@ -42,6 +42,33 @@ namespace YL_MM.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
+            gridView4.OptionsView.ShowFooter = true;
+
+            gridView4.Columns["stock_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView4.Columns["stock_qty"].SummaryItem.FieldName = "stock_qty";
+            gridView4.Columns["stock_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView4.Columns["year_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView4.Columns["year_qty"].SummaryItem.FieldName = "year_qty";
+            gridView4.Columns["year_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView4.Columns["take_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView4.Columns["take_qty"].SummaryItem.FieldName = "take_qty";
+            gridView4.Columns["take_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView4.Columns["tot_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView4.Columns["tot_qty"].SummaryItem.FieldName = "tot_qty";
+            gridView4.Columns["tot_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView4.Columns["bef_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView4.Columns["bef_qty"].SummaryItem.FieldName = "bef_qty";
+            gridView4.Columns["bef_qty"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView3.OptionsView.ShowFooter = true;
+
+            gridView3.Columns["stock_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView3.Columns["stock_qty"].SummaryItem.FieldName = "stock_qty";
+            gridView3.Columns["stock_qty"].SummaryItem.DisplayFormat = "{0}";
 
             this.efwGridControl4.BindControlSet(
                       new ColumnControlSet("u_id",txtu_id)
@@ -72,6 +99,10 @@ namespace YL_MM.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
             {
                 Open3();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                Open4();
             }
         }
 
@@ -170,6 +201,42 @@ namespace YL_MM.BizFrm
                             sda.Fill(ds);
                             efwGridControl2.DataBind(ds);
                             efwGridControl2.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        public void Open4()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM28_SELECT_04", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_Search_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = cmbQ1.EditValue;
+
+                        cmd.Parameters.Add("i_search_Name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtSearch.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl3.DataBind(ds);
+                            efwGridControl3.MyGridView.BestFitColumns();
                         }
                     }
                 }
