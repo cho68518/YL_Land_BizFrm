@@ -66,6 +66,7 @@
             this.cmbChange_type = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwSimpleButton6 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.rbo_pay_type = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.rbG_Prod = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.txto_delivery_num = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -148,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbChange_type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbo_pay_type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbG_Prod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txto_delivery_num.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelivery_cd.Properties)).BeginInit();
@@ -187,7 +189,7 @@
             // 
             // cbG_Prod
             // 
-            this.cbG_Prod.Location = new System.Drawing.Point(700, 51);
+            this.cbG_Prod.Location = new System.Drawing.Point(997, 51);
             this.cbG_Prod.Name = "cbG_Prod";
             this.cbG_Prod.Properties.Caption = "G 시리즈";
             this.cbG_Prod.Properties.ValueChecked = "1";
@@ -455,7 +457,7 @@
             // 
             this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
             this.efwSimpleButton5.IsMultiLang = false;
-            this.efwSimpleButton5.Location = new System.Drawing.Point(1030, 50);
+            this.efwSimpleButton5.Location = new System.Drawing.Point(1096, 50);
             this.efwSimpleButton5.Name = "efwSimpleButton5";
             this.efwSimpleButton5.Size = new System.Drawing.Size(98, 22);
             this.efwSimpleButton5.TabIndex = 64;
@@ -494,6 +496,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.rbo_pay_type);
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
             this.efwPanelControl1.Controls.Add(this.rbG_Prod);
             this.efwPanelControl1.Controls.Add(this.txto_delivery_num);
@@ -536,6 +539,26 @@
             this.efwPanelControl1.Size = new System.Drawing.Size(1212, 147);
             this.efwPanelControl1.TabIndex = 38;
             // 
+            // rbo_pay_type
+            // 
+            this.rbo_pay_type.IsMultiLang = false;
+            this.rbo_pay_type.Location = new System.Drawing.Point(669, 49);
+            this.rbo_pay_type.Name = "rbo_pay_type";
+            this.rbo_pay_type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbo_pay_type.Properties.Appearance.Options.UseBackColor = true;
+            this.rbo_pay_type.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbo_pay_type.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbo_pay_type.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rbo_pay_type.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("T", "전체"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "신용카드"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("3", "가상계좌"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("5", "페이블루")});
+            this.rbo_pay_type.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.rbo_pay_type.RequireMessage = null;
+            this.rbo_pay_type.Size = new System.Drawing.Size(301, 23);
+            this.rbo_pay_type.TabIndex = 75;
+            // 
             // efwLabel1
             // 
             this.efwLabel1.Appearance.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -551,7 +574,7 @@
             // rbG_Prod
             // 
             this.rbG_Prod.IsMultiLang = false;
-            this.rbG_Prod.Location = new System.Drawing.Point(470, 49);
+            this.rbG_Prod.Location = new System.Drawing.Point(442, 49);
             this.rbG_Prod.Name = "rbG_Prod";
             this.rbG_Prod.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbG_Prod.Properties.Appearance.Options.UseBackColor = true;
@@ -564,7 +587,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "일반 상품")});
             this.rbG_Prod.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
             this.rbG_Prod.RequireMessage = null;
-            this.rbG_Prod.Size = new System.Drawing.Size(217, 23);
+            this.rbG_Prod.Size = new System.Drawing.Size(221, 23);
             this.rbG_Prod.TabIndex = 73;
             // 
             // txto_delivery_num
@@ -1260,6 +1283,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbo_pay_type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbG_Prod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txto_delivery_num.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelivery_cd.Properties)).EndInit();
@@ -1359,5 +1383,6 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbo_pay_type;
     }
 }

@@ -1303,12 +1303,12 @@
             // cbis_vvip
             // 
             this.cbis_vvip.EraserGroup = "CLR1";
-            this.cbis_vvip.Location = new System.Drawing.Point(397, 229);
+            this.cbis_vvip.Location = new System.Drawing.Point(295, 229);
             this.cbis_vvip.Name = "cbis_vvip";
             this.cbis_vvip.Properties.Caption = "체험샵 등록가능(G클럽멤버쉽,멀티샵은 불가)";
             this.cbis_vvip.Properties.ValueChecked = "N";
             this.cbis_vvip.Properties.ValueUnchecked = "Y";
-            this.cbis_vvip.Size = new System.Drawing.Size(271, 19);
+            this.cbis_vvip.Size = new System.Drawing.Size(373, 19);
             this.cbis_vvip.StyleController = this.layoutControl1;
             this.cbis_vvip.TabIndex = 33;
             this.cbis_vvip.Visible = false;
@@ -1435,15 +1435,14 @@
             // 
             this.chkIS_GR_MD.Enabled = false;
             this.chkIS_GR_MD.EraserGroup = "CLR1";
-            this.chkIS_GR_MD.Location = new System.Drawing.Point(295, 229);
+            this.chkIS_GR_MD.Location = new System.Drawing.Point(516, 206);
             this.chkIS_GR_MD.Name = "chkIS_GR_MD";
-            this.chkIS_GR_MD.Properties.Caption = "그룹MD";
+            this.chkIS_GR_MD.Properties.Caption = "MD 팀장";
             this.chkIS_GR_MD.Properties.ValueChecked = "Y";
             this.chkIS_GR_MD.Properties.ValueUnchecked = "N";
-            this.chkIS_GR_MD.Size = new System.Drawing.Size(98, 19);
+            this.chkIS_GR_MD.Size = new System.Drawing.Size(152, 19);
             this.chkIS_GR_MD.StyleController = this.layoutControl1;
             this.chkIS_GR_MD.TabIndex = 24;
-            this.chkIS_GR_MD.Visible = false;
             // 
             // txtD
             // 
@@ -1566,7 +1565,7 @@
             this.chkIS_DORAMD.Properties.Caption = "도라MD";
             this.chkIS_DORAMD.Properties.ValueChecked = "Y";
             this.chkIS_DORAMD.Properties.ValueUnchecked = "N";
-            this.chkIS_DORAMD.Size = new System.Drawing.Size(271, 19);
+            this.chkIS_DORAMD.Size = new System.Drawing.Size(115, 19);
             this.chkIS_DORAMD.StyleController = this.layoutControl1;
             this.chkIS_DORAMD.TabIndex = 15;
             this.chkIS_DORAMD.Visible = false;
@@ -1928,10 +1927,10 @@
             this.layoutControlItem45,
             this.LayOut,
             this.layoutControlItem31,
-            this.layoutControlItem40,
             this.layoutControlItem42,
             this.layoutControlItem26,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.layoutControlItem40});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 2, 2);
             this.layoutControlGroup1.Size = new System.Drawing.Size(885, 257);
@@ -2270,7 +2269,7 @@
             this.layoutControlItem30.Control = this.chkIS_DORAMD;
             this.layoutControlItem30.Location = new System.Drawing.Point(385, 202);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(275, 23);
+            this.layoutControlItem30.Size = new System.Drawing.Size(119, 23);
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem30.TextVisible = false;
             this.layoutControlItem30.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
@@ -2314,18 +2313,18 @@
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.cbis_vvip;
-            this.layoutControlItem31.Location = new System.Drawing.Point(385, 225);
+            this.layoutControlItem31.Location = new System.Drawing.Point(283, 225);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(275, 28);
+            this.layoutControlItem31.Size = new System.Drawing.Size(377, 28);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextVisible = false;
             // 
             // layoutControlItem40
             // 
             this.layoutControlItem40.Control = this.chkIS_GR_MD;
-            this.layoutControlItem40.Location = new System.Drawing.Point(283, 225);
+            this.layoutControlItem40.Location = new System.Drawing.Point(504, 202);
             this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(102, 28);
+            this.layoutControlItem40.Size = new System.Drawing.Size(156, 23);
             this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem40.TextVisible = false;
             this.layoutControlItem40.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;

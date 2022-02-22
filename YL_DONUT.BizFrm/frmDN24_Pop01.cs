@@ -72,6 +72,11 @@ namespace YL_DONUT.BizFrm
             {
                 Excel_Set4();
             }
+            // 수정양식
+            else if (cmbO_Sub_Company.EditValue.ToString() == "Z" )
+            {
+                Excel_Set5();
+            }
         }
         // 쿠팡
         private void Excel_Set1()
@@ -260,6 +265,44 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        // 옥션/지마켓
+        private void Excel_Set5()
+        {
+            efwGridControl5.DataSource = null;
+            gridView3.RefreshData();
+
+            //OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.DefaultExt = "xls";
+            openFileDialog1.FileName = "*.xls";
+            openFileDialog1.Filter = "Excel97 - 2003 통합문서|*.xlsx";
+            openFileDialog1.Title = "엑셀데이터 가져오기";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    if (openFileDialog1.FileName != string.Empty)
+                    {
+                        string fileName = openFileDialog1.FileName;
+
+                        this.efwGridControl5.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        this.efwGridControl5.MyGridView.BestFitColumns();
+                        lblCnt.Text = string.Format("{0:#,###}", gridView4.DataRowCount.ToString());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("엑셀 파일 드라이버가 잘못되었거나 엑셀파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+            }
+        }
+
         private void efwSimpleButton2_Click(object sender, EventArgs e)
         {
             if (cmbO_Sub_Company.EditValue.ToString() == "0")
@@ -286,6 +329,11 @@ namespace YL_DONUT.BizFrm
             else if (cmbO_Sub_Company.EditValue.ToString() == "1" ^ cmbO_Sub_Company.EditValue.ToString() == "2")
             {
                 Save4();
+            }
+            // 수정양식
+            else if (cmbO_Sub_Company.EditValue.ToString() == "Z" )
+            {
+                Save5();
             }
         }
 
@@ -637,6 +685,60 @@ namespace YL_DONUT.BizFrm
             }
             MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
         }
+        // 수정양식
+        private void Save5()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+
+                    for (int i = 0; i < gridView5.DataRowCount; i++)
+                    {
+                        if (Convert.ToDouble(gridView5.GetRowCellValue(i, gridView5.Columns[23])) > 3)
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN24_POP01_SAVE03", con))
+                            {
+
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                string sCompany = gridView5.GetRowCellValue(i, gridView5.Columns[2]).ToString();
+                                if (sCompany != "오픈마켓")
+                                {
+                                    MessageAgent.MessageShow(MessageType.Warning, "수정양식을 선택하세요!");
+                                    return; 
+                                }
+
+                                cmd.Parameters.Add("i_Idx", MySqlDbType.Int32);
+                                cmd.Parameters[0].Value = Convert.ToInt32(gridView5.GetRowCellValue(i, gridView5.Columns[23])).ToString();
+
+                                cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 255);
+                                cmd.Parameters[1].Value = gridView5.GetRowCellValue(i, gridView5.Columns[4]).ToString();
+
+                                cmd.Parameters.Add("i_option_name", MySqlDbType.VarChar, 255);
+                                cmd.Parameters[2].Value = gridView5.GetRowCellValue(i, gridView5.Columns[5]).ToString();
+
+                                cmd.Parameters.Add("i_event_name", MySqlDbType.VarChar, 255);
+                                cmd.Parameters[3].Value = gridView5.GetRowCellValue(i, gridView5.Columns[6]).ToString();
+
+                                cmd.Parameters.Add("i_add_p_name", MySqlDbType.VarChar, 255);
+                                cmd.Parameters[4].Value = gridView5.GetRowCellValue(i, gridView5.Columns[7]).ToString();
+
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+        }
+
         private void cmbO_Sub_Company_EditValueChanged(object sender, EventArgs e)
         {
             // 쿠팡
@@ -659,6 +761,12 @@ namespace YL_DONUT.BizFrm
             {
                 this.efwXtraTabControl1.SelectedTabPage = this.xtraTabPage4;
             }
+            // 수정양식
+            else if (cmbO_Sub_Company.EditValue.ToString() == "Z" )
+            {
+                this.efwXtraTabControl1.SelectedTabPage = this.xtraTabPage5;
+            }
         }
+
     }
 }
