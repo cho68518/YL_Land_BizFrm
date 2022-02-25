@@ -80,6 +80,11 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtstockRegDate = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtLogin_id = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtstockPoint = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtu_id = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtu_nickname = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -131,11 +136,6 @@
             this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtstockPoint = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtLogin_id = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.txtstockRegDate = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwTopPanelControl1)).BeginInit();
             this.efwTopPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
@@ -152,6 +152,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtstockRegDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLogin_id.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtstockPoint.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtu_id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtu_nickname.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
@@ -167,9 +170,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAccount_Number.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtstockPoint.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLogin_id.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtstockRegDate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwTopPanelControl1
@@ -589,6 +589,60 @@
             this.efwPanelControl1.Padding = new System.Windows.Forms.Padding(2);
             this.efwPanelControl1.Size = new System.Drawing.Size(1066, 42);
             this.efwPanelControl1.TabIndex = 80;
+            // 
+            // efwLabel3
+            // 
+            this.efwLabel3.EraserGroup = null;
+            this.efwLabel3.IsMultiLang = false;
+            this.efwLabel3.Location = new System.Drawing.Point(300, 14);
+            this.efwLabel3.Name = "efwLabel3";
+            this.efwLabel3.Size = new System.Drawing.Size(30, 14);
+            this.efwLabel3.TabIndex = 18;
+            this.efwLabel3.Text = "기준일";
+            // 
+            // txtstockRegDate
+            // 
+            this.txtstockRegDate.EditValue2 = null;
+            this.txtstockRegDate.Location = new System.Drawing.Point(357, 11);
+            this.txtstockRegDate.Name = "txtstockRegDate";
+            this.txtstockRegDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtstockRegDate.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtstockRegDate.RequireMessage = null;
+            this.txtstockRegDate.Size = new System.Drawing.Size(133, 20);
+            this.txtstockRegDate.TabIndex = 17;
+            // 
+            // txtLogin_id
+            // 
+            this.txtLogin_id.EditValue2 = null;
+            this.txtLogin_id.Location = new System.Drawing.Point(723, 11);
+            this.txtLogin_id.Name = "txtLogin_id";
+            this.txtLogin_id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtLogin_id.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtLogin_id.RequireMessage = null;
+            this.txtLogin_id.Size = new System.Drawing.Size(116, 20);
+            this.txtLogin_id.TabIndex = 16;
+            this.txtLogin_id.Visible = false;
+            // 
+            // efwLabel2
+            // 
+            this.efwLabel2.EraserGroup = null;
+            this.efwLabel2.IsMultiLang = false;
+            this.efwLabel2.Location = new System.Drawing.Point(515, 14);
+            this.efwLabel2.Name = "efwLabel2";
+            this.efwLabel2.Size = new System.Drawing.Size(74, 14);
+            this.efwLabel2.TabIndex = 15;
+            this.efwLabel2.Text = "행사가능 주식수";
+            // 
+            // txtstockPoint
+            // 
+            this.txtstockPoint.EditValue2 = null;
+            this.txtstockPoint.Location = new System.Drawing.Point(605, 11);
+            this.txtstockPoint.Name = "txtstockPoint";
+            this.txtstockPoint.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtstockPoint.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtstockPoint.RequireMessage = null;
+            this.txtstockPoint.Size = new System.Drawing.Size(64, 20);
+            this.txtstockPoint.TabIndex = 14;
             // 
             // txtu_id
             // 
@@ -1200,60 +1254,6 @@
             this.gridColumn44.Visible = true;
             this.gridColumn44.VisibleIndex = 8;
             // 
-            // txtstockPoint
-            // 
-            this.txtstockPoint.EditValue2 = null;
-            this.txtstockPoint.Location = new System.Drawing.Point(605, 11);
-            this.txtstockPoint.Name = "txtstockPoint";
-            this.txtstockPoint.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtstockPoint.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtstockPoint.RequireMessage = null;
-            this.txtstockPoint.Size = new System.Drawing.Size(64, 20);
-            this.txtstockPoint.TabIndex = 14;
-            // 
-            // efwLabel2
-            // 
-            this.efwLabel2.EraserGroup = null;
-            this.efwLabel2.IsMultiLang = false;
-            this.efwLabel2.Location = new System.Drawing.Point(515, 14);
-            this.efwLabel2.Name = "efwLabel2";
-            this.efwLabel2.Size = new System.Drawing.Size(74, 14);
-            this.efwLabel2.TabIndex = 15;
-            this.efwLabel2.Text = "행사가능 주식수";
-            // 
-            // txtLogin_id
-            // 
-            this.txtLogin_id.EditValue2 = null;
-            this.txtLogin_id.Location = new System.Drawing.Point(723, 11);
-            this.txtLogin_id.Name = "txtLogin_id";
-            this.txtLogin_id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtLogin_id.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtLogin_id.RequireMessage = null;
-            this.txtLogin_id.Size = new System.Drawing.Size(116, 20);
-            this.txtLogin_id.TabIndex = 16;
-            this.txtLogin_id.Visible = false;
-            // 
-            // txtstockRegDate
-            // 
-            this.txtstockRegDate.EditValue2 = null;
-            this.txtstockRegDate.Location = new System.Drawing.Point(357, 11);
-            this.txtstockRegDate.Name = "txtstockRegDate";
-            this.txtstockRegDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtstockRegDate.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtstockRegDate.RequireMessage = null;
-            this.txtstockRegDate.Size = new System.Drawing.Size(133, 20);
-            this.txtstockRegDate.TabIndex = 17;
-            // 
-            // efwLabel3
-            // 
-            this.efwLabel3.EraserGroup = null;
-            this.efwLabel3.IsMultiLang = false;
-            this.efwLabel3.Location = new System.Drawing.Point(300, 14);
-            this.efwLabel3.Name = "efwLabel3";
-            this.efwLabel3.Size = new System.Drawing.Size(30, 14);
-            this.efwLabel3.TabIndex = 18;
-            this.efwLabel3.Text = "기준일";
-            // 
             // frmMM28
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1283,6 +1283,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtstockRegDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLogin_id.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtstockPoint.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtu_id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtu_nickname.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
@@ -1299,9 +1302,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAccount_Number.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtstockPoint.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLogin_id.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtstockRegDate.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
