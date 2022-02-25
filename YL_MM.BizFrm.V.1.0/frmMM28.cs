@@ -86,8 +86,20 @@ namespace YL_MM.BizFrm
             {
                 this.txtu_id.EditValue = dr["u_id"].ToString();
                 this.txtu_nickname.EditValue = dr["u_nickname"].ToString();
+                this.txtLogin_id.EditValue = dr["login_id"].ToString();
                 Open1();
             }
+            // string strQuery = string.Format(@"SELECT idx AS SEQ FROM y2k2.dbo.Y2K2_member where id  = '" + txtLogin_id.EditValue + "' ");
+            string strQuery = string.Format(@"SELECT TOP(1) stockPoint AS stockPoint,  CONVERT(CHAR(10), stockRegDate, 23) as stockRegDate  FROM YEOYOU_STOCK.dbo.UT_STOCKOPTION WHERE memberID =  '" + txtLogin_id.EditValue + "' AND  stockCode = 'multi_stock'  ");
+
+            DataSet ds = ServiceAgent.ExecuteDataSetStr("CONIS_IBS", strQuery);
+
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0][0] != DBNull.Value)
+            {
+                txtstockPoint.EditValue = ds.Tables[0].Rows[0]["stockPoint"];
+                txtstockRegDate.EditValue = ds.Tables[0].Rows[0]["stockRegDate"];
+            }
+
         }
 
         public override void Search()
