@@ -262,18 +262,21 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "정책";
+            this.gridColumn2.FieldName = "agency_type";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "업체코드";
+            this.gridColumn3.FieldName = "opening_store";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "업체명";
+            this.gridColumn4.FieldName = "u_name";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             // 
@@ -313,24 +316,28 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "개통(건)선불";
+            this.gridColumn6.FieldName = "lg_paytype1";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "LG선불개통수수료";
+            this.gridColumn7.FieldName = "lg_open_amt1";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "개통(건)후불";
+            this.gridColumn8.FieldName = "lg_paytype2";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "LG후불 개통수수료";
+            this.gridColumn9.FieldName = "lg_open_amt2";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             // 
@@ -350,12 +357,14 @@
             // gridColumn10
             // 
             this.gridColumn10.Caption = "KT개통(건)";
+            this.gridColumn10.FieldName = "kt_paytype1";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "KT 개통수수료";
+            this.gridColumn11.FieldName = "kt_open_amt1";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             // 
@@ -381,6 +390,7 @@
             // gridColumn12
             // 
             this.gridColumn12.Caption = "충전금액";
+            this.gridColumn12.FieldName = "add_amt";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
             // 

@@ -63,7 +63,7 @@ namespace YL_TELECOM.BizFrm
                 string sCOMFIRM = string.Empty;
                 string sCom = string.Empty;
                 //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
 
                 {
                     using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM13_SELECT_01", con))
@@ -71,7 +71,7 @@ namespace YL_TELECOM.BizFrm
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("i_year_month", MySqlDbType.VarChar, 6);
-                        cmd.Parameters[0].Value = dtYearMonth.EditValue;
+                        cmd.Parameters[0].Value = dtYearMonth.EditValue3.Substring(0,6);
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

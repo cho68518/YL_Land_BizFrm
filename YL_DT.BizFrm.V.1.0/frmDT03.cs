@@ -60,6 +60,13 @@ namespace YL_DT.BizFrm
             this.dtE_DATE.Visible = true;
             txtSort.EditValue = "0";
 
+            cbDoma.EditValue = "N";
+            cbHelper.EditValue = "N";
+            cbOfficial.EditValue = "N";
+            cbGshop.EditValue = "N";
+            cbTeam_Leader.EditValue = "N";
+            cbStock.EditValue = "N";
+
             this.efwGridControl2.BindControlSet(
              new ColumnControlSet("u_id", txtU_Id)
             );
