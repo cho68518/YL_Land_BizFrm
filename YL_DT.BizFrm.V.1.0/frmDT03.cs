@@ -293,7 +293,6 @@ namespace YL_DT.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
-
         }
 
         private void Save2()
