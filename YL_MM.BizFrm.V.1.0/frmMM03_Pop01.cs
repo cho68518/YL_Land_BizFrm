@@ -2490,5 +2490,7 @@ namespace YL_MM.BizFrm
                 txtP_Img.EditValue = "https://media.domalife.net/files/product/domamall/" + txtP_Code.EditValue + "/" + sFileName;
             }
         }
+
+
     }
 }

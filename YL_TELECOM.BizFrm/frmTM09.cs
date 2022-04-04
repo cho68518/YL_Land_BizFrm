@@ -460,6 +460,39 @@ namespace YL_TELECOM.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
+
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM14_SELECT_07", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 6);
+                        cmd.Parameters[0].Value = dtYear.EditValue3.Substring(0, 4);
+
+                        cmd.Parameters.Add("i_unit", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[1].Value = rbUnit.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl7.DataBind(ds);
+                            this.efwGridControl7.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
         }
 
         private void efwSimpleButton4_Click(object sender, EventArgs e)

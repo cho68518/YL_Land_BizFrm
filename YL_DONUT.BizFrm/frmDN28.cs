@@ -213,6 +213,10 @@ namespace YL_DONUT.BizFrm
             gridView9.Columns["stock_amt"].SummaryItem.FieldName = "stock_amt";
             gridView9.Columns["stock_amt"].SummaryItem.DisplayFormat = "{0:c}";
 
+            bandedGridView1.OptionsView.ShowFooter = true;
+            bandedGridView1.Columns["stock_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["stock_amt"].SummaryItem.FieldName = "stock_amt";
+            bandedGridView1.Columns["stock_amt"].SummaryItem.DisplayFormat = "{0:c}";
 
             SetCmb();
         }
@@ -774,87 +778,89 @@ namespace YL_DONUT.BizFrm
             txtInput_Price.EditValue = "0";
             txtInput_Amt.EditValue = "0";
             txtOut_Qty.EditValue = "0";
+            txtRemark.EditValue = "";
+            txtOut_Remark.EditValue = "";
 
             var gv = sender as DevExpress.XtraGrid.Views.Grid.GridView;
             var rowIndex = gv.FocusedRowHandle;
             var columnIndex = gv.FocusedColumn.VisibleIndex;
-            if (columnIndex == 4 ^ columnIndex == 5)
+             if (columnIndex == 6 ^ columnIndex == 7)
                 txtChk.EditValue = "01";
-            else if (columnIndex == 6 ^ columnIndex == 7)
-                txtChk.EditValue = "02";
             else if (columnIndex == 8 ^ columnIndex == 9)
-                txtChk.EditValue = "03";
+                txtChk.EditValue = "02";
             else if (columnIndex == 10 ^ columnIndex == 11)
-                txtChk.EditValue = "04";
+                txtChk.EditValue = "03";
             else if (columnIndex == 12 ^ columnIndex == 13)
-                txtChk.EditValue = "05";
+                txtChk.EditValue = "04";
             else if (columnIndex == 14 ^ columnIndex == 15)
-                txtChk.EditValue = "06";
+                txtChk.EditValue = "05";
             else if (columnIndex == 16 ^ columnIndex == 17)
-                txtChk.EditValue = "07";
+                txtChk.EditValue = "06";
             else if (columnIndex == 18 ^ columnIndex == 19)
-                txtChk.EditValue = "08";
+                txtChk.EditValue = "07";
             else if (columnIndex == 20 ^ columnIndex == 21)
-                txtChk.EditValue = "09";
+                txtChk.EditValue = "08";
             else if (columnIndex == 22 ^ columnIndex == 23)
-                txtChk.EditValue = "10";
+                txtChk.EditValue = "09";
             else if (columnIndex == 24 ^ columnIndex == 25)
-                txtChk.EditValue = "11";
+                txtChk.EditValue = "10";
             else if (columnIndex == 26 ^ columnIndex == 27)
-                txtChk.EditValue = "12";
+                txtChk.EditValue = "11";
             else if (columnIndex == 28 ^ columnIndex == 29)
-                txtChk.EditValue = "13";
+                txtChk.EditValue = "12";
             else if (columnIndex == 30 ^ columnIndex == 31)
-                txtChk.EditValue = "14";
+                txtChk.EditValue = "13";
             else if (columnIndex == 32 ^ columnIndex == 33)
-                txtChk.EditValue = "15";
+                txtChk.EditValue = "14";
             else if (columnIndex == 34 ^ columnIndex == 35)
-                txtChk.EditValue = "16";
+                txtChk.EditValue = "15";
             else if (columnIndex == 36 ^ columnIndex == 37)
-                txtChk.EditValue = "17";
+                txtChk.EditValue = "16";
             else if (columnIndex == 38 ^ columnIndex == 39)
-                txtChk.EditValue = "18";
+                txtChk.EditValue = "17";
             else if (columnIndex == 40 ^ columnIndex == 41)
-                txtChk.EditValue = "19";
+                txtChk.EditValue = "18";
             else if (columnIndex == 42 ^ columnIndex == 43)
-                txtChk.EditValue = "20";
+                txtChk.EditValue = "19";
             else if (columnIndex == 44 ^ columnIndex == 45)
-                txtChk.EditValue = "21";
+                txtChk.EditValue = "20";
             else if (columnIndex == 46 ^ columnIndex == 47)
-                txtChk.EditValue = "22";
+                txtChk.EditValue = "21";
             else if (columnIndex == 48 ^ columnIndex == 49)
-                txtChk.EditValue = "23";
+                txtChk.EditValue = "22";
             else if (columnIndex == 50 ^ columnIndex == 51)
-                txtChk.EditValue = "24";
+                txtChk.EditValue = "23";
             else if (columnIndex == 52 ^ columnIndex == 53)
-                txtChk.EditValue = "25";
+                txtChk.EditValue = "24";
             else if (columnIndex == 54 ^ columnIndex == 55)
-                txtChk.EditValue = "26";
+                txtChk.EditValue = "25";
             else if (columnIndex == 56 ^ columnIndex == 57)
-                txtChk.EditValue = "27";
+                txtChk.EditValue = "26";
             else if (columnIndex == 58 ^ columnIndex == 59)
-                txtChk.EditValue = "28";
+                txtChk.EditValue = "27";
             else if (columnIndex == 60 ^ columnIndex == 61)
-                txtChk.EditValue = "29";
+                txtChk.EditValue = "28";
             else if (columnIndex == 62 ^ columnIndex == 63)
-                txtChk.EditValue = "30";
+                txtChk.EditValue = "29";
             else if (columnIndex == 64 ^ columnIndex == 65)
+                txtChk.EditValue = "30";
+            else if (columnIndex == 66 ^ columnIndex == 67)
                 txtChk.EditValue = "31";
-            if (columnIndex > 3)
+            if (columnIndex > 5)
             {
                 dtInput_Date.EditValue = dtYearMonth.EditValue3.Substring(0, 4) + "-" + dtYearMonth.EditValue3.Substring(4, 2) + "-" + txtChk.EditValue;
                 dtOut_Date.EditValue = dtYearMonth.EditValue3.Substring(0, 4) + "-" + dtYearMonth.EditValue3.Substring(4, 2) + "-" + txtChk.EditValue;
             }
 
-            if (columnIndex == 4  ^ columnIndex == 6  ^ columnIndex == 8  ^ columnIndex == 10 ^ columnIndex == 12 ^ columnIndex == 14 ^ columnIndex == 16 ^ columnIndex == 18 ^ columnIndex == 20 ^
+            if (columnIndex == 6  ^ columnIndex == 8  ^ columnIndex == 10 ^ columnIndex == 12 ^ columnIndex == 14 ^ columnIndex == 16 ^ columnIndex == 18 ^ columnIndex == 20 ^
                 columnIndex == 22 ^ columnIndex == 24 ^ columnIndex == 26 ^ columnIndex == 28 ^ columnIndex == 30 ^ columnIndex == 32 ^ columnIndex == 34 ^ columnIndex == 36 ^ columnIndex == 38 ^
                 columnIndex == 40 ^ columnIndex == 42 ^ columnIndex == 44 ^ columnIndex == 46 ^ columnIndex == 48 ^ columnIndex == 50 ^ columnIndex == 52 ^ columnIndex == 54 ^ columnIndex == 56 ^
-                columnIndex == 58 ^ columnIndex == 60 ^ columnIndex == 62 ^ columnIndex == 64 )
+                columnIndex == 58 ^ columnIndex == 60 ^ columnIndex == 62 ^ columnIndex == 64 ^ columnIndex == 66)
                 cmbOut_Type.EditValue = "1";
-            else if (columnIndex == 5 ^ columnIndex == 7 ^ columnIndex == 9 ^ columnIndex == 11 ^ columnIndex == 13 ^ columnIndex == 15 ^ columnIndex == 17 ^ columnIndex == 19 ^ columnIndex == 21 ^
+            else if (columnIndex == 7 ^ columnIndex == 9 ^ columnIndex == 11 ^ columnIndex == 13 ^ columnIndex == 15 ^ columnIndex == 17 ^ columnIndex == 19 ^ columnIndex == 21 ^
                      columnIndex == 23 ^ columnIndex == 25 ^ columnIndex == 27 ^ columnIndex == 29^ columnIndex == 31 ^ columnIndex == 33 ^ columnIndex == 35 ^ columnIndex == 37 ^ columnIndex == 29 ^
                      columnIndex == 41 ^ columnIndex == 43 ^ columnIndex == 45 ^ columnIndex == 47 ^ columnIndex == 49 ^ columnIndex == 51 ^ columnIndex == 53 ^ columnIndex == 55 ^ columnIndex == 57 ^
-                     columnIndex == 59 ^ columnIndex == 61 ^ columnIndex == 63 ^ columnIndex == 65)
+                     columnIndex == 59 ^ columnIndex == 61 ^ columnIndex == 63 ^ columnIndex == 65 ^ columnIndex == 67)
                 cmbOut_Type.EditValue = "3";
             //if (txtType.EditValue.ToString() == "입고")
             //{
