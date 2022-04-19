@@ -868,7 +868,7 @@
             // 
             this.txtSP_Review_Story.EditValue = "0";
             this.txtSP_Review_Story.EditValue2 = null;
-            this.txtSP_Review_Story.Location = new System.Drawing.Point(542, 197);
+            this.txtSP_Review_Story.Location = new System.Drawing.Point(750, 167);
             this.txtSP_Review_Story.Name = "txtSP_Review_Story";
             this.txtSP_Review_Story.Properties.Appearance.Options.UseTextOptions = true;
             this.txtSP_Review_Story.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -887,7 +887,7 @@
             this.efwLabel37.Appearance.Options.UseBackColor = true;
             this.efwLabel37.EraserGroup = null;
             this.efwLabel37.IsMultiLang = false;
-            this.efwLabel37.Location = new System.Drawing.Point(455, 200);
+            this.efwLabel37.Location = new System.Drawing.Point(663, 170);
             this.efwLabel37.Name = "efwLabel37";
             this.efwLabel37.Size = new System.Drawing.Size(70, 14);
             this.efwLabel37.TabIndex = 84;
@@ -918,7 +918,7 @@
             // 
             this.txtGB_AD_CELE_STORY.EditValue = "0";
             this.txtGB_AD_CELE_STORY.EditValue2 = null;
-            this.txtGB_AD_CELE_STORY.Location = new System.Drawing.Point(750, 173);
+            this.txtGB_AD_CELE_STORY.Location = new System.Drawing.Point(940, 260);
             this.txtGB_AD_CELE_STORY.Name = "txtGB_AD_CELE_STORY";
             this.txtGB_AD_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGB_AD_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -935,7 +935,7 @@
             // 
             this.efwLabel34.EraserGroup = null;
             this.efwLabel34.IsMultiLang = false;
-            this.efwLabel34.Location = new System.Drawing.Point(663, 176);
+            this.efwLabel34.Location = new System.Drawing.Point(853, 263);
             this.efwLabel34.Name = "efwLabel34";
             this.efwLabel34.Size = new System.Drawing.Size(65, 14);
             this.efwLabel34.TabIndex = 76;
@@ -945,7 +945,7 @@
             // 
             this.efwLabel32.EraserGroup = null;
             this.efwLabel32.IsMultiLang = false;
-            this.efwLabel32.Location = new System.Drawing.Point(244, 200);
+            this.efwLabel32.Location = new System.Drawing.Point(449, 170);
             this.efwLabel32.Name = "efwLabel32";
             this.efwLabel32.Size = new System.Drawing.Size(66, 14);
             this.efwLabel32.TabIndex = 73;
@@ -955,7 +955,7 @@
             // 
             this.txtGD_CELE_STORY.EditValue = "0";
             this.txtGD_CELE_STORY.EditValue2 = null;
-            this.txtGD_CELE_STORY.Location = new System.Drawing.Point(337, 197);
+            this.txtGD_CELE_STORY.Location = new System.Drawing.Point(542, 167);
             this.txtGD_CELE_STORY.Name = "txtGD_CELE_STORY";
             this.txtGD_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGD_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -972,7 +972,7 @@
             // 
             this.efwLabel30.EraserGroup = null;
             this.efwLabel30.IsMultiLang = false;
-            this.efwLabel30.Location = new System.Drawing.Point(30, 200);
+            this.efwLabel30.Location = new System.Drawing.Point(852, 289);
             this.efwLabel30.Name = "efwLabel30";
             this.efwLabel30.Size = new System.Drawing.Size(67, 14);
             this.efwLabel30.TabIndex = 69;
@@ -982,7 +982,7 @@
             // 
             this.txtGD_GR_CELE_STORY.EditValue = "0";
             this.txtGD_GR_CELE_STORY.EditValue2 = null;
-            this.txtGD_GR_CELE_STORY.Location = new System.Drawing.Point(118, 197);
+            this.txtGD_GR_CELE_STORY.Location = new System.Drawing.Point(940, 286);
             this.txtGD_GR_CELE_STORY.Name = "txtGD_GR_CELE_STORY";
             this.txtGD_GR_CELE_STORY.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGD_GR_CELE_STORY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1309,7 +1309,7 @@
             // 
             this.efwLabel22.EraserGroup = null;
             this.efwLabel22.IsMultiLang = false;
-            this.efwLabel22.Location = new System.Drawing.Point(458, 176);
+            this.efwLabel22.Location = new System.Drawing.Point(238, 170);
             this.efwLabel22.Name = "efwLabel22";
             this.efwLabel22.Size = new System.Drawing.Size(64, 14);
             this.efwLabel22.TabIndex = 43;
@@ -1319,7 +1319,7 @@
             // 
             this.txtRECO_DONUT.EditValue = "0";
             this.txtRECO_DONUT.EditValue2 = null;
-            this.txtRECO_DONUT.Location = new System.Drawing.Point(542, 173);
+            this.txtRECO_DONUT.Location = new System.Drawing.Point(322, 167);
             this.txtRECO_DONUT.Name = "txtRECO_DONUT";
             this.txtRECO_DONUT.Properties.Appearance.Options.UseTextOptions = true;
             this.txtRECO_DONUT.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1336,7 +1336,7 @@
             // 
             this.efwLabel15.EraserGroup = null;
             this.efwLabel15.IsMultiLang = false;
-            this.efwLabel15.Location = new System.Drawing.Point(244, 176);
+            this.efwLabel15.Location = new System.Drawing.Point(24, 170);
             this.efwLabel15.Name = "efwLabel15";
             this.efwLabel15.Size = new System.Drawing.Size(70, 14);
             this.efwLabel15.TabIndex = 32;
@@ -1346,7 +1346,7 @@
             // 
             this.efwLabel18.EraserGroup = null;
             this.efwLabel18.IsMultiLang = false;
-            this.efwLabel18.Location = new System.Drawing.Point(30, 176);
+            this.efwLabel18.Location = new System.Drawing.Point(662, 141);
             this.efwLabel18.Name = "efwLabel18";
             this.efwLabel18.Size = new System.Drawing.Size(62, 14);
             this.efwLabel18.TabIndex = 29;
@@ -1356,7 +1356,7 @@
             // 
             this.txtTD_DONUT.EditValue = "0";
             this.txtTD_DONUT.EditValue2 = null;
-            this.txtTD_DONUT.Location = new System.Drawing.Point(337, 173);
+            this.txtTD_DONUT.Location = new System.Drawing.Point(117, 167);
             this.txtTD_DONUT.Name = "txtTD_DONUT";
             this.txtTD_DONUT.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTD_DONUT.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1373,7 +1373,7 @@
             // 
             this.txtPS_DONUT01.EditValue = "0";
             this.txtPS_DONUT01.EditValue2 = null;
-            this.txtPS_DONUT01.Location = new System.Drawing.Point(118, 173);
+            this.txtPS_DONUT01.Location = new System.Drawing.Point(750, 138);
             this.txtPS_DONUT01.Name = "txtPS_DONUT01";
             this.txtPS_DONUT01.Properties.Appearance.Options.UseTextOptions = true;
             this.txtPS_DONUT01.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1465,7 +1465,7 @@
             // 
             this.efwLabel19.EraserGroup = null;
             this.efwLabel19.IsMultiLang = false;
-            this.efwLabel19.Location = new System.Drawing.Point(244, 141);
+            this.efwLabel19.Location = new System.Drawing.Point(238, 141);
             this.efwLabel19.Name = "efwLabel19";
             this.efwLabel19.Size = new System.Drawing.Size(30, 14);
             this.efwLabel19.TabIndex = 28;
@@ -1536,7 +1536,7 @@
             // 
             this.txtLOWEST_PRICE.EditValue = "0";
             this.txtLOWEST_PRICE.EditValue2 = null;
-            this.txtLOWEST_PRICE.Location = new System.Drawing.Point(337, 138);
+            this.txtLOWEST_PRICE.Location = new System.Drawing.Point(322, 138);
             this.txtLOWEST_PRICE.Name = "txtLOWEST_PRICE";
             this.txtLOWEST_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtLOWEST_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
