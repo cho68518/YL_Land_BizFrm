@@ -99,6 +99,7 @@
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -505,6 +506,7 @@
             this.gridColumn12,
             this.gridColumn13,
             this.gridColumn27,
+            this.gridColumn30,
             this.gridColumn28,
             this.gridColumn29,
             this.gridColumn14,
@@ -595,7 +597,7 @@
             resources.ApplyResources(this.gridColumn11, "gridColumn11");
             this.gridColumn11.DisplayFormat.FormatString = "###,###,##0";
             this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn11.FieldName = "refund_donut_cost";
+            this.gridColumn11.FieldName = "ps_donut01";
             this.gridColumn11.Name = "gridColumn11";
             // 
             // gridColumn18
@@ -647,6 +649,12 @@
             this.repositoryItemLookUpEdit5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit5.Buttons"))))});
             this.repositoryItemLookUpEdit5.Name = "repositoryItemLookUpEdit5";
+            // 
+            // gridColumn30
+            // 
+            resources.ApplyResources(this.gridColumn30, "gridColumn30");
+            this.gridColumn30.FieldName = "is_sort";
+            this.gridColumn30.Name = "gridColumn30";
             // 
             // gridColumn28
             // 
@@ -2983,5 +2991,6 @@
         private Easy.Framework.WinForm.Control.efwRadioGroup rbOtype_e_yn;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel51;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
     }
 }

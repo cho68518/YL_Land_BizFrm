@@ -134,7 +134,6 @@ namespace YL_GM.BizFrm
                     , new ColumnControlSet("hint_message", txtHint_Message)
                    );
 
-
             cbis_use.EditValue = "Y";
             rbIs_published.EditValue = "Y";
             tbUse_YN.EditValue = "Y";

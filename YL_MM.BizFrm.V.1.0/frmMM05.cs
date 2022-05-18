@@ -655,10 +655,6 @@ namespace YL_MM.BizFrm
             PopUpBizAgent.Show(this, popup2);
         }
 
-        private void GridView1_CustomDrawGroupPanel(object sender, DevExpress.XtraGrid.Views.Base.CustomDrawEventArgs e)
-        {
-           
-        }
 
         private void efwGridControl1_Click(object sender, EventArgs e)
         {
@@ -711,6 +707,11 @@ namespace YL_MM.BizFrm
 
 
             Open1();
+        }
+
+        private void GridView1_CustomDrawGroupPanel(object sender, DevExpress.XtraGrid.Views.Base.CustomDrawEventArgs e)
+        {
+           
         }
 
         private void GridView1_CustomDrawFooterCell(object sender, FooterCellCustomDrawEventArgs e)
@@ -882,5 +883,7 @@ namespace YL_MM.BizFrm
             FrmInfo.ShowDialog();
             
         }
+
+
     }
 }

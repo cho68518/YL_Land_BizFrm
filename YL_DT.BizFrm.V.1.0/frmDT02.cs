@@ -288,6 +288,12 @@ namespace YL_DT.BizFrm
             {
                 Save2();
             }
+
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
+            {
+                Save3();
+            }
+
             if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
             {
                 Save4();
@@ -699,6 +705,82 @@ namespace YL_DT.BizFrm
                 Open1();
             }
         }
+
+        public void Save3()
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+
+                    var saveResult = new SaveTableResultInfo() { IsError = true };
+
+                    var dt = efwGridControl4.GetChangeDataWithRowState;
+                    var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+                    for (var i = 0; i < dt.Rows.Count; i++)
+                    {
+                        if (dt.Rows[i][StatusColumn].ToString() == "U")
+                        {
+                            using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                            {
+                                using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DT_DT02_SAVE_05", con))
+                                {
+
+                                    con.Open();
+                                    cmd.CommandType = CommandType.StoredProcedure;
+
+                                    cmd.Parameters.Add("i_p_code_id", MySqlDbType.VarChar, 2);
+                                    cmd.Parameters[0].Value = dt.Rows[i]["p_code_id"].ToString();
+
+                                    cmd.Parameters.Add("i_p_code_nm", MySqlDbType.VarChar, 255);
+                                    cmd.Parameters[1].Value = dt.Rows[i]["p_code_nm"].ToString();
+
+                                    cmd.Parameters.Add("i_code_id", MySqlDbType.VarChar, 2);
+                                    cmd.Parameters[2].Value = dt.Rows[i]["code_id"].ToString();
+
+                                    cmd.Parameters.Add("i_code_nm", MySqlDbType.VarChar, 255);
+                                    cmd.Parameters[3].Value = dt.Rows[i]["code_nm"].ToString();
+
+                                    cmd.Parameters.Add("i_doma", MySqlDbType.VarChar, 1);
+                                    cmd.Parameters[4].Value = dt.Rows[i]["doma"].ToString();
+
+                                    cmd.Parameters.Add("i_helper", MySqlDbType.VarChar, 1);
+                                    cmd.Parameters[5].Value = dt.Rows[i]["helper"].ToString();
+
+                                    cmd.Parameters.Add("i_gshop", MySqlDbType.VarChar, 1);
+                                    cmd.Parameters[6].Value = dt.Rows[i]["gshop"].ToString();
+
+                                    cmd.Parameters.Add("i_official", MySqlDbType.VarChar, 1);
+                                    cmd.Parameters[7].Value = dt.Rows[i]["official"].ToString();
+
+                                    cmd.Parameters.Add("i_stock", MySqlDbType.VarChar, 1);
+                                    cmd.Parameters[8].Value = dt.Rows[i]["stock"].ToString();
+
+                                    cmd.Parameters.Add("i_team_leader", MySqlDbType.VarChar, 1);
+                                    cmd.Parameters[9].Value = dt.Rows[i]["team_leader"].ToString();
+
+                                    cmd.Parameters.Add("i_sort", MySqlDbType.Int32);
+                                    cmd.Parameters[10].Value = Convert.ToInt32(dt.Rows[i]["sort"]).ToString();
+
+                                    cmd.Parameters.Add("i_remark", MySqlDbType.VarChar, 255);
+                                    cmd.Parameters[11].Value = dt.Rows[i]["remark"].ToString();
+
+                                    cmd.ExecuteNonQuery();
+                                    con.Close();
+                                }
+                            }
+                        }
+                    }
+                    MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
+
 
         public void Save4()
         {

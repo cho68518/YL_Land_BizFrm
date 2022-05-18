@@ -108,6 +108,8 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("gm_cash_cele_story", txtGM_CASH_CELE_STORY)
                     , new ColumnControlSet("ps_donut_ad", txtPS_DONUT_AD)
                     , new ColumnControlSet("add_p_name", txtadd_p_name)
+                    , new ColumnControlSet("gd_rate", txtgd_rate)
+                    , new ColumnControlSet("sp_review_story", txtSP_Review_Story)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -468,6 +470,14 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_add_p_name"].Value = txtadd_p_name.EditValue;
                             cmd.Parameters["i_add_p_name"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_sp_review_story", MySqlDbType.Int32));
+                            cmd.Parameters["i_sp_review_story"].Value = Convert.ToInt32(txtSP_Review_Story.EditValue);
+                            cmd.Parameters["i_sp_review_story"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gd_rate", MySqlDbType.Int32));
+                            cmd.Parameters["i_gd_rate"].Value = Convert.ToInt32(txtgd_rate.EditValue);
+                            cmd.Parameters["i_gd_rate"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -823,11 +833,6 @@ namespace YL_DONUT.BizFrm
             }
         }
 
-        private void btnSave_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void efwSimpleButton3_Click(object sender, EventArgs e)
         {
             byte[] _SampleFile = YL_DONUT.BizFrm.Properties.Resources.GOODS_SERIES_UPDATE_sample;
@@ -967,7 +972,6 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add("i_reco_donut", MySqlDbType.Int32, 11);
                             cmd.Parameters[13].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[13]).ToString());
 
-
                             //cmd.Parameters.Add("i_ps_donut02", MySqlDbType.Int32, 11);
                             //cmd.Parameters[9].Value = Convert.ToInt32(gridView3.GetRowCellValue(i, gridView3.Columns[9]).ToString());
 
@@ -1004,6 +1008,7 @@ namespace YL_DONUT.BizFrm
             MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
             Search();
         }
+
 
     }
 }

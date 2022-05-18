@@ -383,7 +383,7 @@
     <value>73</value>
   </data>
   <data name="gridColumn11.Caption" xml:space="preserve">
-    <value>후기스토리도넛</value>
+    <value>GE리뷰스토리</value>
   </data>
   <data name="gridColumn11.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -455,6 +455,15 @@
   <data name="gridColumn27.VisibleIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
+  <data name="gridColumn30.Caption" xml:space="preserve">
+    <value>노출순서</value>
+  </data>
+  <data name="gridColumn30.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn30.VisibleIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
   <data name="gridColumn28.Caption" xml:space="preserve">
     <value>대표품목</value>
   </data>
@@ -465,7 +474,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn28.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="gridColumn29.Caption" xml:space="preserve">
     <value>가입구매명칭</value>
@@ -474,7 +483,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn29.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="gridColumn14.Caption" xml:space="preserve">
     <value>삭제</value>
@@ -533,7 +542,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="gridColumn14.Width" type="System.Int32, mscorlib">
     <value>42</value>
@@ -5330,6 +5339,12 @@
   </data>
   <data name="&gt;&gt;repositoryItemLookUpEdit5.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn30.Name" xml:space="preserve">
+    <value>gridColumn30</value>
+  </data>
+  <data name="&gt;&gt;gridColumn30.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn28.Name" xml:space="preserve">
     <value>gridColumn28</value>

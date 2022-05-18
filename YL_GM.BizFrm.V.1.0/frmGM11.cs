@@ -210,6 +210,38 @@ namespace YL_GM.BizFrm
             bandedGridView1.Columns["experience_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             bandedGridView1.Columns["experience_amt"].SummaryItem.FieldName = "experience_amt";
             bandedGridView1.Columns["experience_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView1.Columns["doma_gd_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["doma_gd_amt"].SummaryItem.FieldName = "doma_gd_amt";
+            bandedGridView1.Columns["doma_gd_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView1.Columns["doma_d_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["doma_d_amt"].SummaryItem.FieldName = "doma_d_amt";
+            bandedGridView1.Columns["doma_d_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView1.Columns["biz_gd_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["biz_gd_amt"].SummaryItem.FieldName = "biz_gd_amt";
+            bandedGridView1.Columns["biz_gd_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView1.Columns["biz_d_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["biz_d_amt"].SummaryItem.FieldName = "biz_d_amt";
+            bandedGridView1.Columns["biz_d_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView1.Columns["shop_gd_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["shop_gd_amt"].SummaryItem.FieldName = "shop_gd_amt";
+            bandedGridView1.Columns["shop_gd_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView1.Columns["shop_d_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["shop_d_amt"].SummaryItem.FieldName = "shop_d_amt";
+            bandedGridView1.Columns["shop_d_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView1.Columns["tot_gd"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["tot_gd"].SummaryItem.FieldName = "tot_gd";
+            bandedGridView1.Columns["tot_gd"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView1.Columns["tot_d"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["tot_d"].SummaryItem.FieldName = "tot_d";
+            bandedGridView1.Columns["tot_d"].SummaryItem.DisplayFormat = "{0:c}";
         }
 
         public override void Search()
@@ -226,10 +258,10 @@ namespace YL_GM.BizFrm
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 10);
                         cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 8);
 
-                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 10);
                         cmd.Parameters[1].Value = dtE_DATE.EditValue3.Substring(0, 8);
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
