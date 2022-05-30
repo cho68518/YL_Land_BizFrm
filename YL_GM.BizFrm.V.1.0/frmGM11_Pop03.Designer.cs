@@ -45,6 +45,7 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
@@ -120,6 +121,7 @@
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn11,
+            this.gridColumn12,
             this.gridColumn13});
             this.gridView1.DetailHeight = 408;
             this.gridView1.GridControl = this.efwGridControl1;
@@ -233,6 +235,17 @@
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 10;
             // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "사용 D머니";
+            this.gridColumn12.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn12.FieldName = "o_donut_d_cost";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 11;
+            // 
             // gridColumn13
             // 
             this.gridColumn13.Caption = "주주유무";
@@ -241,7 +254,7 @@
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 11;
+            this.gridColumn13.VisibleIndex = 12;
             // 
             // repositoryItemCheckEdit2
             // 
@@ -372,5 +385,6 @@
         private Easy.Framework.WinForm.Control.efwDateEdit dt1T;
         private Easy.Framework.WinForm.Control.efwDateEdit dt1F;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
     }
 }

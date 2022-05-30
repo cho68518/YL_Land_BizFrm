@@ -242,6 +242,11 @@ namespace YL_GM.BizFrm
             bandedGridView1.Columns["tot_d"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             bandedGridView1.Columns["tot_d"].SummaryItem.FieldName = "tot_d";
             bandedGridView1.Columns["tot_d"].SummaryItem.DisplayFormat = "{0:c}";
+
+            bandedGridView1.Columns["doma_cnt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            bandedGridView1.Columns["doma_cnt"].SummaryItem.FieldName = "doma_cnt";
+            bandedGridView1.Columns["doma_cnt"].SummaryItem.DisplayFormat = "{0}";
+
         }
 
         public override void Search()

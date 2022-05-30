@@ -78,6 +78,10 @@ namespace YL_MM.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
+            dt_s_date.EditValue = DateTime.Now;
+            dt_e_date.EditValue = DateTime.Now;
+            rb_Search_type.EditValue = "1";
+
             if (UserInfo.instance().UserId == "169.254.169.113" || UserInfo.instance().UserId == "0000000024")
             {
                 layoutControlItem18.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
@@ -220,7 +224,20 @@ namespace YL_MM.BizFrm
 
         #region 조회
 
+
         public override void Search()
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open2();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open3();
+            }
+        }
+
+        public void Open2()
         {
             //base.Search();
 
@@ -306,6 +323,55 @@ namespace YL_MM.BizFrm
             }
         }
 
+        public void Open3()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                string sLevel = string.Empty;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM05_SELECT_05", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        
+
+                        cmd.Parameters.Add("i_search_type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[0].Value = rb_Search_type.EditValue;
+
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dt_s_date.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[2].Value = dt_e_date.EditValue3;
+
+                        cmd.Parameters.Add("i_query", MySqlDbType.VarChar);
+                        cmd.Parameters[3].Value = txtQuery.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+
+                            efwGridControl4.DataBind(ds);
+                            this.efwGridControl4.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
 
 
         #region 저장
@@ -884,6 +950,10 @@ namespace YL_MM.BizFrm
             
         }
 
-
+        private void txtQuery_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
+        }
     }
 }
