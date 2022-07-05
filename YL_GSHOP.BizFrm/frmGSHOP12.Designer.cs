@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSHOP12));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
@@ -56,7 +57,6 @@
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement24 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement25 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement26 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSHOP12));
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleDataBar formatConditionRuleDataBar1 = new DevExpress.XtraEditors.FormatConditionRuleDataBar();
             this.layoutViewColumn9 = new DevExpress.XtraGrid.Columns.TileViewColumn();
@@ -215,6 +215,7 @@
             this.tileViewColumn8 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_tileViewColumn8 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
+            this.rbP_SHOW_TYPE = new Easy.Framework.WinForm.Control.efwRadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_tileViewColumn9)).BeginInit();
@@ -298,6 +299,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_tileViewColumn7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_tileViewColumn8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbP_SHOW_TYPE.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutViewColumn9
@@ -428,6 +430,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.rbP_SHOW_TYPE);
             this.efwPanelControl1.Controls.Add(this.txtURL);
             this.efwPanelControl1.Controls.Add(this.txtU_Id);
             this.efwPanelControl1.Controls.Add(this.txtstory_id);
@@ -452,7 +455,7 @@
             // 
             this.txtURL.EditValue2 = null;
             this.txtURL.EraserGroup = "CLR1";
-            this.txtURL.Location = new System.Drawing.Point(927, 19);
+            this.txtURL.Location = new System.Drawing.Point(1252, 19);
             this.txtURL.Name = "txtURL";
             this.txtURL.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtURL.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -465,7 +468,7 @@
             // 
             this.txtU_Id.EditValue2 = null;
             this.txtU_Id.EraserGroup = "CLR1";
-            this.txtU_Id.Location = new System.Drawing.Point(689, 5);
+            this.txtU_Id.Location = new System.Drawing.Point(1014, 5);
             this.txtU_Id.Name = "txtU_Id";
             this.txtU_Id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_Id.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -478,7 +481,7 @@
             // 
             this.txtstory_id.EditValue2 = null;
             this.txtstory_id.EraserGroup = "CLR1";
-            this.txtstory_id.Location = new System.Drawing.Point(689, 28);
+            this.txtstory_id.Location = new System.Drawing.Point(1014, 28);
             this.txtstory_id.Name = "txtstory_id";
             this.txtstory_id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtstory_id.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -513,7 +516,7 @@
             // 
             this.txtPic_Url5.EditValue2 = null;
             this.txtPic_Url5.EraserGroup = "CLR1";
-            this.txtPic_Url5.Location = new System.Drawing.Point(725, 28);
+            this.txtPic_Url5.Location = new System.Drawing.Point(1050, 28);
             this.txtPic_Url5.Name = "txtPic_Url5";
             this.txtPic_Url5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPic_Url5.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -526,7 +529,7 @@
             // 
             this.txtPic_Url4.EditValue2 = null;
             this.txtPic_Url4.EraserGroup = "CLR1";
-            this.txtPic_Url4.Location = new System.Drawing.Point(712, 28);
+            this.txtPic_Url4.Location = new System.Drawing.Point(1037, 28);
             this.txtPic_Url4.Name = "txtPic_Url4";
             this.txtPic_Url4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPic_Url4.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -539,7 +542,7 @@
             // 
             this.txtPic_Url3.EditValue2 = null;
             this.txtPic_Url3.EraserGroup = "CLR1";
-            this.txtPic_Url3.Location = new System.Drawing.Point(700, 28);
+            this.txtPic_Url3.Location = new System.Drawing.Point(1025, 28);
             this.txtPic_Url3.Name = "txtPic_Url3";
             this.txtPic_Url3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPic_Url3.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -552,7 +555,7 @@
             // 
             this.txtPic_Url2.EditValue2 = null;
             this.txtPic_Url2.EraserGroup = "CLR1";
-            this.txtPic_Url2.Location = new System.Drawing.Point(725, 6);
+            this.txtPic_Url2.Location = new System.Drawing.Point(1050, 6);
             this.txtPic_Url2.Name = "txtPic_Url2";
             this.txtPic_Url2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPic_Url2.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -565,7 +568,7 @@
             // 
             this.txtPic_Url1.EditValue2 = null;
             this.txtPic_Url1.EraserGroup = "CLR1";
-            this.txtPic_Url1.Location = new System.Drawing.Point(712, 6);
+            this.txtPic_Url1.Location = new System.Drawing.Point(1037, 6);
             this.txtPic_Url1.Name = "txtPic_Url1";
             this.txtPic_Url1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPic_Url1.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -2142,6 +2145,25 @@
             this.layoutViewCard1.OptionsItemText.TextToControlDistance = 5;
             this.layoutViewCard1.Text = "TemplateCard";
             // 
+            // rbP_SHOW_TYPE
+            // 
+            this.rbP_SHOW_TYPE.IsMultiLang = false;
+            this.rbP_SHOW_TYPE.Location = new System.Drawing.Point(714, 15);
+            this.rbP_SHOW_TYPE.Name = "rbP_SHOW_TYPE";
+            this.rbP_SHOW_TYPE.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbP_SHOW_TYPE.Properties.Appearance.Options.UseBackColor = true;
+            this.rbP_SHOW_TYPE.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbP_SHOW_TYPE.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbP_SHOW_TYPE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rbP_SHOW_TYPE.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("T", "전체"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("249", "발모후기"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("255", "샴푸후기")});
+            this.rbP_SHOW_TYPE.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.rbP_SHOW_TYPE.RequireMessage = null;
+            this.rbP_SHOW_TYPE.Size = new System.Drawing.Size(285, 23);
+            this.rbP_SHOW_TYPE.TabIndex = 60;
+            // 
             // frmGSHOP12
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2239,6 +2261,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_tileViewColumn7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_tileViewColumn8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbP_SHOW_TYPE.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2400,5 +2423,6 @@
         private DevExpress.XtraGrid.Columns.LayoutViewColumn tileViewColumn9;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_tileViewColumn9;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbP_SHOW_TYPE;
     }
 }

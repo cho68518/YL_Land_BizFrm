@@ -46,58 +46,6 @@ namespace YL_GM.BizFrm
             dtS_DATE.EditValue = DateTime.Now;
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
-            gridView1.Columns["month1"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month1"].SummaryItem.FieldName = "month1";
-            gridView1.Columns["month1"].SummaryItem.DisplayFormat = "{0:c}";
-
-
-            gridView1.Columns["month2"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month2"].SummaryItem.FieldName = "month2";
-            gridView1.Columns["month2"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["month3"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month3"].SummaryItem.FieldName = "month3";
-            gridView1.Columns["month3"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["month4"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month4"].SummaryItem.FieldName = "month4";
-            gridView1.Columns["month4"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["month5"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month5"].SummaryItem.FieldName = "month5";
-            gridView1.Columns["month5"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["month6"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month6"].SummaryItem.FieldName = "month6";
-            gridView1.Columns["month6"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["month7"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month7"].SummaryItem.FieldName = "month7";
-            gridView1.Columns["month7"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["month8"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month8"].SummaryItem.FieldName = "month8";
-            gridView1.Columns["month8"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["month9"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month9"].SummaryItem.FieldName = "month9";
-            gridView1.Columns["month9"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["month10"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month10"].SummaryItem.FieldName = "month10";
-            gridView1.Columns["month10"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["month11"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month11"].SummaryItem.FieldName = "month11";
-            gridView1.Columns["month11"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["month12"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["month12"].SummaryItem.FieldName = "month12";
-            gridView1.Columns["month12"].SummaryItem.DisplayFormat = "{0:c}";
-
-            gridView1.Columns["tot"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["tot"].SummaryItem.FieldName = "tot";
-            gridView1.Columns["tot"].SummaryItem.DisplayFormat = "{0:c}";
         }
 
         public override void Search()
@@ -198,6 +146,15 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_lbl46", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl46"].Direction = ParameterDirection.Output;
 
+                        // 일반멤버 가입
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl51", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl51"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl52", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl52"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl56", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl56"].Direction = ParameterDirection.Output;
 
 
 
@@ -290,17 +247,26 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_lbl401", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl401"].Direction = ParameterDirection.Output;
 
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl402", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl402"].Direction = ParameterDirection.Output;
+
                         cmd.Parameters.Add(new MySqlParameter("o_lbl403", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl403"].Direction = ParameterDirection.Output;
 
                         cmd.Parameters.Add(new MySqlParameter("o_lbl404", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl404"].Direction = ParameterDirection.Output;
-                        
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl405", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl405"].Direction = ParameterDirection.Output;
+
                         cmd.Parameters.Add(new MySqlParameter("o_lbl406", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl406"].Direction = ParameterDirection.Output;
 
                         cmd.Parameters.Add(new MySqlParameter("o_lbl407", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl407"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl408", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl408"].Direction = ParameterDirection.Output;
 
                         cmd.Parameters.Add(new MySqlParameter("o_lbl409", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl409"].Direction = ParameterDirection.Output;
@@ -309,17 +275,26 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_lbl501", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl501"].Direction = ParameterDirection.Output;
 
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl502", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl502"].Direction = ParameterDirection.Output;
+
                         cmd.Parameters.Add(new MySqlParameter("o_lbl503", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl503"].Direction = ParameterDirection.Output;
 
                         cmd.Parameters.Add(new MySqlParameter("o_lbl504", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl504"].Direction = ParameterDirection.Output;
 
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl505", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl505"].Direction = ParameterDirection.Output;
+
                         cmd.Parameters.Add(new MySqlParameter("o_lbl506", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl506"].Direction = ParameterDirection.Output;
 
                         cmd.Parameters.Add(new MySqlParameter("o_lbl507", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl507"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl508", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl508"].Direction = ParameterDirection.Output;
 
                         cmd.Parameters.Add(new MySqlParameter("o_lbl509", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl509"].Direction = ParameterDirection.Output;
@@ -329,11 +304,17 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_lbl601", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl601"].Direction = ParameterDirection.Output;
 
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl602", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl602"].Direction = ParameterDirection.Output;
+
                         cmd.Parameters.Add(new MySqlParameter("o_lbl603", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl603"].Direction = ParameterDirection.Output;
 
                         cmd.Parameters.Add(new MySqlParameter("o_lbl604", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl604"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl605", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl605"].Direction = ParameterDirection.Output;
 
                         cmd.Parameters.Add(new MySqlParameter("o_lbl606", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl606"].Direction = ParameterDirection.Output;
@@ -341,30 +322,66 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_lbl607", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl607"].Direction = ParameterDirection.Output;
 
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl608", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl608"].Direction = ParameterDirection.Output;
+
                         cmd.Parameters.Add(new MySqlParameter("o_lbl609", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl609"].Direction = ParameterDirection.Output;
 
 
-                        // 스마트스토어
-                        cmd.Parameters.Add(new MySqlParameter("o_lbl701", MySqlDbType.Int32));
-                        cmd.Parameters["o_lbl701"].Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl104_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl104_1"].Direction = ParameterDirection.Output;
 
-                        cmd.Parameters.Add(new MySqlParameter("o_lbl703", MySqlDbType.Int32));
-                        cmd.Parameters["o_lbl703"].Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl204_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl204_1"].Direction = ParameterDirection.Output;
 
-                        cmd.Parameters.Add(new MySqlParameter("o_lbl704", MySqlDbType.Int32));
-                        cmd.Parameters["o_lbl704"].Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl304_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl304_1"].Direction = ParameterDirection.Output;
 
-                        cmd.Parameters.Add(new MySqlParameter("o_lbl706", MySqlDbType.Int32));
-                        cmd.Parameters["o_lbl706"].Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl404_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl404_1"].Direction = ParameterDirection.Output;
 
-                        cmd.Parameters.Add(new MySqlParameter("o_lbl707", MySqlDbType.Int32));
-                        cmd.Parameters["o_lbl707"].Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl504_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl504_1"].Direction = ParameterDirection.Output;
 
-                        cmd.Parameters.Add(new MySqlParameter("o_lbl709", MySqlDbType.Int32));
-                        cmd.Parameters["o_lbl709"].Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl604_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl604_1"].Direction = ParameterDirection.Output;
 
-                        //
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl106_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl106_1"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl206_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl206_1"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl306_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl306_1"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl406_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl406_1"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl506_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl506_1"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl606_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl606_1"].Direction = ParameterDirection.Output;
+
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl105_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl105_1"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl205_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl205_1"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl305_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl305_1"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl405_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl405_1"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl505_1", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl505_1"].Direction = ParameterDirection.Output;
+
 
                         cmd.ExecuteNonQuery();
                         // VIP    String.Format("{0:#,##0}", rows[0]["teld17"]);
@@ -395,6 +412,11 @@ namespace YL_GM.BizFrm
                         lbl44.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl44"].Value);
                         lbl45.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl45"].Value);
                         lbl46.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl46"].Value);
+
+                        lbl51.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl51"].Value);
+                        lbl52.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl52"].Value);
+                        lbl56.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl56"].Value);
+
                         // 주문
                         lbl101.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl101"].Value);
                         lbl102.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl102"].Value);
@@ -428,31 +450,55 @@ namespace YL_GM.BizFrm
                         //카페24
                         lbl401.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl401"].Value);
                         lbl403.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl403"].Value);
+                        lbl402.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl402"].Value);
                         lbl404.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl404"].Value);
+                        lbl405.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl405"].Value);
                         lbl406.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl406"].Value);
                         lbl407.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl407"].Value);
+                        lbl408.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl408"].Value);
                         lbl409.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl409"].Value);
                         //오픈마켓
                         lbl501.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl501"].Value);
+                        lbl502.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl502"].Value);
                         lbl503.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl503"].Value);
                         lbl504.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl504"].Value);
+                        lbl505.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl505"].Value);
                         lbl506.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl506"].Value);
                         lbl507.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl507"].Value);
+                        lbl508.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl508"].Value);
                         lbl509.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl509"].Value);
                         //외부주문
                         lbl601.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl601"].Value);
+                        lbl602.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl602"].Value);
                         lbl603.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl603"].Value);
                         lbl604.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl604"].Value);
+                        lbl605.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl605"].Value);
                         lbl606.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl606"].Value);
                         lbl607.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl607"].Value);
+                        lbl608.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl608"].Value);
                         lbl609.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl609"].Value);
-                        //스마트스토어
-                        lbl701.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl701"].Value);
-                        lbl703.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl703"].Value);
-                        lbl704.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl704"].Value);
-                        lbl706.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl706"].Value);
-                        lbl707.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl707"].Value);
-                        lbl709.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl709"].Value);
+
+                        //전월
+                        lbl104_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl104_1"].Value);
+                        lbl204_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl204_1"].Value);
+                        lbl304_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl304_1"].Value);
+                        lbl404_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl404_1"].Value);
+                        lbl504_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl504_1"].Value);
+                        lbl604_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl604_1"].Value);
+
+                        lbl106_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl106_1"].Value);
+                        lbl206_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl206_1"].Value);
+                        lbl306_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl306_1"].Value);
+                        lbl406_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl406_1"].Value);
+                        lbl506_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl506_1"].Value);
+                        lbl606_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl606_1"].Value);
+
+
+                        lbl105_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl105_1"].Value);
+                        lbl205_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl205_1"].Value);
+                        lbl305_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl305_1"].Value);
+                        lbl405_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl405_1"].Value);
+                        lbl505_1.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl505_1"].Value);
 
                     }
                 }
@@ -461,108 +507,12 @@ namespace YL_GM.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
-            Open3();
+ 
         }
 
-
-        private void Open3()
+        private void efwLabel15_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string sP_SHOW_TYPE = string.Empty;
-
-                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
-                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-
-                {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM15_SELECT_02", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("i_year", MySqlDbType.VarChar, 8);
-                        cmd.Parameters[0].Value = dtS_DATE.EditValue3.Substring(0, 4);
-
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable ds = new DataTable();
-                            sda.Fill(ds);
-                            efwGridControl1.DataBind(ds);
-                            //    this.efwGridControl1.MyGridView.BestFitColumns();
-
-                        }
-                    }
-                }
-                ChartCreat1();
-            }
-            catch (Exception ex)
-            {
-                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            }
 
         }
-        public void ChartCreat1()
-        {
-            //차트 클리어
-            for (int i = 0; i < chartControl1.Series.Count; i++)
-                this.chartControl1.Series[i].Points.Clear();
-
-            SeriesPoint sPont = null;
-
-            //시리즈 포인트
-            for (int i = 0; i < 12; i++)
-            {
-                if (i == 0)
-                {
-                    sPont = new SeriesPoint("1", Convert.ToInt32(gridView1.Columns["month1"].SummaryItem.SummaryValue));
-                }
-                else if (i == 1)
-                {
-                    sPont = new SeriesPoint("2", Convert.ToInt32(gridView1.Columns["month2"].SummaryItem.SummaryValue));
-                }
-                else if (i == 2)
-                {
-                    sPont = new SeriesPoint("3", Convert.ToInt32(gridView1.Columns["month3"].SummaryItem.SummaryValue));
-                }
-                else if (i == 3)
-                {
-                    sPont = new SeriesPoint("4", Convert.ToInt32(gridView1.Columns["month4"].SummaryItem.SummaryValue));
-                }
-                else if (i == 4)
-                {
-                    sPont = new SeriesPoint("5", Convert.ToInt32(gridView1.Columns["month5"].SummaryItem.SummaryValue));
-                }
-                else if (i == 5)
-                {
-                    sPont = new SeriesPoint("6", Convert.ToInt32(gridView1.Columns["month6"].SummaryItem.SummaryValue));
-                }
-                else if (i == 6)
-                {
-                    sPont = new SeriesPoint("7", Convert.ToInt32(gridView1.Columns["month7"].SummaryItem.SummaryValue));
-                }
-                else if (i == 7)
-                {
-                    sPont = new SeriesPoint("8", Convert.ToInt32(gridView1.Columns["month8"].SummaryItem.SummaryValue));
-                }
-                else if (i == 8)
-                {
-                    sPont = new SeriesPoint("9", Convert.ToInt32(gridView1.Columns["month9"].SummaryItem.SummaryValue));
-                }
-                else if (i == 9)
-                {
-                    sPont = new SeriesPoint("10", Convert.ToInt32(gridView1.Columns["month10"].SummaryItem.SummaryValue));
-                }
-                else if (i == 10)
-                {
-                    sPont = new SeriesPoint("11", Convert.ToInt32(gridView1.Columns["month11"].SummaryItem.SummaryValue));
-                }
-                else if (i == 11)
-                {
-                    sPont = new SeriesPoint("12", Convert.ToInt32(gridView1.Columns["month12"].SummaryItem.SummaryValue));
-                }
-                this.chartControl1.Series["Series 1"].Points.Add(sPont);
-            }
-
-        }
-
     }
 }

@@ -194,6 +194,11 @@ namespace YL_GSHOP.BizFrm
                         cmd.Parameters.Add("i_gshop_name", MySqlDbType.VarChar, 50);
                         cmd.Parameters[2].Value = txtgshop_name.EditValue;
 
+
+                        cmd.Parameters.Add("i_category_no", MySqlDbType.VarChar, 3);
+                        cmd.Parameters[3].Value = rbP_SHOW_TYPE.EditValue;
+
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();

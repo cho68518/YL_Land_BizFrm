@@ -280,6 +280,7 @@
             this.repositoryItemCheckEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit12 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit13 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl3)).BeginInit();
             this.efwPanelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rbCustS.Properties)).BeginInit();
@@ -1511,6 +1512,7 @@
             this.gridColumn20,
             this.gridColumn21,
             this.gridColumn22,
+            this.gridColumn25,
             this.gridColumn23});
             this.gridView3.CustomizationFormBounds = new System.Drawing.Rectangle(966, 595, 260, 242);
             this.gridView3.GridControl = this.efwGridControl3;
@@ -1626,7 +1628,7 @@
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 7;
+            this.gridColumn23.VisibleIndex = 8;
             // 
             // repositoryItemLookUpEdit2
             // 
@@ -3018,6 +3020,17 @@
             this.repositoryItemCheckEdit13.ValueChecked = "Y";
             this.repositoryItemCheckEdit13.ValueUnchecked = "N";
             // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "와이엔킴_속초";
+            this.gridColumn25.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn25.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn25.FieldName = "yn_kim_sc";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.OptionsColumn.AllowEdit = false;
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 7;
+            // 
             // frmGM22
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -3361,5 +3374,6 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
         private Easy.Framework.WinForm.Control.efwRadioGroup rbtel_use_yn;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
     }
 }

@@ -100,7 +100,7 @@ namespace YL_GSHOP.BizFrm
                     , new ColumnControlSet("team_nickname", txtTEAM_NICKNAME)
                     , new ColumnControlSet("team_leader", txtTEAM_LEADER)
                     , new ColumnControlSet("experience_shop", chkExperience_Shop)
-
+                    , new ColumnControlSet("area", txtArea)
                    ); ;
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -631,6 +631,10 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_team_leader", MySqlDbType.VarChar));
                             cmd.Parameters["i_team_leader"].Value = txtTEAM_LEADER.EditValue;
                             cmd.Parameters["i_team_leader"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_area", MySqlDbType.VarChar));
+                            cmd.Parameters["i_area"].Value = txtArea.EditValue;
+                            cmd.Parameters["i_area"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

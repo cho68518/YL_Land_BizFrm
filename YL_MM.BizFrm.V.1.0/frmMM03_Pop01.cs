@@ -1946,7 +1946,7 @@ namespace YL_MM.BizFrm
                                 nId = 0;
                             else
                                 nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "ps_donut01"));
-                            cmd.Parameters.Add("i_ps_donut01", MySqlDbType.Int32, 11);
+                            cmd.Parameters.Add("i_refund_donut_cost", MySqlDbType.Int32, 11);
                             cmd.Parameters[11].Value = nId;
 
                             cmd.Parameters.Add("i_is_use", MySqlDbType.VarChar, 1);

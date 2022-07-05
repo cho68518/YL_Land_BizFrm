@@ -40,7 +40,7 @@ namespace YL_SCM.BizFrm
             this.IsCancel = false;
             this.IsPrint = false;
             this.IsExcel = false;
-
+            txtS_IDX.EditValue = "0";
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
@@ -216,6 +216,7 @@ namespace YL_SCM.BizFrm
         private void BtnNEW_Click(object sender, EventArgs e)
         {
             NewMode();
+            txtS_IDX.EditValue = "0";
         }
 
         private void TxtQ_AGENCY_NAME_KeyDown(object sender, KeyEventArgs e)

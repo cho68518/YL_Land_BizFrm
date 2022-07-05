@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN14));
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy6 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy6 = new Easy.Framework.WinForm.Control.Hierarchy();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo10 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo11 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo12 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo7 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo8 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo9 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy4 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy4 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy5 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
@@ -460,14 +460,14 @@
             // 
             // cmbSellers
             // 
-            childHierarchy6.CodeCtrl = null;
-            childHierarchy6.DbName = null;
-            childHierarchy6.SpName = null;
-            this.cmbSellers.ChildHierarchyInfo = childHierarchy6;
+            childHierarchy1.CodeCtrl = null;
+            childHierarchy1.DbName = null;
+            childHierarchy1.SpName = null;
+            this.cmbSellers.ChildHierarchyInfo = childHierarchy1;
             this.cmbSellers.EraserGroup = "CLR1";
-            hierarchy6.DbName = null;
-            hierarchy6.SpName = null;
-            this.cmbSellers.HierarchyInfo = hierarchy6;
+            hierarchy1.DbName = null;
+            hierarchy1.SpName = null;
+            this.cmbSellers.HierarchyInfo = hierarchy1;
             this.cmbSellers.IsMultiLang = false;
             this.cmbSellers.Location = new System.Drawing.Point(77, 15);
             this.cmbSellers.Name = "cmbSellers";
@@ -518,25 +518,25 @@
             // 
             this.efwGridControl1.BindSet = null;
             this.efwGridControl1.DBName = "";
-            serviceInfo10.InstanceName = "";
-            serviceInfo10.IsUserIDAdd = true;
-            serviceInfo10.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo10.ParamsInfo")));
-            serviceInfo10.ProcName = "";
-            serviceInfo10.UserParams = null;
-            this.efwGridControl1.DeleteServiceInfo = serviceInfo10;
-            serviceInfo11.InstanceName = "";
-            serviceInfo11.IsUserIDAdd = true;
-            serviceInfo11.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo11.ParamsInfo")));
-            serviceInfo11.ProcName = "";
-            serviceInfo11.UserParams = null;
-            this.efwGridControl1.InsertServiceInfo = serviceInfo11;
+            serviceInfo1.InstanceName = "";
+            serviceInfo1.IsUserIDAdd = true;
+            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
+            serviceInfo1.ProcName = "";
+            serviceInfo1.UserParams = null;
+            this.efwGridControl1.DeleteServiceInfo = serviceInfo1;
+            serviceInfo2.InstanceName = "";
+            serviceInfo2.IsUserIDAdd = true;
+            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
+            serviceInfo2.ProcName = "";
+            serviceInfo2.UserParams = null;
+            this.efwGridControl1.InsertServiceInfo = serviceInfo2;
             this.efwGridControl1.IsAddExcelBtn = true;
             this.efwGridControl1.isAddPrintBtn = true;
             this.efwGridControl1.IsEditable = false;
             this.efwGridControl1.IsMultiLang = false;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.efwGridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.efwGridControl1.Location = new System.Drawing.Point(7, 65);
             this.efwGridControl1.MainView = this.gridView1;
             this.efwGridControl1.Name = "efwGridControl1";
@@ -551,12 +551,12 @@
             this.efwGridControl1.Size = new System.Drawing.Size(1505, 337);
             this.efwGridControl1.TabIndex = 25;
             this.efwGridControl1.TableName = "";
-            serviceInfo12.InstanceName = "";
-            serviceInfo12.IsUserIDAdd = true;
-            serviceInfo12.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo12.ParamsInfo")));
-            serviceInfo12.ProcName = "";
-            serviceInfo12.UserParams = null;
-            this.efwGridControl1.UpdateServiceInfo = serviceInfo12;
+            serviceInfo3.InstanceName = "";
+            serviceInfo3.IsUserIDAdd = true;
+            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
+            serviceInfo3.ProcName = "";
+            serviceInfo3.UserParams = null;
+            this.efwGridControl1.UpdateServiceInfo = serviceInfo3;
             this.efwGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -1164,19 +1164,19 @@
             // 
             this.efwGridControl3.BindSet = null;
             this.efwGridControl3.DBName = "";
-            serviceInfo1.InstanceName = "";
-            serviceInfo1.IsUserIDAdd = true;
-            serviceInfo1.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo1.ParamsInfo")));
-            serviceInfo1.ProcName = "";
-            serviceInfo1.UserParams = null;
-            this.efwGridControl3.DeleteServiceInfo = serviceInfo1;
+            serviceInfo4.InstanceName = "";
+            serviceInfo4.IsUserIDAdd = true;
+            serviceInfo4.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo4.ParamsInfo")));
+            serviceInfo4.ProcName = "";
+            serviceInfo4.UserParams = null;
+            this.efwGridControl3.DeleteServiceInfo = serviceInfo4;
             this.efwGridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo2.InstanceName = "";
-            serviceInfo2.IsUserIDAdd = true;
-            serviceInfo2.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo2.ParamsInfo")));
-            serviceInfo2.ProcName = "";
-            serviceInfo2.UserParams = null;
-            this.efwGridControl3.InsertServiceInfo = serviceInfo2;
+            serviceInfo5.InstanceName = "";
+            serviceInfo5.IsUserIDAdd = true;
+            serviceInfo5.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo5.ParamsInfo")));
+            serviceInfo5.ProcName = "";
+            serviceInfo5.UserParams = null;
+            this.efwGridControl3.InsertServiceInfo = serviceInfo5;
             this.efwGridControl3.IsAddExcelBtn = true;
             this.efwGridControl3.isAddPrintBtn = true;
             this.efwGridControl3.IsEditable = false;
@@ -1195,12 +1195,12 @@
             this.efwGridControl3.Size = new System.Drawing.Size(1484, 0);
             this.efwGridControl3.TabIndex = 67;
             this.efwGridControl3.TableName = "";
-            serviceInfo3.InstanceName = "";
-            serviceInfo3.IsUserIDAdd = true;
-            serviceInfo3.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo3.ParamsInfo")));
-            serviceInfo3.ProcName = "";
-            serviceInfo3.UserParams = null;
-            this.efwGridControl3.UpdateServiceInfo = serviceInfo3;
+            serviceInfo6.InstanceName = "";
+            serviceInfo6.IsUserIDAdd = true;
+            serviceInfo6.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo6.ParamsInfo")));
+            serviceInfo6.ProcName = "";
+            serviceInfo6.UserParams = null;
+            this.efwGridControl3.UpdateServiceInfo = serviceInfo6;
             this.efwGridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
@@ -1353,18 +1353,18 @@
             // 
             this.efwGridControl2.BindSet = null;
             this.efwGridControl2.DBName = "";
-            serviceInfo4.InstanceName = "";
-            serviceInfo4.IsUserIDAdd = true;
-            serviceInfo4.ParamsInfo = null;
-            serviceInfo4.ProcName = "";
-            serviceInfo4.UserParams = null;
-            this.efwGridControl2.DeleteServiceInfo = serviceInfo4;
-            serviceInfo5.InstanceName = "";
-            serviceInfo5.IsUserIDAdd = true;
-            serviceInfo5.ParamsInfo = null;
-            serviceInfo5.ProcName = "";
-            serviceInfo5.UserParams = null;
-            this.efwGridControl2.InsertServiceInfo = serviceInfo5;
+            serviceInfo7.InstanceName = "";
+            serviceInfo7.IsUserIDAdd = true;
+            serviceInfo7.ParamsInfo = null;
+            serviceInfo7.ProcName = "";
+            serviceInfo7.UserParams = null;
+            this.efwGridControl2.DeleteServiceInfo = serviceInfo7;
+            serviceInfo8.InstanceName = "";
+            serviceInfo8.IsUserIDAdd = true;
+            serviceInfo8.ParamsInfo = null;
+            serviceInfo8.ProcName = "";
+            serviceInfo8.UserParams = null;
+            this.efwGridControl2.InsertServiceInfo = serviceInfo8;
             this.efwGridControl2.IsAddExcelBtn = true;
             this.efwGridControl2.isAddPrintBtn = true;
             this.efwGridControl2.IsEditable = false;
@@ -1383,12 +1383,12 @@
             this.efwGridControl2.Size = new System.Drawing.Size(1488, 20);
             this.efwGridControl2.TabIndex = 25;
             this.efwGridControl2.TableName = "";
-            serviceInfo6.InstanceName = "";
-            serviceInfo6.IsUserIDAdd = true;
-            serviceInfo6.ParamsInfo = null;
-            serviceInfo6.ProcName = "";
-            serviceInfo6.UserParams = null;
-            this.efwGridControl2.UpdateServiceInfo = serviceInfo6;
+            serviceInfo9.InstanceName = "";
+            serviceInfo9.IsUserIDAdd = true;
+            serviceInfo9.ParamsInfo = null;
+            serviceInfo9.ProcName = "";
+            serviceInfo9.UserParams = null;
+            this.efwGridControl2.UpdateServiceInfo = serviceInfo9;
             this.efwGridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -1753,7 +1753,7 @@
             // 
             this.txtgd_rate.EditValue = "0";
             this.txtgd_rate.EditValue2 = null;
-            this.txtgd_rate.Location = new System.Drawing.Point(560, 166);
+            this.txtgd_rate.Location = new System.Drawing.Point(653, 166);
             this.txtgd_rate.Name = "txtgd_rate";
             this.txtgd_rate.Properties.Appearance.Options.UseTextOptions = true;
             this.txtgd_rate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1770,11 +1770,11 @@
             // 
             this.efwLabel38.EraserGroup = null;
             this.efwLabel38.IsMultiLang = false;
-            this.efwLabel38.Location = new System.Drawing.Point(465, 169);
+            this.efwLabel38.Location = new System.Drawing.Point(460, 166);
             this.efwLabel38.Name = "efwLabel38";
-            this.efwLabel38.Size = new System.Drawing.Size(72, 14);
+            this.efwLabel38.Size = new System.Drawing.Size(167, 14);
             this.efwLabel38.TabIndex = 87;
-            this.efwLabel38.Text = "GD 사용율(%)";
+            this.efwLabel38.Text = "도넛사용율(%, 지제품-GD/일반-D)";
             // 
             // efwPanelControl4
             // 
@@ -2924,7 +2924,7 @@
             // 
             this.txtDELIVERY_PRICE.EditValue = "0";
             this.txtDELIVERY_PRICE.EditValue2 = null;
-            this.txtDELIVERY_PRICE.Location = new System.Drawing.Point(560, 138);
+            this.txtDELIVERY_PRICE.Location = new System.Drawing.Point(653, 138);
             this.txtDELIVERY_PRICE.Name = "txtDELIVERY_PRICE";
             this.txtDELIVERY_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtDELIVERY_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2958,7 +2958,7 @@
             // 
             this.efwLabel8.EraserGroup = null;
             this.efwLabel8.IsMultiLang = false;
-            this.efwLabel8.Location = new System.Drawing.Point(465, 141);
+            this.efwLabel8.Location = new System.Drawing.Point(460, 141);
             this.efwLabel8.Name = "efwLabel8";
             this.efwLabel8.Size = new System.Drawing.Size(30, 14);
             this.efwLabel8.TabIndex = 8;
@@ -3017,13 +3017,13 @@
             // 
             // cmbCate_Code4
             // 
-            childHierarchy1.CodeCtrl = null;
-            childHierarchy1.DbName = null;
-            childHierarchy1.SpName = null;
-            this.cmbCate_Code4.ChildHierarchyInfo = childHierarchy1;
-            hierarchy1.DbName = null;
-            hierarchy1.SpName = null;
-            this.cmbCate_Code4.HierarchyInfo = hierarchy1;
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbCate_Code4.ChildHierarchyInfo = childHierarchy2;
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbCate_Code4.HierarchyInfo = hierarchy2;
             this.cmbCate_Code4.IsMultiLang = false;
             this.cmbCate_Code4.Location = new System.Drawing.Point(498, 61);
             this.cmbCate_Code4.Name = "cmbCate_Code4";
@@ -3034,13 +3034,13 @@
             // 
             // cmbCate_Code3
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbCate_Code3.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbCate_Code3.HierarchyInfo = hierarchy2;
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbCate_Code3.ChildHierarchyInfo = childHierarchy3;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbCate_Code3.HierarchyInfo = hierarchy3;
             this.cmbCate_Code3.IsMultiLang = false;
             this.cmbCate_Code3.Location = new System.Drawing.Point(118, 61);
             this.cmbCate_Code3.Name = "cmbCate_Code3";
@@ -3051,13 +3051,13 @@
             // 
             // cmbCate_Code2
             // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbCate_Code2.ChildHierarchyInfo = childHierarchy3;
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbCate_Code2.HierarchyInfo = hierarchy3;
+            childHierarchy4.CodeCtrl = null;
+            childHierarchy4.DbName = null;
+            childHierarchy4.SpName = null;
+            this.cmbCate_Code2.ChildHierarchyInfo = childHierarchy4;
+            hierarchy4.DbName = null;
+            hierarchy4.SpName = null;
+            this.cmbCate_Code2.HierarchyInfo = hierarchy4;
             this.cmbCate_Code2.IsMultiLang = false;
             this.cmbCate_Code2.Location = new System.Drawing.Point(498, 35);
             this.cmbCate_Code2.Name = "cmbCate_Code2";
@@ -3085,13 +3085,13 @@
             // 
             // cmbCate_Code1
             // 
-            childHierarchy4.CodeCtrl = null;
-            childHierarchy4.DbName = null;
-            childHierarchy4.SpName = null;
-            this.cmbCate_Code1.ChildHierarchyInfo = childHierarchy4;
-            hierarchy4.DbName = null;
-            hierarchy4.SpName = null;
-            this.cmbCate_Code1.HierarchyInfo = hierarchy4;
+            childHierarchy5.CodeCtrl = null;
+            childHierarchy5.DbName = null;
+            childHierarchy5.SpName = null;
+            this.cmbCate_Code1.ChildHierarchyInfo = childHierarchy5;
+            hierarchy5.DbName = null;
+            hierarchy5.SpName = null;
+            this.cmbCate_Code1.HierarchyInfo = hierarchy5;
             this.cmbCate_Code1.IsMultiLang = false;
             this.cmbCate_Code1.Location = new System.Drawing.Point(118, 35);
             this.cmbCate_Code1.Name = "cmbCate_Code1";
