@@ -688,6 +688,10 @@ namespace YL_MM.BizFrm
 
                         cmd.Parameters.Add(new MySqlParameter("o_online_product", MySqlDbType.VarChar));
                         cmd.Parameters["o_online_product"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_price_search", MySqlDbType.VarChar));
+                        cmd.Parameters["o_price_search"].Direction = ParameterDirection.Output;
+
                         //
 
                         cmd.ExecuteNonQuery();
@@ -768,7 +772,7 @@ namespace YL_MM.BizFrm
                         rbOtype_e_yn.EditValue = cmd.Parameters["o_otype_e_yn"].Value.ToString();
                         rbEa_product.EditValue = cmd.Parameters["o_ea_product"].Value.ToString();
                         rbOnline_product.EditValue = cmd.Parameters["o_online_product"].Value.ToString();
-
+                        txtPrice_Search.EditValue = cmd.Parameters["o_price_search"].Value.ToString();
 
                         if (chkAll.EditValue.ToString() == "1")
                         {
@@ -1767,9 +1771,12 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_online_product"].Value = rbOnline_product.EditValue;
                             cmd.Parameters["i_online_product"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_price_search", MySqlDbType.VarChar));
+                            cmd.Parameters["i_price_search"].Value = txtPrice_Search.EditValue;
+                            cmd.Parameters["i_price_search"].Direction = ParameterDirection.Input; 
+
                             cmd.Parameters.Add(new MySqlParameter("o_Result_P_Id", MySqlDbType.VarChar));
                             cmd.Parameters["o_Result_P_Id"].Direction = ParameterDirection.Output;
-
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

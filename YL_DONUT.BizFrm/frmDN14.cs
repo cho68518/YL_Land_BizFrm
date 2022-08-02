@@ -110,6 +110,7 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("add_p_name", txtadd_p_name)
                     , new ColumnControlSet("gd_rate", txtgd_rate)
                     , new ColumnControlSet("sp_review_story", txtSP_Review_Story)
+                    , new ColumnControlSet("d_use_amt", txtD_Use_Amt)
                    );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -477,6 +478,10 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_gd_rate", MySqlDbType.Int32));
                             cmd.Parameters["i_gd_rate"].Value = Convert.ToInt32(txtgd_rate.EditValue);
                             cmd.Parameters["i_gd_rate"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_d_use_amt", MySqlDbType.Int32));
+                            cmd.Parameters["i_d_use_amt"].Value = Convert.ToInt32(txtD_Use_Amt.EditValue);
+                            cmd.Parameters["i_d_use_amt"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

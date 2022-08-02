@@ -279,6 +279,8 @@
             this.txtPC_Title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel35 = new Easy.Framework.WinForm.Control.efwLabel();
             this.picPc_Thumbnail = new Easy.Framework.WinForm.Control.efwPictureEdit();
+            this.efwLabel52 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtPrice_Search = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_show_name.Properties)).BeginInit();
@@ -395,6 +397,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rbPC_Use_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPc_Thumbnail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrice_Search.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -742,6 +745,8 @@
             // efwGroupControlProd
             // 
             this.efwGroupControlProd.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControlProd.CaptionImageOptions.Image")));
+            this.efwGroupControlProd.Controls.Add(this.efwLabel52);
+            this.efwGroupControlProd.Controls.Add(this.txtPrice_Search);
             this.efwGroupControlProd.Controls.Add(this.efwSimpleButton7);
             this.efwGroupControlProd.Controls.Add(this.efwLabel51);
             this.efwGroupControlProd.Controls.Add(this.rbOnline_product);
@@ -2646,6 +2651,22 @@
             this.picPc_Thumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPc_Thumbnail.DoubleClick += new System.EventHandler(this.picPc_Thumbnail_DoubleClick);
             // 
+            // efwLabel52
+            // 
+            this.efwLabel52.EraserGroup = null;
+            this.efwLabel52.IsMultiLang = false;
+            resources.ApplyResources(this.efwLabel52, "efwLabel52");
+            this.efwLabel52.Name = "efwLabel52";
+            // 
+            // txtPrice_Search
+            // 
+            this.txtPrice_Search.EditValue2 = null;
+            resources.ApplyResources(this.txtPrice_Search, "txtPrice_Search");
+            this.txtPrice_Search.Name = "txtPrice_Search";
+            this.txtPrice_Search.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtPrice_Search.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPrice_Search.RequireMessage = null;
+            // 
             // frmMM03_Pop01
             // 
             resources.ApplyResources(this, "$this");
@@ -2781,6 +2802,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rbPC_Use_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPc_Thumbnail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrice_Search.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2992,5 +3014,7 @@
         private Easy.Framework.WinForm.Control.efwLabel efwLabel51;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel52;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtPrice_Search;
     }
 }
