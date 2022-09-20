@@ -369,5 +369,17 @@ namespace YL_DONUT.BizFrm
                 Search();
             }
         }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < advBandedGridView1.RowCount; i++)
+                advBandedGridView1.SetRowCellValue(i, advBandedGridView1.Columns["chk"], "Y");
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < advBandedGridView1.RowCount; i++)
+                advBandedGridView1.SetRowCellValue(i, advBandedGridView1.Columns["chk"], "N");
+        }
     }
 }

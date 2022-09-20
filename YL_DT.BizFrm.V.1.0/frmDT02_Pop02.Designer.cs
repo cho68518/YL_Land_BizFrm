@@ -42,7 +42,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 45);
+            this.panel1.Size = new System.Drawing.Size(928, 45);
             this.panel1.TabIndex = 4;
             // 
             // btnCancel
@@ -54,7 +54,7 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
             this.btnCancel.IsMultiLang = false;
-            this.btnCancel.Location = new System.Drawing.Point(690, 8);
+            this.btnCancel.Location = new System.Drawing.Point(818, 8);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 28);
             this.btnCancel.TabIndex = 9;
@@ -74,14 +74,14 @@
             this.picImg.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picImg.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picImg.Properties.ZoomingOperationMode = DevExpress.XtraEditors.Repository.ZoomingOperationMode.MouseWheel;
-            this.picImg.Size = new System.Drawing.Size(800, 405);
+            this.picImg.Size = new System.Drawing.Size(928, 627);
             this.picImg.TabIndex = 5;
             // 
             // frmDT02_Pop02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(928, 672);
             this.Controls.Add(this.picImg);
             this.Controls.Add(this.panel1);
             this.Name = "frmDT02_Pop02";

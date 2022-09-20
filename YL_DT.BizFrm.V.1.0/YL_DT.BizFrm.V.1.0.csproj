@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BA76EDAC-F7A3-4A3E-BF52-A7E9D2F6EF67}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>YL_DT.BizFrm</RootNamespace>
     <AssemblyName>YL_DT.BizFrm.V.1.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -193,6 +193,18 @@
     <Compile Include="Dlg\frmMemberInfo.Designer.cs">
       <DependentUpon>frmMemberInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDT07.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDT07.Designer.cs">
+      <DependentUpon>frmDT07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDT06.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDT06.Designer.cs">
+      <DependentUpon>frmDT06.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDT05.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -267,6 +279,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDT05.resx">
       <DependentUpon>frmDT05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDT06.resx">
+      <DependentUpon>frmDT06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDT07.resx">
+      <DependentUpon>frmDT07.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

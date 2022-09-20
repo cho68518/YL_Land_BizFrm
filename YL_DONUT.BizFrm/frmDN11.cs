@@ -202,7 +202,7 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters.Add("i_id", MySqlDbType.Int32, 50);
                                 cmd.Parameters[0].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "id"));
 
-                                cmd.Parameters.Add("i_o_delivery_num", MySqlDbType.VarChar, 20);
+                                cmd.Parameters.Add("i_o_delivery_num", MySqlDbType.VarChar, 250);
                                 cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "o_delivery_num");
 
                                 cmd.ExecuteNonQuery();

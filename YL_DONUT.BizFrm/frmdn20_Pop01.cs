@@ -90,7 +90,7 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters.Add("i_id", MySqlDbType.Int32, 11);
                                 cmd.Parameters[0].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[0]).ToString());
 
-                                cmd.Parameters.Add("i_delivery_num", MySqlDbType.VarChar, 50);
+                                cmd.Parameters.Add("i_delivery_num", MySqlDbType.VarChar, 500);
                                 cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, gridView1.Columns[1]).ToString();
 
                                 cmd.Parameters.Add("i_delivery_code", MySqlDbType.VarChar, 500);

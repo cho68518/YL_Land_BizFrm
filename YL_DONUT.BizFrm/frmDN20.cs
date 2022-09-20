@@ -463,7 +463,7 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters.Add("i_id", MySqlDbType.Int32, 10);
                                 cmd.Parameters[0].Value = Convert.ToInt32(dt.Rows[i]["id"]).ToString();
 
-                                cmd.Parameters.Add("i_delivery_num", MySqlDbType.VarChar, 50);
+                                cmd.Parameters.Add("i_delivery_num", MySqlDbType.VarChar, 250);
                                 cmd.Parameters[1].Value = dt.Rows[i]["o_delivery_num"].ToString();
 
                                 cmd.Parameters.Add("i_delivery_code", MySqlDbType.VarChar, 10);

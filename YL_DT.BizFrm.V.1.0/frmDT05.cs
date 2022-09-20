@@ -52,6 +52,8 @@ namespace YL_DT.BizFrm
             rbShow_Type.EditValue = "A";
             rbShow_Level.EditValue = "A";
         }
+
+
         public override void Search()
         {
             Open1();

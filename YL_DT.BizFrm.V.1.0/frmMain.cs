@@ -52,5 +52,15 @@ namespace YL_DT.BizFrm
         {
             FrmBaseLoad(new frmDT05());
         }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmDT06());
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmDT07());
+        }
     }
 }

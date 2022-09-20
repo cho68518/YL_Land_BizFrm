@@ -54,9 +54,11 @@
             this.txtmd_leader_id = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtmd_leader_nickname = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtmd_leader_name = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtCHEF_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtCHEF_NICKNAME = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtCHEF_NAME = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -71,6 +73,10 @@
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem42 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnMember_delete = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbLEVEL = new Easy.Framework.WinForm.Control.efwRadioGroup();
@@ -131,12 +137,6 @@
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtCHEF_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtCHEF_NICKNAME = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtCHEF_NAME = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.layoutControlItem42 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
@@ -159,9 +159,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtmd_leader_id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmd_leader_nickname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmd_leader_name.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_ID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NICKNAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
@@ -176,6 +178,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rbLEVEL.Properties)).BeginInit();
@@ -223,12 +229,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_ID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NICKNAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -511,6 +511,48 @@
             this.txtmd_leader_name.TabIndex = 4;
             this.txtmd_leader_name.TabStop = false;
             // 
+            // txtCHEF_ID
+            // 
+            this.txtCHEF_ID.EditValue2 = null;
+            this.txtCHEF_ID.Location = new System.Drawing.Point(138, 156);
+            this.txtCHEF_ID.Name = "txtCHEF_ID";
+            this.txtCHEF_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtCHEF_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtCHEF_ID.Properties.ReadOnly = true;
+            this.txtCHEF_ID.RequireMessage = null;
+            this.txtCHEF_ID.Size = new System.Drawing.Size(139, 20);
+            this.txtCHEF_ID.StyleController = this.layoutControl3;
+            this.txtCHEF_ID.TabIndex = 4;
+            this.txtCHEF_ID.TabStop = false;
+            // 
+            // txtCHEF_NICKNAME
+            // 
+            this.txtCHEF_NICKNAME.EditValue2 = null;
+            this.txtCHEF_NICKNAME.Location = new System.Drawing.Point(138, 180);
+            this.txtCHEF_NICKNAME.Name = "txtCHEF_NICKNAME";
+            this.txtCHEF_NICKNAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtCHEF_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtCHEF_NICKNAME.Properties.ReadOnly = true;
+            this.txtCHEF_NICKNAME.RequireMessage = null;
+            this.txtCHEF_NICKNAME.Size = new System.Drawing.Size(139, 20);
+            this.txtCHEF_NICKNAME.StyleController = this.layoutControl3;
+            this.txtCHEF_NICKNAME.TabIndex = 4;
+            this.txtCHEF_NICKNAME.TabStop = false;
+            // 
+            // txtCHEF_NAME
+            // 
+            this.txtCHEF_NAME.EditValue2 = null;
+            this.txtCHEF_NAME.Location = new System.Drawing.Point(138, 204);
+            this.txtCHEF_NAME.Name = "txtCHEF_NAME";
+            this.txtCHEF_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtCHEF_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtCHEF_NAME.Properties.ReadOnly = true;
+            this.txtCHEF_NAME.RequireMessage = null;
+            this.txtCHEF_NAME.Size = new System.Drawing.Size(139, 20);
+            this.txtCHEF_NAME.StyleController = this.layoutControl3;
+            this.txtCHEF_NAME.TabIndex = 4;
+            this.txtCHEF_NAME.TabStop = false;
+            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -547,15 +589,6 @@
             this.layoutControlItem11.Size = new System.Drawing.Size(180, 24);
             this.layoutControlItem11.Text = "현재등급";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(123, 14);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.txtDOMA_U_ID;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 120);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(540, 24);
-            this.layoutControlItem9.Text = "담당비즈,MD팀장=U_ID";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(123, 14);
             // 
             // layoutControlItem7
             // 
@@ -695,6 +728,45 @@
             this.layoutControlItem37.Text = "MD팀장_이름";
             this.layoutControlItem37.TextSize = new System.Drawing.Size(123, 14);
             // 
+            // layoutControlItem40
+            // 
+            this.layoutControlItem40.Control = this.txtCHEF_ID;
+            this.layoutControlItem40.CustomizationFormText = "담당MD";
+            this.layoutControlItem40.Location = new System.Drawing.Point(0, 144);
+            this.layoutControlItem40.Name = "layoutControlItem40";
+            this.layoutControlItem40.Size = new System.Drawing.Size(269, 24);
+            this.layoutControlItem40.Text = "CHEF_ID";
+            this.layoutControlItem40.TextSize = new System.Drawing.Size(123, 14);
+            // 
+            // layoutControlItem41
+            // 
+            this.layoutControlItem41.Control = this.txtCHEF_NICKNAME;
+            this.layoutControlItem41.CustomizationFormText = "담당MD";
+            this.layoutControlItem41.Location = new System.Drawing.Point(0, 168);
+            this.layoutControlItem41.Name = "layoutControlItem41";
+            this.layoutControlItem41.Size = new System.Drawing.Size(269, 24);
+            this.layoutControlItem41.Text = "CHEF_닉네임";
+            this.layoutControlItem41.TextSize = new System.Drawing.Size(123, 14);
+            // 
+            // layoutControlItem42
+            // 
+            this.layoutControlItem42.Control = this.txtCHEF_NAME;
+            this.layoutControlItem42.CustomizationFormText = "담당MD";
+            this.layoutControlItem42.Location = new System.Drawing.Point(0, 192);
+            this.layoutControlItem42.Name = "layoutControlItem42";
+            this.layoutControlItem42.Size = new System.Drawing.Size(269, 24);
+            this.layoutControlItem42.Text = "CHEF_이름";
+            this.layoutControlItem42.TextSize = new System.Drawing.Size(123, 14);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.txtDOMA_U_ID;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(540, 24);
+            this.layoutControlItem9.Text = "담당비즈,MD팀장=U_ID";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(123, 14);
+            // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.btnMember_delete);
@@ -741,7 +813,7 @@
             this.rbLEVEL.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.rbLEVEL.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "도넛나눔 친구"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "VIP 추천인"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "G샵 / 헬퍼 멤버"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "구독관계")});
             this.rbLEVEL.RequireMessage = null;
             this.rbLEVEL.Size = new System.Drawing.Size(324, 28);
@@ -1518,78 +1590,6 @@
             this.layoutControlItem34.TextSize = new System.Drawing.Size(80, 20);
             this.layoutControlItem34.TextToControlDistance = 5;
             // 
-            // txtCHEF_ID
-            // 
-            this.txtCHEF_ID.EditValue2 = null;
-            this.txtCHEF_ID.Location = new System.Drawing.Point(138, 156);
-            this.txtCHEF_ID.Name = "txtCHEF_ID";
-            this.txtCHEF_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtCHEF_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCHEF_ID.Properties.ReadOnly = true;
-            this.txtCHEF_ID.RequireMessage = null;
-            this.txtCHEF_ID.Size = new System.Drawing.Size(139, 20);
-            this.txtCHEF_ID.StyleController = this.layoutControl3;
-            this.txtCHEF_ID.TabIndex = 4;
-            this.txtCHEF_ID.TabStop = false;
-            // 
-            // layoutControlItem40
-            // 
-            this.layoutControlItem40.Control = this.txtCHEF_ID;
-            this.layoutControlItem40.CustomizationFormText = "담당MD";
-            this.layoutControlItem40.Location = new System.Drawing.Point(0, 144);
-            this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(269, 24);
-            this.layoutControlItem40.Text = "CHEF_ID";
-            this.layoutControlItem40.TextSize = new System.Drawing.Size(123, 14);
-            // 
-            // txtCHEF_NICKNAME
-            // 
-            this.txtCHEF_NICKNAME.EditValue2 = null;
-            this.txtCHEF_NICKNAME.Location = new System.Drawing.Point(138, 180);
-            this.txtCHEF_NICKNAME.Name = "txtCHEF_NICKNAME";
-            this.txtCHEF_NICKNAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtCHEF_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCHEF_NICKNAME.Properties.ReadOnly = true;
-            this.txtCHEF_NICKNAME.RequireMessage = null;
-            this.txtCHEF_NICKNAME.Size = new System.Drawing.Size(139, 20);
-            this.txtCHEF_NICKNAME.StyleController = this.layoutControl3;
-            this.txtCHEF_NICKNAME.TabIndex = 4;
-            this.txtCHEF_NICKNAME.TabStop = false;
-            // 
-            // layoutControlItem41
-            // 
-            this.layoutControlItem41.Control = this.txtCHEF_NICKNAME;
-            this.layoutControlItem41.CustomizationFormText = "담당MD";
-            this.layoutControlItem41.Location = new System.Drawing.Point(0, 168);
-            this.layoutControlItem41.Name = "layoutControlItem41";
-            this.layoutControlItem41.Size = new System.Drawing.Size(269, 24);
-            this.layoutControlItem41.Text = "CHEF_닉네임";
-            this.layoutControlItem41.TextSize = new System.Drawing.Size(123, 14);
-            // 
-            // txtCHEF_NAME
-            // 
-            this.txtCHEF_NAME.EditValue2 = null;
-            this.txtCHEF_NAME.Location = new System.Drawing.Point(138, 204);
-            this.txtCHEF_NAME.Name = "txtCHEF_NAME";
-            this.txtCHEF_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtCHEF_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCHEF_NAME.Properties.ReadOnly = true;
-            this.txtCHEF_NAME.RequireMessage = null;
-            this.txtCHEF_NAME.Size = new System.Drawing.Size(139, 20);
-            this.txtCHEF_NAME.StyleController = this.layoutControl3;
-            this.txtCHEF_NAME.TabIndex = 4;
-            this.txtCHEF_NAME.TabStop = false;
-            // 
-            // layoutControlItem42
-            // 
-            this.layoutControlItem42.Control = this.txtCHEF_NAME;
-            this.layoutControlItem42.CustomizationFormText = "담당MD";
-            this.layoutControlItem42.Location = new System.Drawing.Point(0, 192);
-            this.layoutControlItem42.Name = "layoutControlItem42";
-            this.layoutControlItem42.Size = new System.Drawing.Size(269, 24);
-            this.layoutControlItem42.Text = "CHEF_이름";
-            this.layoutControlItem42.TextSize = new System.Drawing.Size(123, 14);
-            // 
             // frmMM07_Pop01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1624,9 +1624,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtmd_leader_id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmd_leader_nickname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmd_leader_name.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_ID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NICKNAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
@@ -1641,6 +1643,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rbLEVEL.Properties)).EndInit();
@@ -1688,12 +1694,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_ID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NICKNAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
             this.ResumeLayout(false);
 
         }

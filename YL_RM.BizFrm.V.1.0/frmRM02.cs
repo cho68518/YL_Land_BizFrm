@@ -485,6 +485,8 @@ namespace YL_RM.BizFrm
                             cmd.Parameters["i_is_file"].Value = chkis_file.EditValue;
                             cmd.Parameters["i_is_file"].Direction = ParameterDirection.Input;
 
+                            if (cknotice_seq == null)
+                                cknotice_seq.EditValue = "1";
                             cmd.Parameters.Add(new MySqlParameter("i_notice_seq", MySqlDbType.VarChar));
                             cmd.Parameters["i_notice_seq"].Value = cknotice_seq.EditValue;
                             cmd.Parameters["i_notice_seq"].Direction = ParameterDirection.Input;
@@ -623,12 +625,13 @@ namespace YL_RM.BizFrm
                 {
                     cknotice_seq.Enabled = false;
                     cknotice_seq.Enabled = true;
+
                 }    
                 else
                 {
                     cknotice_seq.Enabled = false;
                 }
-                    
+                cknotice_seq.EditValue = "0";
 
                 Open2();
                 Clear2();

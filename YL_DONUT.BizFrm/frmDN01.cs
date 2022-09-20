@@ -130,18 +130,20 @@ namespace YL_DONUT.BizFrm
             //this.efwGridControl1.Click += efwGridControl1_Click;
             rbP_SHOW_TYPE.EditValue = "T";
 
-            chkI.Checked = true;
+            
             chkO.Checked = true;
             chkP.Checked = true;
-            chkD.Checked = true;
-            chkF.Checked = true;
             chkE.Checked = true;
-            chkC.Checked = true;
+            
+            chkD.Checked = false;
+            chkF.Checked = false;
+            chkI.Checked = false;
+            chkC.Checked = false;
             chkZ.Checked = false;
             chkX.Checked = false;
             chkT.Checked = false;
-            chkA.Checked = true;
-            chkB.Checked = true;
+            chkA.Checked = false;
+            chkB.Checked = false;
 
             this.efwGridControl1.BindControlSet(
               new ColumnControlSet("id", txtId)
@@ -633,13 +635,16 @@ namespace YL_DONUT.BizFrm
             if (columnIndex == 32)
             {
                 using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
-                { 
+                {
+                    // '" + txtCategory_No.EditValue + "'
                     string sDelivery_Cd = txtDelivery_cd.EditValue.ToString();
-                    sql.Query = "select d_address from domamall.tb_am_product_delivers " +
+                    sql.Query = "select REPLACE(concat( d_address,  REPLACE('" + txto_delivery_num.EditValue + "',' ',''), IFNULL(after_text,'') ),'-','') from domamall.tb_am_product_delivers " +
                     "              where d_code  =  '" + sDelivery_Cd + "' " ;
                     DataSet ds = sql.selectQueryDataSet();
 
-                    string sDelivery_Query = sql.selectQueryForSingleValue() + txto_delivery_num.EditValue;
+                    string sDelivery_Query = sql.selectQueryForSingleValue();
+
+                    
                     System.Diagnostics.Process.Start(sDelivery_Query);
 
                 }

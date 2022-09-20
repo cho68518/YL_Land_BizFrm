@@ -106,6 +106,10 @@ namespace YL_DONUT.BizFrm
             {
                 Open4();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
+            {
+                Open5();
+            }
         }
 
         private void Open1()
@@ -272,6 +276,48 @@ namespace YL_DONUT.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+        private void Open5()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SELECT_06", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = cmbORDER_SEARCH.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtI_SEARCH.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl5.DataBind(ds);
+                            this.efwGridControl5.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
         public override void Save()
         {
             if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
@@ -285,6 +331,10 @@ namespace YL_DONUT.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
             {
                 Save3();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
+            {
+                Save4();
             }
         }
 
@@ -405,6 +455,57 @@ namespace YL_DONUT.BizFrm
             }
             Search();
         }
+
+        public void Save4()
+        {
+            try
+            {
+                if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+                {
+                    for (var i = 0; i < advBandedGridView1.DataRowCount; i++)
+                    {
+
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SAVE_04", con))
+                            {
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+                                cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[0].Value = advBandedGridView1.GetRowCellValue(i, "o_code");
+
+                                cmd.Parameters.Add("i_member_chef", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[1].Value = advBandedGridView1.GetRowCellValue(i, "member_chef");
+
+                                cmd.Parameters.Add("i_member_tax", MySqlDbType.Int32);
+                                cmd.Parameters[2].Value = Convert.ToInt32(advBandedGridView1.GetRowCellValue(i, "member_tax"));
+
+                                cmd.Parameters.Add("i_member_amt", MySqlDbType.Int32);
+                                cmd.Parameters[3].Value = Convert.ToInt32(advBandedGridView1.GetRowCellValue(i, "member_amt"));
+
+                                cmd.Parameters.Add("i_member_date", MySqlDbType.DateTime);
+                                cmd.Parameters[4].Value = advBandedGridView1.GetRowCellValue(i, "member_date");
+
+                                cmd.Parameters.Add("i_member_yn", MySqlDbType.VarChar, 1);
+                                cmd.Parameters[5].Value = advBandedGridView1.GetRowCellValue(i, "member_yn");
+
+                                cmd.Parameters.Add("i_member_remark", MySqlDbType.VarChar, 255);
+                                cmd.Parameters[6].Value = advBandedGridView1.GetRowCellValue(i, "member_remark");
+
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            Search();
+        }
+
 
         private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {

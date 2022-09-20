@@ -183,7 +183,7 @@ namespace YL_SCM.BizFrm
                                 cmd.Parameters.Add("i_o_code", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[0].Value = DataTable.Rows[i]["o_code"].ToString();
 
-                                cmd.Parameters.Add("i_o_delivery_num", MySqlDbType.VarChar, 50);
+                                cmd.Parameters.Add("i_o_delivery_num", MySqlDbType.VarChar, 250);
                                 cmd.Parameters[1].Value = DataTable.Rows[i]["o_delivery_num"].ToString();
 
                                 cmd.Parameters.Add("i_o_delivery_comp_code", MySqlDbType.VarChar, 255);

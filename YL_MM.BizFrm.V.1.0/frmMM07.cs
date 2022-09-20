@@ -43,7 +43,6 @@ namespace YL_MM.BizFrm
             //dt1F.EditValue = DateTime.Now.ToString("yyyy-MM") + "-01";
             //dt1T.EditValue = DateTime.Now;
             cmbQ1.EditValue = "1";
-            cmbQ2.EditValue = "0";
             rbLevel.EditValue = "T";
 
         }
@@ -134,9 +133,9 @@ namespace YL_MM.BizFrm
             }
             if (sLevel.ToString() == "1")
             {
-                popup.pRECV_ID = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_id").ToString();
-                popup.pRECV_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_name").ToString();
-                popup.pRECV_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_nickname").ToString();
+                popup.pRECV_ID = advBandedGridView1.GetFocusedRowCellValue("top_u_id").ToString();
+                popup.pRECV_U_NAME = advBandedGridView1.GetFocusedRowCellValue("top_name").ToString();
+                popup.pRECV_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("top_nickname").ToString();
             }
             if (sLevel.ToString() == "2")
             {
@@ -150,9 +149,9 @@ namespace YL_MM.BizFrm
             popup.pRECV_GEN_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_gen_u_name").ToString();
             popup.pRECV_GEN_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_gen_u_nickname").ToString();
 
-            popup.pRECV_VIP_ID = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_id").ToString();
-            popup.pRECV_VIP_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_name").ToString();
-            popup.pRECV_VIP_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("res_vip_u_nickname").ToString();
+            popup.pRECV_VIP_ID = advBandedGridView1.GetFocusedRowCellValue("top_u_id").ToString();
+            popup.pRECV_VIP_U_NAME = advBandedGridView1.GetFocusedRowCellValue("top_name").ToString();
+            popup.pRECV_VIP_U_NICKNAME = advBandedGridView1.GetFocusedRowCellValue("top_nickname").ToString();
 
             popup.pRECV_SHEF_ID = advBandedGridView1.GetFocusedRowCellValue("res_chef_u_id").ToString();
             popup.pRECV_SHEF_U_NAME = advBandedGridView1.GetFocusedRowCellValue("res_chef_u_name").ToString();
@@ -169,7 +168,7 @@ namespace YL_MM.BizFrm
 
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();
-
+            //Search();
 
         }
 
@@ -180,7 +179,5 @@ namespace YL_MM.BizFrm
 
             popup = null;
         }
-
-
     }
 }
