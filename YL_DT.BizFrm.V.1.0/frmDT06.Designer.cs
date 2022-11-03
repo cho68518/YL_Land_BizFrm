@@ -36,6 +36,8 @@ namespace YL_DT.BizFrm
             this.efwXtraTabControl1 = new Easy.Framework.WinForm.Control.efwXtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtCode_id = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtNow_image = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.rbOpen_Type = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.txtContents = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -65,6 +67,7 @@ namespace YL_DT.BizFrm
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.efwPanelControl3 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.rbUse_type = new Easy.Framework.WinForm.Control.efwRadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).BeginInit();
@@ -72,6 +75,7 @@ namespace YL_DT.BizFrm
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCode_id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNow_image.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbOpen_Type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContents.Properties)).BeginInit();
@@ -118,6 +122,8 @@ namespace YL_DT.BizFrm
             // efwGroupControl2
             // 
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
+            this.efwGroupControl2.Controls.Add(this.txtCode_id);
+            this.efwGroupControl2.Controls.Add(this.efwLabel1);
             this.efwGroupControl2.Controls.Add(this.txtNow_image);
             this.efwGroupControl2.Controls.Add(this.rbOpen_Type);
             this.efwGroupControl2.Controls.Add(this.txtContents);
@@ -140,6 +146,28 @@ namespace YL_DT.BizFrm
             this.efwGroupControl2.Size = new System.Drawing.Size(1365, 378);
             this.efwGroupControl2.TabIndex = 57;
             this.efwGroupControl2.Text = "이용안내 저장";
+            // 
+            // txtCode_id
+            // 
+            this.txtCode_id.EditValue2 = null;
+            this.txtCode_id.EraserGroup = "CLR3";
+            this.txtCode_id.Location = new System.Drawing.Point(415, 57);
+            this.txtCode_id.Name = "txtCode_id";
+            this.txtCode_id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtCode_id.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtCode_id.RequireMessage = null;
+            this.txtCode_id.Size = new System.Drawing.Size(53, 20);
+            this.txtCode_id.TabIndex = 93;
+            // 
+            // efwLabel1
+            // 
+            this.efwLabel1.EraserGroup = null;
+            this.efwLabel1.IsMultiLang = false;
+            this.efwLabel1.Location = new System.Drawing.Point(345, 60);
+            this.efwLabel1.Name = "efwLabel1";
+            this.efwLabel1.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel1.TabIndex = 92;
+            this.efwLabel1.Text = "관리코드";
             // 
             // txtNow_image
             // 
@@ -220,7 +248,7 @@ namespace YL_DT.BizFrm
             this.txtSubject.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtSubject.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSubject.RequireMessage = null;
-            this.txtSubject.Size = new System.Drawing.Size(384, 20);
+            this.txtSubject.Size = new System.Drawing.Size(245, 20);
             this.txtSubject.TabIndex = 74;
             // 
             // efwSimpleButton5
@@ -397,7 +425,8 @@ namespace YL_DT.BizFrm
             this.gridColumn28,
             this.gridColumn30,
             this.gridColumn24,
-            this.gridColumn2});
+            this.gridColumn2,
+            this.gridColumn3});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -493,6 +522,14 @@ namespace YL_DT.BizFrm
             this.gridColumn2.FieldName = "open_type";
             this.gridColumn2.Name = "gridColumn2";
             // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "관리코드";
+            this.gridColumn3.FieldName = "code_id";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 4;
+            // 
             // efwPanelControl3
             // 
             this.efwPanelControl3.Controls.Add(this.rbUse_type);
@@ -535,6 +572,7 @@ namespace YL_DT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
             this.efwGroupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCode_id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNow_image.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbOpen_Type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContents.Properties)).EndInit();
@@ -593,5 +631,8 @@ namespace YL_DT.BizFrm
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private Easy.Framework.WinForm.Control.efwTextEdit txtNow_image;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtCode_id;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }
 }

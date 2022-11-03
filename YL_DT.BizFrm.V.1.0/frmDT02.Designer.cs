@@ -320,6 +320,8 @@
             this.repositoryItemCheckEdit32 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwPanelControl3 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.rbUse_type = new Easy.Framework.WinForm.Control.efwRadioGroup();
+            this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn62 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nID.Properties)).BeginInit();
@@ -907,6 +909,8 @@
             this.gridColumn3,
             this.gridColumn6,
             this.gridColumn4,
+            this.gridColumn62,
+            this.gridColumn61,
             this.gridColumn5});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
@@ -938,8 +942,6 @@
             this.gridColumn3.FieldName = "event_code";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
             // 
             // gridColumn6
             // 
@@ -947,8 +949,6 @@
             this.gridColumn6.FieldName = "event_name";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 3;
             // 
             // gridColumn4
             // 
@@ -959,7 +959,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.VisibleIndex = 2;
             // 
             // gridColumn5
             // 
@@ -3694,6 +3694,23 @@
             this.rbUse_type.TabIndex = 4;
             this.rbUse_type.SelectedIndexChanged += new System.EventHandler(this.rbUse_type_SelectedIndexChanged);
             // 
+            // gridColumn61
+            // 
+            this.gridColumn61.Caption = "일 적립갯수";
+            this.gridColumn61.FieldName = "day_count";
+            this.gridColumn61.Name = "gridColumn61";
+            this.gridColumn61.Visible = true;
+            this.gridColumn61.VisibleIndex = 4;
+            // 
+            // gridColumn62
+            // 
+            this.gridColumn62.Caption = "도넛전환 적립금";
+            this.gridColumn62.FieldName = "event_amt1";
+            this.gridColumn62.Name = "gridColumn62";
+            this.gridColumn62.Visible = true;
+            this.gridColumn62.VisibleIndex = 3;
+            this.gridColumn62.Width = 108;
+            // 
             // frmDT02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -4186,5 +4203,7 @@
         private DevExpress.XtraLayout.EmptySpaceItem Item1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn59;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn60;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn62;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn61;
     }
 }

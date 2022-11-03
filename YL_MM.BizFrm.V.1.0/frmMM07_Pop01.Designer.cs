@@ -57,6 +57,8 @@
             this.txtCHEF_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtCHEF_NICKNAME = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtCHEF_NAME = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtRes_gen_u_id_co = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtRes_gshop_u_id_co = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -77,6 +79,8 @@
             this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem42 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnMember_delete = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbLEVEL = new Easy.Framework.WinForm.Control.efwRadioGroup();
@@ -96,6 +100,7 @@
             this.txtRECV_U_NAME = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtRECV_U_NICKNAME = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtREMARK = new Easy.Framework.WinForm.Control.efwMemoEdit();
+            this.rbSale_Shop = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -110,6 +115,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem38 = new DevExpress.XtraLayout.LayoutControlItem();
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.btnDelete = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -162,6 +168,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_ID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NICKNAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRes_gen_u_id_co.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRes_gshop_u_id_co.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
@@ -182,6 +190,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rbLEVEL.Properties)).BeginInit();
@@ -194,6 +204,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRECV_U_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRECV_U_NICKNAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtREMARK.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbSale_Shop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
@@ -208,6 +219,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
             this.efwGroupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -252,7 +264,7 @@
             this.efwGroupControl3.IsMultiLang = false;
             this.efwGroupControl3.Location = new System.Drawing.Point(454, 12);
             this.efwGroupControl3.Name = "efwGroupControl3";
-            this.efwGroupControl3.Size = new System.Drawing.Size(119, 111);
+            this.efwGroupControl3.Size = new System.Drawing.Size(177, 82);
             this.efwGroupControl3.TabIndex = 4;
             this.efwGroupControl3.Text = "G메니저 수정";
             this.efwGroupControl3.Visible = false;
@@ -278,12 +290,15 @@
             this.layoutControl3.Controls.Add(this.txtCHEF_ID);
             this.layoutControl3.Controls.Add(this.txtCHEF_NICKNAME);
             this.layoutControl3.Controls.Add(this.txtCHEF_NAME);
+            this.layoutControl3.Controls.Add(this.txtRes_gen_u_id_co);
+            this.layoutControl3.Controls.Add(this.txtRes_gshop_u_id_co);
             this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl3.Location = new System.Drawing.Point(2, 23);
             this.layoutControl3.Name = "layoutControl3";
+            this.layoutControl3.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1114, 69, 650, 400);
             this.layoutControl3.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl3.Root = this.layoutControlGroup2;
-            this.layoutControl3.Size = new System.Drawing.Size(115, 86);
+            this.layoutControl3.Size = new System.Drawing.Size(173, 57);
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -472,13 +487,13 @@
             // txtmd_leader_id
             // 
             this.txtmd_leader_id.EditValue2 = null;
-            this.txtmd_leader_id.Location = new System.Drawing.Point(407, 156);
+            this.txtmd_leader_id.Location = new System.Drawing.Point(395, 156);
             this.txtmd_leader_id.Name = "txtmd_leader_id";
             this.txtmd_leader_id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtmd_leader_id.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtmd_leader_id.Properties.ReadOnly = true;
             this.txtmd_leader_id.RequireMessage = null;
-            this.txtmd_leader_id.Size = new System.Drawing.Size(141, 20);
+            this.txtmd_leader_id.Size = new System.Drawing.Size(153, 20);
             this.txtmd_leader_id.StyleController = this.layoutControl3;
             this.txtmd_leader_id.TabIndex = 4;
             this.txtmd_leader_id.TabStop = false;
@@ -486,13 +501,13 @@
             // txtmd_leader_nickname
             // 
             this.txtmd_leader_nickname.EditValue2 = null;
-            this.txtmd_leader_nickname.Location = new System.Drawing.Point(407, 180);
+            this.txtmd_leader_nickname.Location = new System.Drawing.Point(395, 180);
             this.txtmd_leader_nickname.Name = "txtmd_leader_nickname";
             this.txtmd_leader_nickname.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtmd_leader_nickname.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtmd_leader_nickname.Properties.ReadOnly = true;
             this.txtmd_leader_nickname.RequireMessage = null;
-            this.txtmd_leader_nickname.Size = new System.Drawing.Size(141, 20);
+            this.txtmd_leader_nickname.Size = new System.Drawing.Size(153, 20);
             this.txtmd_leader_nickname.StyleController = this.layoutControl3;
             this.txtmd_leader_nickname.TabIndex = 4;
             this.txtmd_leader_nickname.TabStop = false;
@@ -500,13 +515,13 @@
             // txtmd_leader_name
             // 
             this.txtmd_leader_name.EditValue2 = null;
-            this.txtmd_leader_name.Location = new System.Drawing.Point(407, 204);
+            this.txtmd_leader_name.Location = new System.Drawing.Point(395, 204);
             this.txtmd_leader_name.Name = "txtmd_leader_name";
             this.txtmd_leader_name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtmd_leader_name.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtmd_leader_name.Properties.ReadOnly = true;
             this.txtmd_leader_name.RequireMessage = null;
-            this.txtmd_leader_name.Size = new System.Drawing.Size(141, 20);
+            this.txtmd_leader_name.Size = new System.Drawing.Size(153, 20);
             this.txtmd_leader_name.StyleController = this.layoutControl3;
             this.txtmd_leader_name.TabIndex = 4;
             this.txtmd_leader_name.TabStop = false;
@@ -520,7 +535,7 @@
             this.txtCHEF_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCHEF_ID.Properties.ReadOnly = true;
             this.txtCHEF_ID.RequireMessage = null;
-            this.txtCHEF_ID.Size = new System.Drawing.Size(139, 20);
+            this.txtCHEF_ID.Size = new System.Drawing.Size(127, 20);
             this.txtCHEF_ID.StyleController = this.layoutControl3;
             this.txtCHEF_ID.TabIndex = 4;
             this.txtCHEF_ID.TabStop = false;
@@ -534,7 +549,7 @@
             this.txtCHEF_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCHEF_NICKNAME.Properties.ReadOnly = true;
             this.txtCHEF_NICKNAME.RequireMessage = null;
-            this.txtCHEF_NICKNAME.Size = new System.Drawing.Size(139, 20);
+            this.txtCHEF_NICKNAME.Size = new System.Drawing.Size(127, 20);
             this.txtCHEF_NICKNAME.StyleController = this.layoutControl3;
             this.txtCHEF_NICKNAME.TabIndex = 4;
             this.txtCHEF_NICKNAME.TabStop = false;
@@ -548,10 +563,38 @@
             this.txtCHEF_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCHEF_NAME.Properties.ReadOnly = true;
             this.txtCHEF_NAME.RequireMessage = null;
-            this.txtCHEF_NAME.Size = new System.Drawing.Size(139, 20);
+            this.txtCHEF_NAME.Size = new System.Drawing.Size(127, 20);
             this.txtCHEF_NAME.StyleController = this.layoutControl3;
             this.txtCHEF_NAME.TabIndex = 4;
             this.txtCHEF_NAME.TabStop = false;
+            // 
+            // txtRes_gen_u_id_co
+            // 
+            this.txtRes_gen_u_id_co.EditValue2 = null;
+            this.txtRes_gen_u_id_co.Location = new System.Drawing.Point(138, 228);
+            this.txtRes_gen_u_id_co.Name = "txtRes_gen_u_id_co";
+            this.txtRes_gen_u_id_co.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRes_gen_u_id_co.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRes_gen_u_id_co.Properties.ReadOnly = true;
+            this.txtRes_gen_u_id_co.RequireMessage = null;
+            this.txtRes_gen_u_id_co.Size = new System.Drawing.Size(127, 20);
+            this.txtRes_gen_u_id_co.StyleController = this.layoutControl3;
+            this.txtRes_gen_u_id_co.TabIndex = 4;
+            this.txtRes_gen_u_id_co.TabStop = false;
+            // 
+            // txtRes_gshop_u_id_co
+            // 
+            this.txtRes_gshop_u_id_co.EditValue2 = null;
+            this.txtRes_gshop_u_id_co.Location = new System.Drawing.Point(395, 228);
+            this.txtRes_gshop_u_id_co.Name = "txtRes_gshop_u_id_co";
+            this.txtRes_gshop_u_id_co.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtRes_gshop_u_id_co.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRes_gshop_u_id_co.Properties.ReadOnly = true;
+            this.txtRes_gshop_u_id_co.RequireMessage = null;
+            this.txtRes_gshop_u_id_co.Size = new System.Drawing.Size(153, 20);
+            this.txtRes_gshop_u_id_co.StyleController = this.layoutControl3;
+            this.txtRes_gshop_u_id_co.TabIndex = 4;
+            this.txtRes_gshop_u_id_co.TabStop = false;
             // 
             // layoutControlGroup2
             // 
@@ -576,9 +619,11 @@
             this.layoutControlItem40,
             this.layoutControlItem41,
             this.layoutControlItem42,
-            this.layoutControlItem9});
+            this.layoutControlItem9,
+            this.layoutControlItem39,
+            this.layoutControlItem43});
             this.layoutControlGroup2.Name = "Root";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(560, 236);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(560, 260);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem11
@@ -702,9 +747,9 @@
             // 
             this.layoutControlItem35.Control = this.txtmd_leader_id;
             this.layoutControlItem35.CustomizationFormText = "담당MD";
-            this.layoutControlItem35.Location = new System.Drawing.Point(269, 144);
+            this.layoutControlItem35.Location = new System.Drawing.Point(257, 144);
             this.layoutControlItem35.Name = "layoutControlItem35";
-            this.layoutControlItem35.Size = new System.Drawing.Size(271, 24);
+            this.layoutControlItem35.Size = new System.Drawing.Size(283, 24);
             this.layoutControlItem35.Text = "MD팀장_ID";
             this.layoutControlItem35.TextSize = new System.Drawing.Size(123, 14);
             // 
@@ -712,9 +757,9 @@
             // 
             this.layoutControlItem36.Control = this.txtmd_leader_nickname;
             this.layoutControlItem36.CustomizationFormText = "담당MD";
-            this.layoutControlItem36.Location = new System.Drawing.Point(269, 168);
+            this.layoutControlItem36.Location = new System.Drawing.Point(257, 168);
             this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(271, 24);
+            this.layoutControlItem36.Size = new System.Drawing.Size(283, 24);
             this.layoutControlItem36.Text = "MD팀장_닉네임";
             this.layoutControlItem36.TextSize = new System.Drawing.Size(123, 14);
             // 
@@ -722,9 +767,9 @@
             // 
             this.layoutControlItem37.Control = this.txtmd_leader_name;
             this.layoutControlItem37.CustomizationFormText = "담당MD";
-            this.layoutControlItem37.Location = new System.Drawing.Point(269, 192);
+            this.layoutControlItem37.Location = new System.Drawing.Point(257, 192);
             this.layoutControlItem37.Name = "layoutControlItem37";
-            this.layoutControlItem37.Size = new System.Drawing.Size(271, 24);
+            this.layoutControlItem37.Size = new System.Drawing.Size(283, 24);
             this.layoutControlItem37.Text = "MD팀장_이름";
             this.layoutControlItem37.TextSize = new System.Drawing.Size(123, 14);
             // 
@@ -734,7 +779,7 @@
             this.layoutControlItem40.CustomizationFormText = "담당MD";
             this.layoutControlItem40.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(269, 24);
+            this.layoutControlItem40.Size = new System.Drawing.Size(257, 24);
             this.layoutControlItem40.Text = "CHEF_ID";
             this.layoutControlItem40.TextSize = new System.Drawing.Size(123, 14);
             // 
@@ -744,7 +789,7 @@
             this.layoutControlItem41.CustomizationFormText = "담당MD";
             this.layoutControlItem41.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem41.Name = "layoutControlItem41";
-            this.layoutControlItem41.Size = new System.Drawing.Size(269, 24);
+            this.layoutControlItem41.Size = new System.Drawing.Size(257, 24);
             this.layoutControlItem41.Text = "CHEF_닉네임";
             this.layoutControlItem41.TextSize = new System.Drawing.Size(123, 14);
             // 
@@ -754,7 +799,7 @@
             this.layoutControlItem42.CustomizationFormText = "담당MD";
             this.layoutControlItem42.Location = new System.Drawing.Point(0, 192);
             this.layoutControlItem42.Name = "layoutControlItem42";
-            this.layoutControlItem42.Size = new System.Drawing.Size(269, 24);
+            this.layoutControlItem42.Size = new System.Drawing.Size(257, 24);
             this.layoutControlItem42.Text = "CHEF_이름";
             this.layoutControlItem42.TextSize = new System.Drawing.Size(123, 14);
             // 
@@ -766,6 +811,26 @@
             this.layoutControlItem9.Size = new System.Drawing.Size(540, 24);
             this.layoutControlItem9.Text = "담당비즈,MD팀장=U_ID";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(123, 14);
+            // 
+            // layoutControlItem39
+            // 
+            this.layoutControlItem39.Control = this.txtRes_gen_u_id_co;
+            this.layoutControlItem39.CustomizationFormText = "담당MD";
+            this.layoutControlItem39.Location = new System.Drawing.Point(0, 216);
+            this.layoutControlItem39.Name = "layoutControlItem39";
+            this.layoutControlItem39.Size = new System.Drawing.Size(257, 24);
+            this.layoutControlItem39.Text = "도넛나눔_추천인_u_id";
+            this.layoutControlItem39.TextSize = new System.Drawing.Size(123, 14);
+            // 
+            // layoutControlItem43
+            // 
+            this.layoutControlItem43.Control = this.txtRes_gshop_u_id_co;
+            this.layoutControlItem43.CustomizationFormText = "담당MD";
+            this.layoutControlItem43.Location = new System.Drawing.Point(257, 216);
+            this.layoutControlItem43.Name = "layoutControlItem43";
+            this.layoutControlItem43.Size = new System.Drawing.Size(283, 24);
+            this.layoutControlItem43.Text = "멤버_추천인_u_id";
+            this.layoutControlItem43.TextSize = new System.Drawing.Size(123, 14);
             // 
             // layoutControl1
             // 
@@ -781,6 +846,7 @@
             this.layoutControl1.Controls.Add(this.txtRECV_U_NAME);
             this.layoutControl1.Controls.Add(this.txtRECV_U_NICKNAME);
             this.layoutControl1.Controls.Add(this.txtREMARK);
+            this.layoutControl1.Controls.Add(this.rbSale_Shop);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -796,7 +862,7 @@
             this.btnMember_delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMember_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMember_delete.ImageOptions.Image")));
             this.btnMember_delete.IsMultiLang = false;
-            this.btnMember_delete.Location = new System.Drawing.Point(333, 170);
+            this.btnMember_delete.Location = new System.Drawing.Point(333, 199);
             this.btnMember_delete.Name = "btnMember_delete";
             this.btnMember_delete.Size = new System.Drawing.Size(88, 22);
             this.btnMember_delete.StyleController = this.layoutControl1;
@@ -813,8 +879,7 @@
             this.rbLEVEL.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.rbLEVEL.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "도넛나눔 친구"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "G샵 / 헬퍼 멤버"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "구독관계")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "G샵,헬퍼 멤버 / G판매샵")});
             this.rbLEVEL.RequireMessage = null;
             this.rbLEVEL.Size = new System.Drawing.Size(324, 28);
             this.rbLEVEL.StyleController = this.layoutControl1;
@@ -846,7 +911,7 @@
             this.efwGridControl1.NowRowHandle = 0;
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
-            this.efwGridControl1.Size = new System.Drawing.Size(656, 324);
+            this.efwGridControl1.Size = new System.Drawing.Size(639, 328);
             this.efwGridControl1.TabIndex = 56;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -928,7 +993,7 @@
             this.btnREL_SAVE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnREL_SAVE.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnREL_SAVE.ImageOptions.Image")));
             this.btnREL_SAVE.IsMultiLang = false;
-            this.btnREL_SAVE.Location = new System.Drawing.Point(333, 143);
+            this.btnREL_SAVE.Location = new System.Drawing.Point(333, 172);
             this.btnREL_SAVE.Name = "btnREL_SAVE";
             this.btnREL_SAVE.Size = new System.Drawing.Size(88, 22);
             this.btnREL_SAVE.StyleController = this.layoutControl1;
@@ -942,7 +1007,7 @@
             this.BtnMemberSch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMemberSch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnMemberSch.ImageOptions.Image")));
             this.BtnMemberSch.IsMultiLang = false;
-            this.BtnMemberSch.Location = new System.Drawing.Point(333, 113);
+            this.BtnMemberSch.Location = new System.Drawing.Point(333, 142);
             this.BtnMemberSch.Name = "BtnMemberSch";
             this.BtnMemberSch.Size = new System.Drawing.Size(88, 22);
             this.BtnMemberSch.StyleController = this.layoutControl1;
@@ -959,7 +1024,7 @@
             this.txtSEND_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSEND_ID.Properties.ReadOnly = true;
             this.txtSEND_ID.RequireMessage = null;
-            this.txtSEND_ID.Size = new System.Drawing.Size(117, 20);
+            this.txtSEND_ID.Size = new System.Drawing.Size(90, 20);
             this.txtSEND_ID.StyleController = this.layoutControl1;
             this.txtSEND_ID.TabIndex = 4;
             this.txtSEND_ID.TabStop = false;
@@ -967,13 +1032,13 @@
             // txtU_NICKNAME
             // 
             this.txtU_NICKNAME.EditValue2 = null;
-            this.txtU_NICKNAME.Location = new System.Drawing.Point(283, 39);
+            this.txtU_NICKNAME.Location = new System.Drawing.Point(256, 39);
             this.txtU_NICKNAME.Name = "txtU_NICKNAME";
             this.txtU_NICKNAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtU_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtU_NICKNAME.Properties.ReadOnly = true;
             this.txtU_NICKNAME.RequireMessage = null;
-            this.txtU_NICKNAME.Size = new System.Drawing.Size(138, 20);
+            this.txtU_NICKNAME.Size = new System.Drawing.Size(165, 20);
             this.txtU_NICKNAME.StyleController = this.layoutControl1;
             this.txtU_NICKNAME.TabIndex = 4;
             this.txtU_NICKNAME.TabStop = false;
@@ -995,7 +1060,7 @@
             // txtRECV_ID
             // 
             this.txtRECV_ID.EditValue2 = null;
-            this.txtRECV_ID.Location = new System.Drawing.Point(97, 113);
+            this.txtRECV_ID.Location = new System.Drawing.Point(97, 142);
             this.txtRECV_ID.Name = "txtRECV_ID";
             this.txtRECV_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtRECV_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1009,7 +1074,7 @@
             // txtRECV_U_NAME
             // 
             this.txtRECV_U_NAME.EditValue2 = null;
-            this.txtRECV_U_NAME.Location = new System.Drawing.Point(97, 143);
+            this.txtRECV_U_NAME.Location = new System.Drawing.Point(97, 172);
             this.txtRECV_U_NAME.Name = "txtRECV_U_NAME";
             this.txtRECV_U_NAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtRECV_U_NAME.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1023,7 +1088,7 @@
             // txtRECV_U_NICKNAME
             // 
             this.txtRECV_U_NICKNAME.EditValue2 = null;
-            this.txtRECV_U_NICKNAME.Location = new System.Drawing.Point(97, 170);
+            this.txtRECV_U_NICKNAME.Location = new System.Drawing.Point(97, 199);
             this.txtRECV_U_NICKNAME.Name = "txtRECV_U_NICKNAME";
             this.txtRECV_U_NICKNAME.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtRECV_U_NICKNAME.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1038,13 +1103,28 @@
             // 
             this.txtREMARK.ByteLength = 200;
             this.txtREMARK.EraserGroup = "CLR1";
-            this.txtREMARK.Location = new System.Drawing.Point(97, 197);
+            this.txtREMARK.Location = new System.Drawing.Point(97, 226);
             this.txtREMARK.Name = "txtREMARK";
             this.txtREMARK.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtREMARK.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtREMARK.Size = new System.Drawing.Size(324, 114);
             this.txtREMARK.StyleController = this.layoutControl1;
             this.txtREMARK.TabIndex = 0;
+            // 
+            // rbSale_Shop
+            // 
+            this.rbSale_Shop.IsMultiLang = false;
+            this.rbSale_Shop.Location = new System.Drawing.Point(97, 98);
+            this.rbSale_Shop.Name = "rbSale_Shop";
+            this.rbSale_Shop.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbSale_Shop.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbSale_Shop.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "헬퍼,G샵 멤버"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "G판매샵")});
+            this.rbSale_Shop.RequireMessage = null;
+            this.rbSale_Shop.Size = new System.Drawing.Size(324, 25);
+            this.rbSale_Shop.StyleController = this.layoutControl1;
+            this.rbSale_Shop.TabIndex = 57;
             // 
             // Root
             // 
@@ -1063,16 +1143,17 @@
             this.layoutControlItem17,
             this.layoutControlItem2,
             this.layoutControlItem21,
-            this.layoutControlItem33});
+            this.layoutControlItem33,
+            this.layoutControlItem38});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1093, 348);
+            this.Root.Size = new System.Drawing.Size(1076, 352);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtRECV_U_NAME;
             this.layoutControlItem5.CustomizationFormText = "아이디";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 131);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 160);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(321, 27);
             this.layoutControlItem5.Text = "추천인 이름";
@@ -1084,7 +1165,7 @@
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 86);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 115);
             this.emptySpaceItem2.MaxSize = new System.Drawing.Size(401, 15);
             this.emptySpaceItem2.MinSize = new System.Drawing.Size(401, 15);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
@@ -1098,7 +1179,7 @@
             this.layoutControlItem1.Control = this.txtSEND_ID;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 27);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(206, 27);
+            this.layoutControlItem1.Size = new System.Drawing.Size(179, 27);
             this.layoutControlItem1.Text = "아이디";
             this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(80, 23);
@@ -1108,7 +1189,7 @@
             // 
             this.layoutControlItem4.Control = this.txtRECV_ID;
             this.layoutControlItem4.CustomizationFormText = "아이디";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 101);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 130);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(321, 30);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(321, 30);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -1134,7 +1215,7 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.BtnMemberSch;
-            this.layoutControlItem8.Location = new System.Drawing.Point(321, 101);
+            this.layoutControlItem8.Location = new System.Drawing.Point(321, 130);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(92, 30);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
@@ -1145,7 +1226,7 @@
             this.layoutControlItem18.Control = this.efwGridControl1;
             this.layoutControlItem18.Location = new System.Drawing.Point(413, 0);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(660, 328);
+            this.layoutControlItem18.Size = new System.Drawing.Size(643, 332);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
@@ -1153,7 +1234,7 @@
             // 
             this.layoutControlItem6.Control = this.txtRECV_U_NICKNAME;
             this.layoutControlItem6.CustomizationFormText = "아이디";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 158);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 187);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(321, 27);
             this.layoutControlItem6.Text = "추천인 닉네임";
@@ -1165,11 +1246,11 @@
             // 
             this.layoutControlItem25.Control = this.txtREMARK;
             this.layoutControlItem25.CustomizationFormText = "메모";
-            this.layoutControlItem25.Location = new System.Drawing.Point(0, 185);
+            this.layoutControlItem25.Location = new System.Drawing.Point(0, 214);
             this.layoutControlItem25.MaxSize = new System.Drawing.Size(413, 118);
             this.layoutControlItem25.MinSize = new System.Drawing.Size(413, 118);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(413, 143);
+            this.layoutControlItem25.Size = new System.Drawing.Size(413, 118);
             this.layoutControlItem25.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem25.Text = "비고";
             this.layoutControlItem25.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
@@ -1180,7 +1261,7 @@
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.btnREL_SAVE;
-            this.layoutControlItem17.Location = new System.Drawing.Point(321, 131);
+            this.layoutControlItem17.Location = new System.Drawing.Point(321, 160);
             this.layoutControlItem17.Name = "layoutControlItem17";
             this.layoutControlItem17.Size = new System.Drawing.Size(92, 27);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
@@ -1190,9 +1271,9 @@
             // 
             this.layoutControlItem2.Control = this.txtU_NICKNAME;
             this.layoutControlItem2.CustomizationFormText = "아이디";
-            this.layoutControlItem2.Location = new System.Drawing.Point(206, 27);
+            this.layoutControlItem2.Location = new System.Drawing.Point(179, 27);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(207, 27);
+            this.layoutControlItem2.Size = new System.Drawing.Size(234, 27);
             this.layoutControlItem2.Text = "닉네임";
             this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 23);
@@ -1215,11 +1296,25 @@
             // layoutControlItem33
             // 
             this.layoutControlItem33.Control = this.btnMember_delete;
-            this.layoutControlItem33.Location = new System.Drawing.Point(321, 158);
+            this.layoutControlItem33.Location = new System.Drawing.Point(321, 187);
             this.layoutControlItem33.Name = "layoutControlItem33";
             this.layoutControlItem33.Size = new System.Drawing.Size(92, 27);
             this.layoutControlItem33.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem33.TextVisible = false;
+            // 
+            // layoutControlItem38
+            // 
+            this.layoutControlItem38.Control = this.rbSale_Shop;
+            this.layoutControlItem38.CustomizationFormText = "회원구분";
+            this.layoutControlItem38.Location = new System.Drawing.Point(0, 86);
+            this.layoutControlItem38.MinSize = new System.Drawing.Size(139, 29);
+            this.layoutControlItem38.Name = "layoutControlItem38";
+            this.layoutControlItem38.Size = new System.Drawing.Size(413, 29);
+            this.layoutControlItem38.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem38.Text = "멤버/G판매샵";
+            this.layoutControlItem38.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem38.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem38.TextToControlDistance = 5;
             // 
             // efwGroupControl2
             // 
@@ -1627,6 +1722,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_ID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NICKNAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCHEF_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRes_gen_u_id_co.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRes_gshop_u_id_co.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
@@ -1647,6 +1744,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rbLEVEL.Properties)).EndInit();
@@ -1659,6 +1758,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRECV_U_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRECV_U_NICKNAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtREMARK.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbSale_Shop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
@@ -1673,6 +1773,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
             this.efwGroupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
@@ -1802,5 +1903,11 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem41;
         private Easy.Framework.WinForm.Control.efwTextEdit txtCHEF_NAME;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem42;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbSale_Shop;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem38;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtRes_gen_u_id_co;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem39;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtRes_gshop_u_id_co;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem43;
     }
 }

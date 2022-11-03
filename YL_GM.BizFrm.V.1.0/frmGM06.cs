@@ -50,7 +50,8 @@ namespace YL_GM.BizFrm
 
             dtS_DATE.EditValue = DateTime.Now;
             dtE_DATE.EditValue = DateTime.Now;
-            
+            dtExp_Date.EditValue = DateTime.Now;
+
             gridView1.OptionsView.ShowFooter = true;
 
             this.efwGridControl1.BindControlSet(
@@ -62,6 +63,7 @@ namespace YL_GM.BizFrm
             , new ColumnControlSet("recomender_u_nickname", txtU_NICKNAME_UPDATE)
             , new ColumnControlSet("recomender_u_id", txtU_Id_UPDATE)
             , new ColumnControlSet("expiration_date", dtExpiration_Date)
+            , new ColumnControlSet("is_write", txtIs_Write)
             );
 
             //this.efwGridControl1.Click += efwGridControl1_Click;
@@ -113,8 +115,48 @@ namespace YL_GM.BizFrm
                 CodeAgent.MakeCodeControl(this.cmbStory, codeArray);
             }
 
-            cmbStory.EditValue = "";
+            cmbStory.EditValue = "276";
 
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00103'  ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbStory_103, codeArray);
+
+            }
+            cmbStory_103.EditValue = "1";
+
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "SELECT code_id as DCODE, code_nm  as DNAME  FROM  domaadmin.tb_common_code where gcode_id = '00047' order by code_memo ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbMoney_Type, codeArray);
+            }
+            cmbMoney_Type.EditValue = "0";
         }
 
         
@@ -293,7 +335,12 @@ namespace YL_GM.BizFrm
         {
             if (string.IsNullOrEmpty(this.txtIdx.Text))
             {
-                MessageAgent.MessageShow(MessageType.Warning, " 수정할 스토리를 선택하세요!");
+                MessageAgent.MessageShow(MessageType.Warning, " 수정/삭제할 스토리를 선택하세요!");
+                return;
+            }
+            if (txtIs_Write.EditValue.ToString() == "Y") 
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 작성된 스토리는 수정/삭제 할수 없습니다.");
                 return;
             }
 
@@ -396,6 +443,9 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add("i_expiration_date", MySqlDbType.DateTime);
                         cmd.Parameters[8].Value = dtExpiration_Date.EditValue;
 
+                        cmd.Parameters.Add("i_Story_103", MySqlDbType.VarChar, 2);
+                        cmd.Parameters[9].Value = cmbStory_103.EditValue;
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -491,6 +541,72 @@ namespace YL_GM.BizFrm
         {
 
         }
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+            {//txtMoney_Fix
+            if (string.IsNullOrEmpty(this.txtU_Id.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 스토리 생성할 회원을 선택하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txtMoney_Fix.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 지급 머니를 입력하세요!");
+                return;
+            }
+
+            if (cmbMoney_Type.EditValue.ToString() == "0")
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 머니 타입을 선택하세요.");
+                return;
+            }
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM06_SAVE_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_contents_type", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = Convert.ToInt32(cmbStory.EditValue);
+
+                        cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtU_Id.EditValue;
+
+                        cmd.Parameters.Add("i_event_title_code", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[2].Value = cmbStory_103.EditValue;
+
+                        cmd.Parameters.Add("i_money_type", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = cmbMoney_Type.EditValue;
+
+                        cmd.Parameters.Add("i_money_fix", MySqlDbType.Int32);
+                        cmd.Parameters[4].Value = Convert.ToInt32(txtMoney_Fix.EditValue);
+
+                        cmd.Parameters.Add("i_expiration_date", MySqlDbType.DateTime);
+                        cmd.Parameters[5].Value = dtExp_Date.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                            this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+            Search();
+        }
+
     }
 }
 

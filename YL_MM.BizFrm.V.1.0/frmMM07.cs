@@ -165,6 +165,10 @@ namespace YL_MM.BizFrm
             popup.pmd_leader_name = advBandedGridView1.GetFocusedRowCellValue("md_leader_name").ToString();
             popup.pmd_leader_nickname = advBandedGridView1.GetFocusedRowCellValue("md_leader_nickname").ToString();
             popup.pmd_leader = advBandedGridView1.GetFocusedRowCellValue("md_leader").ToString();
+            // 판매샵 구분
+            popup.sale_shop_cd = advBandedGridView1.GetFocusedRowCellValue("sale_shop_cd").ToString();
+            popup.pRes_gshop_u_id_co = advBandedGridView1.GetFocusedRowCellValue("res_gshop_u_id_co").ToString();
+            popup.pRes_gen_u_id_co = advBandedGridView1.GetFocusedRowCellValue("res_gen_u_id_co").ToString();
 
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();

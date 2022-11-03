@@ -286,7 +286,7 @@ namespace YL_DONUT.BizFrm
                 using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
 
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SELECT_06", con))
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SELECT_07", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -491,6 +491,9 @@ namespace YL_DONUT.BizFrm
 
                                 cmd.Parameters.Add("i_member_remark", MySqlDbType.VarChar, 255);
                                 cmd.Parameters[6].Value = advBandedGridView1.GetRowCellValue(i, "member_remark");
+
+                                cmd.Parameters.Add("i_g_power_yn", MySqlDbType.VarChar, 1);
+                                cmd.Parameters[7].Value = advBandedGridView1.GetRowCellValue(i, "g_power_yn");
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();

@@ -80,6 +80,7 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn74 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -168,7 +169,6 @@
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtOut_Date = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.gridColumn74 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
@@ -515,7 +515,6 @@
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn10,
-            this.gridColumn74,
             this.gridColumn11,
             this.gridColumn12,
             this.gridColumn13,
@@ -525,6 +524,7 @@
             this.gridColumn43,
             this.gridColumn17,
             this.gridColumn21,
+            this.gridColumn74,
             this.gridColumn22,
             this.gridColumn24,
             this.gridColumn23,
@@ -665,13 +665,22 @@
             this.gridColumn10.VisibleIndex = 10;
             this.gridColumn10.Width = 70;
             // 
+            // gridColumn74
+            // 
+            this.gridColumn74.Caption = "회원등급";
+            this.gridColumn74.FieldName = "u_chef_level";
+            this.gridColumn74.Name = "gridColumn74";
+            this.gridColumn74.OptionsColumn.AllowEdit = false;
+            this.gridColumn74.Visible = true;
+            this.gridColumn74.VisibleIndex = 20;
+            // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "수령자";
             this.gridColumn11.FieldName = "o_receive_name1";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 12;
+            this.gridColumn11.VisibleIndex = 11;
             this.gridColumn11.Width = 70;
             // 
             // gridColumn12
@@ -681,7 +690,7 @@
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.ReadOnly = true;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 13;
+            this.gridColumn12.VisibleIndex = 12;
             this.gridColumn12.Width = 110;
             // 
             // gridColumn13
@@ -690,7 +699,7 @@
             this.gridColumn13.FieldName = "o_receive_contact";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 14;
+            this.gridColumn13.VisibleIndex = 13;
             this.gridColumn13.Width = 110;
             // 
             // gridColumn14
@@ -699,7 +708,7 @@
             this.gridColumn14.FieldName = "o_receive_zipcode1";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 15;
+            this.gridColumn14.VisibleIndex = 14;
             // 
             // gridColumn15
             // 
@@ -707,7 +716,7 @@
             this.gridColumn15.FieldName = "o_receive_address1";
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 16;
+            this.gridColumn15.VisibleIndex = 15;
             this.gridColumn15.Width = 130;
             // 
             // gridColumn16
@@ -716,7 +725,7 @@
             this.gridColumn16.FieldName = "o_receive_message1";
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 17;
+            this.gridColumn16.VisibleIndex = 16;
             this.gridColumn16.Width = 110;
             // 
             // gridColumn43
@@ -725,7 +734,7 @@
             this.gridColumn43.FieldName = "add_receive_message";
             this.gridColumn43.Name = "gridColumn43";
             this.gridColumn43.Visible = true;
-            this.gridColumn43.VisibleIndex = 18;
+            this.gridColumn43.VisibleIndex = 17;
             // 
             // gridColumn17
             // 
@@ -733,7 +742,7 @@
             this.gridColumn17.FieldName = "order_tel";
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 19;
+            this.gridColumn17.VisibleIndex = 18;
             this.gridColumn17.Width = 90;
             // 
             // gridColumn21
@@ -744,7 +753,7 @@
             this.gridColumn21.Name = "gridColumn21";
             this.gridColumn21.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 20;
+            this.gridColumn21.VisibleIndex = 19;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -1705,15 +1714,6 @@
             this.efwSimpleButton2.TabIndex = 71;
             this.efwSimpleButton2.Text = "출고 수불반영";
             this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
-            // 
-            // gridColumn74
-            // 
-            this.gridColumn74.Caption = "회원등급";
-            this.gridColumn74.FieldName = "u_chef_level";
-            this.gridColumn74.Name = "gridColumn74";
-            this.gridColumn74.OptionsColumn.AllowEdit = false;
-            this.gridColumn74.Visible = true;
-            this.gridColumn74.VisibleIndex = 11;
             // 
             // frmDN20
             // 

@@ -95,7 +95,7 @@ namespace YL_GSHOP.BizFrm.Dlg
 
                 DataRow[] rows = ds.Tables[0].Select();
 
-                //textBox2.Text += rows[0]["totalCount"].ToString();
+                //textBox2.Text += rows[0]["totalCount"].ToString()                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
 
                 //if (rows[0]["totalCount"].ToString() != "0")
                 //{

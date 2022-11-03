@@ -62,6 +62,7 @@ namespace YL_DT.BizFrm
            , new ColumnControlSet("ImageURL", txtTab3_imgurl)
            , new ColumnControlSet("file_name1", txtTab3_imgname)
            , new ColumnControlSet("open_type", rbOpen_Type)
+           , new ColumnControlSet("code_id", txtCode_id)
             );
             this.efwGridControl1.Click += efwGridControl1_Click;
 
@@ -115,6 +116,10 @@ namespace YL_DT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_open_type", MySqlDbType.VarChar));
                             cmd.Parameters["i_open_type"].Value = rbOpen_Type.EditValue;
                             cmd.Parameters["i_open_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_code_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_code_id"].Value = txtCode_id.EditValue;
+                            cmd.Parameters["i_code_id"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
@@ -312,5 +317,6 @@ namespace YL_DT.BizFrm
             //OpenTag(gfloorInfo.FLR, "LDT");
             popup = null;
         }
+
     }
 }

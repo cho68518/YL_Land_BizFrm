@@ -456,6 +456,16 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_lbl909", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl909"].Direction = ParameterDirection.Output;
 
+                        // 체험샵현황
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl61", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl61"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl62", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl62"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl63", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl63"].Direction = ParameterDirection.Output;
+
 
                         cmd.ExecuteNonQuery();
                         // VIP    String.Format("{0:#,##0}", rows[0]["teld17"]);
@@ -602,6 +612,13 @@ namespace YL_GM.BizFrm
                         lbl907.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl907"].Value);
                         lbl908.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl908"].Value);
                         lbl909.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl909"].Value);
+
+                        // 체험샵현황
+                        lbl61.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl61"].Value);
+                        lbl62.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl62"].Value);
+                        lbl63.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl63"].Value);
+
+
                     }
                 }
             }

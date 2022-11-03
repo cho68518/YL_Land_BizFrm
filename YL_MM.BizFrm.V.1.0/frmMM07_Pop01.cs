@@ -54,7 +54,9 @@ namespace YL_MM.BizFrm
         public string pmd_leader_nickname { get; set; }
         public string pmd_leader { get; set; }
 
-
+        public string sale_shop_cd { get; set; }
+        public string pRes_gshop_u_id_co { get; set; }
+        public string pRes_gen_u_id_co { get; set; }
         public frmMM07_Pop01()
         {
             InitializeComponent();
@@ -94,10 +96,16 @@ namespace YL_MM.BizFrm
             txtmd_leader_name.EditValue = pmd_leader_name;
             txtmd_leader_nickname.EditValue = pmd_leader_nickname;
 
+            txtRes_gen_u_id_co.EditValue = pRes_gen_u_id_co;
+            txtRes_gshop_u_id_co.EditValue = pRes_gshop_u_id_co;
+            txtRECV_U_ID.EditValue = pRes_gshop_u_id_co;
+
             //txtRECV_U_ID.EditValue = "1";
 
-            rbLEVEL.EditValue = pLEVEL;
+            rbLEVEL.EditValue = "1";
             rbMd.EditValue = "0";
+
+            this.rbSale_Shop.Visible = false;
 
             gridView1.OptionsView.ShowFooter = true;
 
@@ -373,6 +381,9 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_remark"].Value = txtREMARK.EditValue;
                             cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_sale_shop", MySqlDbType.VarChar));
+                            cmd.Parameters["i_sale_shop"].Value = rbSale_Shop.EditValue;
+                            cmd.Parameters["i_sale_shop"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_return", MySqlDbType.VarChar));
                             cmd.Parameters["o_return"].Direction = ParameterDirection.Output;
@@ -400,11 +411,14 @@ namespace YL_MM.BizFrm
 
         private void rbLEVEL_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (rbLEVEL.EditValue.ToString() == "0")
             {
                 txtRECV_ID.EditValue = txtRECV_GEN_ID.EditValue.ToString();
                 txtRECV_U_NAME.EditValue = txtRECV_GEN_U_NAME.EditValue.ToString();
                 txtRECV_U_NICKNAME.EditValue = txtRECV_GEN_U_NICKNAME.EditValue.ToString();
+                this.rbSale_Shop.Visible = false;
+                txtRECV_U_ID.EditValue = txtRes_gen_u_id_co.EditValue.ToString();
             }
 
             if (rbLEVEL.EditValue.ToString() == "1")
@@ -412,12 +426,9 @@ namespace YL_MM.BizFrm
                 txtRECV_ID.EditValue = txtRECV_VIP_ID.EditValue.ToString();
                 txtRECV_U_NAME.EditValue = txtRECV_VIP_U_NAME.EditValue.ToString();
                 txtRECV_U_NICKNAME.EditValue = txtRECV_VIP_U_NICKNAME.EditValue.ToString();
-            }
-            if (rbLEVEL.EditValue.ToString() == "2")
-            {
-                txtRECV_ID.EditValue = txtRECV_SHEF_ID.EditValue.ToString();
-                txtRECV_U_NAME.EditValue = txtRECV_SHEF_U_NAME.EditValue.ToString();
-                txtRECV_U_NICKNAME.EditValue = txtRECV_SHEF_U_NICKNAME.EditValue.ToString();
+                this.rbSale_Shop.Visible = true;
+                rbSale_Shop.EditValue = sale_shop_cd;
+                txtRECV_U_ID.EditValue = txtRes_gshop_u_id_co.EditValue.ToString();
             }
         }
 
@@ -555,6 +566,8 @@ namespace YL_MM.BizFrm
                 txtDOMA_ID.EditValue = txtmd_leader_id.EditValue.ToString();
                 txtDOMA_U_NAME.EditValue = txtmd_leader_nickname.EditValue.ToString();
                 txtDOMA_U_NICKNAME.EditValue = txtmd_leader_nickname.EditValue.ToString();
+
+
             }
         }
     }

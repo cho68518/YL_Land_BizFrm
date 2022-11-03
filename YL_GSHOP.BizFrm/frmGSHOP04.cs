@@ -636,12 +636,14 @@ namespace YL_GSHOP.BizFrm
                             cmd.Parameters["i_area"].Value = txtArea.EditValue;
                             cmd.Parameters["i_area"].Direction = ParameterDirection.Input;
 
-                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
-                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.Parameters.Add(new MySqlParameter("o_idx", MySqlDbType.Int32));
+                            cmd.Parameters["o_idx"].Direction = ParameterDirection.Output;
+
                             cmd.ExecuteNonQuery();
+                            
+                            txtU_ID.EditValue = cmd.Parameters["o_idx"].Value.ToString();
 
-
-                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                            MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
                         }
                     }
                 }
@@ -1041,6 +1043,90 @@ namespace YL_GSHOP.BizFrm
             {
                 Clipboard.SetText(gridView1.GetFocusedDisplayText());
                 e.Handled = true;
+            }
+        }
+
+        private void efwSimpleButton1_Click_1(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "PR등록 스토리를 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PROD_ORDER_223_271_dt", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_id"].Value = txtU_ID.EditValue;
+                            cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
+
+        private void efwSimpleButton3_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int nCount;
+                using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+                {
+                    sql.Query = "select count(*) as nCount FROM  domabiz.gshop_master where u_nickname  = '" + txtM_Query.EditValue + "' ";
+                    DataSet ds = sql.selectQueryDataSet();
+
+                    nCount = Convert.ToInt32(sql.selectQueryForSingleValue());
+                }
+                if (nCount == 1)
+                {
+                    MessageAgent.MessageShow(MessageType.Informational, "가입 이력이 존재하는 회원입니다.");
+                    return;
+                }
+
+                cmbTAREA1.EditValue = "00";
+                cmbSAREA1.EditValue = "00";
+                string sCOMFIRM = string.Empty;
+                string sCom = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP04_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtM_Query.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                            this.efwGridControl1.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
     }

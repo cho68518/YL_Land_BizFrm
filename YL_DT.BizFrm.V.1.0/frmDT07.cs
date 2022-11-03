@@ -27,6 +27,7 @@ namespace YL_DT.BizFrm
 {
     public partial class frmDT07 : FrmBase
     {
+        frmDT02_Pop02 popup;
         public frmDT07()
         {
             InitializeComponent();
@@ -50,7 +51,8 @@ namespace YL_DT.BizFrm
             dtE_DATE.EditValue = DateTime.Now;
             dtLock_Date.EditValue = DateTime.Now;
 
-
+            //app_img_url1.LoadAsync("http://14.48.175.173/~ylland/data/write/1666593495f2d8a81fae37ef43095a79e1778e2c0399065eb1630239e5b97d10df0faeb42ccaecef5b28b465d89a6e5b8f3480a13e4586ced0c23f98fc74a4154b3ca7f838.jpg");
+            //picP_IMG.LoadAsync("http://media.domalife.net:8080/files/product/donutbiz/mori_00000009/2019101884241596.jpg");
             this.efwGridControl1.BindControlSet(
                new ColumnControlSet("declare_type", rbDeclare_Type)
              , new ColumnControlSet("Idx", txtIdx)
@@ -61,7 +63,6 @@ namespace YL_DT.BizFrm
              , new ColumnControlSet("remark", txtRemark)
              , new ColumnControlSet("lock_date", dtLock_Date)
              , new ColumnControlSet("lock_type_code", rbLock_Type)
-             , new ColumnControlSet("d_idx", txtD_idx)
              ); ;
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -71,6 +72,34 @@ namespace YL_DT.BizFrm
         {
             DataRow dr = this.efwGridControl1.GetSelectedRow(0);
 
+            if (dr != null && dr["app_img_url1"].ToString() != "")
+            {
+                imapp_img_url1.LoadAsync(dr["app_img_url1"].ToString());
+                txtImg_url1.EditValue = dr["app_img_url1"].ToString();
+            }
+            else
+            {
+                imapp_img_url1.LoadAsync(null);
+            }
+
+            if (dr != null && dr["app_img_url2"].ToString() != "")
+            {
+                imapp_img_url2.LoadAsync(dr["app_img_url2"].ToString());
+                txtImg_url2.EditValue = dr["app_img_url2"].ToString();
+            }
+            else
+            {
+                imapp_img_url2.LoadAsync(null);
+            }
+            if (dr != null && dr["app_img_url3"].ToString() != "")
+            {
+                imapp_img_url3.LoadAsync(dr["app_img_url3"].ToString());
+                txtImg_url3.EditValue = dr["app_img_url3"].ToString();
+            }
+            else
+            {
+                imapp_img_url3.LoadAsync(null);
+            }
         }
 
         public override void Search()
@@ -112,6 +141,17 @@ namespace YL_DT.BizFrm
         }
         private void efwSimpleButton2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(this.txtRemark.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "사유를 입력하세요!");
+                return;
+            }
+            if (string.IsNullOrEmpty(this.dtLock_Date.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, "종료일을 입력하세요!");
+                return;
+            }
+
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
                 try
@@ -267,6 +307,50 @@ namespace YL_DT.BizFrm
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
             }
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            string app_list = "http://14.48.175.173/~ylland/adm/deal_list.php?idx=" + txtStory_Id.EditValue.ToString();
+            System.Diagnostics.Process.Start(app_list);
+        }
+
+        private void imapp_img_url1_DoubleClick(object sender, EventArgs e)
+        {
+            popup = new frmDT02_Pop02();
+            //popup.Owner = this;
+
+            popup.pURL = txtImg_url1.Text;
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+
+        private void imapp_img_url2_DoubleClick(object sender, EventArgs e)
+        {
+            popup = new frmDT02_Pop02();
+            //popup.Owner = this;
+
+            popup.pURL = txtImg_url2.Text;
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+        private void imapp_img_url3_DoubleClick(object sender, EventArgs e)
+        {
+            popup = new frmDT02_Pop02();
+
+            popup.pURL = txtImg_url3.Text;
+            popup.FormClosed += popup_FormClosed;
+            popup.ShowDialog();
+        }
+
+        private void popup_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            popup.FormClosed -= popup_FormClosed;
+
+            //OpenTag(gfloorInfo.FLR, "LDT");
+            popup = null;
         }
     }
 }
