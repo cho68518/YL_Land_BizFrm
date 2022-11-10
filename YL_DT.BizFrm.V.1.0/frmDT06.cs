@@ -22,6 +22,7 @@ using System.IO;
 using Tamir.SharpSsh;
 using System.Collections;
 using System.Net.Sockets;
+using System.Xml;
 
 namespace YL_DT.BizFrm
 {
@@ -50,7 +51,10 @@ namespace YL_DT.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
-
+            chkA.EditValue = 'N';
+            chkT.EditValue = 'N';
+            chkH.EditValue = 'N';
+            chkGM.EditValue = 'N';
 
             gridView1.OptionsView.ShowFooter = true;
 
@@ -316,6 +320,128 @@ namespace YL_DT.BizFrm
 
             //OpenTag(gfloorInfo.FLR, "LDT");
             popup = null;
+        }
+        public void Open2()
+        {
+
+            if (string.IsNullOrEmpty(this.txtCode_id.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " Donut Letter 관리코드를 선택하세요!");
+                return;
+            }
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DT_DT06_SELECT_02", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_code_id", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = txtCode_id.EditValue;
+
+                        cmd.Parameters.Add("i_member_chk1", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[1].Value = chkA.EditValue;
+                        
+                        cmd.Parameters.Add("i_member_chk2", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[2].Value = chkT.EditValue;
+                        
+                        cmd.Parameters.Add("i_member_chk3", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[3].Value = chkH.EditValue;
+
+                        cmd.Parameters.Add("i_member_chk4", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[4].Value = chkGM.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            this.efwGridControl2.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void efwSimpleButton7_Click(object sender, EventArgs e)
+        {
+            Open2();
+        }
+
+        private void chkA_CheckedChanged(object sender, EventArgs e)
+        {
+            efwGridControl2.DataSource = null;
+            gridView2.RefreshData();
+        }
+
+        private void chkT_CheckedChanged(object sender, EventArgs e)
+        {
+            efwGridControl2.DataSource = null;
+            gridView2.RefreshData();
+        }
+
+        private void chkH_CheckedChanged(object sender, EventArgs e)
+        {
+            efwGridControl2.DataSource = null;
+            gridView2.RefreshData();
+        }
+
+        private void chkGM_CheckedChanged(object sender, EventArgs e)
+        {
+            efwGridControl2.DataSource = null;
+            gridView2.RefreshData();
+        }
+        string apiurl = string.Empty;
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+
+                    for (int i = 0; i < gridView2.DataRowCount; i++)
+                    {
+                        string chk1 = gridView2.GetRowCellValue(i, gridView2.Columns[5]).ToString();
+                        string chk2 = gridView2.GetRowCellValue(i, gridView2.Columns[7]).ToString();
+
+                        if (gridView2.GetRowCellValue(i, gridView2.Columns[5]).ToString() == "" && gridView2.GetRowCellValue(i, gridView2.Columns[7]).ToString().Length > 20 )
+                        {
+                            apiurl = gridView2.GetRowCellValue(i, gridView2.Columns[6]).ToString();
+
+                            WebClient wc = new WebClient();
+                            XmlReader read = new XmlTextReader(wc.OpenRead(apiurl));
+
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DT_DT06_SAVE_02", con))
+                            {
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add("i_code_id", MySqlDbType.VarChar, 10);
+                                cmd.Parameters[0].Value = txtCode_id.EditValue;
+
+                                cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[1].Value = gridView2.GetRowCellValue(i, gridView2.Columns[7]).ToString();
+
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
+                            
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+            Open2();
         }
 
     }

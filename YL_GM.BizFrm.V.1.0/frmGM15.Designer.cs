@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGM15));
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.efwLabel16 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl61 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl62 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl63 = new Easy.Framework.WinForm.Control.efwLabel();
             this.lbl905_1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.lbl906_1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.lbl904_1 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -205,10 +209,23 @@
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dtE_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel5 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.efwLabel16 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.lbl61 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.lbl62 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.lbl63 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel17 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl71 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl72 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl73 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1008 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1009 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1007 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1012 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1011 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1010 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1006 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1005 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1004 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1003 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1002 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwLabel34 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.lbl1001 = new Easy.Framework.WinForm.Control.efwLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -227,12 +244,29 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1551, 708);
+            this.panel2.Size = new System.Drawing.Size(1551, 787);
             this.panel2.TabIndex = 4;
             // 
             // groupControl1
             // 
             this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
+            this.groupControl1.Controls.Add(this.lbl1008);
+            this.groupControl1.Controls.Add(this.lbl1009);
+            this.groupControl1.Controls.Add(this.lbl1007);
+            this.groupControl1.Controls.Add(this.lbl1012);
+            this.groupControl1.Controls.Add(this.lbl1011);
+            this.groupControl1.Controls.Add(this.lbl1010);
+            this.groupControl1.Controls.Add(this.lbl1006);
+            this.groupControl1.Controls.Add(this.lbl1005);
+            this.groupControl1.Controls.Add(this.lbl1004);
+            this.groupControl1.Controls.Add(this.lbl1003);
+            this.groupControl1.Controls.Add(this.lbl1002);
+            this.groupControl1.Controls.Add(this.efwLabel34);
+            this.groupControl1.Controls.Add(this.lbl1001);
+            this.groupControl1.Controls.Add(this.efwLabel17);
+            this.groupControl1.Controls.Add(this.lbl71);
+            this.groupControl1.Controls.Add(this.lbl72);
+            this.groupControl1.Controls.Add(this.lbl73);
             this.groupControl1.Controls.Add(this.efwLabel16);
             this.groupControl1.Controls.Add(this.lbl61);
             this.groupControl1.Controls.Add(this.lbl62);
@@ -409,9 +443,81 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 35);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1551, 673);
+            this.groupControl1.Size = new System.Drawing.Size(1551, 752);
             this.groupControl1.TabIndex = 202;
             this.groupControl1.Text = "도넛라이프 회원정보 / 매출 현황";
+            // 
+            // efwLabel16
+            // 
+            this.efwLabel16.Appearance.BackColor = System.Drawing.Color.LightGray;
+            this.efwLabel16.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.efwLabel16.Appearance.Options.UseBackColor = true;
+            this.efwLabel16.Appearance.Options.UseFont = true;
+            this.efwLabel16.Appearance.Options.UseTextOptions = true;
+            this.efwLabel16.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.efwLabel16.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.efwLabel16.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.efwLabel16.EraserGroup = null;
+            this.efwLabel16.IsMultiLang = false;
+            this.efwLabel16.Location = new System.Drawing.Point(60, 141);
+            this.efwLabel16.Name = "efwLabel16";
+            this.efwLabel16.Size = new System.Drawing.Size(146, 28);
+            this.efwLabel16.TabIndex = 265;
+            this.efwLabel16.Text = "체험샵등록";
+            // 
+            // lbl61
+            // 
+            this.lbl61.Appearance.BackColor = System.Drawing.Color.Cornsilk;
+            this.lbl61.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl61.Appearance.Options.UseBackColor = true;
+            this.lbl61.Appearance.Options.UseFont = true;
+            this.lbl61.Appearance.Options.UseTextOptions = true;
+            this.lbl61.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbl61.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl61.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl61.EraserGroup = null;
+            this.lbl61.IsMultiLang = false;
+            this.lbl61.Location = new System.Drawing.Point(207, 141);
+            this.lbl61.Name = "lbl61";
+            this.lbl61.Size = new System.Drawing.Size(105, 28);
+            this.lbl61.TabIndex = 266;
+            this.lbl61.Text = "0";
+            // 
+            // lbl62
+            // 
+            this.lbl62.Appearance.BackColor = System.Drawing.Color.Cornsilk;
+            this.lbl62.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl62.Appearance.Options.UseBackColor = true;
+            this.lbl62.Appearance.Options.UseFont = true;
+            this.lbl62.Appearance.Options.UseTextOptions = true;
+            this.lbl62.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbl62.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl62.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl62.EraserGroup = null;
+            this.lbl62.IsMultiLang = false;
+            this.lbl62.Location = new System.Drawing.Point(313, 141);
+            this.lbl62.Name = "lbl62";
+            this.lbl62.Size = new System.Drawing.Size(105, 28);
+            this.lbl62.TabIndex = 267;
+            this.lbl62.Text = "0";
+            // 
+            // lbl63
+            // 
+            this.lbl63.Appearance.BackColor = System.Drawing.Color.Cornsilk;
+            this.lbl63.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl63.Appearance.Options.UseBackColor = true;
+            this.lbl63.Appearance.Options.UseFont = true;
+            this.lbl63.Appearance.Options.UseTextOptions = true;
+            this.lbl63.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbl63.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl63.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl63.EraserGroup = null;
+            this.lbl63.IsMultiLang = false;
+            this.lbl63.Location = new System.Drawing.Point(420, 141);
+            this.lbl63.Name = "lbl63";
+            this.lbl63.Size = new System.Drawing.Size(105, 28);
+            this.lbl63.TabIndex = 268;
+            this.lbl63.Text = "0";
             // 
             // lbl905_1
             // 
@@ -425,7 +531,7 @@
             this.lbl905_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl905_1.EraserGroup = null;
             this.lbl905_1.IsMultiLang = false;
-            this.lbl905_1.Location = new System.Drawing.Point(982, 567);
+            this.lbl905_1.Location = new System.Drawing.Point(982, 607);
             this.lbl905_1.Name = "lbl905_1";
             this.lbl905_1.Size = new System.Drawing.Size(105, 28);
             this.lbl905_1.TabIndex = 264;
@@ -443,7 +549,7 @@
             this.lbl906_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl906_1.EraserGroup = null;
             this.lbl906_1.IsMultiLang = false;
-            this.lbl906_1.Location = new System.Drawing.Point(1089, 567);
+            this.lbl906_1.Location = new System.Drawing.Point(1089, 607);
             this.lbl906_1.Name = "lbl906_1";
             this.lbl906_1.Size = new System.Drawing.Size(105, 28);
             this.lbl906_1.TabIndex = 263;
@@ -461,7 +567,7 @@
             this.lbl904_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl904_1.EraserGroup = null;
             this.lbl904_1.IsMultiLang = false;
-            this.lbl904_1.Location = new System.Drawing.Point(875, 567);
+            this.lbl904_1.Location = new System.Drawing.Point(875, 607);
             this.lbl904_1.Name = "lbl904_1";
             this.lbl904_1.Size = new System.Drawing.Size(105, 28);
             this.lbl904_1.TabIndex = 262;
@@ -481,7 +587,7 @@
             this.efwLabel21.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel21.EraserGroup = null;
             this.efwLabel21.IsMultiLang = false;
-            this.efwLabel21.Location = new System.Drawing.Point(58, 567);
+            this.efwLabel21.Location = new System.Drawing.Point(58, 607);
             this.efwLabel21.Name = "efwLabel21";
             this.efwLabel21.Size = new System.Drawing.Size(146, 28);
             this.efwLabel21.TabIndex = 252;
@@ -499,7 +605,7 @@
             this.lbl909.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl909.EraserGroup = null;
             this.lbl909.IsMultiLang = false;
-            this.lbl909.Location = new System.Drawing.Point(1421, 567);
+            this.lbl909.Location = new System.Drawing.Point(1421, 607);
             this.lbl909.Name = "lbl909";
             this.lbl909.Size = new System.Drawing.Size(105, 28);
             this.lbl909.TabIndex = 261;
@@ -517,7 +623,7 @@
             this.lbl908.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl908.EraserGroup = null;
             this.lbl908.IsMultiLang = false;
-            this.lbl908.Location = new System.Drawing.Point(1314, 567);
+            this.lbl908.Location = new System.Drawing.Point(1314, 607);
             this.lbl908.Name = "lbl908";
             this.lbl908.Size = new System.Drawing.Size(105, 28);
             this.lbl908.TabIndex = 260;
@@ -535,7 +641,7 @@
             this.lbl907.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl907.EraserGroup = null;
             this.lbl907.IsMultiLang = false;
-            this.lbl907.Location = new System.Drawing.Point(1207, 567);
+            this.lbl907.Location = new System.Drawing.Point(1207, 607);
             this.lbl907.Name = "lbl907";
             this.lbl907.Size = new System.Drawing.Size(105, 28);
             this.lbl907.TabIndex = 259;
@@ -553,7 +659,7 @@
             this.lbl906.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl906.EraserGroup = null;
             this.lbl906.IsMultiLang = false;
-            this.lbl906.Location = new System.Drawing.Point(755, 567);
+            this.lbl906.Location = new System.Drawing.Point(755, 607);
             this.lbl906.Name = "lbl906";
             this.lbl906.Size = new System.Drawing.Size(105, 28);
             this.lbl906.TabIndex = 258;
@@ -571,7 +677,7 @@
             this.lbl905.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl905.EraserGroup = null;
             this.lbl905.IsMultiLang = false;
-            this.lbl905.Location = new System.Drawing.Point(648, 567);
+            this.lbl905.Location = new System.Drawing.Point(648, 607);
             this.lbl905.Name = "lbl905";
             this.lbl905.Size = new System.Drawing.Size(105, 28);
             this.lbl905.TabIndex = 257;
@@ -589,7 +695,7 @@
             this.lbl904.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl904.EraserGroup = null;
             this.lbl904.IsMultiLang = false;
-            this.lbl904.Location = new System.Drawing.Point(541, 567);
+            this.lbl904.Location = new System.Drawing.Point(541, 607);
             this.lbl904.Name = "lbl904";
             this.lbl904.Size = new System.Drawing.Size(105, 28);
             this.lbl904.TabIndex = 256;
@@ -607,7 +713,7 @@
             this.lbl903.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl903.EraserGroup = null;
             this.lbl903.IsMultiLang = false;
-            this.lbl903.Location = new System.Drawing.Point(421, 567);
+            this.lbl903.Location = new System.Drawing.Point(421, 607);
             this.lbl903.Name = "lbl903";
             this.lbl903.Size = new System.Drawing.Size(105, 28);
             this.lbl903.TabIndex = 255;
@@ -625,7 +731,7 @@
             this.lbl902.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl902.EraserGroup = null;
             this.lbl902.IsMultiLang = false;
-            this.lbl902.Location = new System.Drawing.Point(313, 567);
+            this.lbl902.Location = new System.Drawing.Point(313, 607);
             this.lbl902.Name = "lbl902";
             this.lbl902.Size = new System.Drawing.Size(105, 28);
             this.lbl902.TabIndex = 254;
@@ -643,7 +749,7 @@
             this.lbl901.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl901.EraserGroup = null;
             this.lbl901.IsMultiLang = false;
-            this.lbl901.Location = new System.Drawing.Point(205, 567);
+            this.lbl901.Location = new System.Drawing.Point(205, 607);
             this.lbl901.Name = "lbl901";
             this.lbl901.Size = new System.Drawing.Size(105, 28);
             this.lbl901.TabIndex = 253;
@@ -661,7 +767,7 @@
             this.lbl805_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl805_1.EraserGroup = null;
             this.lbl805_1.IsMultiLang = false;
-            this.lbl805_1.Location = new System.Drawing.Point(982, 533);
+            this.lbl805_1.Location = new System.Drawing.Point(982, 573);
             this.lbl805_1.Name = "lbl805_1";
             this.lbl805_1.Size = new System.Drawing.Size(105, 28);
             this.lbl805_1.TabIndex = 251;
@@ -679,7 +785,7 @@
             this.lbl806_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl806_1.EraserGroup = null;
             this.lbl806_1.IsMultiLang = false;
-            this.lbl806_1.Location = new System.Drawing.Point(1089, 533);
+            this.lbl806_1.Location = new System.Drawing.Point(1089, 573);
             this.lbl806_1.Name = "lbl806_1";
             this.lbl806_1.Size = new System.Drawing.Size(105, 28);
             this.lbl806_1.TabIndex = 250;
@@ -697,7 +803,7 @@
             this.lbl804_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl804_1.EraserGroup = null;
             this.lbl804_1.IsMultiLang = false;
-            this.lbl804_1.Location = new System.Drawing.Point(875, 533);
+            this.lbl804_1.Location = new System.Drawing.Point(875, 573);
             this.lbl804_1.Name = "lbl804_1";
             this.lbl804_1.Size = new System.Drawing.Size(105, 28);
             this.lbl804_1.TabIndex = 249;
@@ -717,7 +823,7 @@
             this.efwLabel19.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel19.EraserGroup = null;
             this.efwLabel19.IsMultiLang = false;
-            this.efwLabel19.Location = new System.Drawing.Point(58, 533);
+            this.efwLabel19.Location = new System.Drawing.Point(58, 573);
             this.efwLabel19.Name = "efwLabel19";
             this.efwLabel19.Size = new System.Drawing.Size(146, 28);
             this.efwLabel19.TabIndex = 239;
@@ -735,7 +841,7 @@
             this.lbl809.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl809.EraserGroup = null;
             this.lbl809.IsMultiLang = false;
-            this.lbl809.Location = new System.Drawing.Point(1421, 533);
+            this.lbl809.Location = new System.Drawing.Point(1421, 573);
             this.lbl809.Name = "lbl809";
             this.lbl809.Size = new System.Drawing.Size(105, 28);
             this.lbl809.TabIndex = 248;
@@ -753,7 +859,7 @@
             this.lbl808.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl808.EraserGroup = null;
             this.lbl808.IsMultiLang = false;
-            this.lbl808.Location = new System.Drawing.Point(1314, 533);
+            this.lbl808.Location = new System.Drawing.Point(1314, 573);
             this.lbl808.Name = "lbl808";
             this.lbl808.Size = new System.Drawing.Size(105, 28);
             this.lbl808.TabIndex = 247;
@@ -771,7 +877,7 @@
             this.lbl807.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl807.EraserGroup = null;
             this.lbl807.IsMultiLang = false;
-            this.lbl807.Location = new System.Drawing.Point(1207, 533);
+            this.lbl807.Location = new System.Drawing.Point(1207, 573);
             this.lbl807.Name = "lbl807";
             this.lbl807.Size = new System.Drawing.Size(105, 28);
             this.lbl807.TabIndex = 246;
@@ -789,7 +895,7 @@
             this.lbl806.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl806.EraserGroup = null;
             this.lbl806.IsMultiLang = false;
-            this.lbl806.Location = new System.Drawing.Point(755, 533);
+            this.lbl806.Location = new System.Drawing.Point(755, 573);
             this.lbl806.Name = "lbl806";
             this.lbl806.Size = new System.Drawing.Size(105, 28);
             this.lbl806.TabIndex = 245;
@@ -807,7 +913,7 @@
             this.lbl805.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl805.EraserGroup = null;
             this.lbl805.IsMultiLang = false;
-            this.lbl805.Location = new System.Drawing.Point(648, 533);
+            this.lbl805.Location = new System.Drawing.Point(648, 573);
             this.lbl805.Name = "lbl805";
             this.lbl805.Size = new System.Drawing.Size(105, 28);
             this.lbl805.TabIndex = 244;
@@ -825,7 +931,7 @@
             this.lbl804.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl804.EraserGroup = null;
             this.lbl804.IsMultiLang = false;
-            this.lbl804.Location = new System.Drawing.Point(541, 533);
+            this.lbl804.Location = new System.Drawing.Point(541, 573);
             this.lbl804.Name = "lbl804";
             this.lbl804.Size = new System.Drawing.Size(105, 28);
             this.lbl804.TabIndex = 243;
@@ -843,7 +949,7 @@
             this.lbl803.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl803.EraserGroup = null;
             this.lbl803.IsMultiLang = false;
-            this.lbl803.Location = new System.Drawing.Point(421, 533);
+            this.lbl803.Location = new System.Drawing.Point(421, 573);
             this.lbl803.Name = "lbl803";
             this.lbl803.Size = new System.Drawing.Size(105, 28);
             this.lbl803.TabIndex = 242;
@@ -861,7 +967,7 @@
             this.lbl802.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl802.EraserGroup = null;
             this.lbl802.IsMultiLang = false;
-            this.lbl802.Location = new System.Drawing.Point(313, 533);
+            this.lbl802.Location = new System.Drawing.Point(313, 573);
             this.lbl802.Name = "lbl802";
             this.lbl802.Size = new System.Drawing.Size(105, 28);
             this.lbl802.TabIndex = 241;
@@ -879,7 +985,7 @@
             this.lbl801.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl801.EraserGroup = null;
             this.lbl801.IsMultiLang = false;
-            this.lbl801.Location = new System.Drawing.Point(205, 533);
+            this.lbl801.Location = new System.Drawing.Point(205, 573);
             this.lbl801.Name = "lbl801";
             this.lbl801.Size = new System.Drawing.Size(105, 28);
             this.lbl801.TabIndex = 240;
@@ -897,7 +1003,7 @@
             this.efwLabel6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel6.EraserGroup = null;
             this.efwLabel6.IsMultiLang = false;
-            this.efwLabel6.Location = new System.Drawing.Point(60, 267);
+            this.efwLabel6.Location = new System.Drawing.Point(60, 260);
             this.efwLabel6.Name = "efwLabel6";
             this.efwLabel6.Size = new System.Drawing.Size(146, 28);
             this.efwLabel6.TabIndex = 235;
@@ -915,7 +1021,7 @@
             this.lbl51.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl51.EraserGroup = null;
             this.lbl51.IsMultiLang = false;
-            this.lbl51.Location = new System.Drawing.Point(207, 267);
+            this.lbl51.Location = new System.Drawing.Point(207, 260);
             this.lbl51.Name = "lbl51";
             this.lbl51.Size = new System.Drawing.Size(105, 28);
             this.lbl51.TabIndex = 236;
@@ -933,7 +1039,7 @@
             this.lbl52.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl52.EraserGroup = null;
             this.lbl52.IsMultiLang = false;
-            this.lbl52.Location = new System.Drawing.Point(313, 267);
+            this.lbl52.Location = new System.Drawing.Point(313, 260);
             this.lbl52.Name = "lbl52";
             this.lbl52.Size = new System.Drawing.Size(105, 28);
             this.lbl52.TabIndex = 237;
@@ -951,7 +1057,7 @@
             this.lbl56.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl56.EraserGroup = null;
             this.lbl56.IsMultiLang = false;
-            this.lbl56.Location = new System.Drawing.Point(420, 267);
+            this.lbl56.Location = new System.Drawing.Point(420, 260);
             this.lbl56.Name = "lbl56";
             this.lbl56.Size = new System.Drawing.Size(105, 28);
             this.lbl56.TabIndex = 238;
@@ -969,7 +1075,7 @@
             this.lbl705_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl705_1.EraserGroup = null;
             this.lbl705_1.IsMultiLang = false;
-            this.lbl705_1.Location = new System.Drawing.Point(982, 631);
+            this.lbl705_1.Location = new System.Drawing.Point(982, 652);
             this.lbl705_1.Name = "lbl705_1";
             this.lbl705_1.Size = new System.Drawing.Size(105, 28);
             this.lbl705_1.TabIndex = 234;
@@ -1098,7 +1204,7 @@
             this.lbl605_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl605_1.EraserGroup = null;
             this.lbl605_1.IsMultiLang = false;
-            this.lbl605_1.Location = new System.Drawing.Point(982, 497);
+            this.lbl605_1.Location = new System.Drawing.Point(982, 529);
             this.lbl605_1.Name = "lbl605_1";
             this.lbl605_1.Size = new System.Drawing.Size(105, 28);
             this.lbl605_1.TabIndex = 233;
@@ -1116,7 +1222,7 @@
             this.lbl706_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl706_1.EraserGroup = null;
             this.lbl706_1.IsMultiLang = false;
-            this.lbl706_1.Location = new System.Drawing.Point(1089, 631);
+            this.lbl706_1.Location = new System.Drawing.Point(1089, 652);
             this.lbl706_1.Name = "lbl706_1";
             this.lbl706_1.Size = new System.Drawing.Size(105, 28);
             this.lbl706_1.TabIndex = 226;
@@ -1135,7 +1241,7 @@
             this.lbl704_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl704_1.EraserGroup = null;
             this.lbl704_1.IsMultiLang = false;
-            this.lbl704_1.Location = new System.Drawing.Point(875, 631);
+            this.lbl704_1.Location = new System.Drawing.Point(875, 652);
             this.lbl704_1.Name = "lbl704_1";
             this.lbl704_1.Size = new System.Drawing.Size(105, 28);
             this.lbl704_1.TabIndex = 225;
@@ -1357,7 +1463,7 @@
             this.lbl604_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl604_1.EraserGroup = null;
             this.lbl604_1.IsMultiLang = false;
-            this.lbl604_1.Location = new System.Drawing.Point(875, 497);
+            this.lbl604_1.Location = new System.Drawing.Point(875, 529);
             this.lbl604_1.Name = "lbl604_1";
             this.lbl604_1.Size = new System.Drawing.Size(105, 28);
             this.lbl604_1.TabIndex = 223;
@@ -1393,7 +1499,7 @@
             this.lbl606_1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl606_1.EraserGroup = null;
             this.lbl606_1.IsMultiLang = false;
-            this.lbl606_1.Location = new System.Drawing.Point(1089, 497);
+            this.lbl606_1.Location = new System.Drawing.Point(1089, 529);
             this.lbl606_1.Name = "lbl606_1";
             this.lbl606_1.Size = new System.Drawing.Size(105, 28);
             this.lbl606_1.TabIndex = 224;
@@ -1411,7 +1517,7 @@
             this.efwLabel8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel8.EraserGroup = null;
             this.efwLabel8.IsMultiLang = false;
-            this.efwLabel8.Location = new System.Drawing.Point(58, 631);
+            this.efwLabel8.Location = new System.Drawing.Point(58, 652);
             this.efwLabel8.Name = "efwLabel8";
             this.efwLabel8.Size = new System.Drawing.Size(146, 28);
             this.efwLabel8.TabIndex = 201;
@@ -1432,7 +1538,7 @@
             this.efwLabel10.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel10.EraserGroup = null;
             this.efwLabel10.IsMultiLang = false;
-            this.efwLabel10.Location = new System.Drawing.Point(60, 82);
+            this.efwLabel10.Location = new System.Drawing.Point(60, 44);
             this.efwLabel10.Name = "efwLabel10";
             this.efwLabel10.Size = new System.Drawing.Size(146, 36);
             this.efwLabel10.TabIndex = 40;
@@ -1450,7 +1556,7 @@
             this.lbl709.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl709.EraserGroup = null;
             this.lbl709.IsMultiLang = false;
-            this.lbl709.Location = new System.Drawing.Point(1421, 631);
+            this.lbl709.Location = new System.Drawing.Point(1421, 652);
             this.lbl709.Name = "lbl709";
             this.lbl709.Size = new System.Drawing.Size(105, 28);
             this.lbl709.TabIndex = 210;
@@ -1471,7 +1577,7 @@
             this.efwLabel11.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel11.EraserGroup = null;
             this.efwLabel11.IsMultiLang = false;
-            this.efwLabel11.Location = new System.Drawing.Point(207, 82);
+            this.efwLabel11.Location = new System.Drawing.Point(207, 44);
             this.efwLabel11.Name = "efwLabel11";
             this.efwLabel11.Size = new System.Drawing.Size(105, 36);
             this.efwLabel11.TabIndex = 41;
@@ -1489,7 +1595,7 @@
             this.lbl708.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl708.EraserGroup = null;
             this.lbl708.IsMultiLang = false;
-            this.lbl708.Location = new System.Drawing.Point(1314, 631);
+            this.lbl708.Location = new System.Drawing.Point(1314, 652);
             this.lbl708.Name = "lbl708";
             this.lbl708.Size = new System.Drawing.Size(105, 28);
             this.lbl708.TabIndex = 209;
@@ -1510,7 +1616,7 @@
             this.efwLabel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(313, 82);
+            this.efwLabel1.Location = new System.Drawing.Point(313, 44);
             this.efwLabel1.Name = "efwLabel1";
             this.efwLabel1.Size = new System.Drawing.Size(105, 36);
             this.efwLabel1.TabIndex = 42;
@@ -1528,7 +1634,7 @@
             this.lbl707.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl707.EraserGroup = null;
             this.lbl707.IsMultiLang = false;
-            this.lbl707.Location = new System.Drawing.Point(1207, 631);
+            this.lbl707.Location = new System.Drawing.Point(1207, 652);
             this.lbl707.Name = "lbl707";
             this.lbl707.Size = new System.Drawing.Size(105, 28);
             this.lbl707.TabIndex = 208;
@@ -1568,7 +1674,7 @@
             this.lbl706.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl706.EraserGroup = null;
             this.lbl706.IsMultiLang = false;
-            this.lbl706.Location = new System.Drawing.Point(755, 631);
+            this.lbl706.Location = new System.Drawing.Point(755, 652);
             this.lbl706.Name = "lbl706";
             this.lbl706.Size = new System.Drawing.Size(105, 28);
             this.lbl706.TabIndex = 207;
@@ -1608,7 +1714,7 @@
             this.lbl705.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl705.EraserGroup = null;
             this.lbl705.IsMultiLang = false;
-            this.lbl705.Location = new System.Drawing.Point(648, 631);
+            this.lbl705.Location = new System.Drawing.Point(648, 652);
             this.lbl705.Name = "lbl705";
             this.lbl705.Size = new System.Drawing.Size(105, 28);
             this.lbl705.TabIndex = 206;
@@ -1648,7 +1754,7 @@
             this.lbl704.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl704.EraserGroup = null;
             this.lbl704.IsMultiLang = false;
-            this.lbl704.Location = new System.Drawing.Point(541, 631);
+            this.lbl704.Location = new System.Drawing.Point(541, 652);
             this.lbl704.Name = "lbl704";
             this.lbl704.Size = new System.Drawing.Size(105, 28);
             this.lbl704.TabIndex = 205;
@@ -1667,7 +1773,7 @@
             this.efwLabel9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel9.EraserGroup = null;
             this.efwLabel9.IsMultiLang = false;
-            this.efwLabel9.Location = new System.Drawing.Point(60, 120);
+            this.efwLabel9.Location = new System.Drawing.Point(60, 82);
             this.efwLabel9.Name = "efwLabel9";
             this.efwLabel9.Size = new System.Drawing.Size(146, 28);
             this.efwLabel9.TabIndex = 47;
@@ -1685,7 +1791,7 @@
             this.lbl703.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl703.EraserGroup = null;
             this.lbl703.IsMultiLang = false;
-            this.lbl703.Location = new System.Drawing.Point(421, 631);
+            this.lbl703.Location = new System.Drawing.Point(421, 652);
             this.lbl703.Name = "lbl703";
             this.lbl703.Size = new System.Drawing.Size(105, 28);
             this.lbl703.TabIndex = 204;
@@ -1704,7 +1810,7 @@
             this.efwLabel12.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel12.EraserGroup = null;
             this.efwLabel12.IsMultiLang = false;
-            this.efwLabel12.Location = new System.Drawing.Point(60, 209);
+            this.efwLabel12.Location = new System.Drawing.Point(60, 202);
             this.efwLabel12.Name = "efwLabel12";
             this.efwLabel12.Size = new System.Drawing.Size(146, 28);
             this.efwLabel12.TabIndex = 48;
@@ -1722,7 +1828,7 @@
             this.lbl702.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl702.EraserGroup = null;
             this.lbl702.IsMultiLang = false;
-            this.lbl702.Location = new System.Drawing.Point(313, 631);
+            this.lbl702.Location = new System.Drawing.Point(313, 652);
             this.lbl702.Name = "lbl702";
             this.lbl702.Size = new System.Drawing.Size(105, 28);
             this.lbl702.TabIndex = 203;
@@ -1741,7 +1847,7 @@
             this.lbl11.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl11.EraserGroup = null;
             this.lbl11.IsMultiLang = false;
-            this.lbl11.Location = new System.Drawing.Point(207, 119);
+            this.lbl11.Location = new System.Drawing.Point(207, 81);
             this.lbl11.Name = "lbl11";
             this.lbl11.Size = new System.Drawing.Size(105, 28);
             this.lbl11.TabIndex = 49;
@@ -1759,7 +1865,7 @@
             this.lbl701.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl701.EraserGroup = null;
             this.lbl701.IsMultiLang = false;
-            this.lbl701.Location = new System.Drawing.Point(205, 631);
+            this.lbl701.Location = new System.Drawing.Point(205, 652);
             this.lbl701.Name = "lbl701";
             this.lbl701.Size = new System.Drawing.Size(105, 28);
             this.lbl701.TabIndex = 202;
@@ -1778,7 +1884,7 @@
             this.lbl12.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl12.EraserGroup = null;
             this.lbl12.IsMultiLang = false;
-            this.lbl12.Location = new System.Drawing.Point(313, 120);
+            this.lbl12.Location = new System.Drawing.Point(313, 82);
             this.lbl12.Name = "lbl12";
             this.lbl12.Size = new System.Drawing.Size(105, 28);
             this.lbl12.TabIndex = 50;
@@ -1796,7 +1902,7 @@
             this.efwLabel74.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel74.EraserGroup = null;
             this.efwLabel74.IsMultiLang = false;
-            this.efwLabel74.Location = new System.Drawing.Point(58, 497);
+            this.efwLabel74.Location = new System.Drawing.Point(58, 529);
             this.efwLabel74.Name = "efwLabel74";
             this.efwLabel74.Size = new System.Drawing.Size(146, 28);
             this.efwLabel74.TabIndex = 121;
@@ -1949,7 +2055,7 @@
             this.lbl21.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl21.EraserGroup = null;
             this.lbl21.IsMultiLang = false;
-            this.lbl21.Location = new System.Drawing.Point(207, 209);
+            this.lbl21.Location = new System.Drawing.Point(207, 202);
             this.lbl21.Name = "lbl21";
             this.lbl21.Size = new System.Drawing.Size(105, 28);
             this.lbl21.TabIndex = 55;
@@ -1987,7 +2093,7 @@
             this.lbl22.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl22.EraserGroup = null;
             this.lbl22.IsMultiLang = false;
-            this.lbl22.Location = new System.Drawing.Point(313, 209);
+            this.lbl22.Location = new System.Drawing.Point(313, 202);
             this.lbl22.Name = "lbl22";
             this.lbl22.Size = new System.Drawing.Size(105, 28);
             this.lbl22.TabIndex = 56;
@@ -2081,7 +2187,7 @@
             this.lbl609.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl609.EraserGroup = null;
             this.lbl609.IsMultiLang = false;
-            this.lbl609.Location = new System.Drawing.Point(1421, 497);
+            this.lbl609.Location = new System.Drawing.Point(1421, 529);
             this.lbl609.Name = "lbl609";
             this.lbl609.Size = new System.Drawing.Size(105, 28);
             this.lbl609.TabIndex = 154;
@@ -2140,7 +2246,7 @@
             this.efwLabel7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel7.EraserGroup = null;
             this.efwLabel7.IsMultiLang = false;
-            this.efwLabel7.Location = new System.Drawing.Point(420, 82);
+            this.efwLabel7.Location = new System.Drawing.Point(420, 44);
             this.efwLabel7.Name = "efwLabel7";
             this.efwLabel7.Size = new System.Drawing.Size(105, 36);
             this.efwLabel7.TabIndex = 62;
@@ -2158,7 +2264,7 @@
             this.lbl608.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl608.EraserGroup = null;
             this.lbl608.IsMultiLang = false;
-            this.lbl608.Location = new System.Drawing.Point(1314, 497);
+            this.lbl608.Location = new System.Drawing.Point(1314, 529);
             this.lbl608.Name = "lbl608";
             this.lbl608.Size = new System.Drawing.Size(105, 28);
             this.lbl608.TabIndex = 153;
@@ -2176,7 +2282,7 @@
             this.lbl16.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl16.EraserGroup = null;
             this.lbl16.IsMultiLang = false;
-            this.lbl16.Location = new System.Drawing.Point(420, 120);
+            this.lbl16.Location = new System.Drawing.Point(420, 82);
             this.lbl16.Name = "lbl16";
             this.lbl16.Size = new System.Drawing.Size(105, 28);
             this.lbl16.TabIndex = 63;
@@ -2212,7 +2318,7 @@
             this.lbl26.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl26.EraserGroup = null;
             this.lbl26.IsMultiLang = false;
-            this.lbl26.Location = new System.Drawing.Point(420, 209);
+            this.lbl26.Location = new System.Drawing.Point(420, 202);
             this.lbl26.Name = "lbl26";
             this.lbl26.Size = new System.Drawing.Size(105, 28);
             this.lbl26.TabIndex = 64;
@@ -2230,7 +2336,7 @@
             this.lbl607.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl607.EraserGroup = null;
             this.lbl607.IsMultiLang = false;
-            this.lbl607.Location = new System.Drawing.Point(1207, 497);
+            this.lbl607.Location = new System.Drawing.Point(1207, 529);
             this.lbl607.Name = "lbl607";
             this.lbl607.Size = new System.Drawing.Size(105, 28);
             this.lbl607.TabIndex = 152;
@@ -2248,7 +2354,7 @@
             this.efwLabel25.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel25.EraserGroup = null;
             this.efwLabel25.IsMultiLang = false;
-            this.efwLabel25.Location = new System.Drawing.Point(60, 149);
+            this.efwLabel25.Location = new System.Drawing.Point(60, 111);
             this.efwLabel25.Name = "efwLabel25";
             this.efwLabel25.Size = new System.Drawing.Size(146, 28);
             this.efwLabel25.TabIndex = 65;
@@ -2284,7 +2390,7 @@
             this.efwLabel24.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.efwLabel24.EraserGroup = null;
             this.efwLabel24.IsMultiLang = false;
-            this.efwLabel24.Location = new System.Drawing.Point(60, 238);
+            this.efwLabel24.Location = new System.Drawing.Point(60, 231);
             this.efwLabel24.Name = "efwLabel24";
             this.efwLabel24.Size = new System.Drawing.Size(146, 28);
             this.efwLabel24.TabIndex = 66;
@@ -2320,7 +2426,7 @@
             this.lbl31.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl31.EraserGroup = null;
             this.lbl31.IsMultiLang = false;
-            this.lbl31.Location = new System.Drawing.Point(207, 149);
+            this.lbl31.Location = new System.Drawing.Point(207, 111);
             this.lbl31.Name = "lbl31";
             this.lbl31.Size = new System.Drawing.Size(105, 28);
             this.lbl31.TabIndex = 67;
@@ -2356,7 +2462,7 @@
             this.lbl32.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl32.EraserGroup = null;
             this.lbl32.IsMultiLang = false;
-            this.lbl32.Location = new System.Drawing.Point(313, 149);
+            this.lbl32.Location = new System.Drawing.Point(313, 111);
             this.lbl32.Name = "lbl32";
             this.lbl32.Size = new System.Drawing.Size(105, 28);
             this.lbl32.TabIndex = 68;
@@ -2503,7 +2609,7 @@
             this.lbl41.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl41.EraserGroup = null;
             this.lbl41.IsMultiLang = false;
-            this.lbl41.Location = new System.Drawing.Point(207, 238);
+            this.lbl41.Location = new System.Drawing.Point(207, 231);
             this.lbl41.Name = "lbl41";
             this.lbl41.Size = new System.Drawing.Size(105, 28);
             this.lbl41.TabIndex = 72;
@@ -2539,7 +2645,7 @@
             this.lbl42.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl42.EraserGroup = null;
             this.lbl42.IsMultiLang = false;
-            this.lbl42.Location = new System.Drawing.Point(313, 238);
+            this.lbl42.Location = new System.Drawing.Point(313, 231);
             this.lbl42.Name = "lbl42";
             this.lbl42.Size = new System.Drawing.Size(105, 28);
             this.lbl42.TabIndex = 73;
@@ -2686,7 +2792,7 @@
             this.lbl36.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl36.EraserGroup = null;
             this.lbl36.IsMultiLang = false;
-            this.lbl36.Location = new System.Drawing.Point(420, 149);
+            this.lbl36.Location = new System.Drawing.Point(420, 111);
             this.lbl36.Name = "lbl36";
             this.lbl36.Size = new System.Drawing.Size(105, 28);
             this.lbl36.TabIndex = 77;
@@ -2722,7 +2828,7 @@
             this.lbl46.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl46.EraserGroup = null;
             this.lbl46.IsMultiLang = false;
-            this.lbl46.Location = new System.Drawing.Point(420, 238);
+            this.lbl46.Location = new System.Drawing.Point(420, 231);
             this.lbl46.Name = "lbl46";
             this.lbl46.Size = new System.Drawing.Size(105, 28);
             this.lbl46.TabIndex = 78;
@@ -3156,7 +3262,7 @@
             this.lbl601.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl601.EraserGroup = null;
             this.lbl601.IsMultiLang = false;
-            this.lbl601.Location = new System.Drawing.Point(205, 497);
+            this.lbl601.Location = new System.Drawing.Point(205, 529);
             this.lbl601.Name = "lbl601";
             this.lbl601.Size = new System.Drawing.Size(105, 28);
             this.lbl601.TabIndex = 122;
@@ -3228,7 +3334,7 @@
             this.lbl602.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl602.EraserGroup = null;
             this.lbl602.IsMultiLang = false;
-            this.lbl602.Location = new System.Drawing.Point(313, 497);
+            this.lbl602.Location = new System.Drawing.Point(313, 529);
             this.lbl602.Name = "lbl602";
             this.lbl602.Size = new System.Drawing.Size(105, 28);
             this.lbl602.TabIndex = 123;
@@ -3300,7 +3406,7 @@
             this.lbl603.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl603.EraserGroup = null;
             this.lbl603.IsMultiLang = false;
-            this.lbl603.Location = new System.Drawing.Point(421, 497);
+            this.lbl603.Location = new System.Drawing.Point(421, 529);
             this.lbl603.Name = "lbl603";
             this.lbl603.Size = new System.Drawing.Size(105, 28);
             this.lbl603.TabIndex = 124;
@@ -3374,7 +3480,7 @@
             this.lbl604.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl604.EraserGroup = null;
             this.lbl604.IsMultiLang = false;
-            this.lbl604.Location = new System.Drawing.Point(541, 497);
+            this.lbl604.Location = new System.Drawing.Point(541, 529);
             this.lbl604.Name = "lbl604";
             this.lbl604.Size = new System.Drawing.Size(105, 28);
             this.lbl604.TabIndex = 125;
@@ -3448,7 +3554,7 @@
             this.lbl605.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl605.EraserGroup = null;
             this.lbl605.IsMultiLang = false;
-            this.lbl605.Location = new System.Drawing.Point(648, 497);
+            this.lbl605.Location = new System.Drawing.Point(648, 529);
             this.lbl605.Name = "lbl605";
             this.lbl605.Size = new System.Drawing.Size(105, 28);
             this.lbl605.TabIndex = 126;
@@ -3522,7 +3628,7 @@
             this.lbl606.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lbl606.EraserGroup = null;
             this.lbl606.IsMultiLang = false;
-            this.lbl606.Location = new System.Drawing.Point(755, 497);
+            this.lbl606.Location = new System.Drawing.Point(755, 529);
             this.lbl606.Name = "lbl606";
             this.lbl606.Size = new System.Drawing.Size(105, 28);
             this.lbl606.TabIndex = 127;
@@ -3600,77 +3706,311 @@
             this.efwLabel5.TabIndex = 81;
             this.efwLabel5.Text = "~";
             // 
-            // efwLabel16
+            // efwLabel17
             // 
-            this.efwLabel16.Appearance.BackColor = System.Drawing.Color.LightGray;
-            this.efwLabel16.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.efwLabel16.Appearance.Options.UseBackColor = true;
-            this.efwLabel16.Appearance.Options.UseFont = true;
-            this.efwLabel16.Appearance.Options.UseTextOptions = true;
-            this.efwLabel16.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.efwLabel16.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efwLabel16.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.efwLabel16.EraserGroup = null;
-            this.efwLabel16.IsMultiLang = false;
-            this.efwLabel16.Location = new System.Drawing.Point(60, 179);
-            this.efwLabel16.Name = "efwLabel16";
-            this.efwLabel16.Size = new System.Drawing.Size(146, 28);
-            this.efwLabel16.TabIndex = 265;
-            this.efwLabel16.Text = "체험샵등록";
+            this.efwLabel17.Appearance.BackColor = System.Drawing.Color.LightGray;
+            this.efwLabel17.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.efwLabel17.Appearance.Options.UseBackColor = true;
+            this.efwLabel17.Appearance.Options.UseFont = true;
+            this.efwLabel17.Appearance.Options.UseTextOptions = true;
+            this.efwLabel17.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.efwLabel17.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.efwLabel17.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.efwLabel17.EraserGroup = null;
+            this.efwLabel17.IsMultiLang = false;
+            this.efwLabel17.Location = new System.Drawing.Point(60, 171);
+            this.efwLabel17.Name = "efwLabel17";
+            this.efwLabel17.Size = new System.Drawing.Size(146, 28);
+            this.efwLabel17.TabIndex = 269;
+            this.efwLabel17.Text = "G판매샵등록";
             // 
-            // lbl61
+            // lbl71
             // 
-            this.lbl61.Appearance.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbl61.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.lbl61.Appearance.Options.UseBackColor = true;
-            this.lbl61.Appearance.Options.UseFont = true;
-            this.lbl61.Appearance.Options.UseTextOptions = true;
-            this.lbl61.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbl61.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbl61.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lbl61.EraserGroup = null;
-            this.lbl61.IsMultiLang = false;
-            this.lbl61.Location = new System.Drawing.Point(207, 179);
-            this.lbl61.Name = "lbl61";
-            this.lbl61.Size = new System.Drawing.Size(105, 28);
-            this.lbl61.TabIndex = 266;
-            this.lbl61.Text = "0";
+            this.lbl71.Appearance.BackColor = System.Drawing.Color.Cornsilk;
+            this.lbl71.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl71.Appearance.Options.UseBackColor = true;
+            this.lbl71.Appearance.Options.UseFont = true;
+            this.lbl71.Appearance.Options.UseTextOptions = true;
+            this.lbl71.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbl71.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl71.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl71.EraserGroup = null;
+            this.lbl71.IsMultiLang = false;
+            this.lbl71.Location = new System.Drawing.Point(207, 171);
+            this.lbl71.Name = "lbl71";
+            this.lbl71.Size = new System.Drawing.Size(105, 28);
+            this.lbl71.TabIndex = 270;
+            this.lbl71.Text = "0";
             // 
-            // lbl62
+            // lbl72
             // 
-            this.lbl62.Appearance.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbl62.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.lbl62.Appearance.Options.UseBackColor = true;
-            this.lbl62.Appearance.Options.UseFont = true;
-            this.lbl62.Appearance.Options.UseTextOptions = true;
-            this.lbl62.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbl62.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbl62.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lbl62.EraserGroup = null;
-            this.lbl62.IsMultiLang = false;
-            this.lbl62.Location = new System.Drawing.Point(313, 179);
-            this.lbl62.Name = "lbl62";
-            this.lbl62.Size = new System.Drawing.Size(105, 28);
-            this.lbl62.TabIndex = 267;
-            this.lbl62.Text = "0";
+            this.lbl72.Appearance.BackColor = System.Drawing.Color.Cornsilk;
+            this.lbl72.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl72.Appearance.Options.UseBackColor = true;
+            this.lbl72.Appearance.Options.UseFont = true;
+            this.lbl72.Appearance.Options.UseTextOptions = true;
+            this.lbl72.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbl72.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl72.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl72.EraserGroup = null;
+            this.lbl72.IsMultiLang = false;
+            this.lbl72.Location = new System.Drawing.Point(313, 171);
+            this.lbl72.Name = "lbl72";
+            this.lbl72.Size = new System.Drawing.Size(105, 28);
+            this.lbl72.TabIndex = 271;
+            this.lbl72.Text = "0";
             // 
-            // lbl63
+            // lbl73
             // 
-            this.lbl63.Appearance.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbl63.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.lbl63.Appearance.Options.UseBackColor = true;
-            this.lbl63.Appearance.Options.UseFont = true;
-            this.lbl63.Appearance.Options.UseTextOptions = true;
-            this.lbl63.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbl63.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbl63.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lbl63.EraserGroup = null;
-            this.lbl63.IsMultiLang = false;
-            this.lbl63.Location = new System.Drawing.Point(420, 179);
-            this.lbl63.Name = "lbl63";
-            this.lbl63.Size = new System.Drawing.Size(105, 28);
-            this.lbl63.TabIndex = 268;
-            this.lbl63.Text = "0";
+            this.lbl73.Appearance.BackColor = System.Drawing.Color.Cornsilk;
+            this.lbl73.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl73.Appearance.Options.UseBackColor = true;
+            this.lbl73.Appearance.Options.UseFont = true;
+            this.lbl73.Appearance.Options.UseTextOptions = true;
+            this.lbl73.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbl73.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl73.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl73.EraserGroup = null;
+            this.lbl73.IsMultiLang = false;
+            this.lbl73.Location = new System.Drawing.Point(420, 171);
+            this.lbl73.Name = "lbl73";
+            this.lbl73.Size = new System.Drawing.Size(105, 28);
+            this.lbl73.TabIndex = 272;
+            this.lbl73.Text = "0";
+            // 
+            // lbl1008
+            // 
+            this.lbl1008.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1008.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1008.Appearance.Options.UseBackColor = true;
+            this.lbl1008.Appearance.Options.UseFont = true;
+            this.lbl1008.Appearance.Options.UseTextOptions = true;
+            this.lbl1008.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbl1008.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1008.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1008.EraserGroup = null;
+            this.lbl1008.IsMultiLang = false;
+            this.lbl1008.Location = new System.Drawing.Point(982, 498);
+            this.lbl1008.Name = "lbl1008";
+            this.lbl1008.Size = new System.Drawing.Size(105, 28);
+            this.lbl1008.TabIndex = 285;
+            this.lbl1008.Text = "0";
+            // 
+            // lbl1009
+            // 
+            this.lbl1009.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1009.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1009.Appearance.Options.UseBackColor = true;
+            this.lbl1009.Appearance.Options.UseFont = true;
+            this.lbl1009.Appearance.Options.UseTextOptions = true;
+            this.lbl1009.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbl1009.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1009.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1009.EraserGroup = null;
+            this.lbl1009.IsMultiLang = false;
+            this.lbl1009.Location = new System.Drawing.Point(1089, 498);
+            this.lbl1009.Name = "lbl1009";
+            this.lbl1009.Size = new System.Drawing.Size(105, 28);
+            this.lbl1009.TabIndex = 284;
+            this.lbl1009.Text = "0";
+            // 
+            // lbl1007
+            // 
+            this.lbl1007.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1007.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1007.Appearance.Options.UseBackColor = true;
+            this.lbl1007.Appearance.Options.UseFont = true;
+            this.lbl1007.Appearance.Options.UseTextOptions = true;
+            this.lbl1007.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbl1007.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1007.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1007.EraserGroup = null;
+            this.lbl1007.IsMultiLang = false;
+            this.lbl1007.Location = new System.Drawing.Point(875, 498);
+            this.lbl1007.Name = "lbl1007";
+            this.lbl1007.Size = new System.Drawing.Size(105, 28);
+            this.lbl1007.TabIndex = 283;
+            this.lbl1007.Text = "0";
+            // 
+            // lbl1012
+            // 
+            this.lbl1012.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1012.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1012.Appearance.Options.UseBackColor = true;
+            this.lbl1012.Appearance.Options.UseFont = true;
+            this.lbl1012.Appearance.Options.UseTextOptions = true;
+            this.lbl1012.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbl1012.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1012.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1012.EraserGroup = null;
+            this.lbl1012.IsMultiLang = false;
+            this.lbl1012.Location = new System.Drawing.Point(1421, 498);
+            this.lbl1012.Name = "lbl1012";
+            this.lbl1012.Size = new System.Drawing.Size(105, 28);
+            this.lbl1012.TabIndex = 282;
+            this.lbl1012.Text = "0";
+            // 
+            // lbl1011
+            // 
+            this.lbl1011.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1011.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1011.Appearance.Options.UseBackColor = true;
+            this.lbl1011.Appearance.Options.UseFont = true;
+            this.lbl1011.Appearance.Options.UseTextOptions = true;
+            this.lbl1011.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbl1011.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1011.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1011.EraserGroup = null;
+            this.lbl1011.IsMultiLang = false;
+            this.lbl1011.Location = new System.Drawing.Point(1314, 498);
+            this.lbl1011.Name = "lbl1011";
+            this.lbl1011.Size = new System.Drawing.Size(105, 28);
+            this.lbl1011.TabIndex = 281;
+            this.lbl1011.Text = "0";
+            // 
+            // lbl1010
+            // 
+            this.lbl1010.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1010.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1010.Appearance.Options.UseBackColor = true;
+            this.lbl1010.Appearance.Options.UseFont = true;
+            this.lbl1010.Appearance.Options.UseTextOptions = true;
+            this.lbl1010.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbl1010.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1010.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1010.EraserGroup = null;
+            this.lbl1010.IsMultiLang = false;
+            this.lbl1010.Location = new System.Drawing.Point(1207, 498);
+            this.lbl1010.Name = "lbl1010";
+            this.lbl1010.Size = new System.Drawing.Size(105, 28);
+            this.lbl1010.TabIndex = 280;
+            this.lbl1010.Text = "0";
+            // 
+            // lbl1006
+            // 
+            this.lbl1006.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1006.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1006.Appearance.Options.UseBackColor = true;
+            this.lbl1006.Appearance.Options.UseFont = true;
+            this.lbl1006.Appearance.Options.UseTextOptions = true;
+            this.lbl1006.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbl1006.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1006.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1006.EraserGroup = null;
+            this.lbl1006.IsMultiLang = false;
+            this.lbl1006.Location = new System.Drawing.Point(755, 498);
+            this.lbl1006.Name = "lbl1006";
+            this.lbl1006.Size = new System.Drawing.Size(105, 28);
+            this.lbl1006.TabIndex = 279;
+            this.lbl1006.Text = "0";
+            // 
+            // lbl1005
+            // 
+            this.lbl1005.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1005.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1005.Appearance.Options.UseBackColor = true;
+            this.lbl1005.Appearance.Options.UseFont = true;
+            this.lbl1005.Appearance.Options.UseTextOptions = true;
+            this.lbl1005.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbl1005.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1005.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1005.EraserGroup = null;
+            this.lbl1005.IsMultiLang = false;
+            this.lbl1005.Location = new System.Drawing.Point(648, 498);
+            this.lbl1005.Name = "lbl1005";
+            this.lbl1005.Size = new System.Drawing.Size(105, 28);
+            this.lbl1005.TabIndex = 278;
+            this.lbl1005.Text = "0";
+            // 
+            // lbl1004
+            // 
+            this.lbl1004.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1004.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1004.Appearance.Options.UseBackColor = true;
+            this.lbl1004.Appearance.Options.UseFont = true;
+            this.lbl1004.Appearance.Options.UseTextOptions = true;
+            this.lbl1004.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbl1004.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1004.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1004.EraserGroup = null;
+            this.lbl1004.IsMultiLang = false;
+            this.lbl1004.Location = new System.Drawing.Point(541, 498);
+            this.lbl1004.Name = "lbl1004";
+            this.lbl1004.Size = new System.Drawing.Size(105, 28);
+            this.lbl1004.TabIndex = 277;
+            this.lbl1004.Text = "0";
+            // 
+            // lbl1003
+            // 
+            this.lbl1003.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1003.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1003.Appearance.Options.UseBackColor = true;
+            this.lbl1003.Appearance.Options.UseFont = true;
+            this.lbl1003.Appearance.Options.UseTextOptions = true;
+            this.lbl1003.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbl1003.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1003.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1003.EraserGroup = null;
+            this.lbl1003.IsMultiLang = false;
+            this.lbl1003.Location = new System.Drawing.Point(421, 498);
+            this.lbl1003.Name = "lbl1003";
+            this.lbl1003.Size = new System.Drawing.Size(105, 28);
+            this.lbl1003.TabIndex = 276;
+            this.lbl1003.Text = "0";
+            // 
+            // lbl1002
+            // 
+            this.lbl1002.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1002.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1002.Appearance.Options.UseBackColor = true;
+            this.lbl1002.Appearance.Options.UseFont = true;
+            this.lbl1002.Appearance.Options.UseTextOptions = true;
+            this.lbl1002.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbl1002.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1002.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1002.EraserGroup = null;
+            this.lbl1002.IsMultiLang = false;
+            this.lbl1002.Location = new System.Drawing.Point(313, 498);
+            this.lbl1002.Name = "lbl1002";
+            this.lbl1002.Size = new System.Drawing.Size(105, 28);
+            this.lbl1002.TabIndex = 275;
+            this.lbl1002.Text = "0";
+            // 
+            // efwLabel34
+            // 
+            this.efwLabel34.Appearance.BackColor = System.Drawing.Color.LightGray;
+            this.efwLabel34.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.efwLabel34.Appearance.Options.UseBackColor = true;
+            this.efwLabel34.Appearance.Options.UseFont = true;
+            this.efwLabel34.Appearance.Options.UseTextOptions = true;
+            this.efwLabel34.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.efwLabel34.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.efwLabel34.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.efwLabel34.EraserGroup = null;
+            this.efwLabel34.IsMultiLang = false;
+            this.efwLabel34.Location = new System.Drawing.Point(58, 498);
+            this.efwLabel34.Name = "efwLabel34";
+            this.efwLabel34.Size = new System.Drawing.Size(146, 28);
+            this.efwLabel34.TabIndex = 273;
+            this.efwLabel34.Text = "G판매샵";
+            // 
+            // lbl1001
+            // 
+            this.lbl1001.Appearance.BackColor = System.Drawing.Color.Linen;
+            this.lbl1001.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lbl1001.Appearance.Options.UseBackColor = true;
+            this.lbl1001.Appearance.Options.UseFont = true;
+            this.lbl1001.Appearance.Options.UseTextOptions = true;
+            this.lbl1001.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbl1001.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl1001.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbl1001.EraserGroup = null;
+            this.lbl1001.IsMultiLang = false;
+            this.lbl1001.Location = new System.Drawing.Point(205, 498);
+            this.lbl1001.Name = "lbl1001";
+            this.lbl1001.Size = new System.Drawing.Size(105, 28);
+            this.lbl1001.TabIndex = 274;
+            this.lbl1001.Text = "0";
             // 
             // frmGM15
             // 
@@ -3678,7 +4018,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Name = "frmGM15";
-            this.Size = new System.Drawing.Size(1557, 743);
+            this.Size = new System.Drawing.Size(1557, 822);
             this.Load += new System.EventHandler(this.frmGM15_Load);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel2.ResumeLayout(false);
@@ -3877,5 +4217,22 @@
         private Easy.Framework.WinForm.Control.efwLabel lbl61;
         private Easy.Framework.WinForm.Control.efwLabel lbl62;
         private Easy.Framework.WinForm.Control.efwLabel lbl63;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1008;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1009;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1007;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1012;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1011;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1010;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1006;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1005;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1004;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1003;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1002;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel34;
+        private Easy.Framework.WinForm.Control.efwLabel lbl1001;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel17;
+        private Easy.Framework.WinForm.Control.efwLabel lbl71;
+        private Easy.Framework.WinForm.Control.efwLabel lbl72;
+        private Easy.Framework.WinForm.Control.efwLabel lbl73;
     }
 }

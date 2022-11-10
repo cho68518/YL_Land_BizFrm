@@ -83,7 +83,7 @@ namespace YL_GSHOP.BizFrm.Dlg
 
                 keyword = txtSch.Text.Trim();
                 apiurl = "http://www.juso.go.kr/addrlink/addrLinkApi.do?currentPage=" + currentPage + "&countPerPage=" + countPerPage + "&keyword=" + keyword + "&confmKey=" + confmKey;
-
+                
                 //textBox2.Text = apiurl + "\r\n";
                 WebClient wc = new WebClient();
                 XmlReader read = new XmlTextReader(wc.OpenRead(apiurl));

@@ -121,15 +121,19 @@
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
-            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
+            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbG_Prod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkB.Properties)).BeginInit();
@@ -167,6 +171,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             this.SuspendLayout();
             // 
             // efwSimpleButton3
@@ -742,7 +747,8 @@
             this.repositoryItemMemoExEdit1,
             this.repositoryItemMemoEdit1,
             this.repositoryItemCheckEdit1,
-            this.repositoryItemCheckEdit2});
+            this.repositoryItemCheckEdit2,
+            this.repositoryItemCheckEdit3});
             this.efwGridControl1.Size = new System.Drawing.Size(1212, 462);
             this.efwGridControl1.TabIndex = 41;
             this.efwGridControl1.TableName = "";
@@ -769,10 +775,13 @@
             this.gridColumn3,
             this.gridColumn8,
             this.gridColumn9,
+            this.gridColumn45,
             this.gridColumn6,
             this.gridColumn7,
             this.gridColumn5,
             this.gridColumn25,
+            this.gridColumn46,
+            this.gridColumn47,
             this.gridColumn26,
             this.gridColumn27,
             this.gridColumn34,
@@ -920,7 +929,7 @@
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 8;
+            this.gridColumn6.VisibleIndex = 9;
             // 
             // gridColumn7
             // 
@@ -930,7 +939,7 @@
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 9;
+            this.gridColumn7.VisibleIndex = 10;
             // 
             // gridColumn5
             // 
@@ -940,7 +949,7 @@
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 10;
+            this.gridColumn5.VisibleIndex = 11;
             // 
             // gridColumn25
             // 
@@ -950,7 +959,7 @@
             this.gridColumn25.OptionsColumn.AllowEdit = false;
             this.gridColumn25.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 11;
+            this.gridColumn25.VisibleIndex = 12;
             // 
             // gridColumn26
             // 
@@ -960,7 +969,7 @@
             this.gridColumn26.OptionsColumn.AllowEdit = false;
             this.gridColumn26.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 12;
+            this.gridColumn26.VisibleIndex = 15;
             // 
             // gridColumn27
             // 
@@ -970,7 +979,7 @@
             this.gridColumn27.OptionsColumn.AllowEdit = false;
             this.gridColumn27.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn27.Visible = true;
-            this.gridColumn27.VisibleIndex = 13;
+            this.gridColumn27.VisibleIndex = 16;
             // 
             // gridColumn34
             // 
@@ -980,7 +989,7 @@
             this.gridColumn34.OptionsColumn.AllowEdit = false;
             this.gridColumn34.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn34.Visible = true;
-            this.gridColumn34.VisibleIndex = 14;
+            this.gridColumn34.VisibleIndex = 17;
             // 
             // gridColumn4
             // 
@@ -990,7 +999,7 @@
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 15;
+            this.gridColumn4.VisibleIndex = 18;
             // 
             // gridColumn28
             // 
@@ -1000,7 +1009,7 @@
             this.gridColumn28.OptionsColumn.AllowEdit = false;
             this.gridColumn28.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn28.Visible = true;
-            this.gridColumn28.VisibleIndex = 16;
+            this.gridColumn28.VisibleIndex = 19;
             // 
             // gridColumn10
             // 
@@ -1010,7 +1019,7 @@
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 17;
+            this.gridColumn10.VisibleIndex = 20;
             // 
             // gridColumn19
             // 
@@ -1022,7 +1031,7 @@
             this.gridColumn19.OptionsColumn.AllowEdit = false;
             this.gridColumn19.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 18;
+            this.gridColumn19.VisibleIndex = 21;
             // 
             // gridColumn11
             // 
@@ -1034,7 +1043,7 @@
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 19;
+            this.gridColumn11.VisibleIndex = 22;
             // 
             // gridColumn33
             // 
@@ -1046,7 +1055,7 @@
             this.gridColumn33.OptionsColumn.AllowEdit = false;
             this.gridColumn33.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn33.Visible = true;
-            this.gridColumn33.VisibleIndex = 20;
+            this.gridColumn33.VisibleIndex = 23;
             // 
             // gridColumn12
             // 
@@ -1058,7 +1067,7 @@
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 21;
+            this.gridColumn12.VisibleIndex = 24;
             // 
             // gridColumn32
             // 
@@ -1070,7 +1079,7 @@
             this.gridColumn32.OptionsColumn.AllowEdit = false;
             this.gridColumn32.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn32.Visible = true;
-            this.gridColumn32.VisibleIndex = 22;
+            this.gridColumn32.VisibleIndex = 25;
             // 
             // gridColumn13
             // 
@@ -1082,7 +1091,7 @@
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 23;
+            this.gridColumn13.VisibleIndex = 26;
             // 
             // gridColumn14
             // 
@@ -1094,7 +1103,7 @@
             this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 24;
+            this.gridColumn14.VisibleIndex = 27;
             // 
             // gridColumn15
             // 
@@ -1106,7 +1115,7 @@
             this.gridColumn15.OptionsColumn.AllowEdit = false;
             this.gridColumn15.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 25;
+            this.gridColumn15.VisibleIndex = 28;
             // 
             // gridColumn16
             // 
@@ -1118,7 +1127,7 @@
             this.gridColumn16.OptionsColumn.AllowEdit = false;
             this.gridColumn16.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 26;
+            this.gridColumn16.VisibleIndex = 29;
             // 
             // gridColumn29
             // 
@@ -1130,7 +1139,7 @@
             this.gridColumn29.OptionsColumn.AllowEdit = false;
             this.gridColumn29.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn29.Visible = true;
-            this.gridColumn29.VisibleIndex = 27;
+            this.gridColumn29.VisibleIndex = 30;
             // 
             // gridColumn17
             // 
@@ -1140,7 +1149,7 @@
             this.gridColumn17.OptionsColumn.AllowEdit = false;
             this.gridColumn17.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 28;
+            this.gridColumn17.VisibleIndex = 31;
             // 
             // gridColumn18
             // 
@@ -1151,7 +1160,7 @@
             this.gridColumn18.OptionsColumn.AllowEdit = false;
             this.gridColumn18.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 29;
+            this.gridColumn18.VisibleIndex = 32;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -1168,7 +1177,7 @@
             this.gridColumn20.OptionsColumn.AllowEdit = false;
             this.gridColumn20.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 30;
+            this.gridColumn20.VisibleIndex = 33;
             // 
             // gridColumn21
             // 
@@ -1178,7 +1187,7 @@
             this.gridColumn21.OptionsColumn.AllowEdit = false;
             this.gridColumn21.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 31;
+            this.gridColumn21.VisibleIndex = 34;
             // 
             // gridColumn22
             // 
@@ -1190,7 +1199,7 @@
             this.gridColumn22.OptionsColumn.AllowEdit = false;
             this.gridColumn22.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 32;
+            this.gridColumn22.VisibleIndex = 35;
             // 
             // gridColumn23
             // 
@@ -1200,7 +1209,7 @@
             this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 33;
+            this.gridColumn23.VisibleIndex = 36;
             // 
             // gridColumn24
             // 
@@ -1210,7 +1219,7 @@
             this.gridColumn24.OptionsColumn.AllowEdit = false;
             this.gridColumn24.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 34;
+            this.gridColumn24.VisibleIndex = 37;
             // 
             // gridColumn30
             // 
@@ -1220,7 +1229,7 @@
             this.gridColumn30.OptionsColumn.AllowEdit = false;
             this.gridColumn30.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn30.Visible = true;
-            this.gridColumn30.VisibleIndex = 35;
+            this.gridColumn30.VisibleIndex = 38;
             this.gridColumn30.Width = 150;
             // 
             // gridColumn35
@@ -1238,6 +1247,60 @@
             this.gridColumn36.Name = "gridColumn36";
             this.gridColumn36.OptionsColumn.AllowEdit = false;
             this.gridColumn36.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            // 
+            // gridColumn39
+            // 
+            this.gridColumn39.Caption = "수령자";
+            this.gridColumn39.FieldName = "o_receive_name1";
+            this.gridColumn39.Name = "gridColumn39";
+            this.gridColumn39.OptionsColumn.AllowEdit = false;
+            this.gridColumn39.Visible = true;
+            this.gridColumn39.VisibleIndex = 39;
+            // 
+            // gridColumn40
+            // 
+            this.gridColumn40.Caption = "연락처1";
+            this.gridColumn40.FieldName = "o_receive_contact1";
+            this.gridColumn40.Name = "gridColumn40";
+            this.gridColumn40.OptionsColumn.AllowEdit = false;
+            this.gridColumn40.Visible = true;
+            this.gridColumn40.VisibleIndex = 40;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.Caption = "연락처2";
+            this.gridColumn44.FieldName = "o_receive_contact";
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.OptionsColumn.AllowEdit = false;
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 41;
+            // 
+            // gridColumn41
+            // 
+            this.gridColumn41.Caption = "우편번호";
+            this.gridColumn41.FieldName = "o_receive_zipcode1";
+            this.gridColumn41.Name = "gridColumn41";
+            this.gridColumn41.OptionsColumn.AllowEdit = false;
+            this.gridColumn41.Visible = true;
+            this.gridColumn41.VisibleIndex = 42;
+            // 
+            // gridColumn42
+            // 
+            this.gridColumn42.Caption = "주소";
+            this.gridColumn42.FieldName = "o_receive_address1";
+            this.gridColumn42.Name = "gridColumn42";
+            this.gridColumn42.OptionsColumn.AllowEdit = false;
+            this.gridColumn42.Visible = true;
+            this.gridColumn42.VisibleIndex = 43;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.Caption = "배송요청사항";
+            this.gridColumn43.FieldName = "o_receive_message1";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.OptionsColumn.AllowEdit = false;
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 44;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -1257,59 +1320,43 @@
             // 
             this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
-            // gridColumn39
+            // gridColumn45
             // 
-            this.gridColumn39.Caption = "수령자";
-            this.gridColumn39.FieldName = "o_receive_name1";
-            this.gridColumn39.Name = "gridColumn39";
-            this.gridColumn39.OptionsColumn.AllowEdit = false;
-            this.gridColumn39.Visible = true;
-            this.gridColumn39.VisibleIndex = 36;
+            this.gridColumn45.Caption = "첫구매";
+            this.gridColumn45.ColumnEdit = this.repositoryItemCheckEdit3;
+            this.gridColumn45.FieldName = "is_first_buy";
+            this.gridColumn45.Name = "gridColumn45";
+            this.gridColumn45.OptionsColumn.AllowEdit = false;
+            this.gridColumn45.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn45.Visible = true;
+            this.gridColumn45.VisibleIndex = 8;
             // 
-            // gridColumn40
+            // repositoryItemCheckEdit3
             // 
-            this.gridColumn40.Caption = "연락처1";
-            this.gridColumn40.FieldName = "o_receive_contact1";
-            this.gridColumn40.Name = "gridColumn40";
-            this.gridColumn40.OptionsColumn.AllowEdit = false;
-            this.gridColumn40.Visible = true;
-            this.gridColumn40.VisibleIndex = 37;
+            this.repositoryItemCheckEdit3.AutoHeight = false;
+            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
+            this.repositoryItemCheckEdit3.ValueChecked = "Y";
+            this.repositoryItemCheckEdit3.ValueUnchecked = "N";
             // 
-            // gridColumn41
+            // gridColumn46
             // 
-            this.gridColumn41.Caption = "우편번호";
-            this.gridColumn41.FieldName = "o_receive_zipcode1";
-            this.gridColumn41.Name = "gridColumn41";
-            this.gridColumn41.OptionsColumn.AllowEdit = false;
-            this.gridColumn41.Visible = true;
-            this.gridColumn41.VisibleIndex = 39;
+            this.gridColumn46.Caption = "멤버구분";
+            this.gridColumn46.FieldName = "m_member";
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.OptionsColumn.AllowEdit = false;
+            this.gridColumn46.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn46.Visible = true;
+            this.gridColumn46.VisibleIndex = 13;
             // 
-            // gridColumn42
+            // gridColumn47
             // 
-            this.gridColumn42.Caption = "주소";
-            this.gridColumn42.FieldName = "o_receive_address1";
-            this.gridColumn42.Name = "gridColumn42";
-            this.gridColumn42.OptionsColumn.AllowEdit = false;
-            this.gridColumn42.Visible = true;
-            this.gridColumn42.VisibleIndex = 40;
-            // 
-            // gridColumn43
-            // 
-            this.gridColumn43.Caption = "배송요청사항";
-            this.gridColumn43.FieldName = "o_receive_message1";
-            this.gridColumn43.Name = "gridColumn43";
-            this.gridColumn43.OptionsColumn.AllowEdit = false;
-            this.gridColumn43.Visible = true;
-            this.gridColumn43.VisibleIndex = 41;
-            // 
-            // gridColumn44
-            // 
-            this.gridColumn44.Caption = "연락처2";
-            this.gridColumn44.FieldName = "o_receive_contact";
-            this.gridColumn44.Name = "gridColumn44";
-            this.gridColumn44.OptionsColumn.AllowEdit = false;
-            this.gridColumn44.Visible = true;
-            this.gridColumn44.VisibleIndex = 38;
+            this.gridColumn47.Caption = "멤버가입일";
+            this.gridColumn47.FieldName = "m_reg_date";
+            this.gridColumn47.Name = "gridColumn47";
+            this.gridColumn47.OptionsColumn.AllowEdit = false;
+            this.gridColumn47.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn47.Visible = true;
+            this.gridColumn47.VisibleIndex = 14;
             // 
             // frmDN01
             // 
@@ -1361,6 +1408,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1456,5 +1504,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
     }
 }

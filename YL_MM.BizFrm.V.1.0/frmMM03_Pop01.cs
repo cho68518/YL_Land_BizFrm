@@ -54,6 +54,7 @@ namespace YL_MM.BizFrm
 
 
             gridView1.OptionsView.ShowFooter = true;
+            gridView4.OptionsView.ShowFooter = true;
             SetCmb();
             Open1();
             
@@ -796,6 +797,8 @@ namespace YL_MM.BizFrm
                         Open3();
                         // 전사 상거래 상세 내용
                         Open4();
+                        // 구간별 배송비
+                        Open5();
 
 
 
@@ -904,6 +907,38 @@ namespace YL_MM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+        // 구간별 배송비
+        private void Open5()
+        {
+            try
+            {
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SELECT_06", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_p_id", MySqlDbType.Int32);
+                        cmd.Parameters[0].Value = txtP_Id.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl4.DataBind(ds);
+                            this.efwGridControl4.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
 
         private void Query_ComBo_Set()
         {
@@ -1486,6 +1521,12 @@ namespace YL_MM.BizFrm
                 gridView2.DeleteSelectedRows();
             }
 
+            while (gridView4.RowCount != 0)
+            {
+                gridView4.SelectAll();
+                gridView4.DeleteSelectedRows();
+            }
+
             using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
             {
                 sql.Query = "select concat('y1044_',lpad(max(substring(p_code,7,9)) + 1,9,'0')) from domamall.tb_am_product_masters " +
@@ -1500,7 +1541,8 @@ namespace YL_MM.BizFrm
         {
 
             // 필수항목 CHECK txtP_Img
-
+            int nId = 0;
+            string sId = "";
             if (string.IsNullOrEmpty(this.txtP_Name.Text))
             {
                 MessageAgent.MessageShow(MessageType.Warning, "상품명을 입력하세요!");
@@ -1627,8 +1669,14 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_P_Delivery_Type"].Value = cmbP_Delivery_Type.EditValue;
                             cmd.Parameters["i_P_Delivery_Type"].Direction = ParameterDirection.Input;
 
+                            sId = txtBasic_Price.EditValue.ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(txtBasic_Price.EditValue.ToString());
+
                             cmd.Parameters.Add(new MySqlParameter("i_Basic_Price", MySqlDbType.Int32));
-                            cmd.Parameters["i_Basic_Price"].Value = Convert.ToInt32(txtBasic_Price.EditValue);
+                            cmd.Parameters["i_Basic_Price"].Value = nId;
                             cmd.Parameters["i_Basic_Price"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_Vip_Price", MySqlDbType.Int32));
@@ -1795,6 +1843,7 @@ namespace YL_MM.BizFrm
                 }
                 Save1();
                 Save2();
+                Save3();
                 Open1();
 
             }
@@ -2014,6 +2063,76 @@ namespace YL_MM.BizFrm
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
+        }
+
+        private void Save3()
+        {
+            try
+            {
+                int nId = 0;
+                string sId = "";
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+
+                    for (int i = 0; i < gridView4.DataRowCount; i++)
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_07", con))
+                        {
+
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+
+                            sId = gridView4.GetRowCellValue(i, "idx").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView4.GetRowCellValue(i, "idx"));
+                            cmd.Parameters.Add("i_idx", MySqlDbType.Int32, 11);
+                            cmd.Parameters[0].Value = nId;
+
+
+                            cmd.Parameters.Add("i_p_id", MySqlDbType.Int32, 11);
+                            cmd.Parameters[1].Value = txtP_Id.EditValue;
+
+                            sId = gridView4.GetRowCellValue(i, "start_range").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView4.GetRowCellValue(i, "start_range"));
+                            cmd.Parameters.Add("i_start_range", MySqlDbType.Int32, 11);
+                            cmd.Parameters[2].Value = nId;
+
+                            sId = gridView4.GetRowCellValue(i, "end_range").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView4.GetRowCellValue(i, "end_range"));
+                            cmd.Parameters.Add("i_end_range", MySqlDbType.Int32, 11);
+                            cmd.Parameters[3].Value = nId;
+
+                            sId = gridView4.GetRowCellValue(i, "delivery_price").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView4.GetRowCellValue(i, "delivery_price"));
+                            cmd.Parameters.Add("i_delivery_price", MySqlDbType.Int32, 11);
+                            cmd.Parameters[4].Value = nId;
+
+
+
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
