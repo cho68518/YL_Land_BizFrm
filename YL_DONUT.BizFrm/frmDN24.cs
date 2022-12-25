@@ -284,6 +284,73 @@ namespace YL_DONUT.BizFrm
                 return;
             }
 
+            if (string.IsNullOrEmpty(this.txtevent_name.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 이벤트명을 입력하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txtp_name.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 제품명을 입력하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txtoption_name.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 옵션명을 입력하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txtadd_p_name.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 발주옵션명을 입력하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txto_receive_name.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 주문자명을 입력하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txto_receive_contact.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 주문자명 연락처를 입력하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txto_receive_name1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 수령자명을 입력하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txto_receive_contact1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 수령자 연락처를 입력하세요!");
+                return;
+            }
+
+
+            if (string.IsNullOrEmpty(this.txto_receive_address1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 주소를 입력하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txto_receive_zipcode1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 우편번호을 입력하세요!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.txto_receive_message1.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 배송메세지를 입력하세요!");
+                return;
+            }
+
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
                 try
@@ -331,13 +398,16 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_p_name"].Value = txtp_name.EditValue;
                             cmd.Parameters["i_p_name"].Direction = ParameterDirection.Input;
 
+
                             cmd.Parameters.Add(new MySqlParameter("i_option_name", MySqlDbType.VarChar));
                             cmd.Parameters["i_option_name"].Value = txtoption_name.EditValue;
                             cmd.Parameters["i_option_name"].Direction = ParameterDirection.Input;
 
+
                             cmd.Parameters.Add(new MySqlParameter("i_add_p_name", MySqlDbType.VarChar));
                             cmd.Parameters["i_add_p_name"].Value = txtadd_p_name.EditValue;
                             cmd.Parameters["i_add_p_name"].Direction = ParameterDirection.Input;
+
 
                             cmd.Parameters.Add(new MySqlParameter("i_p_bunch_delivery", MySqlDbType.VarChar));
                             cmd.Parameters["i_p_bunch_delivery"].Value = rbp_bunch_delivery.EditValue;
@@ -347,33 +417,42 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_o_receive_name"].Value = txto_receive_name.EditValue;
                             cmd.Parameters["i_o_receive_name"].Direction = ParameterDirection.Input;
 
+
+
                             cmd.Parameters.Add(new MySqlParameter("i_o_receive_contact", MySqlDbType.VarChar));
                             cmd.Parameters["i_o_receive_contact"].Value = txto_receive_contact.EditValue;
                             cmd.Parameters["i_o_receive_contact"].Direction = ParameterDirection.Input;
+
 
                             cmd.Parameters.Add(new MySqlParameter("i_o_receive_name1", MySqlDbType.VarChar));
                             cmd.Parameters["i_o_receive_name1"].Value = txto_receive_name1.EditValue;
                             cmd.Parameters["i_o_receive_name1"].Direction = ParameterDirection.Input;
 
+
                             cmd.Parameters.Add(new MySqlParameter("i_o_receive_contact1", MySqlDbType.VarChar));
                             cmd.Parameters["i_o_receive_contact1"].Value = txto_receive_contact1.EditValue;
                             cmd.Parameters["i_o_receive_contact1"].Direction = ParameterDirection.Input;
+
 
                             cmd.Parameters.Add(new MySqlParameter("i_o_receive_zipcode1", MySqlDbType.VarChar));
                             cmd.Parameters["i_o_receive_zipcode1"].Value = txto_receive_zipcode1.EditValue;
                             cmd.Parameters["i_o_receive_zipcode1"].Direction = ParameterDirection.Input;
 
+
                             cmd.Parameters.Add(new MySqlParameter("i_o_receive_address1", MySqlDbType.VarChar));
                             cmd.Parameters["i_o_receive_address1"].Value = txto_receive_address1.EditValue;
                             cmd.Parameters["i_o_receive_address1"].Direction = ParameterDirection.Input;
+
 
                             cmd.Parameters.Add(new MySqlParameter("i_o_receive_message1", MySqlDbType.VarChar));
                             cmd.Parameters["i_o_receive_message1"].Value = txto_receive_message1.EditValue;
                             cmd.Parameters["i_o_receive_message1"].Direction = ParameterDirection.Input;
 
+
                             cmd.Parameters.Add(new MySqlParameter("i_event_name", MySqlDbType.VarChar));
                             cmd.Parameters["i_event_name"].Value = txtevent_name.EditValue;
                             cmd.Parameters["i_event_name"].Direction = ParameterDirection.Input;
+
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

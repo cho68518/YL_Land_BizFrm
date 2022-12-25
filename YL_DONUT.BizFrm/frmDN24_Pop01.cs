@@ -440,7 +440,7 @@ namespace YL_DONUT.BizFrm
 
                                 string sO_Date = string.Empty;
 
-                                sO_Date = gridView2.GetRowCellValue(i, gridView2.Columns[0]).ToString().Substring(0, 10);
+                                sO_Date = Convert.ToString(gridView2.GetRowCellValue(i, gridView2.Columns[8])).ToString().Substring(0, 10);
                                 sO_Date = sO_Date.Substring(0,10) + " 12:01:01";
 
                                 cmd.Parameters.Add("i_o_date", MySqlDbType.DateTime);
@@ -453,37 +453,37 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters[3].Value = Convert.ToInt32(gridView2.GetRowCellValue(i, gridView2.Columns[2])).ToString();
 
                                 cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 255);
-                                cmd.Parameters[4].Value = gridView2.GetRowCellValue(i, gridView2.Columns[3]).ToString();
+                                cmd.Parameters[4].Value = gridView2.GetRowCellValue(i, gridView2.Columns[9]).ToString();
 
                                 cmd.Parameters.Add("i_option_name", MySqlDbType.VarChar, 255);
-                                cmd.Parameters[5].Value = gridView2.GetRowCellValue(i, gridView2.Columns[4]).ToString();
+                                cmd.Parameters[5].Value = gridView2.GetRowCellValue(i, gridView2.Columns[10]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_name", MySqlDbType.VarChar, 45);
-                                cmd.Parameters[6].Value = gridView2.GetRowCellValue(i, gridView2.Columns[5]).ToString();
+                                cmd.Parameters[6].Value = gridView2.GetRowCellValue(i, gridView2.Columns[11]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_contact", MySqlDbType.VarChar, 20);
-                                cmd.Parameters[7].Value = gridView2.GetRowCellValue(i, gridView2.Columns[6]).ToString();
+                                cmd.Parameters[7].Value = gridView2.GetRowCellValue(i, gridView2.Columns[12]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_name1", MySqlDbType.VarChar, 45);
-                                cmd.Parameters[8].Value = gridView2.GetRowCellValue(i, gridView2.Columns[7]).ToString();
+                                cmd.Parameters[8].Value = gridView2.GetRowCellValue(i, gridView2.Columns[5]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_contact1", MySqlDbType.VarChar, 20);
-                                cmd.Parameters[9].Value = gridView2.GetRowCellValue(i, gridView2.Columns[8]).ToString();
+                                cmd.Parameters[9].Value = gridView2.GetRowCellValue(i, gridView2.Columns[6]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_zipcode1", MySqlDbType.VarChar, 6);
-                                cmd.Parameters[10].Value = gridView2.GetRowCellValue(i, gridView2.Columns[10]).ToString();
+                                cmd.Parameters[10].Value = gridView2.GetRowCellValue(i, gridView2.Columns[14]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_address1", MySqlDbType.VarChar, 254);
-                                cmd.Parameters[11].Value = gridView2.GetRowCellValue(i, gridView2.Columns[11]).ToString();
+                                cmd.Parameters[11].Value = gridView2.GetRowCellValue(i, gridView2.Columns[7]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_message1", MySqlDbType.VarChar, 254);
-                                cmd.Parameters[12].Value = gridView2.GetRowCellValue(i, gridView2.Columns[12]).ToString();
+                                cmd.Parameters[12].Value = gridView2.GetRowCellValue(i, gridView2.Columns[16]).ToString();
 
                                 cmd.Parameters.Add("i_mall_o_code", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[13].Value = gridView2.GetRowCellValue(i, gridView2.Columns[15]).ToString();
 
                                 cmd.Parameters.Add("i_p_code", MySqlDbType.VarChar, 50);
-                                cmd.Parameters[14].Value = gridView2.GetRowCellValue(i, gridView2.Columns[13]).ToString();
+                                cmd.Parameters[14].Value = gridView2.GetRowCellValue(i, gridView2.Columns[17]).ToString();
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();
@@ -501,6 +501,7 @@ namespace YL_DONUT.BizFrm
         }
         // 11 번가
         private void Save3()
+
         {
             try
             {
@@ -623,16 +624,16 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters[0].Value = sCompany;
 
                                 string sO_Date = string.Empty;
-                                sO_Date = gridView4.GetRowCellValue(i, gridView4.Columns[36]).ToString().Substring(0, 10);
+                                sO_Date = gridView4.GetRowCellValue(i, gridView4.Columns[40]).ToString().Substring(0, 10);
                                 sO_Date = sO_Date.Substring(0, 4) + "-" + sO_Date.Substring(5, 2) + "-" + sO_Date.Substring(8, 2) + " 12:01:01";
 
                                 cmd.Parameters.Add("i_o_date", MySqlDbType.DateTime);
                                 cmd.Parameters[1].Value = sO_Date;
 
                                 cmd.Parameters.Add("i_o_qty", MySqlDbType.Int32);
-                                cmd.Parameters[2].Value = Convert.ToInt32(gridView4.GetRowCellValue(i, gridView4.Columns[7])).ToString();
+                                cmd.Parameters[2].Value = Convert.ToInt32(gridView4.GetRowCellValue(i, gridView4.Columns[11])).ToString();
 
-                                string sAmt = gridView4.GetRowCellValue(i, gridView4.Columns[15]).ToString();
+                                string sAmt = gridView4.GetRowCellValue(i, gridView4.Columns[19]).ToString();
                                 sAmt = string.Join("", sAmt.Split(',')).ToString();
                                 int nAmt = Convert.ToInt32(sAmt);
 
@@ -640,7 +641,7 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters[3].Value = nAmt;
 
                                 cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 255);
-                                cmd.Parameters[4].Value = gridView4.GetRowCellValue(i, gridView4.Columns[6]).ToString();
+                                cmd.Parameters[4].Value = gridView4.GetRowCellValue(i, gridView4.Columns[10]).ToString();
 
                                 cmd.Parameters.Add("i_option_name", MySqlDbType.VarChar, 255);
                                 cmd.Parameters[5].Value = "";
@@ -649,28 +650,28 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters[6].Value = gridView4.GetRowCellValue(i, gridView4.Columns[3]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_contact", MySqlDbType.VarChar, 20);
-                                cmd.Parameters[7].Value = gridView4.GetRowCellValue(i, gridView4.Columns[18]).ToString();
+                                cmd.Parameters[7].Value = gridView4.GetRowCellValue(i, gridView4.Columns[22]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_name1", MySqlDbType.VarChar, 45);
-                                cmd.Parameters[8].Value = gridView4.GetRowCellValue(i, gridView4.Columns[20]).ToString();
+                                cmd.Parameters[8].Value = gridView4.GetRowCellValue(i, gridView4.Columns[24]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_contact1", MySqlDbType.VarChar, 20);
-                                cmd.Parameters[9].Value = gridView4.GetRowCellValue(i, gridView4.Columns[21]).ToString();
+                                cmd.Parameters[9].Value = gridView4.GetRowCellValue(i, gridView4.Columns[25]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_zipcode1", MySqlDbType.VarChar, 6);
-                                cmd.Parameters[10].Value = gridView4.GetRowCellValue(i, gridView4.Columns[24]).ToString();
+                                cmd.Parameters[10].Value = gridView4.GetRowCellValue(i, gridView4.Columns[28]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_address1", MySqlDbType.VarChar, 254);
-                                cmd.Parameters[11].Value = gridView4.GetRowCellValue(i, gridView4.Columns[25]).ToString();
+                                cmd.Parameters[11].Value = gridView4.GetRowCellValue(i, gridView4.Columns[29]).ToString();
 
                                 cmd.Parameters.Add("i_o_receive_message1", MySqlDbType.VarChar, 254);
-                                cmd.Parameters[12].Value = gridView4.GetRowCellValue(i, gridView4.Columns[26]).ToString();
+                                cmd.Parameters[12].Value = gridView4.GetRowCellValue(i, gridView4.Columns[30]).ToString();
 
                                 cmd.Parameters.Add("i_mall_o_code", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[13].Value = gridView4.GetRowCellValue(i, gridView4.Columns[2]).ToString();
 
                                 cmd.Parameters.Add("i_p_code", MySqlDbType.VarChar, 50);
-                                cmd.Parameters[14].Value = gridView4.GetRowCellValue(i, gridView4.Columns[5]).ToString();
+                                cmd.Parameters[14].Value = gridView4.GetRowCellValue(i, gridView4.Columns[9]).ToString();
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();

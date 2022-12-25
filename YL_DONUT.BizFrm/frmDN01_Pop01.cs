@@ -387,11 +387,11 @@ namespace YL_DONUT.BizFrm
                 MessageAgent.MessageShow(MessageType.Confirm, "구매완료된 주문 번호입니다.");
                 return;
             }
-         //   if (txtchk_type.EditValue.ToString() == "C")
-         //   {
-         //       MessageAgent.MessageShow(MessageType.Confirm, "취소 처리된 주문 번호입니다.");
-        //        return;
-        //    }
+            if (txtchk_type.EditValue.ToString() == "C")
+            {
+                MessageAgent.MessageShow(MessageType.Confirm, "취소 처리된 주문 번호입니다.");
+                return;
+            }
             if (txtchk_type.EditValue.ToString() == "B")
             {
                 MessageAgent.MessageShow(MessageType.Confirm, "반품완료된 주문 번호입니다.");

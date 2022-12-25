@@ -37,6 +37,8 @@
             this.efwXtraTabControl1 = new Easy.Framework.WinForm.Control.efwXtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.Grop = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txt277_yn = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbteam_leader = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbTest_Grant = new Easy.Framework.WinForm.Control.efwRadioGroup();
@@ -75,6 +77,8 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemRadioGroup1 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwLabel8 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -90,6 +94,7 @@
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grop)).BeginInit();
             this.Grop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt277_yn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbteam_leader.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbTest_Grant.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbGhop_Manager.Properties)).BeginInit();
@@ -106,6 +111,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
@@ -124,7 +130,7 @@
             this.efwXtraTabControl1.Location = new System.Drawing.Point(3, 35);
             this.efwXtraTabControl1.Name = "efwXtraTabControl1";
             this.efwXtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.efwXtraTabControl1.Size = new System.Drawing.Size(1120, 777);
+            this.efwXtraTabControl1.Size = new System.Drawing.Size(1250, 834);
             this.efwXtraTabControl1.TabIndex = 5;
             this.efwXtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1});
@@ -138,12 +144,14 @@
             this.xtraTabPage1.Controls.Add(this.efwGridControl1);
             this.xtraTabPage1.Controls.Add(this.efwPanelControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1114, 748);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1244, 805);
             this.xtraTabPage1.Text = "권한 등록";
             // 
             // Grop
             // 
             this.Grop.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Grop.CaptionImageOptions.Image")));
+            this.Grop.Controls.Add(this.txt277_yn);
+            this.Grop.Controls.Add(this.efwSimpleButton5);
             this.Grop.Controls.Add(this.rbteam_leader);
             this.Grop.Controls.Add(this.efwSimpleButton4);
             this.Grop.Controls.Add(this.rbTest_Grant);
@@ -168,9 +176,33 @@
             this.Grop.IsMultiLang = false;
             this.Grop.Location = new System.Drawing.Point(0, 585);
             this.Grop.Name = "Grop";
-            this.Grop.Size = new System.Drawing.Size(1114, 163);
+            this.Grop.Size = new System.Drawing.Size(1244, 220);
             this.Grop.TabIndex = 9;
             this.Grop.Text = "MD별 권한 저장";
+            // 
+            // txt277_yn
+            // 
+            this.txt277_yn.EditValue2 = null;
+            this.txt277_yn.Enabled = false;
+            this.txt277_yn.EraserGroup = "CLR1";
+            this.txt277_yn.Location = new System.Drawing.Point(282, 165);
+            this.txt277_yn.Name = "txt277_yn";
+            this.txt277_yn.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txt277_yn.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txt277_yn.RequireMessage = null;
+            this.txt277_yn.Size = new System.Drawing.Size(61, 20);
+            this.txt277_yn.TabIndex = 75;
+            // 
+            // efwSimpleButton5
+            // 
+            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
+            this.efwSimpleButton5.IsMultiLang = false;
+            this.efwSimpleButton5.Location = new System.Drawing.Point(93, 161);
+            this.efwSimpleButton5.Name = "efwSimpleButton5";
+            this.efwSimpleButton5.Size = new System.Drawing.Size(169, 29);
+            this.efwSimpleButton5.TabIndex = 74;
+            this.efwSimpleButton5.Text = "G헬퍼 등록스토리 생성";
+            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
             // 
             // rbteam_leader
             // 
@@ -429,7 +461,7 @@
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitterControl1.Location = new System.Drawing.Point(0, 580);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(1114, 5);
+            this.splitterControl1.Size = new System.Drawing.Size(1244, 5);
             this.splitterControl1.TabIndex = 8;
             this.splitterControl1.TabStop = false;
             // 
@@ -464,8 +496,9 @@
             this.repositoryItemCheckEdit7,
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2,
-            this.repositoryItemCheckEdit3});
-            this.efwGridControl1.Size = new System.Drawing.Size(1114, 530);
+            this.repositoryItemCheckEdit3,
+            this.repositoryItemCheckEdit4});
+            this.efwGridControl1.Size = new System.Drawing.Size(1244, 530);
             this.efwGridControl1.TabIndex = 7;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -490,7 +523,8 @@
             this.gridColumn11,
             this.gridColumn6,
             this.gridColumn7,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn12});
             this.gridView1.DetailHeight = 408;
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
@@ -645,6 +679,23 @@
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Width = 201;
             // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "G헬퍼 등록스토리유무";
+            this.gridColumn12.ColumnEdit = this.repositoryItemCheckEdit4;
+            this.gridColumn12.FieldName = "277_yn";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 8;
+            // 
+            // repositoryItemCheckEdit4
+            // 
+            this.repositoryItemCheckEdit4.AutoHeight = false;
+            this.repositoryItemCheckEdit4.Name = "repositoryItemCheckEdit4";
+            this.repositoryItemCheckEdit4.ValueChecked = "Y";
+            this.repositoryItemCheckEdit4.ValueUnchecked = "N";
+            // 
             // repositoryItemRadioGroup1
             // 
             this.repositoryItemRadioGroup1.Name = "repositoryItemRadioGroup1";
@@ -662,7 +713,7 @@
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(0, 0);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1114, 50);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1244, 50);
             this.efwPanelControl1.TabIndex = 6;
             // 
             // efwLabel8
@@ -770,7 +821,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.efwXtraTabControl1);
             this.Name = "frmMM20";
-            this.Size = new System.Drawing.Size(1126, 812);
+            this.Size = new System.Drawing.Size(1256, 869);
             this.Load += new System.EventHandler(this.frmMM20_Load);
             this.Controls.SetChildIndex(this.efwXtraTabControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).EndInit();
@@ -779,6 +830,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Grop)).EndInit();
             this.Grop.ResumeLayout(false);
             this.Grop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt277_yn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbteam_leader.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbTest_Grant.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbGhop_Manager.Properties)).EndInit();
@@ -795,6 +847,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
@@ -862,5 +915,9 @@
         private Easy.Framework.WinForm.Control.efwDateEdit dt1T;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel9;
         private Easy.Framework.WinForm.Control.efwDateEdit dt1F;
+        private Easy.Framework.WinForm.Control.efwTextEdit txt277_yn;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
     }
 }

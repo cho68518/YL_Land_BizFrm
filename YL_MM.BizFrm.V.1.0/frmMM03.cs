@@ -156,7 +156,6 @@ namespace YL_MM.BizFrm
                 CodeAgent.MakeCodeControl(this.cmbQuery, codeArray);
             }
             cmbQuery.EditValue = "0";
-
         }
 
         #endregion

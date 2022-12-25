@@ -124,8 +124,8 @@ namespace YL_MM.BizFrm
                 DataSet ds = con.selectQueryDataSet();
                 DataRow[] dr = ds.Tables[0].Select();
                 CodeData[] codeArray = new CodeData[dr.Length];
-
                 for (int i = 0; i < dr.Length; i++)
+
                     codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
 
                 CodeAgent.MakeCodeControl(this.cmbP_Seller_Id, codeArray);
@@ -2049,9 +2049,18 @@ namespace YL_MM.BizFrm
                             cmd.Parameters.Add("i_is_sort", MySqlDbType.Int32, 11);
                             cmd.Parameters[20].Value = nId;
 
+                            // 일반상품 D 사용금액
+                            sId = gridView1.GetRowCellValue(i, "goods_d_amt").ToString();
+                            if (sId == "")
+                                nId = 0;
+                            else
+                                nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "goods_d_amt"));
+                            cmd.Parameters.Add("i_goods_d_amt", MySqlDbType.Int32, 11);
+                            cmd.Parameters[21].Value = nId;
 
-                            //cmd.Parameters.Add("i_p_show_name", MySqlDbType.VarChar, 255);
-                            //cmd.Parameters[20].Value = txtp_show_name.EditValue;
+
+                            cmd.Parameters.Add("i_rate_amt", MySqlDbType.VarChar, 1);
+                            cmd.Parameters[22].Value = gridView1.GetRowCellValue(i, "rate_amt");
 
                             cmd.ExecuteNonQuery();
                             con.Close();

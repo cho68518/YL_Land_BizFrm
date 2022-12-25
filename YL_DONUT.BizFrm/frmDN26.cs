@@ -110,6 +110,10 @@ namespace YL_DONUT.BizFrm
             {
                 Open5();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage6)
+            {
+                Open6();
+            }
         }
 
         private void Open1()
@@ -317,6 +321,48 @@ namespace YL_DONUT.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+        private void Open6()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SELECT_08", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_type", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = cmbORDER_SEARCH.EditValue;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtI_SEARCH.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl6.DataBind(ds);
+                            this.efwGridControl6.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
 
         public override void Save()
         {

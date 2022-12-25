@@ -64,7 +64,9 @@ namespace YL_MM.BizFrm
                     , new ColumnControlSet("reg_date", txtReg_Date)
                     , new ColumnControlSet("test_grant", rbTest_Grant)
                     , new ColumnControlSet("team_leader", rbteam_leader)
-                    , new ColumnControlSet("Remark", txtRemark));
+                    , new ColumnControlSet("Remark", txtRemark)
+                    , new ColumnControlSet("277_yn", txt277_yn)
+                    );
             SetCmb();
         }
 
@@ -327,6 +329,43 @@ namespace YL_MM.BizFrm
                 {
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
+                Search();
+            }
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtU_Id.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " ID를 선택하세요!");
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_PROD_ORDER_277_dt", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                             cmd.Parameters.Add(new MySqlParameter("i_login_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_login_id"].Value = txtLogin_Id.EditValue;
+                            cmd.Parameters["i_login_id"].Direction = ParameterDirection.Input;
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                MessageAgent.MessageShow(MessageType.Informational, "G헬퍼 등록스토리가 생성되었습니다.");
+                txt277_yn.EditValue = "Y";
+
                 Search();
             }
         }

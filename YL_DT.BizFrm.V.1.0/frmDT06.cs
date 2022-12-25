@@ -64,9 +64,12 @@ namespace YL_DT.BizFrm
            , new ColumnControlSet("use_type", rbuse_type_S)
            , new ColumnControlSet("contents", txtContents)
            , new ColumnControlSet("ImageURL", txtTab3_imgurl)
+           , new ColumnControlSet("ImageURL", txtNow_image)
            , new ColumnControlSet("file_name1", txtTab3_imgname)
            , new ColumnControlSet("open_type", rbOpen_Type)
            , new ColumnControlSet("code_id", txtCode_id)
+           , new ColumnControlSet("send_text", txtSend_Text)
+           , new ColumnControlSet("send_type", rbSend_Type)
             );
             this.efwGridControl1.Click += efwGridControl1_Click;
 
@@ -90,6 +93,11 @@ namespace YL_DT.BizFrm
 
         private void efwSimpleButton6_Click(object sender, EventArgs e)
         {
+            //if (string.IsNullOrEmpty(this.txtNow_image.Text))
+            //{
+            //    MessageAgent.MessageShow(MessageType.Warning, " ID를 선택하세요!");
+            //    return;
+            //}
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
                 try
@@ -124,6 +132,14 @@ namespace YL_DT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_code_id", MySqlDbType.VarChar));
                             cmd.Parameters["i_code_id"].Value = txtCode_id.EditValue;
                             cmd.Parameters["i_code_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Send_Text", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Send_Text"].Value = txtSend_Text.EditValue;
+                            cmd.Parameters["i_Send_Text"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Send_Type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Send_Type"].Value = rbSend_Type.EditValue;
+                            cmd.Parameters["i_Send_Type"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
@@ -352,6 +368,9 @@ namespace YL_DT.BizFrm
 
                         cmd.Parameters.Add("i_member_chk4", MySqlDbType.VarChar, 10);
                         cmd.Parameters[4].Value = chkGM.EditValue;
+
+                        cmd.Parameters.Add("i_member_chk5", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[5].Value = chkMM.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

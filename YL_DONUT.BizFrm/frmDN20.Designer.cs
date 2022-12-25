@@ -80,7 +80,6 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn74 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -91,6 +90,7 @@
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn74 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -169,6 +169,7 @@
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtOut_Date = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
@@ -665,15 +666,6 @@
             this.gridColumn10.VisibleIndex = 10;
             this.gridColumn10.Width = 70;
             // 
-            // gridColumn74
-            // 
-            this.gridColumn74.Caption = "회원등급";
-            this.gridColumn74.FieldName = "u_chef_level";
-            this.gridColumn74.Name = "gridColumn74";
-            this.gridColumn74.OptionsColumn.AllowEdit = false;
-            this.gridColumn74.Visible = true;
-            this.gridColumn74.VisibleIndex = 20;
-            // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "수령자";
@@ -762,6 +754,15 @@
             this.repositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
             this.repositoryItemCheckEdit1.ValueChecked = "Y";
             this.repositoryItemCheckEdit1.ValueUnchecked = "N";
+            // 
+            // gridColumn74
+            // 
+            this.gridColumn74.Caption = "회원등급";
+            this.gridColumn74.FieldName = "u_chef_level";
+            this.gridColumn74.Name = "gridColumn74";
+            this.gridColumn74.OptionsColumn.AllowEdit = false;
+            this.gridColumn74.Visible = true;
+            this.gridColumn74.VisibleIndex = 20;
             // 
             // gridColumn22
             // 
@@ -1132,7 +1133,8 @@
             this.xtraTabPage1,
             this.xtraTabPage2,
             this.xtraTabPage3,
-            this.xtraTabPage4});
+            this.xtraTabPage4,
+            this.xtraTabPage5});
             this.efwXtraTabControl1.Click += new System.EventHandler(this.efwXtraTabControl1_Click);
             // 
             // xtraTabPage1
@@ -1715,6 +1717,13 @@
             this.efwSimpleButton2.Text = "출고 수불반영";
             this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
             // 
+            // xtraTabPage5
+            // 
+            this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
+            this.xtraTabPage5.Name = "xtraTabPage5";
+            this.xtraTabPage5.Size = new System.Drawing.Size(1388, 426);
+            this.xtraTabPage5.Text = "22년12월 정책";
+            // 
             // frmDN20
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1900,5 +1909,6 @@
         private Easy.Framework.WinForm.Control.efwDateEdit dtOut_Date;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn73;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn74;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
     }
 }
