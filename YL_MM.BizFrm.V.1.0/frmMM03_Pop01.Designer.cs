@@ -707,8 +707,6 @@
             this.gridColumn38.ColumnEdit = this.repositoryItemCheckEdit3;
             this.gridColumn38.FieldName = "rate_amt";
             this.gridColumn38.Name = "gridColumn38";
-            this.gridColumn38.OptionsColumn.AllowEdit = false;
-            this.gridColumn38.OptionsColumn.ReadOnly = true;
             // 
             // repositoryItemCheckEdit3
             // 
@@ -1210,10 +1208,8 @@
             this.efwGroupControlProd.Controls.Add(this.efwGroupControl5);
             this.efwGroupControlProd.Controls.Add(this.efwLabel50);
             this.efwGroupControlProd.Controls.Add(this.efwLabel49);
-            this.efwGroupControlProd.Controls.Add(this.ckdora_md);
             this.efwGroupControlProd.Controls.Add(this.chkGShop);
             this.efwGroupControlProd.Controls.Add(this.chkChef);
-            this.efwGroupControlProd.Controls.Add(this.chkVip);
             this.efwGroupControlProd.Controls.Add(this.chkMember);
             this.efwGroupControlProd.Controls.Add(this.chkAll);
             this.efwGroupControlProd.Controls.Add(this.efwLabel39);
@@ -1359,8 +1355,10 @@
             this.efwGroupControl5.Controls.Add(this.efwGroupControl1);
             this.efwGroupControl5.Controls.Add(this.txtPicPath3);
             this.efwGroupControl5.Controls.Add(this.txtPicPath2);
+            this.efwGroupControl5.Controls.Add(this.ckdora_md);
             this.efwGroupControl5.Controls.Add(this.txtPicPath5);
             this.efwGroupControl5.Controls.Add(this.txtVip_Price);
+            this.efwGroupControl5.Controls.Add(this.chkVip);
             this.efwGroupControl5.Controls.Add(this.txtPicPath1);
             this.efwGroupControl5.Controls.Add(this.txtp_title);
             this.efwGroupControl5.Controls.Add(this.txtC_Code2);

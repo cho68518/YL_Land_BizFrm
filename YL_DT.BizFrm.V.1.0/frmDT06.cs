@@ -55,6 +55,8 @@ namespace YL_DT.BizFrm
             chkT.EditValue = 'N';
             chkH.EditValue = 'N';
             chkGM.EditValue = 'N';
+            chkMM.EditValue = 'N';
+            chkStock.EditValue = 'N';
 
             gridView1.OptionsView.ShowFooter = true;
 
@@ -371,6 +373,9 @@ namespace YL_DT.BizFrm
 
                         cmd.Parameters.Add("i_member_chk5", MySqlDbType.VarChar, 10);
                         cmd.Parameters[5].Value = chkMM.EditValue;
+
+                        cmd.Parameters.Add("i_member_chk6", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[6].Value = chkStock.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

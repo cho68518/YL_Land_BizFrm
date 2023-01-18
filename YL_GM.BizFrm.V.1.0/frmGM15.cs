@@ -512,6 +512,22 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_lbl1012", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl1012"].Direction = ParameterDirection.Output;
 
+                        // 23년 건수 집계
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl17", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl17"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl37", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl37"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl27", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl27"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl47", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl47"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl57", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl57"].Direction = ParameterDirection.Output;
+
 
                         cmd.ExecuteNonQuery();
                         // VIP    String.Format("{0:#,##0}", rows[0]["teld17"]);
@@ -683,6 +699,13 @@ namespace YL_GM.BizFrm
                         lbl1011.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl1011"].Value);
                         lbl1012.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl1012"].Value);
 
+                        // 건수 23년 집계
+                        lbl17.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl17"].Value);
+                        lbl37.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl37"].Value);
+                        lbl27.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl27"].Value);
+                        lbl47.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl47"].Value);
+                        lbl57.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl57"].Value);
+
                     }
                 }
             }
@@ -693,9 +716,5 @@ namespace YL_GM.BizFrm
  
         }
 
-        private void efwLabel15_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

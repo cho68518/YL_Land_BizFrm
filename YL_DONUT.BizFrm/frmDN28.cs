@@ -1603,7 +1603,7 @@ namespace YL_DONUT.BizFrm
                 this.dtYearMonth.Visible = true;
                 this.dtS_DATE.Visible = false;
                 this.dtE_DATE.Visible = false;
-                this.efwSimpleButton11.Visible = false;
+                this.efwSimpleButton11.Visible = true;
                 this.rbG_Prod.Visible = true;
                 this.txtP_NameQ.Visible = true;
                 this.efwLabel4.Visible = true;
