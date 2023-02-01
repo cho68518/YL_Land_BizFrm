@@ -41,9 +41,18 @@ namespace YL_GM.BizFrm
             this.IsExcel = false;
 
             dtS_DATE.EditValue = DateTime.Now;
+
+            dtSTART_DATE.EditValue = DateTime.Now.ToString("yyyy-MM") + "-01";
+            dtEND_DATE.EditValue = DateTime.Now;
+            this.dtSTART_DATE.Visible = false;
+            this.dtEND_DATE.Visible = false;
+            this.efwLabel7.Visible = false;
+            this.rbQ_type.Visible = false;
+
             rbShop_Type.EditValue = "3";
             rbProd_Type.EditValue = "1";
             rbQtyOrAmt.EditValue = "1";
+            rbQ_type.EditValue = "2";
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
             advBandedGridView1.OptionsView.ShowFooter = true;
@@ -233,6 +242,23 @@ namespace YL_GM.BizFrm
             gridView1.Columns["month12"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["month12"].SummaryItem.FieldName = "month12";
             gridView1.Columns["month12"].SummaryItem.DisplayFormat = "{0:c}";
+
+
+
+
+            advBandedGridView2.OptionsView.ShowFooter = true;
+
+
+            advBandedGridView2.Columns["order_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView2.Columns["order_amt"].SummaryItem.FieldName = "order_amt";
+            advBandedGridView2.Columns["order_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            advBandedGridView2.Columns["member_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            advBandedGridView2.Columns["member_amt"].SummaryItem.FieldName = "member_amt";
+            advBandedGridView2.Columns["member_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+
+
             this.efwGridControl3.BindControlSet(
                 new ColumnControlSet("u_id", txtu_id)
                 );
@@ -266,6 +292,11 @@ namespace YL_GM.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
             {
                 Open2();
+            }
+
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
+            {
+                Open6();
             }
 
         }
@@ -428,10 +459,134 @@ namespace YL_GM.BizFrm
             }
         }
 
+        private void Open6()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM10_SELECT_05", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtSTART_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtEND_DATE.EditValue3;
+
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl5.DataBind(ds);
+                            this.efwGridControl5.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+                //ChartCreat1();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void Open7()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM10_SELECT_06", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtSTART_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtEND_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_u_id", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = txtu_id.EditValue;
+                        
+                        cmd.Parameters.Add("i_q_type", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[3].Value = rbQ_type.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl6.DataBind(ds);
+                            this.efwGridControl6.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+                //ChartCreat1();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
+            }
+        }
 
         private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
-            Search();
+
+
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                this.efwLabel1.Text = "년도";
+                
+                this.dtS_DATE.Visible = true; 
+                this.dtEND_DATE.Visible = false;
+                this.dtSTART_DATE.Visible = false;
+                this.rbProd_Type.Visible = true;
+                this.rbQtyOrAmt.Visible = true;
+                this.efwLabel7.Visible = false;
+                this.rbQ_type.Visible = false;
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                this.efwLabel1.Text = "년도";
+                this.dtS_DATE.Visible = true;
+                this.dtEND_DATE.Visible = false;
+                this.dtSTART_DATE.Visible = false;
+                this.rbProd_Type.Visible = true;
+                this.rbQtyOrAmt.Visible = true;
+                this.efwLabel7.Visible = false;
+                this.rbQ_type.Visible = false;
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
+            {
+                this.efwLabel1.Text = "입금일";
+                this.dtS_DATE.Visible = false;
+                this.dtEND_DATE.Visible = true;
+                this.dtSTART_DATE.Visible = true;
+                this.rbProd_Type.Visible = false;
+                this.rbQtyOrAmt.Visible = false;
+                this.efwLabel7.Visible = true;
+                this.rbQ_type.Visible = true;
+            }
+          // Search();
         }
 
         private void efwXtraTabControl2_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
@@ -443,6 +598,16 @@ namespace YL_GM.BizFrm
             else if (efwXtraTabControl2.SelectedTabPage == this.xtraTabPage4)
             {
                 Open4();
+            }
+        }
+
+        private void efwGridControl5_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl5.GetSelectedRow(0);
+            if (dr != null && dr["u_id"].ToString() != "")
+            {
+                this.txtu_id.EditValue = dr["u_id"].ToString();
+                Open7();
             }
         }
     }

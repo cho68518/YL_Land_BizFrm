@@ -528,6 +528,43 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add(new MySqlParameter("o_lbl57", MySqlDbType.Int32));
                         cmd.Parameters["o_lbl57"].Direction = ParameterDirection.Output;
 
+                        // 월 구매인원 집계
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl81", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl81"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl82", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl82"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl83", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl83"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl84", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl84"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl85", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl85"].Direction = ParameterDirection.Output;
+
+
+                        // 전월 구매인원 집계
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl91", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl91"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl92", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl92"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl93", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl93"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl94", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl94"].Direction = ParameterDirection.Output;
+
+                        cmd.Parameters.Add(new MySqlParameter("o_lbl95", MySqlDbType.Int32));
+                        cmd.Parameters["o_lbl95"].Direction = ParameterDirection.Output;
+
+
+
 
                         cmd.ExecuteNonQuery();
                         // VIP    String.Format("{0:#,##0}", rows[0]["teld17"]);
@@ -705,6 +742,20 @@ namespace YL_GM.BizFrm
                         lbl27.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl27"].Value);
                         lbl47.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl47"].Value);
                         lbl57.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl57"].Value);
+
+                        // 월구매인원 집계
+                        lbl81.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl81"].Value);
+                        lbl82.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl82"].Value);
+                        lbl83.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl83"].Value);
+                        lbl84.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl84"].Value);
+                        lbl85.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl85"].Value);
+
+                        // 전월구매인원 집계
+                        lbl91.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl91"].Value);
+                        lbl92.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl92"].Value);
+                        lbl93.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl93"].Value);
+                        lbl94.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl94"].Value);
+                        lbl95.Text = String.Format("{0:#,##0}", cmd.Parameters["o_lbl95"].Value);
 
                     }
                 }

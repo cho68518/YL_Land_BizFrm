@@ -174,9 +174,9 @@
             this.Grop.Controls.Add(this.efwLabel1);
             this.Grop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Grop.IsMultiLang = false;
-            this.Grop.Location = new System.Drawing.Point(0, 585);
+            this.Grop.Location = new System.Drawing.Point(0, 540);
             this.Grop.Name = "Grop";
-            this.Grop.Size = new System.Drawing.Size(1244, 220);
+            this.Grop.Size = new System.Drawing.Size(1244, 265);
             this.Grop.TabIndex = 9;
             this.Grop.Text = "MD별 권한 저장";
             // 
@@ -459,7 +459,7 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl1.Location = new System.Drawing.Point(0, 580);
+            this.splitterControl1.Location = new System.Drawing.Point(0, 535);
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1244, 5);
             this.splitterControl1.TabIndex = 8;
@@ -498,7 +498,7 @@
             this.repositoryItemCheckEdit2,
             this.repositoryItemCheckEdit3,
             this.repositoryItemCheckEdit4});
-            this.efwGridControl1.Size = new System.Drawing.Size(1244, 530);
+            this.efwGridControl1.Size = new System.Drawing.Size(1244, 485);
             this.efwGridControl1.TabIndex = 7;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
