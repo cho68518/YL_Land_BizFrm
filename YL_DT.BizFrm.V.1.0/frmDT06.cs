@@ -78,6 +78,7 @@ namespace YL_DT.BizFrm
             rbUse_type.EditValue = "Y";
             rbuse_type_S.EditValue = "Y";
             rbOpen_Type.EditValue = "Y";
+            rbSend_Type.EditValue = "text";
 
         }
 
@@ -95,11 +96,15 @@ namespace YL_DT.BizFrm
 
         private void efwSimpleButton6_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(this.txtNow_image.Text))
-            //{
-            //    MessageAgent.MessageShow(MessageType.Warning, " ID를 선택하세요!");
-            //    return;
-            //}
+            if (rbSend_Type.EditValue.ToString() == "img" )
+            {
+                if (string.IsNullOrEmpty(this.txtNow_image.Text))  
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, "이미지 파일을 선택하세요.");
+                    return;
+                }
+                
+            }
             if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
             {
                 try
@@ -145,9 +150,14 @@ namespace YL_DT.BizFrm
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_ser", MySqlDbType.VarChar));
+                            cmd.Parameters["o_ser"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
 
+                            txtCode_id.EditValue = cmd.Parameters["o_ser"].Value.ToString();
                             MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                            
                         }
                     }
 

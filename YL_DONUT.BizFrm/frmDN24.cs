@@ -387,7 +387,8 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_o_qty"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_o_amt", MySqlDbType.VarChar));
-                            cmd.Parameters["i_o_amt"].Value = Convert.ToInt32(txtO_Amt.EditValue);
+                            cmd.Parameters["i_o_amt"].Value = Convert.ToInt32(txtO_Amt.EditValue.ToString().Replace(",", "").Replace(".", ""));
+
                             cmd.Parameters["i_o_amt"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));

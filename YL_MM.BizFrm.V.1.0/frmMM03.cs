@@ -256,6 +256,68 @@ namespace YL_MM.BizFrm
                 e.Handled = true;
             }
         }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gridView1.RowCount; i++)
+                gridView1.SetRowCellValue(i, gridView1.Columns["p_show_type"], "Y");
+        }
+
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gridView1.RowCount; i++)
+                gridView1.SetRowCellValue(i, gridView1.Columns["p_show_type"], "N");
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "노츨 상태를 변경 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    var saveResult = new SaveTableResultInfo() { IsError = true };
+
+                    var dt = efwGridControl1.GetChangeDataWithRowState;
+                    var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+
+                        for (int i = 0; i < gridView1.DataRowCount; i++)
+                        {
+
+                            if (dt.Rows[i][StatusColumn].ToString() == "U")
+                            {
+                                using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM03_SAVE_08", con))
+                                {
+                                    // Console.WriteLine("********" + gridView1.GetRowCellValue(i, "is_fix"));
+
+
+                                    con.Open();
+                                    cmd.CommandType = CommandType.StoredProcedure;
+
+                                    cmd.Parameters.Add("i_id", MySqlDbType.Int32, 50);
+                                    cmd.Parameters[0].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "id"));
+
+                                    cmd.Parameters.Add("i_p_show_type", MySqlDbType.VarChar, 1);
+                                    cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "p_show_type");
+
+                                    cmd.ExecuteNonQuery();
+                                    con.Close();
+                                }
+                            }
+                        }
+                    }
+                    MessageAgent.MessageShow(MessageType.Informational, "노출 상태가 변경 되었습니다.");
+                    Search();
+                }
+
+                catch (Exception ex)
+                {
+                    //MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
     }
 }
 

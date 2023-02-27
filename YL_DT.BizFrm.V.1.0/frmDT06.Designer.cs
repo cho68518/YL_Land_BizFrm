@@ -41,7 +41,6 @@ namespace YL_DT.BizFrm
             this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
             this.rbSend_Type = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.txtSend_Text = new Easy.Framework.WinForm.Control.efwMemoEdit();
-            this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtCode_id = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -95,6 +94,7 @@ namespace YL_DT.BizFrm
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.chkStock = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkMM = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.efwSimpleButton7 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.chkA = new Easy.Framework.WinForm.Control.efwCheckEdit();
@@ -103,7 +103,6 @@ namespace YL_DT.BizFrm
             this.chkT = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkH = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.chkStock = new Easy.Framework.WinForm.Control.efwCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwXtraTabControl1)).BeginInit();
             this.efwXtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -140,12 +139,12 @@ namespace YL_DT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkStock.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkMM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkGM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkStock.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwXtraTabControl1
@@ -175,7 +174,6 @@ namespace YL_DT.BizFrm
             this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
             this.efwGroupControl2.Controls.Add(this.rbSend_Type);
             this.efwGroupControl2.Controls.Add(this.txtSend_Text);
-            this.efwGroupControl2.Controls.Add(this.efwLabel4);
             this.efwGroupControl2.Controls.Add(this.efwLabel3);
             this.efwGroupControl2.Controls.Add(this.txtCode_id);
             this.efwGroupControl2.Controls.Add(this.efwLabel1);
@@ -205,7 +203,7 @@ namespace YL_DT.BizFrm
             // rbSend_Type
             // 
             this.rbSend_Type.IsMultiLang = false;
-            this.rbSend_Type.Location = new System.Drawing.Point(18, 146);
+            this.rbSend_Type.Location = new System.Drawing.Point(5, 120);
             this.rbSend_Type.Name = "rbSend_Type";
             this.rbSend_Type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbSend_Type.Properties.Appearance.Options.UseBackColor = true;
@@ -231,18 +229,6 @@ namespace YL_DT.BizFrm
             this.txtSend_Text.Size = new System.Drawing.Size(536, 211);
             this.txtSend_Text.TabIndex = 97;
             // 
-            // efwLabel4
-            // 
-            this.efwLabel4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.efwLabel4.Appearance.Options.UseForeColor = true;
-            this.efwLabel4.EraserGroup = null;
-            this.efwLabel4.IsMultiLang = false;
-            this.efwLabel4.Location = new System.Drawing.Point(202, 150);
-            this.efwLabel4.Name = "efwLabel4";
-            this.efwLabel4.Size = new System.Drawing.Size(182, 14);
-            this.efwLabel4.TabIndex = 96;
-            this.efwLabel4.Text = "텍스트인경우 임의 사진을 등록해주세요";
-            // 
             // efwLabel3
             // 
             this.efwLabel3.EraserGroup = null;
@@ -257,23 +243,25 @@ namespace YL_DT.BizFrm
             // 
             this.txtCode_id.EditValue2 = null;
             this.txtCode_id.EraserGroup = "CLR3";
-            this.txtCode_id.Location = new System.Drawing.Point(378, 57);
+            this.txtCode_id.Location = new System.Drawing.Point(378, 147);
             this.txtCode_id.Name = "txtCode_id";
             this.txtCode_id.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtCode_id.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCode_id.RequireMessage = null;
             this.txtCode_id.Size = new System.Drawing.Size(53, 20);
             this.txtCode_id.TabIndex = 93;
+            this.txtCode_id.Visible = false;
             // 
             // efwLabel1
             // 
             this.efwLabel1.EraserGroup = null;
             this.efwLabel1.IsMultiLang = false;
-            this.efwLabel1.Location = new System.Drawing.Point(321, 60);
+            this.efwLabel1.Location = new System.Drawing.Point(321, 150);
             this.efwLabel1.Name = "efwLabel1";
             this.efwLabel1.Size = new System.Drawing.Size(40, 14);
             this.efwLabel1.TabIndex = 92;
             this.efwLabel1.Text = "관리코드";
+            this.efwLabel1.Visible = false;
             // 
             // txtNow_image
             // 
@@ -291,7 +279,7 @@ namespace YL_DT.BizFrm
             // rbOpen_Type
             // 
             this.rbOpen_Type.IsMultiLang = false;
-            this.rbOpen_Type.Location = new System.Drawing.Point(18, 85);
+            this.rbOpen_Type.Location = new System.Drawing.Point(172, 147);
             this.rbOpen_Type.Name = "rbOpen_Type";
             this.rbOpen_Type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbOpen_Type.Properties.Appearance.Options.UseBackColor = true;
@@ -303,8 +291,9 @@ namespace YL_DT.BizFrm
             new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "개인")});
             this.rbOpen_Type.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
             this.rbOpen_Type.RequireMessage = null;
-            this.rbOpen_Type.Size = new System.Drawing.Size(158, 20);
+            this.rbOpen_Type.Size = new System.Drawing.Size(143, 20);
             this.rbOpen_Type.TabIndex = 82;
+            this.rbOpen_Type.Visible = false;
             // 
             // txtContents
             // 
@@ -337,13 +326,14 @@ namespace YL_DT.BizFrm
             this.txtTeb3_Idx.EditValue2 = null;
             this.txtTeb3_Idx.Enabled = false;
             this.txtTeb3_Idx.EraserGroup = "CLR3";
-            this.txtTeb3_Idx.Location = new System.Drawing.Point(437, 57);
+            this.txtTeb3_Idx.Location = new System.Drawing.Point(437, 147);
             this.txtTeb3_Idx.Name = "txtTeb3_Idx";
             this.txtTeb3_Idx.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtTeb3_Idx.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTeb3_Idx.RequireMessage = null;
             this.txtTeb3_Idx.Size = new System.Drawing.Size(47, 20);
             this.txtTeb3_Idx.TabIndex = 79;
+            this.txtTeb3_Idx.Visible = false;
             // 
             // txtSubject
             // 
@@ -354,7 +344,7 @@ namespace YL_DT.BizFrm
             this.txtSubject.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtSubject.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSubject.RequireMessage = null;
-            this.txtSubject.Size = new System.Drawing.Size(215, 20);
+            this.txtSubject.Size = new System.Drawing.Size(400, 20);
             this.txtSubject.TabIndex = 74;
             // 
             // efwSimpleButton5
@@ -454,7 +444,7 @@ namespace YL_DT.BizFrm
             // rbuse_type_S
             // 
             this.rbuse_type_S.IsMultiLang = false;
-            this.rbuse_type_S.Location = new System.Drawing.Point(18, 111);
+            this.rbuse_type_S.Location = new System.Drawing.Point(5, 89);
             this.rbuse_type_S.Name = "rbuse_type_S";
             this.rbuse_type_S.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbuse_type_S.Properties.Appearance.Options.UseBackColor = true;
@@ -861,6 +851,18 @@ namespace YL_DT.BizFrm
             this.efwPanelControl1.Size = new System.Drawing.Size(1008, 43);
             this.efwPanelControl1.TabIndex = 52;
             // 
+            // chkStock
+            // 
+            this.chkStock.EditValue = "Y";
+            this.chkStock.EraserGroup = "CLR1";
+            this.chkStock.Location = new System.Drawing.Point(587, 12);
+            this.chkStock.Name = "chkStock";
+            this.chkStock.Properties.Caption = "주주회원";
+            this.chkStock.Properties.ValueChecked = "Y";
+            this.chkStock.Properties.ValueUnchecked = "N";
+            this.chkStock.Size = new System.Drawing.Size(71, 19);
+            this.chkStock.TabIndex = 71;
+            // 
             // chkMM
             // 
             this.chkMM.EditValue = "Y";
@@ -957,18 +959,6 @@ namespace YL_DT.BizFrm
             this.efwLabel2.TabIndex = 5;
             this.efwLabel2.Text = "알림회원";
             // 
-            // chkStock
-            // 
-            this.chkStock.EditValue = "Y";
-            this.chkStock.EraserGroup = "CLR1";
-            this.chkStock.Location = new System.Drawing.Point(587, 12);
-            this.chkStock.Name = "chkStock";
-            this.chkStock.Properties.Caption = "주주회원";
-            this.chkStock.Properties.ValueChecked = "Y";
-            this.chkStock.Properties.ValueUnchecked = "N";
-            this.chkStock.Size = new System.Drawing.Size(71, 19);
-            this.chkStock.TabIndex = 71;
-            // 
             // frmDT06
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1016,12 +1006,12 @@ namespace YL_DT.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkStock.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkMM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkA.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkGM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkStock.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1088,7 +1078,6 @@ namespace YL_DT.BizFrm
         private Easy.Framework.WinForm.Control.efwCheckEdit chkA;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-        private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private Easy.Framework.WinForm.Control.efwMemoEdit txtSend_Text;

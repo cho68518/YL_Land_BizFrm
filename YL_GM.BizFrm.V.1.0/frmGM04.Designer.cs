@@ -94,6 +94,7 @@
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dfDate = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.rbq_type = new Easy.Framework.WinForm.Control.efwRadioGroup();
+            this.rbAmt_type = new Easy.Framework.WinForm.Control.efwRadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
@@ -109,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dfDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dfDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbq_type.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbAmt_type.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -794,6 +796,7 @@
             // 
             // efwPanelControl1
             // 
+            this.efwPanelControl1.Controls.Add(this.rbAmt_type);
             this.efwPanelControl1.Controls.Add(this.efwLabel2);
             this.efwPanelControl1.Controls.Add(this.efwLabel1);
             this.efwPanelControl1.Controls.Add(this.dtS_DATE);
@@ -880,6 +883,22 @@
             this.rbq_type.Size = new System.Drawing.Size(270, 26);
             this.rbq_type.TabIndex = 66;
             // 
+            // rbAmt_type
+            // 
+            this.rbAmt_type.IsMultiLang = false;
+            this.rbAmt_type.Location = new System.Drawing.Point(758, 8);
+            this.rbAmt_type.Name = "rbAmt_type";
+            this.rbAmt_type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbAmt_type.Properties.Appearance.Options.UseBackColor = true;
+            this.rbAmt_type.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbAmt_type.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbAmt_type.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "주문금액"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "결재금액")});
+            this.rbAmt_type.RequireMessage = null;
+            this.rbAmt_type.Size = new System.Drawing.Size(208, 26);
+            this.rbAmt_type.TabIndex = 71;
+            // 
             // frmGM04
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -904,6 +923,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dfDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dfDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbq_type.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbAmt_type.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -965,5 +985,6 @@
         private DevExpress.XtraCharts.ChartControl chartControl1;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel2;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
+        private Easy.Framework.WinForm.Control.efwRadioGroup rbAmt_type;
     }
 }

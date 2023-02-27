@@ -64,6 +64,7 @@ namespace YL_GM.BizFrm
             dtS_DATE.EditValue = DateTime.Now;
             dfDate.EditValue = DateTime.Now;
             rbq_type.EditValue = "1";
+            rbAmt_type.EditValue = "1";
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
@@ -204,6 +205,9 @@ namespace YL_GM.BizFrm
                             cmd.Parameters.Add("i_date", MySqlDbType.VarChar, 2);
                             cmd.Parameters[1].Value = dfDate.EditValue3.Substring(6, 2);
 
+                            cmd.Parameters.Add("i_amt_type", MySqlDbType.VarChar, 1);
+                            cmd.Parameters[2].Value = rbAmt_type.EditValue;
+
                             using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                             {
                                 DataTable ds = new DataTable();
@@ -225,6 +229,9 @@ namespace YL_GM.BizFrm
 
                             cmd.Parameters.Add("i_date", MySqlDbType.VarChar, 2);
                             cmd.Parameters[1].Value = dfDate.EditValue3.Substring(6, 2);
+
+                            cmd.Parameters.Add("i_amt_type", MySqlDbType.VarChar, 1);
+                            cmd.Parameters[2].Value = rbAmt_type.EditValue;
 
                             using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                             {

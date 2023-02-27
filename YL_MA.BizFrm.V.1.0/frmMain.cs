@@ -73,6 +73,9 @@ namespace YL_MA.BizFrm
             FrmBaseLoad(new frmMA03());
         }
 
-
+        private void efwSimpleButton4_Click_1(object sender, EventArgs e)
+        {
+            FrmBaseLoad(new frmMA04());
+        }
     }
 }

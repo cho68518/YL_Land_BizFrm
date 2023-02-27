@@ -128,6 +128,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMA04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMA04.Designer.cs">
+      <DependentUpon>frmMA04.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMA03_Pop03.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMA03_Pop02.resx">
       <DependentUpon>frmMA03_Pop02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMA04.resx">
+      <DependentUpon>frmMA04.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

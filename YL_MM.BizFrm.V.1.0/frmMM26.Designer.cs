@@ -283,10 +283,10 @@
             // 
             // bandedGridColumn5
             // 
-            this.bandedGridColumn5.Caption = "AD 머니";
+            this.bandedGridColumn5.Caption = "MD 머니";
             this.bandedGridColumn5.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.bandedGridColumn5.FieldName = "AD_Money";
+            this.bandedGridColumn5.FieldName = "MD_Money";
             this.bandedGridColumn5.Name = "bandedGridColumn5";
             this.bandedGridColumn5.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn5.Visible = true;
