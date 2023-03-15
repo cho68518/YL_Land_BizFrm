@@ -1004,5 +1004,7 @@ namespace YL_MM.BizFrm
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
+
+
     }
 }

@@ -89,6 +89,10 @@ namespace YL_MA.BizFrm
             {
                 Open4();
             }
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
+            {
+                Open5();
+            }
         }
 
         public void Open1()
@@ -178,7 +182,27 @@ namespace YL_MA.BizFrm
 
             Cursor.Current = Cursors.Default;
         }
+        public void Open5()
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
 
+                DataSet ds = ServiceAgent.ExecuteDataSet(true, "CONIS_IBS", "USP_MA_MA04_SELECT_05"
+                                                            , dtS_DATE.EditValue3.ToString().Substring(0, 4)
+                                                            , this.txtQ.Text
+                                                            );
+                efwGridControl5.DataBind(ds);
+
+                this.efwGridControl5.MyGridView.BestFitColumns();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+
+            Cursor.Current = Cursors.Default;
+        }
 
     }
 }

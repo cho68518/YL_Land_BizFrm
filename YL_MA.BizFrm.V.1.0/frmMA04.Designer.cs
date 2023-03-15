@@ -47,6 +47,9 @@ namespace YL_MA.BizFrm
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo13 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo14 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo15 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwPanelControl6 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
@@ -140,6 +143,26 @@ namespace YL_MA.BizFrm
             this.repositoryItemMemoExEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            this.efwGridControl5 = new Easy.Framework.WinForm.Control.efwGridControl();
+            this.advBandedGridView5 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
+            this.gridBand11 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.bandedGridColumn38 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.bandedGridColumn39 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn40 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn41 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn42 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand13 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.bandedGridColumn43 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn44 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn45 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn46 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.repositoryItemLookUpEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemMemoExEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
+            this.repositoryItemMemoEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.repositoryItemButtonEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemMemoExEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
+            this.repositoryItemMemoEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl6)).BeginInit();
             this.efwPanelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
@@ -183,6 +206,15 @@ namespace YL_MA.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit8)).BeginInit();
+            this.xtraTabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit10)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl6
@@ -596,6 +628,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn7.Caption = "보낸ID";
             this.bandedGridColumn7.FieldName = "SEND_ID";
             this.bandedGridColumn7.Name = "bandedGridColumn7";
+            this.bandedGridColumn7.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn7.Visible = true;
             // 
             // gridBand4
@@ -618,6 +651,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn8.Caption = "받은ID";
             this.bandedGridColumn8.FieldName = "RECV_ID";
             this.bandedGridColumn8.Name = "bandedGridColumn8";
+            this.bandedGridColumn8.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn8.Visible = true;
             // 
             // bandedGridColumn9
@@ -625,6 +659,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn9.Caption = "닉네임";
             this.bandedGridColumn9.FieldName = "U_NICKNAME";
             this.bandedGridColumn9.Name = "bandedGridColumn9";
+            this.bandedGridColumn9.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn9.Visible = true;
             // 
             // bandedGridColumn10
@@ -632,6 +667,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn10.Caption = "이름";
             this.bandedGridColumn10.FieldName = "U_NAME";
             this.bandedGridColumn10.Name = "bandedGridColumn10";
+            this.bandedGridColumn10.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn10.Visible = true;
             // 
             // bandedGridColumn11
@@ -639,6 +675,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn11.Caption = "등급";
             this.bandedGridColumn11.FieldName = "U_CHEF_LEVEL";
             this.bandedGridColumn11.Name = "bandedGridColumn11";
+            this.bandedGridColumn11.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn11.Visible = true;
             // 
             // gridBand5
@@ -661,6 +698,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn14.Caption = "머니타입";
             this.bandedGridColumn14.FieldName = "RECV_D_TYPE";
             this.bandedGridColumn14.Name = "bandedGridColumn14";
+            this.bandedGridColumn14.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn14.Visible = true;
             // 
             // bandedGridColumn12
@@ -678,6 +716,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn13.Caption = "지급일";
             this.bandedGridColumn13.FieldName = "REG_DATE";
             this.bandedGridColumn13.Name = "bandedGridColumn13";
+            this.bandedGridColumn13.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn13.Visible = true;
             // 
             // bandedGridColumn15
@@ -685,6 +724,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn15.Caption = "사유";
             this.bandedGridColumn15.FieldName = "EVENT_ETC";
             this.bandedGridColumn15.Name = "bandedGridColumn15";
+            this.bandedGridColumn15.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn15.Visible = true;
             // 
             // repositoryItemLookUpEdit1
@@ -821,6 +861,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn16.Caption = "보낸ID";
             this.bandedGridColumn16.FieldName = "RECV_ID";
             this.bandedGridColumn16.Name = "bandedGridColumn16";
+            this.bandedGridColumn16.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn16.Visible = true;
             // 
             // gridBand7
@@ -843,6 +884,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn17.Caption = "받은ID";
             this.bandedGridColumn17.FieldName = "SEND_ID";
             this.bandedGridColumn17.Name = "bandedGridColumn17";
+            this.bandedGridColumn17.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn17.Visible = true;
             // 
             // bandedGridColumn18
@@ -850,6 +892,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn18.Caption = "닉네임";
             this.bandedGridColumn18.FieldName = "U_NICKNAME";
             this.bandedGridColumn18.Name = "bandedGridColumn18";
+            this.bandedGridColumn18.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn18.Visible = true;
             // 
             // bandedGridColumn19
@@ -857,6 +900,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn19.Caption = "이름";
             this.bandedGridColumn19.FieldName = "U_NAME";
             this.bandedGridColumn19.Name = "bandedGridColumn19";
+            this.bandedGridColumn19.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn19.Visible = true;
             // 
             // bandedGridColumn20
@@ -864,6 +908,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn20.Caption = "등급";
             this.bandedGridColumn20.FieldName = "U_CHEF_LEVEL";
             this.bandedGridColumn20.Name = "bandedGridColumn20";
+            this.bandedGridColumn20.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn20.Visible = true;
             // 
             // gridBand8
@@ -886,6 +931,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn21.Caption = "머니타입";
             this.bandedGridColumn21.FieldName = "RECV_D_TYPE";
             this.bandedGridColumn21.Name = "bandedGridColumn21";
+            this.bandedGridColumn21.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn21.Visible = true;
             // 
             // bandedGridColumn22
@@ -903,6 +949,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn23.Caption = "지급일";
             this.bandedGridColumn23.FieldName = "REG_DATE";
             this.bandedGridColumn23.Name = "bandedGridColumn23";
+            this.bandedGridColumn23.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn23.Visible = true;
             // 
             // bandedGridColumn24
@@ -910,6 +957,7 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn24.Caption = "사유";
             this.bandedGridColumn24.FieldName = "EVENT_ETC";
             this.bandedGridColumn24.Name = "bandedGridColumn24";
+            this.bandedGridColumn24.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn24.Visible = true;
             // 
             // repositoryItemLookUpEdit3
@@ -1052,47 +1100,42 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn25.Caption = "일자";
             this.bandedGridColumn25.FieldName = "REG_DATE";
             this.bandedGridColumn25.Name = "bandedGridColumn25";
-            this.bandedGridColumn25.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn25.Visible = true;
             // 
             // bandedGridColumn26
             // 
-            this.bandedGridColumn26.Caption = "s아이디";
+            this.bandedGridColumn26.Caption = "아이디";
             this.bandedGridColumn26.FieldName = "SEND_ID";
             this.bandedGridColumn26.Name = "bandedGridColumn26";
-            this.bandedGridColumn26.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn26.Visible = true;
             this.bandedGridColumn26.Width = 100;
             // 
             // bandedGridColumn27
             // 
-            this.bandedGridColumn27.Caption = "s이름";
+            this.bandedGridColumn27.Caption = "이름";
             this.bandedGridColumn27.FieldName = "S_NAME";
             this.bandedGridColumn27.Name = "bandedGridColumn27";
-            this.bandedGridColumn27.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn27.Visible = true;
             this.bandedGridColumn27.Width = 100;
             // 
             // bandedGridColumn28
             // 
-            this.bandedGridColumn28.Caption = "s닉네임";
+            this.bandedGridColumn28.Caption = "닉네임";
             this.bandedGridColumn28.FieldName = "S_NICKNAME";
             this.bandedGridColumn28.Name = "bandedGridColumn28";
-            this.bandedGridColumn28.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn28.Visible = true;
             this.bandedGridColumn28.Width = 110;
             // 
             // bandedGridColumn30
             // 
-            this.bandedGridColumn30.Caption = "s회원등급";
+            this.bandedGridColumn30.Caption = "회원등급";
             this.bandedGridColumn30.FieldName = "S_CHEF_LEVEL";
             this.bandedGridColumn30.Name = "bandedGridColumn30";
-            this.bandedGridColumn30.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn30.Visible = true;
             // 
             // bandedGridColumn29
             // 
-            this.bandedGridColumn29.Caption = "S머니타입";
+            this.bandedGridColumn29.Caption = "머니타입";
             this.bandedGridColumn29.FieldName = "SEND_D_TYPE";
             this.bandedGridColumn29.Name = "bandedGridColumn29";
             this.bandedGridColumn29.Visible = true;
@@ -1117,39 +1160,35 @@ namespace YL_MA.BizFrm
             // 
             // bandedGridColumn31
             // 
-            this.bandedGridColumn31.Caption = "r아이디";
+            this.bandedGridColumn31.Caption = "아이디";
             this.bandedGridColumn31.FieldName = "RECV_ID";
             this.bandedGridColumn31.Name = "bandedGridColumn31";
-            this.bandedGridColumn31.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn31.Visible = true;
             // 
             // bandedGridColumn32
             // 
-            this.bandedGridColumn32.Caption = "r이름";
+            this.bandedGridColumn32.Caption = "이름";
             this.bandedGridColumn32.FieldName = "R_NAME";
             this.bandedGridColumn32.Name = "bandedGridColumn32";
-            this.bandedGridColumn32.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn32.Visible = true;
             // 
             // bandedGridColumn33
             // 
-            this.bandedGridColumn33.Caption = "r닉네임";
+            this.bandedGridColumn33.Caption = "닉네임";
             this.bandedGridColumn33.FieldName = "R_NICKNAME";
             this.bandedGridColumn33.Name = "bandedGridColumn33";
-            this.bandedGridColumn33.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn33.Visible = true;
             // 
             // bandedGridColumn34
             // 
-            this.bandedGridColumn34.Caption = "r회원등급";
+            this.bandedGridColumn34.Caption = "회원등급";
             this.bandedGridColumn34.FieldName = "R_CHEF_LEVEL";
             this.bandedGridColumn34.Name = "bandedGridColumn34";
-            this.bandedGridColumn34.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn34.Visible = true;
             // 
             // bandedGridColumn36
             // 
-            this.bandedGridColumn36.Caption = "R머니타입";
+            this.bandedGridColumn36.Caption = "머니타입";
             this.bandedGridColumn36.FieldName = "RECV_D_TYPE";
             this.bandedGridColumn36.Name = "bandedGridColumn36";
             this.bandedGridColumn36.Visible = true;
@@ -1161,7 +1200,6 @@ namespace YL_MA.BizFrm
             this.bandedGridColumn37.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn37.FieldName = "RECV_AMOUNT";
             this.bandedGridColumn37.Name = "bandedGridColumn37";
-            this.bandedGridColumn37.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn37.Visible = true;
             // 
             // bandedGridColumn35
@@ -1210,9 +1248,236 @@ namespace YL_MA.BizFrm
             // 
             // xtraTabPage5
             // 
+            this.xtraTabPage5.Controls.Add(this.efwGridControl5);
             this.xtraTabPage5.Name = "xtraTabPage5";
             this.xtraTabPage5.Size = new System.Drawing.Size(1261, 500);
             this.xtraTabPage5.Text = "마일리지 충전현황";
+            // 
+            // efwGridControl5
+            // 
+            this.efwGridControl5.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.efwGridControl5.BindSet = null;
+            this.efwGridControl5.DBName = "";
+            serviceInfo13.InstanceName = "";
+            serviceInfo13.IsUserIDAdd = true;
+            serviceInfo13.ParamsInfo = null;
+            serviceInfo13.ProcName = "";
+            serviceInfo13.UserParams = null;
+            this.efwGridControl5.DeleteServiceInfo = serviceInfo13;
+            this.efwGridControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            serviceInfo14.InstanceName = "";
+            serviceInfo14.IsUserIDAdd = true;
+            serviceInfo14.ParamsInfo = null;
+            serviceInfo14.ProcName = "";
+            serviceInfo14.UserParams = null;
+            this.efwGridControl5.InsertServiceInfo = serviceInfo14;
+            this.efwGridControl5.IsAddExcelBtn = true;
+            this.efwGridControl5.isAddPrintBtn = true;
+            this.efwGridControl5.IsMultiLang = false;
+            this.efwGridControl5.Location = new System.Drawing.Point(0, 0);
+            this.efwGridControl5.MainView = this.advBandedGridView5;
+            this.efwGridControl5.Name = "efwGridControl5";
+            this.efwGridControl5.NowRowHandle = 0;
+            this.efwGridControl5.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl5.PKColumns")));
+            this.efwGridControl5.PrevRowHandle = -2147483648;
+            this.efwGridControl5.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit5,
+            this.repositoryItemMemoExEdit9,
+            this.repositoryItemMemoEdit9,
+            this.repositoryItemButtonEdit4,
+            this.repositoryItemMemoExEdit10,
+            this.repositoryItemMemoEdit10});
+            this.efwGridControl5.Size = new System.Drawing.Size(1261, 500);
+            this.efwGridControl5.TabIndex = 59;
+            this.efwGridControl5.TableName = "";
+            serviceInfo15.InstanceName = "";
+            serviceInfo15.IsUserIDAdd = true;
+            serviceInfo15.ParamsInfo = null;
+            serviceInfo15.ProcName = "";
+            serviceInfo15.UserParams = null;
+            this.efwGridControl5.UpdateServiceInfo = serviceInfo15;
+            this.efwGridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.advBandedGridView5});
+            // 
+            // advBandedGridView5
+            // 
+            this.advBandedGridView5.Appearance.FooterPanel.BackColor = System.Drawing.Color.Transparent;
+            this.advBandedGridView5.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.advBandedGridView5.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
+            this.advBandedGridView5.Appearance.FooterPanel.Options.UseBackColor = true;
+            this.advBandedGridView5.Appearance.FooterPanel.Options.UseFont = true;
+            this.advBandedGridView5.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.advBandedGridView5.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand11,
+            this.gridBand12,
+            this.gridBand13});
+            this.advBandedGridView5.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
+            this.bandedGridColumn38,
+            this.bandedGridColumn39,
+            this.bandedGridColumn40,
+            this.bandedGridColumn41,
+            this.bandedGridColumn42,
+            this.bandedGridColumn44,
+            this.bandedGridColumn45,
+            this.bandedGridColumn43,
+            this.bandedGridColumn46});
+            this.advBandedGridView5.DetailHeight = 476;
+            this.advBandedGridView5.GridControl = this.efwGridControl5;
+            this.advBandedGridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "RECV_AMOUNT", null, "    합계: {0:c}", "")});
+            this.advBandedGridView5.Name = "advBandedGridView5";
+            // 
+            // gridBand11
+            // 
+            this.gridBand11.AppearanceHeader.BackColor = System.Drawing.Color.Transparent;
+            this.gridBand11.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand11.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand11.Caption = "지급 계정";
+            this.gridBand11.Columns.Add(this.bandedGridColumn38);
+            this.gridBand11.Name = "gridBand11";
+            this.gridBand11.VisibleIndex = 0;
+            this.gridBand11.Width = 75;
+            // 
+            // bandedGridColumn38
+            // 
+            this.bandedGridColumn38.Caption = "보낸ID";
+            this.bandedGridColumn38.FieldName = "SEND_ID";
+            this.bandedGridColumn38.Name = "bandedGridColumn38";
+            this.bandedGridColumn38.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn38.Visible = true;
+            // 
+            // gridBand12
+            // 
+            this.gridBand12.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridBand12.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand12.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand12.Caption = "받는 계정";
+            this.gridBand12.Columns.Add(this.bandedGridColumn39);
+            this.gridBand12.Columns.Add(this.bandedGridColumn40);
+            this.gridBand12.Columns.Add(this.bandedGridColumn41);
+            this.gridBand12.Columns.Add(this.bandedGridColumn42);
+            this.gridBand12.Name = "gridBand12";
+            this.gridBand12.VisibleIndex = 1;
+            this.gridBand12.Width = 300;
+            // 
+            // bandedGridColumn39
+            // 
+            this.bandedGridColumn39.Caption = "받은ID";
+            this.bandedGridColumn39.FieldName = "RECV_ID";
+            this.bandedGridColumn39.Name = "bandedGridColumn39";
+            this.bandedGridColumn39.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn39.Visible = true;
+            // 
+            // bandedGridColumn40
+            // 
+            this.bandedGridColumn40.Caption = "닉네임";
+            this.bandedGridColumn40.FieldName = "U_NICKNAME";
+            this.bandedGridColumn40.Name = "bandedGridColumn40";
+            this.bandedGridColumn40.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn40.Visible = true;
+            // 
+            // bandedGridColumn41
+            // 
+            this.bandedGridColumn41.Caption = "이름";
+            this.bandedGridColumn41.FieldName = "U_NAME";
+            this.bandedGridColumn41.Name = "bandedGridColumn41";
+            this.bandedGridColumn41.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn41.Visible = true;
+            // 
+            // bandedGridColumn42
+            // 
+            this.bandedGridColumn42.Caption = "등급";
+            this.bandedGridColumn42.FieldName = "U_CHEF_LEVEL";
+            this.bandedGridColumn42.Name = "bandedGridColumn42";
+            this.bandedGridColumn42.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn42.Visible = true;
+            // 
+            // gridBand13
+            // 
+            this.gridBand13.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.gridBand13.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand13.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand13.Caption = "지급금액 / 사유";
+            this.gridBand13.Columns.Add(this.bandedGridColumn43);
+            this.gridBand13.Columns.Add(this.bandedGridColumn44);
+            this.gridBand13.Columns.Add(this.bandedGridColumn45);
+            this.gridBand13.Columns.Add(this.bandedGridColumn46);
+            this.gridBand13.Name = "gridBand13";
+            this.gridBand13.VisibleIndex = 2;
+            this.gridBand13.Width = 300;
+            // 
+            // bandedGridColumn43
+            // 
+            this.bandedGridColumn43.Caption = "머니타입";
+            this.bandedGridColumn43.FieldName = "RECV_D_TYPE";
+            this.bandedGridColumn43.Name = "bandedGridColumn43";
+            this.bandedGridColumn43.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn43.Visible = true;
+            // 
+            // bandedGridColumn44
+            // 
+            this.bandedGridColumn44.Caption = "지급금액";
+            this.bandedGridColumn44.DisplayFormat.FormatString = "###,###,###";
+            this.bandedGridColumn44.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.bandedGridColumn44.FieldName = "RECV_AMOUNT";
+            this.bandedGridColumn44.Name = "bandedGridColumn44";
+            this.bandedGridColumn44.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn44.Visible = true;
+            // 
+            // bandedGridColumn45
+            // 
+            this.bandedGridColumn45.Caption = "지급일";
+            this.bandedGridColumn45.FieldName = "REG_DATE";
+            this.bandedGridColumn45.Name = "bandedGridColumn45";
+            this.bandedGridColumn45.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn45.Visible = true;
+            // 
+            // bandedGridColumn46
+            // 
+            this.bandedGridColumn46.Caption = "사유";
+            this.bandedGridColumn46.FieldName = "EVENT_ETC";
+            this.bandedGridColumn46.Name = "bandedGridColumn46";
+            this.bandedGridColumn46.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn46.Visible = true;
+            // 
+            // repositoryItemLookUpEdit5
+            // 
+            this.repositoryItemLookUpEdit5.AutoHeight = false;
+            this.repositoryItemLookUpEdit5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit5.Name = "repositoryItemLookUpEdit5";
+            // 
+            // repositoryItemMemoExEdit9
+            // 
+            this.repositoryItemMemoExEdit9.AutoHeight = false;
+            this.repositoryItemMemoExEdit9.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemMemoExEdit9.Name = "repositoryItemMemoExEdit9";
+            // 
+            // repositoryItemMemoEdit9
+            // 
+            this.repositoryItemMemoEdit9.Name = "repositoryItemMemoEdit9";
+            // 
+            // repositoryItemButtonEdit4
+            // 
+            this.repositoryItemButtonEdit4.AutoHeight = false;
+            this.repositoryItemButtonEdit4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.repositoryItemButtonEdit4.Name = "repositoryItemButtonEdit4";
+            this.repositoryItemButtonEdit4.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // repositoryItemMemoExEdit10
+            // 
+            this.repositoryItemMemoExEdit10.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemMemoExEdit10.Name = "repositoryItemMemoExEdit10";
+            // 
+            // repositoryItemMemoEdit10
+            // 
+            this.repositoryItemMemoEdit10.Name = "repositoryItemMemoEdit10";
             // 
             // frmMA04
             // 
@@ -1269,6 +1534,15 @@ namespace YL_MA.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit8)).EndInit();
+            this.xtraTabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1368,5 +1642,25 @@ namespace YL_MA.BizFrm
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn29;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand10;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn35;
+        private Easy.Framework.WinForm.Control.efwGridControl efwGridControl5;
+        private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView advBandedGridView5;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand11;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn38;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand12;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn39;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn40;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn41;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn42;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand13;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn43;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn44;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn45;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn46;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit9;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit9;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit10;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit10;
     }
 }
