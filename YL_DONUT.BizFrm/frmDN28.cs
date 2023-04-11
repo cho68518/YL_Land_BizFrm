@@ -247,8 +247,10 @@ namespace YL_DONUT.BizFrm
                 CodeAgent.MakeCodeControl(this.cmbIs_Factory_tab2, codeArray);
             }
             cmbIs_FactoryQ.EditValue = "002";
+
             cmbInput_Factory.EditValue = "002";
             cmbOut_Factory.EditValue = "002";
+
             cmbIs_Factory_tab1.EditValue = "001";
             cmbIs_Factory_tab2.EditValue = "001";
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))

@@ -98,12 +98,22 @@ namespace YL_TELECOM.BizFrm
             );
 
 
+            this.efwGridControl5.BindControlSet(
+                new ColumnControlSet("idx", txtSend_Idx)
+              , new ColumnControlSet("u_name", txtU_Name)
+              , new ColumnControlSet("cell_num", txtCell_Num)
+              , new ColumnControlSet("agency_type", cmbAgencyType)
+              , new ColumnControlSet("is_send", chkIs_Send)
+              , new ColumnControlSet("send_remark", txtSend_Remark)
+            );
+            this.efwGridControl3.Click += efwGridControl3_Click;
 
             SetCmb();
             cmbS_TAX_TYPE.EditValue = "1";
             cmbS_BANK.EditValue = "0";
             cmbS_STATUS.EditValue = "Y";
             cmbS_DIVISION.EditValue = "C";
+            txtSend_Idx.EditValue = "0";
         }
         private void SetLegacyCode_Mysql(RepositoryItemLookUpEdit cdControl, string codeGroup)
         {
@@ -268,6 +278,26 @@ namespace YL_TELECOM.BizFrm
             }
 
 
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = " select '' as DCODE, '선택하세요' DNAME  UNION all SELECT ifnull(code_id,'') as DCODE ,code_nm as DNAME  FROM domaadmin.tb_common_code where gcode_id = '00104'   ";
+
+                DataSet ds = con.selectQueryDataSet();
+                //DataTable retDT = ds.Tables[0];
+                DataRow[] dr = ds.Tables[0].Select();
+                CodeData[] codeArray = new CodeData[dr.Length];
+
+                // cmbTAREA1.EditValue = "";
+                // cmbTAREA1.EditValue = ds.Tables[0].Rows[0]["RESIDENTTYPE"].ToString();
+
+                for (int i = 0; i < dr.Length; i++)
+                    codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                CodeAgent.MakeCodeControl(this.cmbAgencyType, codeArray);
+            }
+
+
+
         }
 
         public override void Search()
@@ -283,6 +313,10 @@ namespace YL_TELECOM.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage3)
             {
                 Open3();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                Open5();
             }
         }
 
@@ -408,6 +442,40 @@ namespace YL_TELECOM.BizFrm
                             sda.Fill(ds);
                             efwGridControl4.DataBind(ds);
                             this.efwGridControl4.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void Open5()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_TM_TM07_SELECT_05", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = "";
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl5.DataBind(ds);
+                            this.efwGridControl5.MyGridView.BestFitColumns();
 
                         }
                     }
@@ -684,6 +752,67 @@ namespace YL_TELECOM.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_address", MySqlDbType.VarChar));
                             cmd.Parameters["i_address"].Value = txtS_ADDRESS.EditValue;
                             cmd.Parameters["i_address"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+            }
+        }
+
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            base.NewMode();
+            Eraser.Clear(this, "CLR4");
+            txtSend_Idx.EditValue = "0";
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_TM_TM07_SAVE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            // Convert.ToInt32(shold_money.Replace(",", ""));
+
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtSend_Idx.EditValue.ToString());
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_u_name", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_name"].Value = txtU_Name.EditValue;
+                            cmd.Parameters["i_u_name"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_cell_num", MySqlDbType.VarChar));
+                            cmd.Parameters["i_cell_num"].Value = txtCell_Num.EditValue;
+                            cmd.Parameters["i_cell_num"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_agency_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_agency_type"].Value = cmbAgencyType.EditValue;
+                            cmd.Parameters["i_agency_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_is_send", MySqlDbType.VarChar));
+                            cmd.Parameters["i_is_send"].Value = chkIs_Send.EditValue;
+                            cmd.Parameters["i_is_send"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_send_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_send_remark"].Value = txtSend_Remark.EditValue;
+                            cmd.Parameters["i_send_remark"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

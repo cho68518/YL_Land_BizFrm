@@ -109,7 +109,7 @@ namespace YL_DONUT.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
             {
                 Open5();
-            }
+            } 
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage6)
             {
                 Open6();
@@ -118,6 +118,10 @@ namespace YL_DONUT.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage7)
             {
                 Open7();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage8)
+            {
+                Open8();
             }
         }
 
@@ -394,6 +398,42 @@ namespace YL_DONUT.BizFrm
                             sda.Fill(ds);
                             efwGridControl7.DataBind(ds);
                             this.efwGridControl7.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void Open8()
+        {
+            try
+            {
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SELECT_10", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtE_DATE.EditValue3;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl8.DataBind(ds);
+                            this.efwGridControl8.MyGridView.BestFitColumns();
                         }
                     }
                 }

@@ -90,6 +90,10 @@ namespace YL_DONUT.BizFrm
                     , new ColumnControlSet("add_p_name", txtadd_p_name)
                     , new ColumnControlSet("o_delivery_comp_code", cmbo_delivery_comp_code)
                     , new ColumnControlSet("event_name", txtevent_name)
+                    , new ColumnControlSet("reg_date", txtReg_date)
+                    , new ColumnControlSet("reg_id", txtReg_id)
+                    , new ColumnControlSet("modify_date", txtModify_date)
+                    , new ColumnControlSet("modify_id", txtModify_id)
                    ); ;
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -455,6 +459,10 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters["i_event_name"].Direction = ParameterDirection.Input;
 
 
+                            cmd.Parameters.Add(new MySqlParameter("i_user_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_user_id"].Value = UserInfo.instance().Name;
+                            cmd.Parameters["i_user_id"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -805,6 +813,11 @@ namespace YL_DONUT.BizFrm
                             cmd.Parameters.Add(new MySqlParameter("i_event_name", MySqlDbType.VarChar));
                             cmd.Parameters["i_event_name"].Value = txtevent_name.EditValue;
                             cmd.Parameters["i_event_name"].Direction = ParameterDirection.Input;
+
+
+                            cmd.Parameters.Add(new MySqlParameter("i_user_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_user_id"].Value = UserInfo.instance().Name;
+                            cmd.Parameters["i_user_id"].Direction = ParameterDirection.Input;
 
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;

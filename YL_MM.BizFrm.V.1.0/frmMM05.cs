@@ -81,6 +81,7 @@ namespace YL_MM.BizFrm
             dt_s_date.EditValue = DateTime.Now;
             dt_e_date.EditValue = DateTime.Now;
             rb_Search_type.EditValue = "1";
+            //chkQ1.EditValue = "1";
 
             if (UserInfo.instance().UserId == "169.254.169.113" || UserInfo.instance().UserId == "0000000024")
             {
@@ -109,7 +110,7 @@ namespace YL_MM.BizFrm
                 txtCOMPANYNAME.EditValue = "(주)와이엘랜드";
             }
 
-            chkQ1.Checked = false;
+            //chkQ1.Checked = false;
 
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
             GridAgent.RepositoryItemCheckEditAdd(this.efwGridControl1, "Y", "N", "is_gr_md");
@@ -180,6 +181,9 @@ namespace YL_MM.BizFrm
                       , new ColumnControlSet("is_comp_md"        , chkIS_COMP_MD)
                       , new ColumnControlSet("is_official"       , ckis_official)
                       , new ColumnControlSet("is_vvip"           , cbis_vvip)
+                      , new ColumnControlSet("bank"              , txtBank)
+                      , new ColumnControlSet("acc_no"            , txtAccNo)
+                      , new ColumnControlSet("account_holder"    , txtAccount_Holder)
                       );
 
             this.efwGridControl1.Click += efwGridControl1_Click;
@@ -215,7 +219,7 @@ namespace YL_MM.BizFrm
             //cmbQ3.EditValue = "전체";
             Eraser.Clear(this, "CLR1");
 
-            chkQ1.Checked = false;
+            //chkQ1.Checked = false;
             cmbQ3.ItemIndex = 0;
             txtSearch.Focus();
         }
@@ -268,7 +272,7 @@ namespace YL_MM.BizFrm
                 , s1
                 , this.dt1.EditValue3
                 , this.dt2.EditValue3
-                , this.chkQ1.EditValue
+                , "1"
                 );
 
                 efwGridControl1.DataBind(ds);
@@ -528,6 +532,18 @@ namespace YL_MM.BizFrm
                                 cmd.Parameters.Add(new MySqlParameter("i_is_biz", MySqlDbType.VarChar));
                                 cmd.Parameters["i_is_biz"].Value = chkIS_BIZ.EditValue;
                                 cmd.Parameters["i_is_biz"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_bank", MySqlDbType.VarChar));
+                                cmd.Parameters["i_bank"].Value = txtBank.EditValue;
+                                cmd.Parameters["i_bank"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_acc_no", MySqlDbType.VarChar));
+                                cmd.Parameters["i_acc_no"].Value = txtAccNo.EditValue;
+                                cmd.Parameters["i_acc_no"].Direction = ParameterDirection.Input;
+
+                                cmd.Parameters.Add(new MySqlParameter("i_account_holder", MySqlDbType.VarChar));
+                                cmd.Parameters["i_account_holder"].Value = txtAccount_Holder.EditValue;
+                                cmd.Parameters["i_account_holder"].Direction = ParameterDirection.Input;
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();

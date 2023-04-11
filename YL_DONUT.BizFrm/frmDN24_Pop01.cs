@@ -402,6 +402,9 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters.Add("i_p_code", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[14].Value = gridView1.GetRowCellValue(i, gridView1.Columns[13]).ToString();
 
+                                cmd.Parameters.Add("i_user_id", MySqlDbType.VarChar, 20);
+                                cmd.Parameters[15].Value = UserInfo.instance().Name; ;
+
                                 cmd.ExecuteNonQuery();
                                 con.Close();
                             }
@@ -484,6 +487,9 @@ namespace YL_DONUT.BizFrm
 
                                 cmd.Parameters.Add("i_p_code", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[14].Value = gridView2.GetRowCellValue(i, gridView2.Columns[17]).ToString();
+
+                                cmd.Parameters.Add("i_user_id", MySqlDbType.VarChar, 20);
+                                cmd.Parameters[15].Value = UserInfo.instance().Name; ;
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();
@@ -572,6 +578,9 @@ namespace YL_DONUT.BizFrm
 
                                 cmd.Parameters.Add("i_p_code", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[14].Value = gridView3.GetRowCellValue(i, gridView3.Columns[38]).ToString();
+
+                                cmd.Parameters.Add("i_user_id", MySqlDbType.VarChar, 20);
+                                cmd.Parameters[15].Value = UserInfo.instance().Name; ;
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();
@@ -673,6 +682,9 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters.Add("i_p_code", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[14].Value = gridView4.GetRowCellValue(i, gridView4.Columns[9]).ToString();
 
+                                cmd.Parameters.Add("i_user_id", MySqlDbType.VarChar, 20);
+                                cmd.Parameters[15].Value = UserInfo.instance().Name; ;
+
                                 cmd.ExecuteNonQuery();
                                 con.Close();
                             }
@@ -725,6 +737,9 @@ namespace YL_DONUT.BizFrm
 
                                 cmd.Parameters.Add("i_add_p_name", MySqlDbType.VarChar, 255);
                                 cmd.Parameters[4].Value = gridView5.GetRowCellValue(i, gridView5.Columns[7]).ToString();
+
+                                cmd.Parameters.Add("i_user_id", MySqlDbType.VarChar, 20);
+                                cmd.Parameters[5].Value = UserInfo.instance().Name; ;
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();
