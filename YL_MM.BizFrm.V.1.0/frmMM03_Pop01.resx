@@ -395,13 +395,7 @@
     <value>83</value>
   </data>
   <data name="gridColumn18.Caption" xml:space="preserve">
-    <value>TD머니</value>
-  </data>
-  <data name="gridColumn18.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn18.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>TD머니(X)</value>
   </data>
   <data name="gridColumn18.Width" type="System.Int32, mscorlib">
     <value>68</value>
@@ -420,7 +414,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="gridColumn12.Width" type="System.Int32, mscorlib">
     <value>58</value>
@@ -438,7 +432,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn13.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="gridColumn13.Width" type="System.Int32, mscorlib">
     <value>71</value>
@@ -456,7 +450,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn27.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="gridColumn27.Width" type="System.Int32, mscorlib">
     <value>71</value>
@@ -468,7 +462,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn30.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="gridColumn30.Width" type="System.Int32, mscorlib">
     <value>50</value>
@@ -483,7 +477,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn28.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="gridColumn28.Width" type="System.Int32, mscorlib">
     <value>51</value>
@@ -495,7 +489,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn37.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="gridColumn37.Width" type="System.Int32, mscorlib">
     <value>81</value>
@@ -510,7 +504,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn38.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="gridColumn38.Width" type="System.Int32, mscorlib">
     <value>81</value>
@@ -522,7 +516,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn29.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="gridColumn29.Width" type="System.Int32, mscorlib">
     <value>81</value>
@@ -584,7 +578,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="gridColumn14.Width" type="System.Int32, mscorlib">
     <value>87</value>

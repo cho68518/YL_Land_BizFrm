@@ -207,7 +207,9 @@
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.txtPicPath3 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtPicPath2 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.ckdora_md = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.txtPicPath5 = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.chkVip = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.txtPicPath1 = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtp_title = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.txtC_Code2 = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -247,10 +249,8 @@
             this.efwLabel14 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel50 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel49 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.ckdora_md = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkGShop = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkChef = new Easy.Framework.WinForm.Control.efwCheckEdit();
-            this.chkVip = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkMember = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.chkAll = new Easy.Framework.WinForm.Control.efwCheckEdit();
             this.efwLabel39 = new Easy.Framework.WinForm.Control.efwLabel();
@@ -364,7 +364,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckdora_md.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkVip.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_title.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code2.Properties)).BeginInit();
@@ -388,10 +390,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_DM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Multi_Discount_Cost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckdora_md.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkGShop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkChef.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkVip.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkMember.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkAll.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Max_Purchase_Num.Properties)).BeginInit();
@@ -1917,6 +1917,14 @@
             this.txtPicPath2.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPicPath2.RequireMessage = null;
             // 
+            // ckdora_md
+            // 
+            resources.ApplyResources(this.ckdora_md, "ckdora_md");
+            this.ckdora_md.Name = "ckdora_md";
+            this.ckdora_md.Properties.Caption = resources.GetString("ckdora_md.Properties.Caption");
+            this.ckdora_md.Properties.ValueChecked = "1";
+            this.ckdora_md.Properties.ValueUnchecked = "0";
+            // 
             // txtPicPath5
             // 
             this.txtPicPath5.EditValue2 = null;
@@ -1925,6 +1933,14 @@
             this.txtPicPath5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtPicPath5.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPicPath5.RequireMessage = null;
+            // 
+            // chkVip
+            // 
+            resources.ApplyResources(this.chkVip, "chkVip");
+            this.chkVip.Name = "chkVip";
+            this.chkVip.Properties.Caption = resources.GetString("chkVip.Properties.Caption");
+            this.chkVip.Properties.ValueChecked = "1";
+            this.chkVip.Properties.ValueUnchecked = "0";
             // 
             // txtPicPath1
             // 
@@ -2350,14 +2366,6 @@
             resources.ApplyResources(this.efwLabel49, "efwLabel49");
             this.efwLabel49.Name = "efwLabel49";
             // 
-            // ckdora_md
-            // 
-            resources.ApplyResources(this.ckdora_md, "ckdora_md");
-            this.ckdora_md.Name = "ckdora_md";
-            this.ckdora_md.Properties.Caption = resources.GetString("ckdora_md.Properties.Caption");
-            this.ckdora_md.Properties.ValueChecked = "1";
-            this.ckdora_md.Properties.ValueUnchecked = "0";
-            // 
             // chkGShop
             // 
             resources.ApplyResources(this.chkGShop, "chkGShop");
@@ -2373,14 +2381,6 @@
             this.chkChef.Properties.Caption = resources.GetString("chkChef.Properties.Caption");
             this.chkChef.Properties.ValueChecked = "1";
             this.chkChef.Properties.ValueUnchecked = "0";
-            // 
-            // chkVip
-            // 
-            resources.ApplyResources(this.chkVip, "chkVip");
-            this.chkVip.Name = "chkVip";
-            this.chkVip.Properties.Caption = resources.GetString("chkVip.Properties.Caption");
-            this.chkVip.Properties.ValueChecked = "1";
-            this.chkVip.Properties.ValueUnchecked = "0";
             // 
             // chkMember
             // 
@@ -2915,7 +2915,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckdora_md.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkVip.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPicPath1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtp_title.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtC_Code2.Properties)).EndInit();
@@ -2939,10 +2941,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_GD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRefunds_DM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Multi_Discount_Cost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckdora_md.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkGShop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkChef.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkVip.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkMember.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkAll.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtP_Max_Purchase_Num.Properties)).EndInit();

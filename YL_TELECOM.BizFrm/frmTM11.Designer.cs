@@ -46,6 +46,7 @@ namespace YL_TELECOM.BizFrm
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo14 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo15 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.rbG_Prod = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.txtIdx = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
@@ -134,6 +135,8 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -172,9 +175,9 @@ namespace YL_TELECOM.BizFrm
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
-            this.rbG_Prod = new Easy.Framework.WinForm.Control.efwRadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbG_Prod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdx.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
@@ -266,7 +269,6 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).BeginInit();
             this.efwPanelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rbG_Prod.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl1
@@ -286,6 +288,24 @@ namespace YL_TELECOM.BizFrm
             this.efwPanelControl1.Name = "efwPanelControl1";
             this.efwPanelControl1.Size = new System.Drawing.Size(1243, 49);
             this.efwPanelControl1.TabIndex = 46;
+            // 
+            // rbG_Prod
+            // 
+            this.rbG_Prod.IsMultiLang = false;
+            this.rbG_Prod.Location = new System.Drawing.Point(619, 13);
+            this.rbG_Prod.Name = "rbG_Prod";
+            this.rbG_Prod.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbG_Prod.Properties.Appearance.Options.UseBackColor = true;
+            this.rbG_Prod.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbG_Prod.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbG_Prod.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rbG_Prod.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("S", "정상"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("A", "전체(해지포함)")});
+            this.rbG_Prod.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.rbG_Prod.RequireMessage = null;
+            this.rbG_Prod.Size = new System.Drawing.Size(217, 23);
+            this.rbG_Prod.TabIndex = 80;
             // 
             // txtIdx
             // 
@@ -474,7 +494,7 @@ namespace YL_TELECOM.BizFrm
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Padding = new System.Windows.Forms.Padding(5);
             this.xtraTabPage1.Size = new System.Drawing.Size(1237, 631);
-            this.xtraTabPage1.Text = "거래처별 선별 가입자 목록";
+            this.xtraTabPage1.Text = "거래처별 선불 가입자 목록";
             // 
             // efwGroupControl2
             // 
@@ -1219,7 +1239,9 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn4,
             this.gridColumn6,
             this.gridColumn5,
-            this.gridColumn7});
+            this.gridColumn7,
+            this.gridColumn37,
+            this.gridColumn38});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -1254,7 +1276,7 @@ namespace YL_TELECOM.BizFrm
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "익월연장";
+            this.gridColumn4.Caption = "1개월 연장";
             this.gridColumn4.FieldName = "month1";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
@@ -1263,7 +1285,7 @@ namespace YL_TELECOM.BizFrm
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "익월충전율";
+            this.gridColumn6.Caption = "1개월 충전율";
             this.gridColumn6.FieldName = "rate1";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
@@ -1272,7 +1294,7 @@ namespace YL_TELECOM.BizFrm
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "익월연장";
+            this.gridColumn5.Caption = "2개월 연장";
             this.gridColumn5.FieldName = "month2";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
@@ -1281,12 +1303,30 @@ namespace YL_TELECOM.BizFrm
             // 
             // gridColumn7
             // 
-            this.gridColumn7.Caption = "익월충전율";
+            this.gridColumn7.Caption = "2개월 충전율";
             this.gridColumn7.FieldName = "rate2";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
+            // 
+            // gridColumn37
+            // 
+            this.gridColumn37.Caption = "3개월 연장";
+            this.gridColumn37.FieldName = "month3";
+            this.gridColumn37.Name = "gridColumn37";
+            this.gridColumn37.OptionsColumn.AllowEdit = false;
+            this.gridColumn37.Visible = true;
+            this.gridColumn37.VisibleIndex = 7;
+            // 
+            // gridColumn38
+            // 
+            this.gridColumn38.Caption = "3개월 충전율";
+            this.gridColumn38.FieldName = "rate3";
+            this.gridColumn38.Name = "gridColumn38";
+            this.gridColumn38.OptionsColumn.AllowEdit = false;
+            this.gridColumn38.Visible = true;
+            this.gridColumn38.VisibleIndex = 8;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -1646,24 +1686,6 @@ namespace YL_TELECOM.BizFrm
             this.efwSimpleButton3.Text = "전체선택";
             this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
-            // rbG_Prod
-            // 
-            this.rbG_Prod.IsMultiLang = false;
-            this.rbG_Prod.Location = new System.Drawing.Point(619, 13);
-            this.rbG_Prod.Name = "rbG_Prod";
-            this.rbG_Prod.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.rbG_Prod.Properties.Appearance.Options.UseBackColor = true;
-            this.rbG_Prod.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.rbG_Prod.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.rbG_Prod.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.rbG_Prod.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("S", "정상"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("A", "전체(해지포함)")});
-            this.rbG_Prod.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
-            this.rbG_Prod.RequireMessage = null;
-            this.rbG_Prod.Size = new System.Drawing.Size(217, 23);
-            this.rbG_Prod.TabIndex = 80;
-            // 
             // frmTM11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1678,6 +1700,7 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbG_Prod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdx.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
@@ -1770,7 +1793,6 @@ namespace YL_TELECOM.BizFrm
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl2)).EndInit();
             this.efwPanelControl2.ResumeLayout(false);
             this.efwPanelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rbG_Prod.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1905,5 +1927,7 @@ namespace YL_TELECOM.BizFrm
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton3;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel4;
         private Easy.Framework.WinForm.Control.efwRadioGroup rbG_Prod;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
     }
 }

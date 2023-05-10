@@ -362,6 +362,10 @@ namespace YL_MM.BizFrm
             {
                 Open5();
             }
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage6)
+            {
+                Open6();
+            }
         }
         public void Open1()
         {
@@ -515,7 +519,24 @@ namespace YL_MM.BizFrm
             }
         }
 
+        public void Open6()
+        {
+            Dictionary<string, string> myRecord;
 
+            using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                sql.Query = "SELECT remark, idx FROM domaadmin.tb_story_banner " +
+                             "WHERE category_no = '900' ";
+  
+                myRecord = sql.selectQueryForSingleRecord();
+
+                if (myRecord != null && myRecord.Count > 0)
+                {
+                    txtMainRemark.Text = myRecord["remark"].ToString();
+                    txtMain_Idx.Text = myRecord["idx"].ToString();
+                }
+            }
+        }
 
 
         private void rbStoryType_SelectedIndexChanged(object sender, EventArgs e)
@@ -1423,5 +1444,65 @@ namespace YL_MM.BizFrm
 
         }
 
+        private void efwSimpleButton11_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM18_SAVE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_Idx"].Value = Convert.ToInt32("58");
+                            cmd.Parameters["i_Idx"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_show_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_show_type"].Value = "Y";
+                            cmd.Parameters["i_show_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_category_no", MySqlDbType.VarChar));
+                            cmd.Parameters["i_category_no"].Value = "900";
+                            cmd.Parameters["i_category_no"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_link_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_link_type"].Value = "L";
+                            cmd.Parameters["i_link_type"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_img_url", MySqlDbType.VarChar));
+                            cmd.Parameters["i_img_url"].Value = "";
+                            cmd.Parameters["i_img_url"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_img_link", MySqlDbType.VarChar));
+                            cmd.Parameters["i_img_link"].Value = "L";
+                            cmd.Parameters["i_img_link"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtMainRemark.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_show_turn", MySqlDbType.Int32));
+                            cmd.Parameters["i_show_turn"].Value = Convert.ToInt32("0");
+                            cmd.Parameters["i_show_turn"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+            }
+        }
     }
 }

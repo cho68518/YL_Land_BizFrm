@@ -157,6 +157,12 @@
     <Compile Include="Dlg\frmZipNoInfo.Designer.cs">
       <DependentUpon>frmZipNoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDN29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDN29.Designer.cs">
+      <DependentUpon>frmDN29.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDN28.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -560,6 +566,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDN28.resx">
       <DependentUpon>frmDN28.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDN29.resx">
+      <DependentUpon>frmDN29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

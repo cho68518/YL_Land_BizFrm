@@ -105,6 +105,7 @@
             this.gridColumn63 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn64 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn65 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn66 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -171,6 +172,8 @@
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtgd_biz_rate = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwLabel40 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtD_Use_Amt = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel39 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtgd_rate = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -268,6 +271,7 @@
             this.cmbCate_Code2 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.txtLOWEST_PRICE = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.cmbCate_Code1 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
+            this.efwLabel41 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -321,6 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).BeginInit();
             this.efwGroupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtgd_biz_rate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtD_Use_Amt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtgd_rate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl4)).BeginInit();
@@ -610,7 +615,8 @@
             this.gridColumn62,
             this.gridColumn63,
             this.gridColumn64,
-            this.gridColumn65});
+            this.gridColumn65,
+            this.gridColumn66});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -1018,6 +1024,17 @@
             this.gridColumn65.OptionsColumn.AllowEdit = false;
             this.gridColumn65.Visible = true;
             this.gridColumn65.VisibleIndex = 37;
+            // 
+            // gridColumn66
+            // 
+            this.gridColumn66.Caption = "GD 비즈 할인율";
+            this.gridColumn66.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn66.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn66.FieldName = "gd_biz_rate";
+            this.gridColumn66.Name = "gridColumn66";
+            this.gridColumn66.OptionsColumn.AllowEdit = false;
+            this.gridColumn66.Visible = true;
+            this.gridColumn66.VisibleIndex = 38;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -1731,6 +1748,9 @@
             // efwGroupControl4
             // 
             this.efwGroupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl4.CaptionImageOptions.Image")));
+            this.efwGroupControl4.Controls.Add(this.efwLabel41);
+            this.efwGroupControl4.Controls.Add(this.txtgd_biz_rate);
+            this.efwGroupControl4.Controls.Add(this.efwLabel40);
             this.efwGroupControl4.Controls.Add(this.txtD_Use_Amt);
             this.efwGroupControl4.Controls.Add(this.efwLabel39);
             this.efwGroupControl4.Controls.Add(this.txtgd_rate);
@@ -1767,6 +1787,33 @@
             this.efwGroupControl4.TabIndex = 68;
             this.efwGroupControl4.Text = "수정";
             // 
+            // txtgd_biz_rate
+            // 
+            this.txtgd_biz_rate.EditValue = "0";
+            this.txtgd_biz_rate.EditValue2 = null;
+            this.txtgd_biz_rate.Location = new System.Drawing.Point(687, 189);
+            this.txtgd_biz_rate.Name = "txtgd_biz_rate";
+            this.txtgd_biz_rate.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtgd_biz_rate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtgd_biz_rate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtgd_biz_rate.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtgd_biz_rate.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtgd_biz_rate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtgd_biz_rate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtgd_biz_rate.RequireMessage = null;
+            this.txtgd_biz_rate.Size = new System.Drawing.Size(86, 20);
+            this.txtgd_biz_rate.TabIndex = 92;
+            // 
+            // efwLabel40
+            // 
+            this.efwLabel40.EraserGroup = null;
+            this.efwLabel40.IsMultiLang = false;
+            this.efwLabel40.Location = new System.Drawing.Point(518, 192);
+            this.efwLabel40.Name = "efwLabel40";
+            this.efwLabel40.Size = new System.Drawing.Size(146, 14);
+            this.efwLabel40.TabIndex = 91;
+            this.efwLabel40.Text = "BIZ회원 G제품 도넛사용율(%)";
+            // 
             // txtD_Use_Amt
             // 
             this.txtD_Use_Amt.EditValue = "0";
@@ -1798,7 +1845,7 @@
             // 
             this.txtgd_rate.EditValue = "0";
             this.txtgd_rate.EditValue2 = null;
-            this.txtgd_rate.Location = new System.Drawing.Point(650, 163);
+            this.txtgd_rate.Location = new System.Drawing.Point(687, 163);
             this.txtgd_rate.Name = "txtgd_rate";
             this.txtgd_rate.Properties.Appearance.Options.UseTextOptions = true;
             this.txtgd_rate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1815,11 +1862,11 @@
             // 
             this.efwLabel38.EraserGroup = null;
             this.efwLabel38.IsMultiLang = false;
-            this.efwLabel38.Location = new System.Drawing.Point(519, 166);
+            this.efwLabel38.Location = new System.Drawing.Point(518, 166);
             this.efwLabel38.Name = "efwLabel38";
-            this.efwLabel38.Size = new System.Drawing.Size(104, 14);
+            this.efwLabel38.Size = new System.Drawing.Size(148, 14);
             this.efwLabel38.TabIndex = 87;
-            this.efwLabel38.Text = "G제품 도넛사용율(%)";
+            this.efwLabel38.Text = "일반회원 G제품 도넛사용율(%)";
             // 
             // efwPanelControl4
             // 
@@ -2917,9 +2964,9 @@
             this.efwLabel15.IsMultiLang = false;
             this.efwLabel15.Location = new System.Drawing.Point(301, 166);
             this.efwLabel15.Name = "efwLabel15";
-            this.efwLabel15.Size = new System.Drawing.Size(70, 14);
+            this.efwLabel15.Size = new System.Drawing.Size(87, 14);
             this.efwLabel15.TabIndex = 32;
-            this.efwLabel15.Text = "알뜰지원스토리";
+            this.efwLabel15.Text = "알뜰지원스토리(X)";
             // 
             // efwLabel18
             // 
@@ -2935,7 +2982,7 @@
             // 
             this.txtTD_DONUT.EditValue = "0";
             this.txtTD_DONUT.EditValue2 = null;
-            this.txtTD_DONUT.Location = new System.Drawing.Point(394, 163);
+            this.txtTD_DONUT.Location = new System.Drawing.Point(401, 163);
             this.txtTD_DONUT.Name = "txtTD_DONUT";
             this.txtTD_DONUT.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTD_DONUT.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -2969,7 +3016,7 @@
             // 
             this.txtDELIVERY_PRICE.EditValue = "0";
             this.txtDELIVERY_PRICE.EditValue2 = null;
-            this.txtDELIVERY_PRICE.Location = new System.Drawing.Point(650, 138);
+            this.txtDELIVERY_PRICE.Location = new System.Drawing.Point(687, 138);
             this.txtDELIVERY_PRICE.Name = "txtDELIVERY_PRICE";
             this.txtDELIVERY_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtDELIVERY_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -3115,7 +3162,7 @@
             // 
             this.txtLOWEST_PRICE.EditValue = "0";
             this.txtLOWEST_PRICE.EditValue2 = null;
-            this.txtLOWEST_PRICE.Location = new System.Drawing.Point(394, 138);
+            this.txtLOWEST_PRICE.Location = new System.Drawing.Point(401, 138);
             this.txtLOWEST_PRICE.Name = "txtLOWEST_PRICE";
             this.txtLOWEST_PRICE.Properties.Appearance.Options.UseTextOptions = true;
             this.txtLOWEST_PRICE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -3144,6 +3191,16 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbCate_Code1.Size = new System.Drawing.Size(337, 20);
             this.cmbCate_Code1.TabIndex = 0;
+            // 
+            // efwLabel41
+            // 
+            this.efwLabel41.EraserGroup = null;
+            this.efwLabel41.IsMultiLang = false;
+            this.efwLabel41.Location = new System.Drawing.Point(320, 190);
+            this.efwLabel41.Name = "efwLabel41";
+            this.efwLabel41.Size = new System.Drawing.Size(147, 14);
+            this.efwLabel41.TabIndex = 93;
+            this.efwLabel41.Text = "(일반회원 10%, 비즈회원5%)";
             // 
             // frmDN14
             // 
@@ -3221,6 +3278,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl4)).EndInit();
             this.efwGroupControl4.ResumeLayout(false);
             this.efwGroupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtgd_biz_rate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtD_Use_Amt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtgd_rate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl4)).EndInit();
@@ -3510,5 +3568,9 @@
         private Easy.Framework.WinForm.Control.efwTextEdit txtD_Use_Amt;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel39;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn65;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtgd_biz_rate;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel40;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn66;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel41;
     }
 }

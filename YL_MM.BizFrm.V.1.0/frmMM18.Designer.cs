@@ -227,6 +227,12 @@
             this.dtQ_SDate = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dtQ_EDate = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.cmbDate_Type = new Easy.Framework.WinForm.Control.efwLookUpEdit();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.efwGroupControl3 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel20 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtMainRemark = new Easy.Framework.WinForm.Control.efwMemoEdit();
+            this.efwSimpleButton11 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.txtMain_Idx = new Easy.Framework.WinForm.Control.efwTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rbStoryType.Properties)).BeginInit();
@@ -336,6 +342,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtQ_EDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQ_EDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDate_Type.Properties)).BeginInit();
+            this.xtraTabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).BeginInit();
+            this.efwGroupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMainRemark.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMain_Idx.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl1
@@ -381,7 +392,8 @@
             this.xtraTabPage2,
             this.xtraTabPage3,
             this.xtraTabPage4,
-            this.xtraTabPage5});
+            this.xtraTabPage5,
+            this.xtraTabPage6});
             // 
             // xtraTabPage1
             // 
@@ -2555,6 +2567,73 @@
             this.cmbDate_Type.Size = new System.Drawing.Size(97, 20);
             this.cmbDate_Type.TabIndex = 71;
             // 
+            // xtraTabPage6
+            // 
+            this.xtraTabPage6.Controls.Add(this.efwGroupControl3);
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.Size = new System.Drawing.Size(1233, 800);
+            this.xtraTabPage6.Text = "매인베너 문구(앱 + 홈페이지)";
+            // 
+            // efwGroupControl3
+            // 
+            this.efwGroupControl3.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl3.CaptionImageOptions.Image")));
+            this.efwGroupControl3.Controls.Add(this.txtMain_Idx);
+            this.efwGroupControl3.Controls.Add(this.efwSimpleButton11);
+            this.efwGroupControl3.Controls.Add(this.efwLabel20);
+            this.efwGroupControl3.Controls.Add(this.txtMainRemark);
+            this.efwGroupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efwGroupControl3.IsMultiLang = false;
+            this.efwGroupControl3.Location = new System.Drawing.Point(0, 0);
+            this.efwGroupControl3.Name = "efwGroupControl3";
+            this.efwGroupControl3.Size = new System.Drawing.Size(1233, 800);
+            this.efwGroupControl3.TabIndex = 55;
+            this.efwGroupControl3.Text = "배너 저장";
+            // 
+            // efwLabel20
+            // 
+            this.efwLabel20.EraserGroup = null;
+            this.efwLabel20.IsMultiLang = false;
+            this.efwLabel20.Location = new System.Drawing.Point(16, 86);
+            this.efwLabel20.Name = "efwLabel20";
+            this.efwLabel20.Size = new System.Drawing.Size(64, 14);
+            this.efwLabel20.TabIndex = 62;
+            this.efwLabel20.Text = "매인 배너문구";
+            // 
+            // txtMainRemark
+            // 
+            this.txtMainRemark.ByteLength = 200;
+            this.txtMainRemark.EraserGroup = "CLR1";
+            this.txtMainRemark.Location = new System.Drawing.Point(110, 85);
+            this.txtMainRemark.Name = "txtMainRemark";
+            this.txtMainRemark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtMainRemark.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtMainRemark.Size = new System.Drawing.Size(356, 127);
+            this.txtMainRemark.TabIndex = 61;
+            // 
+            // efwSimpleButton11
+            // 
+            this.efwSimpleButton11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton11.ImageOptions.Image")));
+            this.efwSimpleButton11.IsMultiLang = false;
+            this.efwSimpleButton11.Location = new System.Drawing.Point(396, 38);
+            this.efwSimpleButton11.Name = "efwSimpleButton11";
+            this.efwSimpleButton11.Size = new System.Drawing.Size(70, 33);
+            this.efwSimpleButton11.TabIndex = 71;
+            this.efwSimpleButton11.Text = "저장";
+            this.efwSimpleButton11.Click += new System.EventHandler(this.efwSimpleButton11_Click);
+            // 
+            // txtMain_Idx
+            // 
+            this.txtMain_Idx.EditValue2 = null;
+            this.txtMain_Idx.EraserGroup = "CLR1";
+            this.txtMain_Idx.Location = new System.Drawing.Point(110, 44);
+            this.txtMain_Idx.Name = "txtMain_Idx";
+            this.txtMain_Idx.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtMain_Idx.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtMain_Idx.RequireMessage = null;
+            this.txtMain_Idx.Size = new System.Drawing.Size(34, 20);
+            this.txtMain_Idx.TabIndex = 72;
+            this.txtMain_Idx.Visible = false;
+            // 
             // frmMM18
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2678,6 +2757,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtQ_EDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQ_EDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDate_Type.Properties)).EndInit();
+            this.xtraTabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl3)).EndInit();
+            this.efwGroupControl3.ResumeLayout(false);
+            this.efwGroupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMainRemark.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMain_Idx.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2862,5 +2947,11 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit8;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
+        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl3;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton11;
+        private Easy.Framework.WinForm.Control.efwLabel efwLabel20;
+        private Easy.Framework.WinForm.Control.efwMemoEdit txtMainRemark;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtMain_Idx;
     }
 }

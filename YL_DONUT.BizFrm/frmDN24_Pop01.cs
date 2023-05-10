@@ -483,7 +483,7 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters[12].Value = gridView2.GetRowCellValue(i, gridView2.Columns[16]).ToString();
 
                                 cmd.Parameters.Add("i_mall_o_code", MySqlDbType.VarChar, 50);
-                                cmd.Parameters[13].Value = gridView2.GetRowCellValue(i, gridView2.Columns[15]).ToString();
+                                cmd.Parameters[13].Value = gridView2.GetRowCellValue(i, gridView2.Columns[0]).ToString();
 
                                 cmd.Parameters.Add("i_p_code", MySqlDbType.VarChar, 50);
                                 cmd.Parameters[14].Value = gridView2.GetRowCellValue(i, gridView2.Columns[17]).ToString();
