@@ -48,11 +48,15 @@ namespace YL_GM.BizFrm
             this.dtEND_DATE.Visible = false;
             this.efwLabel7.Visible = false;
             this.rbQ_type.Visible = false;
+            this.rbShow_Level.Visible = false;
+            this.txtProd_Name.Visible = false;
+            this.efwLabel2.Visible = false;
 
             rbShop_Type.EditValue = "3";
             rbProd_Type.EditValue = "1";
             rbQtyOrAmt.EditValue = "1";
             rbQ_type.EditValue = "2";
+            rbShow_Level.EditValue = "9";
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
             advBandedGridView1.OptionsView.ShowFooter = true;
@@ -298,7 +302,10 @@ namespace YL_GM.BizFrm
             {
                 Open6();
             }
-
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage6)
+            {
+                Open8();
+            }
         }
 
         private void Open1()
@@ -548,6 +555,53 @@ namespace YL_GM.BizFrm
             }
         }
 
+        private void Open8()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM10_SELECT_07", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtSTART_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtEND_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_show_level", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[2].Value = rbShow_Level.EditValue;
+
+                        cmd.Parameters.Add("i_prod_name", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[3].Value = txtProd_Name.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl7.DataBind(ds);
+                            this.efwGridControl7.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+                //ChartCreat1();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
         private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
 
@@ -563,6 +617,9 @@ namespace YL_GM.BizFrm
                 this.rbQtyOrAmt.Visible = true;
                 this.efwLabel7.Visible = false;
                 this.rbQ_type.Visible = false;
+                this.rbShow_Level.Visible = false;
+                this.txtProd_Name.Visible = false;
+                this.efwLabel2.Visible = false;
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
             {
@@ -574,6 +631,9 @@ namespace YL_GM.BizFrm
                 this.rbQtyOrAmt.Visible = true;
                 this.efwLabel7.Visible = false;
                 this.rbQ_type.Visible = false;
+                this.rbShow_Level.Visible = false;
+                this.txtProd_Name.Visible = false;
+                this.efwLabel2.Visible = false;
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
             {
@@ -585,8 +645,26 @@ namespace YL_GM.BizFrm
                 this.rbQtyOrAmt.Visible = false;
                 this.efwLabel7.Visible = true;
                 this.rbQ_type.Visible = true;
+                this.rbShow_Level.Visible = false;
+                this.txtProd_Name.Visible = false;
+                this.efwLabel2.Visible = false;
             }
-          // Search();
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage6)
+            {
+                this.efwLabel1.Text = "입금일";
+                this.dtS_DATE.Visible = false;
+                this.dtEND_DATE.Visible = true;
+                this.dtSTART_DATE.Visible = true;
+                this.rbProd_Type.Visible = false;
+                this.rbQtyOrAmt.Visible = false;
+                this.efwLabel7.Visible = true;
+                this.rbQ_type.Visible = true;
+                this.rbShow_Level.Visible = true;
+                this.txtProd_Name.Visible = true;
+                this.efwLabel2.Visible = true;
+            } 
+
+            // Search();
         }
 
         private void efwXtraTabControl2_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
@@ -609,6 +687,12 @@ namespace YL_GM.BizFrm
                 this.txtu_id.EditValue = dr["u_id"].ToString();
                 Open7();
             }
+        }
+
+        private void txtProd_Name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
         }
     }
 }

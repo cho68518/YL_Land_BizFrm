@@ -543,7 +543,10 @@ namespace YL_MM.BizFrm
                         
                         cmd.Parameters.Add(new MySqlParameter("o_compare_text", MySqlDbType.VarChar));
                         cmd.Parameters["o_compare_text"].Direction = ParameterDirection.Output;
-                        
+
+                        cmd.Parameters.Add(new MySqlParameter("o_compare_text2", MySqlDbType.VarChar));
+                        cmd.Parameters["o_compare_text2"].Direction = ParameterDirection.Output;
+
                         cmd.Parameters.Add(new MySqlParameter("o_ompare_type", MySqlDbType.VarChar));
                         cmd.Parameters["o_ompare_type"].Direction = ParameterDirection.Output;
                         
@@ -712,6 +715,7 @@ namespace YL_MM.BizFrm
                         txtP_Multi_Discount_Cost.EditValue = cmd.Parameters["o_multi_discount_cost"].Value.ToString();
                         txtP_Max_Purchase_Num.EditValue = cmd.Parameters["o_max_purchase_num"].Value.ToString();
                         txtP_Compare_Text.EditValue = cmd.Parameters["o_compare_text"].Value.ToString();
+                        txtP_Compare_Text2.EditValue = cmd.Parameters["o_compare_text2"].Value.ToString();
                         rbP_Compare_Type.EditValue = cmd.Parameters["o_ompare_type"].Value.ToString();
                         cmbP_Show_Type.EditValue = cmd.Parameters["o_show_type"].Value.ToString();
                         cmbP_Chef_Level.EditValue = cmd.Parameters["o_chef_level"].Value.ToString();
@@ -1453,6 +1457,7 @@ namespace YL_MM.BizFrm
             txtP_Max_Purchase_Num.EditValue = null;
             rbP_Compare_Type.EditValue = "T";
             txtP_Compare_Text.EditValue = null;
+            txtP_Compare_Text2.EditValue = null;
             cmbP_Show_Type.EditValue = "N";
             cmbP_Sell_Type.EditValue = "Y";
             cmbP_Chef_Level.EditValue = "0";
@@ -1641,6 +1646,10 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_P_Compare_Text"].Value = txtP_Compare_Text.EditValue;
                             cmd.Parameters["i_P_Compare_Text"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_P_Compare_Text2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_P_Compare_Text2"].Value = txtP_Compare_Text2.EditValue;
+                            cmd.Parameters["i_P_Compare_Text2"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("i_P_Show_Type", MySqlDbType.VarChar));
                             cmd.Parameters["i_P_Show_Type"].Value = cmbP_Show_Type.EditValue;
                             cmd.Parameters["i_P_Show_Type"].Direction = ParameterDirection.Input;
@@ -1669,11 +1678,9 @@ namespace YL_MM.BizFrm
                             cmd.Parameters["i_P_Delivery_Type"].Value = cmbP_Delivery_Type.EditValue;
                             cmd.Parameters["i_P_Delivery_Type"].Direction = ParameterDirection.Input;
 
-                            sId = txtBasic_Price.EditValue.ToString();
-                            if (sId == "")
-                                nId = 0;
-                            else
-                                nId = Convert.ToInt32(txtBasic_Price.EditValue.ToString());
+
+                            nId = 0;
+
 
                             cmd.Parameters.Add(new MySqlParameter("i_Basic_Price", MySqlDbType.Int32));
                             cmd.Parameters["i_Basic_Price"].Value = nId;

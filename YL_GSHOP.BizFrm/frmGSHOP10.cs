@@ -224,6 +224,7 @@ namespace YL_GSHOP.BizFrm
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
+
                             sda.Fill(ds);
                             efwGridControl3.DataBind(ds);
                             // this.efwGridControl2.MyGridView.BestFitColumns();

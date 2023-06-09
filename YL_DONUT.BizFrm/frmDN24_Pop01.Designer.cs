@@ -30,6 +30,7 @@
         {
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN24_Pop01));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -42,15 +43,18 @@
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo10 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo11 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo12 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo16 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo17 = new Easy.Framework.WinForm.Control.ServiceInfo();
+            Easy.Framework.WinForm.Control.ServiceInfo serviceInfo18 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo13 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo14 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo15 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN24_Pop01));
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbO_Sub_Company = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.lblCnt = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtFileName = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
@@ -71,7 +75,9 @@
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGridControl5 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.efwGridControl6 = new Easy.Framework.WinForm.Control.efwGridControl();
+            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbO_Sub_Company.Properties)).BeginInit();
@@ -93,6 +99,9 @@
             this.xtraTabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            this.xtraTabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl1
@@ -157,6 +166,17 @@
             this.efwLabel1.Name = "efwLabel1";
             this.efwLabel1.Size = new System.Drawing.Size(0, 14);
             this.efwLabel1.TabIndex = 51;
+            // 
+            // efwSimpleButton2
+            // 
+            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
+            this.efwSimpleButton2.IsMultiLang = false;
+            this.efwSimpleButton2.Location = new System.Drawing.Point(578, 15);
+            this.efwSimpleButton2.Name = "efwSimpleButton2";
+            this.efwSimpleButton2.Size = new System.Drawing.Size(106, 28);
+            this.efwSimpleButton2.TabIndex = 50;
+            this.efwSimpleButton2.Text = "저장";
+            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
             // 
             // lblCnt
             // 
@@ -254,6 +274,7 @@
             this.xtraTabPage2,
             this.xtraTabPage3,
             this.xtraTabPage4,
+            this.xtraTabPage6,
             this.xtraTabPage5});
             // 
             // xtraTabPage1
@@ -434,19 +455,19 @@
             // 
             this.efwGridControl5.BindSet = null;
             this.efwGridControl5.DBName = "";
-            serviceInfo13.InstanceName = "";
-            serviceInfo13.IsUserIDAdd = true;
-            serviceInfo13.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo13.ParamsInfo")));
-            serviceInfo13.ProcName = "";
-            serviceInfo13.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo13.UserParams")));
-            this.efwGridControl5.DeleteServiceInfo = serviceInfo13;
+            serviceInfo16.InstanceName = "";
+            serviceInfo16.IsUserIDAdd = true;
+            serviceInfo16.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo16.ParamsInfo")));
+            serviceInfo16.ProcName = "";
+            serviceInfo16.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo16.UserParams")));
+            this.efwGridControl5.DeleteServiceInfo = serviceInfo16;
             this.efwGridControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            serviceInfo14.InstanceName = "";
-            serviceInfo14.IsUserIDAdd = true;
-            serviceInfo14.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo14.ParamsInfo")));
-            serviceInfo14.ProcName = "";
-            serviceInfo14.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo14.UserParams")));
-            this.efwGridControl5.InsertServiceInfo = serviceInfo14;
+            serviceInfo17.InstanceName = "";
+            serviceInfo17.IsUserIDAdd = true;
+            serviceInfo17.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo17.ParamsInfo")));
+            serviceInfo17.ProcName = "";
+            serviceInfo17.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo17.UserParams")));
+            this.efwGridControl5.InsertServiceInfo = serviceInfo17;
             this.efwGridControl5.IsAddExcelBtn = true;
             this.efwGridControl5.isAddPrintBtn = true;
             this.efwGridControl5.IsMultiLang = false;
@@ -459,12 +480,12 @@
             this.efwGridControl5.Size = new System.Drawing.Size(1207, 437);
             this.efwGridControl5.TabIndex = 7;
             this.efwGridControl5.TableName = "";
-            serviceInfo15.InstanceName = "";
-            serviceInfo15.IsUserIDAdd = true;
-            serviceInfo15.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo15.ParamsInfo")));
-            serviceInfo15.ProcName = "";
-            serviceInfo15.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo15.UserParams")));
-            this.efwGridControl5.UpdateServiceInfo = serviceInfo15;
+            serviceInfo18.InstanceName = "";
+            serviceInfo18.IsUserIDAdd = true;
+            serviceInfo18.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo18.ParamsInfo")));
+            serviceInfo18.ProcName = "";
+            serviceInfo18.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo18.UserParams")));
+            this.efwGridControl5.UpdateServiceInfo = serviceInfo18;
             this.efwGridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
             // 
@@ -474,16 +495,57 @@
             this.gridView5.Name = "gridView5";
             this.gridView5.OptionsView.ShowGroupPanel = false;
             // 
-            // efwSimpleButton2
+            // xtraTabPage6
             // 
-            this.efwSimpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton2.ImageOptions.Image")));
-            this.efwSimpleButton2.IsMultiLang = false;
-            this.efwSimpleButton2.Location = new System.Drawing.Point(578, 15);
-            this.efwSimpleButton2.Name = "efwSimpleButton2";
-            this.efwSimpleButton2.Size = new System.Drawing.Size(106, 28);
-            this.efwSimpleButton2.TabIndex = 50;
-            this.efwSimpleButton2.Text = "저장";
-            this.efwSimpleButton2.Click += new System.EventHandler(this.efwSimpleButton2_Click);
+            this.xtraTabPage6.Controls.Add(this.efwGridControl6);
+            this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.Size = new System.Drawing.Size(1207, 437);
+            this.xtraTabPage6.Text = "위메프";
+            // 
+            // efwGridControl6
+            // 
+            this.efwGridControl6.BindSet = null;
+            this.efwGridControl6.DBName = "";
+            serviceInfo13.InstanceName = "";
+            serviceInfo13.IsUserIDAdd = true;
+            serviceInfo13.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo13.ParamsInfo")));
+            serviceInfo13.ProcName = "";
+            serviceInfo13.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo13.UserParams")));
+            this.efwGridControl6.DeleteServiceInfo = serviceInfo13;
+            this.efwGridControl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            serviceInfo14.InstanceName = "";
+            serviceInfo14.IsUserIDAdd = true;
+            serviceInfo14.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo14.ParamsInfo")));
+            serviceInfo14.ProcName = "";
+            serviceInfo14.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo14.UserParams")));
+            this.efwGridControl6.InsertServiceInfo = serviceInfo14;
+            this.efwGridControl6.IsAddExcelBtn = true;
+            this.efwGridControl6.isAddPrintBtn = true;
+            this.efwGridControl6.IsMultiLang = false;
+            this.efwGridControl6.Location = new System.Drawing.Point(0, 0);
+            this.efwGridControl6.MainView = this.gridView6;
+            this.efwGridControl6.Name = "efwGridControl6";
+            this.efwGridControl6.NowRowHandle = 0;
+            this.efwGridControl6.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl6.PKColumns")));
+            this.efwGridControl6.PrevRowHandle = -2147483648;
+            this.efwGridControl6.Size = new System.Drawing.Size(1207, 437);
+            this.efwGridControl6.TabIndex = 7;
+            this.efwGridControl6.TableName = "";
+            serviceInfo15.InstanceName = "";
+            serviceInfo15.IsUserIDAdd = true;
+            serviceInfo15.ParamsInfo = ((System.Collections.Generic.Dictionary<int, object>)(resources.GetObject("serviceInfo15.ParamsInfo")));
+            serviceInfo15.ProcName = "";
+            serviceInfo15.UserParams = ((System.Collections.Generic.List<object>)(resources.GetObject("serviceInfo15.UserParams")));
+            this.efwGridControl6.UpdateServiceInfo = serviceInfo15;
+            this.efwGridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView6});
+            // 
+            // gridView6
+            // 
+            this.gridView6.GridControl = this.efwGridControl6;
+            this.gridView6.Name = "gridView6";
+            this.gridView6.OptionsView.ShowGroupPanel = false;
             // 
             // frmDN24_Pop01
             // 
@@ -518,6 +580,9 @@
             this.xtraTabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            this.xtraTabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGridControl6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,5 +615,8 @@
         private Easy.Framework.WinForm.Control.efwGridControl efwGridControl5;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
         private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton2;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
+        private Easy.Framework.WinForm.Control.efwGridControl efwGridControl6;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
     }
 }

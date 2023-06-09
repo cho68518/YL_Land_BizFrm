@@ -106,9 +106,9 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["o_donut_g_cost"].SummaryItem.FieldName = "o_donut_g_cost";
             gridView1.Columns["o_donut_g_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
-            gridView1.Columns["o_donut_c_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            gridView1.Columns["o_donut_c_cost"].SummaryItem.FieldName = "o_donut_c_cost";
-            gridView1.Columns["o_donut_c_cost"].SummaryItem.DisplayFormat = "{0:c}";
+            gridView1.Columns["o_donut_h_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView1.Columns["o_donut_h_cost"].SummaryItem.FieldName = "o_donut_h_cost";
+            gridView1.Columns["o_donut_h_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
             gridView1.Columns["o_delivery_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["o_delivery_cost"].SummaryItem.FieldName = "o_delivery_cost";

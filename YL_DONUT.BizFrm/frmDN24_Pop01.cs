@@ -72,6 +72,10 @@ namespace YL_DONUT.BizFrm
             {
                 Excel_Set4();
             }
+            else if (cmbO_Sub_Company.EditValue.ToString() == "9")
+            {
+                Excel_Set6();
+            }
             // 수정양식
             else if (cmbO_Sub_Company.EditValue.ToString() == "Z" )
             {
@@ -195,6 +199,7 @@ namespace YL_DONUT.BizFrm
             openFileDialog1.DefaultExt = "xlsx";
             openFileDialog1.FileName = "기초재고.xlsx";
             openFileDialog1.Filter = "Excel97 - 2003 통합문서|*.xlsx";
+
             openFileDialog1.Title = "엑셀데이터 가져오기";
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -303,6 +308,43 @@ namespace YL_DONUT.BizFrm
             }
         }
 
+        private void Excel_Set6()
+        {
+            efwGridControl6.DataSource = null;
+            gridView3.RefreshData();
+
+            //OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.DefaultExt = "xls";
+            openFileDialog1.FileName = "*.xls";
+            openFileDialog1.Filter = "Excel97 - 2003 통합문서|*.xlsx";
+            openFileDialog1.Title = "엑셀데이터 가져오기";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    if (openFileDialog1.FileName != string.Empty)
+                    {
+                        string fileName = openFileDialog1.FileName;
+
+                        this.efwGridControl6.DataSource = ExcelDataBaseHelper.OpenFile2(fileName);
+                        this.efwGridControl6.MyGridView.BestFitColumns();
+                        lblCnt.Text = string.Format("{0:#,###}", gridView4.DataRowCount.ToString());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("엑셀 파일 드라이버가 잘못되었거나 엑셀파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
+            }
+        }
+
         private void efwSimpleButton2_Click(object sender, EventArgs e)
         {
             if (cmbO_Sub_Company.EditValue.ToString() == "0")
@@ -329,6 +371,10 @@ namespace YL_DONUT.BizFrm
             else if (cmbO_Sub_Company.EditValue.ToString() == "1" ^ cmbO_Sub_Company.EditValue.ToString() == "2")
             {
                 Save4();
+            }
+            else if (cmbO_Sub_Company.EditValue.ToString() == "9")
+            {
+                Save6();
             }
             // 수정양식
             else if (cmbO_Sub_Company.EditValue.ToString() == "Z" )
@@ -754,7 +800,91 @@ namespace YL_DONUT.BizFrm
             }
             MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
         }
+        private void Save6()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
 
+                    for (int i = 0; i < gridView6.DataRowCount; i++)
+                    {
+                        if (gridView6.GetRowCellValue(i, gridView6.Columns[2]).ToString().Length > 5)
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN24_POP01_SAVE01", con))
+                            {
+
+                                con.Open();
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                                cmd.Parameters.Add("i_o_sub_company", MySqlDbType.VarChar, 10);
+                                cmd.Parameters[0].Value = cmbO_Sub_Company.EditValue;
+
+                                string sO_Date = string.Empty;
+
+                                sO_Date = Convert.ToString(gridView6.GetRowCellValue(i, gridView6.Columns[30])).ToString().Substring(0, 10);
+                                sO_Date = sO_Date.Substring(0, 10) + " 12:01:01";
+
+                                cmd.Parameters.Add("i_o_date", MySqlDbType.DateTime);
+                                cmd.Parameters[1].Value = sO_Date;
+
+                                cmd.Parameters.Add("i_o_qty", MySqlDbType.Int32);
+                                cmd.Parameters[2].Value = Convert.ToInt32(gridView6.GetRowCellValue(i, gridView6.Columns[10])).ToString();
+
+                                cmd.Parameters.Add("i_o_amt", MySqlDbType.Int32);
+                                cmd.Parameters[3].Value = Convert.ToInt32(gridView6.GetRowCellValue(i, gridView6.Columns[12])).ToString();
+
+                                cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 255);
+                                cmd.Parameters[4].Value = gridView6.GetRowCellValue(i, gridView6.Columns[8]).ToString();
+
+                                cmd.Parameters.Add("i_option_name", MySqlDbType.VarChar, 255);
+                                cmd.Parameters[5].Value = gridView6.GetRowCellValue(i, gridView6.Columns[9]).ToString();
+
+                                cmd.Parameters.Add("i_o_receive_name", MySqlDbType.VarChar, 45);
+                                cmd.Parameters[6].Value = gridView6.GetRowCellValue(i, gridView6.Columns[16]).ToString();
+
+                                cmd.Parameters.Add("i_o_receive_contact", MySqlDbType.VarChar, 20);
+                                cmd.Parameters[7].Value = gridView6.GetRowCellValue(i, gridView6.Columns[17]).ToString();
+
+                                cmd.Parameters.Add("i_o_receive_name1", MySqlDbType.VarChar, 45);
+                                cmd.Parameters[8].Value = gridView6.GetRowCellValue(i, gridView6.Columns[18]).ToString();
+
+                                cmd.Parameters.Add("i_o_receive_contact1", MySqlDbType.VarChar, 20);
+                                cmd.Parameters[9].Value = gridView6.GetRowCellValue(i, gridView6.Columns[19]).ToString();
+
+                                cmd.Parameters.Add("i_o_receive_zipcode1", MySqlDbType.VarChar, 6);
+                                cmd.Parameters[10].Value = gridView6.GetRowCellValue(i, gridView6.Columns[24]).ToString();
+
+                                cmd.Parameters.Add("i_o_receive_address1", MySqlDbType.VarChar, 254);
+                                cmd.Parameters[11].Value = gridView6.GetRowCellValue(i, gridView6.Columns[25]).ToString();
+
+                                cmd.Parameters.Add("i_o_receive_message1", MySqlDbType.VarChar, 254);
+                                cmd.Parameters[12].Value = gridView6.GetRowCellValue(i, gridView6.Columns[26]).ToString();
+
+                                cmd.Parameters.Add("i_mall_o_code", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[13].Value = gridView6.GetRowCellValue(i, gridView6.Columns[2]).ToString();
+
+                                cmd.Parameters.Add("i_p_code", MySqlDbType.VarChar, 50);
+                                cmd.Parameters[14].Value = gridView6.GetRowCellValue(i, gridView6.Columns[7]).ToString();
+
+                                cmd.Parameters.Add("i_user_id", MySqlDbType.VarChar, 20);
+                                cmd.Parameters[15].Value = UserInfo.instance().Name; ;
+
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+        }
         private void cmbO_Sub_Company_EditValueChanged(object sender, EventArgs e)
         {
             // 쿠팡
@@ -776,6 +906,11 @@ namespace YL_DONUT.BizFrm
             else if (cmbO_Sub_Company.EditValue.ToString() == "1" ^ cmbO_Sub_Company.EditValue.ToString() == "2")
             {
                 this.efwXtraTabControl1.SelectedTabPage = this.xtraTabPage4;
+            }
+            // 위메프
+            else if (cmbO_Sub_Company.EditValue.ToString() == "9")
+            {
+                this.efwXtraTabControl1.SelectedTabPage = this.xtraTabPage6;
             }
             // 수정양식
             else if (cmbO_Sub_Company.EditValue.ToString() == "Z" )

@@ -146,7 +146,6 @@
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -156,6 +155,7 @@
             this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
@@ -286,7 +286,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
@@ -296,6 +295,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
@@ -1250,6 +1250,7 @@
             this.txto_receive_zipcode1.StyleController = this.layoutControl5;
             this.txto_receive_zipcode1.TabIndex = 4;
             this.txto_receive_zipcode1.TabStop = false;
+            this.txto_receive_zipcode1.Click += new System.EventHandler(this.txto_receive_zipcode1_Click);
             // 
             // txto_receive_address1
             // 
@@ -1673,16 +1674,6 @@
             this.layoutControlItem21.Text = "배송업체";
             this.layoutControlItem21.TextSize = new System.Drawing.Size(50, 14);
             // 
-            // layoutControlItem23
-            // 
-            this.layoutControlItem23.Control = this.txtevent_name;
-            this.layoutControlItem23.CustomizationFormText = "수량";
-            this.layoutControlItem23.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(625, 24);
-            this.layoutControlItem23.Text = "이벤트명";
-            this.layoutControlItem23.TextSize = new System.Drawing.Size(50, 14);
-            // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
@@ -1767,6 +1758,16 @@
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(10, 367);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem23
+            // 
+            this.layoutControlItem23.Control = this.txtevent_name;
+            this.layoutControlItem23.CustomizationFormText = "수량";
+            this.layoutControlItem23.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem23.Name = "layoutControlItem23";
+            this.layoutControlItem23.Size = new System.Drawing.Size(625, 24);
+            this.layoutControlItem23.Text = "이벤트명";
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(50, 14);
             // 
             // splitterControl1
             // 
@@ -2536,7 +2537,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
@@ -2546,6 +2546,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);

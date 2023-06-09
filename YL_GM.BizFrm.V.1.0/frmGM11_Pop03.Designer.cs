@@ -48,15 +48,20 @@
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.bthNew = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dt1T = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dt1F = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dt1T.Properties.CalendarTimeProperties)).BeginInit();
@@ -92,8 +97,9 @@
             this.efwGridControl1.PKColumns = ((System.Collections.ArrayList)(resources.GetObject("efwGridControl1.PKColumns")));
             this.efwGridControl1.PrevRowHandle = -2147483648;
             this.efwGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemCheckEdit2});
-            this.efwGridControl1.Size = new System.Drawing.Size(1296, 467);
+            this.repositoryItemCheckEdit2,
+            this.repositoryItemCheckEdit1});
+            this.efwGridControl1.Size = new System.Drawing.Size(1454, 467);
             this.efwGridControl1.TabIndex = 47;
             this.efwGridControl1.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -122,7 +128,10 @@
             this.gridColumn9,
             this.gridColumn11,
             this.gridColumn12,
-            this.gridColumn13});
+            this.gridColumn13,
+            this.gridColumn14,
+            this.gridColumn15,
+            this.gridColumn16});
             this.gridView1.DetailHeight = 408;
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -263,6 +272,23 @@
             this.repositoryItemCheckEdit2.ValueChecked = "Y";
             this.repositoryItemCheckEdit2.ValueUnchecked = "N";
             // 
+            // gridColumn14
+            // 
+            this.gridColumn14.Caption = "도매가 유무";
+            this.gridColumn14.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.gridColumn14.FieldName = "show_level";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.AllowEdit = false;
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 13;
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.ValueChecked = "2";
+            this.repositoryItemCheckEdit1.ValueUnchecked = "0";
+            // 
             // efwPanelControl1
             // 
             this.efwPanelControl1.Controls.Add(this.bthNew);
@@ -273,7 +299,7 @@
             this.efwPanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efwPanelControl1.Location = new System.Drawing.Point(0, 0);
             this.efwPanelControl1.Name = "efwPanelControl1";
-            this.efwPanelControl1.Size = new System.Drawing.Size(1296, 58);
+            this.efwPanelControl1.Size = new System.Drawing.Size(1454, 58);
             this.efwPanelControl1.TabIndex = 46;
             // 
             // bthNew
@@ -337,11 +363,29 @@
             this.efwLabel1.TabIndex = 47;
             this.efwLabel1.Text = "기간";
             // 
+            // gridColumn15
+            // 
+            this.gridColumn15.Caption = "전화번호";
+            this.gridColumn15.FieldName = "u_cell_num";
+            this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.OptionsColumn.AllowEdit = false;
+            this.gridColumn15.Visible = true;
+            this.gridColumn15.VisibleIndex = 14;
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.Caption = "주소";
+            this.gridColumn16.FieldName = "u_addr";
+            this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.OptionsColumn.AllowEdit = false;
+            this.gridColumn16.Visible = true;
+            this.gridColumn16.VisibleIndex = 15;
+            // 
             // frmGM11_Pop03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 525);
+            this.ClientSize = new System.Drawing.Size(1454, 525);
             this.Controls.Add(this.efwGridControl1);
             this.Controls.Add(this.efwPanelControl1);
             this.Name = "frmGM11_Pop03";
@@ -351,6 +395,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
@@ -386,5 +431,9 @@
         private Easy.Framework.WinForm.Control.efwDateEdit dt1F;
         private Easy.Framework.WinForm.Control.efwLabel efwLabel1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
     }
 }
