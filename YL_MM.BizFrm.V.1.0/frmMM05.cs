@@ -243,6 +243,10 @@ namespace YL_MM.BizFrm
             {
                 Open4();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
+            {
+                Open5();
+            }
         }
 
         public void Open2()
@@ -406,6 +410,46 @@ namespace YL_MM.BizFrm
 
                             efwGridControl3.DataBind(ds);
                             this.efwGridControl3.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        public void Open5()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                string sLevel = string.Empty;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM05_SELECT_07", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar);
+                        cmd.Parameters[0].Value = txtLogin_Query.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+
+                            efwGridControl6.DataBind(ds);
+                            this.efwGridControl6.MyGridView.BestFitColumns();
                         }
                     }
                 }
@@ -1021,6 +1065,19 @@ namespace YL_MM.BizFrm
                 Search();
         }
 
+        private void txtLogin_Query_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
+        }
 
+        private void gridView3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(gridView3.GetFocusedDisplayText());
+                e.Handled = true;
+            }
+        }
     }
 }

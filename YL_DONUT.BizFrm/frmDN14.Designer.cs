@@ -172,6 +172,7 @@
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl4 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.efwLabel41 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtgd_biz_rate = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel40 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtD_Use_Amt = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -271,7 +272,6 @@
             this.cmbCate_Code2 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.txtLOWEST_PRICE = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.cmbCate_Code1 = new Easy.Framework.WinForm.Control.efwLookUpEdit();
-            this.efwLabel41 = new Easy.Framework.WinForm.Control.efwLabel();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -1787,6 +1787,16 @@
             this.efwGroupControl4.TabIndex = 68;
             this.efwGroupControl4.Text = "수정";
             // 
+            // efwLabel41
+            // 
+            this.efwLabel41.EraserGroup = null;
+            this.efwLabel41.IsMultiLang = false;
+            this.efwLabel41.Location = new System.Drawing.Point(320, 190);
+            this.efwLabel41.Name = "efwLabel41";
+            this.efwLabel41.Size = new System.Drawing.Size(147, 14);
+            this.efwLabel41.TabIndex = 93;
+            this.efwLabel41.Text = "(일반회원 10%, 비즈회원5%)";
+            // 
             // txtgd_biz_rate
             // 
             this.txtgd_biz_rate.EditValue = "0";
@@ -3191,16 +3201,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbCate_Code1.Size = new System.Drawing.Size(337, 20);
             this.cmbCate_Code1.TabIndex = 0;
-            // 
-            // efwLabel41
-            // 
-            this.efwLabel41.EraserGroup = null;
-            this.efwLabel41.IsMultiLang = false;
-            this.efwLabel41.Location = new System.Drawing.Point(320, 190);
-            this.efwLabel41.Name = "efwLabel41";
-            this.efwLabel41.Size = new System.Drawing.Size(147, 14);
-            this.efwLabel41.TabIndex = 93;
-            this.efwLabel41.Text = "(일반회원 10%, 비즈회원5%)";
             // 
             // frmDN14
             // 

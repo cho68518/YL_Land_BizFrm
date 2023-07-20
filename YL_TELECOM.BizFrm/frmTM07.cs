@@ -105,6 +105,7 @@ namespace YL_TELECOM.BizFrm
               , new ColumnControlSet("agency_type", cmbAgencyType)
               , new ColumnControlSet("is_send", chkIs_Send)
               , new ColumnControlSet("send_remark", txtSend_Remark)
+              , new ColumnControlSet("login_id", txtLogin_id)
             );
             this.efwGridControl3.Click += efwGridControl3_Click;
 
@@ -318,6 +319,10 @@ namespace YL_TELECOM.BizFrm
             {
                 Open5();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
+            {
+                Open6();
+            }
         }
 
         private void Open1()
@@ -486,7 +491,39 @@ namespace YL_TELECOM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+        private void Open6()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
 
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM07_SELECT_08", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtQuery.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl6.DataBind(ds);
+                            this.efwGridControl6.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
 
         private void BtnNEW_Click(object sender, EventArgs e)
         {
@@ -814,6 +851,10 @@ namespace YL_TELECOM.BizFrm
                             cmd.Parameters["i_send_remark"].Value = txtSend_Remark.EditValue;
                             cmd.Parameters["i_send_remark"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_Login_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Login_id"].Value = txtLogin_id.EditValue;
+                            cmd.Parameters["i_Login_id"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -827,6 +868,15 @@ namespace YL_TELECOM.BizFrm
                     MessageAgent.MessageShow(MessageType.Error, ex.ToString());
                 }
                 Search();
+            }
+        }
+
+        private void advBandedGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(advBandedGridView1.GetFocusedDisplayText());
+                e.Handled = true;
             }
         }
     }

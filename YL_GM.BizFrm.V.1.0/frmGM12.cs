@@ -47,7 +47,20 @@ namespace YL_GM.BizFrm
             this.IsPrint = false;
             this.IsExcel = false;
 
+
+
             rbis_biz.EditValue = "0";
+            
+            dtStart_Date.EditValue = DateTime.Now.ToString("yyyy-MM") + "-01";
+            dtEnd_Date.EditValue = DateTime.Now;
+            rbCom.EditValue = "1";
+
+            this.efwLabel1.Text = "년도";
+            this.dtS_DATE.Visible = true;
+            this.dtStart_Date.Visible = false;
+            this.dtEnd_Date.Visible = false;
+            this.rbis_biz.Visible = true;
+            this.efwLabel2.Visible = false;
 
             advBandedGridView1.Columns["input1"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["input1"].SummaryItem.FieldName = "input1";
@@ -331,8 +344,20 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["totamt"].SummaryItem.DisplayFormat = "{0:c}";
 
         }
-
         public override void Search()
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open1();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open2();
+
+            }
+        }
+
+        private void Open1()
         {
             try
             {
@@ -370,6 +395,47 @@ namespace YL_GM.BizFrm
             }
         }
 
+        private void Open2()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM12_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_start_date", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = dtStart_Date.EditValue.ToString().Substring(0, 10);
+
+                        cmd.Parameters.Add("i_end_date", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[1].Value = dtEnd_Date.EditValue.ToString().Substring(0, 10);
+
+                        cmd.Parameters.Add("i_com", MySqlDbType.VarChar, 1);
+                        cmd.Parameters[2].Value = rbCom.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl2.DataBind(ds);
+                            //this.efwGridControl2.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+                //ChartCreat1();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+
         private void btnDetail1_Click(object sender, EventArgs e)
         {
             popup1 = new frmGM12_Pop01();
@@ -391,6 +457,29 @@ namespace YL_GM.BizFrm
         private void rbis_biz_SelectedIndexChanged(object sender, EventArgs e)
         {
             Search();
+        }
+
+        private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                this.efwLabel1.Text = "년도";
+                this.dtS_DATE.Visible = true;
+                this.dtStart_Date.Visible = false;
+                this.dtEnd_Date.Visible = false;
+                this.rbis_biz.Visible = true;
+                this.efwLabel2.Visible = false;
+            }
+
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                this.efwLabel1.Text = "일자";
+                this.dtS_DATE.Visible = false;
+                this.dtStart_Date.Visible = true;
+                this.dtEnd_Date.Visible = true;
+                this.rbis_biz.Visible = false;
+                this.efwLabel2.Visible = true;
+            }
         }
     }
 }

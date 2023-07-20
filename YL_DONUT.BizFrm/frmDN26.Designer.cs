@@ -424,6 +424,27 @@
             this.repositoryItemCheckEdit14 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit16 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.efwGroupControl2 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.txtGshop_Relations_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtTeam_Relations_ID = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtTeam_Relations = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtGshop_Relations = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.BtnMemberSch = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.txtPurchase_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtTotal_Cost = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtU_Chef_Level = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtU_Name = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtU_Nickname = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnAddress_Save = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtO_Code = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGridControl6 = new Easy.Framework.WinForm.Control.efwGridControl();
             this.advBandedGridView2 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
             this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -458,6 +479,8 @@
             this.gridBand8 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn35 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn36 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn72 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn73 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.repositoryItemLookUpEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemMemoEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -557,6 +580,10 @@
             this.repositoryItemButtonEdit24 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit25 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemCheckEdit37 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.txtTeam_Cashback = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.txtCashback = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rbis_biz.Properties)).BeginInit();
@@ -634,6 +661,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit16)).BeginInit();
             this.xtraTabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).BeginInit();
+            this.efwGroupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGshop_Relations_ID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTeam_Relations_ID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTeam_Relations.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGshop_Relations.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPurchase_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal_Cost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtU_Chef_Level.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtU_Name.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtU_Nickname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit21)).BeginInit();
@@ -686,6 +725,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTeam_Cashback.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCashback.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl1
@@ -3292,11 +3333,287 @@
             // 
             // xtraTabPage6
             // 
+            this.xtraTabPage6.Controls.Add(this.efwGroupControl2);
+            this.xtraTabPage6.Controls.Add(this.splitterControl1);
             this.xtraTabPage6.Controls.Add(this.efwGridControl6);
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Name = "xtraTabPage6";
             this.xtraTabPage6.Size = new System.Drawing.Size(1373, 650);
             this.xtraTabPage6.Text = "헬퍼/G헤어샵 주간 캐시백";
+            // 
+            // efwGroupControl2
+            // 
+            this.efwGroupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwGroupControl2.CaptionImageOptions.Image")));
+            this.efwGroupControl2.Controls.Add(this.txtTeam_Cashback);
+            this.efwGroupControl2.Controls.Add(this.txtCashback);
+            this.efwGroupControl2.Controls.Add(this.label1);
+            this.efwGroupControl2.Controls.Add(this.label2);
+            this.efwGroupControl2.Controls.Add(this.txtGshop_Relations_ID);
+            this.efwGroupControl2.Controls.Add(this.txtTeam_Relations_ID);
+            this.efwGroupControl2.Controls.Add(this.txtTeam_Relations);
+            this.efwGroupControl2.Controls.Add(this.txtGshop_Relations);
+            this.efwGroupControl2.Controls.Add(this.efwSimpleButton1);
+            this.efwGroupControl2.Controls.Add(this.BtnMemberSch);
+            this.efwGroupControl2.Controls.Add(this.txtPurchase_Cost);
+            this.efwGroupControl2.Controls.Add(this.txtTotal_Cost);
+            this.efwGroupControl2.Controls.Add(this.txtU_Chef_Level);
+            this.efwGroupControl2.Controls.Add(this.txtU_Name);
+            this.efwGroupControl2.Controls.Add(this.txtU_Nickname);
+            this.efwGroupControl2.Controls.Add(this.label17);
+            this.efwGroupControl2.Controls.Add(this.btnAddress_Save);
+            this.efwGroupControl2.Controls.Add(this.label11);
+            this.efwGroupControl2.Controls.Add(this.label9);
+            this.efwGroupControl2.Controls.Add(this.label8);
+            this.efwGroupControl2.Controls.Add(this.label7);
+            this.efwGroupControl2.Controls.Add(this.txtO_Code);
+            this.efwGroupControl2.Controls.Add(this.label6);
+            this.efwGroupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efwGroupControl2.IsMultiLang = false;
+            this.efwGroupControl2.Location = new System.Drawing.Point(0, 510);
+            this.efwGroupControl2.Name = "efwGroupControl2";
+            this.efwGroupControl2.Size = new System.Drawing.Size(1373, 140);
+            this.efwGroupControl2.TabIndex = 48;
+            this.efwGroupControl2.Text = "캐시백 / 추천인 수정";
+            // 
+            // txtGshop_Relations_ID
+            // 
+            this.txtGshop_Relations_ID.EditValue2 = null;
+            this.txtGshop_Relations_ID.EraserGroup = "CLR1";
+            this.txtGshop_Relations_ID.Location = new System.Drawing.Point(1013, 37);
+            this.txtGshop_Relations_ID.Name = "txtGshop_Relations_ID";
+            this.txtGshop_Relations_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtGshop_Relations_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGshop_Relations_ID.RequireMessage = null;
+            this.txtGshop_Relations_ID.Size = new System.Drawing.Size(101, 20);
+            this.txtGshop_Relations_ID.TabIndex = 84;
+            this.txtGshop_Relations_ID.Visible = false;
+            // 
+            // txtTeam_Relations_ID
+            // 
+            this.txtTeam_Relations_ID.EditValue2 = null;
+            this.txtTeam_Relations_ID.EraserGroup = "CLR1";
+            this.txtTeam_Relations_ID.Location = new System.Drawing.Point(1013, 64);
+            this.txtTeam_Relations_ID.Name = "txtTeam_Relations_ID";
+            this.txtTeam_Relations_ID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtTeam_Relations_ID.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTeam_Relations_ID.RequireMessage = null;
+            this.txtTeam_Relations_ID.Size = new System.Drawing.Size(101, 20);
+            this.txtTeam_Relations_ID.TabIndex = 83;
+            this.txtTeam_Relations_ID.Visible = false;
+            // 
+            // txtTeam_Relations
+            // 
+            this.txtTeam_Relations.EditValue2 = null;
+            this.txtTeam_Relations.EraserGroup = "CLR1";
+            this.txtTeam_Relations.Location = new System.Drawing.Point(684, 63);
+            this.txtTeam_Relations.Name = "txtTeam_Relations";
+            this.txtTeam_Relations.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtTeam_Relations.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTeam_Relations.RequireMessage = null;
+            this.txtTeam_Relations.Size = new System.Drawing.Size(84, 20);
+            this.txtTeam_Relations.TabIndex = 82;
+            this.txtTeam_Relations.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.txtTeam_Relations_EditValueChanging);
+            // 
+            // txtGshop_Relations
+            // 
+            this.txtGshop_Relations.EditValue2 = null;
+            this.txtGshop_Relations.EraserGroup = "CLR1";
+            this.txtGshop_Relations.Location = new System.Drawing.Point(684, 36);
+            this.txtGshop_Relations.Name = "txtGshop_Relations";
+            this.txtGshop_Relations.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtGshop_Relations.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGshop_Relations.RequireMessage = null;
+            this.txtGshop_Relations.Size = new System.Drawing.Size(84, 20);
+            this.txtGshop_Relations.TabIndex = 81;
+            this.txtGshop_Relations.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.txtGshop_Relations_EditValueChanging);
+            // 
+            // efwSimpleButton1
+            // 
+            this.efwSimpleButton1.ButtonType = Easy.Framework.Util.BtnType.Search;
+            this.efwSimpleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
+            this.efwSimpleButton1.IsMultiLang = false;
+            this.efwSimpleButton1.Location = new System.Drawing.Point(774, 62);
+            this.efwSimpleButton1.Name = "efwSimpleButton1";
+            this.efwSimpleButton1.Size = new System.Drawing.Size(75, 22);
+            this.efwSimpleButton1.TabIndex = 80;
+            this.efwSimpleButton1.Text = "회원검색";
+            this.efwSimpleButton1.Click += new System.EventHandler(this.efwSimpleButton1_Click);
+            // 
+            // BtnMemberSch
+            // 
+            this.BtnMemberSch.ButtonType = Easy.Framework.Util.BtnType.Search;
+            this.BtnMemberSch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMemberSch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnMemberSch.ImageOptions.Image")));
+            this.BtnMemberSch.IsMultiLang = false;
+            this.BtnMemberSch.Location = new System.Drawing.Point(774, 35);
+            this.BtnMemberSch.Name = "BtnMemberSch";
+            this.BtnMemberSch.Size = new System.Drawing.Size(75, 22);
+            this.BtnMemberSch.TabIndex = 79;
+            this.BtnMemberSch.Text = "회원검색";
+            this.BtnMemberSch.Click += new System.EventHandler(this.BtnMemberSch_Click);
+            // 
+            // txtPurchase_Cost
+            // 
+            this.txtPurchase_Cost.EditValue = "0";
+            this.txtPurchase_Cost.EditValue2 = null;
+            this.txtPurchase_Cost.Enabled = false;
+            this.txtPurchase_Cost.Location = new System.Drawing.Point(384, 63);
+            this.txtPurchase_Cost.Name = "txtPurchase_Cost";
+            this.txtPurchase_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPurchase_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtPurchase_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtPurchase_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPurchase_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtPurchase_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPurchase_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPurchase_Cost.RequireMessage = null;
+            this.txtPurchase_Cost.Size = new System.Drawing.Size(86, 20);
+            this.txtPurchase_Cost.TabIndex = 78;
+            // 
+            // txtTotal_Cost
+            // 
+            this.txtTotal_Cost.EditValue = "0";
+            this.txtTotal_Cost.EditValue2 = null;
+            this.txtTotal_Cost.Enabled = false;
+            this.txtTotal_Cost.Location = new System.Drawing.Point(384, 36);
+            this.txtTotal_Cost.Name = "txtTotal_Cost";
+            this.txtTotal_Cost.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTotal_Cost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotal_Cost.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtTotal_Cost.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTotal_Cost.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtTotal_Cost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTotal_Cost.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTotal_Cost.RequireMessage = null;
+            this.txtTotal_Cost.Size = new System.Drawing.Size(86, 20);
+            this.txtTotal_Cost.TabIndex = 77;
+            // 
+            // txtU_Chef_Level
+            // 
+            this.txtU_Chef_Level.EditValue2 = null;
+            this.txtU_Chef_Level.Enabled = false;
+            this.txtU_Chef_Level.EraserGroup = "CLR1";
+            this.txtU_Chef_Level.Location = new System.Drawing.Point(94, 116);
+            this.txtU_Chef_Level.Name = "txtU_Chef_Level";
+            this.txtU_Chef_Level.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtU_Chef_Level.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtU_Chef_Level.RequireMessage = null;
+            this.txtU_Chef_Level.Size = new System.Drawing.Size(193, 20);
+            this.txtU_Chef_Level.TabIndex = 76;
+            // 
+            // txtU_Name
+            // 
+            this.txtU_Name.EditValue2 = null;
+            this.txtU_Name.Enabled = false;
+            this.txtU_Name.EraserGroup = "CLR1";
+            this.txtU_Name.Location = new System.Drawing.Point(94, 89);
+            this.txtU_Name.Name = "txtU_Name";
+            this.txtU_Name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtU_Name.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtU_Name.RequireMessage = null;
+            this.txtU_Name.Size = new System.Drawing.Size(193, 20);
+            this.txtU_Name.TabIndex = 75;
+            // 
+            // txtU_Nickname
+            // 
+            this.txtU_Nickname.EditValue2 = null;
+            this.txtU_Nickname.Enabled = false;
+            this.txtU_Nickname.EraserGroup = "CLR1";
+            this.txtU_Nickname.Location = new System.Drawing.Point(94, 63);
+            this.txtU_Nickname.Name = "txtU_Nickname";
+            this.txtU_Nickname.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtU_Nickname.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtU_Nickname.RequireMessage = null;
+            this.txtU_Nickname.Size = new System.Drawing.Size(193, 20);
+            this.txtU_Nickname.TabIndex = 74;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(23, 39);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(47, 14);
+            this.label17.TabIndex = 69;
+            this.label17.Text = "주문번호";
+            // 
+            // btnAddress_Save
+            // 
+            this.btnAddress_Save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddress_Save.ImageOptions.Image")));
+            this.btnAddress_Save.IsMultiLang = false;
+            this.btnAddress_Save.Location = new System.Drawing.Point(876, 35);
+            this.btnAddress_Save.Name = "btnAddress_Save";
+            this.btnAddress_Save.Size = new System.Drawing.Size(84, 48);
+            this.btnAddress_Save.TabIndex = 63;
+            this.btnAddress_Save.Text = "저장";
+            this.btnAddress_Save.Click += new System.EventHandler(this.btnAddress_Save_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(324, 66);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 14);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "결재금액";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(324, 39);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 14);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "주문금액";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(23, 119);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 14);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "회원등급";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(23, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(27, 14);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "이름";
+            // 
+            // txtO_Code
+            // 
+            this.txtO_Code.EditValue2 = null;
+            this.txtO_Code.Enabled = false;
+            this.txtO_Code.EraserGroup = "CLR1";
+            this.txtO_Code.Location = new System.Drawing.Point(94, 36);
+            this.txtO_Code.Name = "txtO_Code";
+            this.txtO_Code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtO_Code.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtO_Code.RequireMessage = null;
+            this.txtO_Code.Size = new System.Drawing.Size(193, 20);
+            this.txtO_Code.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(23, 66);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 14);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "닉네임";
+            // 
+            // splitterControl1
+            // 
+            this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitterControl1.Location = new System.Drawing.Point(0, 505);
+            this.splitterControl1.Name = "splitterControl1";
+            this.splitterControl1.Size = new System.Drawing.Size(1373, 5);
+            this.splitterControl1.TabIndex = 47;
+            this.splitterControl1.TabStop = false;
             // 
             // efwGridControl6
             // 
@@ -3308,7 +3625,7 @@
             serviceInfo16.ProcName = "";
             serviceInfo16.UserParams = null;
             this.efwGridControl6.DeleteServiceInfo = serviceInfo16;
-            this.efwGridControl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efwGridControl6.Dock = System.Windows.Forms.DockStyle.Top;
             serviceInfo17.InstanceName = "";
             serviceInfo17.IsUserIDAdd = true;
             serviceInfo17.ParamsInfo = null;
@@ -3339,7 +3656,7 @@
             this.repositoryItemCheckEdit25,
             this.repositoryItemCheckEdit24,
             this.repositoryItemCheckEdit23});
-            this.efwGridControl6.Size = new System.Drawing.Size(1373, 650);
+            this.efwGridControl6.Size = new System.Drawing.Size(1373, 505);
             this.efwGridControl6.TabIndex = 46;
             this.efwGridControl6.TableName = "";
             serviceInfo18.InstanceName = "";
@@ -3388,7 +3705,9 @@
             this.bandedGridColumn34,
             this.bandedGridColumn35,
             this.bandedGridColumn36,
-            this.bandedGridColumn37});
+            this.bandedGridColumn37,
+            this.bandedGridColumn72,
+            this.bandedGridColumn73});
             this.advBandedGridView2.FooterPanelHeight = 0;
             this.advBandedGridView2.GridControl = this.efwGridControl6;
             this.advBandedGridView2.GroupRowHeight = 0;
@@ -3617,6 +3936,7 @@
             this.bandedGridColumn37.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn37.FieldName = "o_purchase_cost";
             this.bandedGridColumn37.Name = "bandedGridColumn37";
+            this.bandedGridColumn37.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn37.Visible = true;
             // 
             // bandedGridColumn30
@@ -3656,13 +3976,17 @@
             this.bandedGridColumn29.Caption = "헬퍼/G샵 닉네임";
             this.bandedGridColumn29.FieldName = "gshop_nickname";
             this.bandedGridColumn29.Name = "bandedGridColumn29";
+            this.bandedGridColumn29.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn29.Visible = true;
             // 
             // bandedGridColumn32
             // 
             this.bandedGridColumn32.Caption = "헬퍼/G샵 캐시백";
+            this.bandedGridColumn32.DisplayFormat.FormatString = "###,###,###";
+            this.bandedGridColumn32.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn32.FieldName = "cashback";
             this.bandedGridColumn32.Name = "bandedGridColumn32";
+            this.bandedGridColumn32.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn32.Visible = true;
             // 
             // gridBand7
@@ -3685,13 +4009,17 @@
             this.bandedGridColumn33.Caption = "G헬퍼닉네임";
             this.bandedGridColumn33.FieldName = "team_nickname";
             this.bandedGridColumn33.Name = "bandedGridColumn33";
+            this.bandedGridColumn33.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn33.Visible = true;
             // 
             // bandedGridColumn34
             // 
             this.bandedGridColumn34.Caption = "G헬퍼캐시백";
+            this.bandedGridColumn34.DisplayFormat.FormatString = "###,###,###";
+            this.bandedGridColumn34.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn34.FieldName = "team_cashback";
             this.bandedGridColumn34.Name = "bandedGridColumn34";
+            this.bandedGridColumn34.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn34.Visible = true;
             // 
             // gridBand8
@@ -3712,14 +4040,34 @@
             this.bandedGridColumn35.Caption = "이사닉네임";
             this.bandedGridColumn35.FieldName = "top_nickname";
             this.bandedGridColumn35.Name = "bandedGridColumn35";
+            this.bandedGridColumn35.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn35.Visible = true;
             // 
             // bandedGridColumn36
             // 
             this.bandedGridColumn36.Caption = "이사캐시백";
+            this.bandedGridColumn36.DisplayFormat.FormatString = "###,###,###";
+            this.bandedGridColumn36.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn36.FieldName = "top_cashback";
             this.bandedGridColumn36.Name = "bandedGridColumn36";
+            this.bandedGridColumn36.OptionsColumn.AllowEdit = false;
             this.bandedGridColumn36.Visible = true;
+            // 
+            // bandedGridColumn72
+            // 
+            this.bandedGridColumn72.Caption = "헬퍼/G샵";
+            this.bandedGridColumn72.FieldName = "gshop_relations";
+            this.bandedGridColumn72.Name = "bandedGridColumn72";
+            this.bandedGridColumn72.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn72.Visible = true;
+            // 
+            // bandedGridColumn73
+            // 
+            this.bandedGridColumn73.Caption = "G헬퍼";
+            this.bandedGridColumn73.FieldName = "team_relations";
+            this.bandedGridColumn73.Name = "bandedGridColumn73";
+            this.bandedGridColumn73.OptionsColumn.AllowEdit = false;
+            this.bandedGridColumn73.Visible = true;
             // 
             // repositoryItemLookUpEdit6
             // 
@@ -4778,6 +5126,58 @@
             this.repositoryItemCheckEdit37.ValueChecked = "Y";
             this.repositoryItemCheckEdit37.ValueUnchecked = "N";
             // 
+            // txtTeam_Cashback
+            // 
+            this.txtTeam_Cashback.EditValue = "0";
+            this.txtTeam_Cashback.EditValue2 = null;
+            this.txtTeam_Cashback.Location = new System.Drawing.Point(578, 63);
+            this.txtTeam_Cashback.Name = "txtTeam_Cashback";
+            this.txtTeam_Cashback.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTeam_Cashback.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTeam_Cashback.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtTeam_Cashback.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTeam_Cashback.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtTeam_Cashback.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTeam_Cashback.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTeam_Cashback.RequireMessage = null;
+            this.txtTeam_Cashback.Size = new System.Drawing.Size(86, 20);
+            this.txtTeam_Cashback.TabIndex = 88;
+            // 
+            // txtCashback
+            // 
+            this.txtCashback.EditValue = "0";
+            this.txtCashback.EditValue2 = null;
+            this.txtCashback.Location = new System.Drawing.Point(578, 36);
+            this.txtCashback.Name = "txtCashback";
+            this.txtCashback.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtCashback.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtCashback.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtCashback.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtCashback.Properties.DisplayFormat.FormatString = "###,###,##0";
+            this.txtCashback.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCashback.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCashback.RequireMessage = null;
+            this.txtCashback.Size = new System.Drawing.Size(86, 20);
+            this.txtCashback.TabIndex = 87;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(491, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 14);
+            this.label1.TabIndex = 86;
+            this.label1.Text = "G헬퍼 금액";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(491, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 14);
+            this.label2.TabIndex = 85;
+            this.label2.Text = "헬퍼/G샵 금액";
+            // 
             // frmDN26
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -4869,6 +5269,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit16)).EndInit();
             this.xtraTabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl2)).EndInit();
+            this.efwGroupControl2.ResumeLayout(false);
+            this.efwGroupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGshop_Relations_ID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTeam_Relations_ID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTeam_Relations.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGshop_Relations.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPurchase_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal_Cost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtU_Chef_Level.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtU_Name.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtU_Nickname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtO_Code.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit21)).EndInit();
@@ -4921,6 +5334,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTeam_Cashback.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCashback.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5291,5 +5706,32 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit24;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit25;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit37;
+        private DevExpress.XtraEditors.SplitterControl splitterControl1;
+        private Easy.Framework.WinForm.Control.efwGroupControl efwGroupControl2;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtU_Chef_Level;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtU_Name;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtU_Nickname;
+        private System.Windows.Forms.Label label17;
+        private Easy.Framework.WinForm.Control.efwSimpleButton btnAddress_Save;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtO_Code;
+        private System.Windows.Forms.Label label6;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtPurchase_Cost;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtTotal_Cost;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtTeam_Relations;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtGshop_Relations;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton1;
+        private Easy.Framework.WinForm.Control.efwSimpleButton BtnMemberSch;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtGshop_Relations_ID;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtTeam_Relations_ID;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn72;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn73;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtTeam_Cashback;
+        private Easy.Framework.WinForm.Control.efwTextEdit txtCashback;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

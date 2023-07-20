@@ -175,6 +175,12 @@ namespace YL_TELECOM.BizFrm
             this.efwLabel4 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwSimpleButton4 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton3 = new Easy.Framework.WinForm.Control.efwSimpleButton();
+            this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rbG_Prod.Properties)).BeginInit();
@@ -1241,7 +1247,13 @@ namespace YL_TELECOM.BizFrm
             this.gridColumn5,
             this.gridColumn7,
             this.gridColumn37,
-            this.gridColumn38});
+            this.gridColumn38,
+            this.gridColumn39,
+            this.gridColumn40,
+            this.gridColumn41,
+            this.gridColumn42,
+            this.gridColumn43,
+            this.gridColumn44});
             this.gridView1.GridControl = this.efwGridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -1686,6 +1698,59 @@ namespace YL_TELECOM.BizFrm
             this.efwSimpleButton3.Text = "전체선택";
             this.efwSimpleButton3.Click += new System.EventHandler(this.efwSimpleButton3_Click);
             // 
+            // gridColumn39
+            // 
+            this.gridColumn39.Caption = "4개월 연장";
+            this.gridColumn39.FieldName = "month4";
+            this.gridColumn39.Name = "gridColumn39";
+            this.gridColumn39.Visible = true;
+            this.gridColumn39.VisibleIndex = 9;
+            // 
+            // gridColumn40
+            // 
+            this.gridColumn40.Caption = "4개월 충전율";
+            this.gridColumn40.FieldName = "rate4";
+            this.gridColumn40.Name = "gridColumn40";
+            this.gridColumn40.OptionsColumn.AllowEdit = false;
+            this.gridColumn40.Visible = true;
+            this.gridColumn40.VisibleIndex = 10;
+            // 
+            // gridColumn41
+            // 
+            this.gridColumn41.Caption = "5개월 연장";
+            this.gridColumn41.FieldName = "month5";
+            this.gridColumn41.Name = "gridColumn41";
+            this.gridColumn41.OptionsColumn.AllowEdit = false;
+            this.gridColumn41.Visible = true;
+            this.gridColumn41.VisibleIndex = 11;
+            // 
+            // gridColumn42
+            // 
+            this.gridColumn42.Caption = "5개월 충전율";
+            this.gridColumn42.FieldName = "rate5";
+            this.gridColumn42.Name = "gridColumn42";
+            this.gridColumn42.OptionsColumn.AllowEdit = false;
+            this.gridColumn42.Visible = true;
+            this.gridColumn42.VisibleIndex = 12;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.Caption = "6개월 연장";
+            this.gridColumn43.FieldName = "month6";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.OptionsColumn.AllowEdit = false;
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 13;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.Caption = "6개월 충전율";
+            this.gridColumn44.FieldName = "rate6";
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.OptionsColumn.AllowEdit = false;
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 14;
+            // 
             // frmTM11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1929,5 +1994,11 @@ namespace YL_TELECOM.BizFrm
         private Easy.Framework.WinForm.Control.efwRadioGroup rbG_Prod;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
     }
 }

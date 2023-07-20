@@ -16,6 +16,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Columns;
 using YL_DONUT.BizFrm.Dlg;
+using DevExpress.Utils;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+
+
 
 namespace YL_DONUT.BizFrm
 {

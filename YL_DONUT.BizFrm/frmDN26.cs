@@ -15,12 +15,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YL_DONUT.BizFrm.Dlg;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Columns;
+
+
 
 namespace YL_DONUT.BizFrm
 {
     public partial class frmDN26 : FrmBase
     {
+        frmMember_info popup_member;
         frmDN26_Pop01 popup;
+
+
         public frmDN26()
         {
             InitializeComponent();
@@ -60,7 +68,44 @@ namespace YL_DONUT.BizFrm
             gridView1.Columns["o_total_cost"].SummaryItem.DisplayFormat = "{0:c}";
             rbis_biz.EditValue = "1";
             this.rbis_biz.Visible = false;
+
+            advBandedGridView2.OptionsView.ShowFooter = true;
+            this.efwGridControl6.BindControlSet(
+
+               new ColumnControlSet("o_code", txtO_Code)
+             , new ColumnControlSet("u_nickname", txtU_Nickname)
+             , new ColumnControlSet("o_receive_name", txtU_Name)
+             , new ColumnControlSet("u_chef_level", txtU_Chef_Level)
+             , new ColumnControlSet("o_total_cost", txtTotal_Cost)
+             , new ColumnControlSet("o_purchase_cost", txtPurchase_Cost)
+             , new ColumnControlSet("gshop_nickname", txtGshop_Relations)
+             , new ColumnControlSet("team_nickname", txtTeam_Relations)
+             , new ColumnControlSet("gshop_relations", txtGshop_Relations_ID)
+             , new ColumnControlSet("team_relations", txtTeam_Relations_ID)
+             , new ColumnControlSet("cashback", txtCashback)
+             , new ColumnControlSet("team_cashback", txtTeam_Cashback)
+
+             ); 
+
+            this.efwGridControl1.Click += efwGridControl1_Click;
+
             setCmb();
+        }
+        private void efwGridControl1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl1.GetSelectedRow(0);
+            //btnPOST_NO.EditValue = "";
+
+            //if (dr != null && dr["sido_code"].ToString() != "")
+            //{
+            //    this.cmbTAREA1.EditValue = dr["sido_code"].ToString();
+            //    this.cmbSAREA1.EditValue = dr["gugun_code"].ToString();
+            //}
+            //if (dr != null && dr["post_no"].ToString() != "")
+            //{
+            //    this.btnPOST_NO.EditValue2 = dr["post_no"].ToString();
+            //    this.btnPOST_NO.Text = dr["post_no"].ToString();
+            //}
         }
 
         private void setCmb()
@@ -799,5 +844,108 @@ namespace YL_DONUT.BizFrm
                 this.gridView4.Columns[6].Caption = "40%캐시백(G멀티샵)";
             }
         }
+
+        private void BtnMemberSch_Click(object sender, EventArgs e)
+        {
+            popup_member = new frmMember_info
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+                MEMBER_TYPE = "ALL",
+            };
+            popup_member.FormClosed += popup_FormClosed1;
+            popup_member.ShowDialog();
+        }
+
+        private void popup_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            popup_member.FormClosed -= popup_FormClosed1;
+            if (popup_member.DialogResult == DialogResult.OK)
+            {
+                this.txtGshop_Relations.EditValue = popup_member.U_NICKNAME;
+                this.txtGshop_Relations_ID.EditValue = popup_member.U_ID;
+            }
+            popup_member = null;
+        }
+
+        private void efwSimpleButton1_Click(object sender, EventArgs e)
+        {
+            popup_member = new frmMember_info
+            {
+                COMPANYCD = "YL01",
+                COMPANYNAME = "(주)와이엘랜드",
+                MEMBER_TYPE = "ALL",
+            };
+            popup_member.FormClosed += popup_FormClosed2;
+            popup_member.ShowDialog();
+        }
+        private void popup_FormClosed2(object sender, FormClosedEventArgs e)
+        {
+            popup_member.FormClosed -= popup_FormClosed2;
+            if (popup_member.DialogResult == DialogResult.OK)
+            {
+                this.txtTeam_Relations.EditValue = popup_member.U_NICKNAME;
+                this.txtTeam_Relations_ID.EditValue = popup_member.U_ID;
+            }
+            popup_member = null;
+        }
+
+        private void btnAddress_Save_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN26_SAVE_05", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_o_code", MySqlDbType.VarChar));
+                            cmd.Parameters["i_o_code"].Value = txtO_Code.EditValue;
+                            cmd.Parameters["i_o_code"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_cashback", MySqlDbType.Int32));
+                            cmd.Parameters["i_cashback"].Value = Convert.ToInt32(txtCashback.EditValue);
+                            cmd.Parameters["i_cashback"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_team_cashback", MySqlDbType.Int32));
+                            cmd.Parameters["i_team_cashback"].Value = Convert.ToInt32(txtTeam_Cashback.EditValue);
+                            cmd.Parameters["i_team_cashback"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_gshop_relations", MySqlDbType.VarChar));
+                            cmd.Parameters["i_gshop_relations"].Value = txtGshop_Relations_ID.EditValue;
+                            cmd.Parameters["i_gshop_relations"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_team_relations", MySqlDbType.VarChar));
+                            cmd.Parameters["i_team_relations"].Value = txtTeam_Relations_ID.EditValue;
+                            cmd.Parameters["i_team_relations"].Direction = ParameterDirection.Input;
+
+                            cmd.ExecuteNonQuery();
+
+                            MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+                Open1();
+            }
+        }
+
+        private void txtGshop_Relations_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        {
+            txtGshop_Relations_ID.EditValue = "";
+        }
+
+        private void txtTeam_Relations_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        {
+            txtTeam_Relations_ID.EditValue = "";
+        }
     }
-}
+}  

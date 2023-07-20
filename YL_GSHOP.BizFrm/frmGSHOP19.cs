@@ -40,12 +40,29 @@ namespace YL_GSHOP.BizFrm
             this.IsMenuVw = true;
             this.IsSearch = true;
             this.IsNewMode = false;
-            this.IsSave = false;
+            this.IsSave = true;
             this.IsDelete = false;
             this.IsCancel = false;
             this.IsPrint = false;
             this.IsExcel = false;
 
+
+            this.label2.Visible = false;
+            this.txtQRank1.Visible = false;
+            this.label3.Visible = false;
+            this.txtQRank2.Visible = false;
+
+            this.label4.Visible = true;
+            this.txtMD.Visible = true;
+            this.label6.Visible = true;
+            this.dtS_DATE.Visible = true;
+            this.dtE_DATE.Visible = true;
+            this.efwLabel8.Visible = true;
+            this.btnQuery.Visible = true;
+
+
+            dtS_DATE.EditValue = DateTime.Now;
+            dtE_DATE.EditValue = DateTime.Now;
 
             dtReg_Date.EditValue = DateTime.Now;
             gridView2.OptionsView.ShowFooter = true;
@@ -74,8 +91,49 @@ namespace YL_GSHOP.BizFrm
              , new ColumnControlSet("utube_nic", txtUtube_nic)
             );
             this.efwGridControl3.Click += efwGridControl3_Click;
+            SetCmb();
+        }
+
+        private void SetCmb()
+        {
+
+
+            using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+            {
+                con.Query = "SELECT  code_id as DCODE, code_nm as DNAME FROM domaadmin.tb_common_code " +
+                    "         where gcode_id = '00105' " +
+                    "         group by code_id, code_nm ";
+
+                DataSet ds = con.selectQueryDataSet();
+                DataTable retDT = ds.Tables[0];
+
+                repositoryItemLookUpEdit1.DataSource = retDT;
+                //컨트롤 초기화
+                InitCodeControl(repositoryItemLookUpEdit1);
+
+                repositoryItemLookUpEdit1.EndUpdate();
+            }
 
         }
+        private void SetLegacyCode_Mysql(RepositoryItemLookUpEdit cdControl, string codeGroup)
+        {
+            DataTable retDT = CodeAgent.GetLegacyCodeCollection(codeGroup);
+
+
+            cdControl.DataSource = retDT;
+            //컨트롤 초기화
+            InitCodeControl(cdControl);
+        }
+
+        private void InitCodeControl(object cdControl)
+        {
+            string DNAME = string.Empty;
+
+            DNAME = "DNAME";
+
+            CodeAgent.InitCodeControl(cdControl, "코드명", "코드", DNAME, "DCODE", "선택하세요");
+        }
+
 
         private void efwGridControl2_Click(object sender, EventArgs e)
         {
@@ -98,6 +156,19 @@ namespace YL_GSHOP.BizFrm
         }
 
         public override void Search()
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                Open2();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                Open3();
+
+            }
+        }
+
+        private void Open2()
         {
             try
             {
@@ -170,6 +241,111 @@ namespace YL_GSHOP.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+
+        private void Open3()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP19_SELECT_03", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_query", MySqlDbType.VarChar,50);
+                        cmd.Parameters[0].Value = txtQuery.EditValue;
+
+                        cmd.Parameters.Add("i_md", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtMD.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                           // this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                        Cursor.Current = Cursors.Default;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        public override void Save()
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    var saveResult = new SaveTableResultInfo() { IsError = true };
+
+                    var dt = efwGridControl1.GetChangeDataWithRowState;
+                    var StatusColumn = Easy.Framework.WinForm.Control.ConstantLib.StatusColumn;
+
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+
+                        for (int i = 0; i < gridView1.DataRowCount; i++)
+                        {
+
+                            if (gridView1.GetRowCellValue(i, "send_qty").ToString().Length > 0)
+                            {
+                                using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP19_SAVE_02", con))
+                                {
+                                    con.Open();
+                                    cmd.CommandType = CommandType.StoredProcedure;
+
+                                    cmd.Parameters.Add("i_gshop_id", MySqlDbType.Int32, 11);
+                                    cmd.Parameters[0].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "gshop_id"));
+
+                                    cmd.Parameters.Add("i_send_date", MySqlDbType.DateTime);
+                                    cmd.Parameters[1].Value = gridView1.GetRowCellValue(i, "send_date").ToString().Substring(0, 10) + " 12:01:01";
+
+                                    //cmd.Parameters.Add("i_send_qty", MySqlDbType.Int32, 11);
+                                    //cmd.Parameters[2].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, "send_qty")).ToString();
+
+                                    int nId = 0;
+                                    string sId = "";
+
+                                    sId = gridView1.GetRowCellValue(i, "send_qty").ToString();
+                                    if (sId == "")
+                                        nId = 0;
+                                    else
+                                        nId = Convert.ToInt32(gridView1.GetRowCellValue(i, "send_qty"));
+                                    cmd.Parameters.Add("i_send_qty", MySqlDbType.Int32, 11);
+                                    cmd.Parameters[2].Value = nId;
+
+
+                                    cmd.Parameters.Add("i_send_type", MySqlDbType.VarChar,1);
+                                    cmd.Parameters[3].Value = gridView1.GetRowCellValue(i, "send_type").ToString();
+
+                                    cmd.Parameters.Add("i_is_install", MySqlDbType.VarChar, 1);
+                                    cmd.Parameters[4].Value = gridView1.GetRowCellValue(i, "is_install").ToString();
+
+                                    cmd.Parameters.Add("i_remark", MySqlDbType.VarChar, 255);
+                                    cmd.Parameters[5].Value = gridView1.GetRowCellValue(i, "remark").ToString();
+
+                                    cmd.ExecuteNonQuery();
+                                    con.Close();
+                                }
+                            }
+                        }
+                    }
+                    MessageAgent.MessageShow(MessageType.Informational, "저장 되었습니다.");
+                    Search();
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+            }
+        }
+
 
         private void efwSimpleButton5_Click(object sender, EventArgs e)
         {
@@ -340,6 +516,82 @@ namespace YL_GSHOP.BizFrm
                 this.txtUtube_nic.EditValue = popup.U_NICKNAME;
             }
             popup = null;
+        }
+
+        private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage1)
+            {
+                this.label2.Visible = true;
+                this.txtQRank1.Visible = true;
+                this.label3.Visible = true;
+                this.txtQRank2.Visible = true;
+
+                this.label4.Visible = false;
+                this.txtMD.Visible = false;
+                this.label6.Visible = false;
+                this.dtS_DATE.Visible = false;
+                this.dtE_DATE.Visible = false;
+                this.efwLabel8.Visible = false;
+                this.btnQuery.Visible = false;
+
+
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
+            {
+                this.label2.Visible = false;
+                this.txtQRank1.Visible = false;
+                this.label3.Visible = false;
+                this.txtQRank2.Visible = false;
+
+                this.label4.Visible = true;
+                this.txtMD.Visible = true;
+                this.label6.Visible = true;
+                this.dtS_DATE.Visible = true;
+                this.dtE_DATE.Visible = true;
+                this.efwLabel8.Visible = true;
+                this.btnQuery.Visible = true;
+
+            }
+        }
+
+        private void btnQuery_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP19_SELECT_04", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_query", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtQuery.EditValue;
+
+                        cmd.Parameters.Add("i_md", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[1].Value = txtMD.EditValue;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[2].Value = dtS_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[3].Value = dtE_DATE.EditValue3;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl1.DataBind(ds);
+                            // this.efwGridControl1.MyGridView.BestFitColumns();
+                        }
+                        Cursor.Current = Cursors.Default;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
         }
     }
 }
