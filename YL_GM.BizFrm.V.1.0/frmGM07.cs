@@ -247,6 +247,10 @@ namespace YL_GM.BizFrm
             {
                 Open7();  // 스토리 카테고리
             }
+            if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage8)
+            {
+                Open8();  // 스토리 카테고리
+            }
         }
         //스토리 마스터
         public void Open1()
@@ -491,6 +495,41 @@ namespace YL_GM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+
+        public void Open8()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                string sCom = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM07_SELECT_07", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = cmbmajor_codeQ.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl8.DataBind(ds);
+                            this.efwGridControl8.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
 
         private void efwSimpleButton1_Click(object sender, EventArgs e)
         {
@@ -1089,5 +1128,7 @@ namespace YL_GM.BizFrm
             txtHint_Message.EditValue = "";
             dtReg_Date.EditValue = DateTime.Now;
         }
+
+
     }
 }

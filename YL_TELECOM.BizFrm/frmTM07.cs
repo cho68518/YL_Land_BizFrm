@@ -96,7 +96,7 @@ namespace YL_TELECOM.BizFrm
               , new ColumnControlSet("unfilled_price", txtUnfilled_Price)
               , new ColumnControlSet("remark", txtRemark)
             );
-
+            this.efwGridControl3.Click += efwGridControl3_Click;
 
             this.efwGridControl5.BindControlSet(
                 new ColumnControlSet("idx", txtSend_Idx)
@@ -106,8 +106,10 @@ namespace YL_TELECOM.BizFrm
               , new ColumnControlSet("is_send", chkIs_Send)
               , new ColumnControlSet("send_remark", txtSend_Remark)
               , new ColumnControlSet("login_id", txtLogin_id)
+              , new ColumnControlSet("sms_hp", txtSms_Hp)
+              , new ColumnControlSet("main_Code", txtSecurity_Code)
             );
-            this.efwGridControl3.Click += efwGridControl3_Click;
+            this.efwGridControl5.Click += efwGridControl5_Click;
 
             SetCmb();
             cmbS_TAX_TYPE.EditValue = "1";
@@ -154,7 +156,14 @@ namespace YL_TELECOM.BizFrm
                 this.cbLinkage_YN.EditValue = dr["linkage_yn"].ToString();
             }
         }
-
+        private void efwGridControl5_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl5.GetSelectedRow(0);
+            if (dr != null && dr["login_id"].ToString() != "")
+            {
+                this.txtSms_Send.EditValue = dr["login_id"].ToString() +" 인증번호는 " + dr["main_code"].ToString() + " 입니다";
+            }
+        }
 
         public override void NewMode()
         {
@@ -722,7 +731,7 @@ namespace YL_TELECOM.BizFrm
                           cmd.Parameters[0].Value = txtU_Id.EditValue;
 
                           cmd.Parameters.Add("i_linkage_yn", MySqlDbType.VarChar);
-                        cmd.Parameters[1].Value = cbLinkage_YN.EditValue;
+                          cmd.Parameters[1].Value = cbLinkage_YN.EditValue;
 
                           cmd.ExecuteNonQuery();
                           con.Close();
@@ -855,6 +864,10 @@ namespace YL_TELECOM.BizFrm
                             cmd.Parameters["i_Login_id"].Value = txtLogin_id.EditValue;
                             cmd.Parameters["i_Login_id"].Direction = ParameterDirection.Input;
 
+                            cmd.Parameters.Add(new MySqlParameter("i_sms_hp", MySqlDbType.VarChar));
+                            cmd.Parameters["i_sms_hp"].Value = txtSms_Hp.EditValue;
+                            cmd.Parameters["i_sms_hp"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();
@@ -877,6 +890,131 @@ namespace YL_TELECOM.BizFrm
             {
                 Clipboard.SetText(advBandedGridView1.GetFocusedDisplayText());
                 e.Handled = true;
+            }
+        }
+
+        private void efwSimpleButton6_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtSms_Hp.Text))
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 수신자 전화번호를 확인하세요 !");
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, " 문자 전송을 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_TM_TM07_SAVE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_phone", MySqlDbType.VarChar));
+                            cmd.Parameters["i_phone"].Value = txtSms_Hp.EditValue;
+                            cmd.Parameters["i_phone"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_callback", MySqlDbType.VarChar));
+                            cmd.Parameters["i_callback"].Value = "1644-5646";
+                            cmd.Parameters["i_callback"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_msg", MySqlDbType.VarChar));
+                            cmd.Parameters["i_msg"].Value = txtSms_Send.EditValue;
+                            cmd.Parameters["i_msg"].Direction = ParameterDirection.Input;
+
+                            cmd.ExecuteNonQuery();
+
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Informational, "문자 전송이 완료되었습니다.");
+                }
+
+            }
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "보안 코드를 생성 하시겠습니까?") == DialogResult.OK)
+            {
+                txtSms_Send.EditValue = "";
+                if (string.IsNullOrEmpty(this.txtLogin_id.Text))
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 보안 코드를 생성할 ID를 선택하세요 !");
+                    return;
+                }
+
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_TM_TM07_SAVE_03", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            // Convert.ToInt32(shold_money.Replace(",", ""));
+
+                            cmd.Parameters.Add(new MySqlParameter("i_cell_num", MySqlDbType.VarChar));
+                            cmd.Parameters["i_cell_num"].Value = txtCell_Num.EditValue;
+                            cmd.Parameters["i_cell_num"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_Login_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_Login_id"].Value = txtLogin_id.EditValue;
+                            cmd.Parameters["i_Login_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+            }
+        }
+
+        private void efwSimpleButton7_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_TM_TM07_DELETE_01", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            // Convert.ToInt32(shold_money.Replace(",", ""));
+
+                            cmd.Parameters.Add(new MySqlParameter("i_idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_idx"].Value = Convert.ToInt32(txtSend_Idx.EditValue.ToString());
+                            cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
+
+  
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
             }
         }
     }
