@@ -413,7 +413,7 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters[2].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[22])).ToString();
 
                                 cmd.Parameters.Add("i_o_amt", MySqlDbType.Int32);
-                                cmd.Parameters[3].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[23])).ToString();
+                                cmd.Parameters[3].Value = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[18])).ToString();
 
                                 cmd.Parameters.Add("i_p_name", MySqlDbType.VarChar, 255);
                                 cmd.Parameters[4].Value = gridView1.GetRowCellValue(i, gridView1.Columns[10]).ToString();

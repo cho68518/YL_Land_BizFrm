@@ -237,6 +237,7 @@
             this.gridColumn72 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.efwSimpleButton9 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl2)).BeginInit();
@@ -789,6 +790,7 @@
             // rbLinkType
             // 
             this.rbLinkType.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbLinkType.CaptionImageOptions.Image")));
+            this.rbLinkType.Controls.Add(this.efwSimpleButton9);
             this.rbLinkType.Controls.Add(this.txtShop_id);
             this.rbLinkType.Controls.Add(this.txtU_ID);
             this.rbLinkType.Controls.Add(this.btnNew);
@@ -847,7 +849,7 @@
             // 
             this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
             this.btnNew.IsMultiLang = false;
-            this.btnNew.Location = new System.Drawing.Point(399, 57);
+            this.btnNew.Location = new System.Drawing.Point(291, 60);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(70, 33);
             this.btnNew.TabIndex = 71;
@@ -858,7 +860,7 @@
             // 
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.IsMultiLang = false;
-            this.btnSave.Location = new System.Drawing.Point(475, 57);
+            this.btnSave.Location = new System.Drawing.Point(367, 60);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(70, 33);
             this.btnSave.TabIndex = 70;
@@ -959,6 +961,7 @@
             // 
             // txtIdx
             // 
+            this.txtIdx.EditValue = "0";
             this.txtIdx.EditValue2 = null;
             this.txtIdx.EraserGroup = "CLR1";
             this.txtIdx.Location = new System.Drawing.Point(1072, 96);
@@ -2652,6 +2655,16 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
             // 
+            // efwSimpleButton9
+            // 
+            this.efwSimpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton9.ImageOptions.Image")));
+            this.efwSimpleButton9.IsMultiLang = false;
+            this.efwSimpleButton9.Location = new System.Drawing.Point(475, 60);
+            this.efwSimpleButton9.Name = "efwSimpleButton9";
+            this.efwSimpleButton9.Size = new System.Drawing.Size(70, 33);
+            this.efwSimpleButton9.TabIndex = 76;
+            this.efwSimpleButton9.Text = "저장";
+            // 
             // frmGSHOP19
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2957,5 +2970,6 @@
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn60;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn61;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton9;
     }
 }

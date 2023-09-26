@@ -111,6 +111,16 @@ namespace YL_TELECOM.BizFrm
             );
             this.efwGridControl5.Click += efwGridControl5_Click;
 
+
+            this.efwGridControl7.BindControlSet(
+                new ColumnControlSet("u_id", txtU_Id_Chk)
+              , new ColumnControlSet("m_name", txtM_Name)
+              , new ColumnControlSet("m_mobile", txtM_Mobile)
+            );
+            this.efwGridControl7.Click += efwGridControl7_Click;
+
+
+
             SetCmb();
             cmbS_TAX_TYPE.EditValue = "1";
             cmbS_BANK.EditValue = "0";
@@ -164,6 +174,16 @@ namespace YL_TELECOM.BizFrm
                 this.txtSms_Send.EditValue = dr["login_id"].ToString() +" 인증번호는 " + dr["main_code"].ToString() + " 입니다";
             }
         }
+
+        private void efwGridControl7_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl7.GetSelectedRow(0);
+            if (dr != null && dr["u_id"].ToString() != "")
+            {
+                
+            }
+        }
+
 
         public override void NewMode()
         {
@@ -331,6 +351,10 @@ namespace YL_TELECOM.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
             {
                 Open6();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage6)
+            {
+                Open7();
             }
         }
 
@@ -533,7 +557,39 @@ namespace YL_TELECOM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+        private void Open7()
+        {
+            try
+            {
+                string sCOMFIRM = string.Empty;
+                //using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
 
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM07_SELECT_09", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_search", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[0].Value = txtQuery.EditValue;
+
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl7.DataBind(ds);
+                            this.efwGridControl7.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
         private void BtnNEW_Click(object sender, EventArgs e)
         {
             NewMode();
@@ -1002,6 +1058,51 @@ namespace YL_TELECOM.BizFrm
                             cmd.Parameters["i_idx"].Direction = ParameterDirection.Input;
 
   
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+            }
+        }
+
+        private void efwSimpleButton11_Click(object sender, EventArgs e)
+        {
+            if (MessageAgent.MessageShow(MessageType.Confirm, "어플 사용자 정보를 변경 하시겠습니까?") == DialogResult.OK)
+            {
+
+                if (string.IsNullOrEmpty(this.txtU_Id_Chk.Text))
+                {
+                    MessageAgent.MessageShow(MessageType.Warning, " 변경할 ID를 선택하세요 !");
+                    return;
+                }
+
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("erp.USP_TM_TM07_SAVE_07", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            // Convert.ToInt32(shold_money.Replace(",", ""));
+
+                            cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_id"].Value = txtU_Id_Chk.EditValue;
+                            cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_m_mobile", MySqlDbType.VarChar));
+                            cmd.Parameters["i_m_mobile"].Value = txtM_Mobile.EditValue;
+                            cmd.Parameters["i_m_mobile"].Direction = ParameterDirection.Input;
+
                             cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
                             cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
                             cmd.ExecuteNonQuery();

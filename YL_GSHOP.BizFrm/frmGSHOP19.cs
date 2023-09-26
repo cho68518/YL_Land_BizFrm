@@ -729,6 +729,10 @@ namespace YL_GSHOP.BizFrm
             {
                 try
                 {
+                    if (string.IsNullOrEmpty(this.txtIdx.Text))
+                    {
+                        txtIdx.EditValue = "0";
+                    }
                     using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
                     {
                         using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP19_SAVE_04", con))
@@ -1050,89 +1054,89 @@ namespace YL_GSHOP.BizFrm
 
         private void efwSimpleButton7_Click(object sender, EventArgs e)
         {
-            //OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.DefaultExt = "jpg";
-            //openFileDialog.FileName = "*.jpg";
-            //openFileDialog.Filter = "이미지파일|*.xls";
-            //openFileDialog.Title = "이미지파일 가져오기";
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.DefaultExt = "jpg";
+            openFileDialog.FileName = "*.jpg";
+            openFileDialog.Filter = "이미지파일|*.xls";
+            openFileDialog.Title = "이미지파일 가져오기";
 
-            //string sftpURL = "14.63.165.36";
-            //string sUserName = "root";
-            //string sPassword = "@dhkdldpf2!";
-            //int nPort = 22023;
-            ////string sftpDirectory = "/domalifefiles/files/events/banner/" + Convert.ToString(System.DateTime.Now.ToString("yyyyMMdd"));
-            //string sftpDirectory = "/domalifefiles/files/events/banner/";
+            string sftpURL = "14.63.165.36";
+            string sUserName = "root";
+            string sPassword = "@dhkdldpf2!";
+            int nPort = 22023;
+            //string sftpDirectory = "/domalifefiles/files/events/banner/" + Convert.ToString(System.DateTime.Now.ToString("yyyyMMdd"));
+            string sftpDirectory = "/domalifefiles/files/events/banner/";
 
-            //if (openFileDialog.ShowDialog() == DialogResult.OK)
-            //{
-            //    try
-            //    {
-            //        Cursor = Cursors.WaitCursor;
-            //        txtOrg_FileName1.EditValue = openFileDialog.SafeFileName;
-            //        txtPicPath2.EditValue = openFileDialog.FileName;
-            //        picBanner1.LoadAsync(openFileDialog.FileName);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
-            //    }
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+                    txtOrg_FileName1.EditValue = openFileDialog.SafeFileName;
+                    txtPicPath2.EditValue = openFileDialog.FileName;
+                    picBanner1.LoadAsync(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("이미지파일이 문제가 있습니다." + "\r\n" + ex.ToString());
+                }
 
-            //    finally
-            //    {
-            //        Cursor = Cursors.Default;
-            //    }
-
-
-            //    // 폴더생성
-
-            //    DirectoryInfo di = new DirectoryInfo(@"c:\temp");
-            //    if (di.Exists == false)
-            //    {
-            //        di.Create();
-            //    }
-
-            //    // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
-
-            //    string sOldFile = txtPicPath2.EditValue.ToString();
-            //    string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
-            //    //string sFileName = txtOrg_FileName.EditValue.ToString();
-            //    string sNewFile = "c:\\temp\\" + sFileName;
-            //    System.IO.File.Delete(sNewFile);
-            //    System.IO.File.Copy(sOldFile, sNewFile);
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
 
 
-            //    string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
+                // 폴더생성
+
+                DirectoryInfo di = new DirectoryInfo(@"c:\temp");
+                if (di.Exists == false)
+                {
+                    di.Create();
+                }
+
+                // 선택된 파일을 위에서 만든 폴더에 이름을 바꿔 저장
+
+                string sOldFile = txtPicPath2.EditValue.ToString();
+                string sFileName = Convert.ToString(System.DateTime.Now.ToString("yyyyMMddhhmmss")) + ".jpg";
+                //string sFileName = txtOrg_FileName.EditValue.ToString();
+                string sNewFile = "c:\\temp\\" + sFileName;
+                System.IO.File.Delete(sNewFile);
+                System.IO.File.Copy(sOldFile, sNewFile);
 
 
-            //    Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
+                string LocalDirectory = "C:\\temp"; //Local directory from where the files will be uploaded
 
-            //    sSftp.Connect(nPort);
 
-            //    //저장 경로에 있는지 체크
-            //    string sFtpPath = "/domalifefiles/files/events/banner/";
-            //    string sFtpPath2 = "/domalifefiles/files/events/banner/" + sFileName;
+                Sftp sSftp = new Sftp(sftpURL, sUserName, sPassword);
 
-            //    ArrayList ay = sSftp.GetFileList(sFtpPath);
-            //    bool isdir = false;
+                sSftp.Connect(nPort);
 
-            //    for (int i = 0; i < ay.Count; i++)
-            //    {
-            //        // string sChk = ay[i].ToString();
-            //        if (ay[i].ToString() == txtPicPath2.EditValue.ToString())
-            //        {
-            //            isdir = true;
-            //        }
-            //    }
-            //    //if (isdir == false)
-            //    //{
+                //저장 경로에 있는지 체크
+                string sFtpPath = "/domalifefiles/files/events/banner/";
+                string sFtpPath2 = "/domalifefiles/files/events/banner/" + sFileName;
 
-            //    //    sSftp.Mkdir(sFtpPath2);
-            //    //}
+                ArrayList ay = sSftp.GetFileList(sFtpPath);
+                bool isdir = false;
 
-            //    sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
-            //    sSftp.Close();
-            //    txtimg_url1.EditValue = "https://media.domalife.net/files/events/banner/" + sFileName;
-            //}
+                for (int i = 0; i < ay.Count; i++)
+                {
+                    // string sChk = ay[i].ToString();
+                    if (ay[i].ToString() == txtPicPath2.EditValue.ToString())
+                    {
+                        isdir = true;
+                    }
+                }
+                //if (isdir == false)
+                //{
+
+                //    sSftp.Mkdir(sFtpPath2);
+                //}
+
+                sSftp.Put(LocalDirectory + "/" + sFileName, sftpDirectory + "/" + sFileName);
+                sSftp.Close();
+                txtimg_url1.EditValue = "https://media.domalife.net/files/events/banner/" + sFileName;
+            }
         }
 
         private void efwSimpleButton3_Click(object sender, EventArgs e)
@@ -1145,79 +1149,79 @@ namespace YL_GSHOP.BizFrm
 
         private void efwSimpleButton4_Click(object sender, EventArgs e)
         {
-            //if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
-            //{
-            //    try
-            //    {
-            //        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
-            //        {
-            //            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP19_SAVE_05", con))
-            //            {
-            //                con.Open();
-            //                cmd.CommandType = CommandType.StoredProcedure;
+            if (MessageAgent.MessageShow(MessageType.Confirm, "저장 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GSHOP_GSHOP19_SAVE_05", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_Idx", MySqlDbType.Int32));
-            //                cmd.Parameters["i_Idx"].Value = Convert.ToInt32(txtIdx1.EditValue);
-            //                cmd.Parameters["i_Idx"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_Idx", MySqlDbType.Int32));
+                            cmd.Parameters["i_Idx"].Value = Convert.ToInt32(txtIdx1.EditValue);
+                            cmd.Parameters["i_Idx"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
-            //                cmd.Parameters["i_u_id"].Value = txtU_ID1.EditValue;
-            //                cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_u_id", MySqlDbType.VarChar));
+                            cmd.Parameters["i_u_id"].Value = txtU_ID1.EditValue;
+                            cmd.Parameters["i_u_id"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_gshop_id", MySqlDbType.Int32));
-            //                cmd.Parameters["i_gshop_id"].Value = Convert.ToInt32(txtShop_id.EditValue);
-            //                cmd.Parameters["i_gshop_id"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_gshop_id", MySqlDbType.Int32));
+                            cmd.Parameters["i_gshop_id"].Value = Convert.ToInt32(txtShop_id.EditValue);
+                            cmd.Parameters["i_gshop_id"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_category_no", MySqlDbType.VarChar));
-            //                cmd.Parameters["i_category_no"].Value = Convert.ToInt32(cmbCategory_no1.EditValue);
-            //                cmd.Parameters["i_category_no"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_category_no", MySqlDbType.VarChar));
+                            cmd.Parameters["i_category_no"].Value = Convert.ToInt32(cmbCategory_no1.EditValue);
+                            cmd.Parameters["i_category_no"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_link_type", MySqlDbType.VarChar));
-            //                cmd.Parameters["i_link_type"].Value = rbLink1.EditValue;
-            //                cmd.Parameters["i_link_type"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_link_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_link_type"].Value = rbLink1.EditValue;
+                            cmd.Parameters["i_link_type"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_img_url1", MySqlDbType.VarChar));
-            //                cmd.Parameters["i_img_url1"].Value = txtimg_url1.EditValue;
-            //                cmd.Parameters["i_img_url1"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_img_url1", MySqlDbType.VarChar));
+                            cmd.Parameters["i_img_url1"].Value = txtimg_url1.EditValue;
+                            cmd.Parameters["i_img_url1"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_img_url2", MySqlDbType.VarChar));
-            //                cmd.Parameters["i_img_url2"].Value = txtImg_link1.EditValue;
-            //                cmd.Parameters["i_img_url2"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_img_url2", MySqlDbType.VarChar));
+                            cmd.Parameters["i_img_url2"].Value = txtImg_link1.EditValue;
+                            cmd.Parameters["i_img_url2"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_show_type", MySqlDbType.VarChar));
-            //                cmd.Parameters["i_show_type"].Value = rbShowType1.EditValue;
-            //                cmd.Parameters["i_show_type"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_show_type", MySqlDbType.VarChar));
+                            cmd.Parameters["i_show_type"].Value = rbShowType1.EditValue;
+                            cmd.Parameters["i_show_type"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
-            //                cmd.Parameters["i_remark"].Value = txtStory1.EditValue;
-            //                cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_remark", MySqlDbType.VarChar));
+                            cmd.Parameters["i_remark"].Value = txtStory1.EditValue;
+                            cmd.Parameters["i_remark"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_reg_date", MySqlDbType.VarChar));
-            //                cmd.Parameters["i_reg_date"].Value = dtReg_Date1.EditValue3;
-            //                cmd.Parameters["i_reg_date"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_reg_date", MySqlDbType.VarChar));
+                            cmd.Parameters["i_reg_date"].Value = dtReg_Date1.EditValue3;
+                            cmd.Parameters["i_reg_date"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_area", MySqlDbType.VarChar));
-            //                cmd.Parameters["i_area"].Value = txtArea.EditValue;
-            //                cmd.Parameters["i_area"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_area", MySqlDbType.VarChar));
+                            cmd.Parameters["i_area"].Value = txtArea.EditValue;
+                            cmd.Parameters["i_area"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("i_age", MySqlDbType.VarChar));
-            //                cmd.Parameters["i_age"].Value = txtAge.EditValue;
-            //                cmd.Parameters["i_age"].Direction = ParameterDirection.Input;
+                            cmd.Parameters.Add(new MySqlParameter("i_age", MySqlDbType.VarChar));
+                            cmd.Parameters["i_age"].Value = txtAge.EditValue;
+                            cmd.Parameters["i_age"].Direction = ParameterDirection.Input;
 
-            //                cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
-            //                cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
-            //                cmd.ExecuteNonQuery();
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+                            cmd.ExecuteNonQuery();
 
-            //                MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
-            //            }
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageAgent.MessageShow(MessageType.Error, ex.ToString());
-            //    }
-            //    Search();
-            //}
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
+            }
         }
 
 

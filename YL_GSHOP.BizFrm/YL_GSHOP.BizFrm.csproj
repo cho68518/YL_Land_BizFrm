@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E1D8686E-D66A-4172-8E0A-E9148D6296F2}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>YL_GSHOP.BizFrm</RootNamespace>
     <AssemblyName>YL_GSHOP.BizFrm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
