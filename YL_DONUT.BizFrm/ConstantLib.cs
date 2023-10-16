@@ -19,3 +19,4 @@ namespace YL_DONUT.BizFrm
         public static string All_Real = "Server=14.63.165.36; Port=30201; Database=domalife; Uid=doma; Pwd=@dhkdldpf9!;CharSet=utf8;SslMode=none;";
     }
 }
+
