@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraCharts;
+using DevExpress.XtraTreeList;
+using MySql.Data.MySqlClient;
 
 namespace YL_DONUT.BizFrm
 {
@@ -73,7 +76,7 @@ namespace YL_DONUT.BizFrm
                     efwGridControl1.DataBind(ds);
                     this.efwGridControl1.MyGridView.BestFitColumns();
                 }
-                else
+                else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
                 {
                     ds = ServiceAgent.ExecuteDataSet(true, "CONIS_IBS", "USP_DN05_SELECT_02"
                                                                 , this.dt1F.EditValue3
@@ -81,6 +84,42 @@ namespace YL_DONUT.BizFrm
 
                     efwGridControl2.DataBind(ds);
                     this.efwGridControl2.MyGridView.BestFitColumns();
+                }
+                else
+                {
+                    try
+                    {
+
+                        using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_DN_DN05_SELECT_01", con))
+                            {
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                                cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 10);
+                                cmd.Parameters[0].Value = dt1F.EditValue3;
+
+                                cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 10);
+                                cmd.Parameters[1].Value = dt1T.EditValue3;
+
+
+
+                                using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                                {
+                                    DataTable ds1 = new DataTable();
+                                    sda.Fill(ds1);
+                                    efwGridControl3.DataBind(ds1);
+                                    this.efwGridControl3.MyGridView.BestFitColumns();
+                                }
+                            }
+                        }
+                        //lbCount.Text = String.Format("{0:#,##0}", Convert.ToInt32(gridView1.RowCount));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                    }
                 }
 
 

@@ -306,6 +306,10 @@ namespace YL_GM.BizFrm
             {
                 Open8();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage7)
+            {
+                Open9();
+            }
         }
 
         private void Open1()
@@ -602,6 +606,50 @@ namespace YL_GM.BizFrm
             }
         }
 
+
+        private void Open9()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                string sP_SHOW_TYPE = string.Empty;
+
+                // using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Dev))
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM10_SELECT_08", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[0].Value = dtSTART_DATE.EditValue3;
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[1].Value = dtEND_DATE.EditValue3;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+                            efwGridControl8.DataBind(ds);
+                            this.efwGridControl8.MyGridView.BestFitColumns();
+
+                        }
+                    }
+                }
+                //ChartCreat1();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+
+
+
         private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
 
@@ -662,7 +710,22 @@ namespace YL_GM.BizFrm
                 this.rbShow_Level.Visible = true;
                 this.txtProd_Name.Visible = true;
                 this.efwLabel2.Visible = true;
-            } 
+            }
+
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage7)
+            {
+                this.efwLabel1.Text = "입금일";
+                this.dtS_DATE.Visible = false;
+                this.dtEND_DATE.Visible = true;
+                this.dtSTART_DATE.Visible = true;
+                this.rbProd_Type.Visible = false;
+                this.rbQtyOrAmt.Visible = false;
+                this.efwLabel7.Visible = true;
+                this.rbQ_type.Visible = true;
+                this.rbShow_Level.Visible = false;
+                this.txtProd_Name.Visible = false;
+                this.efwLabel2.Visible = false;
+            }
 
             // Search();
         }
