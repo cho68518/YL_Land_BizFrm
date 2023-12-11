@@ -51,12 +51,15 @@ namespace YL_GM.BizFrm
             this.rbShow_Level.Visible = false;
             this.txtProd_Name.Visible = false;
             this.efwLabel2.Visible = false;
+            this.rbU_Chef_Level.Visible = false;
 
             rbShop_Type.EditValue = "3";
             rbProd_Type.EditValue = "1";
             rbQtyOrAmt.EditValue = "1";
             rbQ_type.EditValue = "2";
             rbShow_Level.EditValue = "9";
+
+            rbU_Chef_Level.EditValue = "9";
             //그리드 컬럼에 체크박스 레포지토리아이템 추가
 
             advBandedGridView1.OptionsView.ShowFooter = true;
@@ -249,7 +252,7 @@ namespace YL_GM.BizFrm
 
 
 
-
+            // ----------------------------------------------------------------------------------------------------------
             advBandedGridView2.OptionsView.ShowFooter = true;
 
 
@@ -262,6 +265,25 @@ namespace YL_GM.BizFrm
             advBandedGridView2.Columns["member_amt"].SummaryItem.DisplayFormat = "{0:c}";
 
 
+            // ----------------------------------------------------------------------------------------------------------
+            gridView5.OptionsView.ShowFooter = true;
+
+
+            gridView5.Columns["order_cnt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView5.Columns["order_cnt"].SummaryItem.FieldName = "order_cnt";
+            gridView5.Columns["order_cnt"].SummaryItem.DisplayFormat = "{0}";
+
+            gridView5.Columns["order_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView5.Columns["order_amt"].SummaryItem.FieldName = "order_amt";
+            gridView5.Columns["order_amt"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView5.Columns["o_purchase_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView5.Columns["o_purchase_cost"].SummaryItem.FieldName = "o_purchase_cost";
+            gridView5.Columns["o_purchase_cost"].SummaryItem.DisplayFormat = "{0:c}";
+
+            gridView5.Columns["o_donut_cost"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            gridView5.Columns["o_donut_cost"].SummaryItem.FieldName = "o_donut_cost";
+            gridView5.Columns["o_donut_cost"].SummaryItem.DisplayFormat = "{0:c}";
 
             this.efwGridControl3.BindControlSet(
                 new ColumnControlSet("u_id", txtu_id)
@@ -628,6 +650,9 @@ namespace YL_GM.BizFrm
                         cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 8);
                         cmd.Parameters[1].Value = dtEND_DATE.EditValue3;
 
+                        cmd.Parameters.Add("i_u_chef_level", MySqlDbType.VarChar, 8);
+                        cmd.Parameters[2].Value = rbU_Chef_Level.EditValue;
+
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
@@ -647,9 +672,6 @@ namespace YL_GM.BizFrm
             }
         }
 
-
-
-
         private void efwXtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
 
@@ -668,6 +690,7 @@ namespace YL_GM.BizFrm
                 this.rbShow_Level.Visible = false;
                 this.txtProd_Name.Visible = false;
                 this.efwLabel2.Visible = false;
+                this.rbU_Chef_Level.Visible = false;
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage2)
             {
@@ -682,6 +705,7 @@ namespace YL_GM.BizFrm
                 this.rbShow_Level.Visible = false;
                 this.txtProd_Name.Visible = false;
                 this.efwLabel2.Visible = false;
+                this.rbU_Chef_Level.Visible = false;
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
             {
@@ -696,6 +720,7 @@ namespace YL_GM.BizFrm
                 this.rbShow_Level.Visible = false;
                 this.txtProd_Name.Visible = false;
                 this.efwLabel2.Visible = false;
+                this.rbU_Chef_Level.Visible = false;
             }
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage6)
             {
@@ -710,6 +735,7 @@ namespace YL_GM.BizFrm
                 this.rbShow_Level.Visible = true;
                 this.txtProd_Name.Visible = true;
                 this.efwLabel2.Visible = true;
+                this.rbU_Chef_Level.Visible = false;
             }
 
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage7)
@@ -725,6 +751,7 @@ namespace YL_GM.BizFrm
                 this.rbShow_Level.Visible = false;
                 this.txtProd_Name.Visible = false;
                 this.efwLabel2.Visible = false;
+                this.rbU_Chef_Level.Visible = true;
             }
 
             // Search();

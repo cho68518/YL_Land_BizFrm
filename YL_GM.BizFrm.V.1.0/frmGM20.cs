@@ -92,17 +92,17 @@ namespace YL_GM.BizFrm
             advBandedGridView1.Columns["biz_gd"].SummaryItem.FieldName = "biz_gd";
             advBandedGridView1.Columns["biz_gd"].SummaryItem.DisplayFormat = "{0}";
             //
-            advBandedGridView1.Columns["vip_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            advBandedGridView1.Columns["vip_qty"].SummaryItem.FieldName = "vip_qty";
-            advBandedGridView1.Columns["vip_qty"].SummaryItem.DisplayFormat = "{0}";
+            //advBandedGridView1.Columns["vip_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //advBandedGridView1.Columns["vip_qty"].SummaryItem.FieldName = "vip_qty";
+            //advBandedGridView1.Columns["vip_qty"].SummaryItem.DisplayFormat = "{0}";
 
-            advBandedGridView1.Columns["vip_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            advBandedGridView1.Columns["vip_amt"].SummaryItem.FieldName = "vip_amt";
-            advBandedGridView1.Columns["vip_amt"].SummaryItem.DisplayFormat = "{0}";
+            //advBandedGridView1.Columns["vip_amt"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //advBandedGridView1.Columns["vip_amt"].SummaryItem.FieldName = "vip_amt";
+            //advBandedGridView1.Columns["vip_amt"].SummaryItem.DisplayFormat = "{0}";
 
-            advBandedGridView1.Columns["vip_gd"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            advBandedGridView1.Columns["vip_gd"].SummaryItem.FieldName = "vip_gd";
-            advBandedGridView1.Columns["vip_gd"].SummaryItem.DisplayFormat = "{0}";
+            //advBandedGridView1.Columns["vip_gd"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            //advBandedGridView1.Columns["vip_gd"].SummaryItem.FieldName = "vip_gd";
+            //advBandedGridView1.Columns["vip_gd"].SummaryItem.DisplayFormat = "{0}";
             //
             advBandedGridView1.Columns["doma_qty"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             advBandedGridView1.Columns["doma_qty"].SummaryItem.FieldName = "doma_qty";
@@ -197,14 +197,14 @@ namespace YL_GM.BizFrm
                 {
                     sPont = new SeriesPoint("BIZ 금액", Convert.ToInt32(advBandedGridView1.Columns["biz_amt"].SummaryItem.SummaryValue));
                 }
-                else if (i == 8)
-                {
-                    sPont = new SeriesPoint("VIP 수량", Convert.ToInt32(advBandedGridView1.Columns["vip_qty"].SummaryItem.SummaryValue));
-                }
-                else if (i == 9)
-                {
-                    sPont = new SeriesPoint("VIP 금액", Convert.ToInt32(advBandedGridView1.Columns["vip_amt"].SummaryItem.SummaryValue));
-                }
+                //else if (i == 8)
+                //{
+                //    sPont = new SeriesPoint("VIP 수량", Convert.ToInt32(advBandedGridView1.Columns["vip_qty"].SummaryItem.SummaryValue));
+                //}
+                //else if (i == 9)
+                //{
+                //    sPont = new SeriesPoint("VIP 금액", Convert.ToInt32(advBandedGridView1.Columns["vip_amt"].SummaryItem.SummaryValue));
+                //}
                 else if (i == 10)
                 {
                     sPont = new SeriesPoint("DOMA 수량", Convert.ToInt32(advBandedGridView1.Columns["doma_qty"].SummaryItem.SummaryValue));

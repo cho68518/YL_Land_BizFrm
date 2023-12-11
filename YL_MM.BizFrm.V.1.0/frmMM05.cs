@@ -199,6 +199,7 @@ namespace YL_MM.BizFrm
 
             New();
             cmbQ3.ItemIndex = 0;
+            cmbQ3_1.ItemIndex = 0;
         }
 
         #endregion
@@ -216,11 +217,13 @@ namespace YL_MM.BizFrm
         {
             cmbQ1.EditValue = "0";
             cmbQ2.EditValue = "0";
+            cmbQ1_1.EditValue = "0";
             //cmbQ3.EditValue = "전체";
             Eraser.Clear(this, "CLR1");
 
             //chkQ1.Checked = false;
             cmbQ3.ItemIndex = 0;
+            cmbQ3_1.ItemIndex = 0;
             txtSearch.Focus();
         }
 
@@ -246,6 +249,10 @@ namespace YL_MM.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage4)
             {
                 Open5();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
+            {
+                Open6();
             }
         }
 
@@ -295,6 +302,48 @@ namespace YL_MM.BizFrm
         #endregion
 
 
+        public void Open6()
+        {
+            //base.Search();
+
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                string s1 = string.Empty;
+
+                if (this.cmbQ3_1.EditValue == null)
+                {
+                    s1 = "";
+                }
+                else
+                {
+                    s1 = this.cmbQ3_1.EditValue.ToString().Replace("%", "");
+                }
+                //base.Search();
+                DataSet ds = ServiceAgent.ExecuteDataSet(true, "CONIS_IBS", "USP_MM_MM05_SELECT_01"
+                , this.txtCOMPANYCD.Text
+                , "0"
+                , this.txtSearch_1.Text
+                , this.cmbQ2.EditValue
+                , s1
+                , this.dt1.EditValue3
+                , this.dt2.EditValue3
+                , "1"
+                );
+
+                efwGridControl5.DataBind(ds);
+                this.efwGridControl5.MyGridView.BestFitColumns();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
 
         public void Open1()
         {
@@ -1078,6 +1127,12 @@ namespace YL_MM.BizFrm
                 Clipboard.SetText(gridView3.GetFocusedDisplayText());
                 e.Handled = true;
             }
+        }
+
+        private void txtSearch_1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
         }
     }
 }

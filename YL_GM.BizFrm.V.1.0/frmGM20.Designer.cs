@@ -77,7 +77,6 @@
             this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand7 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
@@ -223,7 +222,6 @@
             this.gridBand5,
             this.gridBand7,
             this.gridBand4,
-            this.gridBand3,
             this.gridBand2});
             this.advBandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.gridColumn1,
@@ -443,7 +441,6 @@
             this.gridColumn9.FieldName = "vip_qty";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
-            this.gridColumn9.Visible = true;
             this.gridColumn9.Width = 70;
             // 
             // bandedGridColumn4
@@ -454,7 +451,6 @@
             this.bandedGridColumn4.FieldName = "vip_gd";
             this.bandedGridColumn4.Name = "bandedGridColumn4";
             this.bandedGridColumn4.OptionsColumn.AllowEdit = false;
-            this.bandedGridColumn4.Visible = true;
             this.bandedGridColumn4.Width = 59;
             // 
             // gridColumn11
@@ -465,7 +461,6 @@
             this.gridColumn11.FieldName = "vip_amt";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
-            this.gridColumn11.Visible = true;
             this.gridColumn11.Width = 71;
             // 
             // gridColumn6
@@ -632,20 +627,6 @@
             this.gridBand4.VisibleIndex = 4;
             this.gridBand4.Width = 191;
             // 
-            // gridBand3
-            // 
-            this.gridBand3.AppearanceHeader.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.gridBand3.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand3.Caption = "VIP";
-            this.gridBand3.Columns.Add(this.gridColumn9);
-            this.gridBand3.Columns.Add(this.bandedGridColumn4);
-            this.gridBand3.Columns.Add(this.gridColumn11);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 5;
-            this.gridBand3.Width = 200;
-            // 
             // gridBand2
             // 
             this.gridBand2.AppearanceHeader.BackColor = System.Drawing.Color.Turquoise;
@@ -657,7 +638,7 @@
             this.gridBand2.Columns.Add(this.bandedGridColumn3);
             this.gridBand2.Columns.Add(this.gridColumn8);
             this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 6;
+            this.gridBand2.VisibleIndex = 5;
             this.gridBand2.Width = 200;
             // 
             // frmGM20
@@ -740,7 +721,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand7;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
     }
 }

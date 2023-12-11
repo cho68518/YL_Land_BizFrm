@@ -729,7 +729,7 @@
             // 
             // gridColumn28
             // 
-            this.gridColumn28.Caption = "A건수";
+            this.gridColumn28.Caption = "건수";
             this.gridColumn28.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn28.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn28.FieldName = "count_2";
@@ -739,7 +739,7 @@
             // 
             // gridColumn29
             // 
-            this.gridColumn29.Caption = "A금액";
+            this.gridColumn29.Caption = "금액";
             this.gridColumn29.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn29.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn29.FieldName = "amt_2";
@@ -762,7 +762,7 @@
             // 
             // gridColumn31
             // 
-            this.gridColumn31.Caption = "B건수";
+            this.gridColumn31.Caption = "건수";
             this.gridColumn31.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn31.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn31.FieldName = "count_6";
@@ -772,7 +772,7 @@
             // 
             // gridColumn32
             // 
-            this.gridColumn32.Caption = "B금액";
+            this.gridColumn32.Caption = "금액";
             this.gridColumn32.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn32.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn32.FieldName = "amt_6";
@@ -795,7 +795,7 @@
             // 
             // gridColumn34
             // 
-            this.gridColumn34.Caption = "C건수";
+            this.gridColumn34.Caption = "건수";
             this.gridColumn34.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn34.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn34.FieldName = "count_12";
@@ -805,7 +805,7 @@
             // 
             // gridColumn35
             // 
-            this.gridColumn35.Caption = "C금액";
+            this.gridColumn35.Caption = "금액";
             this.gridColumn35.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn35.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn35.FieldName = "amt_12";
@@ -828,7 +828,7 @@
             // 
             // gridColumn40
             // 
-            this.gridColumn40.Caption = "D건수";
+            this.gridColumn40.Caption = "건수";
             this.gridColumn40.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn40.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn40.FieldName = "count_8";
@@ -838,7 +838,7 @@
             // 
             // gridColumn41
             // 
-            this.gridColumn41.Caption = "D금액";
+            this.gridColumn41.Caption = "금액";
             this.gridColumn41.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn41.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn41.FieldName = "amt_8";
@@ -861,7 +861,7 @@
             // 
             // gridColumn43
             // 
-            this.gridColumn43.Caption = "E건수";
+            this.gridColumn43.Caption = "건수";
             this.gridColumn43.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn43.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn43.FieldName = "count_16";
@@ -871,7 +871,7 @@
             // 
             // gridColumn44
             // 
-            this.gridColumn44.Caption = "E금액";
+            this.gridColumn44.Caption = "금액";
             this.gridColumn44.DisplayFormat.FormatString = "###,###,###";
             this.gridColumn44.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn44.FieldName = "amt_16";

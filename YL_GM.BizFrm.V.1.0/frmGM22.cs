@@ -75,6 +75,15 @@ namespace YL_GM.BizFrm
             dtYearMonth.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
             dtYearMonth.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
 
+            dtDel_date.EditValue = DateTime.Now.ToString("yyyy-MM");
+            dtDel_date.Properties.Mask.EditMask = "yyyy-MM";
+            dtDel_date.Properties.DisplayFormat.FormatString = "yyyy-MM";
+            dtDel_date.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            dtDel_date.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            dtDel_date.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
+
+
+
             this.efwGridControl2.BindControlSet(
                new ColumnControlSet("acc_code", txtAcc_Code)
              , new ColumnControlSet("middle_name", txtAcc_Name)
@@ -154,9 +163,11 @@ namespace YL_GM.BizFrm
 
                 CodeAgent.MakeCodeControl(this.cmbCompany, codeArray);
                 CodeAgent.MakeCodeControl(this.cmbCompanyQ, codeArray);
+                CodeAgent.MakeCodeControl(this.cmbDel_Company, codeArray);
             }
             cmbCompany.EditValue = "01";
             cmbCompanyQ.EditValue = "01";
+            cmbDel_Company.EditValue = "01";
 
             using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
             {
@@ -1079,6 +1090,54 @@ namespace YL_GM.BizFrm
                 }
                 cmbLarge_Code.EditValue = "04";
                 cmbSmall_Code.EditValue = "01";
+            }
+        }
+
+        private void efwSimpleButton5_Click(object sender, EventArgs e)
+        {
+            if (cmbDel_Company.EditValue.ToString() == "0")
+            {
+                MessageAgent.MessageShow(MessageType.Warning, " 회사구분을 선택하세요!");
+                return;
+            }
+
+            if (MessageAgent.MessageShow(MessageType.Confirm, "당월 선택된 회사 비용이 모두 삭제 됩니다. 삭제 하시겠습니까?") == DialogResult.OK)
+            {
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_GM_GM22_DELETE_02", con))
+                        {
+                            con.Open();
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new MySqlParameter("i_company", MySqlDbType.VarChar));
+                            cmd.Parameters["i_company"].Value = cmbDel_Company.EditValue;
+                            cmd.Parameters["i_company"].Direction = ParameterDirection.Input;
+
+                            string sAcc_Date = string.Empty;
+                            sAcc_Date = dtDel_date.EditValue.ToString();
+                            sAcc_Date = sAcc_Date.Substring(0, 4) + "-" + sAcc_Date.Substring(5, 2);
+
+                            cmd.Parameters.Add(new MySqlParameter("i_acc_date", MySqlDbType.VarChar));
+                            cmd.Parameters["i_acc_date"].Value = sAcc_Date;
+                            cmd.Parameters["i_acc_date"].Direction = ParameterDirection.Input;
+
+                            cmd.Parameters.Add(new MySqlParameter("o_Return", MySqlDbType.VarChar));
+                            cmd.Parameters["o_Return"].Direction = ParameterDirection.Output;
+
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show(cmd.Parameters["o_Return"].Value.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+                Search();
             }
         }
     }

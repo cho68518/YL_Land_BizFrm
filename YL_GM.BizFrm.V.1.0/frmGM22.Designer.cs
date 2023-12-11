@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGM22));
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy1 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy1 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo1 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo2 = new Easy.Framework.WinForm.Control.ServiceInfo();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGM22));
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo3 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy2 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy2 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo4 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo5 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo6 = new Easy.Framework.WinForm.Control.ServiceInfo();
@@ -55,18 +57,19 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy3 = new Easy.Framework.WinForm.Control.ChildHierarchy();
-            Easy.Framework.WinForm.Control.Hierarchy hierarchy3 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy4 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy4 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy5 = new Easy.Framework.WinForm.Control.ChildHierarchy();
             Easy.Framework.WinForm.Control.Hierarchy hierarchy5 = new Easy.Framework.WinForm.Control.Hierarchy();
+            Easy.Framework.WinForm.Control.ChildHierarchy childHierarchy6 = new Easy.Framework.WinForm.Control.ChildHierarchy();
+            Easy.Framework.WinForm.Control.Hierarchy hierarchy6 = new Easy.Framework.WinForm.Control.Hierarchy();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo13 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo14 = new Easy.Framework.WinForm.Control.ServiceInfo();
             Easy.Framework.WinForm.Control.ServiceInfo serviceInfo15 = new Easy.Framework.WinForm.Control.ServiceInfo();
             this.efwPanelControl3 = new Easy.Framework.WinForm.Control.efwPanelControl();
             this.rbCustS = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.efwSimpleButton5 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.rbCustQ = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.txtRemark = new Easy.Framework.WinForm.Control.efwMemoEdit();
             this.cmbCompany = new Easy.Framework.WinForm.Control.efwLookUpEdit();
@@ -93,6 +96,8 @@
             this.efwSimpleButton9 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton8 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtLarge_Name = new Easy.Framework.WinForm.Control.efwTextEdit();
+            this.dtDel_date = new Easy.Framework.WinForm.Control.efwDateEdit();
+            this.cmbDel_Company = new Easy.Framework.WinForm.Control.efwLookUpEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.계정명 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -113,6 +118,9 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtDel_Company = new DevExpress.XtraLayout.LayoutControlItem();
             this.rbUnit = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.dtYear = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.txtidx = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -159,6 +167,7 @@
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
@@ -280,7 +289,6 @@
             this.repositoryItemCheckEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit12 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit13 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl3)).BeginInit();
             this.efwPanelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rbCustS.Properties)).BeginInit();
@@ -306,6 +314,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAcc_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcc_Code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLarge_Name.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDel_date.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDel_date.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDel_Company.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.계정명)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -326,6 +337,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDel_Company)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtYear.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtYear.Properties)).BeginInit();
@@ -432,6 +446,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.efwSimpleButton5);
             this.layoutControl1.Controls.Add(this.rbCustQ);
             this.layoutControl1.Controls.Add(this.txtRemark);
             this.layoutControl1.Controls.Add(this.cmbCompany);
@@ -448,6 +463,8 @@
             this.layoutControl1.Controls.Add(this.efwSimpleButton9);
             this.layoutControl1.Controls.Add(this.efwSimpleButton8);
             this.layoutControl1.Controls.Add(this.txtLarge_Name);
+            this.layoutControl1.Controls.Add(this.dtDel_date);
+            this.layoutControl1.Controls.Add(this.cmbDel_Company);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(2, 23);
             this.layoutControl1.Name = "layoutControl1";
@@ -457,10 +474,22 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // efwSimpleButton5
+            // 
+            this.efwSimpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton5.ImageOptions.Image")));
+            this.efwSimpleButton5.IsMultiLang = false;
+            this.efwSimpleButton5.Location = new System.Drawing.Point(771, 263);
+            this.efwSimpleButton5.Name = "efwSimpleButton5";
+            this.efwSimpleButton5.Size = new System.Drawing.Size(95, 22);
+            this.efwSimpleButton5.StyleController = this.layoutControl1;
+            this.efwSimpleButton5.TabIndex = 93;
+            this.efwSimpleButton5.Text = "월 전체삭제";
+            this.efwSimpleButton5.Click += new System.EventHandler(this.efwSimpleButton5_Click);
+            // 
             // rbCustQ
             // 
             this.rbCustQ.IsMultiLang = false;
-            this.rbCustQ.Location = new System.Drawing.Point(198, 7);
+            this.rbCustQ.Location = new System.Drawing.Point(104, 7);
             this.rbCustQ.Name = "rbCustQ";
             this.rbCustQ.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbCustQ.Properties.Appearance.Options.UseBackColor = true;
@@ -472,7 +501,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("6", "비용")});
             this.rbCustQ.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
             this.rbCustQ.RequireMessage = null;
-            this.rbCustQ.Size = new System.Drawing.Size(129, 23);
+            this.rbCustQ.Size = new System.Drawing.Size(219, 23);
             this.rbCustQ.StyleController = this.layoutControl1;
             this.rbCustQ.TabIndex = 92;
             // 
@@ -480,11 +509,11 @@
             // 
             this.txtRemark.ByteLength = 200;
             this.txtRemark.EraserGroup = "CLR1";
-            this.txtRemark.Location = new System.Drawing.Point(467, 253);
+            this.txtRemark.Location = new System.Drawing.Point(502, 191);
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtRemark.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRemark.Size = new System.Drawing.Size(410, 32);
+            this.txtRemark.Size = new System.Drawing.Size(364, 68);
             this.txtRemark.StyleController = this.layoutControl1;
             this.txtRemark.TabIndex = 91;
             // 
@@ -499,12 +528,12 @@
             hierarchy1.SpName = null;
             this.cmbCompany.HierarchyInfo = hierarchy1;
             this.cmbCompany.IsMultiLang = false;
-            this.cmbCompany.Location = new System.Drawing.Point(467, 33);
+            this.cmbCompany.Location = new System.Drawing.Point(502, 33);
             this.cmbCompany.MasterCode = "E03.PAY_GBN";
             this.cmbCompany.Name = "cmbCompany";
             this.cmbCompany.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbCompany.Size = new System.Drawing.Size(172, 20);
+            this.cmbCompany.Size = new System.Drawing.Size(149, 20);
             this.cmbCompany.StyleController = this.layoutControl1;
             this.cmbCompany.TabIndex = 90;
             this.cmbCompany.EditValueChanged += new System.EventHandler(this.cmbCompany_EditValueChanged);
@@ -514,14 +543,14 @@
             this.txtAcc_Name.EditValue2 = null;
             this.txtAcc_Name.Enabled = false;
             this.txtAcc_Name.EraserGroup = "CLR1";
-            this.txtAcc_Name.Location = new System.Drawing.Point(686, 57);
+            this.txtAcc_Name.Location = new System.Drawing.Point(698, 57);
             this.txtAcc_Name.Name = "txtAcc_Name";
             this.txtAcc_Name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtAcc_Name.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAcc_Name.Properties.EditFormat.FormatString = "###,###,##0";
             this.txtAcc_Name.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtAcc_Name.RequireMessage = null;
-            this.txtAcc_Name.Size = new System.Drawing.Size(191, 20);
+            this.txtAcc_Name.Size = new System.Drawing.Size(168, 20);
             this.txtAcc_Name.StyleController = this.layoutControl1;
             this.txtAcc_Name.TabIndex = 88;
             // 
@@ -529,7 +558,7 @@
             // 
             this.txtOut_Amt.EditValue2 = null;
             this.txtOut_Amt.EraserGroup = "CLR1";
-            this.txtOut_Amt.Location = new System.Drawing.Point(686, 105);
+            this.txtOut_Amt.Location = new System.Drawing.Point(698, 105);
             this.txtOut_Amt.Name = "txtOut_Amt";
             this.txtOut_Amt.Properties.Appearance.Options.UseTextOptions = true;
             this.txtOut_Amt.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -540,7 +569,7 @@
             this.txtOut_Amt.Properties.EditFormat.FormatString = "###,###,##0";
             this.txtOut_Amt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtOut_Amt.RequireMessage = null;
-            this.txtOut_Amt.Size = new System.Drawing.Size(191, 20);
+            this.txtOut_Amt.Size = new System.Drawing.Size(168, 20);
             this.txtOut_Amt.StyleController = this.layoutControl1;
             this.txtOut_Amt.TabIndex = 86;
             // 
@@ -576,7 +605,7 @@
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2,
             this.repositoryItemCheckEdit3});
-            this.efwGridControl2.Size = new System.Drawing.Size(400, 251);
+            this.efwGridControl2.Size = new System.Drawing.Size(438, 251);
             this.efwGridControl2.TabIndex = 68;
             this.efwGridControl2.TableName = "";
             serviceInfo3.InstanceName = "";
@@ -673,9 +702,9 @@
             // 
             this.efwSimpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton1.ImageOptions.Image")));
             this.efwSimpleButton1.IsMultiLang = false;
-            this.efwSimpleButton1.Location = new System.Drawing.Point(331, 7);
+            this.efwSimpleButton1.Location = new System.Drawing.Point(327, 7);
             this.efwSimpleButton1.Name = "efwSimpleButton1";
-            this.efwSimpleButton1.Size = new System.Drawing.Size(76, 22);
+            this.efwSimpleButton1.Size = new System.Drawing.Size(118, 22);
             this.efwSimpleButton1.StyleController = this.layoutControl1;
             this.efwSimpleButton1.TabIndex = 89;
             this.efwSimpleButton1.Text = "조회";
@@ -685,7 +714,7 @@
             // 
             this.txtIn_Amt.EditValue2 = null;
             this.txtIn_Amt.EraserGroup = "CLR1";
-            this.txtIn_Amt.Location = new System.Drawing.Point(467, 105);
+            this.txtIn_Amt.Location = new System.Drawing.Point(502, 105);
             this.txtIn_Amt.Name = "txtIn_Amt";
             this.txtIn_Amt.Properties.Appearance.Options.UseTextOptions = true;
             this.txtIn_Amt.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -696,7 +725,7 @@
             this.txtIn_Amt.Properties.EditFormat.FormatString = "###,###,##0";
             this.txtIn_Amt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtIn_Amt.RequireMessage = null;
-            this.txtIn_Amt.Size = new System.Drawing.Size(172, 20);
+            this.txtIn_Amt.Size = new System.Drawing.Size(149, 20);
             this.txtIn_Amt.StyleController = this.layoutControl1;
             this.txtIn_Amt.TabIndex = 84;
             // 
@@ -704,11 +733,11 @@
             // 
             this.txtSummary.ByteLength = 200;
             this.txtSummary.EraserGroup = "CLR1";
-            this.txtSummary.Location = new System.Drawing.Point(467, 129);
+            this.txtSummary.Location = new System.Drawing.Point(502, 129);
             this.txtSummary.Name = "txtSummary";
             this.txtSummary.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtSummary.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtSummary.Size = new System.Drawing.Size(410, 120);
+            this.txtSummary.Size = new System.Drawing.Size(364, 58);
             this.txtSummary.StyleController = this.layoutControl1;
             this.txtSummary.TabIndex = 62;
             // 
@@ -723,7 +752,7 @@
             this.txtAcc_NameQ.Properties.EditFormat.FormatString = "###,###,##0";
             this.txtAcc_NameQ.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtAcc_NameQ.RequireMessage = null;
-            this.txtAcc_NameQ.Size = new System.Drawing.Size(144, 20);
+            this.txtAcc_NameQ.Size = new System.Drawing.Size(50, 20);
             this.txtAcc_NameQ.StyleController = this.layoutControl1;
             this.txtAcc_NameQ.TabIndex = 80;
             // 
@@ -731,7 +760,7 @@
             // 
             this.txtAcc_Date.EditValue = new System.DateTime(2021, 10, 27, 0, 0, 0, 0);
             this.txtAcc_Date.IsRequire = true;
-            this.txtAcc_Date.Location = new System.Drawing.Point(686, 33);
+            this.txtAcc_Date.Location = new System.Drawing.Point(698, 33);
             this.txtAcc_Date.Name = "txtAcc_Date";
             this.txtAcc_Date.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
             this.txtAcc_Date.Properties.Appearance.Options.UseBackColor = true;
@@ -745,7 +774,7 @@
             this.txtAcc_Date.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtAcc_Date.Properties.EditFormat.FormatString = "yyyy/MM/dd HH:mm:ss";
             this.txtAcc_Date.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtAcc_Date.Size = new System.Drawing.Size(191, 20);
+            this.txtAcc_Date.Size = new System.Drawing.Size(168, 20);
             this.txtAcc_Date.StyleController = this.layoutControl1;
             this.txtAcc_Date.TabIndex = 82;
             // 
@@ -754,14 +783,14 @@
             this.txtAcc_Code.EditValue2 = null;
             this.txtAcc_Code.Enabled = false;
             this.txtAcc_Code.EraserGroup = "CLR1";
-            this.txtAcc_Code.Location = new System.Drawing.Point(467, 57);
+            this.txtAcc_Code.Location = new System.Drawing.Point(502, 57);
             this.txtAcc_Code.Name = "txtAcc_Code";
             this.txtAcc_Code.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtAcc_Code.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAcc_Code.Properties.EditFormat.FormatString = "###,###,##0";
             this.txtAcc_Code.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtAcc_Code.RequireMessage = null;
-            this.txtAcc_Code.Size = new System.Drawing.Size(172, 20);
+            this.txtAcc_Code.Size = new System.Drawing.Size(149, 20);
             this.txtAcc_Code.StyleController = this.layoutControl1;
             this.txtAcc_Code.TabIndex = 58;
             // 
@@ -769,9 +798,9 @@
             // 
             this.efwSimpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton7.ImageOptions.Image")));
             this.efwSimpleButton7.IsMultiLang = false;
-            this.efwSimpleButton7.Location = new System.Drawing.Point(558, 7);
+            this.efwSimpleButton7.Location = new System.Drawing.Point(655, 7);
             this.efwSimpleButton7.Name = "efwSimpleButton7";
-            this.efwSimpleButton7.Size = new System.Drawing.Size(104, 22);
+            this.efwSimpleButton7.Size = new System.Drawing.Size(75, 22);
             this.efwSimpleButton7.StyleController = this.layoutControl1;
             this.efwSimpleButton7.TabIndex = 25;
             this.efwSimpleButton7.Text = "신규";
@@ -781,9 +810,9 @@
             // 
             this.efwSimpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton9.ImageOptions.Image")));
             this.efwSimpleButton9.IsMultiLang = false;
-            this.efwSimpleButton9.Location = new System.Drawing.Point(666, 7);
+            this.efwSimpleButton9.Location = new System.Drawing.Point(734, 7);
             this.efwSimpleButton9.Name = "efwSimpleButton9";
-            this.efwSimpleButton9.Size = new System.Drawing.Size(100, 22);
+            this.efwSimpleButton9.Size = new System.Drawing.Size(57, 22);
             this.efwSimpleButton9.StyleController = this.layoutControl1;
             this.efwSimpleButton9.TabIndex = 20;
             this.efwSimpleButton9.Text = "저장";
@@ -793,9 +822,9 @@
             // 
             this.efwSimpleButton8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("efwSimpleButton8.ImageOptions.Image")));
             this.efwSimpleButton8.IsMultiLang = false;
-            this.efwSimpleButton8.Location = new System.Drawing.Point(770, 7);
+            this.efwSimpleButton8.Location = new System.Drawing.Point(795, 7);
             this.efwSimpleButton8.Name = "efwSimpleButton8";
-            this.efwSimpleButton8.Size = new System.Drawing.Size(107, 22);
+            this.efwSimpleButton8.Size = new System.Drawing.Size(71, 22);
             this.efwSimpleButton8.StyleController = this.layoutControl1;
             this.efwSimpleButton8.TabIndex = 21;
             this.efwSimpleButton8.Text = "삭제";
@@ -805,16 +834,58 @@
             // 
             this.txtLarge_Name.EditValue2 = null;
             this.txtLarge_Name.EraserGroup = "CLR1";
-            this.txtLarge_Name.Location = new System.Drawing.Point(467, 81);
+            this.txtLarge_Name.Location = new System.Drawing.Point(502, 81);
             this.txtLarge_Name.Name = "txtLarge_Name";
             this.txtLarge_Name.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
             this.txtLarge_Name.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtLarge_Name.Properties.EditFormat.FormatString = "###,###,##0";
             this.txtLarge_Name.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtLarge_Name.RequireMessage = null;
-            this.txtLarge_Name.Size = new System.Drawing.Size(172, 20);
+            this.txtLarge_Name.Size = new System.Drawing.Size(149, 20);
             this.txtLarge_Name.StyleController = this.layoutControl1;
             this.txtLarge_Name.TabIndex = 84;
+            // 
+            // dtDel_date
+            // 
+            this.dtDel_date.EditValue = new System.DateTime(2021, 10, 27, 0, 0, 0, 0);
+            this.dtDel_date.IsRequire = true;
+            this.dtDel_date.Location = new System.Drawing.Point(502, 263);
+            this.dtDel_date.Name = "dtDel_date";
+            this.dtDel_date.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(226)))));
+            this.dtDel_date.Properties.Appearance.Options.UseBackColor = true;
+            this.dtDel_date.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.dtDel_date.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.dtDel_date.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtDel_date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtDel_date.Properties.DisplayFormat.FormatString = "yyyy/MM/dd HH:mm:ss";
+            this.dtDel_date.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtDel_date.Properties.EditFormat.FormatString = "yyyy/MM/dd HH:mm:ss";
+            this.dtDel_date.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtDel_date.Size = new System.Drawing.Size(106, 20);
+            this.dtDel_date.StyleController = this.layoutControl1;
+            this.dtDel_date.TabIndex = 82;
+            // 
+            // cmbDel_Company
+            // 
+            childHierarchy2.CodeCtrl = null;
+            childHierarchy2.DbName = null;
+            childHierarchy2.SpName = null;
+            this.cmbDel_Company.ChildHierarchyInfo = childHierarchy2;
+            this.cmbDel_Company.EraserGroup = "CLR1";
+            hierarchy2.DbName = null;
+            hierarchy2.SpName = null;
+            this.cmbDel_Company.HierarchyInfo = hierarchy2;
+            this.cmbDel_Company.IsMultiLang = false;
+            this.cmbDel_Company.Location = new System.Drawing.Point(655, 263);
+            this.cmbDel_Company.MasterCode = "E03.PAY_GBN";
+            this.cmbDel_Company.Name = "cmbDel_Company";
+            this.cmbDel_Company.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbDel_Company.Size = new System.Drawing.Size(112, 20);
+            this.cmbDel_Company.StyleController = this.layoutControl1;
+            this.cmbDel_Company.TabIndex = 90;
             // 
             // layoutControlGroup1
             // 
@@ -839,7 +910,10 @@
             this.layoutControlItem13,
             this.emptySpaceItem1,
             this.layoutControlItem14,
-            this.layoutControlItem15});
+            this.layoutControlItem15,
+            this.layoutControlItem17,
+            this.layoutControlItem16,
+            this.txtDel_Company});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 2);
             this.layoutControlGroup1.Size = new System.Drawing.Size(1246, 289);
@@ -850,15 +924,15 @@
             this.계정명.Control = this.txtAcc_NameQ;
             this.계정명.Location = new System.Drawing.Point(0, 0);
             this.계정명.Name = "계정명";
-            this.계정명.Size = new System.Drawing.Size(191, 27);
+            this.계정명.Size = new System.Drawing.Size(97, 27);
             this.계정명.TextSize = new System.Drawing.Size(40, 14);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.efwSimpleButton1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(324, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(320, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(80, 27);
+            this.layoutControlItem1.Size = new System.Drawing.Size(122, 27);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -867,115 +941,115 @@
             this.layoutControlItem2.Control = this.efwGridControl2;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 27);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(404, 255);
+            this.layoutControlItem2.Size = new System.Drawing.Size(442, 255);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.efwSimpleButton7;
-            this.layoutControlItem3.Location = new System.Drawing.Point(551, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(648, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(108, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(79, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.efwSimpleButton9;
-            this.layoutControlItem4.Location = new System.Drawing.Point(659, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(727, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(104, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(61, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.efwSimpleButton8;
-            this.layoutControlItem5.Location = new System.Drawing.Point(763, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(788, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(111, 26);
+            this.layoutControlItem5.Size = new System.Drawing.Size(75, 26);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(404, 0);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(442, 0);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(13, 282);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 282);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.cmbCompany;
-            this.layoutControlItem6.Location = new System.Drawing.Point(417, 26);
+            this.layoutControlItem6.Location = new System.Drawing.Point(452, 26);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(219, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(196, 24);
             this.layoutControlItem6.Text = "회사구분";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(40, 14);
             // 
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(874, 0);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(863, 0);
             this.emptySpaceItem6.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(362, 282);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(373, 282);
             this.emptySpaceItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtAcc_Date;
-            this.layoutControlItem7.Location = new System.Drawing.Point(636, 26);
+            this.layoutControlItem7.Location = new System.Drawing.Point(648, 26);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(238, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(215, 24);
             this.layoutControlItem7.Text = "일자";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(40, 14);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.txtAcc_Code;
-            this.layoutControlItem8.Location = new System.Drawing.Point(417, 50);
+            this.layoutControlItem8.Location = new System.Drawing.Point(452, 50);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(219, 24);
+            this.layoutControlItem8.Size = new System.Drawing.Size(196, 24);
             this.layoutControlItem8.Text = "계정코드";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(40, 14);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txtAcc_Name;
-            this.layoutControlItem9.Location = new System.Drawing.Point(636, 50);
+            this.layoutControlItem9.Location = new System.Drawing.Point(648, 50);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(238, 48);
+            this.layoutControlItem9.Size = new System.Drawing.Size(215, 48);
             this.layoutControlItem9.Text = "계정명";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(40, 14);
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.txtIn_Amt;
-            this.layoutControlItem10.Location = new System.Drawing.Point(417, 98);
+            this.layoutControlItem10.Location = new System.Drawing.Point(452, 98);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(219, 24);
+            this.layoutControlItem10.Size = new System.Drawing.Size(196, 24);
             this.layoutControlItem10.Text = "입금액";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(40, 14);
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.txtOut_Amt;
-            this.layoutControlItem11.Location = new System.Drawing.Point(636, 98);
+            this.layoutControlItem11.Location = new System.Drawing.Point(648, 98);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(238, 24);
+            this.layoutControlItem11.Size = new System.Drawing.Size(215, 24);
             this.layoutControlItem11.Text = "출금액";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(40, 14);
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.txtSummary;
-            this.layoutControlItem12.Location = new System.Drawing.Point(417, 122);
+            this.layoutControlItem12.Location = new System.Drawing.Point(452, 122);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(457, 124);
+            this.layoutControlItem12.Size = new System.Drawing.Size(411, 62);
             this.layoutControlItem12.Text = "적요";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(40, 14);
             // 
@@ -984,37 +1058,66 @@
             this.layoutControlItem13.Control = this.txtLarge_Name;
             this.layoutControlItem13.CustomizationFormText = "입금액";
             this.layoutControlItem13.Enabled = false;
-            this.layoutControlItem13.Location = new System.Drawing.Point(417, 74);
+            this.layoutControlItem13.Location = new System.Drawing.Point(452, 74);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(219, 24);
+            this.layoutControlItem13.Size = new System.Drawing.Size(196, 24);
             this.layoutControlItem13.Text = "비용구분";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(40, 14);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(417, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(452, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(134, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(196, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.txtRemark;
-            this.layoutControlItem14.Location = new System.Drawing.Point(417, 246);
+            this.layoutControlItem14.Location = new System.Drawing.Point(452, 184);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(457, 36);
+            this.layoutControlItem14.Size = new System.Drawing.Size(411, 72);
             this.layoutControlItem14.Text = "비고";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(40, 14);
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.rbCustQ;
-            this.layoutControlItem15.Location = new System.Drawing.Point(191, 0);
+            this.layoutControlItem15.Location = new System.Drawing.Point(97, 0);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(133, 27);
+            this.layoutControlItem15.Size = new System.Drawing.Size(223, 27);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.dtDel_date;
+            this.layoutControlItem17.CustomizationFormText = "일자";
+            this.layoutControlItem17.Location = new System.Drawing.Point(452, 256);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(153, 26);
+            this.layoutControlItem17.Text = "삭제년월";
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(40, 14);
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.efwSimpleButton5;
+            this.layoutControlItem16.Location = new System.Drawing.Point(764, 256);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(99, 26);
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem16.TextVisible = false;
+            // 
+            // txtDel_Company
+            // 
+            this.txtDel_Company.Control = this.cmbDel_Company;
+            this.txtDel_Company.CustomizationFormText = "회사구분";
+            this.txtDel_Company.Location = new System.Drawing.Point(605, 256);
+            this.txtDel_Company.Name = "txtDel_Company";
+            this.txtDel_Company.Size = new System.Drawing.Size(159, 26);
+            this.txtDel_Company.Text = "회사구분";
+            this.txtDel_Company.TextSize = new System.Drawing.Size(40, 14);
             // 
             // rbUnit
             // 
@@ -1161,13 +1264,13 @@
             // 
             // cmbCompanyQ
             // 
-            childHierarchy2.CodeCtrl = null;
-            childHierarchy2.DbName = null;
-            childHierarchy2.SpName = null;
-            this.cmbCompanyQ.ChildHierarchyInfo = childHierarchy2;
-            hierarchy2.DbName = null;
-            hierarchy2.SpName = null;
-            this.cmbCompanyQ.HierarchyInfo = hierarchy2;
+            childHierarchy3.CodeCtrl = null;
+            childHierarchy3.DbName = null;
+            childHierarchy3.SpName = null;
+            this.cmbCompanyQ.ChildHierarchyInfo = childHierarchy3;
+            hierarchy3.DbName = null;
+            hierarchy3.SpName = null;
+            this.cmbCompanyQ.HierarchyInfo = hierarchy3;
             this.cmbCompanyQ.IsMultiLang = false;
             this.cmbCompanyQ.Location = new System.Drawing.Point(452, 12);
             this.cmbCompanyQ.MasterCode = "E03.PAY_GBN";
@@ -1618,6 +1721,17 @@
             this.gridColumn22.OptionsColumn.AllowEdit = false;
             this.gridColumn22.Visible = true;
             this.gridColumn22.VisibleIndex = 6;
+            // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "와이엔킴_속초";
+            this.gridColumn25.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn25.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn25.FieldName = "yn_kim_sc";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.OptionsColumn.AllowEdit = false;
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 7;
             // 
             // gridColumn23
             // 
@@ -2594,13 +2708,13 @@
             // 
             // cmbSmall_Code
             // 
-            childHierarchy3.CodeCtrl = null;
-            childHierarchy3.DbName = null;
-            childHierarchy3.SpName = null;
-            this.cmbSmall_Code.ChildHierarchyInfo = childHierarchy3;
-            hierarchy3.DbName = null;
-            hierarchy3.SpName = null;
-            this.cmbSmall_Code.HierarchyInfo = hierarchy3;
+            childHierarchy4.CodeCtrl = null;
+            childHierarchy4.DbName = null;
+            childHierarchy4.SpName = null;
+            this.cmbSmall_Code.ChildHierarchyInfo = childHierarchy4;
+            hierarchy4.DbName = null;
+            hierarchy4.SpName = null;
+            this.cmbSmall_Code.HierarchyInfo = hierarchy4;
             this.cmbSmall_Code.IsMultiLang = false;
             this.cmbSmall_Code.Location = new System.Drawing.Point(80, 98);
             this.cmbSmall_Code.MasterCode = "E03.PAY_GBN";
@@ -2646,13 +2760,13 @@
             // 
             // cmbLarge_Code
             // 
-            childHierarchy4.CodeCtrl = null;
-            childHierarchy4.DbName = null;
-            childHierarchy4.SpName = null;
-            this.cmbLarge_Code.ChildHierarchyInfo = childHierarchy4;
-            hierarchy4.DbName = null;
-            hierarchy4.SpName = null;
-            this.cmbLarge_Code.HierarchyInfo = hierarchy4;
+            childHierarchy5.CodeCtrl = null;
+            childHierarchy5.DbName = null;
+            childHierarchy5.SpName = null;
+            this.cmbLarge_Code.ChildHierarchyInfo = childHierarchy5;
+            hierarchy5.DbName = null;
+            hierarchy5.SpName = null;
+            this.cmbLarge_Code.HierarchyInfo = hierarchy5;
             this.cmbLarge_Code.IsMultiLang = false;
             this.cmbLarge_Code.Location = new System.Drawing.Point(348, 72);
             this.cmbLarge_Code.MasterCode = "E03.PAY_GBN";
@@ -2674,13 +2788,13 @@
             // 
             // cmbMajor_Code
             // 
-            childHierarchy5.CodeCtrl = null;
-            childHierarchy5.DbName = null;
-            childHierarchy5.SpName = null;
-            this.cmbMajor_Code.ChildHierarchyInfo = childHierarchy5;
-            hierarchy5.DbName = null;
-            hierarchy5.SpName = null;
-            this.cmbMajor_Code.HierarchyInfo = hierarchy5;
+            childHierarchy6.CodeCtrl = null;
+            childHierarchy6.DbName = null;
+            childHierarchy6.SpName = null;
+            this.cmbMajor_Code.ChildHierarchyInfo = childHierarchy6;
+            hierarchy6.DbName = null;
+            hierarchy6.SpName = null;
+            this.cmbMajor_Code.HierarchyInfo = hierarchy6;
             this.cmbMajor_Code.IsMultiLang = false;
             this.cmbMajor_Code.Location = new System.Drawing.Point(81, 72);
             this.cmbMajor_Code.MasterCode = "E03.PAY_GBN";
@@ -3020,17 +3134,6 @@
             this.repositoryItemCheckEdit13.ValueChecked = "Y";
             this.repositoryItemCheckEdit13.ValueUnchecked = "N";
             // 
-            // gridColumn25
-            // 
-            this.gridColumn25.Caption = "와이엔킴_속초";
-            this.gridColumn25.DisplayFormat.FormatString = "###,###,###";
-            this.gridColumn25.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn25.FieldName = "yn_kim_sc";
-            this.gridColumn25.Name = "gridColumn25";
-            this.gridColumn25.OptionsColumn.AllowEdit = false;
-            this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 7;
-            // 
             // frmGM22
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -3068,6 +3171,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAcc_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcc_Code.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLarge_Name.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDel_date.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDel_date.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDel_Company.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.계정명)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -3088,6 +3194,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDel_Company)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtYear.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtYear.Properties)).EndInit();
@@ -3375,5 +3484,11 @@
         private Easy.Framework.WinForm.Control.efwRadioGroup rbtel_use_yn;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private Easy.Framework.WinForm.Control.efwSimpleButton efwSimpleButton5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private Easy.Framework.WinForm.Control.efwDateEdit dtDel_date;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private Easy.Framework.WinForm.Control.efwLookUpEdit cmbDel_Company;
+        private DevExpress.XtraLayout.LayoutControlItem txtDel_Company;
     }
 }

@@ -221,8 +221,8 @@ namespace YL_DONUT.BizFrm
                             DataTable ds = new DataTable();
                             sda.Fill(ds);
                             efwGridControl1.DataBind(ds);
-                           // this.efwGridControl1.MyGridView.BestFitColumns();
-
+                            // this.efwGridControl1.MyGridView.BestFitColumns();
+                            gridView1.MakeRowVisible(gridView1.RowCount - 1);
                         }
                     }
                 }
