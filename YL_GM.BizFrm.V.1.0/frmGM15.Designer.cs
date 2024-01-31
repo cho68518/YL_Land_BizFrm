@@ -5760,7 +5760,7 @@
             // 
             // bandedGridColumn44
             // 
-            this.bandedGridColumn44.Caption = "23년";
+            this.bandedGridColumn44.Caption = "24년";
             this.bandedGridColumn44.DisplayFormat.FormatString = "###,###,###";
             this.bandedGridColumn44.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn44.FieldName = "2023_cnt";

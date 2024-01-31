@@ -327,6 +327,7 @@ namespace YL_GM.BizFrm
             popup.pYEAR = dtS_DATE.EditValue3.Substring(0, 4);
             popup.pCT_CODE = advBandedGridView1.GetFocusedRowCellValue("p_ct_cd").ToString();
             popup.pCT_NM = advBandedGridView1.GetFocusedRowCellValue("p_ct_nm").ToString();
+            popup.pLevel = advBandedGridView1.GetFocusedRowCellValue("level").ToString();
 
             popup.FormClosed += popup_FormClosed;
             popup.ShowDialog();

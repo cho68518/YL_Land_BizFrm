@@ -356,6 +356,10 @@ namespace YL_TELECOM.BizFrm
             {
                 Open7();
             }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage7)
+            {
+                Open8();
+            }
         }
 
         private void Open1()
@@ -590,6 +594,29 @@ namespace YL_TELECOM.BizFrm
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
         }
+
+        private void Open8()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                DataSet ds = ServiceAgent.ExecuteDataSet(true, "CONIS_IBS", "USP_TM_TM07_SELECT_10"
+                );
+
+                efwGridControl8.DataBind(ds);
+                this.efwGridControl8.MyGridView.BestFitColumns();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+            }
+
         private void BtnNEW_Click(object sender, EventArgs e)
         {
             NewMode();

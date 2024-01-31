@@ -19,6 +19,7 @@ namespace YL_GM.BizFrm
         public string pYEAR { get; set; }
         public string pCT_CODE { get; set; }
         public string pCT_NM { get; set; }
+        public string pLevel { get; set; }
 
 
         public frmGM04_Pop01()
@@ -34,6 +35,7 @@ namespace YL_GM.BizFrm
             txtCT_CD.EditValue = pCT_CODE;
             txtYEAR.EditValue = pYEAR;
             txtCT_NAME.EditValue = pCT_NM;
+            txtLevel.EditValue = pLevel;
 
             gridView1.OptionsView.ShowFooter = true;
             gridView1.Columns["p_num"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
@@ -81,6 +83,9 @@ namespace YL_GM.BizFrm
 
                         cmd.Parameters.Add("i_ct_cd", MySqlDbType.VarChar, 50);
                         cmd.Parameters[1].Value = txtCT_CD.EditValue;
+
+                        cmd.Parameters.Add("i_chef_level", MySqlDbType.VarChar, 50);
+                        cmd.Parameters[2].Value = txtLevel.EditValue;
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {

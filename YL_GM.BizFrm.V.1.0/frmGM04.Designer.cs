@@ -89,12 +89,12 @@
             this.gridColumn29 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.efwPanelControl1 = new Easy.Framework.WinForm.Control.efwPanelControl();
+            this.rbAmt_type = new Easy.Framework.WinForm.Control.efwRadioGroup();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
             this.efwLabel1 = new Easy.Framework.WinForm.Control.efwLabel();
             this.dtS_DATE = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.dfDate = new Easy.Framework.WinForm.Control.efwDateEdit();
             this.rbq_type = new Easy.Framework.WinForm.Control.efwRadioGroup();
-            this.rbAmt_type = new Easy.Framework.WinForm.Control.efwRadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
@@ -105,12 +105,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbAmt_type.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dfDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dfDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbq_type.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbAmt_type.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efwGroupControl1
@@ -808,6 +808,22 @@
             this.efwPanelControl1.Size = new System.Drawing.Size(1195, 45);
             this.efwPanelControl1.TabIndex = 43;
             // 
+            // rbAmt_type
+            // 
+            this.rbAmt_type.IsMultiLang = false;
+            this.rbAmt_type.Location = new System.Drawing.Point(461, 9);
+            this.rbAmt_type.Name = "rbAmt_type";
+            this.rbAmt_type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbAmt_type.Properties.Appearance.Options.UseBackColor = true;
+            this.rbAmt_type.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbAmt_type.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbAmt_type.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "주문금액"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "결재금액")});
+            this.rbAmt_type.RequireMessage = null;
+            this.rbAmt_type.Size = new System.Drawing.Size(208, 26);
+            this.rbAmt_type.TabIndex = 71;
+            // 
             // efwLabel2
             // 
             this.efwLabel2.EraserGroup = null;
@@ -870,7 +886,7 @@
             // rbq_type
             // 
             this.rbq_type.IsMultiLang = false;
-            this.rbq_type.Location = new System.Drawing.Point(468, 8);
+            this.rbq_type.Location = new System.Drawing.Point(883, 8);
             this.rbq_type.Name = "rbq_type";
             this.rbq_type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rbq_type.Properties.Appearance.Options.UseBackColor = true;
@@ -882,22 +898,7 @@
             this.rbq_type.RequireMessage = null;
             this.rbq_type.Size = new System.Drawing.Size(270, 26);
             this.rbq_type.TabIndex = 66;
-            // 
-            // rbAmt_type
-            // 
-            this.rbAmt_type.IsMultiLang = false;
-            this.rbAmt_type.Location = new System.Drawing.Point(758, 8);
-            this.rbAmt_type.Name = "rbAmt_type";
-            this.rbAmt_type.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.rbAmt_type.Properties.Appearance.Options.UseBackColor = true;
-            this.rbAmt_type.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.rbAmt_type.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.rbAmt_type.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "주문금액"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "결재금액")});
-            this.rbAmt_type.RequireMessage = null;
-            this.rbAmt_type.Size = new System.Drawing.Size(208, 26);
-            this.rbAmt_type.TabIndex = 71;
+            this.rbq_type.Visible = false;
             // 
             // frmGM04
             // 
@@ -918,12 +919,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).EndInit();
             this.efwPanelControl1.ResumeLayout(false);
             this.efwPanelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbAmt_type.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtS_DATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dfDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dfDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbq_type.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbAmt_type.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

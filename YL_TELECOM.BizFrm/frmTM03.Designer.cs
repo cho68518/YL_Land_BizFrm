@@ -42,6 +42,11 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -58,6 +63,9 @@
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.efwGroupControl1 = new Easy.Framework.WinForm.Control.efwGroupControl();
+            this.rbIs_Prepaid = new Easy.Framework.WinForm.Control.efwRadioGroup();
+            this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
+            this.txtBasic_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwSimpleButton2 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.efwSimpleButton1 = new Easy.Framework.WinForm.Control.efwSimpleButton();
             this.txtidx = new Easy.Framework.WinForm.Control.efwTextEdit();
@@ -78,18 +86,13 @@
             this.efwLabel3 = new Easy.Framework.WinForm.Control.efwLabel();
             this.txtpay_code = new Easy.Framework.WinForm.Control.efwTextEdit();
             this.efwLabel2 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.txtBasic_Price = new Easy.Framework.WinForm.Control.efwTextEdit();
-            this.efwLabel7 = new Easy.Framework.WinForm.Control.efwLabel();
-            this.rbIs_Prepaid = new Easy.Framework.WinForm.Control.efwRadioGroup();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.efwPanelControl1)).BeginInit();
             this.efwPanelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPay_NameQ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPay_CodeQ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
@@ -98,6 +101,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).BeginInit();
             this.efwGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbIs_Prepaid.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBasic_Price.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtidx.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbis_use.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtal_open_donut_count.Properties)).BeginInit();
@@ -108,9 +113,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtdonut_count.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpay_name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpay_code.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBasic_Price.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbIs_Prepaid.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
             this.SuspendLayout();
             // 
             // efwPanelControl1
@@ -227,6 +229,8 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn12,
+            this.gridColumn13,
+            this.gridColumn14,
             this.gridColumn11,
             this.gridColumn22,
             this.gridColumn2,
@@ -268,6 +272,56 @@
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
             // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "기본요금";
+            this.gridColumn12.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn12.FieldName = "basic_price";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 3;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.Caption = "여유할인";
+            this.gridColumn13.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn13.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn13.FieldName = "sale_price";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.OptionsColumn.AllowEdit = false;
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 4;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.Caption = "프로모션할인";
+            this.gridColumn14.DisplayFormat.FormatString = "###,###,###";
+            this.gridColumn14.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn14.FieldName = "promotion_price";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.AllowEdit = false;
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 5;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "선불유무";
+            this.gridColumn11.ColumnEdit = this.repositoryItemCheckEdit4;
+            this.gridColumn11.FieldName = "is_prepaid";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.AllowEdit = false;
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 6;
+            // 
+            // repositoryItemCheckEdit4
+            // 
+            this.repositoryItemCheckEdit4.AutoHeight = false;
+            this.repositoryItemCheckEdit4.Name = "repositoryItemCheckEdit4";
+            this.repositoryItemCheckEdit4.ValueChecked = "Y";
+            this.repositoryItemCheckEdit4.ValueUnchecked = "N";
+            // 
             // gridColumn22
             // 
             this.gridColumn22.Caption = "도넛(알뜰할인 일반)";
@@ -277,7 +331,7 @@
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.OptionsColumn.AllowEdit = false;
             this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 5;
+            this.gridColumn22.VisibleIndex = 7;
             this.gridColumn22.Width = 81;
             // 
             // gridColumn2
@@ -289,7 +343,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 6;
+            this.gridColumn2.VisibleIndex = 8;
             this.gridColumn2.Width = 83;
             // 
             // gridColumn5
@@ -301,7 +355,7 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 7;
+            this.gridColumn5.VisibleIndex = 9;
             this.gridColumn5.Width = 86;
             // 
             // gridColumn6
@@ -313,7 +367,7 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 8;
+            this.gridColumn6.VisibleIndex = 10;
             this.gridColumn6.Width = 147;
             // 
             // gridColumn7
@@ -335,7 +389,7 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 9;
+            this.gridColumn8.VisibleIndex = 11;
             this.gridColumn8.Width = 112;
             // 
             // gridColumn9
@@ -347,7 +401,7 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 10;
+            this.gridColumn9.VisibleIndex = 12;
             // 
             // gridColumn10
             // 
@@ -359,7 +413,7 @@
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 11;
+            this.gridColumn10.VisibleIndex = 13;
             // 
             // repositoryItemCheckEdit3
             // 
@@ -442,6 +496,48 @@
             this.efwGroupControl1.Size = new System.Drawing.Size(1151, 154);
             this.efwGroupControl1.TabIndex = 45;
             this.efwGroupControl1.Text = "요금제별 적립금액 저장";
+            // 
+            // rbIs_Prepaid
+            // 
+            this.rbIs_Prepaid.IsMultiLang = false;
+            this.rbIs_Prepaid.Location = new System.Drawing.Point(305, 112);
+            this.rbIs_Prepaid.Name = "rbIs_Prepaid";
+            this.rbIs_Prepaid.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rbIs_Prepaid.Properties.Appearance.Options.UseBackColor = true;
+            this.rbIs_Prepaid.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.rbIs_Prepaid.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.rbIs_Prepaid.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rbIs_Prepaid.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "후불      "),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "선불     ")});
+            this.rbIs_Prepaid.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            this.rbIs_Prepaid.RequireMessage = null;
+            this.rbIs_Prepaid.Size = new System.Drawing.Size(217, 23);
+            this.rbIs_Prepaid.TabIndex = 74;
+            // 
+            // efwLabel7
+            // 
+            this.efwLabel7.EraserGroup = null;
+            this.efwLabel7.IsMultiLang = false;
+            this.efwLabel7.Location = new System.Drawing.Point(12, 116);
+            this.efwLabel7.Name = "efwLabel7";
+            this.efwLabel7.Size = new System.Drawing.Size(40, 14);
+            this.efwLabel7.TabIndex = 24;
+            this.efwLabel7.Text = "기본요금";
+            // 
+            // txtBasic_Price
+            // 
+            this.txtBasic_Price.EditValue2 = null;
+            this.txtBasic_Price.EraserGroup = "CLR1";
+            this.txtBasic_Price.Location = new System.Drawing.Point(158, 113);
+            this.txtBasic_Price.Name = "txtBasic_Price";
+            this.txtBasic_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
+            this.txtBasic_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtBasic_Price.Properties.EditFormat.FormatString = "###,###,##0";
+            this.txtBasic_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtBasic_Price.RequireMessage = null;
+            this.txtBasic_Price.Size = new System.Drawing.Size(125, 20);
+            this.txtBasic_Price.TabIndex = 23;
             // 
             // efwSimpleButton2
             // 
@@ -676,76 +772,6 @@
             this.efwLabel2.TabIndex = 0;
             this.efwLabel2.Text = "코드";
             // 
-            // txtBasic_Price
-            // 
-            this.txtBasic_Price.EditValue2 = null;
-            this.txtBasic_Price.EraserGroup = "CLR1";
-            this.txtBasic_Price.Location = new System.Drawing.Point(158, 113);
-            this.txtBasic_Price.Name = "txtBasic_Price";
-            this.txtBasic_Price.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.txtBasic_Price.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtBasic_Price.Properties.EditFormat.FormatString = "###,###,##0";
-            this.txtBasic_Price.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtBasic_Price.RequireMessage = null;
-            this.txtBasic_Price.Size = new System.Drawing.Size(125, 20);
-            this.txtBasic_Price.TabIndex = 23;
-            // 
-            // efwLabel7
-            // 
-            this.efwLabel7.EraserGroup = null;
-            this.efwLabel7.IsMultiLang = false;
-            this.efwLabel7.Location = new System.Drawing.Point(12, 116);
-            this.efwLabel7.Name = "efwLabel7";
-            this.efwLabel7.Size = new System.Drawing.Size(40, 14);
-            this.efwLabel7.TabIndex = 24;
-            this.efwLabel7.Text = "기본요금";
-            // 
-            // rbIs_Prepaid
-            // 
-            this.rbIs_Prepaid.IsMultiLang = false;
-            this.rbIs_Prepaid.Location = new System.Drawing.Point(305, 112);
-            this.rbIs_Prepaid.Name = "rbIs_Prepaid";
-            this.rbIs_Prepaid.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.rbIs_Prepaid.Properties.Appearance.Options.UseBackColor = true;
-            this.rbIs_Prepaid.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Ivory;
-            this.rbIs_Prepaid.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.rbIs_Prepaid.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.rbIs_Prepaid.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("N", "후불      "),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Y", "선불     ")});
-            this.rbIs_Prepaid.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
-            this.rbIs_Prepaid.RequireMessage = null;
-            this.rbIs_Prepaid.Size = new System.Drawing.Size(217, 23);
-            this.rbIs_Prepaid.TabIndex = 74;
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Caption = "선불유무";
-            this.gridColumn11.ColumnEdit = this.repositoryItemCheckEdit4;
-            this.gridColumn11.FieldName = "is_prepaid";
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.OptionsColumn.AllowEdit = false;
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 4;
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.Caption = "기본요금";
-            this.gridColumn12.DisplayFormat.FormatString = "###,###,###";
-            this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn12.FieldName = "basic_price";
-            this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.OptionsColumn.AllowEdit = false;
-            this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 3;
-            // 
-            // repositoryItemCheckEdit4
-            // 
-            this.repositoryItemCheckEdit4.AutoHeight = false;
-            this.repositoryItemCheckEdit4.Name = "repositoryItemCheckEdit4";
-            this.repositoryItemCheckEdit4.ValueChecked = "Y";
-            this.repositoryItemCheckEdit4.ValueUnchecked = "N";
-            // 
             // frmTM03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -767,6 +793,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPay_CodeQ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efwGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
@@ -776,6 +803,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.efwGroupControl1)).EndInit();
             this.efwGroupControl1.ResumeLayout(false);
             this.efwGroupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rbIs_Prepaid.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBasic_Price.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtidx.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbis_use.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtal_open_donut_count.Properties)).EndInit();
@@ -786,9 +815,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtdonut_count.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpay_name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpay_code.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBasic_Price.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbIs_Prepaid.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -847,5 +873,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
         private Easy.Framework.WinForm.Control.efwRadioGroup rbIs_Prepaid;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
     }
 }

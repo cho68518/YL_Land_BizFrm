@@ -80,8 +80,19 @@ namespace YL_MM.BizFrm
 
             dt_s_date.EditValue = DateTime.Now;
             dt_e_date.EditValue = DateTime.Now;
+
+            dtEvent_SDate.EditValue = DateTime.Now;
+            dtEvent_EDate.EditValue = DateTime.Now;
+
             rb_Search_type.EditValue = "1";
             //chkQ1.EditValue = "1";
+
+            dtYear_Month.EditValue = DateTime.Now.ToString("yyyy-MM");
+            dtYear_Month.Properties.Mask.EditMask = "yyyy-MM";
+            dtYear_Month.Properties.DisplayFormat.FormatString = "yyyy-MM";
+            dtYear_Month.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            dtYear_Month.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            dtYear_Month.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
 
             if (UserInfo.instance().UserId == "169.254.169.113" || UserInfo.instance().UserId == "0000000024")
             {
@@ -253,6 +264,14 @@ namespace YL_MM.BizFrm
             else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage5)
             {
                 Open6();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage6)
+            {
+                Open7();
+            }
+            else if (efwXtraTabControl1.SelectedTabPage == this.xtraTabPage7)
+            {
+                Open8();
             }
         }
 
@@ -513,6 +532,92 @@ namespace YL_MM.BizFrm
                 Cursor.Current = Cursors.Default;
             }
         }
+
+
+        public void Open7()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                string sLevel = string.Empty;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.BasicConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("domabiz.USP_MM_MM05_SELECT_08", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_sdate", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = dtEvent_SDate.EditValue.ToString().Substring(0,10);
+
+                        cmd.Parameters.Add("i_edate", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[1].Value = dtEvent_EDate.EditValue.ToString().Substring(0, 10);
+
+                        cmd.Parameters.Add("i_query", MySqlDbType.VarChar);
+                        cmd.Parameters[2].Value = dfM_Query.EditValue;
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+
+                            efwGridControl7.DataBind(ds);
+                            this.efwGridControl7.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        public void Open8()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                string sLevel = string.Empty;
+
+                using (MySqlConnection con = new MySqlConnection(ConstantLib.TelConn_Real))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("erp.USP_MM_MM05_SELECT_09", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("i_year_month", MySqlDbType.VarChar, 10);
+                        cmd.Parameters[0].Value = dtYear_Month.EditValue3.ToString().Substring(0,6);
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable ds = new DataTable();
+                            sda.Fill(ds);
+
+                            efwGridControl8.DataBind(ds);
+                            this.efwGridControl8.MyGridView.BestFitColumns();
+                        }
+                    }
+                }
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
 
         #region 저장
 
@@ -1130,6 +1235,12 @@ namespace YL_MM.BizFrm
         }
 
         private void txtSearch_1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Search();
+        }
+
+        private void dfM_Query_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 Search();
