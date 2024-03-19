@@ -95,7 +95,7 @@ namespace YL_TELECOM.BizFrm
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
                             DataTable ds = new DataTable();
-                            sda.Fill(ds);
+                            sda.Fill(ds); 
                             efwGridControl1.DataBind(ds);
                             this.efwGridControl1.MyGridView.BestFitColumns();
 
@@ -242,6 +242,33 @@ namespace YL_TELECOM.BizFrm
         private void efwSimpleButton5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(gridView1.GetFocusedDisplayText());
+                e.Handled = true;
+            }
+        }
+
+        private void gridView2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(gridView2.GetFocusedDisplayText());
+                e.Handled = true;
+            }
+        }
+
+        private void gridView4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                Clipboard.SetText(gridView4.GetFocusedDisplayText());
+                e.Handled = true;
+            }
         }
     }
 }
