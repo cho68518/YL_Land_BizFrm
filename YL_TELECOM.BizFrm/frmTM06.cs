@@ -235,7 +235,7 @@ namespace YL_TELECOM.BizFrm
                 {
                     e.Appearance.BackColor = Color.YellowGreen;
                     e.Appearance.BackColor2 = Color.White; //그라데이션 처리
-                }
+                } 
             }
         }
 
