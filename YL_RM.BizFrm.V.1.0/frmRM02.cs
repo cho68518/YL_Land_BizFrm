@@ -101,10 +101,21 @@ namespace YL_RM.BizFrm
                       , new ColumnControlSet("notice_seq", cknotice_seq)
                       );
 
+
+            this.efwGridControl3.BindControlSet(
+                      new ColumnControlSet("Idx", txt_Yidx)
+                      , new ColumnControlSet("Title", txtYsubject)
+                      , new ColumnControlSet("Contents", txt_Ycontent)
+                      , new ColumnControlSet("DelFlag", rbYis_notice)
+                      , new ColumnControlSet("type", raType)
+                      );
+
+
             this.efwGridControl1.Click += efwGridControl1_Click;
             this.efwGridControl2.Click += efwGridControl2_Click;
+            this.efwGridControl3.Click += efwGridControl3_Click;
 
-           // Open1();
+            // Open1();
             Clear();
             SetCmb();
         }
@@ -214,6 +225,12 @@ namespace YL_RM.BizFrm
             txtimg_url3.EditValue = "";
         }
 
+        private void Clear3()
+        {
+            Eraser.Clear(this, "ER2");
+            //txt_Ycontent.BodyHtml = "[[IMG_1]]<br /><br />[[IMG_2]]<br /><br />[[IMG_3]]";
+        }
+
         #endregion
 
 
@@ -288,6 +305,17 @@ namespace YL_RM.BizFrm
                 }
             }                
         }
+
+        private void efwGridControl3_Click(object sender, EventArgs e)
+        {
+            DataRow dr = this.efwGridControl3.GetSelectedRow(0);
+            txt_Ycontent.BodyHtml = dr["Contents"].ToString();
+            //if (dr != null && dr["FLR"].ToString() != "0" && dr["content"].ToString() != "")
+            //    this.xtraTabPage3.PageEnabled = true;
+            //else
+            //    this.xtraTabPage3.PageEnabled = false;
+        }
+
         private void btn_new1_Click(object sender, EventArgs e)
         {
             Clear();
@@ -635,6 +663,7 @@ namespace YL_RM.BizFrm
 
                 Open2();
                 Clear2();
+                Clear3();
             }
         }
 
@@ -660,12 +689,29 @@ namespace YL_RM.BizFrm
 
                     CodeAgent.MakeCodeControl(this.cmbBoard, codeArray);
                 }
+
+                using (MySQLConn con = new MySQLConn(ConstantLib.BasicConn_Real))
+                {
+                    con.Query = " SELECT board_cd as DCODE ,board_name as DNAME  FROM domalife.g_board where is_use = 'Y' and  board_cd = '2' order by board_cd ";
+
+                    DataSet ds = con.selectQueryDataSet();
+                    //DataTable retDT = ds.Tables[0];
+                    DataRow[] dr = ds.Tables[0].Select();
+                    CodeData[] codeArray = new CodeData[dr.Length];
+
+                    for (int i = 0; i < dr.Length; i++)
+                        codeArray[i] = new CodeData(dr[i]["DCODE"].ToString(), dr[i]["DNAME"].ToString());
+
+                    CodeAgent.MakeCodeControl(this.cmbYBoard, codeArray);
+                }
+
             }
             catch (Exception ex)
             {
                 MessageAgent.MessageShow(MessageType.Error, ex.ToString());
             }
             cmbBoard.EditValue = "01";
+            cmbYBoard.EditValue = "2";
         }
 
 
@@ -1185,6 +1231,38 @@ namespace YL_RM.BizFrm
             }
         }
 
+        private void btnYSch2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                base.Search();
 
+                DataSet ds = ServiceAgent.ExecuteDataSet(false, "CONIS_IBS", "USP_MS_RM02_SELECT_01"
+                    , ""
+                    , txt_Ysch2.EditValue
+                    );
+
+                efwGridControl3.DataBind(ds);
+                //   this.efwGridControl1.MyGridView.BestFitColumns();
+            }
+            catch (Exception ex)
+            {
+                MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+            }
+        }
+
+        private void txt_Ycontent_Toolbar1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btn_Ynew2_Click(object sender, EventArgs e)
+        {
+            rbYis_notice.EditValue = "Y";
+            txtYsubject.EditValue = "";
+            txt_idx2.EditValue = "";
+            txtYsubject.EditValue = "";
+            Clear3();
+        }
     }
 }

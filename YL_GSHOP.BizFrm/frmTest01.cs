@@ -14,6 +14,9 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Net;
 using System.IO;
+using System.Diagnostics;
+using DevExpress.XtraGrid.Views.Grid;
+
 
 namespace YL_GSHOP.BizFrm
 {
@@ -146,6 +149,67 @@ namespace YL_GSHOP.BizFrm
             {
             }
 
+        }
+
+        private void efwSimpleButton3_Click(object sender, EventArgs e)
+        {
+            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(@"d:\telecom");
+
+            foreach (System.IO.FileInfo file in di.GetFiles())
+
+                try
+                {
+                    using (MySqlConnection con2 = new MySqlConnection(ConstantLib.BasicConn_Real))
+                    //using (MySqlConnection con = new MySqlConnection(ConstantLib.Member_Real))
+                    {
+                        using (MySqlCommand cmd2 = new MySqlCommand("domabiz.PROC_FILE_QUERY", con2))
+                        {
+                            con2.Open();
+                            cmd2.CommandType = CommandType.StoredProcedure;
+
+                            cmd2.Parameters.Add(new MySqlParameter("i_file_name", MySqlDbType.VarChar));
+                            cmd2.Parameters["i_file_name"].Value = file.Name;
+                            cmd2.Parameters["i_file_name"].Direction = ParameterDirection.Input;
+
+
+                            cmd2.ExecuteNonQuery();
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
+        }
+
+        private void efwSimpleButton4_Click(object sender, EventArgs e)
+        {
+            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(@"d:\telecom");
+
+            foreach (System.IO.FileInfo file in di.GetFiles())
+
+                try
+                {
+                    using (MySQLConn sql = new MySQLConn(ConstantLib.BasicConn_Real))
+                    {
+                        sql.Query = "select chk " +
+                                    "  from  domabiz.table38  " +
+                                    "where file_name = '" + file.Name + "'  ";
+                        DataSet ds = sql.selectQueryDataSet();
+
+                        int nCnt = Convert.ToInt32(sql.selectQueryForSingleValue());
+
+                        string fileName = @"d:\telecom\" + file.Name + " ";
+
+                        if (nCnt == 0)
+                            File.Delete(fileName);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageAgent.MessageShow(MessageType.Error, ex.ToString());
+                }
         }
     }
 }

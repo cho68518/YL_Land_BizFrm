@@ -446,7 +446,7 @@ namespace YL_DONUT.BizFrm
                                 cmd.Parameters[13].Value = gridView1.GetRowCellValue(i, gridView1.Columns[2]).ToString();
                                 
                                 cmd.Parameters.Add("i_p_code", MySqlDbType.VarChar, 50);
-                                cmd.Parameters[14].Value = gridView1.GetRowCellValue(i, gridView1.Columns[13]).ToString();
+                                cmd.Parameters[14].Value = gridView1.GetRowCellValue(i, gridView1.Columns[14]).ToString();
 
                                 cmd.Parameters.Add("i_user_id", MySqlDbType.VarChar, 20);
                                 cmd.Parameters[15].Value = UserInfo.instance().Name; ;
